@@ -1,0 +1,77 @@
+name: Deploy to Pages
+
+# Replaces GitHub's legacy branch-based Pages build. Owning the workflow lets us
+# (a) control concurrency and (b) auto-retry GitHub Pages' intermittent
+# "Deployment failed, try again later" API error so a transient hiccup self-heals
+# instead of emailing a failure. The content always ends up published either way;
+# this just stops the noise.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "index.html"
+      - "assets/**"
+      - ".nojekyll"
+      - "CNAME"
+      - ".github/workflows/deploy-pages.yml"
+  workflow_dispatch:
+  # Publish after the Dropbox sync commits fresh assets (its commit carries
+  # [skip ci], so it won't trigger the push event above — this does it instead).
+  workflow_run:
+    workflows: ["Dropbox sync"]
+    types: [completed]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Don't cancel an in-progress deploy (GitHub's recommended setting) — cancelling
+# mid-deploy can itself fail. Overlapping runs queue; intermediate queued runs are
+# skipped, only the latest deploys.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy1.outputs.page_url || steps.deploy2.outputs.page_url || steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      # Publish only the static site — index.html + assets/** + .nojekyll + CNAME —
+      # not scripts/, .github/, or any local-only helpers. CNAME must be published
+      # or GitHub Pages drops the custom domain (assets.stundenglass.com) on every deploy.
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          cp -R assets _site/assets
+          [ -f .nojekyll ] && cp .nojekyll _site/.nojekyll || touch _site/.nojekyll
+          [ -f CNAME ] && cp CNAME _site/CNAME || true
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      # Deploy with up to 3 attempts. GitHub Pages occasionally returns a transient
+      # "Deployment failed, try again later" — retrying almost always succeeds, so
+      # the job only fails (and emails) if all three attempts hit it.
+      - id: deploy1
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - if: steps.deploy1.outcome == 'failure'
+        run: sleep 20
+      - id: deploy2
+        if: steps.deploy1.outcome == 'failure'
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+      - if: steps.deploy1.outcome == 'failure' && steps.deploy2.outcome == 'failure'
+        run: sleep 30
+      - id: deployment
+        if: steps.deploy1.outcome == 'failure' && steps.deploy2.outcome == 'failure'
+        uses: actions/deploy-pages@v4

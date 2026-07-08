@@ -1,0 +1,12 @@
+<!-- PLACEHOLDER Stündenglass favicon: "S" monogram that adapts to the browser
+     tab theme (black on light, white on dark). Swap for the official brandmark
+     when the Stündenglass brand files arrive. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .fg { fill: #0A0A0A; }
+    @media (prefers-color-scheme: dark) { .fg { fill: #FFFFFF; } }
+  </style>
+  <text x="32" y="47" text-anchor="middle" class="fg"
+        font-family="'Archivo','Helvetica Neue',Arial,sans-serif"
+        font-size="48" font-weight="800">S</text>
+</svg>
