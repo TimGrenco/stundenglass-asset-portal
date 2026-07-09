@@ -80,50 +80,42 @@ window.PORTAL_BRANDS = {
    Names must match the product `name` exactly. ⚠️ CONFIRM the real lineup. */
 window.PORTAL_CURRENT = {
   stundenglass: [
-    "Gravity Infuser",
-    "Kompact",
-    "gØ733",
-    "All-In-One",
-    "Accessories",
+    "Gravity Infusers",
+    "Kompact Gravity Infusers",
+    "Classic Gravity Infusers",
+    "Modül",
   ],
 };
 
 window.PORTAL_PRODUCTS = [
   /* ------------------------------ STÜNDENGLASS ----------------------------- */
-  /* Placeholder lineup — confirm names, categories and add real Dropbox links
-     in scripts/dropbox-sync.mjs. `folders: {}` is filled by the Dropbox sync. */
+  /* Featured lineup (placeholders) — add real Dropbox links in
+     scripts/dropbox-sync.mjs. `folders: {}` is filled by the Dropbox sync. */
   {
-    name: "Gravity Infuser", brand: "stundenglass", category: "Gravity", type: "Gravity Infuser",
+    name: "Gravity Infusers", brand: "stundenglass", category: "Gravity", type: "Gravity Infuser",
     cover: null,
-    added: "2026-07-08",
+    added: "2026-07-09",
     oneSheet: "",
     folders: {},   // real folders + thumbnails come from synced.js (Dropbox sync)
   },
   {
-    name: "Kompact", brand: "stundenglass", category: "Gravity", type: "Gravity Infuser",
+    name: "Kompact Gravity Infusers", brand: "stundenglass", category: "Gravity", type: "Gravity Infuser",
     cover: null,
-    added: "2026-07-08",
+    added: "2026-07-09",
     oneSheet: "",
     folders: {},
   },
   {
-    name: "gØ733", brand: "stundenglass", category: "Gravity",
+    name: "Classic Gravity Infusers", brand: "stundenglass", category: "Gravity", type: "Gravity Infuser",
     cover: null,
-    added: "2026-07-08",
+    added: "2026-07-09",
     oneSheet: "",
     folders: {},
   },
   {
-    name: "All-In-One", brand: "stundenglass", category: "Gravity",
+    name: "Modül", brand: "stundenglass", category: "Modular", type: "Modular System",
     cover: null,
-    added: "2026-07-08",
-    oneSheet: "",
-    folders: {},
-  },
-  {
-    name: "Accessories", brand: "stundenglass", category: "Accessories",
-    cover: null,
-    added: "2026-07-08",
+    added: "2026-07-09",
     oneSheet: "",
     folders: {},
   },
@@ -132,7 +124,7 @@ window.PORTAL_PRODUCTS = [
        homepage "Logos and Brand Assets" section. */
     name: "Stündenglass Logos", brand: "stundenglass", category: "Brand", isLogo: true,
     cover: null,
-    added: "2026-07-08",
+    added: "2026-07-09",
     oneSheet: "",
     folders: {},
   },
@@ -300,11 +292,10 @@ window.PORTAL_INSTORE_GENERAL = (function () {
 /* Product labels — short type tags shown on each current-product card. */
 (function () {
   var LABELS = {
-    "Gravity Infuser": "Gravity Infuser",
-    "Kompact": "Gravity Infuser",
-    "gØ733": "Gravity",
-    "All-In-One": "Gravity",
-    "Accessories": "Accessories",
+    "Gravity Infusers": "Gravity Infuser",
+    "Kompact Gravity Infusers": "Compact Infuser",
+    "Classic Gravity Infusers": "Classic Infuser",
+    "Modül": "Modular System",
   };
   window.PORTAL_PRODUCTS.forEach(function (p) { if (LABELS[p.name]) p.label = LABELS[p.name]; });
 })();

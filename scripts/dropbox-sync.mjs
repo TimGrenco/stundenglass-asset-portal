@@ -47,11 +47,10 @@ if (!APP_KEY || !APP_SECRET || !REFRESH) {
 //   flat: "Logos"   → bucket a flat (subfolder-less) folder under this name
 //   pngThumbs: true → keep transparent PNG logo thumbnails (don't flatten to white)
 const PRODUCTS = [
-  { name: "Gravity Infuser", slug: "gravity-infuser", link: "" },
-  { name: "Kompact",         slug: "kompact",         link: "" },
-  { name: "gØ733",           slug: "go733",           link: "" },
-  { name: "All-In-One",      slug: "all-in-one",      link: "" },
-  { name: "Accessories",     slug: "accessories",     link: "" },
+  { name: "Gravity Infusers",         slug: "gravity-infusers",         link: "" },
+  { name: "Kompact Gravity Infusers", slug: "kompact-gravity-infusers", link: "" },
+  { name: "Classic Gravity Infusers", slug: "classic-gravity-infusers", link: "" },
+  { name: "Modül",                    slug: "modul",                    link: "" },
   {
     // Overall Stündenglass brand logos (black/white/various). Powers the homepage
     // "Logos and Brand Assets" section. `flat` = folder name to bucket files
