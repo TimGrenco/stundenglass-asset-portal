@@ -197,11 +197,62 @@ var PRODUCT_INFO = {
     warranty: "1-year limited warranty (2 years with registration); 10-year warranty on precision-machined hardware",
     productUrl: "https://stundenglass.com/collections/infusers/products/stundenglass-gravity-infuser-v3",
   },
+  "Classic Gravity Infusers": {
+    description: "A sophisticated, elegantly designed 360° rotating glass infuser that generates kinetic motion via cascading water displacement, opposing airflow technology and the natural force of gravity — delivering smooth, consistent, vaporous draws.",
+    highlights: [
+      "360° rotatable, kinetic-motion activation",
+      "Percolated water filtration — cooled, water-filtered smoke",
+      "Contactless consumption via a 45° adjustable mouthpiece",
+      "Borosilicate glass globes + aircraft-grade anodized aluminum",
+      "14mm male-joint compatible (aluminum bowl kit + glass liner included)",
+      "Versatile — mixology, culinary, hookah & aromatherapy",
+      "Removable glass globes, easy to clean & maintain",
+      "Patented design, backed by a 10-year warranty",
+    ],
+    warranty: "10-year warranty",
+    productUrl: "https://stundenglass.com/collections/infusers/products/stundenglass-gravity-infuser",
+  },
+  "Kompact Gravity Infusers": {
+    description: "The same patented 360° gravity system, dynamic design and immersive experience as the original — now in a more refined, portable size with a custom-fit travel case. Smaller globes (~2 cups) make for cooler, faster pulls.",
+    highlights: [
+      "Patented 360° gravity system in a portable size (~12\" tall)",
+      "Smaller globes (~2 cups) for cooler, faster pulls",
+      "Luxury custom-fit travel case included",
+      "3-ft silicone hose + 45° adjustable mouthpiece (direct or contactless)",
+      "Percolated water filtration — cooled, water-filtered smoke",
+      "Dishwasher-safe borosilicate glass globes + anodized aluminum",
+      "14mm male-joint compatible — dry material, concentrates & hookah",
+      "Magnetic hose clips, interchangeable mouthpieces",
+      "Patented design, backed by a 10-year warranty",
+    ],
+    warranty: "10-year warranty",
+    productUrl: "https://stundenglass.com/collections/infusers/products/stundenglass-kompact-gravity-infuser",
+  },
+  "Modül": {
+    description: "An all-in-one, portable vaporization system. The Modül base pairs with a crystal-clear borosilicate glass Dok for an unobstructed view of percolation, with interchangeable dry-material and concentrate tanks that swap in seconds — all in a premium, drop-resistant travel case.",
+    highlights: [
+      "All-in-one, portable smoking experience",
+      "Includes both dry-material and concentrate tanks",
+      "2.4\" full-color display with custom KK UI",
+      "Fully customizable temperature & session-time control",
+      "Clear borosilicate glass Dok — watch the percolation",
+      "Heats in as little as 15 seconds",
+      "6,000mAh battery — up to 50 sessions per charge",
+      "USB-C charging with pass-through capability",
+      "Compatible with Stündenglass, Kompact & Dok models",
+      "Premium drop-resistant travel case included",
+    ],
+    warranty: "2-year warranty",
+    productUrl: "https://stundenglass.com/collections/stundenglass-modul/products/stundenglass-modul-dok-deluxe-travel-set-clear-glass",
+  },
 };
 
 /* MSRP per product (shown in the product hub). Placeholder — add as confirmed. */
 var PRODUCT_MSRP = {
   "Gravity Infusers": "$499.95",
+  "Classic Gravity Infusers": "$599.95",
+  "Kompact Gravity Infusers": "$599.95",
+  "Modül": "$499.95",
 };
 
 /* Full official product descriptions (shown under "Official product
@@ -212,6 +263,24 @@ var PRODUCT_DESCRIPTION = {
     "Its gravity system uses water displacement with built-in percolation to provide consistently smooth, cooled draws — completely contactless and effortless with every rotation.",
     "What’s new: a lighter, more streamlined design; easier cleaning than previous generations; a universal 14mm adapter compatible with dry materials and concentrates; built-in NFC for authentication and product registration; and compatibility with most existing Stündenglass accessories.",
     "Multi-purpose by design: use it as a hookah, pair it with dry-material bowls, run concentrate tanks, or explore culinary applications for smoke-infused cocktails and dishes.",
+  ],
+  "Classic Gravity Infusers": [
+    "Stündenglass® is honored to introduce the Gravity Infuser, a sophisticated and elegantly designed 360° rotating glass infuser that generates kinetic motion activation via cascading water displacement, opposing airflow technology and the natural force of gravity.",
+    "Built from borosilicate glass globes and aircraft-grade anodized aluminum, it delivers smooth, consistent and vaporous draws through an immersive experience.",
+    "Designed for functional versatility, it includes an aluminum bowl kit and a glass liner but connects to any smoking or vaporization device with a 14mm male joint. A 45° adjustable mouthpiece provides entirely contactless consumption through fluid physics.",
+    "A patented design backed by an extended 10-year warranty, the unit ships in a reusable craft box with a handle for storage and transport. Durable, futuristic in design and superb in function.",
+  ],
+  "Kompact Gravity Infusers": [
+    "Introducing the newest sensation from Stündenglass, the Kompact Gravity Infuser. The Kompact features the same patented 360° gravity system, dynamic design, and immersive experience as the original, now available in a more refined, portable size that includes a custom-fit travel case.",
+    "Measuring just under a foot in height, its smaller globes hold approximately two-thirds the volume (about 2 cups) of the full-size model, which creates cooler and faster pulls.",
+    "The travel case is constructed with high-grade fabric and form-fitted to cradle the Kompact Stündenglass, which arrives fully assembled. A metal-inlayed logo plate adorns the front, with an easy-to-use zipper, carrying handle and strap for over-the-shoulder use.",
+    "A complete set that includes an aluminum bowl kit and a glass liner, it can also connect to any smoking or vaporization device with a 14mm male joint. Also included is a 3-foot silicone hose that connects to the 45° adjustable mouthpiece for direct draws or a steady stream of smoke for contactless consumption.",
+    "The device operates through kinetic motion activation via cascading water displacement, opposing airflow technology, and the natural force of gravity, using borosilicate glass globes and aircraft-grade anodized aluminum.",
+  ],
+  "Modül": [
+    "This all-in-one, portable kit provides everything you need to start using Stündenglass technology. The set pairs the Modül base unit with a Dok attachment made from crystal-clear borosilicate glass for an unobstructed view of percolation.",
+    "Two interchangeable tanks let you switch between dry material and concentrate sessions in seconds, and a premium drop-resistant fabric travel case carries every component together.",
+    "The Modül heats in as little as 15 seconds and is powered by a 6,000mAh battery supporting up to 50 sessions per charge, with USB-C charging and pass-through capability. A 2.4\" high-resolution full-color display with custom KK UI and single-hand dial control puts temperature and session time at your fingertips.",
   ],
 };
 
@@ -233,6 +302,41 @@ var PRODUCT_BOX = {
       "14mm Glass Bowl Assembly",
       "Rotatable Mouthpiece",
       "Assembly Tool Kit",
+    ],
+  },
+  "Classic Gravity Infusers": {
+    contents: [
+      "Anodized Aluminum Frame",
+      "Borosilicate Glass Globes",
+      "Silicone Hose Assembly",
+      "Infusion Chamber Assembly",
+      "Cleaning Kit",
+      "Sticker Set",
+      "Reusable Craft Box with Handle",
+    ],
+  },
+  "Kompact Gravity Infusers": {
+    contents: [
+      "Anodized Aluminum Frame",
+      "Borosilicate Glass Globes",
+      "Silicone Hose Assembly",
+      "Infusion Chamber Assembly",
+      "Cleaning Kit",
+      "Sticker Set",
+      "Premium Travel Case",
+    ],
+  },
+  "Modül": {
+    contents: [
+      "Stündenglass Modül",
+      "Clear Dok Glass",
+      "Travel Case",
+      "Concentrate Tank (Quartz)",
+      "Dry Material Tank",
+      "Carb Cap",
+      "Loading Tool",
+      "Charging Cable",
+      "Anodized Aluminum Stand",
     ],
   },
 };
