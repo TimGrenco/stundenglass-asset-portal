@@ -373,6 +373,25 @@ window.PORTAL_PRODUCTS.forEach(function (p) {
         var g = cand.filter(function (x) { return x.format === "PNG"; })[0] || cand[0] || all.filter(function (x) { return x.thumb; })[0];
         if (g) p.cover = g.thumb;
       }
+      // Regular products with no hand-set cover → auto-pick a card cover from the
+      // synced photos: prefer a clean Product Photo, then Lifestyle, then any
+      // thumbnailed image. Mirrors the G Pen cards (each shows a product shot).
+      if (!p.isLogo && !p.cover) {
+        var pickFrom = function (folderName) {
+          var arr = s.folders[folderName] || [];
+          var img = arr.filter(function (x) { return x.thumb && (x.type === "image" || x.type === "vector"); })[0];
+          return img ? img.thumb : null;
+        };
+        var cover = pickFrom("Product Photos") || pickFrom("Lifestyle Photos");
+        if (!cover) {
+          var imgs = [];
+          Object.keys(s.folders).forEach(function (f) {
+            (s.folders[f] || []).forEach(function (x) { if (x.thumb && (x.type === "image" || x.type === "vector")) imgs.push(x); });
+          });
+          if (imgs.length) cover = imgs[0].thumb;
+        }
+        if (cover) p.cover = cover;
+      }
     }
   });
 })();

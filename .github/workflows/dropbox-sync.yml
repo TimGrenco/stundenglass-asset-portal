@@ -41,20 +41,25 @@ jobs:
         run: |
           git config user.name "dropbox-sync[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Bump the synced.js cache token so GitHub Pages serves the fresh file.
-          node -e "const fs=require('fs');let h=fs.readFileSync('index.html','utf8');h=h.replace(/synced\.js\?v=[0-9a-z]+/,'synced.js?v='+Date.now());fs.writeFileSync('index.html',h)"
-          git add -A
+          # NOTE: the sync deliberately does NOT edit index.html. It only touches
+          # its own outputs (assets/data/synced.js + assets/synced/**), so a rebase
+          # can never conflict with hand edits to index.html. synced.js freshness
+          # is handled by GitHub Pages' cache TTL (~10 min) — plenty fast for an
+          # hourly asset sync — so no cache-bust token bump is needed here.
+          git add assets/data/synced.js assets/synced
           if git diff --cached --quiet; then
             echo "No changes from Dropbox."
           else
             git commit -m "Dropbox sync: refresh assets [skip ci]"
             # Rebase onto any commits that landed while we were syncing (manual
             # pushes or an overlapping run) and retry, so the push can't lose a
-            # race and fail the job.
+            # race. Abort a failed rebase so we never spiral into a detached-HEAD
+            # unmerged state.
             for i in 1 2 3 4 5; do
               if git push; then echo "pushed"; break; fi
               echo "push rejected (attempt $i) — rebasing and retrying"
-              git pull --rebase --autostash origin main || true
+              git rebase --abort 2>/dev/null || true
+              git pull --rebase --autostash origin main || { git rebase --abort 2>/dev/null || true; git reset --hard HEAD; }
               sleep 5
             done
           fi
