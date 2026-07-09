@@ -1296,232 +1296,6 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
-      "Bedazzled": [
-        {
-          "name": "Photos · _ALF1192",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1btq8pgevw0o84arhgrzw/_ALF1192.jpg?rlkey=sno5ncgecnk1shvtu7t3sb463&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/243c847525c507a85e0fd380af85ce7d8c515e4b6eca0773fa5e33938d5a06d5.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1193",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5qksvaur5ub9bwpgoyf65/_ALF1193.jpg?rlkey=easmayuisuis7nzhv96dzwhez&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a1d71ec9884dda8ac03e6ca8ef6294888b651890423fd2c8d65bd0ac04726d95.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1195",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qqp2k59bnicm1rpqw3n1b/_ALF1195.jpg?rlkey=625ue8w6dkzfzjeg8gjlylu4t&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1a638c8256cacd76a9ea1c21d11ca8537f8ca8b912b3d6f99bd781e0b9913327.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1197",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/l023ru7y6gue08ib40nkk/_ALF1197.jpg?rlkey=dkk6krds69e2j3k0bf1an7ced&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4100b4f1b497a920d2d84f90402f047355ec996421d829927608005faeb8b1cb.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1198",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3r3akjnhfd7j7d60bi9bf/_ALF1198.jpg?rlkey=cf6rxwznpmnfvb7vsylylhw19&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/aad12d79e256d46940dd5ce5f3f7bc989272247cab8b464dc6d7d6f8d1f1275b.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1199",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zuunxz0lznpuodqiwpd8q/_ALF1199.jpg?rlkey=q4fro0zq2gsir2i8d9n5u70fq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/666c65ba8f2638cfb2155830cd1c3e67f1d45dfa7dcbe60cbae0ac5660f31070.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1200",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fxaimpl0t5u8qjbfsznkt/_ALF1200.jpg?rlkey=qn9uyzun3sjf6fugq0jza98uf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6b50e23e12857c45ff488f11f96766332643522a2313f608fa1c1f3234dd92ab.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1201",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3hf0bt5cyxa5j8yebq4iq/_ALF1201.jpg?rlkey=qnrrrnhnereb9n6533gl7koth&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9e9979f62e01c2ed2e6203d31ca70f02ed763ead00007bdee3dfaee785f405d9.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1202",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0mfwxi1jr5xt4s1pzy9hg/_ALF1202.jpg?rlkey=ojp15ihjfho7dog6vj6botyrg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7d7e44b49c22f343cf3bd74576cd3cbd7c4f87194c29d88cb486822c8a7b7d16.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1203",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/aaln90hbmm0ezni4syazh/_ALF1203.jpg?rlkey=f8iqgy8f7arqxe7vo7xcauxsp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f5564b8d429e74a7e0fb92933f132113696b69168d0e54bce0946d6deba0d352.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1204",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/46hwcs0a6d5i0iohx0j8j/_ALF1204.jpg?rlkey=f3ugs21r22f1sa1x311ce5824&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0e8445e8ad377c98d368d85f3948ab13b1075e046dda9f0614fe7813ef240358.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1206",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qiktm1abi7u0x7rfmzq35/_ALF1206.jpg?rlkey=303f3s7io2b8p36btlw80qx7d&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9d58cf544af091f3cf000a9aa5c599daea54236a21c53aa5e605a78137757533.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1207",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/awjjq6snhqltlufseomsn/_ALF1207.jpg?rlkey=418l77z1k91miyignf723ukbl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ce92d8b58589856337c9c3ba22e9eb9cb64bdd6c700aad52a02aee74686c49f3.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1208",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lib9anl406yyciw2zsuiw/_ALF1208.jpg?rlkey=h9hgoctmzm6qct70ydlhirxyl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/00f953b1ab8adf35c01707d6906adc32ac72b67e46e7086416197a0b4b0ec9eb.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1209",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gr8xqwofrh0kfr9rhua6q/_ALF1209.jpg?rlkey=bh1jqh8yhsdsuwqqjs5af7qu8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/38afbd0ec719f4519e872fd62177218da65415cdcaef043a8e84adcdc38e95d4.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1210",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ds9lh7d9tugxf963bdbnq/_ALF1210.jpg?rlkey=n6he26smuhfg6eynsii9ee3v3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d8d04a46bded57e644108b5364730c9aab673fd261e4d15439acce71c3077105.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1212",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bqhv38spkihdpaj2fte42/_ALF1212.jpg?rlkey=3vzcfn46hjcp5hmj54pqdlw7u&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/10654538fd8cf23be277b4ea0ed1705ff4d98f17ea93ebd3eb94d50ba79176ad.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1213",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/uvjox3stxxucuspl7xwe7/_ALF1213.jpg?rlkey=17k71kg3mowr9rupu631jw4z9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/be7bf48edeb6e0c3bcd90408cb66f1405992876bd9e579e9b1f606c551a6b6fc.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1214",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/svfy0f7xh6ce4acuexmp4/_ALF1214.jpg?rlkey=2mm443c3ld190bat1k20lee4p&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/471a8dc4ed52a50fc0eaa447a30df6a462b9d6218278ce5fd391691b87841650.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1216",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fr4ehv4bpusd6c07mwiyj/_ALF1216.jpg?rlkey=0xpuznwvfmyvdj6jf6pq3k9xd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/72c1721d75e7714b2fe786099117a60ff32f36a79f4ff34c3d0a412b3a1e1e30.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1218",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/jipn4rz35nk5bolvoqmi0/_ALF1218.jpg?rlkey=iz51tfguuevq2jvlf3urtnang&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/64dac5656741fd0390ff81d17a36dc007ccdcab0bd1ec615f7d0f212e635c80c.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1219",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vyk1ptezb3fpokp2miszm/_ALF1219.jpg?rlkey=1nrb8nxuzyhzaer92xp4iy2xo&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e6a495fcdcac73e6bee0e4ae4e2dfad356d9cadbe92bbfee03c89b191dbbc3c8.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1220",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/x11eohff6auzrmg6szub0/_ALF1220.jpg?rlkey=qf5q372tsiy8mbmqjwb7x93mb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8f41fb3a9ed352be1fe99f7f0f1e03c1c3fa5c8ea7612ccc073f0bbf6c4bf45f.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1225",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/thxony55b7zqrd0n5rvyn/_ALF1225.jpg?rlkey=sm79ni57eows5ddcw8p841rqa&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4bdaeca5e7c4603b86c127e6bb9d8c1d2c440ecbfef1ce47cda20739939b5739.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1232",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/o8fgdguewqwnel5kd226g/_ALF1232.jpg?rlkey=e9dh95igwqixwxltch1hxe6bc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/556150fe75393b5330493d29362a2e9b26a87011b0a749800919eeaf2b9208a4.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · _ALF1238",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/722unit4gjq0j1e14lo03/_ALF1238.jpg?rlkey=qw2mn7uv1v437cd9wdu610w0a&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0dee33713ccc3cced2185932aa7d5cb80dc206fa7ac3522302dd4208c07f7b02.jpg",
-          "file": null
-        },
-        {
-          "name": "Video · Bedazzled Personal SG_",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/35ck2d3sztd5griu6jmdh/Bedazzled-Personal-SG_.mp4?rlkey=gq64825b36uvs9rzbgn4n1owx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fd91ffce5024f4c5ec22f4dae42b9b87a15b93c3208ae9239414ca3d3cbee06d.jpg",
-          "file": null
-        },
-        {
-          "name": "Video · Bedazzled Pride SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/wd63klfsnmg0f561jmnge/Bedazzled-Pride-SG.mp4?rlkey=37scf79lm7yey5o69pxtpfoyw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2a87658f309f64259b5668db7b73a47808adcb0b5490d54121fc3d2b3796d8ea.jpg",
-          "file": null
-        }
-      ],
       "Full Line": [
         {
           "name": "_ALF0080",
@@ -2431,7 +2205,6 @@ window.PORTAL_SYNCED = {
     "folderLinks": {
       "Tyson 2.0": "https://www.dropbox.com/scl/fo/a0zrk3zjs6feb390zjwtp/AKvSRGXTM-vmU6ENZfLJSWk?rlkey=boud80njh8uqdpo09elyosnj6&dl=1",
       "UGC - Stundenglass": "https://www.dropbox.com/scl/fo/85kr1ddzmla70wmeqngvg/AO5Nq8wHYd8WJIA6XT7kie4?rlkey=uvr6rli9cc11oz43an90wtdj1&dl=1",
-      "Bedazzled": "https://www.dropbox.com/scl/fo/anetag9pp4t6401gx6pfg/AK3fgwRLzYhiyQ6MUPlkTP0?rlkey=w0wtscy0kczxrp5os69rxn8t4&dl=1",
       "Full Line": "https://www.dropbox.com/scl/fo/o5l5453b62l9snx9umkw6/AGUzJbl_KUeEx07BUUZ2YKo?rlkey=1745s1m600mty2kxcxjx585o8&dl=1",
       "Pink": "https://www.dropbox.com/scl/fo/b2lvxkkr2kwd18dc7rnwn/AL9KDGUArVkmEzL2eg3AKew?rlkey=jv7d3hdpx1795v5rflayj4jhk&dl=1",
       "Black": "https://www.dropbox.com/scl/fo/io7584tox2aick81stlvh/APVNCiQLx7ThAJo_JcuYlU0?rlkey=pjun84aaapr2b9tmcirha6msj&dl=1",
@@ -6288,7 +6061,231 @@ window.PORTAL_SYNCED = {
       ],
       "Tyson 2.0": [
         {
-          "name": "Photos · Tyson Modul Beauty 4",
+          "name": "Lifestyle Photos · _ALF0001",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/oy9pnck1wxog2djhsr3u2/_ALF0001.jpg?rlkey=bj68qasgdwg8rdq91hoizmny7&dl=0",
+          "thumb": "assets/synced/modul/d86762186ff9b3eb1613afd846e2abb8604022a363ae173b59b7459a2ac3c14b.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _ALF0022",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/0kvyuh7i5qcvftjnbwrwa/_ALF0022.jpg?rlkey=xl95nzngjgo2quzpxsjl9op8u&dl=0",
+          "thumb": "assets/synced/modul/19aa8876648dd63f5c69f35041b04633fa59bab5394ffc900794b9a1f2465f21.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _ALF0053",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/g2dtlto08fikuxvwjxqsp/_ALF0053.jpg?rlkey=ooqn9iq38j11g8mb0h4tx5iuo&dl=0",
+          "thumb": "assets/synced/modul/021bfdfb63272862bc4969bc17affa73ab82298dd3c1f136f439f8e770cda7e6.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _ALF0055",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/u9wjcm4omlmuaqct6jw5u/_ALF0055.jpg?rlkey=kvj7konqba8zbjct986a8mdps&dl=0",
+          "thumb": "assets/synced/modul/af665ceb8fa5fc792d91b24e406cc1e7a3fb7332d797c145d1ed57de050d5720.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _ALF8071",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/m7cdhubowrdz0qq0a9xj4/_ALF8071.jpg?rlkey=1zx6p2m78fmss9tx9mdndu8v6&dl=0",
+          "thumb": "assets/synced/modul/cb39002ebd023b76c8265ea640916d6205a3750afbcd649afbc80647d32c32d7.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _ALF8072",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/9v1op2ukp88qjabnd4i8c/_ALF8072.jpg?rlkey=42xxbi9fe51pulnm47h6umq99&dl=0",
+          "thumb": "assets/synced/modul/b94af0fa1d7f232eb185ad228d2e8c8b6efcee8e69d1f45309d3b65954bc470f.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _ALF8082",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/b26rgwnybhqcuqq5aglgz/_ALF8082.jpg?rlkey=8hokav2i9dd1yv98qkcm306i3&dl=0",
+          "thumb": "assets/synced/modul/89f108c4c18a8007d3d12dd3901c589bec65dbb5ebd70b631cfaebed80892e2d.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _ALF8195",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/i22ed8du8fwt4pl8kglub/_ALF8195.jpg?rlkey=60yeo785nzl3smray5apcdibv&dl=0",
+          "thumb": "assets/synced/modul/b8223741cfa0fa74eb3b9f5977bf751dbed77359676d8bbeeca08f1e1381d1c0.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _ALF8209",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/cbiadt6j14pgkdzwzdumr/_ALF8209.jpg?rlkey=ul8le5nri1konviiadkr9tuj2&dl=0",
+          "thumb": "assets/synced/modul/a160e2073cfb40423c346a8f260bade9fdbcace6086fd8cfec3f576c5075fdac.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _ALF8293",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/z92zm35nangv9dn45xft3/_ALF8293.jpg?rlkey=7icvu2qvlzwaq11ldy3cijbq1&dl=0",
+          "thumb": "assets/synced/modul/ed0495a703fa3f3d73097f91de43f818bb3eb37ece81aaa669d638f57e9355d4.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6711",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/z6mhncazerxtd411vqu3e/_GSH6711.jpg?rlkey=ej4bufxzb4tk6ticfl9hrlvu8&dl=0",
+          "thumb": "assets/synced/modul/5dc15eef90227b9e53da12a0390ec44f5751fa997007d648f0a9db4821abf066.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6719",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/8cg1thd7y0p7sffxsaf3l/_GSH6719.jpg?rlkey=0xmbls6hkhli7f5n86fbrvah2&dl=0",
+          "thumb": "assets/synced/modul/127b048a3acd39ea9603b8c890dcd14e5f27360b8137f771e950e89636d65f7c.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6722",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/76hbzehv05jdx08mxinc9/_GSH6722.jpg?rlkey=4d93jo327fczqexfxmaov1dfd&dl=0",
+          "thumb": "assets/synced/modul/d1abc7832fda0cea39580ea60ad2fc3a195a57a48a6835c63e9e96c1325a1f50.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6734",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ukuhj33blfjer3lzhkr1c/_GSH6734.jpg?rlkey=s3s491unhlxho62nf0055dywg&dl=0",
+          "thumb": "assets/synced/modul/c6196238707746cb680329e40d1672dfc404c77435f9aa5e6424f3607150936a.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6742",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/b6v5167zp1aqxzmo1ngxw/_GSH6742.jpg?rlkey=2rio9s8ajgrjqwxn3x05yqks7&dl=0",
+          "thumb": "assets/synced/modul/24f19c34116fe7ca99701fabf1e96988be76b1fdacc7a1fbe2d6b501966576d8.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6756",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ge183ounjayanxrreqysj/_GSH6756.jpg?rlkey=p3emnb0x8r8z4qrew9sx8h9qj&dl=0",
+          "thumb": "assets/synced/modul/c98f63d9a685cd5bdebe109d45592a242309816cc90a6801aa307879faa7af0d.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6758",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/fgwa0gvn8ie8tcrbs3mc9/_GSH6758.jpg?rlkey=dhfvsmrtgouxz2dnkwesykgey&dl=0",
+          "thumb": "assets/synced/modul/9d0e1d061cf6dcdb984b3e4084e4be4c1d7b9eee3fc56377f7954b26c826eb7e.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6762",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/1z2skjmfg32morlk77sl0/_GSH6762.jpg?rlkey=qw6fmty7mqvgzzw0kcze53iex&dl=0",
+          "thumb": "assets/synced/modul/901fa9e52216d6a6969f74ccf3244112d79d4e716bdf23fe545dd613c677416e.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6764",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/13d90bvynlzihocq8iyar/_GSH6764.jpg?rlkey=zrapmcfvvux0x8dx15kexgrtd&dl=0",
+          "thumb": "assets/synced/modul/8e21dae41dd63d7036040d72cf6380a45bb8313e8506bd8d3e9562c2554566ce.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6786",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/lph2jrdnkb3alq0jyje7b/_GSH6786.jpg?rlkey=9cjjrnis0z6atus3xcvvqtd4p&dl=0",
+          "thumb": "assets/synced/modul/af6c57bb15449edd824f77935d3d9f2feb20059d99d01db2e64a284c7ca28133.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6795",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/hlud67l1vfoqp966g7nye/_GSH6795.jpg?rlkey=02160dtcqkmwp80o6su2jnvxt&dl=0",
+          "thumb": "assets/synced/modul/b10e7ab01f276c0bbb4129f9daaab02d17dc169dc60ea98d905172fb9d8dd943.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6796",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/mrfp7nwtuj47qeng211s7/_GSH6796.jpg?rlkey=sqh663wz3mw0h48x9zekeha15&dl=0",
+          "thumb": "assets/synced/modul/2fe99f5393f7ca2c5da274d77c054dd4559d142607cd206d89a021320d6830d4.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6799",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/t4069smzvzt3yaxlzmtla/_GSH6799.jpg?rlkey=miyo4yyy1sexb4slye8otev2m&dl=0",
+          "thumb": "assets/synced/modul/98733293142f030a508bcd2411b9f401a9ef37f7ed4fe234415c6ef726fbb676.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6800",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/6jzt6m5z05semszbx5hhg/_GSH6800.jpg?rlkey=b6c92dmz00hmq1gfg8qd4vya7&dl=0",
+          "thumb": "assets/synced/modul/18470f9c9b557d07e9d1ac1c0111e4dd741b9f6af8b5c83f05084aba0beaecd2.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6802",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/yx7otl5150sj8sfgdjj73/_GSH6802.jpg?rlkey=e62ie6q9tp9c5rp6g480sz8sl&dl=0",
+          "thumb": "assets/synced/modul/0255292f7a5a399f4dea43e8f170a236dffe60ae5d0a8b3b5be30dfb36de892b.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6804",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/uxu4oihs1nqkssffjm1im/_GSH6804.jpg?rlkey=9ytdi6ipnvsl0depgw1fy5pq3&dl=0",
+          "thumb": "assets/synced/modul/a11b714db49c2d2564c56b1620b174257394be820e7062cb223cf2b755512ac6.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6806",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/yqyp6k2epol54f4qa30p7/_GSH6806.jpg?rlkey=dx126zys2fomc3cai7esfkuap&dl=0",
+          "thumb": "assets/synced/modul/b64517be2a3259d588768b92f2b739dc8fdea9a69da8a92d477a944b671e7bee.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH6863",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/z5czvc5su25m76p6crimk/_GSH6863.jpg?rlkey=m0m1mlg783wxkvx1qglx7wq01&dl=0",
+          "thumb": "assets/synced/modul/10fe5ef96d0610c4606a44dd9fd004739c34efb2752b08fcbd76e6715ef843c7.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · Tyson Modul Beauty 4",
           "type": "image",
           "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/r7wbvtblifmvcvnkgbl5j/Tyson-Modul-Beauty-4.png?rlkey=iwdw7tl14s4cyweq9uoett1bs&dl=0",
@@ -6296,7 +6293,7 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Photos · Tyson Modul Beauty 5",
+          "name": "Lifestyle Photos · Tyson Modul Beauty 5",
           "type": "image",
           "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/ps3u46vfe2isn6xev30ya/Tyson-Modul-Beauty-5.png?rlkey=xas77h6qeaku8fha1eqn8kb19&dl=0",
@@ -6304,7 +6301,7 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Photos · Tyson Modul Beauty 5 Shadowed",
+          "name": "Lifestyle Photos · Tyson Modul Beauty 5 Shadowed",
           "type": "image",
           "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/nvohe9pnbalsx9prdrl5d/Tyson-Modul-Beauty-5-Shadowed.png?rlkey=uvjsypeyd5tjr3gguhvvi0q0f&dl=0",
@@ -6312,7 +6309,7 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Photos · Tyson Modul Beauty 7 shadowed",
+          "name": "Lifestyle Photos · Tyson Modul Beauty 7 shadowed",
           "type": "image",
           "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/7z81dizp4azkq1m4kvsng/Tyson-Modul-Beauty-7-shadowed.png?rlkey=t3uvma453eg7t477h29mnebsf&dl=0",
@@ -6320,7 +6317,7 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Photos · Tyson Modul Beauty 7 whiteBG",
+          "name": "Lifestyle Photos · Tyson Modul Beauty 7 whiteBG",
           "type": "image",
           "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/cqe8opkms3ux6hq9j1p7a/Tyson-Modul-Beauty-7-whiteBG.png?rlkey=eh2hsmfysouj7cygefwvwl35l&dl=0",
@@ -6328,7 +6325,7 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Photos · Tyson Modul Beauty 8 shadowed",
+          "name": "Lifestyle Photos · Tyson Modul Beauty 8 shadowed",
           "type": "image",
           "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/n8o3xodfpnwbclvlrq8ta/Tyson-Modul-Beauty-8-shadowed.png?rlkey=c9eqkn2iwr1n7ft37s1wzcjje&dl=0",
@@ -6336,7 +6333,7 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Photos · Tyson Modul Beauty 8 whiteBG",
+          "name": "Lifestyle Photos · Tyson Modul Beauty 8 whiteBG",
           "type": "image",
           "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/cmwyp9zcmr69bhgejn13s/Tyson-Modul-Beauty-8-whiteBG.png?rlkey=9gw4thcfgq5qlps66gc5rjl55&dl=0",
@@ -6344,35 +6341,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Photos · Tyson Modul Beauty Rear",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/oiox8f9k6c8z6bf16vjse/Tyson-Modul-Beauty-Rear.png?rlkey=vmbjiye2ifxdk65d8z00lghix&dl=0",
-          "thumb": "assets/synced/modul/16eba333f772c5cc58d0f893aacbd1a9881d74bff08db70dde6c0b960ace3340.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · Tyson Modul Dok Beauty 1",
+          "name": "Lifestyle Photos · Tyson Modul Dok Beauty 1",
           "type": "image",
           "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/mvdw7j8mzjg0sf4ig7adr/Tyson-Modul-Dok-Beauty-1.png?rlkey=ybjj1iq7hegeh4wc3x5i6gn75&dl=0",
           "thumb": "assets/synced/modul/966d366edeced71df3a27388f1600d6a87f140ca18fb0f09a2796cb70daf5956.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · Tyson Modul Dok Beauty 2",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/c1d1rikym4eqczu0k8p1u/Tyson-Modul-Dok-Beauty-2.png?rlkey=su4euz222pv52x0e7mf5wz6gg&dl=0",
-          "thumb": "assets/synced/modul/5200f6a0e627c21bb7064131032db614a032f6e17a97bbd1c63688d23588d8ad.jpg",
-          "file": null
-        },
-        {
-          "name": "Photos · Tyson Modul Dok Beauty 3",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/pnz5lgf6vqhi1vngg73hw/Tyson-Modul-Dok-Beauty-3.png?rlkey=r2kvkrpiu77revi0qr46uuffi&dl=0",
-          "thumb": "assets/synced/modul/444c796d4585298749c69202052dea5ac05121cf6608ecaffa3b9c17582b56e5.jpg",
           "file": null
         },
         {
