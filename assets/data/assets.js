@@ -183,23 +183,36 @@ window.PORTAL_PRODUCTS.forEach(function (p) {
      faqUrl      : optional per-product FAQ link (falls back to the brand FAQ)
    ========================================================================== */
 var PRODUCT_INFO = {
-  // "Gravity Infuser": {
-  //   description: "…",
-  //   highlights: ["…", "…"],
-  //   warranty: "Limited warranty — see policy",
-  //   productUrl: "https://stundenglass.com/products/gravity-infuser",
-  // },
+  "Gravity Infusers": {
+    description: "A refined take on the iconic 360° gravity hookah — lighter and more streamlined, with a smoother, more intuitive experience. The gravity system uses water displacement with built-in percolation for consistently smooth, cooled draws — completely contactless and effortless with every rotation.",
+    highlights: [
+      "360° gravity system — smooth, consistent draws",
+      "Percolated filtration — water-cooled, clean hits",
+      "Contactless use — effortless, no direct draw",
+      "14mm universal adapter — for dry material & concentrates",
+      "Multi-purpose — hookah & culinary compatible",
+      "Built-in NFC — authentication & registration",
+      "Works with most existing Stündenglass accessories",
+    ],
+    warranty: "1-year limited warranty (2 years with registration); 10-year warranty on precision-machined hardware",
+    productUrl: "https://stundenglass.com/collections/infusers/products/stundenglass-gravity-infuser-v3",
+  },
 };
 
 /* MSRP per product (shown in the product hub). Placeholder — add as confirmed. */
 var PRODUCT_MSRP = {
-  // "Gravity Infuser": "$599.95",
+  "Gravity Infusers": "$499.95",
 };
 
 /* Full official product descriptions (shown under "Official product
    description" with a copy button). Placeholder — add as confirmed. */
 var PRODUCT_DESCRIPTION = {
-  // "Gravity Infuser": ["Paragraph one…", "Paragraph two…"],
+  "Gravity Infusers": [
+    "The Stündenglass Gravity Infuser is a 360° gravity hookah & infusion system — a refined take on the iconic gravity hookah, featuring a lighter, more streamlined design and a smoother, more intuitive experience.",
+    "Its gravity system uses water displacement with built-in percolation to provide consistently smooth, cooled draws — completely contactless and effortless with every rotation.",
+    "What’s new: a lighter, more streamlined design; easier cleaning than previous generations; a universal 14mm adapter compatible with dry materials and concentrates; built-in NFC for authentication and product registration; and compatibility with most existing Stündenglass accessories.",
+    "Multi-purpose by design: use it as a hookah, pair it with dry-material bowls, run concentrate tanks, or explore culinary applications for smoke-infused cocktails and dishes.",
+  ],
 };
 
 /* SKU + packaging details per product (shown in the "SKU details" and
@@ -213,7 +226,15 @@ var PRODUCT_SKU = {
 /* "What's In the Box?" contents + components image per product.
    { image: "<url>", contents: ["item", ...] }  Placeholder — add as confirmed. */
 var PRODUCT_BOX = {
-  // "Gravity Infuser": { image: "<url>", contents: ["Gravity Infuser", "…"] },
+  "Gravity Infusers": {
+    contents: [
+      "Stündenglass Gravity Infuser",
+      "Glass Globe × 2",
+      "14mm Glass Bowl Assembly",
+      "Rotatable Mouthpiece",
+      "Assembly Tool Kit",
+    ],
+  },
 };
 
 // Attach info (+ MSRP + SKU/packaging + box) to each product; empty object if none.
