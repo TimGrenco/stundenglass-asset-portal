@@ -112,23 +112,43 @@ function typeOf(e) {
 }
 
 async function getToken() {
-  const r = await fetch("https://api.dropbox.com/oauth2/token", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded", Authorization: "Basic " + Buffer.from(`${APP_KEY}:${APP_SECRET}`).toString("base64") },
-    body: new URLSearchParams({ grant_type: "refresh_token", refresh_token: REFRESH }),
-  });
-  if (!r.ok) throw new Error("token " + r.status + " " + (await r.text()));
-  return (await r.json()).access_token;
+  let lastErr = "";
+  for (let attempt = 0; attempt < 4; attempt++) {
+    const r = await fetch("https://api.dropbox.com/oauth2/token", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded", Authorization: "Basic " + Buffer.from(`${APP_KEY}:${APP_SECRET}`).toString("base64") },
+      body: new URLSearchParams({ grant_type: "refresh_token", refresh_token: REFRESH }),
+    });
+    if (r.ok) return (await r.json()).access_token;
+    lastErr = "token " + r.status + " " + (await r.text());
+    if ((r.status >= 500 || r.status === 429) && attempt < 3) { await new Promise((s) => setTimeout(s, 2000 * (attempt + 1))); continue; }
+    break;
+  }
+  throw new Error(lastErr);
 }
 
 async function rpc(tok, endpoint, body) {
-  const r = await fetch("https://api.dropboxapi.com/2/" + endpoint, {
-    method: "POST",
-    headers: { Authorization: "Bearer " + tok, "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
-  if (!r.ok) throw new Error(endpoint + " " + r.status + " " + (await r.text()));
-  return r.json();
+  // Retry transient Dropbox failures — 5xx server errors and 429 rate limits —
+  // with exponential backoff, so a momentary hiccup (e.g. "list_folder 500
+  // unexpected error") doesn't abort the whole sync.
+  let lastErr = "";
+  for (let attempt = 0; attempt < 6; attempt++) {
+    const r = await fetch("https://api.dropboxapi.com/2/" + endpoint, {
+      method: "POST",
+      headers: { Authorization: "Bearer " + tok, "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    if (r.ok) return r.json();
+    lastErr = endpoint + " " + r.status + " " + (await r.text());
+    if ((r.status >= 500 || r.status === 429) && attempt < 5) {
+      const wait = r.status === 429 ? 2000 * (attempt + 1) : Math.min(1000 * 2 ** attempt, 15000);
+      console.error("retrying " + endpoint + " after " + r.status + " (attempt " + (attempt + 1) + ")");
+      await new Promise((s) => setTimeout(s, wait));
+      continue;
+    }
+    break;
+  }
+  throw new Error(lastErr);
 }
 
 // Create (or fetch the existing) direct download link for ONE file, so the portal
