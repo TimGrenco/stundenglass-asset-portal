@@ -31,7 +31,10 @@
   <!-- Favicon: Stündenglass brandmark placeholder (adapts: black on light tabs, white on dark) -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=1" />
 
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260708sg1" />
+  <!-- Stylesheet is loaded with a per-load cache-bust (like the scripts before
+       </body>) so pushed updates appear on a normal reload — no hard refresh. -->
+  <script>document.write('<link rel="stylesheet" href="assets/css/styles.css?v=' + Date.now() + '">');</script>
+  <noscript><link rel="stylesheet" href="assets/css/styles.css" /></noscript>
 </head>
 <body>
   <h1 class="sr-only">Stündenglass Brand Assets Portal</h1>
@@ -159,8 +162,15 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
   </button>
 
-  <script src="assets/data/synced.js?v=1783621431573"></script>
-  <script src="assets/data/assets.js?v=20260709sg4"></script>
-  <script src="assets/js/app.js?v=20260708sg1"></script>
+  <!-- Load data + app with a per-load cache-bust so live updates appear on a
+       normal reload (no hard refresh). Order matters: synced → assets → app. -->
+  <script>
+    (function () {
+      var v = Date.now();
+      ["assets/data/synced.js", "assets/data/assets.js", "assets/js/app.js"].forEach(function (src) {
+        document.write('<script src="' + src + '?v=' + v + '"><\/script>');
+      });
+    })();
+  </script>
 </body>
 </html>
