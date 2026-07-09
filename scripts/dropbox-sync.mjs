@@ -47,7 +47,7 @@ if (!APP_KEY || !APP_SECRET || !REFRESH) {
 //   flat: "Logos"   → bucket a flat (subfolder-less) folder under this name
 //   pngThumbs: true → keep transparent PNG logo thumbnails (don't flatten to white)
 const PRODUCTS = [
-  { name: "Gravity Infusers",         slug: "gravity-infusers",         link: "" },
+  { name: "Gravity Infusers",         slug: "gravity-infusers",         link: "https://www.dropbox.com/scl/fo/3j4un063pxgcbtl7yqq5z/ACmVjEjB25HyZTAucWfMCLk?rlkey=b620zqgmr0hxb5lbtazvd4qfk&dl=0" },
   { name: "Kompact Gravity Infusers", slug: "kompact-gravity-infusers", link: "" },
   { name: "Classic Gravity Infusers", slug: "classic-gravity-infusers", link: "https://www.dropbox.com/scl/fo/zg2lt1b24hyg51akxtqyr/h?rlkey=umf2vggz3vro82dduczc419q1&dl=0" },
   { name: "Modül",                    slug: "modul",                    link: "" },
