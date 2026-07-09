@@ -58,7 +58,7 @@
   }
   var typeIcon = { image: "photo", video: "video", vector: "vector", pdf: "file" };
   // Official Stündenglass brandmark, preloaded so the certificate-download canvas can draw it synchronously.
-  var CERT_LOGO = new Image(); CERT_LOGO.src = "assets/img/stundenglass-logo-black.svg";
+  var CERT_LOGO = new Image(); CERT_LOGO.src = "assets/img/stundenglass-wordmark-black.png";
 
   // Category icon for a folder tab, chosen from the folder name (handles canonical
   // names and colorway/type names like "Black / Renders").
@@ -1182,7 +1182,7 @@
     box.innerHTML =
       '<div class="cert" id="cert-card">' +
         '<div class="cert-inner">' +
-          '<div class="cert-logo"><img src="assets/img/stundenglass-logo-black.svg" alt="Stündenglass" /></div>' +
+          '<div class="cert-logo"><img src="assets/img/stundenglass-wordmark-black.png" alt="Stündenglass" /></div>' +
           '<div class="cert-eyebrow">Stündenglass · Product Specialist Program</div>' +
           '<h3 class="cert-award">Certificate of Completion</h3>' +
           '<div class="cert-presented">This certifies that</div>' +
