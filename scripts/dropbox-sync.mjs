@@ -49,7 +49,7 @@ if (!APP_KEY || !APP_SECRET || !REFRESH) {
 const PRODUCTS = [
   { name: "Gravity Infusers",         slug: "gravity-infusers",         link: "" },
   { name: "Kompact Gravity Infusers", slug: "kompact-gravity-infusers", link: "" },
-  { name: "Classic Gravity Infusers", slug: "classic-gravity-infusers", link: "" },
+  { name: "Classic Gravity Infusers", slug: "classic-gravity-infusers", link: "https://www.dropbox.com/scl/fo/zg2lt1b24hyg51akxtqyr/h?rlkey=umf2vggz3vro82dduczc419q1&dl=0" },
   { name: "Modül",                    slug: "modul",                    link: "" },
   {
     // Overall Stündenglass brand logos (black/white/various). Powers the homepage
