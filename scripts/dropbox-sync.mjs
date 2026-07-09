@@ -20,9 +20,14 @@ import { execFileSync } from "node:child_process";
 import { Readable } from "node:stream";
 import { pipeline } from "node:stream/promises";
 
-const APP_KEY = process.env.DROPBOX_APP_KEY;
-const APP_SECRET = process.env.DROPBOX_APP_SECRET;
-const REFRESH = process.env.DROPBOX_REFRESH_TOKEN;
+// Dropbox app key / secret / refresh token are all URL-safe alphanumerics. Strip
+// anything that isn't printable ASCII (spaces, newlines, and smart-quote / em-dash /
+// non-breaking-space artifacts a copy-paste into the GitHub UI can introduce) — a
+// single junk byte otherwise makes the Basic auth header non-ASCII and Dropbox 400s.
+const clean = (s) => (s || "").replace(/[^\x21-\x7E]/g, "");
+const APP_KEY = clean(process.env.DROPBOX_APP_KEY);
+const APP_SECRET = clean(process.env.DROPBOX_APP_SECRET);
+const REFRESH = clean(process.env.DROPBOX_REFRESH_TOKEN);
 if (!APP_KEY || !APP_SECRET || !REFRESH) {
   console.error("Missing DROPBOX_* env vars — nothing to sync.");
   process.exit(0);
