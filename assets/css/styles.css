@@ -74,10 +74,8 @@ a { color: inherit; text-decoration: none; }
 .hero-brands { display: inline-flex; align-items: center; gap: 26px; margin-bottom: 20px; }
 /* brand logos are monochrome → render them white on the dark hero */
 .hero-logo { display: block; width: auto; filter: brightness(0) invert(1); opacity: 0.95; }
-/* S mark first, then the horizontal wordmark. The wordmark PNG carries built-in
-   vertical padding, so it renders taller to visually match the icon's cap height. */
-.hero-logo.sg-icon { height: 42px; }
-.hero-logo.sg-word { height: 62px; }
+/* Centered horizontal wordmark (PNG is trimmed tight, so height == what you see). */
+.hero-logo.sg-word { height: 58px; }
 .hero-brands .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex: 0 0 auto; }
 .hero-eyebrow { font-size: 10.5px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; color: var(--gold); margin-bottom: 11px; }
 .hero h1 { font-family: var(--serif); font-size: clamp(26px, 4.2vw, 38px); line-height: 1.04; letter-spacing: -0.03em; font-weight: 800; color: #fff; }
@@ -634,8 +632,7 @@ a.logo-tile { cursor: pointer; }
   .nav-link { white-space: nowrap; font-size: 13px; }
   .hero-brands { gap: 18px; }
   .hero-brands .nm { font-size: 17px; }
-  .hero-logo.sg-icon { height: 34px; }
-  .hero-logo.sg-word { height: 50px; }
+  .hero-logo.sg-word { height: 38px; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 13px; }
   /* asset filter chips become a single swipeable strip instead of stacking */
   .catgrid { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; scroll-snap-type: x proximity; padding-bottom: 2px; margin-right: -16px; padding-right: 16px; }
