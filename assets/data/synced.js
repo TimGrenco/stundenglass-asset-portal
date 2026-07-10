@@ -7461,211 +7461,323 @@ window.PORTAL_SYNCED = {
       ],
       "Khalifa": [
         {
-          "name": "Branding · Khalifa_Pattern_36x36",
-          "type": "pdf",
-          "format": "PDF",
-          "url": "https://www.dropbox.com/scl/fi/q5t7txdzsn3de3yzxsmsp/Khalifa_Pattern_36x36.pdf?rlkey=6us6gvkhqu4g62kng9tvejz5c&dl=0",
-          "thumb": "assets/synced/modul/d1d0755783f6f663bed5a2e533e2af058769b823c669264f01a5df8d61c63103.jpg",
+          "name": "Lifestyle Photos · _ALF2038",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ri9o65qknbbxmdtvhsn3k/_ALF2038.jpg?rlkey=jmsjeqpn5iyjyjvwq3rcgbyhz&dl=0",
+          "thumb": "assets/synced/modul/467d751da32a3a9501c777b5f7e984eab41cd9919ffa09a7a5873cc28a923e22.jpg",
           "file": null
         },
         {
-          "name": "Branding · Khalifa_Stundenglass_Wiz-Face",
-          "type": "file",
-          "format": "AI",
-          "url": "https://www.dropbox.com/scl/fi/8amu0yr98ob8factm32ef/Khalifa_Stundenglass_Wiz-Face.ai?rlkey=09h1pjqk5rt4cbzkh1hj62l5m&dl=0",
-          "thumb": "assets/synced/modul/bfede33fa63be6c88d76e06905cb18982bff52306aa1fed9f6db0fbc48964adf.jpg",
+          "name": "Lifestyle Photos · _ALF2046",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/2uycc5yiylwrw4tp42o5q/_ALF2046.jpg?rlkey=lk80lgyv1saly3ixaoi5b0nf0&dl=0",
+          "thumb": "assets/synced/modul/972bb92c0de83ff880e6d79fc3469f11e04894532c7d3606d22d4e1e8b7ec439.jpg",
           "file": null
         },
         {
-          "name": "Branding · Khalifa-Logo-Iridescent",
+          "name": "Lifestyle Photos · _ALF2059",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/vptx6mxf8xkm7uko48z5y/_ALF2059.jpg?rlkey=ejjhcdexrej0hlqelbx7mo9ds&dl=0",
+          "thumb": "assets/synced/modul/7493c83ffa03f8ede3b5c42009a06fbb906837c83925607ed51c8a38557316bb.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _ALF2217",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/wstlv3y6rtgkz89f2f4u7/_ALF2217.jpg?rlkey=rpcp7pa61xziis2c9v6x6vd5h&dl=0",
+          "thumb": "assets/synced/modul/f76c35e37b1e155fc6ca581e35b508be694ae2fb784ab6cc825e871ce48bea46.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH4634 (2)",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/e6tz7p1c8lvr9ccfxdox9/_GSH4634-2.jpg?rlkey=sfzqji0lfgz8qkzepl1dmhfnv&dl=0",
+          "thumb": "assets/synced/modul/2ebb132e5b9cdd6ba3cc6908e3fcf884e8721545772c3b55505edf25521d8c91.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH4823c",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/tkwpzrl813wqkckgd6cw5/_GSH4823c.jpg?rlkey=vuqfswupaoq957qm28jtbohpe&dl=0",
+          "thumb": "assets/synced/modul/05976f037692caa1706f47ac6cc42c3f3f19a59fa9807f58cf425601a568a419.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH4982c",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/z0wxj3ojw7xlrl687e51s/_GSH4982c.jpg?rlkey=pi7enbyz0omxmdynu4uemim3g&dl=0",
+          "thumb": "assets/synced/modul/4fadee8eaefe365d506a22924362ecb6eefdce4d5606f335e2c8a76ef856562e.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _GSH5116",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/nq7bvh2ysoy9u6sfoo47a/_GSH5116.jpg?rlkey=qlbffkiet0fd26rxupwlaumla&dl=0",
+          "thumb": "assets/synced/modul/818f86950517f67699a655284624585e0376f1ad5b73288cfdfb94653f2b898a.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _STZ3057 copy (2)",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/736j2h39p0vv2rxi3vte3/_STZ3057-copy-2.jpg?rlkey=k1jzz6iqsmtxa7zi38vj2uwz3&dl=0",
+          "thumb": "assets/synced/modul/db4a7d6cd37c8e0d8d963725153a0fdc9c40609e32dbd81623dd8f93eb1ee982.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _STZ3058",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/b9d76w30y3r2rmwxpl6jb/_STZ3058.jpg?rlkey=cm0v742018gzk87hpuico0pz2&dl=0",
+          "thumb": "assets/synced/modul/06f48abe5101199f4ffaa613dc6563ab0837260178dc35d0e985c75890a89677.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _STZ3058-wizface-cropped",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/2spv4506gw9d18adcbbkr/_STZ3058-wizface-cropped.jpg?rlkey=dp7apskt1moew6d3543cv46ku&dl=0",
+          "thumb": "assets/synced/modul/a4b8d9d5a0688668fbf15b7ae62a8e3c33749a5d392fb2d1867ca3c5a016e524.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _STZ3061",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/4mxxnei8hm4m58u30lzc1/_STZ3061.jpg?rlkey=p8qhnrgsyg70jwww081ubc5hi&dl=0",
+          "thumb": "assets/synced/modul/a09899a64787b475630c784f0c65efe09a563e736c279f90d08101f31266abfb.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · _STZ3068",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ix76dgv1q7cfpel1ztewk/_STZ3068.jpg?rlkey=8d2erhgqa3dsmhlojb48gpwbv&dl=0",
+          "thumb": "assets/synced/modul/910abf8d14957bc7598645c6cfc09d69ba254a7b2341daab94bb1a98fb06010d.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · CHAMPS-2-14-2025-by-DABSEL-ADAMS-298-IMG_4147 copy",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/h66sxaeiaxce2v6s5qy05/CHAMPS-2-14-2025-by-DABSEL-ADAMS-298-IMG_4147-copy.jpg?rlkey=rexy06mza01hilvsvgp8r56xv&dl=0",
+          "thumb": "assets/synced/modul/64d94c2e3354894eafcc89851fbccd00e15b106b9d52c0b3d4fe99552ee2e78b.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · image (35) (1)",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/2xvs1pzw7yz203cdow0u6/image-35-1.jpg?rlkey=vmsiegbkn64u8jfj984iixois&dl=0",
+          "thumb": "assets/synced/modul/62e1a4d5e84ad10c422106fc7564391c8b4ebe8c51e4bafec850a474c36876cf.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · image (36)",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/y1vf08i9553nig1ciqozl/image-36.jpg?rlkey=jjlpu3zouhwskjz805z24l194&dl=0",
+          "thumb": "assets/synced/modul/e8e5020f4628dcc794139ca00d16fe2929eb390760f480d10a89b823aee93a3e.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · image (38)",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/egg0ie2v4sic7s1rg7i5w/image-38.jpg?rlkey=yozje75a0sg1azbkj6pz39k9r&dl=0",
+          "thumb": "assets/synced/modul/2d705d583172b55469f5e29bd7e381cf52dd3b8832d47185143cfb4136ebed86.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · image (39)",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ev7vifxn68miwwyg89oh8/image-39.jpg?rlkey=a8bmtpvwlnsita3egt7h268q3&dl=0",
+          "thumb": "assets/synced/modul/ee348909b37e9a3965463dab4fcfd00f3b4418fe1e02b539561945c69ac5912e.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · image (40) copy",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/fthdm6p2g44ydpdjqua23/image-40-copy.jpg?rlkey=bps8lmw2s88th4ek0s3fbr8xh&dl=0",
+          "thumb": "assets/synced/modul/fef88aef8fbd7abfef4ba7148631b30aa31c520bd6109214064c77dbe56f8bf2.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · image (45) copy",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/qi4o0qrnal117p6vpv1bp/image-45-copy.jpg?rlkey=85xfa3xdslx4jstwvlhdlvt92&dl=0",
+          "thumb": "assets/synced/modul/3e167ff897eb4442b668d56cc07b9aab32e3527568c453cf27aad3796bfef227.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · image-35-wiz-face",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/o9kw89darpx4800va7ept/image-35-wiz-face.jpg?rlkey=dzn2pph3c5yuj4pvh3tzp47p5&dl=0",
+          "thumb": "assets/synced/modul/057177594f74fd770ace48b143380a110c13c8d780944609f832d7e76dfb763a.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · KhalifaAndModul-1",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/h9gozollr4py6uhxchy0e/KhalifaAndModul-1.jpg?rlkey=fnxj1zqpfky61r3f3dcd3qbnf&dl=0",
+          "thumb": "assets/synced/modul/bc7b9d0e9a276c58d8bd4a49c39325ccc21e189c6bb41a4c649c2b455c51e6c3.jpg",
+          "file": null
+        },
+        {
+          "name": "Lifestyle Photos · KhalifaAndModul-2",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/0y5pxi0d5sl2gff8wnwzw/KhalifaAndModul-2.jpg?rlkey=gcl0dctf3cwa7v2usnz98nki6&dl=0",
+          "thumb": "assets/synced/modul/8245e5a272abcf3aee3ec2f3816491ffdc89954153ec6b62dd266bde7b39db8e.jpg",
+          "file": null
+        },
+        {
+          "name": "Logos · Khalifa-Logo-Iridescent",
           "type": "file",
           "format": "AI",
-          "url": "https://www.dropbox.com/scl/fi/64to0j74pl31p44s5hqra/Khalifa-Logo-Iridescent.ai?rlkey=7ske8vvhtqh4iqtae5dmmu1be&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/4oqgguytikeyunpsfp6de/Khalifa-Logo-Iridescent.ai?rlkey=8l9svz9oqxo2tthn50iolmrwl&dl=0",
           "thumb": "assets/synced/modul/b2477fdbe53b378b3e452d18e85047d26c90241942edfcb31dd8337b363211d8.jpg",
           "file": null
         },
         {
-          "name": "Meta Ads · KK-Modul-4-5-Meta-Ad",
+          "name": "Product Photos · KK_thumb_01",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/92x9y1c527qrk4w9ipq78/KK_thumb_01.png?rlkey=wx10pyqcnemji35cn0d4gpruu&dl=0",
+          "thumb": "assets/synced/modul/b303ef6ced9b46e28b6d1c4c5a453386f117707195a529eb39353e4e81cf5380.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_02",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/bqmlmnmaw8geu4vrmd229/KK_thumb_02.png?rlkey=s56dgj72skkumc1aefjwsp4m4&dl=0",
+          "thumb": "assets/synced/modul/9eb2f5a149bcd41b34e9e6315cfed5f8534d7095fae1308b45eb778a79566c4f.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_03",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/bseeelmrihdruwi3j9co8/KK_thumb_03.png?rlkey=a6kev6yt99eclwo0uv5lmzgiy&dl=0",
+          "thumb": "assets/synced/modul/c6b97d870f153f983738ae3f745372d52a7a6f78e3430c017fdd832dffa2ac49.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_04",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/g4eyj7b5russce5dtkwfe/KK_thumb_04.png?rlkey=ibvwqmanp0n1fmcwe3ydx4hyy&dl=0",
+          "thumb": "assets/synced/modul/baafd06dc1ab5e516d2b45169dbc0ca774eca23193af2f4138ae783f5d4fa5f6.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_05",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/xgbrq1yqaqm2u3cxi2gb5/KK_thumb_05.png?rlkey=98uzo6f84mvrpv05j9dqwjeso&dl=0",
+          "thumb": "assets/synced/modul/ab5853ad0bbdef573fd52b364f67eeabc5d9b7bb2efaee53c8b608d12c74f61d.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_06",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/jy6221wauf9mvnufjqedr/KK_thumb_06.png?rlkey=w7n0d4bp1akn8gfzzi3nu04l3&dl=0",
+          "thumb": "assets/synced/modul/1c30e981b681435d9138e71c1942c435b9f896dffb9cddc27cf6bb2ce807cd5d.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_07",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/8iu2463871wddxd6cfzuq/KK_thumb_07.png?rlkey=8fwoil63ci9rn6xujn4v3whyi&dl=0",
+          "thumb": "assets/synced/modul/b63fa80852f3860f440353b1836b6569a0e08c7f01fd42b5b3d5d96acaeddc16.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_08",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/ncfaezp8k6rr7z1igfzq2/KK_thumb_08.png?rlkey=4u47t7rynopffsycb8gofihah&dl=0",
+          "thumb": "assets/synced/modul/beaac2e048d842910fcdadc3ec8b74bfb0beba2f15dedc10f5c089aa37d12002.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_09",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/jekp6znxnz5inoumt17ai/KK_thumb_09.png?rlkey=etm0ps5xpds2bt1hj59wvxtdk&dl=0",
+          "thumb": "assets/synced/modul/f8602fa2a9ed3ab910e43e6966c4b9d452c1288c7333e7402fa6fcd7c67f4448.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_010",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/u1td1i1p8mg4rwr7wr83e/KK_thumb_010.png?rlkey=4an65vtpzedv7ys0pcafbjo1g&dl=0",
+          "thumb": "assets/synced/modul/2a7c737a4669c01ba53c68efa00921a8f6e204a3bb11bd6079cf16992e893898.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_011",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/sfzbxk4fjefz1vmsk8br7/KK_thumb_011.png?rlkey=7dqfilrx2yrzhtxyskc2y2c3a&dl=0",
+          "thumb": "assets/synced/modul/adad074a4444fffd9544bf23db465c856701f29d80f7d6a993d33dcd3b2c802b.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_012",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/mmdwzz66kkozm3c17bd9y/KK_thumb_012.png?rlkey=73jck18kpt4b9n466vu2uw67c&dl=0",
+          "thumb": "assets/synced/modul/c403477a743b011b458d472f2143153ce9edf181dbe6b0e76e32adce6e784ddf.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_013",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/t50i2hv46nev5nt5muna1/KK_thumb_013.png?rlkey=3foxgzy1kka50nsuxn48w8m9y&dl=0",
+          "thumb": "assets/synced/modul/56fc451350bc131748821a7437322179ba508711a0e10a171f02ddc6cd572783.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_014",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/nhkp4yazoxwd9h743rhjs/KK_thumb_014.png?rlkey=qvy4damog2no52gat61ia0ln8&dl=0",
+          "thumb": "assets/synced/modul/42aee08927bf45d356a64e961f3515014ada0566d75633e55a430164521f3b70.jpg",
+          "file": null
+        },
+        {
+          "name": "Product Photos · KK_thumb_015",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/kc644jjti684c1ytx722u/KK_thumb_015.png?rlkey=widhggzvrw3wiwqq21cym3def&dl=0",
+          "thumb": "assets/synced/modul/78892ca7546a84d6988c3c58e39124803df15892fc3e483506d24469450d6d13.jpg",
+          "file": null
+        },
+        {
+          "name": "Social Videos · Wiz Champs KK Modül",
           "type": "video",
           "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/3c7v8rtl3luibhpsuip6t/KK-Modul-4-5-Meta-Ad.mp4?rlkey=lm65y8zhhvemd1173h3ggrt4t&dl=0",
-          "thumb": "assets/synced/modul/b757bb4656c24472174e6ad5b4f65e478c5f299f2940526493e537cbd55935e5.jpg",
-          "file": null
-        },
-        {
-          "name": "Meta Ads · KK-Modul-1080x1080-Meta-Ad",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/xrodfhmpyim1ryri7mshd/KK-Modul-1080x1080-Meta-Ad.mp4?rlkey=jy6e4o631c5itr0b7chqzbwn3&dl=0",
-          "thumb": "assets/synced/modul/d6ba6ef01a549e6abaa80f02ea079b241153d397c1c31fe25a563175cd4913e5.jpg",
-          "file": null
-        },
-        {
-          "name": "Meta Ads · KK-Modul-1920x1080-Meta-Ad",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/trgaj9583xerbqsyxr3a4/KK-Modul-1920x1080-Meta-Ad.mp4?rlkey=p265hdiz4ufauvf24f1kr8yn8&dl=0",
-          "thumb": "assets/synced/modul/5999838efb67655829a24938bdf313a5ef25c67cd3bd5874c5e3dd2f78a124a7.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Banners · 160x600",
-          "type": "image",
-          "format": "GIF",
-          "url": "https://www.dropbox.com/scl/fi/utslzrjzl0r0vakytemy1/160x600.gif?rlkey=s1ebjbjkyehn1gw0cf90g5gu2&dl=0",
-          "thumb": "assets/synced/modul/2d7609478ebab3445d8f1172944fc8bc1a92e2aa1f9f025db27fce3fe132aabf.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Banners · 250x250",
-          "type": "image",
-          "format": "GIF",
-          "url": "https://www.dropbox.com/scl/fi/b1oon962t9u6zipr4br4d/250x250.gif?rlkey=u0vdfcwhbkl9ru22m27mviemc&dl=0",
-          "thumb": "assets/synced/modul/229693441a1ae7de027d5e68d51881dd83c6c7cdfb0086e4026a20acda338eae.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Banners · 300x50",
-          "type": "image",
-          "format": "GIF",
-          "url": "https://www.dropbox.com/scl/fi/0uq9xshgf2p3ai81eas63/300x50.gif?rlkey=di44he3g87dlu3xmob5cigfa9&dl=0",
-          "thumb": "assets/synced/modul/a1adbcd07ae59ed254c2defb1a6c247426b7be6ef04416dbcc7d5904e614990d.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Banners · 300x250",
-          "type": "image",
-          "format": "GIF",
-          "url": "https://www.dropbox.com/scl/fi/ete2i5tpxbwhklaf8vpfs/300x250.gif?rlkey=11d27kx5exw90x0ra34quiss3&dl=0",
-          "thumb": "assets/synced/modul/b2e72a3bc492819bce5d80bdc027a278f503c3e1ce76ccdfda1a1105e4e577e6.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Banners · 300x480",
-          "type": "image",
-          "format": "GIF",
-          "url": "https://www.dropbox.com/scl/fi/ouoai6t3562otl841z149/300x480.gif?rlkey=uwzlb20xassa11ykvbw1xoz78&dl=0",
-          "thumb": "assets/synced/modul/3e5bdc61eadca88ab7d9f449b05d826e1a970f104b3ae2db6bb3854db0806bc0.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Banners · 300x600",
-          "type": "image",
-          "format": "GIF",
-          "url": "https://www.dropbox.com/scl/fi/603dohv1sw0evtnd47j57/300x600.gif?rlkey=cuw7w3gr9rbvm9gc14t80l8b3&dl=0",
-          "thumb": "assets/synced/modul/c2a7d2295a5d48c2013c1831612074accda71114ea6caa5d3d94ac04426ad194.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Banners · 728x90",
-          "type": "image",
-          "format": "GIF",
-          "url": "https://www.dropbox.com/scl/fi/j1v6ou9xq40gztcbegy5f/728x90.gif?rlkey=6gx4ie7ht7ajbgrmef9uy48u1&dl=0",
-          "thumb": "assets/synced/modul/9c3fe905ab2feb3f5a013de803ed2c0b1300abc7848f1842f828a15a76112a15.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web KK dok deluxe bundle Glass Side",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/xguqfedyapwhemcx3qaxb/web-KK-dok-deluxe-bundle-Glass-Side.png?rlkey=kix1e9om6yz4xik5v0xk3eb65&dl=0",
-          "thumb": "assets/synced/modul/28d5cc7ddf7837d3733ecb5c6a666ee544c07b402472df8cb47f411b89e15828.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web KK dok deluxe bundle rear unit-whiteBG",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/k3qga6l48yckjixizghqm/web-KK-dok-deluxe-bundle-rear-unit-whiteBG.png?rlkey=243bgdjp9i63zdl1eek2a9fui&dl=0",
-          "thumb": "assets/synced/modul/2f72edca7ad6e3521aa3da0bf2616b6cbbd3983d2cea4eca291e215f2284a8bc-lt2.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web KK dok deluxe bundle Side",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/qvggfjk7murvhz37i5hgj/web-KK-dok-deluxe-bundle-Side.png?rlkey=nrdhzlxkv20yngurudmbwam7m&dl=0",
-          "thumb": "assets/synced/modul/02d05b3b342fb7620b81243e7df77d7740962eeb36912e395194cc2de5502902.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web KK dok deluxe bundle turned unit-whiteBG",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/u4agbza1fm6x6c2ui1xvi/web-KK-dok-deluxe-bundle-turned-unit-whiteBG.png?rlkey=ih3v9r3tm7bsf9s23o2dwt77q&dl=0",
-          "thumb": "assets/synced/modul/97b10fe02649a98e887cf872c68627c8a1ae54a17a226612e7de477032323a52-lt2.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web KK DOK Deluxe travel kit layflat",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/81xosgojzqmv9byxdc4ol/web-KK-DOK-Deluxe-travel-kit-layflat.png?rlkey=cems9e03ij2uv2ugrv1u9elk7&dl=0",
-          "thumb": "assets/synced/modul/73239e03b74b489c59d1adc294da366028cffb704549efe2e98fae0b9a3d22c0.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web KK dok front",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/3b39boxt6uqrd6brgb3ui/web-KK-dok-front.png?rlkey=wkpf8f6tid3sludw293gtjwvo&dl=0",
-          "thumb": "assets/synced/modul/2496bb7d6fdeabdbb811fb14922d8a7fc0fd93eb73855223d06d38ec83975e98.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web kk exploded front",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/5hglpo5fh0iho8tfia8pn/web-kk-exploded-front.png?rlkey=i5olqp4gk029kos1xbvxvm0eb&dl=0",
-          "thumb": "assets/synced/modul/0ec14471266a5b7993a6510ceab0fc3bae25874ccf99449c0a1e7577df6c647e.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web KK Modul deluxe kit main",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/93tsmef28s5znqnjkwt2g/web-KK-Modul-deluxe-kit-main.png?rlkey=omjkxreuffndk8um44cdciotr&dl=0",
-          "thumb": "assets/synced/modul/5b25a1cb6d8cd36f47debc008f387ed9ff44d09979ec2315bb622e9f7944bc20.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web KK Modul deluxe kit opened case",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/mzaxrrvltknqxir90cv9c/web-KK-Modul-deluxe-kit-opened-case.png?rlkey=b4zixxpxuu486kqag9chtxfih&dl=0",
-          "thumb": "assets/synced/modul/3e9dd95b8912f52c4170042ba4f1bdb69f917b5cb4dc44cabc088a98ceff84e1.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web_KK_On_SG_Front",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/3swguafnieltgvgk3dfx0/web_KK_On_SG_Front.png?rlkey=3hh51q5s8fa0dgfhkw2mxa65e&dl=0",
-          "thumb": "assets/synced/modul/aa48f6f1925fdb636159767344717141be473d155a86b40d8db9ff0f367da50b.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web_KK_On_SG_Rear",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/mod7opziqtnxy80q7a7k8/web_KK_On_SG_Rear.png?rlkey=m8ar4psgip9zfqph45u2ds3xy&dl=0",
-          "thumb": "assets/synced/modul/d7ddf54505a1fbf98a954ae6a6341aabb609b9cc3859e875603fd43c79704ed6.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web_KK_On_SG_Turned1",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/h1a6p9ccyw0mvyotdrbip/web_KK_On_SG_Turned1.png?rlkey=uzit9o4zwyuz948x6p57dhl8o&dl=0",
-          "thumb": "assets/synced/modul/bac0ef09e6ceb7c609bf5345e7acc48c23f95462d6f2edc08bcbf5e609bb627c.jpg",
-          "file": null
-        },
-        {
-          "name": "Web Renders · web_KK_On_SG_Turned2",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/4ifl1ufitmunfextfumsk/web_KK_On_SG_Turned2.png?rlkey=rge1xo0wzcs8ytcjhue15gqj9&dl=0",
-          "thumb": "assets/synced/modul/043f93d6374fe22868886e616c948652da0a73d7a53e8475a077b023d1aa8302.jpg",
+          "url": "https://www.dropbox.com/scl/fi/phcxjrr36f4lllmx48a8x/Wiz-Champs-KK-Mod-l.mp4?rlkey=enj79oerxjzx5vndw07ju4slh&dl=0",
+          "thumb": "assets/synced/modul/0ded2a3faec01d01f9b64b5af605cb29a6daf9d8c626fc2ae22b22e33e22ac92.jpg",
           "file": null
         }
       ],
