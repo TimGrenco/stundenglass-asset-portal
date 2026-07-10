@@ -767,6 +767,14 @@ window.PORTAL_SYNCED = {
           "url": "https://www.dropbox.com/scl/fi/yzwvszpdzbv7bhl523ld7/Purple_thumb_09.png?rlkey=7wljtfjatabj638eu27c35osx&dl=0",
           "thumb": "assets/synced/gravity-infusers/762190c178e5302f3dae929655b44c182a45c6e00f7314f55b93b458fd1bd796.jpg",
           "file": null
+        },
+        {
+          "name": "TV Videos · Violet Purple Horiztona",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/6s8r1m9zjdt5glsnh6a18/Violet-Purple-Horiztona.mp4?rlkey=crgyctfw2w9a1idjeazoszezp&dl=0",
+          "thumb": "assets/synced/gravity-infusers/7e347dd452e0c093e7a18b137908711e575afcdf5835cf8d43c269d0b271fc70.jpg",
+          "file": null
         }
       ]
     },
@@ -780,37 +788,781 @@ window.PORTAL_SYNCED = {
   },
   "Kompact Gravity Infusers": {
     "folders": {
-      "Black": [
+      "Product Photos": [
         {
-          "name": "Carrying Case · _STZ8382",
+          "name": "Kompact Front No Shadow",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/0ghrfhf9bl6d983p2s428/Kompact-Front-No-Shadow.png?rlkey=pvp5rmot4vujrdxnn95dowll2&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/5f04062d6befd7a5a11db97ea17207217ef35221351518ec99dd9b7b2a52801b.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact Front Shadowed",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/683ku08lyj6lozai2x6s8/Kompact-Front-Shadowed.png?rlkey=i3p074kwf0bxzir60768xbib1&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/ca2d357ba82f2ef8a55bd6ca419af21bf41f35425421f4c73ef554f1bfc85e7b.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact Travel Case Closed",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/h1iyhh4gyktrts767289q/Kompact-Travel-Case-Closed.png?rlkey=obg55jehwgw2jpwf6zwuku4n3&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/da691551dee66b44dd8ada2ec3d16c81ccf34e1b8a1e1898331df8c96b3ed294.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact Travel Case Opened",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/6rd21lckpam3i7yfn3ght/Kompact-Travel-Case-Opened.png?rlkey=0xn6pp5kdgho268aht7c4dswl&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/b36709f9efa195f269bc0e0f888e34c7494172425dc3984db74ed51bbac7f936.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact_maintenance kit",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/o2v25pygzamzrg0soh5ne/Kompact_maintenance-kit.png?rlkey=5d07refrp7oy4hw2cqumigj52&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/12ef71c2a20af1f6f7081cd292040e6de6fbb15dafdef51fe9f429b677bbc4f4.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact_Single_Globe",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/tgrsq4lvvbpbn3y4bqoxf/Kompact_Single_Globe.png?rlkey=a5j82qozm4gzibquovz80cr79&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/a70860c00322bca0555188fa66baf54f903d79cb4de041487dceca094b29080b.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact_TwoGlobes",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/cv0obufeatffondewkwux/Kompact_TwoGlobes.png?rlkey=se361ibq9glorp4dlyec9gbgp&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/f0f9757ede0cb359f07e0a562c5bbed59fcde10493c0317ebe110c04332dd316.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact-Straight-1200x1200",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/egkruc4szuc62koyi31wm/Kompact-Straight-1200x1200.png?rlkey=g6vyhai497opswi2irfevzbs0&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/3401dfcc907ba4e273111da0d7b98035c14b5f46ce8a41379072a088a8a6c7d6.jpg",
+          "file": null
+        },
+        {
+          "name": "side by side black BG Flattened",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/6dptgxz2jfs6iwa342k1m/side-by-side-black-BG-Flattened.png?rlkey=b9rlpfuoj1q939tupd78e0iku&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/0b32d5e68c71ec01a040c468601f467a83a37f3a7d4c9308a6b55ddc016ff482.jpg",
+          "file": null
+        },
+        {
+          "name": "side by side black BG Transparent Turned",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/vyah7lpqs9mnrvql9dk7d/side-by-side-black-BG-Transparent-Turned.png?rlkey=gj904x6h5s3yeanc6x36wkcdh&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/c60022876011306ff21a4ee7caa040cb64338fe43893d19249457747a00269b2.jpg",
+          "file": null
+        },
+        {
+          "name": "side by side black BG Transparent",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/ep9b5dlpsclfv31yhr53v/side-by-side-black-BG-Transparent.png?rlkey=rdospa21i8d3d5lk93bqeipyn&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/9a8275dff5966d27b333a70ca6adb7fd9ab9da750e2e2853d82c3cbf2434f81d.jpg",
+          "file": null
+        },
+        {
+          "name": "side by side black BG",
+          "type": "file",
+          "format": "PSD",
+          "url": "https://www.dropbox.com/scl/fi/bubblm4zq4b7z3afhlad5/side-by-side-black-BG.psd?rlkey=zu4lbnn8kwzhmpn3edxevqxni&dl=0",
+          "thumb": null,
+          "file": null
+        },
+        {
+          "name": "side by side white BG Flattened",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/2luk2va7ta3wbe46d66d8/side-by-side-white-BG-Flattened.png?rlkey=z2k023hwzvtsrrxfzilarx1bp&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/858ca1795858938464acfa3f33eecf04d25e5e0873add454fb162a6102db9016-lt2.jpg",
+          "file": null
+        },
+        {
+          "name": "side by side white BG Transparent",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/icb75r8ue3xzh67u6hcib/side-by-side-white-BG-Transparent.png?rlkey=00maovqmra2we8hxjksdeh8yb&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/d5d21604d437f8f923eee48599036b16e4aa6d742d5e7654f4241d3249d75f5a-lt2.jpg",
+          "file": null
+        },
+        {
+          "name": "side by side white BG",
+          "type": "file",
+          "format": "PSD",
+          "url": "https://www.dropbox.com/scl/fi/5686rjqowe57v9k91c9v9/side-by-side-white-BG.psd?rlkey=g73j0gesdg0d93eamtngsefzy&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/ea8f474a0769ac686b18630cff3b13289e12688866ea7b776429e5de51979457-lt2.jpg",
+          "file": null
+        },
+        {
+          "name": "web_CleaningKit_All_Transparent",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/xftdz496ckx1sy0y42als/web_CleaningKit_All_Transparent.png?rlkey=pq5pnl1c2kj0gma0jhyterb3h&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/ad73764e55a79cf81d8746049f8290b91bcdbcfdba1124db9f9b293dd4650493.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Hookah_Bowl",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/sr6decqa1s8ormp0djs6y/web_Hookah_Bowl.png?rlkey=4xvwsuopb8sxwrj5hqcxh73n3&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/10ac82a2ce0fb4fc8659a34aa6145636457fabead8f52ce80841aabcfab46b51.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Hookah_Gear",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/kdhha1qgl9f4iu5tscevh/web_Hookah_Gear.png?rlkey=vc1d5hcr9n2cmn50a1pmk1l65&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/e4589d58b2af010e659a434054be58c293087be2a7e0ba60f0e12c366a80912b.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Hookah_Silicone_Sleeve",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/mts782gzwi8h9gzm2g92z/web_Hookah_Silicone_Sleeve.png?rlkey=ddqvuxq59ym0lgvon3auem0h7&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/7e4d4e03f92b79c0091a4ce1bf328e813af22fd39bb7bc0df9042f0130a1b427.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Hose_Only",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/8elg0uo2499ijklrb4024/web_Hose_Only.png?rlkey=grvvjlyudhcgzsd9s5p14w4d2&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/a7a43ac8ca215506bfc76486f9f68698c191e9c54c39874595be213eb7ca0c19.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Hose_Tips",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/oiz6qh4z40wsgmtwhztgf/web_Hose_Tips.png?rlkey=8hm2agr1cq8q5eggcaji84p4f&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/87a74279f666df7ab4171a6c3b4cadc059756bbed1376f9b1ec67971e7b3767c.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Hose",
           "type": "image",
           "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nmz89v7q17x4p7eeue6o1/_STZ8382.jpg?rlkey=voatwmmp95dpmeyveol9wnfs6&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/b41137aeabd78305343c4a1a420dc2ee7e110a12073d0f24e912fd82d3f3579f.jpg",
+          "url": "https://www.dropbox.com/scl/fi/7906kx960tbblwwlokhuo/web_Hose.jpg?rlkey=zbl5el6xbwmflrxui0g1h0sub&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/ff88735040db57e0a8c689aee73098fa2c51b417ae701c18fa5c74f89023128d.jpg",
           "file": null
         },
         {
-          "name": "Flower · _lsdreaming Disco Kompact",
+          "name": "web_MouthpieceGlassReplacement",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/jpkm4ybc06t0u6krk4qzt/web_MouthpieceGlassReplacement.png?rlkey=m87fvhfx60p9fer84jpuz3sij&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/8618c996aea8c0140cc80c6f5082d5dd8ba220aa98ae6d9db43ac6b3ba796679.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Tray",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/kanutv9czkc510d4btfrm/web_Tray.png?rlkey=8de97uip7be7hrjg7s4eeaq6j&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/b49f1a552db6dbc5a4681784e40bc0610f3a4dd26397295d13d061ac184a61f0.jpg",
+          "file": null
+        }
+      ],
+      "Lifestyle Photos": [
+        {
+          "name": "_ALF0837",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/65tuh0ag4h5t8j82pnbin/_ALF0837.jpg?rlkey=43k4e5my00g064n26bxmwug68&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/f7e2f54468e3ad48f9644e40f2d230fcebf87d0c5d5c79e979eb009e51620c57.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF0877",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/al3cx2jlgf6nl6ssvjzhz/_ALF0877.jpg?rlkey=p1a7okgaekpbipzb6n374ylxq&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/cd1df8e771bc7a278d956c5879ec3157d4106cd3485583ddc604ea8d628b46e5.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF0902",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/8ucyfxdv3xosq1atm2wk1/_ALF0902.jpg?rlkey=zhnm2pirs50rs60phdcwigazu&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/2a7e8b2e52b8643e516bd84a7fc50ee11a06f83a9b6fa8b5f8642497dd763910.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF0921",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/xfsdo3gxuu0mzzmrx52fp/_ALF0921.jpg?rlkey=t44q6isj2okjva4wq22ejc7ys&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/e3a7fc0e125c416cad30c7943b2afd1fb785a489bf40c4ed753558c9fe71774c.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF0922",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/azr54wuc2muzdc7i6joca/_ALF0922.jpg?rlkey=cutpthg8xkwciwdyw1fsijr9b&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/7e1df24438623ece4c4ba9d8789a59fc28b7a40fe972ccf94d963dba9ef595ea.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF0923",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/8yczg9u9k04y0u7xcxh6p/_ALF0923.jpg?rlkey=cw2k8c2iifaqasm5jjaftwy40&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/c5f1e76fb241ae430801725830f34d605ae60a9f3a3b174b16ff96c476d3c91e.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF0939",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ko6otq1a875e7lq8a13u7/_ALF0939.jpg?rlkey=49yg0objhje4989vmho2wswp6&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/17c68b18361b628b447c51b7e5a733a5e0fe4b4835130654076fe9a96540020c.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF0942",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/kdfjcbyec7zrson48a4l5/_ALF0942.jpg?rlkey=umpnp29ca4yv4bejays56hyg6&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/a6828d5648ae47934ef84089da17fe0c135b4f13affbe9f4e969a2ccd85da01b.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF0946",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/wk4wshzfgc2ngaoryv5a9/_ALF0946.jpg?rlkey=5gpkjmat1xcbl5163gu3bc7xt&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/344313104b77911dfa4b6d974c39253d2a3f0fff1089b9e1ed52d96825663b70.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF0964",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/dz8ulqncqq6ncew5f504c/_ALF0964.jpg?rlkey=ckrtw4zdma6f0gmj5l75d2u6g&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/37e0a0409953fb378b6f3556a25d1d90e69d85f401d232b6479885737aab6a47.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF1005",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/g54jm1y9rcy70dle8hjy6/_ALF1005.jpg?rlkey=tdqllhpjr8for37ghea689nv1&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/ccb2744c0a1bd722f1f5c6b97471b8eb1b3f4075ec3eac1cc5e829f192658e06.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF7539",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/4g91xxkty76494msyo20m/_ALF7539.jpg?rlkey=u7jfyjchlseu2zmqhl3oq2kvo&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/922eeb87fb9cf0d7e790e72cc4f7ff0468bf0ee720d3839e39496b6d6828cabd.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF7716",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/hlac6570srthee6nl3y5d/_ALF7716.jpg?rlkey=rq5ti7x6te4r2k6c7ircd43rt&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/8aa96c8777e5deb8a218567f57d5377039b1e18a803f6def089c79f523b2c14f.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF7724",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/0ynprwtjkel4da26hmmhc/_ALF7724.jpg?rlkey=j4nmixj3i2h5tp0983c8kul1b&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/94dd83dff82e5d89fe986a7762be98971d29a048b1ce7dcec7f80be971f798ae.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF7935",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/uud7cdsdam1q37ztwlnfx/_ALF7935.jpg?rlkey=lbz6cporqpabvy6rwj3vpgxdf&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/85dcbd48233fcffb029e21b0d1760f4d0f969f6f1d866a9eb6e401846b420e66.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF8728",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/uvdw0w2m7s9soaer7iaoa/_ALF8728.jpg?rlkey=otenwecluz7bfz337jyts4g10&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/8db6122bc7d67542b0ba3778bdfe2a37ab741a07c0a9ee2861c673ac74140f75.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF8732",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/9o43j1bb2aol0mau2q1b1/_ALF8732.jpg?rlkey=qvedl1msprw8aq7vbpdeuep3l&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/d787e9fc67f81afaad6bd2ed4630424b1ff95b91d0d3746b10464742e9e0b00f.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF8735",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/gak6vt9solkgiibu140zd/_ALF8735.jpg?rlkey=q4y79azt9i0xzsymu2f18yx3x&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/ed147cd5058d41251802e7f077b479a7bf12321b939bf583106378ca9e9723a5.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF8736",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ttlmnv19yxabifcfyeqwf/_ALF8736.jpg?rlkey=vnyp9v8jq044oz9kir6xrfogh&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/7945767837664459594f93f3a6ec0b4af0c79eda7ce4deda081d63b9ad09e212.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH1418",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/qszmibafs75gh3o16nsol/_GSH1418.jpg?rlkey=9t2a8k7p7439o9sntby9eq58r&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/637e902241469338b8d1cba38fd381e375499d2712262086619a2d05a4d1d9cc.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH1421",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/9ktmfydr27lkc67ng0rua/_GSH1421.jpg?rlkey=o64r4nf82p0kgcsuqaj04binp&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/82067f5a5f5a3e022a7fd45776ef2d2d6731cc51bfb320e90b917aa6e919af74.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH1428",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/swsdtxfuau20wblp8webq/_GSH1428.jpg?rlkey=0hv6wt4e46f9fkuz4fulc9898&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/567fbe91f7bedc0efb421b3cfd389a37e9ba24dbcfcd6e5c49a9827ca286b9d9.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH1463",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/h1mkx0s5o13mnzm56f8uj/_GSH1463.jpg?rlkey=rvqll35endhr0bm83dvz36per&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/4b773d9ea363eabd1560c849187b60fca8066e66cf892e0602e06bab2670f901.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH6344",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/wp5m0msnmmu2jwoxty3fh/_GSH6344.jpg?rlkey=lm8u9r012taticn7fm1nwmrt8&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/71f053b7790d7d815a25c1886992b022a72b5fafe3d9f159f588b53c4b780af6.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH6345",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/mu0p2ssxqcoht6llasd71/_GSH6345.jpg?rlkey=2o8v9msrj94uu02r1lerv5c83&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/416f51f2aab82f913eb4bb9d91e87ed3af25f70535b7550a82534529e41c6389.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH6346",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/c32yjxk5f99s2an4hgqgk/_GSH6346.jpg?rlkey=etet70x0caypj0aasx2ol8y57&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/c37fca5c090d936d15d762945051c31f1da362aaf5bbb9331f01b5e6e3953a3c.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH8902",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/p77pvy2d9yn0buuu4v7bd/_GSH8902.jpg?rlkey=9gytm6lnegxr4tfmu3sce8zsl&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/6af2a4e545691685051eb3743a2bd94fa32ca23faad9369bcb5d68b4941e44b7.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH8907",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ztepqjvt3ily5jxs5n746/_GSH8907.jpg?rlkey=r7g9rkl46xrhswwc2arpw7an5&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/16433499386fab1e8efbbde17a272680ec41a2648f7770b2497f68849ccabe50.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ3401",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/xe3bi46m9olux1271oiaj/_STZ3401.jpg?rlkey=1uuw66wsesv1zd297adq1dfwx&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/7cf2cee6d0d3dfe82c9401e282992274be86cd78308a188e9660ae3b85870454.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ3403",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/fguiwgoiaa4qbsv9g9c1t/_STZ3403.jpg?rlkey=bbmsssfz7000jg465w81jz7fg&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/f37294cd6ca414bb1c8c8fc11b236a873d3c50954b7030e35562eb895936232e.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ3406",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/66sccaplrwlzxpyyj0wa2/_STZ3406.jpg?rlkey=j8bpste700aacj5m0pyqxcnvk&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/23caba22579e0b9b5fe21b56553164c2ca3fef18af9a8cd7c375301825e879f7.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ9302",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/x2ce4roz2ovxcos7x5ap8/_STZ9302.jpg?rlkey=e1pfch4v73n8ag7n81qgj84dr&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/bb6804aed38ed74c4731af36a20df31b302bf15030f6288ea1db20b984b00c93.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ9304",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/exbsl5p1rv932qk33arh1/_STZ9304.jpg?rlkey=9qgta8sd8hqx3e9ih3rgn1x9z&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/0a0183f47c35dbc1ab031def891bd970d59e1bc230c1c45bf586cd18d92a4a02.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ9349",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/8yefxi5mbuc8vpl7d6df7/_STZ9349.jpg?rlkey=4yxxp2i3cj0kxl80yw9mun8sl&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/428a0c8eb7fa635ea47d22b560566c9c98de6135678185d52398c682847022a9.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ9376",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/i46haj4a5f5jj79b66qpf/_STZ9376.jpg?rlkey=2xplxxcf2w1ya9avstszcr6vm&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/104f38ec47fa611b3770ab91fad59dcca57b96725ea8a87edb0ef957d2389051.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ9438",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/yed2oqy7a4z2y69btwa6t/_STZ9438.jpg?rlkey=t480pe6tmp0ym5j3w293qbx8f&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/a60511f83ee3bf56dbc41185ddc4791e6f8c916e6a4089df60a1d2080be7082e.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ9529",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/74e007xyahltphbeaukw3/_STZ9529.jpg?rlkey=ug5gc1p2pt6enxs1j7oqzlo8a&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/5d0a5fd8b2dc95ef9df8db9ab715468a76e4fc580a7617d5fbb99af5cbe18c24.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ9535",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/tgs4m1p1k12i876gnqh1s/_STZ9535.jpg?rlkey=dg64r81ch01aafjphu7ll4c0u&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/319a7793192e7687d655a48f31b6311bedc60aeeaab3b9a4db88da5275d80914.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ9860",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/33u4u5rc99pwxkjo2wrtb/_STZ9860.jpg?rlkey=6xd99yovg5e11cout7hyfd40d&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/c9c74afc7898fffc0d167b09ba3d04d2ef2b24565b179a2359d58f8778694485.jpg",
+          "file": null
+        }
+      ],
+      "Social Videos": [
+        {
+          "name": " Smoked Cranberry Rosemary Spritz Reels Titles Final",
           "type": "video",
           "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/s2iaabgpdy7mo68h6o52e/_lsdreaming-Disco-Kompact.mp4?rlkey=y3xno1agh28jj4qul7dvdgg8y&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/6fa305085027fa2897919ccbe46de6129ea606a95adff933fc5fb955962456d7.jpg",
+          "url": "https://www.dropbox.com/scl/fi/nmp4ejvg95eqagxho9cf6/Smoked-Cranberry-Rosemary-Spritz-Reels-Titles-Final.mp4?rlkey=ftq1vq9dlo2sbrk058w8ja6tb&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/3ea889858a502c5e7aee5f53930a74d55dcb2f7a13332cf42846bfb97606e4c0.jpg",
           "file": null
         },
         {
-          "name": "Misc · POV Kompact Open Jan",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/q7cfe11b9nhli34q79fbs/POV-Kompact-Open-Jan.mp4?rlkey=dm2ve7doqg8rueuz85poxi976&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/1a95b7df67fc52d135c5287fac058f14e3c4dd9117cabea505a12e1415603c30.jpg",
-          "file": null
-        },
-        {
-          "name": "Modül · Alyssa Kompact Assembly",
+          "name": "Alyssa Kompact Assembly",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/h6ntjdjqk7mxtieqknx34/Alyssa-Kompact-Assembly.mp4?rlkey=1ixdmwwwsm8h1cck6s2qvdog9&dl=0",
           "thumb": "assets/synced/kompact-gravity-infusers/29167028cc1ee592228271ef17b53e34b26465594253ad7c41e8e892befa7d79.jpg",
+          "file": null
+        },
+        {
+          "name": "Bensie Hyer_A",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/6ig0p5xdh8uykfpkof9pd/Bensie-Hyer_A.mp4?rlkey=y6cy88iiip8hd5gpew4pbs0qd&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/87edfdd71178567b07a441b838e87f6b2ff5717790e8f606cf642e013d588e8c.jpg",
+          "file": null
+        },
+        {
+          "name": "Bensie Hyer_B",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/5zzo3scu78v6ggt8mr0k7/Bensie-Hyer_B.mp4?rlkey=06u8v8fy9qy3qx29mff1xywlb&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/838a081095eeaed5496ccf45c22d9e120d88517c4d8abdecb686c81041da0887.jpg",
+          "file": null
+        },
+        {
+          "name": "Bensie Hyer_C Herb",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/xru7hezi3t86mwaqbagbc/Bensie-Hyer_C-Herb.mp4?rlkey=7bj46rgd8c0bdt4n2kmh0t6se&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/6b215197bea3d2cf6aec1d3998b5285b6ce6425d5bb5b026cfe55799d370e23e.jpg",
+          "file": null
+        },
+        {
+          "name": "José SG Kompact Reels short",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/5wa7hodvd6kiw9csxzd0w/Jos-SG-Kompact-Reels-short.mp4?rlkey=33zq9b6a5kqi81omitg2cag4k&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/f2bdb03fc8d2ce528306326ebbfafc2532fdad3d163aa92191f24435c1a09f8b.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact_3D_Teaser_Reels",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/iu0brfrv8yma5wryq45bp/Kompact_3D_Teaser_Reels.mp4?rlkey=o4x94cznlt6z2u1outz0go7pc&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/ff6bc474ff6d3e71b271e8feeedce737f30215c472110ce1b69e8bc842067431.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_ Hot Toddy Mocktail_titles",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/2gvscztwiy5irxxl8yczu/Reels_-Hot-Toddy-Mocktail_titles.mp4?rlkey=zlfuo3rn7n02vljafvw3hsie5&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/6a56982ea8e08f809e032a5184d08cae8c06744c6f243dd4687db3af4fde42a8.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_ Kompact Unboxing",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/xu6p7kxghah6em0la3atr/Reels_-Kompact-Unboxing.mp4?rlkey=6vn786lcjvvm3944n320rxuj3&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/308b3988af152a3e648c69b52ff84ec7d814313f88183beb3456ffe7ddb30eb1.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_José Kompact Hookah",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/j8tdajvuxj68mn8x0i0er/Reels_Jos-Kompact-Hookah.mp4?rlkey=qota6qbzsak1sr6szsinv204p&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/b5d7854b481fa28117af656e0aea0dd0efa7bd24f8a7a9685168f2fb1d79980d.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_Kompact Beverage",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/83hkvnmvgnkvzvodxzt4p/Reels_Kompact-Beverage.mp4?rlkey=sk228isqauk09ex13dm11sa68&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/ad0d2a087d1bd5416297bcea783ec92e332bdd34a544d83e6d7da6a6d8b605b7.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_Kompact How to Hookah",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/vbkivy04w8c4325kpxgvf/Reels_Kompact-How-to-Hookah.mp4?rlkey=qpel9nrmdtts7kp3d02aixhjo&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/1ee481d18b51e530310fe48bb53fb9ec9f9c2e050d037e98e13c573a34c5f7fb.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_Kompact Reina Blanca_01",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/sgnuec69eis0pbg5tuzh0/Reels_Kompact-Reina-Blanca_01.mp4?rlkey=f3h2qk511tirdrsoomnd9kvw6&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/3b26ceddf85a579f950e7b1218b3cea05957e38d633d0bc562d738798bc6384b.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_short Kompact Reina Blanca reveal",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/au3jbukkkhtqhwup9gxrp/Reels_short-Kompact-Reina-Blanca-reveal.mp4?rlkey=ghnt5zcb2yhjlmwcv1mwm4pwa&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/d01b324ee2ca8886febe8a8cff697540f6c630b77467e30e15427618901098e0.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_Smoked Peppermint Hot Cocoa - titles",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/7mkdfgc8h6ol5x7rtm4n5/Reels_Smoked-Peppermint-Hot-Cocoa-titles.mp4?rlkey=wvij9hkgtwfg733zd6eppjr78&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/27ebee6eb8f5407dadcdc64af590342d1af48bd0a0a70bedc6c03c1223d6b015.jpg",
+          "file": null
+        },
+        {
+          "name": "SG Kompact Hyer Desert",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/whp1cmuvsn11f82rxeyum/SG-Kompact-Hyer-Desert.mp4?rlkey=r6z5iwnc3fsjppn6adecweh6e&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/f2eb6520fb6aed3e678fb84862cd9ca69d4f3285a6649da530c4b1cdc6bd1446.jpg",
+          "file": null
+        },
+        {
+          "name": "SG Kompact Topanga_Reels",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/8shj94751jbl7b22qpaok/SG-Kompact-Topanga_Reels.mp4?rlkey=tggz01ime2jgrf84osw6cg8yj&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/03ad1d2b6d0917ea5aab03caa7f567328bf45fd99b7bd50745a4f073a87244e0.jpg",
+          "file": null
+        },
+        {
+          "name": "SG Kompact_Reels_Short",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/x3jhasyfkhqih11wqglzi/SG-Kompact_Reels_Short.mp4?rlkey=f5w87ccndg2n8ggduzctpli0w&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/313a24e2afe46b00f2a30e496b4b2b765345df10d4033b4cc91e457d007afebd.jpg",
+          "file": null
+        }
+      ],
+      "TV Screen Videos": [
+        {
+          "name": " Smoked Cranberry Rosemary Spritz Titles Final",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/x2id816hiww14gamiykd5/Smoked-Cranberry-Rosemary-Spritz-Titles-Final.mp4?rlkey=quygit8jmqzfsignvhjnwy4bg&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/b9c89347215905929a058c5e87dfa9544d2fa721380c6ea50449ddc3e8a8f66c.jpg",
+          "file": null
+        },
+        {
+          "name": "José Kompact Hookah Horizontal",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/liqiofukj8dxsmay6erv7/Jos-Kompact-Hookah-Horizontal.mp4?rlkey=0bopk4vlj3c9vi2m8eyenfthy&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/fad5a69b4db959514fa4605078030bc10a282666411d13b85c4672b62b2c763c.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact Cleaning",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/milhb2y89sufsg968cn0t/Kompact-Cleaning.mp4?rlkey=5p31uowxm1npmnhwgszt547fl&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/c4d8f7418573243c8552716ea1bce1452eb589e4e25968679227e6d50fd59212.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact Extended Cleaning",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/9ya7o2f6iebocnmz8x68j/Kompact-Extended-Cleaning.mp4?rlkey=d4sxqjzv1acx8nggdg8fhaxs4&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/a341bc232dd02f6e59ccd3a4f1c3fbf01df76092bccfdb73ea80683911cce17b.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact Hookah How to",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/klcpz8y25p08dg0qlfeb5/Kompact-Hookah-How-to.mp4?rlkey=wtozdf99actyn0q29tuboywo8&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/5c4541cb4eea375161becf7c9efae35795535ff398c46981cf78c4e718b05f51.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact How To Smoke Beverage",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/sftdea10ka3xhze0bxmb4/Kompact-How-To-Smoke-Beverage.mp4?rlkey=yc7lvy6wsnbrn3imhwfcus20b&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/d4bdef33cf6945d99848cb9d3b53dbbf8f2ae467dc5e3f81fb1ee4dd592cc25e.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact How To Smoke Food",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/7uf824h4iyj3q2vt4hauj/Kompact-How-To-Smoke-Food.mp4?rlkey=3uqf4nd09zf8sv9r0e9iyqkbt&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/c52f85fbbb63370354bea2d3f7b95b8abe4da5935c1c9af458b39d3efa705bae.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact Reina Branca with Titles",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/hqe0mrqzlotnkjvb06am4/Kompact-Reina-Branca-with-Titles.mp4?rlkey=hpwlo02xo8sgw0b1iitt5g0ae&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/dee9a8e1f5073362acd4b37ce4ed5d385e1e78c7d07d67a984169b394f367c62.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact Unboxing",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/2vg6ovmgqcf5ty1e1tkkf/Kompact-Unboxing.mp4?rlkey=l6owo6v4v35xe88kxim9j99vh&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/1e34a21d00761fafeaee5a8b975a8a44c38b24bf03f7d45b8005fc1bd7edbd87.jpg",
+          "file": null
+        },
+        {
+          "name": "Kompact_3D_Teaser_horizontal",
+          "type": "video",
+          "format": "MOV",
+          "url": "https://www.dropbox.com/scl/fi/xc63824stzbb2w97z3d3f/Kompact_3D_Teaser_horizontal.mov?rlkey=4h0itibmh040zzdj9d7nm38i4&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/9ef82260e61bc25401d49c8d68be7bc19b2bbddd743010f23cd0059a6f5d1b35.jpg",
+          "file": null
+        },
+        {
+          "name": "SG Kompact_Topanga Final_Horizontal",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/3vzjv8b0bm7k8vipjj2nz/SG-Kompact_Topanga-Final_Horizontal.mp4?rlkey=55cbavqqa25zszemi93mntd4f&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/1a742bd7a8f520095b41ada8db3c1f46124cbb94d9e2320ac1d24cbf23848073.jpg",
+          "file": null
+        },
+        {
+          "name": "Smoked Hot Toddy Mocktail_titles",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/6oiae7fw1c0sawzd565i5/Smoked-Hot-Toddy-Mocktail_titles.mp4?rlkey=6kjr2i4tgzm25wqg5474ihxry&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/5057f6e46444f3db5e6e87976b8aa2b54996b360ee201b5bd0e483e6c8f471be.jpg",
+          "file": null
+        },
+        {
+          "name": "Smoked Peppermint Hot Cocoa - titles",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/tpssu86ih1owubedtt2hr/Smoked-Peppermint-Hot-Cocoa-titles.mp4?rlkey=0m3wt07hc43722ew23l3i21ry&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/fd211f795801fb3c18ba933867b49a1de218ba329837ca36d1db555b8a169e0d.jpg",
+          "file": null
+        }
+      ],
+      "Documents": [
+        {
+          "name": "Kompact Manual",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/k3zu9psx71hb4zv3oyr1c/Kompact-Manual.pdf?rlkey=ld20qn4dkp2vxjznzuoz0c63g&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/294ce212ae87c0a352c08e66dad6dd3a010e7fa5f70e60c5b173dfff6699cf7f.jpg",
+          "file": null
+        },
+        {
+          "name": "stundenglass-KOMPACT-one-sheet-GNLN-Email",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/9t8d4p4eup0s5ijklmchl/stundenglass-KOMPACT-one-sheet-GNLN-Email.pdf?rlkey=eih2c78rxfhr1miczljf5bhh7&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/29726810b1b89b7db30326dedf0ba2e06d186c6771adb2ffc21e79d1a32bd766.jpg",
           "file": null
         }
       ],
@@ -1095,7 +1847,11 @@ window.PORTAL_SYNCED = {
     },
     "dropbox": "https://www.dropbox.com/scl/fo/ao5gxkfe1rsfeupwxuosk/h?rlkey=ji0x0ttk1kth2s9yqyatd16sv&dl=1",
     "folderLinks": {
-      "Black": "https://www.dropbox.com/scl/fo/d4apepm1n3lzxmb225tfe/AAngost70BDIp_JfarO2x6A?rlkey=ehoah1f0r0k3ivbaul9gl24da&dl=1",
+      "Product Photos": "https://www.dropbox.com/scl/fo/alpshj987xo6qvlihj0ge/AAK2zjXIx4ctUWoG5Age_YU?rlkey=fmgxkz0jihsy2rne8vgfxs3v1&dl=1",
+      "Lifestyle Photos": "https://www.dropbox.com/scl/fo/c4sfx9ir1aydjkja9hfff/AJD1e4yeNTZOzLmheLzNNbw?rlkey=k06w3h06bno8gn4yx76qiz5sn&dl=1",
+      "Social Videos": "https://www.dropbox.com/scl/fo/3x0gikxo3vlucunlfiw61/AGEozvwhYa4ITJ80hfpvYbA?rlkey=u3qff4t6cbnusw21youmm7y3s&dl=1",
+      "TV Screen Videos": "https://www.dropbox.com/scl/fo/3p1tobw0adykgyk7sqzxp/AHp4fioI99zOQGCmBJLskRc?rlkey=er3q3qj7g0eqa5j4ruq5zn039&dl=1",
+      "Documents": "https://www.dropbox.com/scl/fo/muyeqr261jqjjp93p3bjm/AFT7B-26CmOh5TeLRq70TC0?rlkey=vrd5o1744gj0kyckor3i6su6r&dl=1",
       "UGC - Kompact": "https://www.dropbox.com/scl/fo/f5s6fdtpdctvqg8gbwiok/AL_4c-TbJ_fKva64qOjbdXQ?rlkey=6zd1ig2alivzleliwe7vz0le4&dl=1",
       "Pink": "https://www.dropbox.com/scl/fo/090hddxoevuwsvbstvp7b/h?rlkey=g32evicymbx3ta1vdhowusoeh&dl=1",
       "Grateful Dead": "https://www.dropbox.com/scl/fo/tpywop7be5t51k6g92nfq/ANP9Z_ZgqVfUYim1o_Ld6vI?rlkey=xfl9dkaojbxz09m8zkgl2uxr0&dl=1"
