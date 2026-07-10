@@ -51,6 +51,7 @@ const PRODUCTS = [
   { name: "Kompact Gravity Infusers", slug: "kompact-gravity-infusers", link: "https://www.dropbox.com/scl/fo/ao5gxkfe1rsfeupwxuosk/h?rlkey=ji0x0ttk1kth2s9yqyatd16sv&dl=0" },
   { name: "Classic Gravity Infusers", slug: "classic-gravity-infusers", link: "https://www.dropbox.com/scl/fo/zg2lt1b24hyg51akxtqyr/h?rlkey=umf2vggz3vro82dduczc419q1&dl=0" },
   { name: "Modül",                    slug: "modul",                    link: "https://www.dropbox.com/scl/fo/so2i8hzeo5p3ikqx1e1ej/h?rlkey=rb1vhopjo5qyoft8eqr7bgz0v&dl=0" },
+  { name: "Accessories",              slug: "accessories",              link: "https://www.dropbox.com/scl/fo/97kd80esi1s6yo5e7u90y/AMxpq46IhGjSUzcOx3QuKIo?rlkey=s8y3isccrpry4980bw40ertir&dl=0" },
   {
     // Overall Stündenglass brand logos (black/white/various). Powers the homepage
     // "Logos and Brand Assets" section. `flat` = folder name to bucket files

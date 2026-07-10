@@ -84,6 +84,7 @@ window.PORTAL_CURRENT = {
     "Kompact Gravity Infusers",
     "Classic Gravity Infusers",
     "Modül",
+    "Accessories",
   ],
 };
 
@@ -116,6 +117,13 @@ window.PORTAL_PRODUCTS = [
     name: "Modül", brand: "stundenglass", category: "Modular", type: "Modular System",
     cover: null,
     added: "2026-07-09",
+    oneSheet: "",
+    folders: {},
+  },
+  {
+    name: "Accessories", brand: "stundenglass", category: "Accessories", type: "Accessories",
+    cover: null,
+    added: "2026-07-10",
     oneSheet: "",
     folders: {},
   },
@@ -440,6 +448,7 @@ window.PORTAL_INSTORE_GENERAL = (function () {
     "Kompact Gravity Infusers": "Compact Infuser",
     "Classic Gravity Infusers": "Classic Infuser",
     "Modül": "Modular System",
+    "Accessories": "Accessories",
   };
   window.PORTAL_PRODUCTS.forEach(function (p) { if (LABELS[p.name]) p.label = LABELS[p.name]; });
 })();
