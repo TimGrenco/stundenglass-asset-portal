@@ -101,7 +101,7 @@ window.PORTAL_PRODUCTS = [
   },
   {
     name: "Kompact Gravity Infusers", brand: "stundenglass", category: "Gravity", type: "Gravity Infuser",
-    cover: null,
+    cover: "assets/img/covers/kompact-gravity-infusers.png",
     added: "2026-07-09",
     oneSheet: "",
     folders: {},
