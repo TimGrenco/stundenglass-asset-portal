@@ -298,69 +298,34 @@ for (const p of PRODUCTS) {
   const tmp = join(dir, "_tmp");
 
   const top = await listFolder(tok, p.link, "");
-  const subs = top.filter((e) => e[".tag"] === "folder").map((e) => e.name);
-  // Dropbox id per top-level subfolder — used to mint a per-folder shared link so
-  // "Download folder" pulls that whole folder as a .zip (not just the first file).
-  const folderId = {};
-  top.filter((e) => e[".tag"] === "folder").forEach((e) => { folderId[e.name] = e.id; });
 
-  // Folders with subfolders use them as asset groups (like Dash II); a flat
-  // folder buckets its files under `flat` (e.g. the logo set).
+  // Recursively walk the WHOLE folder tree, emitting ONE spec per folder that has
+  // direct files, named by its full path ("A / B / C"). This powers a full
+  // drill-down (folders within folders, at any depth) in the portal. Cost is one
+  // list call per folder — no per-folder link minting (specs carry no id, which
+  // was heavily rate-limited), so "Download folder" falls back to the whole-product
+  // zip; per-file + "Download selected" downloads are unaffected.
   const folderSpecs = [];
-  if (subs.length) {
-    // Map each Dropbox subfolder to its canonical display name, then order by
-    // the canonical tab order (aliased/unknown names fall to the end).
-    const specs = subs.map((raw) => ({ raw, disp: FOLDER_ALIAS[raw] || raw }));
-    specs.sort((a, b) => {
-      var ia = FOLDER_ORDER.indexOf(a.disp), ib = FOLDER_ORDER.indexOf(b.disp);
-      return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
-    });
-    for (const { raw, disp } of specs) {
-      if (p.deep) {
-        // Depth-2 grouping: one folder per "Colorway / Type" so a big product isn't
-        // one giant mixed folder. Files nested deeper (shoot folders) flatten into
-        // their type, labelled by sub-path.
-        // Use the raw Dropbox folder names here (not the canonical alias) so an
-        // aliased parent + same-named child don't collapse to "X / X".
-        const entries = await listFolder(tok, p.link, "/" + raw);
-        const direct = entries.filter((e) => e[".tag"] === "file");
-        if (direct.length) {
-          direct.forEach((f) => { f.relPath = "/" + raw + "/" + f.name; f.displayName = f.name.replace(/\.[^.]+$/, ""); });
-          // NOTE: deep specs intentionally carry NO `id`, so we do NOT mint a
-          // per-subfolder share link. Minting one link per Parent/Child folder
-          // (100+ calls) is heavily rate-limited by Dropbox and made the first
-          // deep sync crawl. "Download folder" on a nested folder falls back to
-          // the whole-product zip; per-file + "Download selected" still work.
-          folderSpecs.push({ name: raw, prefix: "/" + raw, files: direct });
-        }
-        for (const ss of entries.filter((e) => e[".tag"] === "folder")) {
-          const sub = await collectDeep(tok, p.link, "/" + raw + "/" + ss.name, "");
-          if (sub.length) folderSpecs.push({ name: raw + " / " + ss.name, prefix: "/" + raw + "/" + ss.name, files: sub });
-        }
-        continue;
-      }
-      const entries = await listFolder(tok, p.link, "/" + raw);
-      const direct = [];
-      for (const e of entries) if (e[".tag"] === "file") { e.relPath = "/" + raw + "/" + e.name; e.displayName = e.name.replace(/\.[^.]+$/, ""); direct.push(e); }
-      const subFolders = entries.filter((e) => e[".tag"] === "folder");
-      if (subFolders.length) {
-        // Preserve one nested level as "Parent / Child" folders (drill-down) rather
-        // than flattening. Same Dropbox calls as a flat sync (one list per child),
-        // so it stays fast — no recursion, no per-child link minting (child specs
-        // carry no `id`). The top folder's own loose files get a "Parent" group.
-        if (direct.length) folderSpecs.push({ name: disp, prefix: "/" + raw, files: direct, id: folderId[raw] });
-        for (const ss of subFolders) {
-          const nested = (await listFolder(tok, p.link, "/" + raw + "/" + ss.name)).filter((e) => e[".tag"] === "file");
-          nested.forEach((nf) => { nf.relPath = "/" + raw + "/" + ss.name + "/" + nf.name; nf.displayName = nf.name.replace(/\.[^.]+$/, ""); });
-          if (nested.length) folderSpecs.push({ name: disp + " / " + (FOLDER_ALIAS[ss.name] || ss.name), prefix: "/" + raw + "/" + ss.name, files: nested });
-        }
-      } else {
-        folderSpecs.push({ name: disp, prefix: "/" + raw, files: direct, id: folderId[raw] });
-      }
+  async function walkFolder(base, label, entries) {
+    if (!entries) entries = await listFolder(tok, p.link, base);
+    const direct = entries.filter((e) => e[".tag"] === "file");
+    if (direct.length) {
+      direct.forEach((f) => { f.relPath = base + "/" + f.name; f.displayName = f.name.replace(/\.[^.]+$/, ""); });
+      folderSpecs.push({ name: label || p.flat || "Files", prefix: base, files: direct });
     }
-  } else {
-    folderSpecs.push({ name: p.flat || "Files", prefix: "", files: top.filter((e) => e[".tag"] === "file") });
+    const subFolders = entries.filter((e) => e[".tag"] === "folder");
+    // Canonical categories (Product Photos, etc.) first; others alphabetically.
+    subFolders.sort((a, b) => {
+      const da = FOLDER_ALIAS[a.name] || a.name, db = FOLDER_ALIAS[b.name] || b.name;
+      const ia = FOLDER_ORDER.indexOf(da), ib = FOLDER_ORDER.indexOf(db);
+      return ((ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib)) || da.localeCompare(db);
+    });
+    for (const ss of subFolders) {
+      const seg = FOLDER_ALIAS[ss.name] || ss.name;
+      await walkFolder(base + "/" + ss.name, label ? label + " / " + seg : seg);
+    }
   }
+  await walkFolder("", "", top);
 
   const filesDir = join(dir, "files");
   mkdirSync(filesDir, { recursive: true });

@@ -1418,53 +1418,46 @@
     if ((p.folders[INSTORE_FOLDER] || []).length) p.folders[INSTORE_FOLDER] = instoreOwn(p);
     var folderNames = Object.keys(p.folders).filter(function (f) { return (p.folders[f] || []).length; });
 
-    // ---- folder tree: split "Parent / Child" folder names into a 2-level
-    // drill-down. A top segment is either a LEAF (files directly, e.g. "Product
-    // Photos") or a BRANCH (has children, e.g. "Black / Product Photos"). Canonical
-    // categories sort first; colors/editions/accessory-types fall after by size.
+    // ---- N-level folder browser. Folder keys are full "/"-joined paths
+    // ("Black / Product Photos / Studio"). We navigate them like a file tree:
+    // `openPath` is the current folder ("" = product root); its child folders show
+    // as cards, its own files show in the gallery, and a breadcrumb walks back up.
     var SEP = " / ";
-    var tree = {}, topOrder = [];
-    folderNames.forEach(function (f) {
-      var i = f.indexOf(SEP);
-      var top = i === -1 ? f : f.slice(0, i);
-      if (!tree[top]) { tree[top] = { leaf: null, children: {}, order: [] }; topOrder.push(top); }
-      if (i === -1) tree[top].leaf = f;
-      else { var c = f.slice(i + SEP.length); if (!tree[top].children[c]) tree[top].order.push(c); tree[top].children[c] = f; }
-    });
-    function isBranch(t) { return !!(tree[t] && tree[t].order.length); }
-    function topCount(t) {
-      var node = tree[t], n = node.leaf ? (p.folders[node.leaf] || []).length : 0;
-      node.order.forEach(function (c) { n += (p.folders[node.children[c]] || []).length; });
-      return n;
-    }
-    topOrder.sort(function (a, b) {
-      if (a === INSTORE_FOLDER) return 1;
-      if (b === INSTORE_FOLDER) return -1;
-      return (folderRank(a) - folderRank(b)) || (topCount(b) - topCount(a));
-    });
-    Object.keys(tree).forEach(function (t) {
-      tree[t].order.sort(function (a, b) {
-        return (folderRank(a) - folderRank(b)) || ((p.folders[tree[t].children[b]] || []).length - (p.folders[tree[t].children[a]] || []).length);
+    // Immediate child folder segments directly under `path`.
+    function childSegs(path) {
+      var prefix = path ? path + SEP : "", seen = {}, out = [];
+      folderNames.forEach(function (f) {
+        var rest;
+        if (!path) rest = f;
+        else if (f === path) return;                 // the folder itself, not a child
+        else if (f.indexOf(prefix) === 0) rest = f.slice(prefix.length);
+        else return;
+        var seg = rest.split(SEP)[0];
+        if (seg && !seen[seg]) { seen[seg] = 1; out.push(seg); }
       });
-    });
-    function allLeaves() {
-      var out = [];
-      topOrder.forEach(function (t) { if (tree[t].leaf) out.push(tree[t].leaf); tree[t].order.forEach(function (c) { out.push(tree[t].children[c]); }); });
       return out;
     }
-    var leaves = allLeaves();
-    var withCover = leaves.filter(function (f) { return (p.folders[f] || []).some(function (x) { return x.thumb; }); });
-    var rich = withCover.filter(function (f) { return (p.folders[f] || []).length >= 4; });
-    // Prefer landing on a top-level category leaf (so we don't auto-open a color
-    // unless every top segment is a color/edition); else the richest leaf.
-    var rootLeafRich = topOrder.filter(function (t) { return tree[t].leaf && !isBranch(t); })
-      .map(function (t) { return tree[t].leaf; })
-      .filter(function (f) { return (p.folders[f] || []).some(function (x) { return x.thumb; }); })
-      .sort(function (a, b) { return (p.folders[b] || []).length - (p.folders[a] || []).length; });
-    var active = (initialFolder && p.folders[initialFolder]) ? initialFolder
-      : (rootLeafRich[0] || rich[0] || withCover[0] || leaves[0]);
-    // Drilled-into group derived from the active leaf's parent (null = root).
-    var openGroup = (active && active.indexOf(SEP) !== -1) ? active.slice(0, active.indexOf(SEP)) : null;
+    function joinPath(path, seg) { return path ? path + SEP + seg : seg; }
+    function isFolderBranch(path) { return childSegs(path).length > 0; }
+    // Total files at `path` and everything beneath it.
+    function filesUnder(path) {
+      var prefix = path ? path + SEP : "", n = 0;
+      folderNames.forEach(function (f) {
+        if (path ? (f === path || f.indexOf(prefix) === 0) : true) n += (p.folders[f] || []).length;
+      });
+      return n;
+    }
+    // Sort a path's child segments: canonical categories first, then by files, A–Z.
+    function sortSegs(path, segs) {
+      return segs.slice().sort(function (a, b) {
+        if (a === INSTORE_FOLDER) return 1; if (b === INSTORE_FOLDER) return -1;
+        return (folderRank(a) - folderRank(b)) || (filesUnder(joinPath(path, b)) - filesUnder(joinPath(path, a))) || a.localeCompare(b);
+      });
+    }
+    var openPath = "";                 // current folder ("" = product root)
+    var active = "";                   // folder whose files show in the gallery (== openPath)
+    // Deep-link straight to a folder (e.g. from a file-search result).
+    if (initialFolder && p.folders[initialFolder]) { openPath = initialFolder; active = initialFolder; }
     var selected = {};   // fileKey -> file object; persists while switching folder tabs
 
     function folderFiles() { return p.folders[active] || []; }
@@ -1492,45 +1485,42 @@
     }
 
     function render() {
-      // Drill-down folder nav. Root: one card per top segment (branches drill in,
-      // leaves open their gallery). Drilled: a breadcrumb + the group's child cards.
-      function catCard(label, ic, count, attr, cls) {
-        return '<button class="catcard ' + (cls || "") + '" ' + attr + '>' +
+      active = openPath;   // gallery + selection always target the open folder
+      // N-level folder browser: child folders of openPath shown as cards, a
+      // breadcrumb back to the root, and openPath's own files in the gallery below.
+      function catCard(label, ic, count, path, cls) {
+        return '<button class="catcard ' + (cls || "") + '" data-path="' + escapeHTML(path) + '">' +
           '<span class="catcard-ic">' + icon(ic) + "</span>" +
           '<span class="catcard-tx"><span class="catcard-name">' + label + "</span>" +
           '<span class="catcard-c">' + count + "</span></span></button>";
       }
       function fcount(n) { return n + " file" + (n === 1 ? "" : "s"); }
-      var navCards, crumb = "", navCount;
-      if (openGroup && isBranch(openGroup)) {
-        var node = tree[openGroup], cards = "";
-        if (node.leaf) cards += catCard("General", folderIcon(openGroup), fcount((p.folders[node.leaf] || []).length), 'data-folder="' + escapeHTML(node.leaf) + '"', node.leaf === active ? "on" : "");
-        cards += node.order.map(function (c) {
-          var full = node.children[c];
-          return catCard(typeLabel(c), folderIcon(c), fcount((p.folders[full] || []).length), 'data-folder="' + escapeHTML(full) + '"', full === active ? "on" : "");
-        }).join("");
-        crumb = '<div class="folder-crumb"><button class="crumb-btn" id="crumb-root">' + icon("arrowLeft") + " All folders</button>" +
-          '<span class="crumb-sep">/</span><span class="crumb-cur">' + typeLabel(openGroup) + "</span></div>";
-        navCards = cards; navCount = node.order.length + (node.leaf ? 1 : 0);
-      } else {
-        navCards = topOrder.map(function (t) {
-          var node = tree[t];
-          if (isBranch(t)) {
-            var nc = node.order.length + (node.leaf ? 1 : 0);
-            return catCard(typeLabel(t), "stack", nc + (nc === 1 ? " folder · " : " folders · ") + topCount(t) + " files", 'data-top="' + escapeHTML(t) + '"', "is-branch");
-          }
-          return catCard(typeLabel(t), folderIcon(t), fcount((p.folders[node.leaf] || []).length), 'data-folder="' + escapeHTML(node.leaf) + '"', node.leaf === active ? "on" : "");
-        }).join("");
-        navCount = topOrder.length;
+      var kids = sortSegs(openPath, childSegs(openPath));
+      var navCards = kids.map(function (seg) {
+        var fp = joinPath(openPath, seg), branch = isFolderBranch(fp), sub = branch ? childSegs(fp).length : 0;
+        var count = branch
+          ? (sub + (sub === 1 ? " folder · " : " folders · ") + filesUnder(fp) + " files")
+          : fcount((p.folders[fp] || []).length);
+        return catCard(typeLabel(seg), branch ? "stack" : folderIcon(seg), count, fp, branch ? "is-branch" : (fp === active ? "on" : ""));
+      }).join("");
+      // Breadcrumb — appears once drilled in from the root.
+      var crumb = "";
+      if (openPath) {
+        var segs = openPath.split(SEP), acc = "";
+        crumb = '<div class="folder-crumb"><button class="crumb-btn" data-path="">' + icon("arrowLeft") + " All folders</button>";
+        segs.forEach(function (s, i) {
+          acc = acc ? acc + SEP + s : s;
+          crumb += '<span class="crumb-sep">/</span>' + (i < segs.length - 1
+            ? '<button class="crumb-btn crumb-mid" data-path="' + escapeHTML(acc) + '">' + typeLabel(s) + "</button>"
+            : '<span class="crumb-cur">' + typeLabel(s) + "</span>");
+        });
+        crumb += "</div>";
       }
       var assetNav = crumb +
-        (navCount > 4 ? '<div class="catgrid-hint"><span>Swipe to see more</span>' + icon("arrowRight") + "</div>" : "") +
-        '<div class="catgrid" id="asset-nav">' + navCards + "</div>";
-      var activeCount = (p.folders[active] || []).length;
-      // Active leaf title: "Parent · Child" when nested, else the folder label.
-      var activeLabel = active
-        ? (active.indexOf(SEP) !== -1 ? typeLabel(active.slice(0, active.indexOf(SEP))) + " · " + typeLabel(active.slice(active.indexOf(SEP) + SEP.length)) : typeLabel(active))
-        : "";
+        (kids.length > 4 ? '<div class="catgrid-hint"><span>Swipe to see more</span>' + icon("arrowRight") + "</div>" : "") +
+        (kids.length ? '<div class="catgrid" id="asset-nav">' + navCards + "</div>" : "");
+      var activeCount = (p.folders[openPath] || []).length;   // files directly in this folder
+      var activeLabel = openPath ? typeLabel(openPath.split(SEP).pop()) : "";
       var catTotal = folderNames.reduce(function (s, f) { return s + p.folders[f].length; }, 0);
       // Eyebrow shows the product type (falls back to category); the title is the
       // full brand-prefixed name (e.g. "Stündenglass Gravity Infuser"), without
@@ -1566,21 +1556,23 @@
         (catTotal > 0
           ? '<div class="section-head" id="docs-head"><h2>Download assets by category</h2><span class="badge">' + catTotal + " file" + (catTotal === 1 ? "" : "s") + "</span></div>" +
             assetNav +
-            '<div class="folder-toolbar">' +
-              '<h3 class="folder-title">' + activeLabel + '<span class="ft-count">' + activeCount + " file" + (activeCount === 1 ? "" : "s") + "</span></h3>" +
-              '<div class="gallery-toolbar">' +
-                '<label class="selectall"><input type="checkbox" id="sel-all"/> Select all</label>' +
-                '<button class="btn ghost sm" id="dl-folder">' + icon("download") + " Download folder</button>" +
-              "</div>" +
-            "</div>" +
-            '<div class="gallery" id="gallery"></div>' +
-            '<div class="selbar" id="selbar">' +
-              '<span class="selcount"><strong id="sel-n">0</strong> selected</span>' +
-              '<span class="selacts">' +
-                '<button class="btn ghost sm" id="sel-clear">Clear</button>' +
-                '<button class="btn sm" id="sel-dl">' + icon("download") + " Download selected</button>" +
-              "</span>" +
-            "</div>"
+            (activeCount > 0
+              ? '<div class="folder-toolbar">' +
+                  '<h3 class="folder-title">' + activeLabel + '<span class="ft-count">' + activeCount + " file" + (activeCount === 1 ? "" : "s") + "</span></h3>" +
+                  '<div class="gallery-toolbar">' +
+                    '<label class="selectall"><input type="checkbox" id="sel-all"/> Select all</label>' +
+                    '<button class="btn ghost sm" id="dl-folder">' + icon("download") + " Download folder</button>" +
+                  "</div>" +
+                "</div>" +
+                '<div class="gallery" id="gallery"></div>' +
+                '<div class="selbar" id="selbar">' +
+                  '<span class="selcount"><strong id="sel-n">0</strong> selected</span>' +
+                  '<span class="selacts">' +
+                    '<button class="btn ghost sm" id="sel-clear">Clear</button>' +
+                    '<button class="btn sm" id="sel-dl">' + icon("download") + " Download selected</button>" +
+                  "</span>" +
+                "</div>"
+              : (kids.length ? '<p class="pkg-note">' + icon("info") + " Choose a folder above to view and download its files." + "</p>" : ""))
           : '<div class="section-head"><h2>Download assets by category</h2></div>' +
             '<div class="usage"><span>Assets for this product are being added — check back soon, or use “Request an asset” for something specific.</span></div>') +
         (CFG.usageNote ? '<div class="usage usage-foot">' + icon("info") + "<span>" + CFG.usageNote + "</span></div>" : "") +
@@ -1591,7 +1583,7 @@
         skuHTML(p) +
         videoHubHTML(p);
 
-      if (catTotal > 0) renderGallery(p, active, selected, toggle, syncSelection);
+      if (activeCount > 0) renderGallery(p, openPath, selected, toggle, syncSelection);
       $$("[data-play]", d).forEach(function (el) {
         el.addEventListener("click", function () {
           openVideoModal(el.getAttribute("data-play"), el.getAttribute("data-title"), el.getAttribute("data-dl"), el.getAttribute("data-dlname"));
@@ -1645,27 +1637,12 @@
       if (selClearBtn) selClearBtn.addEventListener("click", function () { selected = {}; syncSelection(); });
       var selDlBtn = $("#sel-dl");
       if (selDlBtn) selDlBtn.addEventListener("click", function () { downloadFiles(selectedList(), selectedList().length + " selected"); });
-      $$(".catcard", d).forEach(function (t) {
-        // Branch card (data-top) drills into that group; leaf card (data-folder)
-        // opens its gallery. Re-renders the detail with the new state.
+      // Folder cards and breadcrumb links both navigate by full path (data-path).
+      $$(".catcard, .crumb-btn", d).forEach(function (t) {
         t.addEventListener("click", function () {
-          var top = t.getAttribute("data-top"), folder = t.getAttribute("data-folder");
-          if (top != null) {
-            openGroup = top;
-            var node = tree[top];
-            active = node.order.length ? node.children[node.order[0]] : node.leaf;
-          } else if (folder != null) {
-            active = folder;
-            openGroup = folder.indexOf(SEP) !== -1 ? folder.slice(0, folder.indexOf(SEP)) : null;
-          }
+          openPath = t.getAttribute("data-path") || "";
           render();
         });
-      });
-      var crumbRoot = $("#crumb-root", d);
-      if (crumbRoot) crumbRoot.addEventListener("click", function () {
-        openGroup = null;
-        active = rootLeafRich[0] || (topOrder.filter(function (t) { return !isBranch(t); }).map(function (t) { return tree[t].leaf; })[0]) || active;
-        render();
       });
       syncSelection();
     }
