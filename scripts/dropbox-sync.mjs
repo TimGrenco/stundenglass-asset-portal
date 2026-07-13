@@ -47,14 +47,15 @@ if (!APP_KEY || !APP_SECRET || !REFRESH) {
 //   flat: "Logos"   → bucket a flat (subfolder-less) folder under this name
 //   pngThumbs: true → keep transparent PNG logo thumbnails (don't flatten to white)
 const PRODUCTS = [
-  // `deep: true` → preserve the Dropbox nesting as "Parent / Child" folders
-  // (e.g. "Black / Product Photos") instead of flattening a color/edition into one
-  // list, so the portal can drill down: color/edition → category → files.
-  { name: "Gravity Infusers",         slug: "gravity-infusers",         deep: true, link: "https://www.dropbox.com/scl/fo/3j4un063pxgcbtl7yqq5z/ACmVjEjB25HyZTAucWfMCLk?rlkey=b620zqgmr0hxb5lbtazvd4qfk&dl=0" },
-  { name: "Kompact Gravity Infusers", slug: "kompact-gravity-infusers", deep: true, link: "https://www.dropbox.com/scl/fo/ao5gxkfe1rsfeupwxuosk/h?rlkey=ji0x0ttk1kth2s9yqyatd16sv&dl=0" },
-  { name: "Classic Gravity Infusers", slug: "classic-gravity-infusers", deep: true, link: "https://www.dropbox.com/scl/fo/zg2lt1b24hyg51akxtqyr/h?rlkey=umf2vggz3vro82dduczc419q1&dl=0" },
-  { name: "Modül",                    slug: "modul",                    deep: true, link: "https://www.dropbox.com/scl/fo/so2i8hzeo5p3ikqx1e1ej/h?rlkey=rb1vhopjo5qyoft8eqr7bgz0v&dl=0" },
-  { name: "Accessories",              slug: "accessories",              deep: true, link: "https://www.dropbox.com/scl/fo/97kd80esi1s6yo5e7u90y/AMxpq46IhGjSUzcOx3QuKIo?rlkey=s8y3isccrpry4980bw40ertir&dl=0" },
+  // The normal (non-deep) path preserves ONE nested level as "Parent / Child"
+  // folders (e.g. "Black / Product Photos"), which powers the portal drill-down:
+  // color/edition → category → files. Full recursive `deep` mode is avoided here
+  // because its extra list calls got throttled by Dropbox on big first passes.
+  { name: "Gravity Infusers",         slug: "gravity-infusers",         link: "https://www.dropbox.com/scl/fo/3j4un063pxgcbtl7yqq5z/ACmVjEjB25HyZTAucWfMCLk?rlkey=b620zqgmr0hxb5lbtazvd4qfk&dl=0" },
+  { name: "Kompact Gravity Infusers", slug: "kompact-gravity-infusers", link: "https://www.dropbox.com/scl/fo/ao5gxkfe1rsfeupwxuosk/h?rlkey=ji0x0ttk1kth2s9yqyatd16sv&dl=0" },
+  { name: "Classic Gravity Infusers", slug: "classic-gravity-infusers", link: "https://www.dropbox.com/scl/fo/zg2lt1b24hyg51akxtqyr/h?rlkey=umf2vggz3vro82dduczc419q1&dl=0" },
+  { name: "Modül",                    slug: "modul",                    link: "https://www.dropbox.com/scl/fo/so2i8hzeo5p3ikqx1e1ej/h?rlkey=rb1vhopjo5qyoft8eqr7bgz0v&dl=0" },
+  { name: "Accessories",              slug: "accessories",              link: "https://www.dropbox.com/scl/fo/97kd80esi1s6yo5e7u90y/AMxpq46IhGjSUzcOx3QuKIo?rlkey=s8y3isccrpry4980bw40ertir&dl=0" },
   {
     // Overall Stündenglass brand logos (black/white/various). Powers the homepage
     // "Logos and Brand Assets" section. `flat` = folder name to bucket files
@@ -339,19 +340,23 @@ for (const p of PRODUCTS) {
         continue;
       }
       const entries = await listFolder(tok, p.link, "/" + raw);
-      const files = [];
-      for (const e of entries) if (e[".tag"] === "file") { e.relPath = "/" + raw + "/" + e.name; files.push(e); }
-      // Walk one nested level (e.g. per-color variant folders under Product Photos)
-      // and flatten those files into the parent group, labelled by their folder.
-      for (const ss of entries.filter((e) => e[".tag"] === "folder")) {
-        const nested = (await listFolder(tok, p.link, "/" + raw + "/" + ss.name)).filter((e) => e[".tag"] === "file");
-        for (const nf of nested) {
-          nf.relPath = "/" + raw + "/" + ss.name + "/" + nf.name;
-          nf.displayName = ss.name + " · " + nf.name.replace(/\.[^.]+$/, "");
-          files.push(nf);
+      const direct = [];
+      for (const e of entries) if (e[".tag"] === "file") { e.relPath = "/" + raw + "/" + e.name; e.displayName = e.name.replace(/\.[^.]+$/, ""); direct.push(e); }
+      const subFolders = entries.filter((e) => e[".tag"] === "folder");
+      if (subFolders.length) {
+        // Preserve one nested level as "Parent / Child" folders (drill-down) rather
+        // than flattening. Same Dropbox calls as a flat sync (one list per child),
+        // so it stays fast — no recursion, no per-child link minting (child specs
+        // carry no `id`). The top folder's own loose files get a "Parent" group.
+        if (direct.length) folderSpecs.push({ name: disp, prefix: "/" + raw, files: direct, id: folderId[raw] });
+        for (const ss of subFolders) {
+          const nested = (await listFolder(tok, p.link, "/" + raw + "/" + ss.name)).filter((e) => e[".tag"] === "file");
+          nested.forEach((nf) => { nf.relPath = "/" + raw + "/" + ss.name + "/" + nf.name; nf.displayName = nf.name.replace(/\.[^.]+$/, ""); });
+          if (nested.length) folderSpecs.push({ name: disp + " / " + (FOLDER_ALIAS[ss.name] || ss.name), prefix: "/" + raw + "/" + ss.name, files: nested });
         }
+      } else {
+        folderSpecs.push({ name: disp, prefix: "/" + raw, files: direct, id: folderId[raw] });
       }
-      folderSpecs.push({ name: disp, prefix: "/" + raw, files, id: folderId[raw] });
     }
   } else {
     folderSpecs.push({ name: p.flat || "Files", prefix: "", files: top.filter((e) => e[".tag"] === "file") });
