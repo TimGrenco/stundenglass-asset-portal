@@ -94,7 +94,7 @@ window.PORTAL_PRODUCTS = [
      scripts/dropbox-sync.mjs. `folders: {}` is filled by the Dropbox sync. */
   {
     name: "Gravity Infusers", brand: "stundenglass", category: "Gravity", type: "Gravity Infuser",
-    cover: null,
+    cover: "assets/img/covers/gravity-infusers.png",
     added: "2026-07-09",
     oneSheet: "",
     folders: {},   // real folders + thumbnails come from synced.js (Dropbox sync)
@@ -115,14 +115,14 @@ window.PORTAL_PRODUCTS = [
   },
   {
     name: "Modül", brand: "stundenglass", category: "Modular", type: "Modular System",
-    cover: null,
+    cover: "assets/img/covers/modul.png",
     added: "2026-07-09",
     oneSheet: "",
     folders: {},
   },
   {
     name: "Accessories", brand: "stundenglass", category: "Accessories", type: "Accessories",
-    cover: null,
+    cover: "assets/img/covers/accessories.png",
     added: "2026-07-10",
     oneSheet: "",
     folders: {},
