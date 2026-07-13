@@ -188,8 +188,8 @@ async function sharedFileLink(tok, id) {
   return null;
 }
 
-async function listFolder(tok, link, path) {
-  let res = await rpc(tok, "files/list_folder", { path, shared_link: { url: link } });
+async function listFolder(tok, link, path, recursive) {
+  let res = await rpc(tok, "files/list_folder", { path, shared_link: { url: link }, recursive: !!recursive });
   let entries = res.entries;
   while (res.has_more) {
     res = await rpc(tok, "files/list_folder/continue", { cursor: res.cursor });
@@ -297,35 +297,32 @@ for (const p of PRODUCTS) {
   const keep = new Set();   // thumbnail filenames referenced this run (for pruning)
   const tmp = join(dir, "_tmp");
 
-  const top = await listFolder(tok, p.link, "");
-
-  // Recursively walk the WHOLE folder tree, emitting ONE spec per folder that has
-  // direct files, named by its full path ("A / B / C"). This powers a full
-  // drill-down (folders within folders, at any depth) in the portal. Cost is one
-  // list call per folder — no per-folder link minting (specs carry no id, which
-  // was heavily rate-limited), so "Download folder" falls back to the whole-product
+  // ONE recursive listing of the whole product returns every file (paginated) —
+  // a handful of API calls instead of one-per-folder (which got rate-limited and
+  // took 30+ min). Group the files locally by their full folder path ("A / B / C")
+  // so the portal can drill down folders-within-folders at any depth. No per-folder
+  // link minting (list-only), so "Download folder" falls back to the whole-product
   // zip; per-file + "Download selected" downloads are unaffected.
-  const folderSpecs = [];
-  async function walkFolder(base, label, entries) {
-    if (!entries) entries = await listFolder(tok, p.link, base);
-    const direct = entries.filter((e) => e[".tag"] === "file");
-    if (direct.length) {
-      direct.forEach((f) => { f.relPath = base + "/" + f.name; f.displayName = f.name.replace(/\.[^.]+$/, ""); });
-      folderSpecs.push({ name: label || p.flat || "Files", prefix: base, files: direct });
-    }
-    const subFolders = entries.filter((e) => e[".tag"] === "folder");
-    // Canonical categories (Product Photos, etc.) first; others alphabetically.
-    subFolders.sort((a, b) => {
-      const da = FOLDER_ALIAS[a.name] || a.name, db = FOLDER_ALIAS[b.name] || b.name;
-      const ia = FOLDER_ORDER.indexOf(da), ib = FOLDER_ORDER.indexOf(db);
-      return ((ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib)) || da.localeCompare(db);
-    });
-    for (const ss of subFolders) {
-      const seg = FOLDER_ALIAS[ss.name] || ss.name;
-      await walkFolder(base + "/" + ss.name, label ? label + " / " + seg : seg);
-    }
+  const allEntries = await listFolder(tok, p.link, "", true);
+  const byFolder = new Map();   // "A / B / C" -> [file entries]  (insertion order)
+  for (const e of allEntries) {
+    if (e[".tag"] !== "file") continue;
+    const full = e.path_display || e.path_lower || ("/" + e.name);
+    const dir = full.slice(0, full.lastIndexOf("/"));                       // "/Black/Product Photos"
+    const segs = dir.split("/").filter(Boolean).map((s) => FOLDER_ALIAS[s] || s);
+    const label = segs.join(" / ") || (p.flat || "Files");
+    e.relPath = full;
+    e.displayName = e.name.replace(/\.[^.]+$/, "");
+    if (!byFolder.has(label)) byFolder.set(label, []);
+    byFolder.get(label).push(e);
   }
-  await walkFolder("", "", top);
+  // Order folders: canonical categories first (by their last path segment), then
+  // shallower paths, then alphabetically — so the drill-down reads sensibly.
+  const folderSpecs = [...byFolder.keys()].sort((a, b) => {
+    const la = a.split(" / ").pop(), lb = b.split(" / ").pop();
+    const ia = FOLDER_ORDER.indexOf(la), ib = FOLDER_ORDER.indexOf(lb);
+    return ((ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib)) || (a.split(" / ").length - b.split(" / ").length) || a.localeCompare(b);
+  }).map((name) => ({ name, prefix: "", files: byFolder.get(name) }));
 
   const filesDir = join(dir, "files");
   mkdirSync(filesDir, { recursive: true });
