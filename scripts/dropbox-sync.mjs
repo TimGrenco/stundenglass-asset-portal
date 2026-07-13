@@ -325,13 +325,16 @@ for (const p of PRODUCTS) {
         const direct = entries.filter((e) => e[".tag"] === "file");
         if (direct.length) {
           direct.forEach((f) => { f.relPath = "/" + raw + "/" + f.name; f.displayName = f.name.replace(/\.[^.]+$/, ""); });
-          // `id` on each spec lets us mint a per-subfolder share link so "Download
-          // folder" zips exactly that Parent / Child folder.
-          folderSpecs.push({ name: raw, prefix: "/" + raw, files: direct, id: folderId[raw] });
+          // NOTE: deep specs intentionally carry NO `id`, so we do NOT mint a
+          // per-subfolder share link. Minting one link per Parent/Child folder
+          // (100+ calls) is heavily rate-limited by Dropbox and made the first
+          // deep sync crawl. "Download folder" on a nested folder falls back to
+          // the whole-product zip; per-file + "Download selected" still work.
+          folderSpecs.push({ name: raw, prefix: "/" + raw, files: direct });
         }
         for (const ss of entries.filter((e) => e[".tag"] === "folder")) {
           const sub = await collectDeep(tok, p.link, "/" + raw + "/" + ss.name, "");
-          if (sub.length) folderSpecs.push({ name: raw + " / " + ss.name, prefix: "/" + raw + "/" + ss.name, files: sub, id: ss.id });
+          if (sub.length) folderSpecs.push({ name: raw + " / " + ss.name, prefix: "/" + raw + "/" + ss.name, files: sub });
         }
         continue;
       }
