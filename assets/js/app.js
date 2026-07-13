@@ -1417,26 +1417,54 @@
     // last tab.
     if ((p.folders[INSTORE_FOLDER] || []).length) p.folders[INSTORE_FOLDER] = instoreOwn(p);
     var folderNames = Object.keys(p.folders).filter(function (f) { return (p.folders[f] || []).length; });
-    // Canonical folders keep their fixed order (Product Photos first, etc.); the
-    // In-Store Marketing tab is always pinned last. Other non-canonical folders
-    // (e.g. legacy products' colorway folders) sort by size — largest first — so a
-    // product opens on its richest folder, not a 2-file "Logo" tab.
-    folderNames.sort(function (a, b) {
+
+    // ---- folder tree: split "Parent / Child" folder names into a 2-level
+    // drill-down. A top segment is either a LEAF (files directly, e.g. "Product
+    // Photos") or a BRANCH (has children, e.g. "Black / Product Photos"). Canonical
+    // categories sort first; colors/editions/accessory-types fall after by size.
+    var SEP = " / ";
+    var tree = {}, topOrder = [];
+    folderNames.forEach(function (f) {
+      var i = f.indexOf(SEP);
+      var top = i === -1 ? f : f.slice(0, i);
+      if (!tree[top]) { tree[top] = { leaf: null, children: {}, order: [] }; topOrder.push(top); }
+      if (i === -1) tree[top].leaf = f;
+      else { var c = f.slice(i + SEP.length); if (!tree[top].children[c]) tree[top].order.push(c); tree[top].children[c] = f; }
+    });
+    function isBranch(t) { return !!(tree[t] && tree[t].order.length); }
+    function topCount(t) {
+      var node = tree[t], n = node.leaf ? (p.folders[node.leaf] || []).length : 0;
+      node.order.forEach(function (c) { n += (p.folders[node.children[c]] || []).length; });
+      return n;
+    }
+    topOrder.sort(function (a, b) {
       if (a === INSTORE_FOLDER) return 1;
       if (b === INSTORE_FOLDER) return -1;
-      return (folderRank(a) - folderRank(b)) || ((p.folders[b] || []).length - (p.folders[a] || []).length);
+      return (folderRank(a) - folderRank(b)) || (topCount(b) - topCount(a));
     });
-    // Default to a folder with content — prefer the one holding the cover image
-    // (has a thumb), else the first non-empty folder — so the gallery never opens
-    // on an empty placeholder tab (e.g. the blank "Web Banners" on legacy products).
-    var withCover = folderNames.filter(function (f) { return (p.folders[f] || []).some(function (x) { return x.thumb; }); });
-    // Prefer a substantial folder (≥ 4 files) so we don't open on a tiny 2-file
-    // "Logos" tab when a rich photo/render folder is available.
+    Object.keys(tree).forEach(function (t) {
+      tree[t].order.sort(function (a, b) {
+        return (folderRank(a) - folderRank(b)) || ((p.folders[tree[t].children[b]] || []).length - (p.folders[tree[t].children[a]] || []).length);
+      });
+    });
+    function allLeaves() {
+      var out = [];
+      topOrder.forEach(function (t) { if (tree[t].leaf) out.push(tree[t].leaf); tree[t].order.forEach(function (c) { out.push(tree[t].children[c]); }); });
+      return out;
+    }
+    var leaves = allLeaves();
+    var withCover = leaves.filter(function (f) { return (p.folders[f] || []).some(function (x) { return x.thumb; }); });
     var rich = withCover.filter(function (f) { return (p.folders[f] || []).length >= 4; });
-    var nonEmpty = folderNames.filter(function (f) { return (p.folders[f] || []).length; });
-    // Deep-link straight to a folder (e.g. from a file search result).
-    var active = (initialFolder && folderNames.indexOf(initialFolder) !== -1)
-      ? initialFolder : (rich[0] || withCover[0] || nonEmpty[0] || folderNames[0]);
+    // Prefer landing on a top-level category leaf (so we don't auto-open a color
+    // unless every top segment is a color/edition); else the richest leaf.
+    var rootLeafRich = topOrder.filter(function (t) { return tree[t].leaf && !isBranch(t); })
+      .map(function (t) { return tree[t].leaf; })
+      .filter(function (f) { return (p.folders[f] || []).some(function (x) { return x.thumb; }); })
+      .sort(function (a, b) { return (p.folders[b] || []).length - (p.folders[a] || []).length; });
+    var active = (initialFolder && p.folders[initialFolder]) ? initialFolder
+      : (rootLeafRich[0] || rich[0] || withCover[0] || leaves[0]);
+    // Drilled-into group derived from the active leaf's parent (null = root).
+    var openGroup = (active && active.indexOf(SEP) !== -1) ? active.slice(0, active.indexOf(SEP)) : null;
     var selected = {};   // fileKey -> file object; persists while switching folder tabs
 
     function folderFiles() { return p.folders[active] || []; }
@@ -1464,19 +1492,45 @@
     }
 
     function render() {
-      // Asset filters: friendly-labelled chips for this product's folders, sat
-      // right at the top of the Documents section for quick filtering.
-      var assetNav =
-        (folderNames.length > 3 ? '<div class="catgrid-hint"><span>Swipe to see more folders</span>' + icon("arrowRight") + "</div>" : "") +
-        '<div class="catgrid" id="asset-nav">' + folderNames.map(function (f) {
-          var n = p.folders[f].length, empty = n === 0;
-          return '<button class="catcard ' + (f === active ? "on " : "") + (empty ? "is-empty" : "") + '" data-folder="' + f + '"' + (empty ? " disabled" : "") + ">" +
-            '<span class="catcard-ic">' + icon(folderIcon(f)) + "</span>" +
-            '<span class="catcard-tx"><span class="catcard-name">' + typeLabel(f) + "</span>" +
-            '<span class="catcard-c">' + n + " file" + (n === 1 ? "" : "s") + "</span></span>" +
-          "</button>";
-        }).join("") + "</div>";
+      // Drill-down folder nav. Root: one card per top segment (branches drill in,
+      // leaves open their gallery). Drilled: a breadcrumb + the group's child cards.
+      function catCard(label, ic, count, attr, cls) {
+        return '<button class="catcard ' + (cls || "") + '" ' + attr + '>' +
+          '<span class="catcard-ic">' + icon(ic) + "</span>" +
+          '<span class="catcard-tx"><span class="catcard-name">' + label + "</span>" +
+          '<span class="catcard-c">' + count + "</span></span></button>";
+      }
+      function fcount(n) { return n + " file" + (n === 1 ? "" : "s"); }
+      var navCards, crumb = "", navCount;
+      if (openGroup && isBranch(openGroup)) {
+        var node = tree[openGroup], cards = "";
+        if (node.leaf) cards += catCard("General", folderIcon(openGroup), fcount((p.folders[node.leaf] || []).length), 'data-folder="' + escapeHTML(node.leaf) + '"', node.leaf === active ? "on" : "");
+        cards += node.order.map(function (c) {
+          var full = node.children[c];
+          return catCard(typeLabel(c), folderIcon(c), fcount((p.folders[full] || []).length), 'data-folder="' + escapeHTML(full) + '"', full === active ? "on" : "");
+        }).join("");
+        crumb = '<div class="folder-crumb"><button class="crumb-btn" id="crumb-root">' + icon("arrowLeft") + " All folders</button>" +
+          '<span class="crumb-sep">/</span><span class="crumb-cur">' + typeLabel(openGroup) + "</span></div>";
+        navCards = cards; navCount = node.order.length + (node.leaf ? 1 : 0);
+      } else {
+        navCards = topOrder.map(function (t) {
+          var node = tree[t];
+          if (isBranch(t)) {
+            var nc = node.order.length + (node.leaf ? 1 : 0);
+            return catCard(typeLabel(t), "stack", nc + (nc === 1 ? " folder · " : " folders · ") + topCount(t) + " files", 'data-top="' + escapeHTML(t) + '"', "is-branch");
+          }
+          return catCard(typeLabel(t), folderIcon(t), fcount((p.folders[node.leaf] || []).length), 'data-folder="' + escapeHTML(node.leaf) + '"', node.leaf === active ? "on" : "");
+        }).join("");
+        navCount = topOrder.length;
+      }
+      var assetNav = crumb +
+        (navCount > 4 ? '<div class="catgrid-hint"><span>Swipe to see more</span>' + icon("arrowRight") + "</div>" : "") +
+        '<div class="catgrid" id="asset-nav">' + navCards + "</div>";
       var activeCount = (p.folders[active] || []).length;
+      // Active leaf title: "Parent · Child" when nested, else the folder label.
+      var activeLabel = active
+        ? (active.indexOf(SEP) !== -1 ? typeLabel(active.slice(0, active.indexOf(SEP))) + " · " + typeLabel(active.slice(active.indexOf(SEP) + SEP.length)) : typeLabel(active))
+        : "";
       var catTotal = folderNames.reduce(function (s, f) { return s + p.folders[f].length; }, 0);
       // Eyebrow shows the product type (falls back to category); the title is the
       // full brand-prefixed name (e.g. "Stündenglass Gravity Infuser"), without
@@ -1513,7 +1567,7 @@
           ? '<div class="section-head" id="docs-head"><h2>Download assets by category</h2><span class="badge">' + catTotal + " file" + (catTotal === 1 ? "" : "s") + "</span></div>" +
             assetNav +
             '<div class="folder-toolbar">' +
-              '<h3 class="folder-title">' + typeLabel(active) + '<span class="ft-count">' + activeCount + " file" + (activeCount === 1 ? "" : "s") + "</span></h3>" +
+              '<h3 class="folder-title">' + activeLabel + '<span class="ft-count">' + activeCount + " file" + (activeCount === 1 ? "" : "s") + "</span></h3>" +
               '<div class="gallery-toolbar">' +
                 '<label class="selectall"><input type="checkbox" id="sel-all"/> Select all</label>' +
                 '<button class="btn ghost sm" id="dl-folder">' + icon("download") + " Download folder</button>" +
@@ -1592,8 +1646,26 @@
       var selDlBtn = $("#sel-dl");
       if (selDlBtn) selDlBtn.addEventListener("click", function () { downloadFiles(selectedList(), selectedList().length + " selected"); });
       $$(".catcard", d).forEach(function (t) {
-        // Switching folders re-renders the detail with the new active folder.
-        t.addEventListener("click", function () { active = t.getAttribute("data-folder"); render(); });
+        // Branch card (data-top) drills into that group; leaf card (data-folder)
+        // opens its gallery. Re-renders the detail with the new state.
+        t.addEventListener("click", function () {
+          var top = t.getAttribute("data-top"), folder = t.getAttribute("data-folder");
+          if (top != null) {
+            openGroup = top;
+            var node = tree[top];
+            active = node.order.length ? node.children[node.order[0]] : node.leaf;
+          } else if (folder != null) {
+            active = folder;
+            openGroup = folder.indexOf(SEP) !== -1 ? folder.slice(0, folder.indexOf(SEP)) : null;
+          }
+          render();
+        });
+      });
+      var crumbRoot = $("#crumb-root", d);
+      if (crumbRoot) crumbRoot.addEventListener("click", function () {
+        openGroup = null;
+        active = rootLeafRich[0] || (topOrder.filter(function (t) { return !isBranch(t); }).map(function (t) { return tree[t].leaf; })[0]) || active;
+        render();
       });
       syncSelection();
     }

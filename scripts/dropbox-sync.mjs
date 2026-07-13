@@ -47,11 +47,14 @@ if (!APP_KEY || !APP_SECRET || !REFRESH) {
 //   flat: "Logos"   → bucket a flat (subfolder-less) folder under this name
 //   pngThumbs: true → keep transparent PNG logo thumbnails (don't flatten to white)
 const PRODUCTS = [
-  { name: "Gravity Infusers",         slug: "gravity-infusers",         link: "https://www.dropbox.com/scl/fo/3j4un063pxgcbtl7yqq5z/ACmVjEjB25HyZTAucWfMCLk?rlkey=b620zqgmr0hxb5lbtazvd4qfk&dl=0" },
-  { name: "Kompact Gravity Infusers", slug: "kompact-gravity-infusers", link: "https://www.dropbox.com/scl/fo/ao5gxkfe1rsfeupwxuosk/h?rlkey=ji0x0ttk1kth2s9yqyatd16sv&dl=0" },
-  { name: "Classic Gravity Infusers", slug: "classic-gravity-infusers", link: "https://www.dropbox.com/scl/fo/zg2lt1b24hyg51akxtqyr/h?rlkey=umf2vggz3vro82dduczc419q1&dl=0" },
-  { name: "Modül",                    slug: "modul",                    link: "https://www.dropbox.com/scl/fo/so2i8hzeo5p3ikqx1e1ej/h?rlkey=rb1vhopjo5qyoft8eqr7bgz0v&dl=0" },
-  { name: "Accessories",              slug: "accessories",              link: "https://www.dropbox.com/scl/fo/97kd80esi1s6yo5e7u90y/AMxpq46IhGjSUzcOx3QuKIo?rlkey=s8y3isccrpry4980bw40ertir&dl=0" },
+  // `deep: true` → preserve the Dropbox nesting as "Parent / Child" folders
+  // (e.g. "Black / Product Photos") instead of flattening a color/edition into one
+  // list, so the portal can drill down: color/edition → category → files.
+  { name: "Gravity Infusers",         slug: "gravity-infusers",         deep: true, link: "https://www.dropbox.com/scl/fo/3j4un063pxgcbtl7yqq5z/ACmVjEjB25HyZTAucWfMCLk?rlkey=b620zqgmr0hxb5lbtazvd4qfk&dl=0" },
+  { name: "Kompact Gravity Infusers", slug: "kompact-gravity-infusers", deep: true, link: "https://www.dropbox.com/scl/fo/ao5gxkfe1rsfeupwxuosk/h?rlkey=ji0x0ttk1kth2s9yqyatd16sv&dl=0" },
+  { name: "Classic Gravity Infusers", slug: "classic-gravity-infusers", deep: true, link: "https://www.dropbox.com/scl/fo/zg2lt1b24hyg51akxtqyr/h?rlkey=umf2vggz3vro82dduczc419q1&dl=0" },
+  { name: "Modül",                    slug: "modul",                    deep: true, link: "https://www.dropbox.com/scl/fo/so2i8hzeo5p3ikqx1e1ej/h?rlkey=rb1vhopjo5qyoft8eqr7bgz0v&dl=0" },
+  { name: "Accessories",              slug: "accessories",              deep: true, link: "https://www.dropbox.com/scl/fo/97kd80esi1s6yo5e7u90y/AMxpq46IhGjSUzcOx3QuKIo?rlkey=s8y3isccrpry4980bw40ertir&dl=0" },
   {
     // Overall Stündenglass brand logos (black/white/various). Powers the homepage
     // "Logos and Brand Assets" section. `flat` = folder name to bucket files
@@ -322,11 +325,13 @@ for (const p of PRODUCTS) {
         const direct = entries.filter((e) => e[".tag"] === "file");
         if (direct.length) {
           direct.forEach((f) => { f.relPath = "/" + raw + "/" + f.name; f.displayName = f.name.replace(/\.[^.]+$/, ""); });
-          folderSpecs.push({ name: raw, prefix: "/" + raw, files: direct });
+          // `id` on each spec lets us mint a per-subfolder share link so "Download
+          // folder" zips exactly that Parent / Child folder.
+          folderSpecs.push({ name: raw, prefix: "/" + raw, files: direct, id: folderId[raw] });
         }
         for (const ss of entries.filter((e) => e[".tag"] === "folder")) {
           const sub = await collectDeep(tok, p.link, "/" + raw + "/" + ss.name, "");
-          if (sub.length) folderSpecs.push({ name: raw + " / " + ss.name, prefix: "/" + raw + "/" + ss.name, files: sub });
+          if (sub.length) folderSpecs.push({ name: raw + " / " + ss.name, prefix: "/" + raw + "/" + ss.name, files: sub, id: ss.id });
         }
         continue;
       }
