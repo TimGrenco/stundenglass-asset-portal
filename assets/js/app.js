@@ -1715,9 +1715,9 @@
         pkgCard("Master carton", info.cartonImg);
       note = "Ships in a retail-ready POP display — see SKU details for inner-pack &amp; master-carton quantities.";
     } else {
-      // Ships in single retail boxes — no POP display for this product.
+      // Ships in single retail boxes — no POP display for these products.
       cards = boxCard("Single Retail Packaging", info.boxImg, null, boxFile) + pkgCard("Master carton", info.cartonImg);
-      note = "Ships in single retail boxes — no POP display. See SKU details for master-carton quantities.";
+      note = "Ships in single retail boxes. See SKU details for case and pallet quantities and specs.";
     }
     return '<div class="section-head"><h2>Packaging</h2>' + (info.pop ? '<span class="badge">Ships in POP display</span>' : "") + "</div>" +
       (cards ? '<div class="pkg-grid">' + cards + "</div>" : "") +
@@ -1760,21 +1760,19 @@
     // so the collection-level Product SKU/UPC rows are omitted here to avoid
     // duplicating the POP-display codes.
     var multiColor = !!(window.PORTAL_COLORWAYS && window.PORTAL_COLORWAYS[p.name]);
+    // "N/A" values are shown as-is (not counted as a to-be-confirmed blank).
+    function orNA(label, val) { return val ? '<div class="sku-row"><span class="sku-l">' + label + '</span><span class="sku-v">' + val + "</span></div>" : row(label, val); }
     var rows =
       row("Product Name", info.fullName) +
+      // Multi-variant products list per-variant SKU/UPC in Collection Colorways.
       (multiColor ? "" : row("Product SKU", info.sku) + row("Product UPC", info.upc)) +
-      // Retail POP display SKU/UPC only apply to products that ship in a POP display.
-      (info.pop === true
-        ? row("Retail POP Display SKU", info.popSku) +
-          row("Retail POP Display UPC", info.popUpc)
-        : "") +
       row("Product Dimensions", info.dimensions) +
       row("Unit Weight", info.unitWeight) +
-      row("Ships In Retail POP Display", info.pop === true ? "Yes" : info.pop === false ? "No" : "") +
-      row("Units Per POP Display", info.innerPack) +
-      row("Units Per Master Case", info.masterCarton) +
-      row("Case Weight", info.caseWeight) +
-      row("Case Dimensions", info.caseDimensions) +
+      orNA("Units Per Case", info.caseUnits) +
+      orNA("Case Weight", info.caseWeight) +
+      orNA("Case Dimensions", info.caseDimensions) +
+      orNA("Units Per Pallet", info.palletUnits) +
+      orNA("Pallet Weight", info.palletWeight) +
       row("HTS (Harmonized Tariff Schedule) Code", info.htsCode);
     return '<div class="section-head"><h2>SKU details</h2></div>' +
       '<div class="sku-table">' + rows + "</div>" +

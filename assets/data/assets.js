@@ -297,7 +297,36 @@ var PRODUCT_DESCRIPTION = {
      sku, upc, fullName, dimensions, unitWeight, innerPack, masterCarton,
      caseWeight, caseDimensions, htsCode, pop, popSku, popUpc, boxImg, popImg */
 var PRODUCT_SKU = {
-  // "Gravity Infuser": { sku: "…", upc: "…", fullName: "GRAVITY INFUSER", dimensions: "…", unitWeight: "…", masterCarton: "…", caseWeight: "…", caseDimensions: "…", htsCode: "…" },
+  // Shared per-product specs. Multi-variant products list per-SKU codes in
+  // PORTAL_COLORWAYS below (so Product SKU/UPC are omitted from this table).
+  // Infusers palletize (Units/Pallet + Pallet Weight; case = N/A). Modül ships
+  // in cases (Units/Case + Case Weight/Dimensions).
+  "Gravity Infusers": {
+    fullName: "Stündenglass Gravity Infuser",
+    dimensions: "260 × 175 × 390 mm", unitWeight: "2.52 kg",
+    caseUnits: "N/A", caseWeight: "N/A", caseDimensions: "N/A",
+    palletUnits: "98", palletWeight: "446.2 kg",
+    htsCode: "9614.00.00",
+  },
+  "Kompact Gravity Infusers": {
+    sku: "SG3-KIT-STBK-02", upc: "811736024884",
+    fullName: "Stündenglass Kompact Gravity Infuser",
+    caseUnits: "N/A", caseWeight: "N/A", caseDimensions: "N/A",
+    palletUnits: "96", palletWeight: "413.4 kg",
+    htsCode: "9614.00.00",
+  },
+  "Classic Gravity Infusers": {
+    fullName: "Stündenglass Gravity Infuser — Classic",
+    caseUnits: "N/A", caseWeight: "N/A", caseDimensions: "N/A",
+    palletUnits: "60", palletWeight: "378.6 kg",
+    htsCode: "9614.00.00",
+  },
+  "Modül": {
+    fullName: "Stündenglass Modül + Dok Deluxe Travel Set",
+    dimensions: "280 × 200 × 85 mm", unitWeight: "1.62 kg",
+    caseUnits: "10", caseWeight: "17.2 kg", caseDimensions: "450 × 430 × 320 mm",
+    htsCode: "",
+  },
 };
 
 /* "What's In the Box?" contents + components image per product.
@@ -407,7 +436,26 @@ window.PORTAL_PRODUCTS.forEach(function (p) {
 /* Per-colourway SKU/UPC for any multi-colour collections. Shown as the
    "Collection Colorways" section on those product pages. Empty for now. */
 window.PORTAL_COLORWAYS = {
-  // "<Product>": [ { color: "Black", hex: "#0A0A0A", sku: "…", upc: "…", name: "…" } ],
+  "Gravity Infusers": [
+    { color: "Black", hex: "#0A0A0A", sku: "SG4-KIT-STBK-02", upc: "811736029896", name: "Stündenglass Gravity Infuser — Black" },
+    { color: "Violet Purple", hex: "#7A4EAB", sku: "SG4-KIT-STPU-02", upc: "811736020299", name: "Stündenglass Gravity Infuser — Violet Purple" },
+    { color: "Olive Green", hex: "#6B7A3A", sku: "SG4-KIT-STGR-02", upc: "852570004168", name: "Stündenglass Gravity Infuser — Olive Green" },
+    { color: "Desert Rose", hex: "#C08497", sku: "SG4-KIT-STDR-02", upc: "811736023108", name: "Stündenglass Gravity Infuser — Desert Rose" },
+  ],
+  "Classic Gravity Infusers": [
+    { color: "Black", hex: "#0A0A0A", sku: "SG2-KIT-STBK-02", upc: "852570004014", name: "Stündenglass Gravity Infuser — Classic" },
+    { color: "Wiz Khalifa Edition", hex: "#8B7FD1", sku: "SG2-KIT-KKPU-02", upc: "811736028974", name: "Khalifa × Stündenglass Gravity Infuser — Classic (Violet Sky / Mints)" },
+  ],
+  "Modül": [
+    { color: "Clear Glass", hex: "#CBD9E0", sku: "SGM-DFK-GLBK-02", upc: "811736028677", name: "Modül + Dok Deluxe Travel Set — Clear Glass" },
+    { color: "Purple Glass", hex: "#8B4AD6", sku: "SGM-DFK-PUBK-02", upc: "811736029667", name: "Modül + Dok Deluxe Travel Set — Purple Glass" },
+    { color: "Green Glass", hex: "#4CAF50", sku: "SGM-DFK-GRBK-02", upc: "811736029674", name: "Modül + Dok Deluxe Travel Set — Green Glass" },
+    { color: "Amber Glass", hex: "#C9822E", sku: "SGM-DFK-AMBK-02", upc: "811736029650", name: "Modül + Dok Deluxe Travel Set — Amber Glass" },
+    { color: "Bubble Glass", hex: "#B0A8D8", sku: "SGM-DFK-IRBK-02", upc: "811736028714", name: "Modül + Dok Deluxe Travel Set — Bubble Glass" },
+    { color: "Pink Glass", hex: "#E8479E", sku: "SGM-DFK-PKBK-02", upc: "811736028707", name: "Modül + Dok Deluxe Travel Set — Pink Glass" },
+    { color: "Wiz Khalifa Edition", hex: "#8B7FD1", sku: "SGM-DFK-KKPU-02", upc: "811736029070", name: "Wiz Khalifa × Stündenglass Modül + Dok Deluxe Travel Set" },
+    { color: "Grateful Dead — Legacy Patchwork", hex: "#E23B34", sku: "SGM-DFK-GDAO-02", upc: "811736028509", name: "Grateful Dead × Stündenglass Modül + Dok Deluxe Travel Set — Legacy Patchwork" },
+  ],
 };
 
 /* Central POP-display library (synced from a "POP Displays" Dropbox folder) →
