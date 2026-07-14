@@ -126,6 +126,13 @@ window.PORTAL_PRODUCTS = [
     cover: "assets/img/covers/classic-gravity-infusers.png",
     added: "2026-07-09",
     oneSheet: "",
+    // Which folder opens by default when you land on this product page, so you see
+    // real assets straight away instead of only folder cards. Its sibling folders
+    // stay on screen above the gallery, with this one highlighted.
+    // Must be a folder that holds FILES (not one that only holds more folders).
+    // Omit it and the page opens a top-level "Product Photos" if one exists,
+    // otherwise it just lists the folders.
+    defaultFolder: "Black / Product Photos",
     folders: {},
   },
   {

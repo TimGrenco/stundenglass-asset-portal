@@ -1838,7 +1838,12 @@
     // you get real thumbnails AND can see how the folders work. Only when it's a
     // leaf holding files; on products whose "Product Photos" is itself a stack of
     // colourways (Modül) there'd be nothing to show, so we leave those at the root.
+    // `defaultFolder` in assets.js wins (it can point at a nested folder, e.g.
+    // Classic opens "Black / Product Photos"); otherwise fall back to a top-level
+    // "Product Photos". Either way it must be a folder that actually holds files.
     function defaultFolder() {
+      var pick = p.defaultFolder;
+      if (pick && (p.folders[pick] || []).length) return pick;
       var hit = null;
       childSegs("").forEach(function (seg) {
         if (hit || !/^product photos$/i.test(seg)) return;
