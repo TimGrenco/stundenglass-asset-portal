@@ -1642,7 +1642,7 @@
 
   // ---- store locator request page ------------------------------------------
   // A retailer fills in one or more store locations and submits them all as a
-  // single email to the PR team (CFG.locatorEmail).
+  // single email to the marketing team (CFG.locatorEmail).
   function storeBlockHTML(n) {
     return '<div class="loc-store" data-store>' +
         '<div class="loc-store-h">' +

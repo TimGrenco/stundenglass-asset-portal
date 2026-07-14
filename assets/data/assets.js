@@ -34,9 +34,11 @@ window.PORTAL_CONFIG = {
   tagline: "Everything you need, in one place.",
   intro:
     "The official asset portal for Stündenglass. Product photography, lifestyle imagery, logos, video and spec sheets — organized by product, ready to download.",
-  requestEmail: "marketing@grencoscience.com", // "Request an asset" mailto target
-  orderEmail: "pr@stundenglass.com",   // marketing-material order requests — CONFIRM
-  locatorEmail: "pr@stundenglass.com", // store-locator listing requests — CONFIRM
+  // All three inbound requests go to marketing. (Product support is separate —
+  // that's support.email below, the customer-service inbox.)
+  requestEmail: "marketing@grencoscience.com", // "Request an asset"
+  orderEmail: "marketing@grencoscience.com",   // marketing-material orders
+  locatorEmail: "marketing@grencoscience.com", // store-locator listing requests
   // Shown on each product page. Edit freely (or set to "" to hide).
   usageNote:
     "These assets are provided for approved partner, press, and retail use. Please don't alter logos or product imagery. Need something specific or a different format? Use “Request an asset.”",
