@@ -507,11 +507,12 @@ window.PORTAL_CATALOG_GROUPS = ["Regional Catalogs", "B2B Resources"];
 window.PORTAL_CATALOG_META = {
   /* The four 2026 catalogs share one `title`, so they collapse into a SINGLE card
      with US / UK / EU / CAD region pills. `order` sets the pill order.
-     Keys are the exact Dropbox filenames, minus ".pdf". */
-  "Stundenglass-2026-Catalog-US":  { title: "Stündenglass 2026 Catalog", region: "US",  group: "Regional Catalogs", order: 1 },
-  "Stundenglass-Catalog-2026-UK":  { title: "Stündenglass 2026 Catalog", region: "UK",  group: "Regional Catalogs", order: 2 },
-  "Stundenglass-Catalog-2026-EU":  { title: "Stündenglass 2026 Catalog", region: "EU",  group: "Regional Catalogs", order: 3 },
-  "STDN_Catalog_2026_CAD":         { title: "Stündenglass 2026 Catalog", region: "CAD", group: "Regional Catalogs", order: 4 },
+     Keys are the exact Dropbox filenames minus ".pdf" — note these use SPACES;
+     the hyphens in the Dropbox URL are just its slug, not the real name. */
+  "Stundenglass - 2026 Catalog - US": { title: "Stündenglass 2026 Catalog", region: "US",  group: "Regional Catalogs", order: 1 },
+  "Stundenglass Catalog - 2026 - UK": { title: "Stündenglass 2026 Catalog", region: "UK",  group: "Regional Catalogs", order: 2 },
+  "Stundenglass Catalog - 2026 - EU": { title: "Stündenglass 2026 Catalog", region: "EU",  group: "Regional Catalogs", order: 3 },
+  "STDN_Catalog_2026_CAD":            { title: "Stündenglass 2026 Catalog", region: "CAD", group: "Regional Catalogs", order: 4 },
 };
 
 window.PORTAL_CATALOGS = (function () {
