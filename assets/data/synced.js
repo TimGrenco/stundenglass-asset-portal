@@ -76109,5 +76109,43 @@ window.PORTAL_SYNCED = {
     "folderLinks": {
       "Logos": "https://www.dropbox.com/scl/fo/nhw7byl8oghujix4nz3tj/h?rlkey=vu0gbmf1ujev6qam52v3qiurx&dl=1"
     }
+  },
+  "Catalogs": {
+    "folders": {
+      "Catalogs": [
+        {
+          "name": "Stundenglass - 2026 Catalog - US",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/plss2bshdtye4olwiemqx/Stundenglass-2026-Catalog-US.pdf?rlkey=2zhmue3zcpvfo56jgxjdl8i3x&dl=1",
+          "thumb": "assets/synced/catalogs/01656953b6db45400000002950c9f10.jpg",
+          "file": "assets/synced/catalogs/files/01656953b6db45400000002950c9f10.pdf"
+        },
+        {
+          "name": "Stundenglass Catalog - 2026 - UK",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/ttq5nn5anpx41et9c2oxs/Stundenglass-Catalog-2026-UK.pdf?rlkey=74p4oc77ciaqoxyuq8wuf17wy&dl=1",
+          "thumb": "assets/synced/catalogs/01656468678b97000000002950c9f10.jpg",
+          "file": "assets/synced/catalogs/files/01656468678b97000000002950c9f10.pdf"
+        },
+        {
+          "name": "Stundenglass Catalog - 2026 - EU",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/bjgagiviuecvrcyemv86y/Stundenglass-Catalog-2026-EU.pdf?rlkey=hg8x6ep0ys6mjcmokxye5lhp6&dl=1",
+          "thumb": "assets/synced/catalogs/016500f6bc449f300000002950c9f10.jpg",
+          "file": "assets/synced/catalogs/files/016500f6bc449f300000002950c9f10.pdf"
+        },
+        {
+          "name": "STDN_Catalog_2026_CAD",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/8xkao50mhju93n35yuo9o/STDN_Catalog_2026_CAD.pdf?rlkey=e6eqeqrwxprrajidd9h002jdv&dl=1",
+          "thumb": "assets/synced/catalogs/01652cff47a833e00000002950c9f10.jpg",
+          "file": "assets/synced/catalogs/files/01652cff47a833e00000002950c9f10.pdf"
+        }
+      ]
+    }
   }
 };
