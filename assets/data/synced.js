@@ -2412,6 +2412,56 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "TV Screen Videos": [
+        {
+          "name": "SG How To Infuse Bev Food",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/rw0h28cm7ztgak4ob4f41/SG-How-To-Infuse-Bev-Food.mp4?rlkey=l5uxh1w6nkyemxfb61ze1w8q6&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/f8fb34dae75c33dbc33ae7b4b850664675afd7ca3ca726e76dcf602490b2a26b.jpg",
+          "file": null
+        },
+        {
+          "name": "SG How To Use Concentrate",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/a2f6esoxiwnf17clyvfu0/SG-How-To-Use-Concentrate.mp4?rlkey=yxf1tae9aozyuvj0a2cowa2ag&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/b4b715ecf009b6dd817011db1404eda0250022dc557008a5884388aafa039bed.jpg",
+          "file": null
+        },
+        {
+          "name": "SG How To Use Flower",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/nbbfzf7r0x630w198eooq/SG-How-To-Use-Flower.mp4?rlkey=p15m8bht1fp8i49bm2p2uwfga&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/fdcee452fe64e1004b0b519c0bd4c12ba8428a81bf9d8938bc93cf20d42c2222.jpg",
+          "file": null
+        },
+        {
+          "name": "SG How To Use Hookah",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/ku93fwa7nwj7yfcqu6b4z/SG-How-To-Use-Hookah.mp4?rlkey=h8q6718gbdfk7r1069ed1reid&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/ec01ce83856b0af9639d888f1d6308053ea6827c6cf366711b60909c0db68ac5.jpg",
+          "file": null
+        },
+        {
+          "name": "Stünden - Cleaning condensed",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/8kngurtccir16xxow43td/St-nden-Cleaning-condensed.mp4?rlkey=38x3flbowb70i6lizh260pmwd&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/781b6c951769e55633a1698b4c08ba7898dd81abd48e5c6e63e92e5773087d0c.jpg",
+          "file": null
+        },
+        {
+          "name": "Stündenglass Tutorial 2024",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/oyypwwe1qo2nhyvn93vzd/St-ndenglass-Tutorial-2024.mp4?rlkey=zp085hf4l3c252rauuz6lwv84&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/3c642e85da2b68722df1ee887eb78216043a8b2f85680fa18afd804b2e6cfde5.jpg",
+          "file": null
+        }
+      ],
       "Black": [
         {
           "name": "stundenglass_one-sheet",
@@ -22195,48 +22245,6 @@ window.PORTAL_SYNCED = {
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/1fx3uv7xgb3a67vqgx9j7/_GSH1628-web-2.jpg?rlkey=qk4t4w5tj3w8k3d0m7rqsq10b&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/9701d0d48d3581d68c26b4f57c1625c624258ec8be9b5d4dc31fd89e4cd3009f.jpg",
-          "file": null
-        }
-      ],
-      "Black / How To Videos": [
-        {
-          "name": "SG How To Infuse Bev Food",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/rw0h28cm7ztgak4ob4f41/SG-How-To-Infuse-Bev-Food.mp4?rlkey=l5uxh1w6nkyemxfb61ze1w8q6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f8fb34dae75c33dbc33ae7b4b850664675afd7ca3ca726e76dcf602490b2a26b.jpg",
-          "file": null
-        },
-        {
-          "name": "SG How To Use Concentrate",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/a2f6esoxiwnf17clyvfu0/SG-How-To-Use-Concentrate.mp4?rlkey=yxf1tae9aozyuvj0a2cowa2ag&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b4b715ecf009b6dd817011db1404eda0250022dc557008a5884388aafa039bed.jpg",
-          "file": null
-        },
-        {
-          "name": "SG How To Use Flower",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/nbbfzf7r0x630w198eooq/SG-How-To-Use-Flower.mp4?rlkey=p15m8bht1fp8i49bm2p2uwfga&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fdcee452fe64e1004b0b519c0bd4c12ba8428a81bf9d8938bc93cf20d42c2222.jpg",
-          "file": null
-        },
-        {
-          "name": "SG How To Use Hookah",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/ku93fwa7nwj7yfcqu6b4z/SG-How-To-Use-Hookah.mp4?rlkey=h8q6718gbdfk7r1069ed1reid&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ec01ce83856b0af9639d888f1d6308053ea6827c6cf366711b60909c0db68ac5.jpg",
-          "file": null
-        },
-        {
-          "name": "Stündenglass Tutorial 2024",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/oyypwwe1qo2nhyvn93vzd/St-ndenglass-Tutorial-2024.mp4?rlkey=zp085hf4l3c252rauuz6lwv84&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3c642e85da2b68722df1ee887eb78216043a8b2f85680fa18afd804b2e6cfde5.jpg",
           "file": null
         }
       ],
@@ -50900,7 +50908,6 @@ window.PORTAL_SYNCED = {
       "Black / Hookah / Photo / Red DTLA Jungle / Full Set": "https://www.dropbox.com/scl/fo/38ini0g3fm7gacyli41ps/AIMS3jgFn1OLSF6LWe-15AM?rlkey=ps5lby66a6fv2z1pvpljvs1x4&dl=1",
       "Black / Hookah / Photo / Red DTLA Jungle / Selects": "https://www.dropbox.com/scl/fo/t6r5d3c5rf37aaco38jmx/AOF20z5IR2C19SLINyUy7x8?rlkey=nsy94mnciwtkq0q5pf8nodszj&dl=1",
       "Black / Hookah / Photo / Small Globes": "https://www.dropbox.com/scl/fo/0r031iv5rgco9cnw0jewe/APWeJPObJA_NPQuR8WwzS7E?rlkey=20nryu10zl9u9nm38o050hlcz&dl=1",
-      "Black / How To Videos": "https://www.dropbox.com/scl/fo/wp0nwbgfbw227vg1n8grc/AAxLhQxDKkBmV7FckGzw_xo?rlkey=lexrdbgl9kcimqtbyhl3hu45v&dl=1",
       "Black / Hyer": "https://www.dropbox.com/scl/fo/18bpeuebdijlywlu5dapg/ADcH4k3pFOLPh57nMFFO4jk?rlkey=1slvlncb1xtqcjk5xleyg0f4t&dl=1",
       "Black / Hyer / Social Videos": "https://www.dropbox.com/scl/fo/kvi4qz1t3zh8en3joam6d/AEHMLQgpEhO4ye6260_f54w?rlkey=gbqzwu5orjh96td20f1t8p0q7&dl=1",
       "Black / Hyer / Photos": "https://www.dropbox.com/scl/fo/tnsnpyj32clx4sdylilqq/ABYJS2tTUrILKl2zSLyNqwc?rlkey=4ue1wonudqs0n67vaidwdjiqd&dl=1",
@@ -51095,6 +51102,7 @@ window.PORTAL_SYNCED = {
       "Grateful Dead / Stealy Lock Up / Photos / VW Van Topanga / Full": "https://www.dropbox.com/scl/fo/esaxtivjaleiyer4xaioo/AGlNdsRyWFnBWnehYGvsSbM?rlkey=xm9cgw26lnly92i2v7f5aff58&dl=1",
       "Grateful Dead / Stealy Lock Up / Photos / VW Van Topanga / Selects": "https://www.dropbox.com/scl/fo/kgmg83qwc6doy0qrkxdme/AA3DjiePsuc1dqeAHfn7LiY?rlkey=smbx4x1j1hgpwj5tuks5ab8vm&dl=1",
       "Grateful Dead / Stealy Lock Up / Product Renders": "https://www.dropbox.com/scl/fo/ljnfjkj20p6r0t47xuxzw/AI0sUzU1jbEsK-2AuXvhuzI?rlkey=q9gxquhwlb0n2a4fr1g25f2pm&dl=1",
+      "How To Videos": "https://www.dropbox.com/scl/fo/wp0nwbgfbw227vg1n8grc/AAxLhQxDKkBmV7FckGzw_xo?rlkey=lexrdbgl9kcimqtbyhl3hu45v&dl=1",
       "In Store Marketing Materials (1)": "https://www.dropbox.com/scl/fo/f3mul6uiswbdae8p7du6j/AFyvRYnxu5FAtUVp57inkYg?rlkey=56hxljcq78bz2etbcx44vvid4&dl=1",
       "Khalifa": "https://www.dropbox.com/scl/fo/yzg4c5n9b5zqe4dei6jzg/AEXb2zBuA75S0Js9nMH4Lp8?rlkey=sq2zk9x2z3jbohp7u80x6yf82&dl=1",
       "Khalifa / Product Photos": "https://www.dropbox.com/scl/fo/1ckjzdb2irhzxn6nsodtq/AAGfq2R62K_hX6tdy_PHCqw?rlkey=5oudtu4f0xiymi0dui9oa4o2g&dl=1",
