@@ -55275,14 +55275,6 @@ window.PORTAL_SYNCED = {
       ],
       "Food and Beverage Accessories / Beverage Smoking Cap / Lifestyle Photos": [
         {
-          "name": "_GSH0033",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/459mdlnotafixz3nazygm/_GSH0033.jpg?rlkey=glkcs0sbm8wm5fqahj3nknmej&dl=0",
-          "thumb": "assets/synced/accessories/4213fcfdb605813985f21120e2d9021e8796894a17c45479a186f8b144fa148b.jpg",
-          "file": null
-        },
-        {
           "name": "_GSH0034",
           "type": "image",
           "format": "JPG",
@@ -55307,38 +55299,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_GSH9779",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5kw3r4n5h8irxa63r9l0p/_GSH9779.jpg?rlkey=hrx7zf1ck3g2tgo2czwarxrd4&dl=0",
-          "thumb": "assets/synced/accessories/252f2ac92c05d6fe66e14bab31a27beb22d4acf9b73a1dde499519c17ed98d83.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH9799",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/jtvtd847ujw9ovj12nxr6/_GSH9799.jpg?rlkey=7tx4u93rvn31zto301t8nnrwx&dl=0",
-          "thumb": "assets/synced/accessories/f5273334e4a3dd9137cf5aaa2680841e9a370bef8a3323b0be72bbf29ba7fce1.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH9811",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/jjkp8zf2l08cokmv2cujk/_GSH9811.jpg?rlkey=f9mjs3kyiusmt9u5s2w6a84ee&dl=0",
-          "thumb": "assets/synced/accessories/8d2a758fa41fb1644eaf0696ee890690bec641139880534df2a831ac20e0999f.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH9814",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tze46tq8a679bxom3uywg/_GSH9814.jpg?rlkey=6qnatavolwuncl7mdyex6jowq&dl=0",
-          "thumb": "assets/synced/accessories/a0ca1a1ad5942e98b8dea5ea19dcb6d9fc8a2ed25a7ae8f70200877c32b78994.jpg",
-          "file": null
-        },
-        {
           "name": "_GSH9869",
           "type": "image",
           "format": "JPG",
@@ -55347,51 +55307,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_GSH9921",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fwg0fchs1mjgxooe1kvq3/_GSH9921.jpg?rlkey=3u734b3c5ow9ukrfb8ep1cjfi&dl=0",
-          "thumb": "assets/synced/accessories/4544fca6aa2189958efe3b365333a8ead70ee017f47241bd7502297d1e6ce2fd.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH9941",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nz3imvjkaxkim9426mz4a/_GSH9941.jpg?rlkey=cc6z0mgttn4ag0br01rzmzvb3&dl=0",
-          "thumb": "assets/synced/accessories/17973c4b916d5d35b182542960565e8b5c1f003f3fe99bc6559c545d8d205c1c.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH9970",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7q4icw0x8zrnylod3ixuk/_GSH9970.jpg?rlkey=dvnzfj47wpk0e4kmdgw6uzd15&dl=0",
-          "thumb": "assets/synced/accessories/fb8d9ed8bdec7b7402b1c03216611d4032027cb5cdd15b5461e3bcad37edc9c1.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH9973",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/65slkx7vounm53cj1ds68/_GSH9973.jpg?rlkey=nr5zfenhpgxd9og94gdye54mr&dl=0",
-          "thumb": "assets/synced/accessories/d7c5596f5a3b70bfc14380b8d0795d4aaa4ce50ccec419236a68a9d6216c4e8e.jpg",
-          "file": null
-        },
-        {
           "name": "_GSH9997",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/066i2e32352uknkzlptd9/_GSH9997.jpg?rlkey=rl5gtq9gf7a4rxwhpv6opas8s&dl=0",
           "thumb": "assets/synced/accessories/1d2b2186ad66d88b5a78b6a20ce9154adb942f3312fe91329f5a17f4d57e7ef6.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH9998",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lrz40f7zltawl86ykqsuc/_GSH9998.jpg?rlkey=apo0fpqdlio6o3xijozc9nn9f&dl=0",
-          "thumb": "assets/synced/accessories/ee321cd7aa20042ac11b81152fe9d68a315fb08857ebec79b0dcef7b17ce1688.jpg",
           "file": null
         }
       ],
