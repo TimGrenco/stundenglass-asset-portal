@@ -51216,40 +51216,6 @@ window.PORTAL_SYNCED = {
           "name": "Amber_DTS_thumb_01",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/kua0p7ih65ufncxxq9how/Amber_DTS_thumb_01.png?rlkey=gh8wbv8s1erwg4aawo96oaltf&dl=0",
-          "thumb": "assets/synced/modul/5f4a2b1b4a90d55d0d2066182546b1d0203b9394ab77d9acd9fa0f77c8fa8a0a.jpg",
-          "file": null
-        },
-        {
-          "name": "Amber_DTS_thumb_02",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/a4ol8kzixfwoff51bvwaf/Amber_DTS_thumb_02.png?rlkey=w1z19mhtbf5sw8ot85jdr6uam&dl=0",
-          "thumb": "assets/synced/modul/d3cfb7babeeb21382882675e557ab47bff7ab5486b31290493d8d0bd902c18ad.jpg",
-          "file": null
-        },
-        {
-          "name": "Amber_DTS_thumb_03",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/plc0pqq897dh71duofdgy/Amber_DTS_thumb_03.png?rlkey=hldgvh4ndzwpu7fdb6v4unf7b&dl=0",
-          "thumb": "assets/synced/modul/17833c355946dc81596b1ab29e084e95ab90dcc9a2f209c0b52e9a0042653be6.jpg",
-          "file": null
-        },
-        {
-          "name": "Amber_DTS_thumb_04",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/xoofxeeyd1do7j4ol6tw1/Amber_DTS_thumb_04.png?rlkey=93dzijszxbpehudqdwkz0l72x&dl=0",
-          "thumb": "assets/synced/modul/74b24ba84da4fefd5bc32f9486432515228ee0ab1194d4e28786e9f22abd38af.jpg",
-          "file": null
-        }
-      ],
-      "Product Photos / Amber (1)": [
-        {
-          "name": "Amber_DTS_thumb_01",
-          "type": "image",
-          "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/mn67fhfplbpi4yjxlqp19/Amber_DTS_thumb_01.png?rlkey=dy9s18aexzh6xw9kzamo4n07a&dl=0",
           "thumb": "assets/synced/modul/5f4a2b1b4a90d55d0d2066182546b1d0203b9394ab77d9acd9fa0f77c8fa8a0a.jpg",
           "file": null
@@ -51474,40 +51440,6 @@ window.PORTAL_SYNCED = {
           "name": "Green_DTS_thumb_01",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/zywwe1p6tq0w3hf059rcy/Green_DTS_thumb_01.png?rlkey=gvdklopchonoz4te7cf9z2s51&dl=0",
-          "thumb": "assets/synced/modul/f9f3bd4cc31bed6dc2b7e4e38b51b99a96dfd9114eb10d4b4f6bd73ec29f1008.jpg",
-          "file": null
-        },
-        {
-          "name": "Green_DTS_thumb_02",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/olh8hw50mhva6ir4pf0ik/Green_DTS_thumb_02.png?rlkey=arniz31vqilvv6b2nia3bk68f&dl=0",
-          "thumb": "assets/synced/modul/c0fd63f2ee884b1fd4452853edefe249d22ab8587df2ef3592f6065be588462b.jpg",
-          "file": null
-        },
-        {
-          "name": "Green_DTS_thumb_03",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/beoyovd6alt8br9g35c1f/Green_DTS_thumb_03.png?rlkey=4nkviofgkfpkcmd40j6z9rxiw&dl=0",
-          "thumb": "assets/synced/modul/1defaf0802921da6704d58a7ba238f2702be3d88bac4cd72269df32ee9fe469b.jpg",
-          "file": null
-        },
-        {
-          "name": "Green_DTS_thumb_04",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/5mwtjm8z8cukwa852k0cm/Green_DTS_thumb_04.png?rlkey=7y9asdlkquycptcvmfselni52&dl=0",
-          "thumb": "assets/synced/modul/31cc7548faee2079616c7ff14707f4aa907039e30282412f2df10b6163d51384.jpg",
-          "file": null
-        }
-      ],
-      "Product Photos / Green (1)": [
-        {
-          "name": "Green_DTS_thumb_01",
-          "type": "image",
-          "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/f15bu6kk29iu0j5qzpxe2/Green_DTS_thumb_01.png?rlkey=hvm9u17y8xyw75ifh7tdd6gch&dl=0",
           "thumb": "assets/synced/modul/f9f3bd4cc31bed6dc2b7e4e38b51b99a96dfd9114eb10d4b4f6bd73ec29f1008.jpg",
           "file": null
@@ -51678,40 +51610,6 @@ window.PORTAL_SYNCED = {
         }
       ],
       "Product Photos / Purple": [
-        {
-          "name": "Purple_DTS_thumb_01",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/3lx04ebe6mo27uucut89o/Purple_DTS_thumb_01.png?rlkey=kcgc5zr627l4dlwzje60ce5i7&dl=0",
-          "thumb": "assets/synced/modul/d4773e1904f581ad7ff71e6629e01697eddbb11f96989fc47e36bd16b1d9afa1.jpg",
-          "file": null
-        },
-        {
-          "name": "Purple_DTS_thumb_02",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/lam9urcsjr5c9sk530yvg/Purple_DTS_thumb_02.png?rlkey=8mkiw69pcf9ykunbw15jimv8t&dl=0",
-          "thumb": "assets/synced/modul/e63383b8bb39335ab633db39b32015057bf091007687a1a83605e0fc1031e69f.jpg",
-          "file": null
-        },
-        {
-          "name": "Purple_DTS_thumb_03",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/deyy9ahtpozzaqn6zoex8/Purple_DTS_thumb_03.png?rlkey=g3knyc2gi3ott6bx15ph0ivru&dl=0",
-          "thumb": "assets/synced/modul/429ba412171684c7e5f4fda11ad29906daf4ab1717e22ca588c238e445fa1a79.jpg",
-          "file": null
-        },
-        {
-          "name": "Purple_DTS_thumb_04",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/xu1ljws1lebqptdwkrhlk/Purple_DTS_thumb_04.png?rlkey=lylffbonsok3yofxs1jyp7ux5&dl=0",
-          "thumb": "assets/synced/modul/5f4178bb62ba190b8d8446c2fe46c90960c4dc78f54aea99712d13a94b99e8a5.jpg",
-          "file": null
-        }
-      ],
-      "Product Photos / Purple (1)": [
         {
           "name": "Modül_dtscase_open",
           "type": "image",
@@ -52440,6 +52338,16 @@ window.PORTAL_SYNCED = {
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/93ijr5paocyavui0t0gpj/_GSH7576.jpg?rlkey=m2ccn0brxw3hzrmu9xi088w7n&dl=0",
           "thumb": "assets/synced/modul/a414493c428f744c844a0b6d7cb34deb0146594fae267722e4e1b273720ed469.jpg",
+          "file": null
+        }
+      ],
+      "Logos": [
+        {
+          "name": "Modul_Logo_Black",
+          "type": "file",
+          "format": "AI",
+          "url": "https://www.dropbox.com/scl/fi/xq94uc3rgiqpt3y284b5j/Modul_Logo_Black.ai?rlkey=1izzu1ig3c11jva4e7x9j14qe&dl=0",
+          "thumb": "assets/synced/modul/273d17a3662b425a801c588ffddd68c45cf2a6040f0e64b41708003773beac3f.jpg",
           "file": null
         }
       ],
@@ -53302,120 +53210,64 @@ window.PORTAL_SYNCED = {
           "name": "KK_thumb_01",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/92x9y1c527qrk4w9ipq78/KK_thumb_01.png?rlkey=wx10pyqcnemji35cn0d4gpruu&dl=0",
-          "thumb": "assets/synced/modul/b303ef6ced9b46e28b6d1c4c5a453386f117707195a529eb39353e4e81cf5380.jpg",
+          "url": "https://www.dropbox.com/scl/fi/ao0u9suq2p0v8oal6yqwt/KK_thumb_01.png?rlkey=i3vjf36hogt9x6lt6t4feauvs&dl=0",
+          "thumb": "assets/synced/modul/4fcb12b18b2e335a98ee8ee2b805ecc1dfde73cd834896d39ee8566fac86a311.jpg",
           "file": null
         },
         {
           "name": "KK_thumb_02",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/bqmlmnmaw8geu4vrmd229/KK_thumb_02.png?rlkey=s56dgj72skkumc1aefjwsp4m4&dl=0",
-          "thumb": "assets/synced/modul/9eb2f5a149bcd41b34e9e6315cfed5f8534d7095fae1308b45eb778a79566c4f.jpg",
+          "url": "https://www.dropbox.com/scl/fi/kkjf8le4s3csjqprxnh2b/KK_thumb_02.png?rlkey=m3m51qyomzzh6bcw75jjtf6bo&dl=0",
+          "thumb": "assets/synced/modul/a9c4b99f23bf3a4705b483136d71cc1adee23537177d27cb9999b418dc56f9ee.jpg",
           "file": null
         },
         {
           "name": "KK_thumb_03",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/bseeelmrihdruwi3j9co8/KK_thumb_03.png?rlkey=a6kev6yt99eclwo0uv5lmzgiy&dl=0",
-          "thumb": "assets/synced/modul/c6b97d870f153f983738ae3f745372d52a7a6f78e3430c017fdd832dffa2ac49.jpg",
+          "url": "https://www.dropbox.com/scl/fi/m91rok0l0yki4e1jvzyn2/KK_thumb_03.png?rlkey=hup1hsv9lpi0xkuv7wx1t0h5j&dl=0",
+          "thumb": "assets/synced/modul/c6decbe27e24c45447928a533b3e26438e057b1567a4f3b19a87a517ac1edf8b.jpg",
           "file": null
         },
         {
           "name": "KK_thumb_04",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/g4eyj7b5russce5dtkwfe/KK_thumb_04.png?rlkey=ibvwqmanp0n1fmcwe3ydx4hyy&dl=0",
-          "thumb": "assets/synced/modul/baafd06dc1ab5e516d2b45169dbc0ca774eca23193af2f4138ae783f5d4fa5f6.jpg",
+          "url": "https://www.dropbox.com/scl/fi/k9h4ulqpypq6gw3fib7do/KK_thumb_04.png?rlkey=46j470z6mrfys1q0p768ubd1f&dl=0",
+          "thumb": "assets/synced/modul/ee86851d09c3ab5d56f2c80d6480cc3ea1d38216450a32a97500f69e1bdd08ab.jpg",
           "file": null
         },
         {
           "name": "KK_thumb_05",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/xgbrq1yqaqm2u3cxi2gb5/KK_thumb_05.png?rlkey=98uzo6f84mvrpv05j9dqwjeso&dl=0",
-          "thumb": "assets/synced/modul/ab5853ad0bbdef573fd52b364f67eeabc5d9b7bb2efaee53c8b608d12c74f61d.jpg",
+          "url": "https://www.dropbox.com/scl/fi/stmucqwnv36vvaftarpg5/KK_thumb_05.png?rlkey=rz6qzo43hqcchh4ppi5j47b6s&dl=0",
+          "thumb": "assets/synced/modul/6974e0c68c2b44f4a22cb2ea1ff52383a4069ab8e305348d2ba10d053ad35ca9.jpg",
           "file": null
         },
         {
           "name": "KK_thumb_06",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/jy6221wauf9mvnufjqedr/KK_thumb_06.png?rlkey=w7n0d4bp1akn8gfzzi3nu04l3&dl=0",
-          "thumb": "assets/synced/modul/1c30e981b681435d9138e71c1942c435b9f896dffb9cddc27cf6bb2ce807cd5d.jpg",
+          "url": "https://www.dropbox.com/scl/fi/rwbtuohiqj76a5kr3e91y/KK_thumb_06.png?rlkey=opynn91hlfdx586ctypabwgm5&dl=0",
+          "thumb": "assets/synced/modul/fee79d475158aab08b3c40d9082b9fbe7f712752f238ba9e98db8040624bb08c.jpg",
           "file": null
         },
         {
           "name": "KK_thumb_07",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/8iu2463871wddxd6cfzuq/KK_thumb_07.png?rlkey=8fwoil63ci9rn6xujn4v3whyi&dl=0",
-          "thumb": "assets/synced/modul/b63fa80852f3860f440353b1836b6569a0e08c7f01fd42b5b3d5d96acaeddc16.jpg",
+          "url": "https://www.dropbox.com/scl/fi/rzh1kvn0a92d6fg41ikmz/KK_thumb_07.png?rlkey=j01sidne4vb9t8g90gkrtbnwm&dl=0",
+          "thumb": "assets/synced/modul/08d2f33f34d116169c3e5a7139f182abe911c5d54cad14e2d2eaa82d990868c3.jpg",
           "file": null
         },
         {
           "name": "KK_thumb_08",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/ncfaezp8k6rr7z1igfzq2/KK_thumb_08.png?rlkey=4u47t7rynopffsycb8gofihah&dl=0",
-          "thumb": "assets/synced/modul/beaac2e048d842910fcdadc3ec8b74bfb0beba2f15dedc10f5c089aa37d12002.jpg",
-          "file": null
-        },
-        {
-          "name": "KK_thumb_09",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/jekp6znxnz5inoumt17ai/KK_thumb_09.png?rlkey=etm0ps5xpds2bt1hj59wvxtdk&dl=0",
-          "thumb": "assets/synced/modul/f8602fa2a9ed3ab910e43e6966c4b9d452c1288c7333e7402fa6fcd7c67f4448.jpg",
-          "file": null
-        },
-        {
-          "name": "KK_thumb_010",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/u1td1i1p8mg4rwr7wr83e/KK_thumb_010.png?rlkey=4an65vtpzedv7ys0pcafbjo1g&dl=0",
-          "thumb": "assets/synced/modul/2a7c737a4669c01ba53c68efa00921a8f6e204a3bb11bd6079cf16992e893898.jpg",
-          "file": null
-        },
-        {
-          "name": "KK_thumb_011",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/sfzbxk4fjefz1vmsk8br7/KK_thumb_011.png?rlkey=7dqfilrx2yrzhtxyskc2y2c3a&dl=0",
-          "thumb": "assets/synced/modul/adad074a4444fffd9544bf23db465c856701f29d80f7d6a993d33dcd3b2c802b.jpg",
-          "file": null
-        },
-        {
-          "name": "KK_thumb_012",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/mmdwzz66kkozm3c17bd9y/KK_thumb_012.png?rlkey=73jck18kpt4b9n466vu2uw67c&dl=0",
-          "thumb": "assets/synced/modul/c403477a743b011b458d472f2143153ce9edf181dbe6b0e76e32adce6e784ddf.jpg",
-          "file": null
-        },
-        {
-          "name": "KK_thumb_013",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/t50i2hv46nev5nt5muna1/KK_thumb_013.png?rlkey=3foxgzy1kka50nsuxn48w8m9y&dl=0",
-          "thumb": "assets/synced/modul/56fc451350bc131748821a7437322179ba508711a0e10a171f02ddc6cd572783.jpg",
-          "file": null
-        },
-        {
-          "name": "KK_thumb_014",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/nhkp4yazoxwd9h743rhjs/KK_thumb_014.png?rlkey=qvy4damog2no52gat61ia0ln8&dl=0",
-          "thumb": "assets/synced/modul/42aee08927bf45d356a64e961f3515014ada0566d75633e55a430164521f3b70.jpg",
-          "file": null
-        },
-        {
-          "name": "KK_thumb_015",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/kc644jjti684c1ytx722u/KK_thumb_015.png?rlkey=widhggzvrw3wiwqq21cym3def&dl=0",
-          "thumb": "assets/synced/modul/78892ca7546a84d6988c3c58e39124803df15892fc3e483506d24469450d6d13.jpg",
+          "url": "https://www.dropbox.com/scl/fi/vso1roowscpuikstrzkr1/KK_thumb_08.png?rlkey=l1z37r4iikkzskf2rotbwys5e&dl=0",
+          "thumb": "assets/synced/modul/3c7921252ada98d1151025a70f222697de261e1d80499fda293991ca6ef23e51.jpg",
           "file": null
         }
       ],
@@ -54029,17 +53881,14 @@ window.PORTAL_SYNCED = {
     "dropbox": "https://www.dropbox.com/scl/fo/so2i8hzeo5p3ikqx1e1ej/h?rlkey=rb1vhopjo5qyoft8eqr7bgz0v&dl=1",
     "folderLinks": {
       "Product Photos": "https://www.dropbox.com/scl/fo/wehnnly37ij5b87jiqiex/AC1gxJSZLWktRHOs57XKHtI?rlkey=zm06nweuypp0vn2a0ezbs0yaw&dl=1",
-      "Product Photos / Amber": "https://www.dropbox.com/scl/fo/q0r52n1a0h7a8wcug4cbp/AHL9ANtgiTWeZh7SBgt3_f4?rlkey=kqfotrfwuqdajdo2jys1o8jv6&dl=1",
-      "Product Photos / Amber (1)": "https://www.dropbox.com/scl/fo/8z9mbuyk48lxurohpo7pt/AEVnqPSv_DYeRzJQ9Zyb6iw?rlkey=i8d4um20dvxdu7vtxmteo2qtf&dl=1",
+      "Product Photos / Amber": "https://www.dropbox.com/scl/fo/8z9mbuyk48lxurohpo7pt/AEVnqPSv_DYeRzJQ9Zyb6iw?rlkey=i8d4um20dvxdu7vtxmteo2qtf&dl=1",
       "Product Photos / Blue": "https://www.dropbox.com/scl/fo/eafzm218jlubwg73nej3i/AAqKnL3qrghF8QmO_CzejVg?rlkey=c31gan9o4rjtq42rsan2kqowt&dl=1",
       "Product Photos / Bubble": "https://www.dropbox.com/scl/fo/e3c1amjzs3g8zlao7gf02/AEZyZFYnSFjIlCHSV9KBTQA?rlkey=w9gq2ofcwqjttjsg3kl5i2slt&dl=1",
       "Product Photos / Clear": "https://www.dropbox.com/scl/fo/99bh497v6j7a2yqnyn9nj/AOZaaYLkcsvS-P9rHYvOyIY?rlkey=a1hliypw4qysj7d2adts2aq9y&dl=1",
-      "Product Photos / Green": "https://www.dropbox.com/scl/fo/v7gh9rk8cm4fp7vdncyyx/AFDPl3nVJLA6acfW-mUh2P0?rlkey=p3wc22tvbijkhqw4189gc25xx&dl=1",
-      "Product Photos / Green (1)": "https://www.dropbox.com/scl/fo/kk7vef2zh3ie71abia6kq/AJX8lYe0Zh14PHlREbvMaWo?rlkey=8ila0mxwcvlt1utexzph2urq4&dl=1",
+      "Product Photos / Green": "https://www.dropbox.com/scl/fo/kk7vef2zh3ie71abia6kq/AJX8lYe0Zh14PHlREbvMaWo?rlkey=8ila0mxwcvlt1utexzph2urq4&dl=1",
       "Product Photos / Grey": "https://www.dropbox.com/scl/fo/melnsplmo6qb12kiyfxot/AOOUSb88QP7fBvfKEFH2Iqk?rlkey=hp7we6dnv4pgni2pb9b33dyae&dl=1",
       "Product Photos / Pink": "https://www.dropbox.com/scl/fo/7ahpn5dg91yzyv4zzh7iz/AAbMLV4fTFDcxbOVY2Q5Zuc?rlkey=s7p31t2cy4mumo0l8bnonp6bx&dl=1",
-      "Product Photos / Purple": "https://www.dropbox.com/scl/fo/tvkdhma5rg0lbpvqhf5ca/AIUdmfTZOSTKSELUEGVefys?rlkey=ixdfk3j69qyvoy4003y84wo0k&dl=1",
-      "Product Photos / Purple (1)": "https://www.dropbox.com/scl/fo/sb2gj63axz3fp2eds1bm5/AIMHGDzPBoVxIE9lK84O3p8?rlkey=l5m3dpei8qw0uvnmiun2hnj61&dl=1",
+      "Product Photos / Purple": "https://www.dropbox.com/scl/fo/sb2gj63axz3fp2eds1bm5/AIMHGDzPBoVxIE9lK84O3p8?rlkey=l5m3dpei8qw0uvnmiun2hnj61&dl=1",
       "Lifestyle Photos": "https://www.dropbox.com/scl/fo/u0y5qfauz5c5xnpcweanb/APVvLdeiXjsP886sm4g4OQA?rlkey=grzfavzat7cbuqkyj5n29zzya&dl=1",
       "Logos": "https://www.dropbox.com/scl/fo/fr4vr34ca294htljbiuhx/AEIes6o9JPyNrbHHZdXzNpY?rlkey=sy75elykl6t4r9a3pdmg1h9ec&dl=1",
       "Social Videos": "https://www.dropbox.com/scl/fo/z1ahs3ip3yhvc5c8b3a92/AFsKIPGY5lkrrEeakneo7L8?rlkey=sxas37m8yykgqxx1erolwgjfz&dl=1",
