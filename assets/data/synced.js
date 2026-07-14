@@ -52561,6 +52561,54 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "Reels_Modül Tutorial Cleaning",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/uss3ibyo821px7rhlfs85/Reels_Mod-l-Tutorial-Cleaning.mp4?rlkey=z62zhnt80fp7lbfki5s5w25t5&dl=0",
+          "thumb": "assets/synced/modul/8eec6ef71319f5821f5fc328372b15a67101099887f71ec780ada0472e72a067.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_Modül Tutorial Deep Cleaning",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/3zb3xitbgxa2x3gpubetw/Reels_Mod-l-Tutorial-Deep-Cleaning.mp4?rlkey=qmo9itsh2delsazd3rpl9f5we&dl=0",
+          "thumb": "assets/synced/modul/3487495b83cd011f3626e37dea2dd4b3e0ed56bccc908a45c7dce3900d532787.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_Modül Tutorial Settings",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/bay41vp7pwhg96mvyxql0/Reels_Mod-l-Tutorial-Settings.mp4?rlkey=vfm2c5tlsy3gppq0f3cbd1wo2&dl=0",
+          "thumb": "assets/synced/modul/d0602fb738a24c119f1903ecba00c58be0a276b8ed7bb3f6561f98195e5053eb.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_Modül Tutorial Setup",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/n31kcgrfn8mkmujs8k9kv/Reels_Mod-l-Tutorial-Setup.mp4?rlkey=tg1wcc087hy7sc5n9ywapqe9p&dl=0",
+          "thumb": "assets/synced/modul/c0383a643bae37a1e7103f6f9e5b66fba5da4075a59ce54aa4a3932bf81355f7.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_Modül Tutorial Tank Types",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/yluw63zw70ucsem94mk6v/Reels_Mod-l-Tutorial-Tank-Types.mp4?rlkey=hmyfaxnekipwj2gnbeoqrx29c&dl=0",
+          "thumb": "assets/synced/modul/e7ad4403afe42fab9dcc30da8b5d0e92fd4ff57c7d1809bdacf7b0011224078b.jpg",
+          "file": null
+        },
+        {
+          "name": "Reels_Modül Tutorial Unboxing",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/620aqwrcs05vcwiye7cc7/Reels_Mod-l-Tutorial-Unboxing.mp4?rlkey=gzm4q9mgi0cz55gix3m8d0g4n&dl=0",
+          "thumb": "assets/synced/modul/4be31d642e2c10010910f776d0e7e58d1e89925fc91463a49ce473e4301585ff.jpg",
+          "file": null
+        },
+        {
           "name": "Roger Modül Dok Hit Travel Case  Outisde",
           "type": "video",
           "format": "MP4",
@@ -52603,11 +52651,27 @@ window.PORTAL_SYNCED = {
       ],
       "TV Screen Videos": [
         {
+          "name": "How to Clean SG Modül",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/oqx7a8dpa7tk895r7nuov/How-to-Clean-SG-Mod-l.mp4?rlkey=7w08o57mw5qsy8nrrhwffqmaj&dl=0",
+          "thumb": "assets/synced/modul/616330164c0fd09d455db68555015210640402cbef936ba600f2d09834c55386.jpg",
+          "file": null
+        },
+        {
           "name": "How To Use Stündenglass Modül Dok",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/icln6pscil0tgqf9bmvek/How-To-Use-St-ndenglass-Mod-l-Dok.mp4?rlkey=w9gejm6or235139z7lge1hpjc&dl=0",
           "thumb": "assets/synced/modul/172af4d3ca157be29cdee23093c0ce5d2f7751fd17b076bf44b532091aca1ad3.jpg",
+          "file": null
+        },
+        {
+          "name": "How To Use Your SG Modül",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/df61yzgvyrbz7bs1po2r5/How-To-Use-Your-SG-Mod-l.mp4?rlkey=oo2h7o19clryz2njb6p5bfxht&dl=0",
+          "thumb": "assets/synced/modul/a18868175926d3e36628555df2f6083d9239c4ab1a726788067692ca05c886b5.jpg",
           "file": null
         },
         {
@@ -52624,6 +52688,22 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/gyq6e2jdjmo0rbhxk7dye/Mod-l-Dok-Tech-Specs.mp4?rlkey=15rggbwcxaoxb7gsr3p08ab42&dl=0",
           "thumb": "assets/synced/modul/b4b062315ae11506159d639ae76f14a7b48bc2937ba3f09a70d0e768812045b9.jpg",
+          "file": null
+        },
+        {
+          "name": "Modül Error Screen",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/l5381tg4lk69astp2ypvw/Mod-l-Error-Screen.mp4?rlkey=8x1myekuszz42bjqnpsu3719e&dl=0",
+          "thumb": "assets/synced/modul/955ee6688a74d8181df65a7b5c766f899dc29e03c64fed79a4e52b1587553e1c.jpg",
+          "file": null
+        },
+        {
+          "name": "Modül Tutorial Short",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/y0j3w3dp0s0hhzb5t2959/Mod-l-Tutorial-Short.mp4?rlkey=givgj00gu8rn6q8znw6pz6282&dl=0",
+          "thumb": "assets/synced/modul/78278809dfdab4c6f775e04a08bc3612515bc5befac4771fb823c7a93b132cd7.jpg",
           "file": null
         }
       ],
