@@ -183,6 +183,22 @@ window.PORTAL_SYNCED = {
           "url": "https://www.dropbox.com/scl/fi/v25xj4g6pwmzg6g5k9ec7/Black-Horizontal.mp4?rlkey=ar5ijczthec1epgnrjcra0hq7&dl=0",
           "thumb": "assets/synced/gravity-infusers/d6138b7576493644ed4ef5aba401a7322f468340979d80c9167b38f4a0881c20.jpg",
           "file": null
+        },
+        {
+          "name": "Getting Started with Your Stündenglass",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/1bvsmcebt242dhd2lgujd/Getting-Started-with-Your-St-ndenglass.mp4?rlkey=3ixa2zvqc8fr02dtgqd15unfg&dl=0",
+          "thumb": "assets/synced/gravity-infusers/510426f21db1ded2de72478a4bfde79ec461b7e3e6b0779298d292c38b009d6f.jpg",
+          "file": null
+        },
+        {
+          "name": "How to Clean Your Stündenglass",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/2hg4ww7lglfj1n1am115n/How-to-Clean-Your-St-ndenglass.mp4?rlkey=4elhsuqnvmazia3oy54f7ytlb&dl=0",
+          "thumb": "assets/synced/gravity-infusers/8c660d4a2b7bcf2fef69002ac44037f5071f1060d0eb41de136ce342e4b03c30.jpg",
+          "file": null
         }
       ],
       "Black / Documents": [
