@@ -2537,14 +2537,23 @@
   }
 
   // ---- "Talk to our team" band (above the footer, every page) ---------------
-  // Driven by CFG.support so nobody has to touch markup. It stays hidden until
-  // BOTH a phone and an email are set — publishing a half-filled contact block
-  // is worse than showing none.
+  // Driven by CFG.support so nobody has to touch markup. Needs at least one way
+  // to reach a human — with neither a phone nor an email the band would just be
+  // a headline, so it hides instead. Renders whichever contacts are filled in.
   function renderSupport() {
     var el = $("#support"), s = (CFG && CFG.support) || {};
     if (!el) return;
-    if (!s.phone || !s.email) { el.style.display = "none"; return; }
-    var tel = "tel:" + s.phone.replace(/[^0-9+]/g, "");
+    if (!s.phone && !s.email) { el.style.display = "none"; return; }
+    // The first contact is the solid button, any second one goes ghost.
+    var btns = "";
+    if (s.phone) {
+      btns += '<a class="support-btn" href="tel:' + s.phone.replace(/[^0-9+]/g, "") + '">' +
+        icon("phone") + "<span>" + escapeHTML(s.phone) + "</span></a>";
+    }
+    if (s.email) {
+      btns += '<a class="support-btn' + (s.phone ? " ghost" : "") + '" href="mailto:' + escapeHTML(s.email) + '">' +
+        icon("mail") + "<span>" + escapeHTML(s.email) + "</span></a>";
+    }
     el.style.display = "";
     el.innerHTML =
       '<div class="wrap support-inner">' +
@@ -2553,9 +2562,7 @@
           '<h2 class="support-h">' + escapeHTML(s.heading || "Talk to our team.") + "</h2>" +
           (s.copy ? "<p>" + escapeHTML(s.copy) + "</p>" : "") +
         "</div>" +
-        '<div class="support-actions">' +
-          '<a class="support-btn" href="' + tel + '">' + icon("phone") + "<span>" + escapeHTML(s.phone) + "</span></a>" +
-          '<a class="support-btn ghost" href="mailto:' + escapeHTML(s.email) + '">' + icon("mail") + "<span>" + escapeHTML(s.email) + "</span></a>" +
+        '<div class="support-actions">' + btns +
           (s.hours ? '<div class="support-hours">' + escapeHTML(s.hours) + "</div>" : "") +
         "</div>" +
       "</div>";

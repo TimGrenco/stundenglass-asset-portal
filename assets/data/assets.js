@@ -41,17 +41,18 @@ window.PORTAL_CONFIG = {
   usageNote:
     "These assets are provided for approved partner, press, and retail use. Please don't alter logos or product imagery. Need something specific or a different format? Use “Request an asset.”",
 
-  /* "Talk to our team" band above the footer. It stays HIDDEN until BOTH a phone
-     and an email are filled in below — so we never publish a wrong number.
-     Fill these with the real Stündenglass support details to switch it on. */
+  /* "Talk to our team" band above the footer. Needs at least a phone OR an email
+     to show; it renders whichever of the two are filled in. Leave `email` blank
+     until we have a real customer-service inbox (the pr@ address above is for
+     asset requests, not support). */
   support: {
-    phone: "",     // e.g. "+1 833-691-3224"  (digits are dialed as typed)
-    email: "",     // e.g. "help@stundenglass.com"
-    hours: "Mon–Fri · 10:00 AM – 6:00 PM EST",
+    phone: "+1-800-993-4503",
+    email: "",     // e.g. "help@stundenglass.com" — add to show an email button
+    hours: "M–F · 10:00 AM – 6:00 PM EST",
     eyebrow: "Questions about a product?",
     heading: "Talk to our team.",
     copy:
-      "Our team knows these products inside and out and would be happy to walk you through anything — specs, packaging, retail programs, or any additional questions you might have.",
+      "Our customer service team has been with us since we launched in 2020 and knows every detail of Stündenglass and Modül — how to assemble them, take them apart, clean and maintain them, and get the most out of every pour. They're always happy to walk you through anything or answer any additional questions you might have.",
   },
 };
 
