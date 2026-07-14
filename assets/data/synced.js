@@ -76056,6 +76056,14 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "logo-full-R",
+          "type": "file",
+          "format": "AI",
+          "url": "https://www.dropbox.com/scl/fi/s1grqyztd7l5dei7w11zv/logo-full-R.ai?rlkey=80kygklyw8bpy1to3w986cc4l&dl=0",
+          "thumb": "assets/synced/stundenglass-logos/094acc6f5548539baaf520f3e54711b0ec05cbad0e9d5dd1d1f7e66d191cae26.jpg",
+          "file": null
+        },
+        {
           "name": "logo-full-R-Black",
           "type": "image",
           "format": "PNG",
@@ -76069,14 +76077,6 @@ window.PORTAL_SYNCED = {
           "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/roc587v9uvwtd8db4vhvq/logo-full-R-White.png?rlkey=vxn3j23cf70rzv907y6extth9&dl=0",
           "thumb": "assets/synced/stundenglass-logos/33d097910967a78398907ffdcb6be72f7d8fdbe99dbf46e324ce9c6e66bec776-lt2.jpg",
-          "file": null
-        },
-        {
-          "name": "logo-full-R",
-          "type": "file",
-          "format": "AI",
-          "url": "https://www.dropbox.com/scl/fi/s1grqyztd7l5dei7w11zv/logo-full-R.ai?rlkey=80kygklyw8bpy1to3w986cc4l&dl=0",
-          "thumb": "assets/synced/stundenglass-logos/094acc6f5548539baaf520f3e54711b0ec05cbad0e9d5dd1d1f7e66d191cae26.jpg",
           "file": null
         },
         {
