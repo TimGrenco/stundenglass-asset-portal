@@ -112,6 +112,7 @@ window.PORTAL_PRODUCTS = [
     cover: "assets/img/covers/gravity-infusers.png",
     added: "2026-07-09",
     oneSheet: "",
+    defaultFolder: "Black / Product Photos",   // see the note on Classic below
     folders: {},   // real folders + thumbnails come from synced.js (Dropbox sync)
   },
   {
