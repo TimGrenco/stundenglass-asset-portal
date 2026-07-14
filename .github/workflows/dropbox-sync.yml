@@ -15,6 +15,11 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    # The first pass over a huge product (one has ~6k files, each needing a
+    # rate-limited Dropbox share link) can take hours. The sync checkpoints its
+    # work as it goes, so a run that hits this cap just resumes next time instead
+    # of restarting — and it can never block the queue for 6 hours.
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
 

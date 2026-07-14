@@ -289,7 +289,42 @@ function grayThumb(src, out, e) {
 }
 
 const tok = await getToken();
-const synced = {};
+
+// Start from whatever is already published, so a partial run never wipes the
+// products it didn't get to. Big libraries (one product here has ~6k files) need
+// a Dropbox share link minted per file, which is rate-limited and can take hours —
+// so we PERSIST AND COMMIT AFTER EACH PRODUCT. A run that's cancelled or times out
+// keeps everything it finished, and the next run resumes from the cached links
+// instead of starting over.
+const SYNCED_FILE = "assets/data/synced.js";
+function loadSynced() {
+  try {
+    const raw = readFileSync(SYNCED_FILE, "utf8").replace(/^\s*window\.PORTAL_SYNCED\s*=\s*/, "").replace(/;\s*$/, "");
+    const o = JSON.parse(raw);
+    return o && typeof o === "object" ? o : {};
+  } catch { return {}; }
+}
+const synced = loadSynced();
+
+function git(...args) {
+  try { execFileSync("git", args, { stdio: "pipe" }); return true; } catch { return false; }
+}
+git("config", "user.name", "dropbox-sync[bot]");
+git("config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com");
+
+// Commit + push whatever the sync has produced so far (its own files only).
+function saveProgress(note) {
+  writeFileSync(SYNCED_FILE, "window.PORTAL_SYNCED = " + JSON.stringify(synced, null, 2) + ";\n");
+  git("add", "assets/data/synced.js", "assets/synced");
+  try { execFileSync("git", ["diff", "--cached", "--quiet"], { stdio: "pipe" }); return; } catch { /* has changes */ }
+  if (!git("commit", "-m", `Dropbox sync: ${note} [skip ci]`)) return;
+  for (let i = 0; i < 5; i++) {
+    if (git("push")) { console.log(`  ↳ committed progress: ${note}`); return; }
+    git("rebase", "--abort");
+    git("pull", "--rebase", "--autostash", "origin", "main");
+  }
+  console.error(`  ↳ could not push progress for ${note}`);
+}
 
 for (const p of PRODUCTS) {
   const dir = join("assets", "synced", p.slug);
@@ -333,6 +368,7 @@ for (const p of PRODUCTS) {
   // API for new/changed files (not every file every run). Committed as _links.json.
   const linkCacheFile = join(dir, "_links.json");
   const linkCache = existsSync(linkCacheFile) ? JSON.parse(readFileSync(linkCacheFile, "utf8")) : {};
+  let minted = 0;   // newly-minted per-file links this run (drives checkpointing)
   keep.add("_links.json");
 
   const folders = {};
@@ -412,6 +448,24 @@ for (const p of PRODUCTS) {
       if (!dlUrl && f.id) {
         try { dlUrl = await sharedFileLink(tok, f.id); } catch { dlUrl = null; }
         if (dlUrl) linkCache[f.id] = dlUrl;
+        minted++;
+        // Minting is rate-limited and a big product can take hours. Checkpoint the
+        // link cache + thumbnails periodically so a cancelled/timed-out run keeps
+        // the work it already did and the next run resumes instead of restarting.
+        if (minted % 250 === 0) {
+          writeFileSync(linkCacheFile, JSON.stringify(linkCache));
+          git("add", "assets/synced");
+          let dirty = true;
+          try { execFileSync("git", ["diff", "--cached", "--quiet"], { stdio: "pipe" }); dirty = false; } catch {}
+          if (dirty && git("commit", "-m", `Dropbox sync: ${p.name} progress (${minted} links) [skip ci]`)) {
+            for (let i = 0; i < 5; i++) {
+              if (git("push")) break;
+              git("rebase", "--abort");
+              git("pull", "--rebase", "--autostash", "origin", "main");
+            }
+          }
+          console.log(`  ↳ ${p.name}: checkpointed ${minted} new links`);
+        }
       }
 
       out.push({ name: f.displayName || f.name.replace(/\.[^.]+$/, ""), type, format: e.toUpperCase(), url: dlUrl || p.link, thumb, file: fileRel });
@@ -444,7 +498,10 @@ for (const p of PRODUCTS) {
   const withThumb = Object.values(folders).reduce((n, a) => n + a.filter((x) => x.thumb).length, 0);
   const withLink = Object.values(folders).reduce((n, a) => n + a.filter((x) => /scl\/fi\//.test(x.url)).length, 0);
   console.log(`${p.name}: ${folderSpecs.length} folders, ${total} files, ${withThumb} thumbnails, ${withLink} per-file links`);
+  // Persist + publish this product immediately, so hours of rate-limited link
+  // minting survive a cancelled/timed-out run and the next one resumes.
+  saveProgress(p.name);
 }
 
-writeFileSync("assets/data/synced.js", "window.PORTAL_SYNCED = " + JSON.stringify(synced, null, 2) + ";\n");
+saveProgress("all products");
 console.log("Wrote assets/data/synced.js");
