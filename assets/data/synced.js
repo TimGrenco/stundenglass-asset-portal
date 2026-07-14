@@ -76069,9 +76069,7 @@ window.PORTAL_SYNCED = {
       ]
     },
     "dropbox": "https://www.dropbox.com/scl/fo/nhw7byl8oghujix4nz3tj/h?rlkey=vu0gbmf1ujev6qam52v3qiurx&dl=1",
-    "folderLinks": {
-      "Logos": "https://www.dropbox.com/scl/fo/nhw7byl8oghujix4nz3tj/h?rlkey=vu0gbmf1ujev6qam52v3qiurx&dl=1"
-    }
+    "folderLinks": {}
   },
   "Catalogs": {
     "folders": {
