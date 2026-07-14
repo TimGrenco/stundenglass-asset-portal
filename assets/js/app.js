@@ -1814,6 +1814,7 @@
     function joinPath(path, seg) { return path ? path + SEP + seg : seg; }
     function isFolderBranch(path) { return childSegs(path).length > 0; }
     function lastSeg(path) { var s = path.split(SEP); return s[s.length - 1]; }
+    function parentPath(path) { var s = path.split(SEP); s.pop(); return s.join(SEP); }
     // Total files at `path` and everything beneath it.
     function filesUnder(path) {
       var prefix = path ? path + SEP : "", n = 0;
@@ -1831,11 +1832,28 @@
     }
     var openPath = "";                 // current folder ("" = product root)
     var active = "";                   // folder whose files show in the gallery (== openPath)
+    // Landing on a product with nothing but folder cards doesn't show a single
+    // asset, so it isn't obvious the cards even lead to files. Open the top-level
+    // "Product Photos" by default — the sibling cards stay on screen above it, so
+    // you get real thumbnails AND can see how the folders work. Only when it's a
+    // leaf holding files; on products whose "Product Photos" is itself a stack of
+    // colourways (Modül) there'd be nothing to show, so we leave those at the root.
+    function defaultFolder() {
+      var hit = null;
+      childSegs("").forEach(function (seg) {
+        if (hit || !/^product photos$/i.test(seg)) return;
+        if (!isFolderBranch(seg) && (p.folders[seg] || []).length) hit = seg;
+      });
+      return hit;
+    }
     // Deep-link straight to a folder (from a file-search result, or a shared
     // "Copy folder link" URL). Accepts a BRANCH path too (e.g. "Black", which
     // holds no files itself), so a shared link can land on any level.
-    if (initialFolder && (p.folders[initialFolder] || isFolderBranch(initialFolder))) {
+    var arrivedViaLink = !!(initialFolder && (p.folders[initialFolder] || isFolderBranch(initialFolder)));
+    if (arrivedViaLink) {
       openPath = initialFolder; active = initialFolder;
+    } else if (!initialFolder) {
+      openPath = active = defaultFolder() || "";
     }
     var selected = {};   // fileKey -> file object; persists while switching folder tabs
 
@@ -1912,9 +1930,14 @@
           '<span class="catcard-c">' + count + "</span></span></button>";
       }
       function fcount(n) { return n + " file" + (n === 1 ? "" : "s"); }
-      var kids = sortSegs(openPath, childSegs(openPath));
+      // Which folders to show as cards. Opening a folder that CONTAINS folders shows
+      // its children (you're drilling down). Opening a leaf — one that just holds
+      // files — keeps its SIBLINGS on screen with the open one highlighted, so you
+      // can hop between Product Photos / Lifestyle / Logos without backing out first.
+      var cardParent = isFolderBranch(openPath) ? openPath : parentPath(openPath);
+      var kids = sortSegs(cardParent, childSegs(cardParent));
       var navCards = kids.map(function (seg) {
-        var fp = joinPath(openPath, seg), branch = isFolderBranch(fp), sub = branch ? childSegs(fp).length : 0;
+        var fp = joinPath(cardParent, seg), branch = isFolderBranch(fp), sub = branch ? childSegs(fp).length : 0;
         var count = branch
           ? (sub + (sub === 1 ? " folder · " : " folders · ") + filesUnder(fp) + " files")
           : fcount((p.folders[fp] || []).length);
@@ -2094,8 +2117,9 @@
     // page scrolled to the top — leaving the folder you were actually sent to far
     // below the fold, so the link reads as "it just opened the product page".
     // Bring the assets section into view so you land on the folder itself.
-    // Only on arrival: drilling around in-page is already in view.
-    if (openPath) {
+    // Only when a folder was ASKED for: the default-open above must not yank a
+    // normal product visit past the hero, and drilling in-page is already in view.
+    if (arrivedViaLink && openPath) {
       var head = $("#docs-head", d);
       if (head) {
         // Wait for layout (thumbnails/fonts) to settle, then offset for the sticky nav.
