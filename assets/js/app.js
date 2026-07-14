@@ -440,7 +440,7 @@
     var tiles = preview.map(function (x) {
       var dark = /white|reverse/i.test(x.name);
       var media = x.thumb ? '<img src="' + x.thumb + '" alt="' + x.name.replace(/"/g, "") + '" loading="lazy"/>' : window.__icon("photo");
-      return '<button class="logo-tile' + (dark ? " dark" : "") + '" data-logodl="' + (x.file || "#") + '" data-logoname="' + fileLabel(x) + '" title="Download ' + fileLabel(x) + '">' +
+      return '<button class="logo-tile' + (dark ? " dark" : "") + '" data-logodl="' + (x.url || "#") + '" data-logoname="' + fileLabel(x) + '" title="Download ' + fileLabel(x) + '">' +
         media + "</button>";
     }).join("");
 
@@ -463,8 +463,11 @@
     $$("[data-logodl]", box).forEach(function (btn) {
       btn.addEventListener("click", function () {
         var f = btn.getAttribute("data-logodl");
-        if (f && f !== "#") directDownload(f, btn.getAttribute("data-logoname"));
-        else navTo(logoP);
+        if (!f || f === "#") { navTo(logoP); return; }
+        // Everything lives on Dropbox — cross-origin, so a same-origin <a download>
+        // won't work; open the Dropbox direct-download URL instead.
+        if (/dropbox\.com/.test(f)) downloadOne(f);
+        else directDownload(f, btn.getAttribute("data-logoname"));
       });
     });
   }
