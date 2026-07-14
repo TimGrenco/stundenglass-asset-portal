@@ -1855,10 +1855,18 @@
     // "Copy folder link" URL). Accepts a BRANCH path too (e.g. "Black", which
     // holds no files itself), so a shared link can land on any level.
     var arrivedViaLink = !!(initialFolder && (p.folders[initialFolder] || isFolderBranch(initialFolder)));
+    // On the default landing we show the TOP-LEVEL folders as cards even though the
+    // gallery is opened deeper (Gravity lands on "Black / Product Photos" but the
+    // cards stay Olive Green / Violet Purple / Desert Rose / Black / Group Photos).
+    // That way you see real assets immediately AND can reach any colourway in one
+    // click. Cleared the moment you navigate, after which cards follow the open
+    // folder as usual.
+    var showRootCards = false;
     if (arrivedViaLink) {
       openPath = initialFolder; active = initialFolder;
     } else if (!initialFolder) {
       openPath = active = defaultFolder() || "";
+      showRootCards = !!openPath;
     }
     var selected = {};   // fileKey -> file object; persists while switching folder tabs
 
@@ -1935,18 +1943,24 @@
           '<span class="catcard-c">' + count + "</span></span></button>";
       }
       function fcount(n) { return n + " file" + (n === 1 ? "" : "s"); }
-      // Which folders to show as cards. Opening a folder that CONTAINS folders shows
-      // its children (you're drilling down). Opening a leaf — one that just holds
-      // files — keeps its SIBLINGS on screen with the open one highlighted, so you
-      // can hop between Product Photos / Lifestyle / Logos without backing out first.
-      var cardParent = isFolderBranch(openPath) ? openPath : parentPath(openPath);
+      // Which folders to show as cards:
+      //  • on the default landing, the TOP-LEVEL folders (so every colourway is one
+      //    click away even though the gallery is already showing one of them);
+      //  • a folder that CONTAINS folders shows its children (you're drilling down);
+      //  • a leaf — one that just holds files — keeps its SIBLINGS on screen, so you
+      //    can hop Product Photos → Lifestyle → Logos without backing out first.
+      var cardParent = showRootCards ? "" : (isFolderBranch(openPath) ? openPath : parentPath(openPath));
       var kids = sortSegs(cardParent, childSegs(cardParent));
       var navCards = kids.map(function (seg) {
         var fp = joinPath(cardParent, seg), branch = isFolderBranch(fp), sub = branch ? childSegs(fp).length : 0;
         var count = branch
           ? (sub + (sub === 1 ? " folder · " : " folders · ") + filesUnder(fp) + " files")
           : fcount((p.folders[fp] || []).length);
-        return catCard(typeLabel(seg), branch ? "stack" : folderIcon(seg), count, fp, branch ? "is-branch" : (fp === active ? "on" : ""));
+        // Mark the card the gallery is coming from — the exact folder, or the
+        // ancestor of it (the "Black" card when "Black / Product Photos" is open).
+        var isOpen = active === fp || active.indexOf(fp + SEP) === 0;
+        var cls = branch ? ("is-branch" + (isOpen ? " on" : "")) : (isOpen ? "on" : "");
+        return catCard(typeLabel(seg), branch ? "stack" : folderIcon(seg), count, fp, cls);
       }).join("");
       // Breadcrumb — appears once drilled in from the root.
       var crumb = "";
@@ -2121,6 +2135,7 @@
       $$(".catcard, .crumb-btn", d).forEach(function (t) {
         t.addEventListener("click", function () {
           openPath = t.getAttribute("data-path") || "";
+          showRootCards = false;   // the landing view is over; cards follow the open folder now
           var h = productHash(p, openPath);
           if (location.hash !== h) { ignoreHash = true; location.hash = h; }
           render();
