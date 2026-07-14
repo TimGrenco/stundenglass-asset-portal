@@ -40,6 +40,19 @@ window.PORTAL_CONFIG = {
   // Shown on each product page. Edit freely (or set to "" to hide).
   usageNote:
     "These assets are provided for approved partner, press, and retail use. Please don't alter logos or product imagery. Need something specific or a different format? Use “Request an asset.”",
+
+  /* "Talk to our team" band above the footer. It stays HIDDEN until BOTH a phone
+     and an email are filled in below — so we never publish a wrong number.
+     Fill these with the real Stündenglass support details to switch it on. */
+  support: {
+    phone: "",     // e.g. "+1 833-691-3224"  (digits are dialed as typed)
+    email: "",     // e.g. "help@stundenglass.com"
+    hours: "Mon–Fri · 10:00 AM – 6:00 PM EST",
+    eyebrow: "Questions about a product?",
+    heading: "Talk to our team.",
+    copy:
+      "Our team knows these products inside and out and would be happy to walk you through anything — specs, packaging, retail programs, or any additional questions you might have.",
+  },
 };
 
 /* Brand essentials (colors + fonts) power the "Brand essentials" panel.
@@ -474,6 +487,65 @@ window.PORTAL_COLORWAYS = {
     var img = pops.filter(function (x) { return re.test(x.name) && x.thumb; })[0];
     if (img) { if (!p.info.popImg) { p.info.popImg = img.thumb; p.info.popImgDl = img.url; } p.info.pop = true; }
   });
+})();
+
+/* =============================================================================
+   CATALOGS & B2B BRAND DOCUMENTS — synced from the "Catalogs" Dropbox folder.
+   These aren't product-specific, so they get their own home-page section with an
+   in-site page viewer, a download, and a shareable deep link (#catalog/<slug>).
+
+   TO ADD A CATALOG: just drop the PDF in the Dropbox "Catalogs" folder. It shows
+   up on the next sync, titled by its filename. The map below is OPTIONAL — use it
+   only to give a file a prettier title, a region badge, or a group. Anything not
+   listed here still appears, so new drops never need a code change.
+
+     "<exact filename, no .pdf>": { title, region, group, order }
+
+   The whole section stays hidden until at least one PDF syncs.
+   ========================================================================== */
+window.PORTAL_CATALOG_GROUPS = ["Regional Catalogs", "B2B Resources"];
+window.PORTAL_CATALOG_META = {
+  /* Examples — delete or edit once the real catalog filenames land:
+  "Stundenglass Catalog - 2026 - US":  { title: "Stündenglass 2026 Catalog", region: "US", group: "Regional Catalogs", order: 1 },
+  "Stundenglass Catalog - 2026 - EU":  { title: "Stündenglass 2026 Catalog", region: "EU", group: "Regional Catalogs", order: 3 },
+  "Stundenglass Catalog - 2026 - EU":  { title: "Stündenglass 2026 Catalog", region: "EU", group: "Regional Catalogs", order: 3 },
+  "Stundenglass - Dispensary Essentials": { title: "Dispensary Essentials", region: "US", group: "B2B Resources", order: 1 },
+  */
+};
+
+window.PORTAL_CATALOGS = (function () {
+  var src = (typeof window !== "undefined" && window.PORTAL_SYNCED && window.PORTAL_SYNCED["Catalogs"]) || null;
+  if (!src || !src.folders) return [];
+  // Fold accents first, or "Stündenglass" would slug to "st-ndenglass" — these
+  // slugs are the shareable #catalog/<slug> deep links, so they must stay clean.
+  function slugify(s) {
+    return String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  }
+  var out = [];
+  Object.keys(src.folders).forEach(function (f) {
+    (src.folders[f] || []).forEach(function (x) {
+      if (!/^pdf$/i.test(x.format || "")) return;
+      var m = window.PORTAL_CATALOG_META[x.name] || {};
+      var title = m.title || x.name;
+      out.push({
+        title: title,
+        region: m.region || "",
+        group: m.group || "Brand Documents",
+        order: m.order || 99,
+        slug: slugify(title) + (m.region ? "-" + slugify(m.region) : ""),
+        thumb: x.thumb || null,   // first-page cover
+        file: x.file || null,     // same-origin PDF → in-site viewer + download
+        url: x.url || null,       // Dropbox link (fallback)
+      });
+    });
+  });
+  var G = window.PORTAL_CATALOG_GROUPS;
+  out.sort(function (a, b) {
+    var ga = G.indexOf(a.group), gb = G.indexOf(b.group);
+    return (ga < 0 ? 99 : ga) - (gb < 0 ? 99 : gb) || a.order - b.order || a.title.localeCompare(b.title);
+  });
+  return out;
 })();
 
 /* Generic (brand-level) in-store marketing materials — synced from the

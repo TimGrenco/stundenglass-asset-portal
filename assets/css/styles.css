@@ -871,3 +871,110 @@ a.logo-tile { cursor: pointer; }
 
 /* Query-match highlighting in results */
 .sf-name mark, .sf-sub mark { background: rgba(201, 162, 75, 0.30); color: inherit; padding: 0 1px; border-radius: 3px; }
+
+
+/* ============================ CATALOGS & SUPPORT ===========================
+   Ported from the G Pen portal (assets.gpen.com) so both portals stay in sync.
+   ========================================================================== */
+
+/* Catalogs & brand documents — cover cards + in-site PDF page viewer */
+#catalogs-section { margin-bottom: 34px; }
+.cat-group + .cat-group { margin-top: 26px; }
+.cat-group-h { font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 800;
+  color: var(--stone); margin-bottom: 12px; }
+.cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(248px, 1fr)); gap: 18px; }
+.cat-card { border: 1px solid var(--hair); border-radius: var(--radius); background: var(--paper); overflow: hidden;
+  display: flex; flex-direction: column; transition: border-color 0.14s, transform 0.14s, box-shadow 0.14s; }
+.cat-card:hover { border-color: var(--ink); transform: translateY(-2px); box-shadow: 0 12px 26px -20px rgba(0,0,0,0.5); }
+.cat-cover { position: relative; display: block; aspect-ratio: 3 / 4; background: var(--mist); cursor: pointer;
+  overflow: hidden; border: 0; padding: 0; width: 100%; }
+.cat-cover img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+.cat-view { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(0.96);
+  display: inline-flex; align-items: center; gap: 6px; background: var(--ink); color: #fff;
+  font-size: 12px; font-weight: 700; padding: 8px 15px; border-radius: var(--radius-pill);
+  opacity: 0; transition: opacity 0.14s, transform 0.14s; pointer-events: none; }
+.cat-view svg { width: 14px; height: 14px; stroke: #fff; }
+.cat-card:hover .cat-view, .cat-cover:focus-visible .cat-view { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+.cat-meta { display: flex; flex-direction: column; gap: 3px; padding: 12px 13px 0; }
+.cat-grp { font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 800; color: var(--stone); }
+.cat-title { font-size: 13.5px; font-weight: 700; color: var(--ink); line-height: 1.25; }
+.cat-pills { display: flex; flex-wrap: wrap; gap: 4px; padding: 9px 13px 0; }
+.cat-pill { font-size: 10px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 5px 9px; border-radius: var(--radius-pill); border: 1px solid var(--hair);
+  background: var(--paper); color: var(--stone); cursor: pointer;
+  transition: background 0.14s, border-color 0.14s, color 0.14s; }
+.cat-pill:hover { border-color: var(--ink); color: var(--ink); }
+.cat-pill.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+.cat-region { font-size: 9.5px; letter-spacing: 0.1em; font-weight: 800; text-transform: uppercase;
+  background: var(--mist); color: var(--ink); border: 1px solid var(--hair); border-radius: var(--radius-pill);
+  padding: 3px 8px; flex: 0 0 auto; }
+.cat-acts { display: flex; gap: 6px; padding: 11px 13px 13px; }
+.cat-act { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 5px;
+  font-size: 11px; font-weight: 700; color: var(--ink); background: var(--mist); border: 1px solid var(--hair);
+  border-radius: var(--radius-pill); padding: 7px 6px; cursor: pointer; transition: background 0.14s, border-color 0.14s; }
+.cat-act:hover { background: var(--paper); border-color: var(--ink); }
+.cat-act svg { width: 13px; height: 13px; stroke: currentColor; }
+
+/* Catalog PDF viewer (full-screen) */
+.catlb { position: fixed; inset: 0; z-index: 100; background: rgba(10,10,10,0.985);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  display: flex; flex-direction: column; }
+.catlb-bar { display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.12); flex: 0 0 auto; }
+.catlb-t { color: #fff; font-size: 14px; font-weight: 800; display: flex; align-items: center; gap: 9px; }
+.catlb-t .cat-region { background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.2); }
+.catlb-acts { display: flex; align-items: center; gap: 8px; }
+.catlb-acts .btn.ghost { background: rgba(255,255,255,0.08); color: #fff; border-color: rgba(255,255,255,0.2); }
+.catlb-acts .btn.ghost:hover { background: rgba(255,255,255,0.16); }
+.catlb-acts .btn.ghost svg { stroke: #fff; }
+.catlb-x { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.1); border: none;
+  display: flex; align-items: center; justify-content: center; cursor: pointer; }
+.catlb-x svg { width: 18px; height: 18px; stroke: #fff; }
+.catlb-x:hover { background: rgba(255,255,255,0.2); }
+.catlb-stage { flex: 1 1 auto; min-height: 0; position: relative; display: flex; align-items: center; justify-content: center; padding: 12px; }
+.catlb-stage canvas { max-width: 100%; max-height: 100%; border-radius: 4px; box-shadow: 0 18px 50px -20px rgba(0,0,0,0.9); background: #fff; }
+.catlb-load { position: absolute; color: rgba(255,255,255,0.7); font-size: 13px; font-weight: 600; }
+.catlb-nav { flex: 0 0 auto; display: flex; align-items: center; justify-content: center; gap: 14px;
+  padding: 12px 16px 18px; }
+.catlb-nav .btn.ghost { background: rgba(255,255,255,0.08); color: #fff; border-color: rgba(255,255,255,0.2); }
+.catlb-nav .btn.ghost:hover:not(:disabled) { background: rgba(255,255,255,0.16); }
+.catlb-nav .btn.ghost svg { stroke: #fff; }
+.catlb-nav .btn.ghost:disabled { opacity: 0.35; cursor: default; }
+.catlb-page { color: #fff; font-size: 12.5px; font-weight: 700; min-width: 74px; text-align: center;
+  font-variant-numeric: tabular-nums; }
+@media (max-width: 720px) {
+  .catlb-bar { flex-wrap: wrap; }
+  .catlb-acts .btn.ghost span, .catlb-acts .btn.ghost { font-size: 11px; }
+  .cat-grid { grid-template-columns: 1fr; gap: 14px; }
+  /* comfortable touch targets on phones */
+  .cat-pill { padding: 10px 14px; font-size: 10.5px; }
+  .cat-act { padding: 10px 8px; font-size: 11.5px; }
+}
+
+/* Talk to our team — full-width support band above the footer (all pages) */
+.support { margin-top: 46px; color: #fff; position: relative; overflow: hidden;
+  background: radial-gradient(ellipse 90% 160% at 20% -40%, #23231f 0%, var(--ink-2) 46%, var(--ink) 88%); }
+.support::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.75; }
+.support-inner { display: grid; grid-template-columns: 1.4fr 1fr; gap: 44px; align-items: center;
+  padding: 46px 0 48px; }
+.support-eyebrow { font-size: 10.5px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700;
+  color: var(--gold); margin-bottom: 10px; }
+.support-h { font-family: var(--serif); font-size: clamp(22px, 3vw, 30px); font-weight: 800;
+  letter-spacing: -0.02em; color: #fff; margin: 0 0 12px; }
+.support-copy p { margin: 0; font-size: 14px; line-height: 1.62; color: rgba(255,255,255,0.74); max-width: 62ch; }
+.support-actions { display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
+.support-btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  background: #fff; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 14.5px;
+  padding: 13px 20px; border-radius: var(--radius-pill); border: 1px solid #fff;
+  transition: transform 0.14s, background 0.14s, border-color 0.14s; }
+.support-btn:hover { transform: translateY(-1px); }
+.support-btn svg { width: 17px; height: 17px; flex: 0 0 auto; }
+.support-btn.ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.28); }
+.support-btn.ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
+.support-hours { text-align: center; font-size: 11.5px; font-weight: 600; letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.56); margin-top: 2px; }
+.support :focus-visible { outline-color: var(--gold); }
+@media (max-width: 860px) {
+  .support-inner { grid-template-columns: 1fr; gap: 26px; padding: 38px 0 40px; }
+}

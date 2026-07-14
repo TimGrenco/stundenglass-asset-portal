@@ -26,6 +26,7 @@
       download: '<path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/>',
       eye: '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/>',
       mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+      phone: '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/>',
       youtube: '<rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3z"/>',
       share: '<circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/>',
       arrowLeft: '<path d="M19 12H5"/><path d="m12 19-7-7 7-7"/>',
@@ -178,6 +179,8 @@
     if (parts[0] === "style" && BRANDS[parts[1]]) { openStyleGuide(parts[1]); return; }
     if (parts[0] === "additional" && BRANDS[parts[1]]) { openAdditional(parts[1]); return; }
     if (parts[0] === "materials") { openMaterials(); return; }
+    // Shareable deep link straight into a catalog: #catalog/<slug>
+    if (parts[0] === "catalog" && parts[1]) { renderHome(); openCatalog(parts.slice(1).join("/")); return; }
     if (parts[0] === "locator") { openLocator(); return; }
     if (parts[0] === "train") {
       var tp = PRODUCTS.filter(function (x) { return x.brand === parts[1] && slugify(x.name) === parts.slice(2).join("/"); })[0];
@@ -304,6 +307,8 @@
     vid: ["video", "mp4"], vids: ["video", "mp4"], videos: ["video"], movie: ["video", "mp4"],
     vector: ["svg", "ai", "eps"], vectors: ["svg", "ai", "eps"], logos: ["logo"],
     doc: ["document", "pdf"], docs: ["document", "pdf"],
+    catalogue: ["catalog"], catalogs: ["catalog"], catalogues: ["catalog"],
+    lookbook: ["catalog"], brochure: ["catalog"],
     packshot: ["packaging"], pack: ["packaging"], lifestyle: ["lifestyle", "hero"],
     jpeg: ["jpg"], transparent: ["png", "transparent"],
     // Stündenglass vocabulary
@@ -359,7 +364,7 @@
     if (/doc|misc|manual|sheet/i.test(f)) return "Documents";
     return "Assets";
   }
-  var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "In-store", "Documents", "Assets"];
+  var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catalogs", "In-store", "Documents", "Assets"];
 
   // Flat, cached index of every downloadable thing: product files + how-to videos.
   var _fileIndex = null;
@@ -385,6 +390,18 @@
           label: v.title, kind: "Videos", sub: p.name + " · How-to Videos",
           hay: (v.title + " video how to " + p.name + " " + BRANDS[p.brand].name).toLowerCase()
         });
+      });
+    });
+    // Catalogs & brand documents. These belong to no product, so they carry an
+    // `openHash` instead — clicking one opens the in-site PDF viewer.
+    (window.PORTAL_CATALOGS || []).forEach(function (c) {
+      var nm = c.title + (c.region ? " (" + c.region + ")" : "");
+      out.push({
+        brand: "stundenglass", folder: c.group || "Catalogs", kind: "Catalogs",
+        label: nm, sub: (c.group || "Catalog") + (c.region ? " · " + c.region : ""),
+        openHash: "catalog/" + c.slug,
+        file: { name: nm, format: "PDF", thumb: c.thumb, url: c.file || c.url, file: c.file || null, type: "pdf" },
+        hay: (c.title + " " + (c.region || "") + " " + (c.group || "") + " catalog document pdf stundenglass").toLowerCase()
       });
     });
     _fileIndex = out;
@@ -681,7 +698,10 @@
     if (!_lastSearch) return;
     if (_lastSearch.prods && _lastSearch.prods.length) { navTo(_lastSearch.prods[0]); return; }
     var items = _lastSearch.fileRes && _lastSearch.fileRes.items;
-    if (items && items.length) navToFile(pid(items[0].product), items[0].folder);
+    if (!items || !items.length) return;
+    var top = items[0];
+    if (top.openHash) { location.hash = top.openHash; return; }
+    navToFile(pid(top.product), top.folder);
   }
 
   function renderHome(noAnim) {
@@ -732,6 +752,7 @@
     allGrid.innerHTML = current.map(function (p) { return cardHTML(p, state.layout); }).join("") || emptyState();
 
     renderLogoAssets();
+    renderCatalogs();
     renderSocialHub();
     renderInStore();
     renderStoreLocator();
@@ -820,19 +841,30 @@
       : icon(typeIcon[f.type] || "photo");
     // Everything downloads from Dropbox (nothing is hosted on the portal).
     var dl = !isVid ? (f.url || "") : "";
-    var pName = r.product.name.indexOf(BRANDS[r.product.brand].name) === 0 ? r.product.name : BRANDS[r.product.brand].name + " " + r.product.name;
+    // Product-less results (catalogs) route by hash instead of product + folder.
+    var pName = r.product
+      ? (r.product.name.indexOf(BRANDS[r.product.brand].name) === 0 ? r.product.name : BRANDS[r.product.brand].name + " " + r.product.name)
+      : (r.sub || r.folder);
+    var openAttr = r.openHash
+      ? ' data-open="' + escapeHTML(r.openHash) + '"'
+      : ' data-pid="' + pid(r.product) + '" data-folder="' + escapeHTML(r.folder) + '"';
     return '<div class="sf-cell">' +
-        '<button class="sf-open" data-pid="' + pid(r.product) + '" data-folder="' + escapeHTML(r.folder) + '" title="Open in ' + pName.replace(/"/g, "") + '">' +
+        '<button class="sf-open"' + openAttr + ' title="' + (r.openHash ? "Open " + safe : "Open in " + pName.replace(/"/g, "")) + '">' +
           '<span class="sf-thumb' + (isVid ? " is-video" : "") + '">' + media + (isVid ? '<span class="sf-play">' + icon("play") + "</span>" : "") + "</span>" +
           '<span class="sf-meta"><span class="sf-name">' + highlight(r.label, q || "") + "</span>" +
-            '<span class="sf-sub">' + escapeHTML(pName) + " · " + highlight(r.folder, q || "") + (f.format ? ' · <span class="sf-fmt">' + f.format + "</span>" : "") + "</span></span>" +
+            '<span class="sf-sub">' + (r.openHash ? highlight(r.sub || r.folder, q || "") : escapeHTML(pName) + " · " + highlight(r.folder, q || "")) +
+              (f.format ? ' · <span class="sf-fmt">' + f.format + "</span>" : "") + "</span></span>" +
         "</button>" +
         (dl ? '<button class="sf-dl" data-sfdl="' + dl + '" data-sfname="' + safe + '" title="Download">' + icon("download") + "</button>" : "") +
       "</div>";
   }
   function bindSearchFiles(ctx) {
     $$(".sf-open", ctx).forEach(function (b) {
-      b.addEventListener("click", function () { navToFile(b.getAttribute("data-pid"), b.getAttribute("data-folder")); });
+      b.addEventListener("click", function () {
+        var h = b.getAttribute("data-open");            // catalogs → #catalog/<slug>
+        if (h) { location.hash = h; return; }
+        navToFile(b.getAttribute("data-pid"), b.getAttribute("data-folder"));
+      });
     });
     $$(".sf-dl", ctx).forEach(function (b) {
       b.addEventListener("click", function (e) {
@@ -908,6 +940,216 @@
         "</div>" +
         '<div class="logo-preview">' + tiles + "</div>" +
       "</div>";
+  }
+
+  // ---- Catalogs & brand documents ------------------------------------------
+  // Not product-specific: regional catalogs + B2B resources, each with an in-page
+  // PDF viewer, a direct download, and a shareable deep link (#catalog/<slug>).
+  // NOTE: the viewer needs a SAME-ORIGIN pdf — Dropbox blocks iframe embedding and
+  // cross-origin fetch — which is why the Catalogs folder alone is `commitFiles`.
+  function clickKey(el, fn) {
+    el.addEventListener("click", fn);
+    el.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") { e.preventDefault(); fn(e); }
+    });
+  }
+  function loadPdfJs(cb) {
+    if (window.pdfjsLib) return cb(window.pdfjsLib);
+    var s = document.createElement("script");
+    s.src = "assets/vendor/pdfjs/pdf.min.js";
+    s.onload = function () {
+      if (!window.pdfjsLib) return cb(null);
+      window.pdfjsLib.GlobalWorkerOptions.workerSrc = "assets/vendor/pdfjs/pdf.worker.min.js";
+      cb(window.pdfjsLib);
+    };
+    s.onerror = function () { cb(null); };
+    document.head.appendChild(s);
+  }
+  function catalogBySlug(s) { return (window.PORTAL_CATALOGS || []).filter(function (x) { return x.slug === s; })[0]; }
+  function catalogFileName(c) { return (c.title + (c.region ? " - " + c.region : "")).replace(/[^\w.-]+/g, "_") + ".pdf"; }
+  function catalogShareUrl(c) { return location.origin + location.pathname + "#catalog/" + c.slug; }
+  function catalogDownload(c) { if (c.file) directDownload(c.file, catalogFileName(c)); else downloadOne(c.url); }
+
+  // One card per document family (e.g. "Stündenglass 2026 Catalog"); regional
+  // editions sit behind a region toggle on the card, defaulting to US.
+  var CAT_REGION_ORDER = ["US", "UK", "EU", "CAD"];
+  function catalogFamilies() {
+    var list = window.PORTAL_CATALOGS || [], byTitle = {}, order = [];
+    list.forEach(function (c) {
+      if (!byTitle[c.title]) { byTitle[c.title] = { title: c.title, group: c.group, variants: [] }; order.push(c.title); }
+      byTitle[c.title].variants.push(c);
+    });
+    return order.map(function (t) {
+      var f = byTitle[t];
+      f.variants.sort(function (a, b) {
+        var ia = CAT_REGION_ORDER.indexOf(a.region), ib = CAT_REGION_ORDER.indexOf(b.region);
+        return (ia < 0 ? 99 : ia) - (ib < 0 ? 99 : ib);
+      });
+      f.primary = f.variants.filter(function (v) { return v.region === "US"; })[0] || f.variants[0];
+      return f;
+    });
+  }
+  function catalogCard(f) {
+    var c = f.primary, alt = escapeHTML(f.title);
+    var cover = c.thumb
+      ? '<img class="cat-img" src="' + c.thumb + '" alt="' + alt + ' cover" loading="lazy" decoding="async"/>'
+      : window.__icon("file");
+    var multi = f.variants.length > 1;
+    var regions = multi
+      ? '<div class="cat-pills" role="group" aria-label="Region for ' + alt + '">' +
+          f.variants.map(function (v) {
+            var on = v === c;
+            return '<button class="cat-pill' + (on ? " on" : "") + '" data-slug="' + v.slug + '"' +
+              ' data-thumb="' + escapeHTML(v.thumb || "") + '" aria-pressed="' + on + '">' +
+              escapeHTML(v.region) + "</button>";
+          }).join("") + "</div>"
+      : (c.region ? '<div class="cat-pills"><span class="cat-region">' + escapeHTML(c.region) + "</span></div>" : "");
+    return '<div class="cat-card" data-cur="' + c.slug + '">' +
+      '<div class="cat-cover" role="button" tabindex="0" data-catopen aria-label="View ' + alt + '">' +
+        cover + '<span class="cat-view">' + icon("eye") + " View</span></div>" +
+      '<div class="cat-meta"><span class="cat-grp">' + escapeHTML(f.group) + "</span>" +
+        '<span class="cat-title">' + escapeHTML(f.title) + "</span></div>" +
+      regions +
+      '<div class="cat-acts">' +
+        '<button class="cat-act" data-catdl>' + icon("download") + " Download</button>" +
+        '<button class="cat-act" data-catshare>' + icon("link") + " Share</button>" +
+      "</div></div>";
+  }
+  function renderCatalogs() {
+    var sec = $("#catalogs-section"), box = $("#catalogs");
+    if (!sec || !box) return;
+    var list = window.PORTAL_CATALOGS || [];
+    // Hidden until catalogs land in the Dropbox "Catalogs" folder.
+    if (!list.length) { sec.style.display = "none"; box.innerHTML = ""; return; }
+    sec.style.display = "";
+    var cnt = $("#catalog-count");
+    if (cnt) cnt.textContent = list.length + " document" + (list.length === 1 ? "" : "s");
+    box.innerHTML = '<div class="cat-grid">' + catalogFamilies().map(catalogCard).join("") + "</div>";
+
+    $$(".cat-card", box).forEach(function (card) {
+      var cover = $(".cat-cover", card), img = $(".cat-img", card);
+      function cur() { return catalogBySlug(card.getAttribute("data-cur")); }
+      clickKey(cover, function () { openCatalog(card.getAttribute("data-cur")); });
+      $$(".cat-pill", card).forEach(function (p) {
+        p.addEventListener("click", function (e) {
+          e.stopPropagation();
+          card.setAttribute("data-cur", p.getAttribute("data-slug"));
+          $$(".cat-pill", card).forEach(function (q) {
+            var on = q === p;
+            q.classList.toggle("on", on);
+            q.setAttribute("aria-pressed", on);
+          });
+          var t = p.getAttribute("data-thumb");
+          if (img && t) img.src = t;
+          var c = cur();
+          if (c && cover) cover.setAttribute("aria-label", "View " + c.title + " — " + c.region);
+        });
+      });
+      var dl = $("[data-catdl]", card);
+      if (dl) dl.addEventListener("click", function (e) { e.stopPropagation(); var c = cur(); if (c) catalogDownload(c); });
+      var sh = $("[data-catshare]", card);
+      if (sh) sh.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var c = cur(); if (c) copyText(catalogShareUrl(c), "Catalog link copied");
+      });
+    });
+  }
+  function closeCatalog() {
+    var ov = document.getElementById("catlb");
+    if (!ov) return;
+    if (ov.__key) document.removeEventListener("keydown", ov.__key);
+    if (ov.__resize) window.removeEventListener("resize", ov.__resize);
+    if (ov.__doc) { try { ov.__doc.destroy(); } catch (e) {} ov.__doc = null; }
+    ov.remove();
+    document.body.style.overflow = "";
+    if (/^#catalog\//.test(location.hash)) history.replaceState(null, "", location.pathname);
+  }
+  function openCatalog(slug) {
+    var c = catalogBySlug(slug);
+    if (!c) { toast("Catalog not found"); return; }
+    if (!c.file) { catalogDownload(c); return; }   // not committed yet → Dropbox
+    closeCatalog();
+    var ov = document.createElement("div");
+    ov.className = "catlb"; ov.id = "catlb";
+    ov.innerHTML =
+      '<div class="catlb-bar">' +
+        '<div class="catlb-t">' + escapeHTML(c.title) +
+          (c.region ? ' <span class="cat-region">' + escapeHTML(c.region) + "</span>" : "") + "</div>" +
+        '<div class="catlb-acts">' +
+          '<button class="btn ghost sm" id="catlb-dl">' + icon("download") + " Download PDF</button>" +
+          '<button class="btn ghost sm" id="catlb-share">' + icon("link") + " Share</button>" +
+          '<button class="catlb-x" id="catlb-x" aria-label="Close viewer">' + icon("x") + "</button>" +
+        "</div></div>" +
+      '<div class="catlb-stage"><div class="catlb-load" id="catlb-load">Loading catalog…</div>' +
+        '<canvas id="catlb-canvas"></canvas></div>' +
+      '<div class="catlb-nav">' +
+        '<button class="btn ghost sm" id="catlb-prev">' + icon("arrowLeft") + " Prev</button>" +
+        '<span class="catlb-page" id="catlb-page">–</span>' +
+        '<button class="btn ghost sm" id="catlb-next">Next ' + icon("arrowRight") + "</button>" +
+      "</div>";
+    document.body.appendChild(ov);
+    document.body.style.overflow = "hidden";
+
+    var doc = null, page = 1, busy = false;
+    $("#catlb-x").addEventListener("click", closeCatalog);
+    ov.addEventListener("click", function (e) { if (e.target === ov) closeCatalog(); });
+    $("#catlb-dl").addEventListener("click", function () { catalogDownload(c); });
+    $("#catlb-share").addEventListener("click", function () { copyText(catalogShareUrl(c), "Catalog link copied"); });
+    $("#catlb-prev").addEventListener("click", function () { go(page - 1); });
+    $("#catlb-next").addEventListener("click", function () { go(page + 1); });
+    ov.__key = function (e) {
+      if (e.key === "Escape") closeCatalog();
+      else if (e.key === "ArrowLeft") go(page - 1);
+      else if (e.key === "ArrowRight") go(page + 1);
+    };
+    document.addEventListener("keydown", ov.__key);
+    var rt = null;
+    ov.__resize = function () { clearTimeout(rt); rt = setTimeout(function () { if (doc && !busy) render(); }, 180); };
+    window.addEventListener("resize", ov.__resize);
+
+    function go(n) { if (doc && !busy && n >= 1 && n <= doc.numPages) { page = n; render(); } }
+    function render() {
+      busy = true;
+      doc.getPage(page).then(function (pg) {
+        var canvas = $("#catlb-canvas"), stage = canvas.parentNode;
+        var base = pg.getViewport({ scale: 1 });
+        var scale = Math.min((stage.clientWidth - 24) / base.width, (stage.clientHeight - 24) / base.height);
+        var dpr = Math.min(window.devicePixelRatio || 1, 2);
+        var vp = pg.getViewport({ scale: scale * dpr });
+        canvas.width = vp.width; canvas.height = vp.height;
+        canvas.style.width = Math.round(vp.width / dpr) + "px";
+        canvas.style.height = Math.round(vp.height / dpr) + "px";
+        return pg.render({ canvasContext: canvas.getContext("2d"), viewport: vp }).promise;
+      }).then(function () {
+        busy = false;
+        var l = $("#catlb-load"); if (l) l.style.display = "none";
+        $("#catlb-page").textContent = page + " / " + doc.numPages;
+        $("#catlb-prev").disabled = page <= 1;
+        $("#catlb-next").disabled = page >= doc.numPages;
+      }).catch(function () { busy = false; toast("Couldn’t render that page"); });
+    }
+    // Never sit on "Loading catalog…" forever — hand over the PDF instead.
+    var settled = false;
+    var giveUp = setTimeout(function () {
+      if (settled || doc) return;
+      settled = true;
+      toast("Viewer is taking too long — downloading instead");
+      catalogDownload(c); closeCatalog();
+    }, 20000);
+    function bail(msg) {
+      if (settled) return;
+      settled = true; clearTimeout(giveUp);
+      toast(msg); catalogDownload(c); closeCatalog();
+    }
+    loadPdfJs(function (lib) {
+      if (settled) return;
+      if (!lib) return bail("Viewer unavailable — downloading instead");
+      lib.getDocument(c.file).promise.then(function (d) {
+        if (settled) { try { d.destroy(); } catch (e) {} return; }
+        settled = true; clearTimeout(giveUp);
+        doc = d; ov.__doc = d; render();
+      }).catch(function () { bail("Couldn’t open the catalog — downloading instead"); });
+    });
   }
 
   // Store-locator sign-up callout — retailers request to be listed.
@@ -2294,12 +2536,50 @@
     clearTimeout(toastTimer); toastTimer = setTimeout(function () { t.classList.remove("show"); }, 2200);
   }
 
+  // ---- "Talk to our team" band (above the footer, every page) ---------------
+  // Driven by CFG.support so nobody has to touch markup. It stays hidden until
+  // BOTH a phone and an email are set — publishing a half-filled contact block
+  // is worse than showing none.
+  function renderSupport() {
+    var el = $("#support"), s = (CFG && CFG.support) || {};
+    if (!el) return;
+    if (!s.phone || !s.email) { el.style.display = "none"; return; }
+    var tel = "tel:" + s.phone.replace(/[^0-9+]/g, "");
+    el.style.display = "";
+    el.innerHTML =
+      '<div class="wrap support-inner">' +
+        '<div class="support-copy">' +
+          '<div class="support-eyebrow">' + escapeHTML(s.eyebrow || "Questions about a product?") + "</div>" +
+          '<h2 class="support-h">' + escapeHTML(s.heading || "Talk to our team.") + "</h2>" +
+          (s.copy ? "<p>" + escapeHTML(s.copy) + "</p>" : "") +
+        "</div>" +
+        '<div class="support-actions">' +
+          '<a class="support-btn" href="' + tel + '">' + icon("phone") + "<span>" + escapeHTML(s.phone) + "</span></a>" +
+          '<a class="support-btn ghost" href="mailto:' + escapeHTML(s.email) + '">' + icon("mail") + "<span>" + escapeHTML(s.email) + "</span></a>" +
+          (s.hours ? '<div class="support-hours">' + escapeHTML(s.hours) + "</div>" : "") +
+        "</div>" +
+      "</div>";
+  }
+
   // ---- wire up the static shell -------------------------------------------
   function init() {
     // hero text from config
     $("#hero-tagline").textContent = CFG.tagline;
     var heroIntro = $("#hero-intro"); if (heroIntro) heroIntro.textContent = CFG.intro;
     $$(".req-mail").forEach(function (a) { a.href = "mailto:" + CFG.requestEmail; });
+
+    renderSupport();
+
+    // nav "Catalogs" jumps to the catalogs section. The button hides itself when
+    // no catalogs have synced yet, so it can't scroll to an empty section.
+    var navCat = $("#nav-catalogs");
+    if (navCat) {
+      if (!(window.PORTAL_CATALOGS || []).length) navCat.style.display = "none";
+      else navCat.addEventListener("click", function () {
+        navHome();
+        var c = $("#catalogs-section"); if (c) c.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    }
 
     // nav "Logos & assets" link scrolls down to the de-emphasized resources strip.
     var navGuides = $("#nav-guides");

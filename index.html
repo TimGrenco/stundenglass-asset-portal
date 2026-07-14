@@ -47,6 +47,7 @@
         <span class="lib">Stündenglass Brand Assets Portal</span>
       </div>
       <div class="nav-actions">
+        <button class="nav-link" id="nav-catalogs">Catalogs</button>
         <button class="nav-link" id="nav-guides">Logos &amp; assets</button>
         <a class="req-link req-mail" href="#"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Request an asset</span></a>
       </div>
@@ -106,6 +107,13 @@
         <div class="logo-assets" id="logo-assets"></div>
       </section>
 
+      <!-- CATALOGS & BRAND DOCUMENTS — regional catalogs + B2B resources (PDF viewer).
+           Hidden until PDFs land in the Dropbox "Catalogs" folder. -->
+      <section id="catalogs-section" style="display:none;">
+        <div class="section-head"><h2>Catalogs &amp; Brand Documents</h2><span class="badge" id="catalog-count"></span></div>
+        <div id="catalogs"></div>
+      </section>
+
       <!-- IN-STORE MARKETING MATERIALS — retail displays/posters, aggregated across products -->
       <section id="instore-section">
         <div class="section-head"><h2>In-Store Marketing Materials</h2></div>
@@ -129,6 +137,10 @@
     <div id="locator-page" class="detail" style="display:none;"></div>
     <div id="training-page" class="detail" style="display:none;"></div>
   </main>
+
+  <!-- TALK TO OUR TEAM — real people, just above the footer. Rendered from
+       PORTAL_CONFIG.support; hidden until the contact details are filled in. -->
+  <section class="support" id="support" style="display:none;"></section>
 
   <!-- FOOTER -->
   <footer class="foot">

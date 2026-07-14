@@ -82,6 +82,19 @@ const PRODUCTS = [
     link: "",
     flat: "In-Store Marketing",
   },
+  {
+    // Catalogs & brand documents (PDFs) — powers the home "Catalogs" section and
+    // the in-page PDF viewer. `commitFiles` is REQUIRED here and nowhere else:
+    // Dropbox blocks iframe embedding (frame-ancestors) and cross-origin fetch
+    // (no CORS), so a Dropbox link alone cannot be rendered in the viewer — the
+    // PDF has to be same-origin. Downloads still offer the Dropbox link too.
+    // ⚠️ Paste the Catalogs Dropbox folder link here when it's ready.
+    name: "Catalogs",
+    slug: "catalogs",
+    link: "",
+    flat: "Catalogs",
+    commitFiles: true,
+  },
 // Skip any product whose Dropbox link hasn't been filled in yet.
 ].filter((p) => p.link && p.link.trim());
 
@@ -379,14 +392,21 @@ for (const p of PRODUCTS) {
     for (const f of files) {
       const e = ext(f.name), type = typeOf(e), path = f.relPath || (spec.prefix + "/" + f.name);
       const hash = f.content_hash, size = f.size || 0;
-      // NOTHING is hosted on the portal — every asset downloads straight from
-      // Dropbox via its per-file share link. We only ever commit small preview
-      // THUMBNAILS (needed to render the gallery); originals are never committed,
-      // so `file` stays null and all download paths fall through to the Dropbox URL.
-      let thumb = null;
-      const fileRel = null;
+      // Assets are NOT hosted here — every one downloads straight from Dropbox via
+      // its per-file share link, so `file` stays null and all download paths fall
+      // through to the Dropbox URL. We only commit small preview THUMBNAILS.
+      //
+      // The ONE exception is `commitFiles` products (the Catalogs folder): Dropbox
+      // blocks iframe embedding AND cross-origin fetch, so an in-page PDF viewer
+      // cannot read a Dropbox link — the PDF must be same-origin to be viewable.
+      let thumb = null, fileRel = null;
       try {
-        const localOrig = null;
+        if (p.commitFiles && size <= MAX_COMMIT && type !== "video") {
+          const cf = `${hash}.${e}`;
+          if (!existsSync(join(filesDir, cf))) await downloadFile(tok, p.link, path, join(filesDir, cf));
+          if (existsSync(join(filesDir, cf))) { fileRel = `assets/synced/${p.slug}/files/${cf}`; keepFiles.add(cf); }
+        }
+        const localOrig = fileRel ? join(filesDir, `${hash}.${e}`) : null;
 
         // White/light logos → composite onto gray (baked into the thumbnail) so
         // they're visible. Distinct `-lt.jpg` name so old white thumbs get pruned.
