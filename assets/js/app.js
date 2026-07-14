@@ -1863,13 +1863,51 @@
       });
     }
 
+    // A folder card shows a real photo from inside the folder rather than a generic
+    // icon. Prefer a still product shot: it reads as a cover, whereas a lifestyle
+    // crop or a video poster frame is often ambiguous at thumbnail size.
+    var _coverCache = {};
+    function folderCover(path) {
+      if (path in _coverCache) return _coverCache[path];
+      var prefix = path + SEP, best = null, fallback = null;
+      Object.keys(p.folders).forEach(function (f) {
+        if (f !== path && f.indexOf(prefix) !== 0) return;      // this folder or below it
+        var isProductShot = /product photos/i.test(f);
+        (p.folders[f] || []).forEach(function (x) {
+          if (!x.thumb) return;
+          if (!fallback) fallback = x.thumb;                     // anything with a thumbnail
+          if (best) return;
+          if (isProductShot && x.type === "image") best = x.thumb;
+        });
+      });
+      // No product shot? fall back to the first image anywhere under here, then to
+      // any thumbnail at all (e.g. a video poster).
+      if (!best) {
+        Object.keys(p.folders).forEach(function (f) {
+          if (best || (f !== path && f.indexOf(prefix) !== 0)) return;
+          (p.folders[f] || []).forEach(function (x) {
+            if (!best && x.thumb && x.type === "image") best = x.thumb;
+          });
+        });
+      }
+      _coverCache[path] = best || fallback || null;
+      return _coverCache[path];
+    }
+
     function render() {
       active = openPath;   // gallery + selection always target the open folder
       // N-level folder browser: child folders of openPath shown as cards, a
       // breadcrumb back to the root, and openPath's own files in the gallery below.
       function catCard(label, ic, count, path, cls) {
+        var cover = folderCover(path);
+        // If the image 404s (pruned thumbnail), swap back to the icon rather than
+        // leaving a broken-image box on the card.
+        var media = cover
+          ? '<span class="catcard-ic has-img"><img src="' + escapeHTML(cover) + '" alt="" loading="lazy" decoding="async"' +
+              " onerror=\"this.parentNode.classList.remove('has-img');this.parentNode.innerHTML=window.__icon('" + ic + "')\"/></span>"
+          : '<span class="catcard-ic">' + icon(ic) + "</span>";
         return '<button class="catcard ' + (cls || "") + '" data-path="' + escapeHTML(path) + '">' +
-          '<span class="catcard-ic">' + icon(ic) + "</span>" +
+          media +
           '<span class="catcard-tx"><span class="catcard-name">' + label + "</span>" +
           '<span class="catcard-c">' + count + "</span></span></button>";
       }

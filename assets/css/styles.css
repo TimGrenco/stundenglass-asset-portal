@@ -978,3 +978,19 @@ a.logo-tile { cursor: pointer; }
 @media (max-width: 860px) {
   .support-inner { grid-template-columns: 1fr; gap: 26px; padding: 38px 0 40px; }
 }
+
+/* Folder cards carry a real photo pulled from inside the folder (see folderCover
+   in app.js) instead of a generic icon — you can see what's in a folder before
+   opening it. Bigger than the icon box so the product is actually legible, and
+   `contain` rather than `cover` because the products are tall (a centre-crop
+   would slice the top and bottom off an infuser). */
+.catcard-ic.has-img { width: 44px; height: 44px; border-radius: 8px; overflow: hidden;
+  background: var(--mist); padding: 2px; }
+.catcard-ic.has-img img { width: 100%; height: 100%; object-fit: contain; display: block; }
+/* The image is the subject — don't tint it with the branch/active treatments. */
+.catcard.is-branch .catcard-ic.has-img,
+.catcard.on .catcard-ic.has-img { background: var(--mist); }
+.catcard.on .catcard-ic.has-img { background: rgba(255, 255, 255, 0.92); }
+@media (max-width: 720px) {
+  .catcard-ic.has-img { width: 40px; height: 40px; }
+}
