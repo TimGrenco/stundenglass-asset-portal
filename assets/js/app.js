@@ -2051,6 +2051,26 @@
       syncSelection();
     }
     render();
+
+    // Arriving via a shared folder link (or a file-search hit) opens the product
+    // page scrolled to the top — leaving the folder you were actually sent to far
+    // below the fold, so the link reads as "it just opened the product page".
+    // Bring the assets section into view so you land on the folder itself.
+    // Only on arrival: drilling around in-page is already in view.
+    if (openPath) {
+      var head = $("#docs-head", d);
+      if (head) {
+        // Wait for layout (thumbnails/fonts) to settle, then offset for the sticky nav.
+        // NOTE "instant", not "auto": the page sets `html { scroll-behavior: smooth }`,
+        // and "auto" defers to that — which would animate a ~1300px scroll on arrival
+        // (janky, and it silently does nothing at all in a background tab). A shared
+        // link should just *be* at the folder.
+        setTimeout(function () {
+          var top = head.getBoundingClientRect().top + window.pageYOffset - 84;
+          window.scrollTo({ top: Math.max(top, 0), behavior: "instant" });
+        }, 60);
+      }
+    }
   }
 
   // Packaging visuals: retail outer box + (for POP products) the POP display.
