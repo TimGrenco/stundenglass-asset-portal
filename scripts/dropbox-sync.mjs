@@ -14,7 +14,7 @@
    under assets/synced/<slug>/, so unchanged files are never re-downloaded.
    Writes window.PORTAL_SYNCED into assets/data/synced.js.
    ========================================================================== */
-import { writeFileSync, readFileSync, mkdirSync, existsSync, readdirSync, unlinkSync, createWriteStream } from "node:fs";
+import { writeFileSync, readFileSync, mkdirSync, existsSync, readdirSync, unlinkSync, rmSync, createWriteStream } from "node:fs";
 import { join } from "node:path";
 import { execFileSync } from "node:child_process";
 import { Readable } from "node:stream";
@@ -47,6 +47,31 @@ if (!APP_KEY || !APP_SECRET || !REFRESH) {
 //   flat: "Logos"   → bucket a flat (subfolder-less) folder under this name
 //   pngThumbs: true → keep transparent PNG logo thumbnails (don't flatten to white)
 const PRODUCTS = [
+  // Catalogs go FIRST: they're a handful of direct file links and finish in
+  // seconds, so they publish immediately instead of queueing behind the
+  // multi-hour walks of the big photo libraries below.
+  {
+    // Catalogs & brand documents (PDFs) — powers the home "Catalogs" section and
+    // the in-page PDF viewer. These PDFs are COMMITTED to the repo, the one and
+    // only exception to "nothing is hosted on the portal": Dropbox blocks iframe
+    // embedding (frame-ancestors) and cross-origin fetch (no CORS), so a Dropbox
+    // link alone can't be rendered in the viewer — the PDF must be same-origin.
+    // The Download button still points at Dropbox.
+    //
+    // Unlike every other product, these are DIRECT FILE links (/scl/fi/…), not a
+    // folder link — so `files` replaces `link` and we skip the folder walk. To add
+    // a catalog: add a row here, then map its filename in PORTAL_CATALOG_META
+    // (assets/data/assets.js) to give it a title/region/group.
+    name: "Catalogs",
+    slug: "catalogs",
+    flat: "Catalogs",
+    files: [
+      { link: "https://www.dropbox.com/scl/fi/plss2bshdtye4olwiemqx/Stundenglass-2026-Catalog-US.pdf?rlkey=2zhmue3zcpvfo56jgxjdl8i3x&dl=0" },
+      { link: "https://www.dropbox.com/scl/fi/ttq5nn5anpx41et9c2oxs/Stundenglass-Catalog-2026-UK.pdf?rlkey=74p4oc77ciaqoxyuq8wuf17wy&dl=0" },
+      { link: "https://www.dropbox.com/scl/fi/bjgagiviuecvrcyemv86y/Stundenglass-Catalog-2026-EU.pdf?rlkey=hg8x6ep0ys6mjcmokxye5lhp6&dl=0" },
+      { link: "https://www.dropbox.com/scl/fi/8xkao50mhju93n35yuo9o/STDN_Catalog_2026_CAD.pdf?rlkey=e6eqeqrwxprrajidd9h002jdv&dl=0" },
+    ],
+  },
   // The normal (non-deep) path preserves ONE nested level as "Parent / Child"
   // folders (e.g. "Black / Product Photos"), which powers the portal drill-down:
   // color/edition → category → files. Full recursive `deep` mode is avoided here
@@ -82,21 +107,8 @@ const PRODUCTS = [
     link: "",
     flat: "In-Store Marketing",
   },
-  {
-    // Catalogs & brand documents (PDFs) — powers the home "Catalogs" section and
-    // the in-page PDF viewer. `commitFiles` is REQUIRED here and nowhere else:
-    // Dropbox blocks iframe embedding (frame-ancestors) and cross-origin fetch
-    // (no CORS), so a Dropbox link alone cannot be rendered in the viewer — the
-    // PDF has to be same-origin. Downloads still offer the Dropbox link too.
-    // ⚠️ Paste the Catalogs Dropbox folder link here when it's ready.
-    name: "Catalogs",
-    slug: "catalogs",
-    link: "",
-    flat: "Catalogs",
-    commitFiles: true,
-  },
-// Skip any product whose Dropbox link hasn't been filled in yet.
-].filter((p) => p.link && p.link.trim());
+// Skip any product that has neither a folder link nor direct file links yet.
+].filter((p) => (p.link && p.link.trim()) || (p.files && p.files.length));
 
 const FOLDER_ORDER = ["Product Photos", "Lifestyle Photos", "Web Banners", "Logos", "Social Videos", "TV Screen Videos", "Packaging", "In-Store Marketing", "Documents"];
 // Normalize inconsistent Dropbox folder names to the canonical tab names above,
@@ -257,10 +269,13 @@ async function thumbV2(tok, link, path, outFile) {
 }
 
 // Download a file from the shared link to disk (streamed — safe for big videos).
+// `path` locates a file *inside* a shared folder; for a shared link that already
+// points at a single file (/scl/fi/…) it must be omitted, or Dropbox 400s.
 async function downloadFile(tok, link, path, outFile) {
+  const arg = path ? { url: link, path } : { url: link };
   const r = await fetch("https://content.dropboxapi.com/2/sharing/get_shared_link_file", {
     method: "POST",
-    headers: { Authorization: "Bearer " + tok, "Dropbox-API-Arg": apiArg({ url: link, path }) },
+    headers: { Authorization: "Bearer " + tok, "Dropbox-API-Arg": apiArg(arg) },
   });
   if (!r.ok) { warnOnce("dl", "download failed " + r.status + ": " + (await r.text()).slice(0, 200)); return false; }
   await pipeline(Readable.fromWeb(r.body), createWriteStream(outFile));
@@ -339,7 +354,71 @@ function saveProgress(note) {
   console.error(`  ↳ could not push progress for ${note}`);
 }
 
+// Products defined as a list of DIRECT file links (currently just Catalogs) skip
+// the folder walk entirely: fetch each file's metadata, commit the original so the
+// in-page viewer has a same-origin copy, and render a first-page cover. Files are
+// named by Dropbox's `rev`, so an unchanged catalog is never re-downloaded and a
+// re-uploaded one lands under a new name (no stale-cache problem).
+async function syncDirectFiles(p) {
+  const dir = join("assets", "synced", p.slug);
+  const filesDir = join(dir, "files");
+  mkdirSync(filesDir, { recursive: true });
+  const keep = new Set(), keepFiles = new Set();
+  const out = [];
+
+  for (const spec of p.files) {
+    const meta = await rpc(tok, "sharing/get_shared_link_metadata", { url: spec.link });
+    if (!meta || meta[".tag"] !== "file") { console.error(`  ! not a file link: ${spec.link.slice(0, 60)}…`); continue; }
+    const name = meta.name;                       // e.g. "Stundenglass-2026-Catalog-US.pdf"
+    const e = ext(name);
+    const base = name.replace(/\.[^.]+$/, "");
+    const rev = meta.rev;
+
+    const cf = `${rev}.${e}`;
+    const localPath = join(filesDir, cf);
+    if (!existsSync(localPath)) {
+      console.error(`  ↓ ${name}`);
+      await downloadFile(tok, spec.link, "", localPath);
+    }
+    if (!existsSync(localPath)) { console.error(`  ! download failed: ${name}`); continue; }
+    keepFiles.add(cf);
+
+    // First-page cover for the catalog card.
+    let thumb = null;
+    const tName = `${rev}.jpg`;
+    if (e === "pdf") {
+      if (!existsSync(join(dir, tName))) pdfFirstPage(localPath, join(dir, rev));
+      if (existsSync(join(dir, tName))) { thumb = `assets/synced/${p.slug}/${tName}`; keep.add(tName); }
+    }
+
+    out.push({
+      name: base,
+      type: e === "pdf" ? "pdf" : "file",
+      format: e.toUpperCase(),
+      url: dlLink(spec.link),                     // Download button → Dropbox
+      thumb,
+      file: `assets/synced/${p.slug}/files/${cf}`, // viewer needs it same-origin
+    });
+  }
+
+  synced[p.name] = { folders: { [p.flat || "Files"]: out } };
+
+  // Prune anything from a previous rev so old catalogs don't pile up in the repo.
+  for (const f of readdirSync(dir)) {
+    if (f === "files" || keep.has(f)) continue;
+    try { rmSync(join(dir, f), { recursive: true, force: true }); } catch {}
+  }
+  for (const f of readdirSync(filesDir)) {
+    if (keepFiles.has(f)) continue;
+    try { rmSync(join(filesDir, f), { force: true }); } catch {}
+  }
+  console.error(`${p.name}: ${out.length} file(s)`);
+  saveProgress(p.name);
+}
+
 for (const p of PRODUCTS) {
+  if (p.files) { await syncDirectFiles(p); continue; }
+
   const dir = join("assets", "synced", p.slug);
   mkdirSync(dir, { recursive: true });
   const keep = new Set();   // thumbnail filenames referenced this run (for pruning)
