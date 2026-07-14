@@ -159,15 +159,69 @@ window.PORTAL_PRODUCTS = [
 ];
 
 /* =============================================================================
-   PUBLISHED VIDEOS — per-product educational video hub (SEPARATE from the
-   downloadable "Video" file folders). Add entries keyed by product name.
+   PUBLISHED VIDEOS — per-product "How to use" hub at the bottom of each product
+   page (SEPARATE from the downloadable "Video" asset folders above it).
+   Keyed by product name — the name must match `name` in PORTAL_PRODUCTS exactly.
+
      Array form:   "Product": [ ["<11-char-youtube-id>", "Title"], ... ]
      Vimeo form:   { title, vimeo:"id", hash?:"privacyhash", thumb:"url" }
-     MP4 form:     { title, mp4:"<dropbox url>", thumbId?/thumb? }
-   Empty for now.
+     MP4 form:     { title, mp4:"<dropbox url>", youtube?:"<id>", thumbId?/thumb? }
+
+   We use the MP4 form: the video plays and downloads from the Dropbox master
+   (highest quality, and keeps downloads on Dropbox like every other asset), while
+   `youtube` adds the "YouTube" button and `thumbId` borrows YouTube's poster frame
+   so we don't have to host cover images.
+   ⚠️ `youtube`/`thumbId` take the 11-char VIDEO ID, not the full URL.
    ========================================================================== */
 var PRODUCT_VIDEOS = {
-  // "Gravity Infuser": [ ["<youtubeId>", "How to Use: Stündenglass Gravity Infuser"] ],
+  "Gravity Infusers": [
+    {
+      title: "How to Use Your Stündenglass",
+      mp4: "https://www.dropbox.com/scl/fi/1bvsmcebt242dhd2lgujd/Getting-Started-with-Your-St-ndenglass.mp4?rlkey=3ixa2zvqc8fr02dtgqd15unfg&st=4sp1nffz&dl=0",
+      youtube: "HinNP7St1Bg", thumbId: "HinNP7St1Bg",
+    },
+    {
+      title: "How to Clean Your Stündenglass",
+      mp4: "https://www.dropbox.com/scl/fi/2hg4ww7lglfj1n1am115n/How-to-Clean-Your-St-ndenglass.mp4?rlkey=4elhsuqnvmazia3oy54f7ytlb&st=5nwksmwt&dl=0",
+      youtube: "XtZmZbc2d7c", thumbId: "XtZmZbc2d7c",
+    },
+  ],
+  "Classic Gravity Infusers": [
+    {
+      title: "How to Use Your Classic Gravity Infuser",
+      mp4: "https://www.dropbox.com/scl/fi/oyypwwe1qo2nhyvn93vzd/St-ndenglass-Tutorial-2024.mp4?rlkey=zp085hf4l3c252rauuz6lwv84&st=4wb8cvr2&dl=0",
+      youtube: "9edpmLcN88g", thumbId: "9edpmLcN88g",
+    },
+    {
+      title: "How to Clean Your Classic Gravity Infuser",
+      mp4: "https://www.dropbox.com/scl/fi/8kngurtccir16xxow43td/St-nden-Cleaning-condensed.mp4?rlkey=38x3flbowb70i6lizh260pmwd&st=2b06xtg7&dl=0",
+      youtube: "sdikAiCuPlc", thumbId: "sdikAiCuPlc",
+    },
+  ],
+  "Kompact Gravity Infusers": [
+    {
+      title: "How to Use Your Kompact",
+      mp4: "https://www.dropbox.com/scl/fi/klcpz8y25p08dg0qlfeb5/Kompact-Hookah-How-to.mp4?rlkey=wtozdf99actyn0q29tuboywo8&st=pnn3q6qd&dl=0",
+      youtube: "7u9pFBl9z3o", thumbId: "7u9pFBl9z3o",
+    },
+    {
+      title: "How to Clean Your Kompact",
+      mp4: "https://www.dropbox.com/scl/fi/milhb2y89sufsg968cn0t/Kompact-Cleaning.mp4?rlkey=5p31uowxm1npmnhwgszt547fl&st=r4qbo1uu&dl=0",
+      youtube: "jtpro43OAvg", thumbId: "jtpro43OAvg",
+    },
+  ],
+  "Modül": [
+    {
+      title: "How to Use the Stündenglass Modül Dok",
+      mp4: "https://www.dropbox.com/scl/fi/icln6pscil0tgqf9bmvek/How-To-Use-St-ndenglass-Mod-l-Dok.mp4?rlkey=w9gejm6or235139z7lge1hpjc&st=rrriwvl4&dl=0",
+      youtube: "kEZzAZ92130", thumbId: "kEZzAZ92130",
+    },
+    {
+      title: "How to Clean Your Modül",
+      mp4: "https://www.dropbox.com/scl/fi/oqx7a8dpa7tk895r7nuov/How-to-Clean-SG-Mod-l.mp4?rlkey=7w08o57mw5qsy8nrrhwffqmaj&st=urmrbq62&dl=0",
+      youtube: "cN2aQKLBye8", thumbId: "cN2aQKLBye8",
+    },
+  ],
 };
 
 // Inject videos into a product-level `videos` array (the educational video hub).
