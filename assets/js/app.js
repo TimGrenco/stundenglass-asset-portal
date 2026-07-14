@@ -151,9 +151,19 @@
     return String(s).toLowerCase().replace(/ü/g, "u").replace(/\+/g, " plus ")
       .replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
   }
-  function productHash(p) { return "#" + p.brand + "/" + slugify(p.name); }
+  // A product link, optionally deep into one of its folders:
+  //   #stundenglass/gravity-infusers?f=Black%20%2F%20Product%20Photos
+  // The folder rides in a ?f= suffix rather than more path segments, because both
+  // product slugs and folder paths contain "/" and would otherwise be ambiguous.
+  function productHash(p, folder) {
+    return "#" + p.brand + "/" + slugify(p.name) + (folder ? "?f=" + encodeURIComponent(folder) : "");
+  }
+  function hashFolder() {
+    var m = location.hash.match(/[?&]f=([^&]*)/);
+    try { return m ? decodeURIComponent(m[1]) : ""; } catch (e) { return ""; }
+  }
   function productFromHash() {
-    var h = location.hash.replace(/^#/, "");
+    var h = location.hash.replace(/^#/, "").split("?")[0];
     if (!h) return null;
     var parts = h.split("/"), brand = parts[0], slug = parts.slice(1).join("/");
     return PRODUCTS.filter(function (p) { return p.brand === brand && slugify(p.name) === slug; })[0] || null;
@@ -188,7 +198,7 @@
       renderHome(); return;
     }
     var p = productFromHash();
-    if (p) openDetail(p); else renderHome();
+    if (p) openDetail(p, hashFolder()); else renderHome();
   }
 
   // ---- clipboard -----------------------------------------------------------
@@ -878,7 +888,7 @@
     var p = PRODUCTS.filter(function (x) { return pid(x) === pidStr; })[0];
     if (!p) return;
     openDetail(p, folder);
-    var h = productHash(p);
+    var h = productHash(p, folder);
     if (location.hash !== h) { ignoreHash = true; location.hash = h; }
   }
 
@@ -1803,6 +1813,7 @@
     }
     function joinPath(path, seg) { return path ? path + SEP + seg : seg; }
     function isFolderBranch(path) { return childSegs(path).length > 0; }
+    function lastSeg(path) { var s = path.split(SEP); return s[s.length - 1]; }
     // Total files at `path` and everything beneath it.
     function filesUnder(path) {
       var prefix = path ? path + SEP : "", n = 0;
@@ -1820,8 +1831,12 @@
     }
     var openPath = "";                 // current folder ("" = product root)
     var active = "";                   // folder whose files show in the gallery (== openPath)
-    // Deep-link straight to a folder (e.g. from a file-search result).
-    if (initialFolder && p.folders[initialFolder]) { openPath = initialFolder; active = initialFolder; }
+    // Deep-link straight to a folder (from a file-search result, or a shared
+    // "Copy folder link" URL). Accepts a BRANCH path too (e.g. "Black", which
+    // holds no files itself), so a shared link can land on any level.
+    if (initialFolder && (p.folders[initialFolder] || isFolderBranch(initialFolder))) {
+      openPath = initialFolder; active = initialFolder;
+    }
     var selected = {};   // fileKey -> file object; persists while switching folder tabs
 
     function folderFiles() { return p.folders[active] || []; }
@@ -1920,11 +1935,24 @@
         (catTotal > 0
           ? '<div class="section-head" id="docs-head"><h2>Download assets by category</h2><span class="badge">' + catTotal + " file" + (catTotal === 1 ? "" : "s") + "</span></div>" +
             assetNav +
+            // A folder that only holds other folders still gets its own actions —
+            // you can share or download "Black" without drilling into a leaf.
+            (openPath && activeCount === 0
+              ? '<div class="folder-toolbar">' +
+                  '<h3 class="folder-title">' + escapeHTML(lastSeg(openPath)) +
+                    '<span class="ft-count">' + filesUnder(openPath) + " file" + (filesUnder(openPath) === 1 ? "" : "s") + "</span></h3>" +
+                  '<div class="gallery-toolbar">' +
+                    '<button class="btn ghost sm" id="copy-folder">' + icon("link") + " Copy folder link</button>" +
+                    '<button class="btn ghost sm" id="dl-folder">' + icon("download") + " Download folder</button>" +
+                  "</div>" +
+                "</div>"
+              : "") +
             (activeCount > 0
               ? '<div class="folder-toolbar">' +
                   '<h3 class="folder-title">' + activeLabel + '<span class="ft-count">' + activeCount + " file" + (activeCount === 1 ? "" : "s") + "</span></h3>" +
                   '<div class="gallery-toolbar">' +
                     '<label class="selectall"><input type="checkbox" id="sel-all"/> Select all</label>' +
+                    '<button class="btn ghost sm" id="copy-folder">' + icon("link") + " Copy folder link</button>" +
                     '<button class="btn ghost sm" id="dl-folder">' + icon("download") + " Download folder</button>" +
                   "</div>" +
                 "</div>" +
@@ -1989,8 +2017,15 @@
       if (copyDesc) copyDesc.addEventListener("click", function () {
         copyText(((p.info && p.info.fullDescription) || []).join("\n\n"), "Description copied");
       });
+      // Folder actions work at every level: `active` is the leaf being shown, and
+      // for a branch folder it equals openPath, so both resolve to the open folder.
       var dlFolderBtn = $("#dl-folder");
-      if (dlFolderBtn) dlFolderBtn.addEventListener("click", function () { downloadFolder(p, active); });
+      if (dlFolderBtn) dlFolderBtn.addEventListener("click", function () { downloadFolder(p, openPath || active); });
+      var copyFolderBtn = $("#copy-folder");
+      if (copyFolderBtn) copyFolderBtn.addEventListener("click", function () {
+        var path = openPath || active;
+        copyText(location.origin + location.pathname + productHash(p, path), "Folder link copied");
+      });
       var selAllBox = $("#sel-all");
       if (selAllBox) selAllBox.addEventListener("change", function (e) {
         var on = e.target.checked;
@@ -2002,9 +2037,14 @@
       var selDlBtn = $("#sel-dl");
       if (selDlBtn) selDlBtn.addEventListener("click", function () { downloadFiles(selectedList(), selectedList().length + " selected"); });
       // Folder cards and breadcrumb links both navigate by full path (data-path).
+      // Each hop rewrites the URL, so the address bar always names the folder you
+      // are looking at — that's what "Copy folder link" hands over, and it's what
+      // browser back/forward walks through.
       $$(".catcard, .crumb-btn", d).forEach(function (t) {
         t.addEventListener("click", function () {
           openPath = t.getAttribute("data-path") || "";
+          var h = productHash(p, openPath);
+          if (location.hash !== h) { ignoreHash = true; location.hash = h; }
           render();
         });
       });

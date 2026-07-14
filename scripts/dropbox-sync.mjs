@@ -427,12 +427,17 @@ for (const p of PRODUCTS) {
   // Recursive listing isn't allowed through a shared link, so walk the tree
   // folder-by-folder (one list call per folder) and emit ONE spec per folder that
   // has direct files, named by its full path ("A / B / C"). Powers folders-within-
-  // folders drill-down at any depth. List-only (no per-folder link minting), so
-  // "Download folder" falls back to the whole-product zip; per-file + "Download
-  // selected" downloads are unaffected.
+  // folders drill-down at any depth.
+  //
+  // Each spec carries the folder's Dropbox `id`, which is what lets us mint a
+  // per-folder share link below so "Download folder" zips EXACTLY that folder.
+  // Without the id it silently fell back to the whole-product zip — so a 9-file
+  // "Product Photos" handed you all 105 files.
   const top = await listFolder(tok, p.link, "");
   const folderSpecs = [];
-  async function walkFolder(base, label, entries) {
+  const folderIds = {};   // "A / B" -> Dropbox folder id, for EVERY folder (leaf or not)
+  async function walkFolder(base, label, entries, id) {
+    if (label && id) folderIds[label] = id;
     if (!entries) entries = await listFolder(tok, p.link, base);
     const direct = entries.filter((e) => e[".tag"] === "file");
     if (direct.length) {
@@ -447,10 +452,10 @@ for (const p of PRODUCTS) {
     });
     for (const ss of subFolders) {
       const seg = FOLDER_ALIAS[ss.name] || ss.name;
-      await walkFolder(base + "/" + ss.name, label ? label + " / " + seg : seg);
+      await walkFolder(base + "/" + ss.name, label ? label + " / " + seg : seg, null, ss.id);
     }
   }
-  await walkFolder("", "", top);
+  await walkFolder("", "", top, null);   // product root has no id — it IS p.link
 
   const filesDir = join(dir, "files");
   mkdirSync(filesDir, { recursive: true });
@@ -580,19 +585,23 @@ for (const p of PRODUCTS) {
     if (out.length) folders[spec.name] = (folders[spec.name] || []).concat(out);  // concat so aliased names merge
   }
 
-  // Per-folder Dropbox share link (cached by folder id) so "Download folder"
-  // zips exactly that folder. Falls back to the whole-product link when a folder
-  // has no id (deep/nested groupings) or the link can't be created.
+  // Per-folder Dropbox share link (cached by folder id) so "Download folder" zips
+  // exactly that folder. Minted for EVERY folder, including branch folders that
+  // hold only other folders ("Black") — the portal offers Download/Copy there too.
+  // Only falls back to the whole-product link if Dropbox won't mint one; that's a
+  // real fallback now, not the silent default it used to be.
   const folderLinks = {};
-  for (const spec of folderSpecs) {
-    if (!folders[spec.name] || folderLinks[spec.name]) continue;
-    let fl = spec.id ? linkCache[spec.id] : null;
-    if (!fl && spec.id) {
-      try { fl = await sharedFileLink(tok, spec.id); } catch { fl = null; }
-      if (fl) linkCache[spec.id] = fl;
+  let folderLinksMinted = 0;
+  for (const path of Object.keys(folderIds)) {
+    const id = folderIds[path];
+    let fl = linkCache[id];
+    if (!fl) {
+      try { fl = await sharedFileLink(tok, id); } catch { fl = null; }
+      if (fl) { linkCache[id] = fl; folderLinksMinted++; }
     }
-    folderLinks[spec.name] = dlLink(fl || p.link);
+    folderLinks[path] = dlLink(fl || p.link);
   }
+  if (folderLinksMinted) console.error(`  ↳ minted ${folderLinksMinted} folder link(s)`);
 
   // Prune thumbnails / originals for files that no longer exist.
   for (const fn of readdirSync(dir)) if (fn !== "files" && !keep.has(fn)) { try { unlinkSync(join(dir, fn)); } catch {} }
