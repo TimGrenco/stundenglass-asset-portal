@@ -2087,10 +2087,22 @@
       // for a branch folder it equals openPath, so both resolve to the open folder.
       var dlFolderBtn = $("#dl-folder");
       if (dlFolderBtn) dlFolderBtn.addEventListener("click", function () { downloadFolder(p, openPath || active); });
+      // Copies the folder's REAL Dropbox share link — the thing you'd paste to a
+      // partner so they can open the folder in Dropbox. (Not a portal deep link.)
+      // dl=0 so it opens the folder to browse rather than firing a .zip download;
+      // "Download folder" is the dl=1 path.
       var copyFolderBtn = $("#copy-folder");
       if (copyFolderBtn) copyFolderBtn.addEventListener("click", function () {
         var path = openPath || active;
-        copyText(location.origin + location.pathname + productHash(p, path), "Folder link copied");
+        var link = p.folderLinks && p.folderLinks[path];
+        // Never silently hand over the whole-product link dressed up as a folder
+        // link — say so instead. (The sync mints one per folder; a miss means it
+        // hasn't run for a folder added since.)
+        if (!link || (p.dropbox && link.split("?")[0] === p.dropbox.split("?")[0])) {
+          toast("No Dropbox link for this folder yet — it'll appear after the next sync");
+          return;
+        }
+        copyText(viewLink(link), "Dropbox folder link copied");
       });
       var selAllBox = $("#sel-all");
       if (selAllBox) selAllBox.addEventListener("change", function (e) {
@@ -2609,6 +2621,14 @@
   function dropboxZipUrl(link) {
     if (/[?&]dl=/.test(link)) return link.replace(/([?&]dl=)\d/, "$11");
     return link + (link.indexOf("?") === -1 ? "?dl=1" : "&dl=1");
+  }
+  // The opposite: a link that OPENS the folder in Dropbox to browse (dl=0) rather
+  // than immediately downloading a .zip. This is what gets shared with people.
+  function viewLink(link) {
+    // NB: a "$10" replacement string would be ambiguous with capture group 10 —
+    // build it in a function instead.
+    if (/[?&]dl=/.test(link)) return link.replace(/([?&]dl=)\d/, function (m, g1) { return g1 + "0"; });
+    return link + (link.indexOf("?") === -1 ? "?dl=0" : "&dl=0");
   }
   function downloadAll(p) {
     // Real Dropbox: download the whole product folder as a .zip from the shared
