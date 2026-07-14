@@ -107,6 +107,7 @@
     view: "stundenglass",      // single-brand portal (Stündenglass)
     type: "all",       // all | E-Comm Render Photos | Lifestyle Photos | Logos | Video | Misc
     query: "",
+    fileFacet: "",     // transient: active file-results facet (Photos, Videos, …)
     sort: "featured",  // featured (curated order) | az
     layout: "grid",    // grid | list (applies to the All-products grid)
   };
@@ -296,16 +297,71 @@
   }
 
   // ---- search: every product AND every individual file in the portal --------
-  // A query matches when ALL whitespace-separated terms are found (AND search),
-  // so "dash lifestyle png" narrows sensibly.
-  function matchTerms(hay, terms) {
-    for (var i = 0; i < terms.length; i++) { if (hay.indexOf(terms[i]) === -1) return false; }
+  // Everyday words people actually type, mapped onto what the assets are called.
+  var SEARCH_SYNONYMS = {
+    pic: ["photo", "png", "jpg"], pics: ["photo", "png", "jpg"], picture: ["photo"],
+    photos: ["photo"], image: ["photo", "png", "jpg"], images: ["photo"],
+    vid: ["video", "mp4"], vids: ["video", "mp4"], videos: ["video"], movie: ["video", "mp4"],
+    vector: ["svg", "ai", "eps"], vectors: ["svg", "ai", "eps"], logos: ["logo"],
+    doc: ["document", "pdf"], docs: ["document", "pdf"],
+    packshot: ["packaging"], pack: ["packaging"], lifestyle: ["lifestyle", "hero"],
+    jpeg: ["jpg"], transparent: ["png", "transparent"],
+    // Stündenglass vocabulary
+    stundenglass: ["stündenglass"], sg: ["stündenglass"],
+    infuser: ["infuser", "gravity"], hookah: ["gravity", "infuser"],
+    modul: ["modül"], kompact: ["kompact", "compact"], compact: ["kompact"],
+    tv: ["tv screen"], instore: ["in store", "in-store"], "in-store": ["in store"],
+  };
+  function termAliases(t) {
+    var syn = SEARCH_SYNONYMS[t];
+    if (!syn) return [t];
+    var out = [t]; syn.forEach(function (s) { if (out.indexOf(s) === -1) out.push(s); });
+    return out;
+  }
+  // A haystack matches when EVERY term (or one of its aliases) is present.
+  function matchTerms(hay, aliasGroups) {
+    for (var i = 0; i < aliasGroups.length; i++) {
+      var g = aliasGroups[i], hit = false;
+      for (var j = 0; j < g.length; j++) { if (hay.indexOf(g[j]) !== -1) { hit = true; break; } }
+      if (!hit) return false;
+    }
     return true;
   }
-  function queryTerms(q) {
-    return q.toLowerCase().split(/\s+/).filter(Boolean);
+  function queryTerms(q) { return q.toLowerCase().split(/\s+/).filter(Boolean); }
+  // Pre-expand a query into alias groups once, for reuse across every candidate.
+  function queryAliasGroups(q) { return queryTerms(q).map(termAliases); }
+  // Relevance: exact/prefix name matches beat body-text matches.
+  function relScore(label, hay, groups, rawQ) {
+    var name = (label || "").toLowerCase(), score = 0;
+    if (rawQ && name === rawQ) score += 100;           // exact name
+    if (rawQ && name.indexOf(rawQ) === 0) score += 40; // name starts with query
+    if (rawQ && name.indexOf(rawQ) !== -1) score += 20; // full phrase in name
+    groups.forEach(function (g) {
+      var inName = false, inHay = false;
+      for (var j = 0; j < g.length; j++) {
+        if (!inName && name.indexOf(g[j]) !== -1) inName = true;
+        if (!inHay && hay.indexOf(g[j]) !== -1) inHay = true;
+      }
+      if (inName) score += 12; else if (inHay) score += 3;
+    });
+    return score;
   }
-  // Flat, cached index of every file across every product/folder + how-to videos.
+  // Coarse "kind" buckets for the results facet bar, from the file's folder/type.
+  function facetOf(folder, file) {
+    if (file && (file.type === "video" || /video/i.test(file.format || ""))) return "Videos";
+    var f = folder || "";
+    if (/logo/i.test(f)) return "Logos";
+    if (/lifestyle/i.test(f)) return "Lifestyle";
+    if (/pack/i.test(f)) return "Packaging";
+    if (/in.?store|marketing/i.test(f)) return "In-store";
+    if (/photo|render|e-?comm|banner/i.test(f)) return "Photos";
+    if (/video/i.test(f)) return "Videos";
+    if (/doc|misc|manual|sheet/i.test(f)) return "Documents";
+    return "Assets";
+  }
+  var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "In-store", "Documents", "Assets"];
+
+  // Flat, cached index of every downloadable thing: product files + how-to videos.
   var _fileIndex = null;
   function fileIndex() {
     if (_fileIndex) return _fileIndex;
@@ -314,17 +370,19 @@
       if (p.folders) Object.keys(p.folders).forEach(function (folder) {
         (p.folders[folder] || []).forEach(function (file) {
           out.push({
-            product: p, folder: folder, file: file,
-            label: fileLabel(file),
-            hay: (fileLabel(file) + " " + folder + " " + (file.format || "") + " " + p.name + " " + p.category + " " + BRANDS[p.brand].name).toLowerCase()
+            product: p, brand: p.brand, folder: folder, file: file,
+            label: fileLabel(file), kind: facetOf(folder, file),
+            // Nested folders read as "Product · Black / Product Photos"
+            sub: p.name + " · " + folder,
+            hay: (fileLabel(file) + " " + folder + " " + (file.format || "") + " " + p.name + " " + (p.category || "") + " " + BRANDS[p.brand].name).toLowerCase()
           });
         });
       });
       (p.videos || []).forEach(function (v) {
         out.push({
-          product: p, folder: "How-to Videos", video: v,
+          product: p, brand: p.brand, folder: "How-to Videos", video: v,
           file: { name: v.title, format: "Video", thumb: v.thumb, url: v.url, type: "video" },
-          label: v.title,
+          label: v.title, kind: "Videos", sub: p.name + " · How-to Videos",
           hay: (v.title + " video how to " + p.name + " " + BRANDS[p.brand].name).toLowerCase()
         });
       });
@@ -332,24 +390,53 @@
     _fileIndex = out;
     return out;
   }
-  // Products (incl. logos + legacy) in the active brand matching the query.
+  // Products matching the query, ranked by relevance. Format tokens are excluded
+  // on purpose — "png" is a file concept and shouldn't pull in every product.
   function searchProducts(q) {
-    var terms = queryTerms(q), bk = state.view;
-    return PRODUCTS.filter(function (p) {
-      if (p.brand !== bk) return false;
+    var groups = queryAliasGroups(q), bk = state.view, rawQ = q.toLowerCase().trim();
+    return PRODUCTS.map(function (p) {
+      if (p.brand !== bk) return null;
       var info = p.info || {};
       var hay = (p.name + " " + (p.category || "") + " " + (p.type || "") + " " + (p.label || "") +
-        " " + BRANDS[p.brand].name + " " + p.formats.join(" ") + " " + (info.description || "") +
+        " " + BRANDS[p.brand].name + " " + (info.description || "") +
         " " + (info.fullName || "") + " " + ((info.highlights || []).join(" "))).toLowerCase();
-      return matchTerms(hay, terms);
-    });
+      if (!matchTerms(hay, groups)) return null;
+      return { p: p, score: relScore(p.name, hay, groups, rawQ) };
+    }).filter(Boolean).sort(function (a, b) {
+      return b.score - a.score || a.p.name.localeCompare(b.p.name);
+    }).map(function (x) { return x.p; });
   }
-  // Individual files in the active brand matching the query (capped for perf).
-  var SEARCH_FILE_CAP = 80;
+  // Individual files matching the query, ranked and grouped for the facet bar.
+  // Sorted BEFORE slicing, so the cap keeps the *best* matches.
+  var SEARCH_FILE_CAP = 60;
   function searchFiles(q) {
-    var terms = queryTerms(q), bk = state.view;
-    var hits = fileIndex().filter(function (r) { return r.product.brand === bk && matchTerms(r.hay, terms); });
-    return { total: hits.length, items: hits.slice(0, SEARCH_FILE_CAP) };
+    var groups = queryAliasGroups(q), bk = state.view, rawQ = q.toLowerCase().trim();
+    var hits = [];
+    fileIndex().forEach(function (r) {
+      if (r.brand !== bk) return;
+      if (!matchTerms(r.hay, groups)) return;
+      r._score = relScore(r.label, r.hay, groups, rawQ);
+      hits.push(r);
+    });
+    hits.sort(function (a, b) { return b._score - a._score || a.label.localeCompare(b.label); });
+    var counts = {};
+    hits.forEach(function (r) { counts[r.kind] = (counts[r.kind] || 0) + 1; });
+    var facets = FACET_ORDER.filter(function (k) { return counts[k]; })
+      .map(function (k) { return { kind: k, n: counts[k] }; });
+    var facet = state.fileFacet && counts[state.fileFacet] ? state.fileFacet : "";
+    var shown = facet ? hits.filter(function (r) { return r.kind === facet; }) : hits;
+    return { total: hits.length, all: hits, items: shown.slice(0, SEARCH_FILE_CAP), shownTotal: shown.length, facets: facets, facet: facet };
+  }
+  // Escape a query for use inside a RegExp (highlighting).
+  function reEscape(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
+  // Wrap query matches in <mark> so hits are obvious in the results.
+  function highlight(text, q) {
+    var t = escapeHTML(String(text == null ? "" : text));
+    var terms = queryTerms(q).filter(function (x) { return x.length > 1; });
+    if (!terms.length) return t;
+    try {
+      return t.replace(new RegExp("(" + terms.map(reEscape).join("|") + ")", "ig"), "<mark>$1</mark>");
+    } catch (e) { return t; }
   }
 
   // ---- rendering: cover ----------------------------------------------------
@@ -588,6 +675,15 @@
   }
 
   // ---- rendering: home -----------------------------------------------------
+  // Last computed search results, so Enter can jump straight to the best match.
+  var _lastSearch = null;
+  function openTopResult() {
+    if (!_lastSearch) return;
+    if (_lastSearch.prods && _lastSearch.prods.length) { navTo(_lastSearch.prods[0]); return; }
+    var items = _lastSearch.fileRes && _lastSearch.fileRes.items;
+    if (items && items.length) navToFile(pid(items[0].product), items[0].folder);
+  }
+
   function renderHome(noAnim) {
     $("#detail").style.display = "none";
     $("#styleguide").style.display = "none";
@@ -655,6 +751,7 @@
     if (state.sort === "az") prods = prods.slice().sort(byName);
     var fileRes = searchFiles(q);
     var total = prods.length + fileRes.total;
+    _lastSearch = { prods: prods, fileRes: fileRes };   // Enter → open the top hit
 
     $("#all-title").textContent = "Search results";
     var label = total + (total === 1 ? " result" : " results");
@@ -682,33 +779,55 @@
     }
 
     if (!fileRes.total) { sf.innerHTML = ""; return; }
-
-    var tiles = fileRes.items.map(searchFileTile).join("");
-    var more = fileRes.total > fileRes.items.length
-      ? '<p class="sf-more">Showing ' + fileRes.items.length + " of " + fileRes.total +
-        " matching files — refine your search to narrow it down.</p>"
-      : "";
-    sf.innerHTML =
-      '<div class="section-head"><h2>Matching files</h2><span class="badge">' + fileRes.total + "</span></div>" +
-      '<div class="sf-grid">' + tiles + "</div>" + more;
-    bindSearchFiles(sf);
+    renderFileResults(sf, fileRes, q);
   }
 
-  function searchFileTile(r) {
+  // File results: a facet bar (Photos / Videos / Logos …) over relevance-ranked
+  // tiles, with query matches highlighted.
+  function renderFileResults(sf, fileRes, q) {
+    var facetChips = "";
+    if (fileRes.facets.length > 1) {
+      facetChips = '<div class="sf-facets" role="tablist" aria-label="Filter results by type">' +
+        '<button class="sf-facet' + (fileRes.facet ? "" : " on") + '" data-facet="">All <span>' + fileRes.total + "</span></button>" +
+        fileRes.facets.map(function (fc) {
+          return '<button class="sf-facet' + (fileRes.facet === fc.kind ? " on" : "") + '" data-facet="' + fc.kind + '">' +
+            escapeHTML(fc.kind) + " <span>" + fc.n + "</span></button>";
+        }).join("") + "</div>";
+    }
+    var tiles = fileRes.items.map(function (r) { return searchFileTile(r, q); }).join("");
+    var more = fileRes.shownTotal > fileRes.items.length
+      ? '<p class="sf-more">Showing the top ' + fileRes.items.length + " of " + fileRes.shownTotal +
+        (fileRes.facet ? " " + fileRes.facet.toLowerCase() : " matching") + " files — add a word to narrow it down.</p>"
+      : "";
+    sf.innerHTML =
+      '<div class="section-head"><h2>Matching files &amp; assets</h2><span class="badge">' + fileRes.total + "</span></div>" +
+      facetChips +
+      '<div class="sf-grid">' + tiles + "</div>" + more;
+    bindSearchFiles(sf);
+    $$(".sf-facet", sf).forEach(function (b) {
+      b.addEventListener("click", function () {
+        state.fileFacet = b.getAttribute("data-facet") || "";
+        renderHome(true);
+      });
+    });
+  }
+
+  function searchFileTile(r, q) {
     var f = r.file, isVid = f.type === "video";
     var safe = r.label.replace(/"/g, "");
     var media = f.thumb
       ? '<img src="' + f.thumb + '" alt="' + safe + '" loading="lazy"/>'
       : icon(typeIcon[f.type] || "photo");
-    var dl = !isVid ? (f.file || f.url || "") : "";
+    // Everything downloads from Dropbox (nothing is hosted on the portal).
+    var dl = !isVid ? (f.url || "") : "";
     var pName = r.product.name.indexOf(BRANDS[r.product.brand].name) === 0 ? r.product.name : BRANDS[r.product.brand].name + " " + r.product.name;
     return '<div class="sf-cell">' +
-        '<button class="sf-open" data-pid="' + pid(r.product) + '" data-folder="' + r.folder + '" title="Open in ' + pName.replace(/"/g, "") + '">' +
+        '<button class="sf-open" data-pid="' + pid(r.product) + '" data-folder="' + escapeHTML(r.folder) + '" title="Open in ' + pName.replace(/"/g, "") + '">' +
           '<span class="sf-thumb' + (isVid ? " is-video" : "") + '">' + media + (isVid ? '<span class="sf-play">' + icon("play") + "</span>" : "") + "</span>" +
-          '<span class="sf-meta"><span class="sf-name">' + r.label + "</span>" +
-            '<span class="sf-sub">' + pName + " · " + folderLabel(r.folder) + (f.format ? ' · <span class="sf-fmt">' + f.format + "</span>" : "") + "</span></span>" +
+          '<span class="sf-meta"><span class="sf-name">' + highlight(r.label, q || "") + "</span>" +
+            '<span class="sf-sub">' + escapeHTML(pName) + " · " + highlight(r.folder, q || "") + (f.format ? ' · <span class="sf-fmt">' + f.format + "</span>" : "") + "</span></span>" +
         "</button>" +
-        (dl ? '<button class="sf-dl" data-sfdl="' + dl + '" data-sfname="' + safe + '"' + (f.file ? ' data-direct="1"' : "") + ' title="Download">' + icon("download") + "</button>" : "") +
+        (dl ? '<button class="sf-dl" data-sfdl="' + dl + '" data-sfname="' + safe + '" title="Download">' + icon("download") + "</button>" : "") +
       "</div>";
   }
   function bindSearchFiles(ctx) {
@@ -2237,13 +2356,61 @@
     var searchEl = $("#search");
     var clearEl = $("#search-clear");
     var syncClear = function () { if (clearEl) clearEl.classList.toggle("show", !!searchEl.value); };
+
+    // Popular-search suggestions, shown when the (empty) box is focused.
+    var SUGGESTIONS = ["Lifestyle", "Product Photos", "Logos", "Packaging", "Videos", "PNG"];
+    var suggestEl = null;
+    function buildSuggest() {
+      if (suggestEl) return suggestEl;
+      var host = document.querySelector(".browse-search");
+      if (!host) return null;
+      suggestEl = document.createElement("div");
+      suggestEl.className = "search-suggest";
+      suggestEl.innerHTML =
+        '<div class="ss-label">Popular searches</div>' +
+        '<div class="ss-chips">' + SUGGESTIONS.map(function (s) {
+          return '<button type="button" class="ss-chip" data-q="' + s + '">' + s + "</button>";
+        }).join("") + "</div>" +
+        '<div class="ss-hint">Press <kbd>/</kbd> to search from anywhere · <kbd>Enter</kbd> opens the top result</div>';
+      host.appendChild(suggestEl);
+      $$(".ss-chip", suggestEl).forEach(function (b) {
+        b.addEventListener("mousedown", function (e) { e.preventDefault(); });   // keep focus
+        b.addEventListener("click", function () {
+          searchEl.value = b.getAttribute("data-q");
+          state.query = searchEl.value.trim(); state.fileFacet = "";
+          syncClear(); hideSuggest(); renderHome(true);
+        });
+      });
+      return suggestEl;
+    }
+    function showSuggest() { var s = buildSuggest(); if (s && !searchEl.value) s.classList.add("show"); }
+    function hideSuggest() { if (suggestEl) suggestEl.classList.remove("show"); }
+
     searchEl.addEventListener("input", function (e) {
       state.query = e.target.value.trim();
+      state.fileFacet = "";   // new query → reset the results facet
       syncClear();
+      if (searchEl.value) hideSuggest(); else showSuggest();
       renderHome(true);
     });
+    searchEl.addEventListener("focus", function () { if (!searchEl.value) showSuggest(); });
+    searchEl.addEventListener("blur", function () { setTimeout(hideSuggest, 120); });
+    searchEl.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") { hideSuggest(); if (state.query) { searchEl.blur(); openTopResult(); } }
+      if (e.key === "Escape") { searchEl.value = ""; state.query = ""; state.fileFacet = ""; syncClear(); hideSuggest(); renderHome(true); }
+    });
     if (clearEl) clearEl.addEventListener("click", function () {
-      searchEl.value = ""; state.query = ""; syncClear(); renderHome(true); searchEl.focus();
+      searchEl.value = ""; state.query = ""; state.fileFacet = ""; syncClear(); renderHome(true); searchEl.focus();
+    });
+    // "/" focuses search from anywhere (unless already typing in a field).
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+      var t = e.target, tag = t && t.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA" || (t && t.isContentEditable)) return;
+      e.preventDefault();
+      navHome();
+      searchEl.focus();
+      searchEl.select();
     });
     syncClear();
 

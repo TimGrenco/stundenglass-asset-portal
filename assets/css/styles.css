@@ -89,7 +89,7 @@ a { color: inherit; text-decoration: none; }
 .browse-search { position: relative; flex: 1 1 240px; min-width: 200px; }
 .browse-search input { width: 100%; padding: 10px 38px 10px 40px; border-radius: var(--radius-pill); border: 1px solid var(--hair); background: var(--paper); color: var(--ink); font-size: 14px; font-family: inherit; }
 .browse-search input::placeholder { color: var(--stone-2); }
-.browse-search input:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(254, 200, 112, 0.35); }
+.browse-search input:focus { outline: none; border-color: var(--ink); box-shadow: 0 0 0 3px rgba(201, 162, 75, 0.35); }
 .browse-search > svg { position: absolute; left: 14px; top: 50%; transform: translateY(-50%); width: 17px; height: 17px; stroke: var(--stone); pointer-events: none; }
 .search-clear { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 24px; height: 24px; border: none; background: var(--mist); border-radius: 50%; display: none; align-items: center; justify-content: center; cursor: pointer; color: var(--stone); padding: 0; }
 .search-clear.show { display: inline-flex; }
@@ -845,3 +845,26 @@ a.logo-tile { cursor: pointer; }
   .cert-print-hide, .to-top, .toast { display: none !important; }
 }
 @media (max-width: 600px) { .trn-hero { flex-direction: column; gap: 14px; } .trn-result { gap: 14px; } }
+
+/* --------------------- SEARCH: suggestions, facets, highlight ---------------
+   Ported from the G Pen portal so search here behaves identically. */
+.search-suggest { position: absolute; top: calc(100% + 8px); left: 0; right: 0; z-index: 40; display: none; padding: 14px 14px 12px; border: 1px solid var(--hair); border-radius: 14px; background: var(--paper); box-shadow: var(--shadow-lg); }
+.search-suggest.show { display: block; animation: ss-in 0.14s ease; }
+@keyframes ss-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+.ss-label { font-size: 10.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: var(--stone-2); margin-bottom: 9px; }
+.ss-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.ss-chip { padding: 7px 13px; border: 1px solid var(--hair); border-radius: var(--radius-pill); background: var(--mist); color: var(--ink); font-family: inherit; font-size: 13px; font-weight: 600; cursor: pointer; transition: border-color 0.14s, background 0.14s; }
+.ss-chip:hover { border-color: var(--ink); background: var(--paper); }
+.ss-hint { margin-top: 11px; padding-top: 10px; border-top: 1px solid var(--hair); font-size: 11.5px; color: var(--stone); }
+.ss-hint kbd { display: inline-block; padding: 1px 6px; border: 1px solid var(--hair); border-bottom-width: 2px; border-radius: 5px; background: var(--mist); font-family: inherit; font-size: 11px; font-weight: 700; color: var(--ink); }
+
+/* Facet chips over the file results (Photos / Videos / Logos …) */
+.sf-facets { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 16px; }
+.sf-facet { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border: 1px solid var(--hair); border-radius: var(--radius-pill); background: var(--paper); color: var(--stone); font-family: inherit; font-size: 12.5px; font-weight: 700; cursor: pointer; transition: border-color 0.14s, color 0.14s, background 0.14s; }
+.sf-facet:hover { border-color: var(--ink); color: var(--ink); }
+.sf-facet span { font-size: 11px; font-weight: 800; color: var(--stone-2); }
+.sf-facet.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+.sf-facet.on span { color: var(--gold); }
+
+/* Query-match highlighting in results */
+.sf-name mark, .sf-sub mark { background: rgba(201, 162, 75, 0.30); color: inherit; padding: 0 1px; border-radius: 3px; }
