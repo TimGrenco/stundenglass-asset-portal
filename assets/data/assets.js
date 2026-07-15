@@ -58,24 +58,26 @@ window.PORTAL_CONFIG = {
 };
 
 /* Brand essentials (colors + fonts) power the "Brand essentials" panel.
-   NOTE: these are PLACEHOLDER values — replace with the official Stündenglass
-   brand-guide values when provided. Colors: add { name, hex }. Fonts: add
-   { name, role, stack }. `logoProduct` is the product name to deep-link the
-   "Download logos" button to. */
+   Pulled from the live stundenglass.com Shopify theme (its CSS variables are the
+   source of truth): the brand is strictly monochrome — black + white with warm
+   neutral surfaces, no accent colour. Type is Montserrat (headings) + Inter (body).
+   NOTE the warm section colours on the store (terracotta/peach) are Shopify
+   per-section "color schemes" — seasonal campaign accents, not brand colours — so
+   they're intentionally not listed here.
+   Colors: add { name, hex }. Fonts: add { name, role, stack }. */
 window.PORTAL_BRANDS = {
   stundenglass: {
     key: "stundenglass", name: "Stündenglass", wordmark: "STÜNDENGLASS",
     logoProduct: "Stündenglass Logos",
     colors: [
-      { name: "Ink", hex: "#0A0A0A" },
-      { name: "Paper", hex: "#FFFFFF" },
-      { name: "Stündenglass Gold", hex: "#C9A24B" },
-      { name: "Smoke", hex: "#1C1C1A" },
-      { name: "Glass", hex: "#E8E8E1" },
+      { name: "Ink", hex: "#000000" },      // primary — text, buttons (--color-text-body)
+      { name: "Paper", hex: "#FFFFFF" },     // page background (--color-bg)
+      { name: "Charcoal", hex: "#0F0F0F" },  // dark image / hero surfaces (--color-large-image-bg)
+      { name: "Stone", hex: "#E8E8E1" },     // warm neutral borders & dividers (--color-border)
     ],
     fonts: [
-      { name: "Archivo", role: "Display / Headlines", stack: "'Archivo', sans-serif" },
-      { name: "Archivo", role: "Body", stack: "'Archivo', sans-serif" },
+      { name: "Montserrat", role: "Display / Headlines", stack: "'Montserrat', sans-serif" },
+      { name: "Inter", role: "Body", stack: "'Inter', sans-serif" },
     ],
     // Official accounts — VERIFY handles/URLs before launch.
     social: [
