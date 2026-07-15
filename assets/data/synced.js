@@ -45341,8 +45341,8 @@ window.PORTAL_SYNCED = {
           "name": "SG_thumb_09",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/rvz1tu49kteilk0w0i34z/SG_thumb_09.png?rlkey=9hqx6ebjyh6z21ikminv5i7al&dl=0",
-          "thumb": "assets/synced/accessories/094654aade1a25955fdefcee0d2ec4eef074b500c855036204eaa92c5134d076.jpg",
+          "url": "https://www.dropbox.com/scl/fi/zj429wrjgz4isz1jiasxn/SG_thumb_09.png?rlkey=fb1ynl7mh1t2r6wqdqk4v02he&dl=0",
+          "thumb": "assets/synced/accessories/720c4b6e9a1cb29569cfdf49ae2bda113e32e955bd3784dc07d6e3ef8b790406.jpg",
           "file": null
         }
       ],
