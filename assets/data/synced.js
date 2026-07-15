@@ -47088,6 +47088,16 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "Glass Upstems / Glass Upstems": [
+        {
+          "name": "Glass Upstems Karla",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/ygdzd036czzygysi6i993/Glass-Upstems-Karla.mp4?rlkey=lq3k3lq9zmkaom6h1e1s7g9lh&dl=0",
+          "thumb": "assets/synced/accessories/bcf6f77a5a0e9799ff2b6d9fa565ac1a022f181633578d9924635bf9a72b68dc.jpg",
+          "file": null
+        }
+      ],
       "Glass Upstems / Kompact / Product Photos": [
         {
           "name": "_ALF0338",
@@ -50753,6 +50763,7 @@ window.PORTAL_SYNCED = {
       "Glass Hose Tips / Pink / Lifestyle Photos": "https://www.dropbox.com/scl/fo/wcprizd6vugg0nbvngtj6/ACtmh1aQkIHpjFW4KpcBGpk?rlkey=2detzilowxb1afzhaf29r9pxs&dl=1",
       "Glass Hose Tips / Pink / Social Videos": "https://www.dropbox.com/scl/fo/6vekfvcecignla4vzmk1r/AMbzHyN57qnZkpFMeE_0exs?rlkey=rvizrrodrs74bwbbb6072mj3f&dl=1",
       "Glass Upstems": "https://www.dropbox.com/scl/fo/q5qm6so8ikrtrwdxxhsyl/ABnySJOQHVsUTwegha_fIEA?rlkey=cazvyblbvak167vzgzrrtgk50&dl=1",
+      "Glass Upstems / Glass Upstems": "https://www.dropbox.com/scl/fo/giwb5chpwvpk2omcwm9au/ANrBkZI9GE_jOnM4suAFDh8?rlkey=6a79t2nzmd89l1d6draiul58l&dl=1",
       "Glass Upstems / Kompact": "https://www.dropbox.com/scl/fo/zqten9qalrgg5b68lx66v/ALA8o6ExZKJsTz9GNHewGEM?rlkey=7lueem89sq7lb7bj05dps4o1s&dl=1",
       "Glass Upstems / Kompact / Product Photos": "https://www.dropbox.com/scl/fo/zd5s07szyieiigdmlhgcn/AC5QUhTvTBVE2G6j69mkH28?rlkey=tggzf9ldxvtiz19labwuu48b8&dl=1",
       "Glass Upstems / Kompact / Lifestyle Photos": "https://www.dropbox.com/scl/fo/oiibo03ggm04q8u4brxq4/ACZY38acw9v5tAjbrbH6jvM?rlkey=gc792ojwrz0v4ov8oliqoxrg6&dl=1",
