@@ -899,17 +899,28 @@
   // A product's own in-store materials, de-duplicated by base name: when a
   // transparent PNG and a white-background copy both exist, keep only the PNG so
   // retailers don't see doubles.
-  function instoreOwn(p) {
-    var list = (p.folders && p.folders[INSTORE_FOLDER]) || [];
+  // De-dupe a list of in-store files by name: skip bare content-hash names, and
+  // when a transparent PNG and a white-bg copy share a name keep the PNG.
+  function dedupInstore(list) {
     var seen = {}, out = [];
-    list.forEach(function (x) {
-      // Skip unnamed files (bare 64-char content-hash names) — not real materials.
+    (list || []).forEach(function (x) {
       if (/^[0-9a-f]{64}$/i.test(x.name || "")) return;
       var i = seen[x.name];
       if (i === undefined) { seen[x.name] = out.length; out.push(x); }
       else if (/png/i.test(x.format) && !/png/i.test(out[i].format)) out[i] = x;
     });
     return out;
+  }
+  function instoreOwn(p) {
+    var folders = p.folders || {}, all = [];
+    // Collect the in-store folder wherever it lives in the product's tree — at the
+    // root ("In-Store Marketing") OR nested under a colourway ("Khalifa / In-Store
+    // Marketing") — so a product's materials surface regardless of how they were
+    // organised in Dropbox. Matches any path whose LAST segment is INSTORE_FOLDER.
+    Object.keys(folders).forEach(function (f) {
+      if (f.split(" / ").pop() === INSTORE_FOLDER) all = all.concat(folders[f]);
+    });
+    return dedupInstore(all);
   }
   function renderInStore() {
     var box = $("#instore"); if (!box) return;
@@ -1791,7 +1802,7 @@
     // The In-Store Marketing folder also has its own section below the gallery. In
     // the gallery it's PNG-de-duplicated (no white-bg doubles) and pinned as the
     // last tab.
-    if ((p.folders[INSTORE_FOLDER] || []).length) p.folders[INSTORE_FOLDER] = instoreOwn(p);
+    if ((p.folders[INSTORE_FOLDER] || []).length) p.folders[INSTORE_FOLDER] = dedupInstore(p.folders[INSTORE_FOLDER]);
     var folderNames = Object.keys(p.folders).filter(function (f) { return (p.folders[f] || []).length; });
 
     // ---- N-level folder browser. Folder keys are full "/"-joined paths
