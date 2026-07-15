@@ -48383,5 +48383,77 @@ window.PORTAL_SYNCED = {
         }
       ]
     }
+  },
+  "In-Store Marketing General": {
+    "folders": {
+      "In-Store Marketing": [
+        {
+          "name": "Modul-Table-Tent-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/6tsspreyw7upvmw5y2r7i/Modul-Table-Tent-Mockup.jpg?rlkey=37yd5vmu0ie3fypvi4kcerqzs&dl=0",
+          "thumb": "assets/synced/instore-general/db1380847b3fa98b18115a099c3107937c2651a4207214239670d6bd2cf519ac.jpg",
+          "file": null
+        },
+        {
+          "name": "Screenshot 2026-07-15 at 1.19.29 PM",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/o0mbam0gcy1qehfgujuq4/Screenshot-2026-07-15-at-1.19.29-PM.png?rlkey=06gut9xn373ab1wgam1fidqq8&dl=0",
+          "thumb": "assets/synced/instore-general/aba067ecca3240804ddef68cd98f80407b39646b52d521a548a21f39d0b5b5ef.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-Sticker-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/hxa9rvxsuuhyevtc7k39z/Stundenglass-Sticker-Mockup.jpg?rlkey=ao1gk9zgh7tv2vaoojc2hujpe&dl=0",
+          "thumb": "assets/synced/instore-general/5868720760e603f255c241af1a609a84e92560d648c00a95ac1839f224288fd0.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/c2l4qnh5fv1qnn25d398v/Stundenglass-v3-Mockup.jpg?rlkey=abk5f7013hqkgv1iencgzt0ny&dl=0",
+          "thumb": "assets/synced/instore-general/944bfb58b69b9680d54ab289f377c7fd41578d4c279ea527d8e505f3f94a236b.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Postcard-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/dff7ficzxq0s7gbr6s1kz/Stundenglass-v3-Postcard-Mockup.jpg?rlkey=mimglph3oiqgqt95kc1s30rf3&dl=0",
+          "thumb": "assets/synced/instore-general/6a9cda6455fbee836cb5736b35a48ee1562538609b0066b52d4a652f2ea873a6.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Table-Tent-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/5gwafekw6zb7omndl54bw/Stundenglass-v3-Table-Tent-Mockup.jpg?rlkey=f1zmvu928dhypey3av88kgdlt&dl=0",
+          "thumb": "assets/synced/instore-general/8b6373f930b79f9b5834170b1951f23a72215ed922f4e0ca0cd4db1e25556f33.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-V3-window-cling-mockup copy",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/nx20hy0b3betfv3q9h6rx/Stundenglass-V3-window-cling-mockup-copy.jpg?rlkey=0oz63yb3chi3l6m6pfccm5aio&dl=0",
+          "thumb": "assets/synced/instore-general/17b123c4badf396977f2b5c27152fd2313359b73cfb2e8b466a55c2886f3614a.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-Wiz-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/hlvtduwa09bg9x0o2mv79/Stundenglass-Wiz-Mockup.jpg?rlkey=pcu4ed209pkt6wtd8xfe9m0dd&dl=0",
+          "thumb": "assets/synced/instore-general/83c04c320835b01330f1db488e6f93254269501c2859f63b72be545fd8e15f5b.jpg",
+          "file": null
+        }
+      ]
+    },
+    "dropbox": "https://www.dropbox.com/scl/fo/uyumil4v39m7anojn1s2i/ADf7ryae4gkbl-AxhY2K3yw?rlkey=hiycgttx4hcg0vfyobizhm5r0&dl=1",
+    "folderLinks": {}
   }
 };
