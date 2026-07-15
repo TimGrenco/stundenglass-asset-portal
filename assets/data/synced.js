@@ -32702,6 +32702,46 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "_ALF6240",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/banng1ue3qygjx2medg45/_ALF6240.jpg?rlkey=cvq5z0ie74sbcpbv6g3lpgyd4&dl=0",
+          "thumb": "assets/synced/modul/b1a5c82fcf3987d51ab4b60487c4e19766d6e8a5dfed54dd9286e9ba06b5bbb3.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF6304",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/rr4joc1gla6ry0z1nn0m1/_ALF6304.jpg?rlkey=st3ei9fhzhi5w35ahs7ogeb06&dl=0",
+          "thumb": "assets/synced/modul/f8c369492de729be36e8a94038d8a21746a827aa557db30b13cdd47b72bde608.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF6542",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/rbxqh5yci6k1tig2ueelh/_ALF6542.jpg?rlkey=u1f5eb6h0iy2fyjb1ucyj7rig&dl=0",
+          "thumb": "assets/synced/modul/73319b6fb9aa75421eb2e944a35028178183fc5c471270fd4fc16cae9c5c7847.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF6607",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/vhttiqwbxdvwp0z4hxrzb/_ALF6607.jpg?rlkey=6yb6sevjigwtyn84ddfdvxy6h&dl=0",
+          "thumb": "assets/synced/modul/8582eeadb64e22d5d514ab2d503990e19c00ae9c22c80f80137910cb5d14a99d.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF6653",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/u3zufcbrwt3knbyi0ien4/_ALF6653.jpg?rlkey=iz5coao5d4w5q76qh11icyfjs&dl=0",
+          "thumb": "assets/synced/modul/dd53f999d7ac8aeadb6a11f4325598eec2ec62844f9a728198525d219a453528.jpg",
+          "file": null
+        },
+        {
           "name": "_ALF7021",
           "type": "image",
           "format": "JPG",
@@ -33458,26 +33498,10 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Reels_Modül Tutorial Cleaning (1)",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/q5luog0oz8zzvxl9zhmrv/Reels_Mod-l-Tutorial-Cleaning.mp4?rlkey=301c7hhfhy0c3itz2afsqad3a&dl=0",
-          "thumb": "assets/synced/modul/8eec6ef71319f5821f5fc328372b15a67101099887f71ec780ada0472e72a067.jpg",
-          "file": null
-        },
-        {
           "name": "Reels_Modül Tutorial Deep Cleaning",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/3zb3xitbgxa2x3gpubetw/Reels_Mod-l-Tutorial-Deep-Cleaning.mp4?rlkey=qmo9itsh2delsazd3rpl9f5we&dl=0",
-          "thumb": "assets/synced/modul/3487495b83cd011f3626e37dea2dd4b3e0ed56bccc908a45c7dce3900d532787.jpg",
-          "file": null
-        },
-        {
-          "name": "Reels_Modül Tutorial Deep Cleaning (1)",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/833ivqur3gj9nvf2xn1wo/Reels_Mod-l-Tutorial-Deep-Cleaning.mp4?rlkey=kvy1iux2c5b92wkwru8ntkzya&dl=0",
           "thumb": "assets/synced/modul/3487495b83cd011f3626e37dea2dd4b3e0ed56bccc908a45c7dce3900d532787.jpg",
           "file": null
         },
@@ -33490,26 +33514,10 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Reels_Modül Tutorial Settings (1)",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/w3oc57rsyjj12qh21rjr3/Reels_Mod-l-Tutorial-Settings.mp4?rlkey=6b6j3juubxbedj31niuxlbdke&dl=0",
-          "thumb": "assets/synced/modul/d0602fb738a24c119f1903ecba00c58be0a276b8ed7bb3f6561f98195e5053eb.jpg",
-          "file": null
-        },
-        {
           "name": "Reels_Modül Tutorial Setup",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/n31kcgrfn8mkmujs8k9kv/Reels_Mod-l-Tutorial-Setup.mp4?rlkey=tg1wcc087hy7sc5n9ywapqe9p&dl=0",
-          "thumb": "assets/synced/modul/c0383a643bae37a1e7103f6f9e5b66fba5da4075a59ce54aa4a3932bf81355f7.jpg",
-          "file": null
-        },
-        {
-          "name": "Reels_Modül Tutorial Setup (1)",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/nsogqthg62tcznhg3pnf7/Reels_Mod-l-Tutorial-Setup.mp4?rlkey=nus0irzd7fanj1cpjx0glyksk&dl=0",
           "thumb": "assets/synced/modul/c0383a643bae37a1e7103f6f9e5b66fba5da4075a59ce54aa4a3932bf81355f7.jpg",
           "file": null
         },
@@ -33522,26 +33530,10 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Reels_Modül Tutorial Tank Types (1)",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/v4ywc68wc46m8utvqt8ed/Reels_Mod-l-Tutorial-Tank-Types.mp4?rlkey=akr4ngq8sm1cau3shw3l42vnw&dl=0",
-          "thumb": "assets/synced/modul/e7ad4403afe42fab9dcc30da8b5d0e92fd4ff57c7d1809bdacf7b0011224078b.jpg",
-          "file": null
-        },
-        {
           "name": "Reels_Modül Tutorial Unboxing",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/620aqwrcs05vcwiye7cc7/Reels_Mod-l-Tutorial-Unboxing.mp4?rlkey=gzm4q9mgi0cz55gix3m8d0g4n&dl=0",
-          "thumb": "assets/synced/modul/4be31d642e2c10010910f776d0e7e58d1e89925fc91463a49ce473e4301585ff.jpg",
-          "file": null
-        },
-        {
-          "name": "Reels_Modül Tutorial Unboxing (1)",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/8wappqkqsz8x5vitcpxpm/Reels_Mod-l-Tutorial-Unboxing.mp4?rlkey=uccdybb2yf0lh32zamqabhslm&dl=0",
           "thumb": "assets/synced/modul/4be31d642e2c10010910f776d0e7e58d1e89925fc91463a49ce473e4301585ff.jpg",
           "file": null
         },
