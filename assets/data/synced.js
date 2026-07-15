@@ -20083,106 +20083,6 @@ window.PORTAL_SYNCED = {
       ],
       "Cookies / TV Screen Videos": [
         {
-          "name": "Cookies SG_BlueRoom",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/wjdah7skavspom9xj14mt/Cookies-SG_BlueRoom.mp4?rlkey=wh45hjl7k0of5kr9bcjvkl9c4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/50da9436d6c85faaa1394afad403ed04726314c371c94f58712158f9586d97b1.jpg",
-          "file": null
-        }
-      ],
-      "Cookies / Documents / Colored Glass Liner": [
-        {
-          "name": "_ALF0045",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/z1xvx32lemg1qfvdwbb7b/_ALF0045.jpg?rlkey=43pdfrw0rzkky1uhoyqlwwonc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1ea59c352bc39a3f5136d6a199b2f7ea55f2e5e96fd2e0be0e3f9015da5f5161.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0046",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3eqjzk0z5hx1z9fwasojg/_ALF0046.jpg?rlkey=x3olx5jelx6dt6bj282y9g27p&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3ebbf4849b8b9563c1d21fbd7fbd6bf1994e96b98fbecbf04fd50373fb49668e.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0047",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ev3wcuea9oippg7b1my2n/_ALF0047.jpg?rlkey=76fjen2zhy3ctgcp6d17jvsh6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/61f9209fa9954293df8c5d0acd40ed535755640da22d4388ad533ec300530910.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0048",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5qsvqeiq5ylnxadvhpbm4/_ALF0048.jpg?rlkey=njqgb72r12m1kr4q58srw8k3r&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3ef61627bf8352e688a2b2b79f3b62d9de3f151338e35d54b10524fd696a3d97.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0049",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/t1faztvketcqkp6cx6vxs/_ALF0049.jpg?rlkey=u3t4jevl721dkuiictmzo4n87&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/96180375dc42103140c4d6b01614951899fcbd0636ea053ef7e42fd03e341514.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0086",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ce63j6b9loa8luj3od2kd/_ALF0086.jpg?rlkey=3q7c0i5s2oex1uwviwdo94889&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7cd0040b95b142dd7fb6d142bb4db5245896bd92f7ca30f16355d4531e636dd6.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0087",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qffotsal8wu89se4fpk30/_ALF0087.jpg?rlkey=uzpp19pesb9grrmzm29mqzl7e&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f5706c5cfafa3d62d06f69eb73546a46aae977c677034bb896e08f08323a20df.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0084",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/rh723p0uynl4arw6dv9ot/_GSH0084.jpg?rlkey=hoaz72in63fic7zfqgazgpj7k&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fce61c595961802ade7ee8799714f4c4c9206f38782f0d5970579336437f2c21.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0085",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/x85jmk255guf41n173way/_GSH0085.jpg?rlkey=zof03c1js093ow0ut3izn9zu8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/41b86bb58ba7d317b8b3ce06e255b69df778b27ea019b5ba33d6fdbb48483036.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0101",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1g29lynzsoe83k673mrud/_GSH0101.jpg?rlkey=fsguwf2qwp83m7434d4mj465b&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/bc372c56065df1873b292ef5df99e0788a8d7086694c7907daa9e30592bb7ca2.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0107",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9dfy824875nygsyptt51w/_GSH0107.jpg?rlkey=7u04v7qyzflh7lxyc8n32z40w&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/835e9957eac7ac908822f02646227487d483fd758a2ff2c2577e6573c6e3f143.jpg",
-          "file": null
-        }
-      ],
-      "Cookies / Hyer": [
-        {
           "name": "Alex Spannabis SG Hyer Horiztonal",
           "type": "video",
           "format": "MP4",
@@ -20191,19 +20091,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Bearded Larry_Cookies Party",
+          "name": "Cookies SG_BlueRoom",
           "type": "video",
           "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/s45mq6eyl5wn65dqmr2a2/Bearded-Larry_Cookies-Party.mp4?rlkey=lxjlhuqnxsrmkinsece7juvwn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d70545b55df791346619146842d9810711c2e4f9733e84cde441b89000ea1d9a.jpg",
-          "file": null
-        },
-        {
-          "name": "Cookies Vegas Party",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/gua4d9t0s9bi946vx5zqb/Cookies-Vegas-Party.mp4?rlkey=mqmxvvz3gziiii09vvd5j0rhl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a458b4d69f3a7de23a99b684f2aff18883c9f700ebc7710e16596513df171a08.jpg",
+          "url": "https://www.dropbox.com/scl/fi/wjdah7skavspom9xj14mt/Cookies-SG_BlueRoom.mp4?rlkey=wh45hjl7k0of5kr9bcjvkl9c4&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/50da9436d6c85faaa1394afad403ed04726314c371c94f58712158f9586d97b1.jpg",
           "file": null
         },
         {
@@ -20220,6 +20112,24 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/g8if5y30u9pbkqf1i7k4f/Spannabis-2023.mp4?rlkey=4erddwaild1pm72pe3hvdrslk&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/e72593ca842b325ddb34a7f7a6561496a9909897ce71609ea06cf311036a40f2.jpg",
+          "file": null
+        }
+      ],
+      "Cookies / Hyer": [
+        {
+          "name": "Bearded Larry_Cookies Party",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/s45mq6eyl5wn65dqmr2a2/Bearded-Larry_Cookies-Party.mp4?rlkey=lxjlhuqnxsrmkinsece7juvwn&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/d70545b55df791346619146842d9810711c2e4f9733e84cde441b89000ea1d9a.jpg",
+          "file": null
+        },
+        {
+          "name": "Cookies Vegas Party",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/gua4d9t0s9bi946vx5zqb/Cookies-Vegas-Party.mp4?rlkey=mqmxvvz3gziiii09vvd5j0rhl&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/a458b4d69f3a7de23a99b684f2aff18883c9f700ebc7710e16596513df171a08.jpg",
           "file": null
         }
       ],
@@ -40478,8 +40388,6 @@ window.PORTAL_SYNCED = {
       "Cookies / Lifestyle Photos / Oct 2022": "https://www.dropbox.com/scl/fo/ndc9u9je1vga1ftuxg8ah/ACPX8G-U5h-cig7xGlqNUQc?rlkey=nhksgo6ui35bhq7t70m1b5zkt&dl=1",
       "Cookies / Social Videos": "https://www.dropbox.com/scl/fo/1h5q723dj0fsw5r1kohwq/AE4-sVBKPKdw6lnIX_iqPyg?rlkey=nwhfrkvf0xu1e0zpw4kqfwzeo&dl=1",
       "Cookies / TV Screen Videos": "https://www.dropbox.com/scl/fo/41a8afuy4jki8w1ttf4bt/AJZijfjk64X1LQxXSbDcsUo?rlkey=e11wagr0deajwgitpg596wn39&dl=1",
-      "Cookies / Documents": "https://www.dropbox.com/scl/fo/mhgd0ooiejh07xfwy1dd9/AExlF_9628JASAHvgx9sRtA?rlkey=3bybbml4a3r6xrfcb5ohlj2xw&dl=1",
-      "Cookies / Documents / Colored Glass Liner": "https://www.dropbox.com/scl/fo/241sq3ot2p93iykm9qsnq/AHBHLXvJXUcdqfEonHSPeDA?rlkey=tw8mjn393axwt42osixy00ysm&dl=1",
       "Cookies / Hyer": "https://www.dropbox.com/scl/fo/yett5vhndq4xfdolssl9v/AHcaqB70KaewdIMQM7JWHZY?rlkey=7yyuerb5z1ml6ktl8fh0uyluy&dl=1",
       "Dr Greenthumbs": "https://www.dropbox.com/scl/fo/uds8hp7qu9gor9ya0fcx0/AKLZE1JQEP4cRa1pXoy1lBI?rlkey=l5ymupvs3t2xcmn9nkqmbejkj&dl=1",
       "Dr Greenthumbs / Documents": "https://www.dropbox.com/scl/fo/bosq6bc92j10hhf6ko1jl/AM40AKjdxg6TdS6dy6KkFRY?rlkey=pcw9h2x0ynkgqh8lspigbdiws&dl=1",
