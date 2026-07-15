@@ -104,7 +104,11 @@ const PRODUCTS = [
     // Marketing Materials" section (window.PORTAL_INSTORE_GENERAL in assets.js).
     name: "In-Store Marketing General",
     slug: "instore-general",
-    link: "",
+    // The overall brand-level marketing-materials folder — "we'll add everything
+    // here." Feeds PORTAL_INSTORE_GENERAL, which the home "Retail Marketing
+    // Materials" card shows FIRST (so new drops here become the home-page previews)
+    // and the order cart lists alongside the per-product pieces.
+    link: "https://www.dropbox.com/scl/fo/uyumil4v39m7anojn1s2i/ADf7ryae4gkbl-AxhY2K3yw?rlkey=hiycgttx4hcg0vfyobizhm5r0&dl=0",
     flat: "In-Store Marketing",
   },
 // Skip any product that has neither a folder link nor direct file links yet.
