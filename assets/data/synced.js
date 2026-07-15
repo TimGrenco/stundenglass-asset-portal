@@ -1,6 +1,48 @@
 window.PORTAL_SYNCED = {
   "Gravity Infusers": {
     "folders": {
+      "In-Store Marketing": [
+        {
+          "name": "Stundenglass-Sticker-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/2qjw099jerwve5kp8p1ys/Stundenglass-Sticker-Mockup.jpg?rlkey=tpgwoft12hydjrolmxdhwv5g8&dl=0",
+          "thumb": "assets/synced/gravity-infusers/5868720760e603f255c241af1a609a84e92560d648c00a95ac1839f224288fd0.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/yob3fxk0zcb14i9oedmk8/Stundenglass-v3-Mockup.jpg?rlkey=dzn0u1fplh33c50klol7lm1is&dl=0",
+          "thumb": "assets/synced/gravity-infusers/3ac5b8b405553de135e1c69586eaf5ca6824cee2091ee540c22dc365cc8e95da.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Postcard-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/t9rzllkpev6z5873m2c94/Stundenglass-v3-Postcard-Mockup.jpg?rlkey=qpfagocsdh7c4qzimj67bay7s&dl=0",
+          "thumb": "assets/synced/gravity-infusers/6a9cda6455fbee836cb5736b35a48ee1562538609b0066b52d4a652f2ea873a6.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Table-Tent-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/2cptq9aqfe2swwzbz7vkm/Stundenglass-v3-Table-Tent-Mockup.jpg?rlkey=6w2ebz5yxrxbow2og9hfnu78u&dl=0",
+          "thumb": "assets/synced/gravity-infusers/8b6373f930b79f9b5834170b1951f23a72215ed922f4e0ca0cd4db1e25556f33.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-V3-window-cling-mockup copy",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/72nu46vmqkf9ndc3i1ih5/Stundenglass-V3-window-cling-mockup-copy.jpg?rlkey=jilcy6jhbmdnkyq2sv5jbqea7&dl=0",
+          "thumb": "assets/synced/gravity-infusers/17b123c4badf396977f2b5c27152fd2313359b73cfb2e8b466a55c2886f3614a.jpg",
+          "file": null
+        }
+      ],
       "Black / Product Photos": [
         {
           "name": "SG_thumb_01",
@@ -902,6 +944,7 @@ window.PORTAL_SYNCED = {
     },
     "dropbox": "https://www.dropbox.com/scl/fo/3j4un063pxgcbtl7yqq5z/ACmVjEjB25HyZTAucWfMCLk?rlkey=b620zqgmr0hxb5lbtazvd4qfk&dl=1",
     "folderLinks": {
+      "In-Store Marketing": "https://www.dropbox.com/scl/fo/chudip3cj6y6rps1qk8so/AFoA-gXMHj7kCennbnN_3fI?rlkey=85r37dkdiykmb7auiyku5mel6&dl=1",
       "Black": "https://www.dropbox.com/scl/fo/av79uo8aimw4f1vlgdlw6/AFPcKTpF8JENc3UrmOy1UIg?rlkey=yn5jtu9qsf5bumjg7c03i9sxs&dl=1",
       "Black / Product Photos": "https://www.dropbox.com/scl/fo/hclu0j0jk5uk5n4hfgvfa/AMn449WS9HEULBVvL8YTjks?rlkey=jzcn6rnifmnmx73qwbuc7ey9j&dl=1",
       "Black / Lifestyle Photos": "https://www.dropbox.com/scl/fo/uvoofdbcozdvgz5kromnh/AOhObnb5kT_Lz9wZkRwQiZ4?rlkey=rq4ah3g5npboml8du7gkzxmng&dl=1",
