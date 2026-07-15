@@ -223,6 +223,13 @@ async function listFolder(tok, link, path, recursive) {
   return entries;
 }
 
+// Terminal, per-path Dropbox errors: one folder being content-restricted (DMCA),
+// deleted mid-sync, or permission-locked shouldn't abort the entire run. These are
+// 409s that retrying can't fix, so we skip that folder/subtree and keep going.
+const SKIPPABLE_PATH_ERRORS = /restricted_content|not_found|not_folder|no_permission|malformed_path/;
+function isSkippablePathError(msg) { return SKIPPABLE_PATH_ERRORS.test(msg || ""); }
+function pathErrorTag(msg) { return (SKIPPABLE_PATH_ERRORS.exec(msg || "") || [, "error"])[0] || "error"; }
+
 // Recursively collect every file under `base`, labelling each with its path
 // relative to `base` (e.g. "Renders / MJ Arsenal · 10mm_Female"). Used for `deep`
 // products whose Dropbox folders nest several levels (colorway → type → shoot).
@@ -433,12 +440,30 @@ for (const p of PRODUCTS) {
   // per-folder share link below so "Download folder" zips EXACTLY that folder.
   // Without the id it silently fell back to the whole-product zip — so a 9-file
   // "Product Photos" handed you all 105 files.
-  const top = await listFolder(tok, p.link, "");
+  let top;
+  try { top = await listFolder(tok, p.link, ""); }
+  catch (e) {
+    // If a whole product's root listing is restricted/gone, skip just this product
+    // and keep the rest of the run (its previously-synced data is preserved).
+    if (isSkippablePathError(e.message)) { console.error("! skipped product [" + pathErrorTag(e.message) + "]: " + p.name); continue; }
+    throw e;
+  }
   const folderSpecs = [];
   const folderIds = {};   // "A / B" -> Dropbox folder id, for EVERY folder (leaf or not)
   async function walkFolder(base, label, entries, id) {
     if (label && id) folderIds[label] = id;
-    if (!entries) entries = await listFolder(tok, p.link, base);
+    if (!entries) {
+      try { entries = await listFolder(tok, p.link, base); }
+      catch (e) {
+        // A restricted/deleted/locked folder: skip it and its subtree, keep walking
+        // the siblings, so one bad folder can't discard the whole product's sync.
+        if (isSkippablePathError(e.message)) {
+          warnOnce("skip:" + base, "  ! skipped folder [" + pathErrorTag(e.message) + "]: " + (label || "(root)"));
+          return;
+        }
+        throw e;
+      }
+    }
     const direct = entries.filter((e) => e[".tag"] === "file");
     if (direct.length) {
       direct.forEach((f) => { f.relPath = base + "/" + f.name; f.displayName = f.name.replace(/\.[^.]+$/, ""); });
