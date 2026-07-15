@@ -13,9 +13,9 @@
   var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
   var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
   var today = new Date();
-  function daysSince(iso) { return Math.floor((today - new Date(iso)) / 86400000); }
-  // "New" badges are now fully manual — set `newBadge: true` (or a colour) on any
-  // product in assets.js. (No longer auto-shown by upload date.)
+  // "New" badges are fully manual — set `newBadge: true` (or a colour) on any
+  // product in assets.js. (No longer auto-shown by upload date, so there's no
+  // date-difference helper here anymore.)
   function fmtDate(iso) {
     // Parse as local midnight so an ISO date doesn't shift a day in US timezones.
     return new Date(iso + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
@@ -100,7 +100,6 @@
     });
     p.total = total;
     p.formats = Object.keys(fmts);
-    p.days = daysSince(p.added);
   });
 
   // ---- state ---------------------------------------------------------------
@@ -223,8 +222,10 @@
     "Misc": "Documents",
   };
   function typeLabel(t) { return TYPE_LABELS[t] || t; }
-  // Canonical Digital Assets tab order (matches the Dropbox-sync FOLDER_ORDER).
-  var FOLDER_TAB_ORDER = ["Product Photos", "E-Comm Render Photos", "Lifestyle Photos", "Web Banners", "Logos", "Social Videos", "TV Screen Videos", "Packaging", "Documents", "Misc"];
+  // Canonical folder-card sort order — matches the sync's FOLDER_ORDER
+  // (dropbox-sync.mjs) so cards appear in the same order the sync canonicalizes to.
+  // (E-Comm/Misc were dropped: the sync aliases those to Product Photos/Documents.)
+  var FOLDER_TAB_ORDER = ["Product Photos", "Lifestyle Photos", "Web Banners", "Logos", "Social Videos", "TV Screen Videos", "Packaging", "In-Store Marketing", "Documents"];
   function folderRank(f) { var i = FOLDER_TAB_ORDER.indexOf(f); return i < 0 ? 99 : i; }
 
   function buildQuery() {
@@ -255,10 +256,8 @@
     if (params.l === "list" || params.l === "grid") state.layout = params.l;
     syncControls();
   }
-  // Reflect state into the toggle / chips / sort / view / search controls.
+  // Reflect state into the sort / view / search controls.
   function syncControls() {
-    $$("#view-toggle button").forEach(function (b) { b.classList.toggle("on", b.getAttribute("data-view") === state.view); });
-    $$("#type-filters .chip").forEach(function (c) { c.classList.toggle("on", c.getAttribute("data-type") === state.type); });
     $$("#sort-toggle button").forEach(function (b) { b.classList.toggle("on", b.getAttribute("data-sort") === state.sort); });
     $$("#view-mode button").forEach(function (b) { b.classList.toggle("on", b.getAttribute("data-layout") === state.layout); });
     var s = $("#search"); if (s && s.value !== state.query) s.value = state.query;
@@ -730,7 +729,7 @@
 
     // While searching, the browsing sections give way to a results view.
     var searching = !!state.query;
-    ["resources", "instore-section", "store-locator", "social-hub", "additional-entry"].forEach(function (id) {
+    ["resources", "catalogs-section", "instore-section", "store-locator", "social-hub", "additional-entry"].forEach(function (id) {
       var el = $(id.charAt(0) === "#" ? id : "#" + id); if (el) el.style.display = searching ? "none" : "";
     });
     if (searching) { renderSearch(); syncURL(); return; }
@@ -770,9 +769,6 @@
     bindCards($("#home"));
     syncURL();
   }
-
-  // Friendly folder label for search result captions.
-  function folderLabel(f) { return (typeof typeLabel === "function" ? typeLabel(f) : f); }
 
   // Search results view: matching products (cards) + matching individual files.
   function renderSearch() {
@@ -895,7 +891,11 @@
   // In-store marketing materials for the current brand — aggregated from each
   // product's "In-Store Marketing" folder (synced from Dropbox). Retailers browse
   // what's available and order via email.
-  var INSTORE_FOLDER = "In Store Marketing Materials";
+  // Must match the sync's canonical folder name (dropbox-sync.mjs FOLDER_ORDER /
+  // FOLDER_ALIAS): every in-store variant is rewritten to "In-Store Marketing".
+  // (Was "In Store Marketing Materials" — a name the sync never emits, so the
+  // product in-store section silently never populated.)
+  var INSTORE_FOLDER = "In-Store Marketing";
   // A product's own in-store materials, de-duplicated by base name: when a
   // transparent PNG and a white-background copy both exist, keep only the PNG so
   // retailers don't see doubles.
@@ -1435,7 +1435,9 @@
   }
   function bindVideoHub(ctx, p) {
     $$("[data-play]", ctx).forEach(function (el) {
-      el.addEventListener("click", function () {
+      // clickKey adds Enter/Space too — the poster is a role="button" div, so it
+      // needs an explicit keyboard handler to be operable, unlike a real <button>.
+      clickKey(el, function () {
         openVideoModal(el.getAttribute("data-play"), el.getAttribute("data-title"), el.getAttribute("data-dl"), el.getAttribute("data-dlname"));
       });
     });
@@ -2057,7 +2059,7 @@
 
       if (activeCount > 0) renderGallery(p, openPath, selected, toggle, syncSelection);
       $$("[data-play]", d).forEach(function (el) {
-        el.addEventListener("click", function () {
+        clickKey(el, function () {   // keyboard-operable (role="button" div)
           openVideoModal(el.getAttribute("data-play"), el.getAttribute("data-title"), el.getAttribute("data-dl"), el.getAttribute("data-dlname"));
         });
       });
@@ -2478,12 +2480,14 @@
       var on = selected && selected[key];
       var ext = isExtVideo(file);   // YouTube (or other external) video link
       var hasImg = !!file.thumb;
-      var lbAttr = "", ytAttr = "", badge = "";
+      var lbAttr = "", ytAttr = "", badge = "", a11yAttr = "";
       if (ext && hasImg) {
         ytAttr = ' data-yt="' + file.url + '"';
         badge = '<span class="play-badge">' + icon("play") + "</span>";
+        a11yAttr = ' role="button" tabindex="0" aria-label="Watch ' + fileLabel(file).replace(/"/g, "") + ' on YouTube"';
       } else if (hasImg) {
         lbAttr = ' data-lbidx="' + items.length + '"';
+        a11yAttr = ' role="button" tabindex="0" aria-label="Enlarge ' + fileLabel(file).replace(/"/g, "") + '"';
         items.push({ src: file.thumb, name: fileLabel(file), url: file.url || "#", file: file.file || null });
       }
       var thumb = hasImg
@@ -2492,7 +2496,7 @@
       return (
         '<div class="gcell' + (on ? " sel" : "") + '" data-key="' + key + '">' +
           '<label class="gselect"><input type="checkbox" class="gcheck"' + (on ? " checked" : "") + ' aria-label="Select ' + fileLabel(file) + '"/></label>' +
-          '<div class="gthumb' + (ext ? " is-video" : "") + '"' + lbAttr + ytAttr + ">" + thumb +
+          '<div class="gthumb' + (ext ? " is-video" : "") + '"' + lbAttr + ytAttr + a11yAttr + ">" + thumb +
             (file.format ? '<span class="gfmt">' + file.format + "</span>" : "") + "</div>" +
           '<div class="gbar"><span class="gn">' + fileLabel(file) + '</span>' +
           '<span class="ga">' +
@@ -2505,10 +2509,10 @@
     $$(".gthumb", $("#gallery")).forEach(function (t) {
       var idx = t.getAttribute("data-lbidx");
       if (idx === null) return;
-      t.addEventListener("click", function () { openLightbox(items, +idx); });
+      clickKey(t, function () { openLightbox(items, +idx); });   // Enter/Space too
     });
     $$(".gthumb[data-yt]", $("#gallery")).forEach(function (t) {
-      t.addEventListener("click", function () { downloadOne(t.getAttribute("data-yt")); });
+      clickKey(t, function () { downloadOne(t.getAttribute("data-yt")); });
     });
     // per-asset selection checkboxes (with Dropbox-style shift-click range)
     $$(".gcell", $("#gallery")).forEach(function (cell, idx) {
@@ -2676,7 +2680,9 @@
   function lbCurrent() { return lbItems[lbIdx] || {}; }
   function showLb() {
     var it = lbCurrent();
-    $("#lightbox img").src = it.src || "";
+    var lbImg = $("#lightbox img");
+    lbImg.src = it.src || "";
+    lbImg.alt = it.name || "Asset preview";   // announce the actual asset, not a static label
     $("#lb-name").textContent = it.name || "";
     $("#lb-count").textContent = lbItems.length > 1 ? (lbIdx + 1) + " / " + lbItems.length : "";
     var multi = lbItems.length > 1 ? "flex" : "none";
@@ -2762,26 +2768,8 @@
       homeLink.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); navHome(); } });
     }
 
-    // brand toggle
-    $$("#view-toggle button").forEach(function (b) {
-      b.addEventListener("click", function () {
-        $$("#view-toggle button").forEach(function (x) { x.classList.remove("on"); });
-        b.classList.add("on");
-        state.view = b.getAttribute("data-view");
-        navHome();
-      });
-    });
-    // type filter chips (no "All assets" chip — clicking an active chip clears it)
-    $$("#type-filters .chip").forEach(function (c) {
-      c.addEventListener("click", function () {
-        var t = c.getAttribute("data-type");
-        var deselect = state.type === t;
-        state.type = deselect ? "all" : t;
-        $$("#type-filters .chip").forEach(function (x) { x.classList.remove("on"); });
-        if (!deselect) c.classList.add("on");
-        navHome();
-      });
-    });
+    // NOTE: no brand toggle or type-filter chips — this is a single-brand portal
+    // and index.html has no #view-toggle / #type-filters, so that wiring was dead.
     // sort toggle
     $$("#sort-toggle button").forEach(function (b) {
       b.addEventListener("click", function () {

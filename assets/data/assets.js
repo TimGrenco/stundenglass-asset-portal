@@ -20,7 +20,8 @@
      category  : Short label shown under the name (e.g. "Gravity")
      cover     : Image URL for the product tile (or null → uses a synced photo)
      added     : ISO date the assets were added/updated "YYYY-MM-DD"
-                 (drives the NEW badge + "Latest additions" ordering)
+                 (shown as "updated <date>" on the product page. The NEW badge is
+                 manual — set newBadge:true on a product to show it.)
      oneSheet  : URL to the spec-sheet PDF (or "" if none yet)
      folders   : Leave as {} — the Dropbox sync fills these in.
 
