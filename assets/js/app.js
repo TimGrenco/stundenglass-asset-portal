@@ -925,13 +925,16 @@
   function renderInStore() {
     var box = $("#instore"); if (!box) return;
     var bk = state.view, bname = BRANDS[bk].name;
-    // All orderable materials for this brand: brand-level generics + per-product.
-    var mats = [];
-    (window.PORTAL_INSTORE_GENERAL || []).forEach(function (x) { mats.push(x); });
+    // All orderable materials for this brand: the brand-level "overall" folder
+    // first (the canonical list), then any per-product pieces not already in it —
+    // de-duped by name so the same asset in both places is counted/previewed once.
+    var mats = [], seenMat = {};
+    var pushMat = function (x) { if (!seenMat[x.name]) { seenMat[x.name] = true; mats.push(x); } };
+    (window.PORTAL_INSTORE_GENERAL || []).forEach(pushMat);
     currentList(bk)
       .map(function (n) { return PRODUCTS.filter(function (p) { return p.name === n; })[0]; })
       .filter(Boolean)
-      .forEach(function (p) { instoreOwn(p).forEach(function (x) { mats.push(x); }); });
+      .forEach(function (p) { instoreOwn(p).forEach(pushMat); });
 
     var orderCta = '<a class="btn" href="#materials">' + icon("mail") + " Order materials</a>";
     if (!mats.length) {
@@ -1235,15 +1238,19 @@
   // All orderable in-store materials: brand-level generics + any per-product
   // "In-Store Marketing" pieces.
   function availableMaterials() {
-    var out = [];
+    var out = [], seen = {};
+    // The brand-level "overall" folder is the canonical list — everything lives
+    // here — so it goes first and its names are marked seen, so a piece that ALSO
+    // sits in a per-product folder isn't listed twice.
     (window.PORTAL_INSTORE_GENERAL || []).forEach(function (x) {
+      if (seen[x.name]) return;
+      seen[x.name] = true;
       out.push({ name: x.name, dim: x.dim || null, thumb: x.thumb, url: x.file || x.url || null });
     });
-    var seen = {};
     PRODUCTS.forEach(function (p) {
       if (p.isLogo) return;
       instoreOwn(p).forEach(function (x) {
-        if (seen[x.name]) return;    // shared pieces (e.g. Retro window cling) listed once
+        if (seen[x.name]) return;    // already in the overall folder (or another product)
         seen[x.name] = true;
         var lbl = instoreLabel(x);
         out.push({
