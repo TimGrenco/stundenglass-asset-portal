@@ -2351,8 +2351,8 @@ window.PORTAL_SYNCED = {
           "name": "SG_thumb_09",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/7e63xtc63rtn2u1r4gzbm/SG_thumb_09.png?rlkey=o2euedhq2o8sayrpx17mg73bh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/094654aade1a25955fdefcee0d2ec4eef074b500c855036204eaa92c5134d076.jpg",
+          "url": "https://www.dropbox.com/scl/fi/r4s9024ij7nzk69tg15si/SG_thumb_09.png?rlkey=l7fje4gc06jdjsb6b0se4j8hi&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/720c4b6e9a1cb29569cfdf49ae2bda113e32e955bd3784dc07d6e3ef8b790406.jpg",
           "file": null
         },
         {
