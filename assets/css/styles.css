@@ -12,7 +12,8 @@
   --mist-2: #ECECE8;
   --hair: #E6E6E3;
   --stone: #777772;
-  --stone-2: #9A9A93;
+  --stone-2: #767671;   /* darkened from #9A9A93 → 4.57:1 on white (WCAG AA); it labels
+                           small text, so de-emphasis now comes from size/weight, not lightness */
   --gold: #C9A24B;        /* Stündenglass brand gold — single accent, used sparingly (confirm exact hex from brand files) */
   --gold-ink: #6E561F;    /* deeper gold for accent text on light backgrounds */
   --radius: 12px;
@@ -207,6 +208,7 @@ button.mat-thumb { padding: 0; }
 .mat-qty input { width: 44px; height: 36px; border: none; border-left: 1px solid var(--hair); border-right: 1px solid var(--hair); text-align: center; font-size: 14px; font-weight: 700; font-family: inherit; background: var(--paper); color: var(--ink); -moz-appearance: textfield; }
 .mat-qty input::-webkit-outer-spin-button, .mat-qty input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
 .mat-qty input:focus { outline: none; }
+.mat-qty:focus-within { border-color: var(--ink); box-shadow: 0 0 0 2px rgba(0,0,0,0.12); }   /* visible focus on the wrapper */
 .mat-side { position: sticky; top: 84px; border: 1px solid var(--hair); border-radius: var(--radius); padding: 20px; background: var(--paper); }
 .mat-side-h { font-family: var(--serif); font-size: 16px; font-weight: 800; margin-bottom: 15px; }
 .mat-fields { display: flex; flex-direction: column; gap: 12px; }
@@ -219,6 +221,14 @@ button.mat-thumb { padding: 0; }
 @media (max-width: 820px) {
   .mat-layout { grid-template-columns: 1fr; gap: 18px; }
   .mat-side { position: static; }
+}
+/* Narrow phones: a fixed 116px thumb + the stepper crowd out the product name.
+   Shrink the thumb and let the qty stepper wrap under the name so nothing clips. */
+@media (max-width: 520px) {
+  .mat-row { flex-wrap: wrap; gap: 12px; }
+  .mat-thumb { width: 72px; height: 72px; }
+  .mat-info { flex: 1 1 auto; }
+  .mat-qty { margin-left: 84px; }   /* align under the name column, past the thumb */
 }
 /* store locator request — repeatable store cards */
 .loc-stores { display: flex; flex-direction: column; gap: 16px; }
@@ -371,7 +381,7 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 .pkg-note svg { width: 14px; height: 14px; stroke: var(--ink); flex: 0 0 auto; }
 
 /* Collection Colorways — fun, colour-coded per-colourway SKU/UPC cards (Retro) */
-.cways { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 4px 0 26px; }
+.cways { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; margin: 4px 0 26px; }
 .cway-card { position: relative; border-radius: 14px; padding: 17px 15px 15px; overflow: hidden;
   background: linear-gradient(162deg, color-mix(in srgb, var(--c) 13%, #fff) 0%, #fff 62%);
   border: 1px solid color-mix(in srgb, var(--c) 32%, var(--hair));
@@ -388,7 +398,9 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 .cway-code { display: flex; flex-direction: column; gap: 1px; }
 .cway-cl { font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--stone); }
 .cway-cv { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; font-weight: 600; color: var(--ink); }
-@media (max-width: 720px) { .cways { grid-template-columns: repeat(2, 1fr); } }
+/* .cways now uses auto-fill (minmax 150px), which adapts smoothly across sizes —
+   no fixed-column breakpoint needed; on the narrowest phones drop the min so 2 fit. */
+@media (max-width: 360px) { .cways { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); } }
 
 /* product hub: SKU details */
 .sku-table { border: 1px solid var(--hair); border-radius: var(--radius); overflow: hidden; margin-bottom: 10px; max-width: 460px; }
@@ -488,8 +500,9 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 .gbar { display: flex; align-items: center; justify-content: space-between; padding: 9px 11px; border-top: 1px solid var(--hair); }
 .gbar .gn { font-size: 11px; color: var(--stone); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .gbar .ga { display: flex; gap: 8px; }
+.gbar .ga .ga-btn { appearance: none; -webkit-appearance: none; background: none; border: 0; padding: 0; margin: 0; display: inline-flex; align-items: center; justify-content: center; cursor: pointer; color: var(--ink); }
 .gbar .ga svg { width: 15px; height: 15px; stroke: var(--ink); cursor: pointer; }
-.gbar .ga svg:hover { stroke: var(--stone); }
+.gbar .ga .ga-btn:hover svg { stroke: var(--stone); }
 
 /* selectable gallery (Dropbox-style multi-select) */
 .gallery-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
@@ -680,10 +693,12 @@ a.logo-tile { cursor: pointer; }
   .instore-tile-order { opacity: 1; }
   .mat-thumb-zoom .mat-zoom-badge { opacity: 0.9; }
   /* Bigger, easier tap targets for the gallery copy/download icons on touch. */
-  .gbar { padding: 7px 9px 7px 11px; }
-  .gbar .ga { gap: 6px; }
-  .gbar .ga > span { display: inline-flex; align-items: center; justify-content: center; padding: 7px; }
-  .gbar .ga svg { width: 17px; height: 17px; }
+  .gbar { padding: 5px 7px 5px 11px; }
+  .gbar .ga { gap: 4px; }
+  .gbar .ga > .ga-btn { min-width: 40px; min-height: 40px; padding: 7px; }
+  .gbar .ga svg { width: 18px; height: 18px; }
+  /* Other functional icon buttons that fall below the ~40px touch minimum. */
+  .qbtn, .viewmode button, .pkg-dl, .search-clear { min-width: 40px; min-height: 40px; }
 }
 
 /* Empty (0-count) asset folders read as disabled instead of leading nowhere. */

@@ -12,7 +12,6 @@
   // ---- tiny helpers --------------------------------------------------------
   var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
   var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
-  var today = new Date();
   // "New" badges are fully manual — set `newBadge: true` (or a colour) on any
   // product in assets.js. (No longer auto-shown by upload date, so there's no
   // date-difference helper here anymore.)
@@ -266,9 +265,16 @@
     var q = location.search.replace(/^\?/, "");
     if (!q) return;
     var params = {};
-    q.split("&").forEach(function (kv) { var p = kv.split("="); params[p[0]] = decodeURIComponent(p[1] || ""); });
+    q.split("&").forEach(function (kv) {
+      var eq = kv.indexOf("=");                       // split on the FIRST "=" only —
+      var key = eq < 0 ? kv : kv.slice(0, eq);        // a value may itself contain "="
+      var val = eq < 0 ? "" : kv.slice(eq + 1);
+      // A malformed %-escape (e.g. a bare "%") throws URIError — skip the bad param
+      // rather than let it abort init and leave a blank page.
+      try { params[key] = decodeURIComponent(val); } catch (e) { params[key] = ""; }
+    });
     if (params.b && BRANDS[params.b]) state.view = params.b;
-    if (params.t) state.type = params.t;
+    if (params.t && TYPE_LABELS[params.t]) state.type = params.t;   // whitelist known types only
     if (params.q) state.query = params.q;
     if (params.s === "az" || params.s === "featured") state.sort = params.s;
     if (params.l === "list" || params.l === "grid") state.layout = params.l;
@@ -296,8 +302,10 @@
   function renderActiveFilters() {
     var box = $("#active-filters"); if (!box) return;
     var chips = [];
-    if (state.type !== "all") chips.push({ k: "type", label: typeLabel(state.type) });
-    if (state.query) chips.push({ k: "query", label: "“" + state.query + "”" });
+    // escapeHTML the labels — state.query is free-text (typed or from ?q=) and
+    // state.type flows from ?t=; without escaping, ?q=<img onerror=…> would run.
+    if (state.type !== "all") chips.push({ k: "type", label: escapeHTML(typeLabel(state.type)) });
+    if (state.query) chips.push({ k: "query", label: "“" + escapeHTML(state.query) + "”" });
     // Nothing filtered → keep the top clean (the bar hides itself when empty).
     if (!chips.length) { box.innerHTML = ""; return; }
     var left = chips.map(function (c) {
@@ -503,11 +511,6 @@
       s.addEventListener("click", function () { var h = s.getAttribute("data-hex"); copyText(h, "Copied " + h); });
     });
   }
-  function wireStyleLinks(ctx) {
-    $$("[data-style]", ctx).forEach(function (b) {
-      b.addEventListener("click", function () { navToStyle(b.getAttribute("data-style")); });
-    });
-  }
   function wireLogoLinks(ctx) {
     $$("[data-logo]", ctx).forEach(function (b) {
       b.addEventListener("click", function () {
@@ -666,11 +669,6 @@
     wireSwatches(sg);
     wireLogoLinks(sg);
     wireSocial(sg);
-  }
-  function navToStyle(bk) {
-    openStyleGuide(bk);
-    var h = "#style/" + bk;
-    if (location.hash !== h) { ignoreHash = true; location.hash = h; }
   }
 
   // ---- rendering: card -----------------------------------------------------
@@ -1383,10 +1381,6 @@
     window.location.href = "mailto:" + CFG.orderEmail + "?subject=" +
       encodeURIComponent("Marketing Material Request") + "&body=" + encodeURIComponent(body);
   }
-  function navMaterials() {
-    openMaterials();
-    if (location.hash !== "#materials") { ignoreHash = true; location.hash = "materials"; }
-  }
 
   // ---- product training / certification ------------------------------------
   function hasTraining(p) { return !!(window.PORTAL_TRAINING && window.PORTAL_TRAINING[p.name]); }
@@ -1812,7 +1806,7 @@
         }
         navTo(p);
       });
-      card.addEventListener("keydown", function (e) { if (e.key === "Enter") navTo(p); });
+      card.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); navTo(p); } });
     });
   }
 
@@ -1832,7 +1826,12 @@
     // The In-Store Marketing folder also has its own section below the gallery. In
     // the gallery it's PNG-de-duplicated (no white-bg doubles) and pinned as the
     // last tab.
-    if ((p.folders[INSTORE_FOLDER] || []).length) p.folders[INSTORE_FOLDER] = dedupInstore(p.folders[INSTORE_FOLDER]);
+    if ((p.folders[INSTORE_FOLDER] || []).length) {
+      p.folders[INSTORE_FOLDER] = dedupInstore(p.folders[INSTORE_FOLDER]);
+      // The dedup shrinks the in-store folder — recompute the hero "N assets"
+      // total from the current folder lengths so it never overstates.
+      p.total = Object.keys(p.folders).reduce(function (s, f) { return s + p.folders[f].length; }, 0);
+    }
     var folderNames = Object.keys(p.folders).filter(function (f) { return (p.folders[f] || []).length; });
 
     // ---- N-level folder browser. Folder keys are full "/"-joined paths
@@ -2531,18 +2530,23 @@
         a11yAttr = ' role="button" tabindex="0" aria-label="Enlarge ' + fileLabel(file).replace(/"/g, "") + '"';
         items.push({ src: file.thumb, name: fileLabel(file), url: file.url || "#", file: file.file || null });
       }
+      // Dropbox-derived strings (name, url, thumb) are escaped on every path so a
+      // filename containing HTML or a quote can't break markup or inject.
+      var nm = fileLabel(file), nmSafe = escapeHTML(nm), nmAttr = nm.replace(/"/g, "");
       var thumb = hasImg
-        ? '<img src="' + file.thumb + '" alt="' + file.name + '" loading="lazy" onerror="this.parentNode.innerHTML=window.__icon(\'' + (typeIcon[file.type] || "file") + '\')"/>' + badge
+        ? '<img src="' + escapeHTML(file.thumb) + '" alt="' + nmAttr + '" loading="lazy" onerror="this.parentNode.innerHTML=window.__icon(\'' + (typeIcon[file.type] || "file") + '\')"/>' + badge
         : window.__icon(typeIcon[file.type] || "file");
+      var dlUrl = file.file || file.url || "#", copyUrl = file.url || "#";
       return (
-        '<div class="gcell' + (on ? " sel" : "") + '" data-key="' + key + '">' +
-          '<label class="gselect"><input type="checkbox" class="gcheck"' + (on ? " checked" : "") + ' aria-label="Select ' + fileLabel(file) + '"/></label>' +
+        '<div class="gcell' + (on ? " sel" : "") + '" data-key="' + escapeHTML(key) + '">' +
+          '<label class="gselect"><input type="checkbox" class="gcheck"' + (on ? " checked" : "") + ' aria-label="Select ' + nmAttr + '"/></label>' +
           '<div class="gthumb' + (ext ? " is-video" : "") + '"' + lbAttr + ytAttr + a11yAttr + ">" + thumb +
-            (file.format ? '<span class="gfmt">' + file.format + "</span>" : "") + "</div>" +
-          '<div class="gbar"><span class="gn">' + fileLabel(file) + '</span>' +
+            (file.format ? '<span class="gfmt">' + escapeHTML(file.format) + "</span>" : "") + "</div>" +
+          '<div class="gbar"><span class="gn">' + nmSafe + '</span>' +
           '<span class="ga">' +
-            '<span data-copy="' + (file.url || "#") + '" title="Copy link">' + icon("link") + "</span>" +
-            '<span data-dl="' + (file.file || file.url || "#") + '" data-name="' + fileLabel(file) + '"' + (file.file ? ' data-direct="1"' : "") + ' title="' + (ext ? "Watch on YouTube" : "Download") + '">' + icon(ext ? "play" : "download") + "</span>" +
+            '<button type="button" class="ga-btn" data-copy="' + escapeHTML(copyUrl) + '" title="Copy link" aria-label="Copy link to ' + nmAttr + '">' + icon("link") + "</button>" +
+            '<button type="button" class="ga-btn" data-dl="' + escapeHTML(dlUrl) + '" data-name="' + nmAttr + '"' + (file.file ? ' data-direct="1"' : "") +
+              ' title="' + (ext ? "Watch on YouTube" : "Download") + '" aria-label="' + (ext ? "Watch " + nmAttr + " on YouTube" : "Download " + nmAttr) + '">' + icon(ext ? "play" : "download") + "</button>" +
           "</span></div>" +
         "</div>"
       );
@@ -2705,10 +2709,6 @@
     });
     downloadFiles(files, p.name);
   }
-  window.__open = function (url) {
-    if (!url || url === "#") { toast("Document coming soon"); return; }
-    window.open(url, "_blank");
-  };
 
   // ---- lightbox / asset viewer ---------------------------------------------
   var lbItems = [], lbIdx = 0;   // items: { src, name, url }
