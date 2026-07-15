@@ -20028,6 +20028,14 @@ window.PORTAL_SYNCED = {
           "url": "https://www.dropbox.com/scl/fi/1j2thq1z3t82ee5p97rei/Reels-Cookies-SG_Short.mp4?rlkey=88p7zddfp62ejv520jl4wfdgm&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/dc356add962447339b14710a0a16b30a3185fb48019accf09015fe4a8d512409.jpg",
           "file": null
+        },
+        {
+          "name": "Wiz Clean Cookies SG",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/a46rt0qvrd59k5m492np7/Wiz-Clean-Cookies-SG.mp4?rlkey=go5jtvp8mh1gigt6mzsotzb7u&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/9191e0d138f9113591a6c1fd4696b79964c60c8ebced0dd17b369e48c26cd492.jpg",
+          "file": null
         }
       ],
       "Cookies / TV Screen Videos": [
@@ -20037,16 +20045,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/wjdah7skavspom9xj14mt/Cookies-SG_BlueRoom.mp4?rlkey=wh45hjl7k0of5kr9bcjvkl9c4&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/50da9436d6c85faaa1394afad403ed04726314c371c94f58712158f9586d97b1.jpg",
-          "file": null
-        }
-      ],
-      "Cookies / Documents": [
-        {
-          "name": "Wiz Clean Cookies SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/a46rt0qvrd59k5m492np7/Wiz-Clean-Cookies-SG.mp4?rlkey=go5jtvp8mh1gigt6mzsotzb7u&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9191e0d138f9113591a6c1fd4696b79964c60c8ebced0dd17b369e48c26cd492.jpg",
           "file": null
         }
       ],
@@ -20179,234 +20177,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/g8if5y30u9pbkqf1i7k4f/Spannabis-2023.mp4?rlkey=4erddwaild1pm72pe3hvdrslk&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/e72593ca842b325ddb34a7f7a6561496a9909897ce71609ea06cf311036a40f2.jpg",
-          "file": null
-        }
-      ],
-      "Cookies / Mixology / Social Videos": [
-        {
-          "name": "Cookies Blue Hawiian_short",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/uf5emncea5k5e72l0tpve/Cookies-Blue-Hawiian_short.mp4?rlkey=q8lbdzrzdcw2cbrdc4hncyppc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b0f8e47c5a14dec1445b6897de74d500a42963b17d4559392c3573da4ef7690c.jpg",
-          "file": null
-        },
-        {
-          "name": "Cookies SG Blue Hawiian_Christina",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/f8vbflwrejn7riwi0q0se/Cookies-SG-Blue-Hawiian_Christina.mp4?rlkey=ebbfje3d9551e2duigfx4ynte&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8ffe2cd9bcf19c89da1b8bc2a1fed9f2df713ae0f8e7bb1f09e2ed79535f37a7.jpg",
-          "file": null
-        },
-        {
-          "name": "SG Cookies Blue Hawaiian Reveal",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/inlph2vb69a7lzktuiusv/SG-Cookies-Blue-Hawaiian-Reveal.mp4?rlkey=mw6qne0pgoq8idxw1uoqstkaq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ba92c8bb81f38e345c9bbc7c00c032e7db59c56f2aae61c74fb7e5ee70e47f6b.jpg",
-          "file": null
-        }
-      ],
-      "Cookies / Mixology / Photo / Christina Hawaiian Spritzer": [
-        {
-          "name": "_ALF0640",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1f1z1fswra3fdiei7evb9/_ALF0640.jpg?rlkey=67jv96dc2ftgcwxjr5hpy1g42&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/758bd459ed5e5cf65338002f3b2572d99e86a674fbb4f2d9e492970e1c23ff2b.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0647",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fkvkq543upsklqywq8se6/_ALF0647.jpg?rlkey=8ixesf9gr2g0i0ud4wldoxd0b&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c49e82930800a452eb5c3b4b264af7be9f9bdae7dece84b11188f763f1dda1b3.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0649",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xur6r7xomqfuwbu32jtag/_ALF0649.jpg?rlkey=q38c6b5e4k3o9kxrsss3kvt4h&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/61af041131bea4e47dd7c20117607c623f10291a04a824b37e21899809f2323a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0650",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/a6oeh0eg1tgriglj8i0yv/_ALF0650.jpg?rlkey=lps16q5meqq1mlm9eywyhd4ir&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/53dae048e09ec6e24c74689c4792f606bf03b620c87006f446af86d87743556b.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0654",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3cbpd9u1rv18dccovb8dg/_ALF0654.jpg?rlkey=8iyf3ja7mwoq04dla9zrrrtso&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ac0b5d9972c3e1cd53a8930ff39c7ebb50e352c3892bc7ed3bb4674b1dd322ec.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0663",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9jblqin9tnydtbhfcoh0o/_ALF0663.jpg?rlkey=64fprrq5ocg2eou7fa6z1oeri&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/97f6ff9eb653b780eb83af7ab1c7ed0a599745894f04ae808d6736a27999194c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0665",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4va7e6m2juao9buezqt8k/_ALF0665.jpg?rlkey=a3i0bfogoqlrphp9aaaij0y41&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e27f73bdbd441cd36271ecc6fe29ed06bfc8841d655781d09c6bbadc54edf415.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0667",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/d93ydllb06jc7md5ovjtj/_ALF0667.jpg?rlkey=o69uj15m28ff2f8zu1y8gxyvr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6f2853b135d10df7761c2807076b4254ff933828017268d3bcb10f70b8292d99.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0673",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/uw9k2zonjj95q8ut8sgi4/_ALF0673.jpg?rlkey=ji8va08nuclych0jyr9qp8xqp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/357d8b9aee4b19502ad7f6c2c4c52b395b52c0ed785dc1c4f4116f06911891de.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0674",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nqdnwunqs4z1z5y20a09v/_ALF0674.jpg?rlkey=wr7q5ew8zrb6vmeg44wv1jtqx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/203f0364a3e71eb8835ff11b1465915455aed9cb59f35d6f9b59ee00d0d2ee05.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0676",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3cessysx9rixj8cbonafx/_ALF0676.jpg?rlkey=3g4qy5ojr9iq2w3symn0koodb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4407fcef2b19554b16ef0e7ed57e230d30f05b02b3c365ba946d1f8707173237.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0687",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/27gnr6ziy1r0rv9tw5op3/_ALF0687.jpg?rlkey=b4je4s3uc228tecxf0l5shaw8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/74dff703f0fad4080594b7b40d878645ea7db74da9623a02b762445980f24d88.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0695",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ob1wsblrq7tcvbvqbmzcm/_ALF0695.jpg?rlkey=swfj6b7flo21zuakskkyjacnm&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/923a7f1cb1b7cc889d4076f698cf2f7fa86576267e1363b032b6fe848f248f3f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0700",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tr9fn4io0qop6snkz6zgi/_ALF0700.jpg?rlkey=12xrfrsnhj7wrc05q39p75e5m&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8b50a3b3d5192ef1265ad6846dddcaa7bafc4f9a0a4261747491437975ca304d.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0706",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6z6rf8knwxb2p73cniqo0/_ALF0706.jpg?rlkey=eck5dd9hq5bevdy9weqc416mw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f704ecfc2498c7f7fcbd608d6f342fd3ea0d8f89073d0e32933be4a5edace2e1.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0710",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tjvi9xty5vjt4ewtjf6ra/_ALF0710.jpg?rlkey=pa3wswf6mx6kmn5el5xvnba5q&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/90008f00f87231ada7eba92b820b68fc081efc63d75def7f06514b5488e92515.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0717",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/b8dohr7zblqx0xy296tyt/_ALF0717.jpg?rlkey=3t3lps258da8cmex3gm9si3c5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/df64485eb4b4e5ddff54ab89af6b807789d274a3a73e09918e0b3bad3ddb24ec.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0719",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4pspo9k7cwhrdsefekc2o/_ALF0719.jpg?rlkey=rwyiw299v9daq772kmtvc6u6e&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d67ec433ab6407cb72cf17892ef6e88dc1774b0c5349c068bdc90630abcc3094.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0723",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/biqhh4e5ey2rdwvptlrdy/_ALF0723.jpg?rlkey=n88mwqs00j7q64s1bzcpqm7dw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/aecc46a850039e5e2e2139b84b5b430c3adef207f46895bbeae5ca7154305a80.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0726",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/x505zk0auvjkcmzxm7x5w/_ALF0726.jpg?rlkey=gqlqe5gqzp6zkvetr5requ4s4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ff93340cd8a161f3b375e9eed21d45ffdbe30b0b3ef2dc8319ee23ada4bb444a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0731",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/p56bjd87qn5x85nwoudnz/_ALF0731.jpg?rlkey=7o8gca7qlaxg5pc02irbus136&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/929e8bde8d473f684c833c3dee18047b2db2cd965bf4eca7f01648ab2629d47b.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0734",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7mcb17o6u9kg08phl75oe/_ALF0734.jpg?rlkey=qw95kx7o9lganrisyuj620gq9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a1bb323d9990907c85e297e68f46a40a96a9a48cfc94e1ca89307279c24b2d4f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0737",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/mvbt7821wil29vbz2ap7j/_ALF0737.jpg?rlkey=cevi3et3jhcru3ksubwiqkw2u&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/121a2e0f56c2e0b2c8baaead4c8a3710b535fce574853fcada8c4373efe289e3.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0740",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/p16trt9oxr552waubw00v/_ALF0740.jpg?rlkey=mg2se5vvandq9iwwom9b4gvl4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/17ccf0ad0b98d166c6463802ff5196274dca8f2928e20a4f99eb721d755feba7.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0141",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gio6f8c9nouq0xpoibp5e/_GSH0141.jpg?rlkey=3i39styyzwq05wni9i48enr9j&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/94252ba11da34f891f699a132e897ef49205860eb58e63730c646c92a0a35e05.jpg",
           "file": null
         }
       ],
@@ -28962,7 +28732,7 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
-      "Khalifa / In Store Marketing Materials": [
+      "Khalifa / In-Store Marketing": [
         {
           "name": "Stundenglass-Wiz-Mockup",
           "type": "image",
@@ -40668,10 +40438,6 @@ window.PORTAL_SYNCED = {
       "Cookies / Documents": "https://www.dropbox.com/scl/fo/mhgd0ooiejh07xfwy1dd9/AExlF_9628JASAHvgx9sRtA?rlkey=3bybbml4a3r6xrfcb5ohlj2xw&dl=1",
       "Cookies / Documents / Colored Glass Liner": "https://www.dropbox.com/scl/fo/241sq3ot2p93iykm9qsnq/AHBHLXvJXUcdqfEonHSPeDA?rlkey=tw8mjn393axwt42osixy00ysm&dl=1",
       "Cookies / Hyer": "https://www.dropbox.com/scl/fo/yett5vhndq4xfdolssl9v/AHcaqB70KaewdIMQM7JWHZY?rlkey=7yyuerb5z1ml6ktl8fh0uyluy&dl=1",
-      "Cookies / Mixology": "https://www.dropbox.com/scl/fo/gz68bh0ny6210ix1m5szl/AFaRctXQeJAzRW9s2kqgjB0?rlkey=gk75ohgdamwmkfwusejbwp6wk&dl=1",
-      "Cookies / Mixology / Social Videos": "https://www.dropbox.com/scl/fo/c6zss4g9kpxt5yyggvbe9/APZfSUBHec3-lP1MmrdvePk?rlkey=xz4ag9gwe00pxovgmx91y7bxw&dl=1",
-      "Cookies / Mixology / Photo": "https://www.dropbox.com/scl/fo/tqbw93ewukmptje0yktx9/ABYJ7mMFRin7c9HQ6FsAG3c?rlkey=b7orybdrxkbrklf9vmm5pdk3f&dl=1",
-      "Cookies / Mixology / Photo / Christina Hawaiian Spritzer": "https://www.dropbox.com/scl/fo/qxrobly04uqsi0v0u69u2/APUzDGYCcZKjic-3dSPKVQI?rlkey=8f5xfor29tdbxzjul38u4tjed&dl=1",
       "Dr Greenthumbs": "https://www.dropbox.com/scl/fo/uds8hp7qu9gor9ya0fcx0/AKLZE1JQEP4cRa1pXoy1lBI?rlkey=l5ymupvs3t2xcmn9nkqmbejkj&dl=1",
       "Dr Greenthumbs / Documents": "https://www.dropbox.com/scl/fo/bosq6bc92j10hhf6ko1jl/AM40AKjdxg6TdS6dy6KkFRY?rlkey=pcw9h2x0ynkgqh8lspigbdiws&dl=1",
       "Dr Greenthumbs / Documents / Colored Glass Liner": "https://www.dropbox.com/scl/fo/z00gft6u31yp7um63uv90/AJDu0AKIx0qmYREV6TlSpxU?rlkey=hh0xunwt2i68h1xc7zc326t42&dl=1",
@@ -40748,7 +40514,7 @@ window.PORTAL_SYNCED = {
       "Khalifa / Social Videos": "https://www.dropbox.com/scl/fo/z2s539bcjgbm3xydbnxgw/AHJEW4nZZs5aXEqWve36MRk?rlkey=eatyt7w5b6i6bg5r4d1nx7pga&dl=1",
       "Khalifa / Social Videos / Social Videos": "https://www.dropbox.com/scl/fo/5hi37c75fs5cmpc3a9hqf/ALnu3QES7ipguR6ntLp6z-c?rlkey=57pphc87x5fgc5im8ovd0bq9x&dl=1",
       "Khalifa / Social Videos / TV Screen Videos": "https://www.dropbox.com/scl/fo/bg4yn44w9s1nij4amowyk/AKHb7UHu5i5tIJqXCfy2O5g?rlkey=xlfsz7zpbe7edcbck3lder6kp&dl=1",
-      "Khalifa / In Store Marketing Materials": "https://www.dropbox.com/scl/fo/8lqluglp0ps4krb5iiio1/ALZDUznsLe5IriRnTnA2d6E?rlkey=j6cefn702318223b7334ir3sw&dl=1",
+      "Khalifa / In-Store Marketing": "https://www.dropbox.com/scl/fo/8lqluglp0ps4krb5iiio1/ALZDUznsLe5IriRnTnA2d6E?rlkey=j6cefn702318223b7334ir3sw&dl=1",
       "Logos (1)": "https://www.dropbox.com/scl/fo/gsm5688stu5jzethcfapt/AIuj748c5KN8RFjNR2M2010?rlkey=m1bi5xs1wpyawckh3vw8qfnah&dl=1",
       "Modül Black": "https://www.dropbox.com/scl/fo/79n9z4jml4jbnlflxv9l9/AF63f75NuSf8icsmvqLy9kk?rlkey=jr7vey213v2uyrffednex0zs7&dl=1",
       "Modül Black / Social Videos": "https://www.dropbox.com/scl/fo/p8ggn7l2ywcxai7vl6fjx/AOlnyLQmSummcogK08FsQrE?rlkey=lb1b613p93mrpi06apvff28sc&dl=1",
