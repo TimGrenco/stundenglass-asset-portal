@@ -18,11 +18,12 @@
   --radius: 12px;
   --radius-pill: 999px;
   --maxw: 1200px;
-  /* Display + body are both Archivo — bold, modern sans. (--serif kept as the
-     variable name so existing rules that reference it become the display weight
-     without a sweep.) */
-  --serif: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --sans: "Archivo", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Portal typography matches the Stündenglass brand: Montserrat for display /
+     headlines, Inter for body — the same pairing the live stundenglass.com theme
+     uses. (--serif is the historic variable name for the display face; it isn't a
+     serif, it just drives every heading rule, so keeping the name avoids a sweep.) */
+  --serif: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --shadow: 0 16px 34px -22px rgba(0, 0, 0, 0.45);
   --shadow-lg: 0 30px 60px -30px rgba(0, 0, 0, 0.4);
 }
