@@ -42980,6 +42980,16 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "In Store Marketing Materials": [
+        {
+          "name": "Modul-Table-Tent-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/uxmauujsv2tva91l81dpd/Modul-Table-Tent-Mockup.jpg?rlkey=sah2th8qm92yyjv4g9hxn66rw&dl=0",
+          "thumb": "assets/synced/modul/db1380847b3fa98b18115a099c3107937c2651a4207214239670d6bd2cf519ac.jpg",
+          "file": null
+        }
+      ],
       "Khalifa / Product Photos": [
         {
           "name": "KK_thumb_01",
