@@ -42144,6 +42144,16 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "In-Store Marketing": [
+        {
+          "name": "Modul-Table-Tent-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/uxmauujsv2tva91l81dpd/Modul-Table-Tent-Mockup.jpg?rlkey=sah2th8qm92yyjv4g9hxn66rw&dl=0",
+          "thumb": "assets/synced/modul/db1380847b3fa98b18115a099c3107937c2651a4207214239670d6bd2cf519ac.jpg",
+          "file": null
+        }
+      ],
       "Documents": [
         {
           "name": "20240802_Stundenglass_Modul+Dok-Deluxe-Travel-Kit_One-Sheet_US",
@@ -42743,16 +42753,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/5jmm7gigj4v7mxrewe2qb/GD-Mod-l-Launch-Vid-Horizontal.mp4?rlkey=i83vm83asimbl6jn5d6zk3qqi&dl=0",
           "thumb": "assets/synced/modul/eb56bdf106989c1158ca0bb8066b06bb05498045a474cae40eb602284f49a3f7.jpg",
-          "file": null
-        }
-      ],
-      "In Store Marketing Materials": [
-        {
-          "name": "Modul-Table-Tent-Mockup",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/uxmauujsv2tva91l81dpd/Modul-Table-Tent-Mockup.jpg?rlkey=sah2th8qm92yyjv4g9hxn66rw&dl=0",
-          "thumb": "assets/synced/modul/db1380847b3fa98b18115a099c3107937c2651a4207214239670d6bd2cf519ac.jpg",
           "file": null
         }
       ],
@@ -43445,6 +43445,7 @@ window.PORTAL_SYNCED = {
       "Social Videos": "https://www.dropbox.com/scl/fo/z1ahs3ip3yhvc5c8b3a92/AFsKIPGY5lkrrEeakneo7L8?rlkey=sxas37m8yykgqxx1erolwgjfz&dl=1",
       "TV Screen Videos": "https://www.dropbox.com/scl/fo/y8rpfklc65slciefg7lnv/APvGu7z1tpThl2NBjeLBtwU?rlkey=3heiqzy2hcicm9ckou3qebpdv&dl=1",
       "Packaging": "https://www.dropbox.com/scl/fo/35neaeuo95ke5v92ij9jf/AOZ-TkWyK7DToRmz4i8vFcw?rlkey=umloycs9ye8pv0f6fcaf4pbsv&dl=1",
+      "In-Store Marketing": "https://www.dropbox.com/scl/fo/d4nfpclb2qg66xkvvmetl/AM3LHSBXA5-awM0Nfiz34cI?rlkey=4kazlk99l8bfrfmlnle34h9ds&dl=1",
       "Documents": "https://www.dropbox.com/scl/fo/v8slxkoistoqmh5apk9f1/AG7Sro0d51vOiDYACtQkVK8?rlkey=42qgvwt91vfyiy9xtmxagujw5&dl=1",
       "Grateful Dead Legacy Patchwork": "https://www.dropbox.com/scl/fo/17cmskqesov9z2y0nqwk0/ANNKty1pKRV1CXk_nbV8pd0?rlkey=tjeswqibqe95qa0lrtvcw25g5&dl=1",
       "Grateful Dead Legacy Patchwork / Product Photos": "https://www.dropbox.com/scl/fo/unq4fm4arnzis1c2kbftt/AHavuqNDI0H1snneOxnJc_M?rlkey=n9xnnbiculot41couloyrhhe7&dl=1",
@@ -43452,7 +43453,6 @@ window.PORTAL_SYNCED = {
       "Grateful Dead Legacy Patchwork / Social Videos": "https://www.dropbox.com/scl/fo/050om0959iirtfh8enj7m/AM1cKdkYLWcE2Bl1-pbJECE?rlkey=dyanh2a80hdgwdo14g6u9u720&dl=1",
       "Grateful Dead Legacy Patchwork / TV Screen Videos": "https://www.dropbox.com/scl/fo/14lh4xs2b9rt6puqkd3t9/AMvWzY8Uxld3AJsaVv1ZTC0?rlkey=rqu7mksamae2y33b3h2kzzs6p&dl=1",
       "Grateful Dead Legacy Patchwork / Documents": "https://www.dropbox.com/scl/fo/1o9jmopr0im7i77ti5su6/AC3uJV1QvTr_8vEzBpqwqyY?rlkey=se60poelw4t4dp720w4pyi3jd&dl=1",
-      "In Store Marketing Materials": "https://www.dropbox.com/scl/fo/d4nfpclb2qg66xkvvmetl/AM3LHSBXA5-awM0Nfiz34cI?rlkey=4kazlk99l8bfrfmlnle34h9ds&dl=1",
       "Khalifa": "https://www.dropbox.com/scl/fo/hg844nj2eak0wka0nwhtg/AMzBjhWnILYf9T87-C7ZZ1o?rlkey=dlwwzj7h637h1mgua24kv8ftn&dl=1",
       "Khalifa / Product Photos": "https://www.dropbox.com/scl/fo/gurr5pr5jqd6816cnsqv4/AE4pMBEtObfiKBw8pT_8xHk?rlkey=x03xok2qdr626t25h2gyb5m59&dl=1",
       "Khalifa / Lifestyle Photos": "https://www.dropbox.com/scl/fo/werbdixfuwq2ou1xdc977/ACQTR2l-psGhMB6aAUetVOk?rlkey=drudf6bzz1cgd0tuaynb8a3wm&dl=1",
