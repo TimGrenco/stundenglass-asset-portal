@@ -131,12 +131,30 @@
   // keyed by synced filename. Overrides the raw filename wherever the piece shows.
   var INSTORE_LABELS = {
     // Curated display names + print dimensions for Stündenglass in-store pieces,
-    // keyed by synced Dropbox filename. Add entries as the real in-store marketing
-    // files land in Dropbox (e.g. "Gravity-Infuser-Table-Tent": { name, dim }).
+    // keyed by the synced Dropbox filename (no extension). Drives the friendly
+    // captions on product tiles and in the order cart. Add an entry per new file.
+    "Stundenglass-Sticker-Mockup":              { name: "Die-Cut Stickers",         dim: '2" × 2"' },
+    "Stundenglass-v3-Mockup":                   { name: "Stündenglass Poster",       dim: '11" × 17"' },
+    "Stundenglass-v3-Postcard-Mockup":          { name: "Stündenglass Postcard",     dim: '4" × 6"' },
+    "Stundenglass-V3-window-cling-mockup copy": { name: "Stündenglass Window Cling", dim: '8" × 8"' },
+    "Stundenglass-v3-Table-Tent-Mockup":        { name: "Stündenglass Table Tent",   dim: '4" × 6"' },
+    "Stundenglass-Wiz-Mockup":                  { name: "Khalifa Poster",            dim: '18" × 24"' },
+    "Modul-Table-Tent-Mockup":                  { name: "Modül Table Tent",          dim: '4" × 6"' },
+    "Screenshot 2026-07-15 at 1.19.29 PM":      { name: "Stündenglass Wooden Logo",  dim: '12" × 12"' },
   };
-  function instoreLabel(file) { return INSTORE_LABELS[file && file.name] || null; }
+  // The featured "main" image on the home Retail Marketing Materials card (by
+  // synced filename). The Wooden Logo render is the hero. "" → 2-up preview.
+  var INSTORE_FEATURED = "Screenshot 2026-07-15 at 1.19.29 PM";
+  // Match labels/featured by NORMALISED name: macOS screenshot filenames put a
+  // narrow no-break space (U+202F) before "PM", and other files may carry nbsp —
+  // collapse all whitespace so a plain-space key still matches.
+  function normName(s) { return String(s == null ? "" : s).replace(/\s+/g, " ").trim(); }
+  var INSTORE_LABELS_N = {};
+  Object.keys(INSTORE_LABELS).forEach(function (k) { INSTORE_LABELS_N[normName(k)] = INSTORE_LABELS[k]; });
+  function labelFor(name) { return INSTORE_LABELS_N[normName(name)] || null; }
+  function instoreLabel(file) { return file ? labelFor(file.name) : null; }
   function fileLabel(file) {
-    var lbl = INSTORE_LABELS[file.name];
+    var lbl = labelFor(file.name);
     if (lbl) return lbl.name;   // curated in-store material name (no extension)
     var f = file.format || "";
     if (!f || f === "YouTube" || f === "Link") return file.name;  // links keep their title, no fake extension
@@ -946,9 +964,13 @@
       return;
     }
 
-    // Two preview tiles (like the logos card) — clicking goes to the order page.
-    var tiles = mats.slice(0, 2).map(function (x) {
-      var media = x.thumb ? '<img src="' + x.thumb + '" alt="' + fileLabel(x).replace(/"/g, "") + '" loading="lazy"/>' : window.__icon("photo");
+    // Preview: the featured "main" image on its own if one is set, else the first
+    // two materials. Clicking goes to the order page.
+    var featured = INSTORE_FEATURED && mats.filter(function (x) { return normName(x.name) === normName(INSTORE_FEATURED); })[0];
+    var previewMats = featured ? [featured] : mats.slice(0, 2);
+    var tiles = previewMats.map(function (x) {
+      var lbl = instoreLabel(x), cap = (lbl && lbl.name) || fileLabel(x);
+      var media = x.thumb ? '<img src="' + x.thumb + '" alt="' + cap.replace(/"/g, "") + '" loading="lazy"/>' : window.__icon("photo");
       return '<a class="logo-tile" href="#materials" title="Order marketing materials">' + media + "</a>";
     }).join("");
 
@@ -962,7 +984,7 @@
             '<span class="instore-count">' + mats.length + " material" + (mats.length === 1 ? "" : "s") + " available</span>" +
           "</div>" +
         "</div>" +
-        '<div class="logo-preview">' + tiles + "</div>" +
+        '<div class="logo-preview' + (featured ? " single" : "") + '">' + tiles + "</div>" +
       "</div>";
   }
 
@@ -1245,7 +1267,8 @@
     (window.PORTAL_INSTORE_GENERAL || []).forEach(function (x) {
       if (seen[x.name]) return;
       seen[x.name] = true;
-      out.push({ name: x.name, dim: x.dim || null, thumb: x.thumb, url: x.file || x.url || null });
+      var lbl = instoreLabel(x);   // friendly name + print dimensions when mapped
+      out.push({ name: lbl ? lbl.name : x.name, dim: lbl ? lbl.dim : (x.dim || null), thumb: x.thumb, url: x.file || x.url || null });
     });
     PRODUCTS.forEach(function (p) {
       if (p.isLogo) return;
