@@ -243,6 +243,40 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "Black / In-Store Marketing": [
+        {
+          "name": "Stundenglass-v3-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/j08y8vqkv7n6og2pzlplk/Stundenglass-v3-Mockup.jpg?rlkey=h00efhyzws714wior0jd1a9bw&dl=0",
+          "thumb": "assets/synced/gravity-infusers/3ac5b8b405553de135e1c69586eaf5ca6824cee2091ee540c22dc365cc8e95da.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Postcard-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/pxj20wqa00422yf4ifkrf/Stundenglass-v3-Postcard-Mockup.jpg?rlkey=5g7jorlqe4ggcmcxoib5alesj&dl=0",
+          "thumb": "assets/synced/gravity-infusers/6a9cda6455fbee836cb5736b35a48ee1562538609b0066b52d4a652f2ea873a6.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Table-Tent-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/dmcuda6vedd68jqlip5o2/Stundenglass-v3-Table-Tent-Mockup.jpg?rlkey=miso4vgxry0pz512u75i38pgz&dl=0",
+          "thumb": "assets/synced/gravity-infusers/8b6373f930b79f9b5834170b1951f23a72215ed922f4e0ca0cd4db1e25556f33.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-V3-window-cling-mockup copy",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/80yudm1t30aebt3urngr1/Stundenglass-V3-window-cling-mockup-copy.jpg?rlkey=d5pqbl8epnks9y696uzuwyztp&dl=0",
+          "thumb": "assets/synced/gravity-infusers/17b123c4badf396977f2b5c27152fd2313359b73cfb2e8b466a55c2886f3614a.jpg",
+          "file": null
+        }
+      ],
       "Black / Documents": [
         {
           "name": "Stundenglass-OneSheet-V3",
@@ -442,6 +476,40 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/yjqnmxeryep9w8faytmwi/Desert-Rose-Horizontal.mp4?rlkey=dhyw9xs42a2yaa9zw9h3x1fxf&dl=0",
           "thumb": "assets/synced/gravity-infusers/0705456edd5c335345e84fe47b51663ff019b528c806bc518e8e6e59bdfda51d.jpg",
+          "file": null
+        }
+      ],
+      "Desert Rose / In-Store Marketing": [
+        {
+          "name": "Stundenglass-v3-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/z0lltidwg3qp0spd5aqka/Stundenglass-v3-Mockup.jpg?rlkey=ghfgvma8vt201t2oomtmir8ux&dl=0",
+          "thumb": "assets/synced/gravity-infusers/3ac5b8b405553de135e1c69586eaf5ca6824cee2091ee540c22dc365cc8e95da.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Postcard-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/265jryd8yl2t1h92htdj9/Stundenglass-v3-Postcard-Mockup.jpg?rlkey=7w6bu8sr2x2ogih1uapsrdi73&dl=0",
+          "thumb": "assets/synced/gravity-infusers/6a9cda6455fbee836cb5736b35a48ee1562538609b0066b52d4a652f2ea873a6.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Table-Tent-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/rgv8w9kmtcq8c60unelir/Stundenglass-v3-Table-Tent-Mockup.jpg?rlkey=hs9i1g951bivpt5f35czik58a&dl=0",
+          "thumb": "assets/synced/gravity-infusers/8b6373f930b79f9b5834170b1951f23a72215ed922f4e0ca0cd4db1e25556f33.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-V3-window-cling-mockup copy",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ok2s3cn4twtqrrcpl8ppq/Stundenglass-V3-window-cling-mockup-copy.jpg?rlkey=9jpzqawghvhjzro008ut6a3ew&dl=0",
+          "thumb": "assets/synced/gravity-infusers/17b123c4badf396977f2b5c27152fd2313359b73cfb2e8b466a55c2886f3614a.jpg",
           "file": null
         }
       ],
@@ -713,6 +781,40 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "Olive Green / In-Store Marketing": [
+        {
+          "name": "Stundenglass-v3-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/vobczvkleujuxqil4nwdx/Stundenglass-v3-Mockup.jpg?rlkey=k9tp930gt63jeyff1wdkog10p&dl=0",
+          "thumb": "assets/synced/gravity-infusers/3ac5b8b405553de135e1c69586eaf5ca6824cee2091ee540c22dc365cc8e95da.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Postcard-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/fg3g5bwxne76py4enxkbd/Stundenglass-v3-Postcard-Mockup.jpg?rlkey=ebzd2fjs9orezsc0jvrehcqhj&dl=0",
+          "thumb": "assets/synced/gravity-infusers/6a9cda6455fbee836cb5736b35a48ee1562538609b0066b52d4a652f2ea873a6.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Table-Tent-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/2nqv05sge098g45xgckfk/Stundenglass-v3-Table-Tent-Mockup.jpg?rlkey=b2wlsw7mwhfgn5979cxhtzb6g&dl=0",
+          "thumb": "assets/synced/gravity-infusers/8b6373f930b79f9b5834170b1951f23a72215ed922f4e0ca0cd4db1e25556f33.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-V3-window-cling-mockup copy",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ml20jb3agfpcydwl5ewnh/Stundenglass-V3-window-cling-mockup-copy.jpg?rlkey=0jxn565txp41od7gdfmb4ayse&dl=0",
+          "thumb": "assets/synced/gravity-infusers/17b123c4badf396977f2b5c27152fd2313359b73cfb2e8b466a55c2886f3614a.jpg",
+          "file": null
+        }
+      ],
       "Olive Green / Documents": [
         {
           "name": "Stundenglass-OneSheet-V3",
@@ -938,6 +1040,40 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/6s8r1m9zjdt5glsnh6a18/Violet-Purple-Horiztona.mp4?rlkey=crgyctfw2w9a1idjeazoszezp&dl=0",
           "thumb": "assets/synced/gravity-infusers/7e347dd452e0c093e7a18b137908711e575afcdf5835cf8d43c269d0b271fc70.jpg",
+          "file": null
+        }
+      ],
+      "Violet Purple / In-Store Marketing": [
+        {
+          "name": "Stundenglass-v3-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/a0atksgy48u5lcfb9h11i/Stundenglass-v3-Mockup.jpg?rlkey=tre67ay4mtixrrfy4i7bcqj4d&dl=0",
+          "thumb": "assets/synced/gravity-infusers/3ac5b8b405553de135e1c69586eaf5ca6824cee2091ee540c22dc365cc8e95da.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Postcard-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/pkx80a8bpthd34027t8dn/Stundenglass-v3-Postcard-Mockup.jpg?rlkey=vbkqvn1fcqnzl16120nwr5xwv&dl=0",
+          "thumb": "assets/synced/gravity-infusers/6a9cda6455fbee836cb5736b35a48ee1562538609b0066b52d4a652f2ea873a6.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-v3-Table-Tent-Mockup",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/a9hqxvtbthqb28b4d1nby/Stundenglass-v3-Table-Tent-Mockup.jpg?rlkey=ppys6jcrwo3q5cp6m5n4ju1zq&dl=0",
+          "thumb": "assets/synced/gravity-infusers/8b6373f930b79f9b5834170b1951f23a72215ed922f4e0ca0cd4db1e25556f33.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass-V3-window-cling-mockup copy",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/4j86p7xmrfzlv1caqoh36/Stundenglass-V3-window-cling-mockup-copy.jpg?rlkey=2bnuw8r2f92b97sihap3zjp1j&dl=0",
+          "thumb": "assets/synced/gravity-infusers/17b123c4badf396977f2b5c27152fd2313359b73cfb2e8b466a55c2886f3614a.jpg",
           "file": null
         }
       ]
