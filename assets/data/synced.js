@@ -3123,6 +3123,14 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "Black SG EDC",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/e3sd91yem2bnr0r0pepof/Black-SG-EDC.mp4?rlkey=f2hfhb8w0hj1rncx4ftbwopgo&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/e249464a3fd4ed5ecdce7a4191f4927dccce9363f92aa46cf298af51b72d600d.jpg",
+          "file": null
+        },
+        {
           "name": "Black SG Modül West Hills Flip",
           "type": "video",
           "format": "MP4",
@@ -3155,19 +3163,19 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "Cannabista SG Clean ASMR",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/li2krl2yoc202w8vgorh4/Cannabista-SG-Clean-ASMR.mp4?rlkey=a118tge278a5pl7t9ng6g8jpd&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/df743a455aec5c6089cca5ee72e34a46456a47e0f3c437f1c27d182bfe10c803.jpg",
+          "file": null
+        },
+        {
           "name": "Chest Mount Cookies Ski A",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/tktljggfae74sgr3mlahi/Chest-Mount-Cookies-Ski-A.mp4?rlkey=udakmrck12k1nj573yryo4mwc&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/02399049f32bbfa32f3f6768289809c6184b6b44d64e014dffb6aebb3e264c8e.jpg",
-          "file": null
-        },
-        {
-          "name": "Chest Mount Cookies Ski C",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/ka2nc8ogis3u4wn50k04x/Chest-Mount-Cookies-Ski-C.mp4?rlkey=33asln0tiyb6qjavchqycbdtd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/79ba910b139a18f2242736d33d0bea0606ad35d4a8d00decde7edf2e9a6c1b05.jpg",
           "file": null
         },
         {
@@ -3192,6 +3200,14 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/2sak0ytklq2riwbjmah5h/Clouded-Queen-Black-SG.mp4?rlkey=nj4q65aoy5kwl1tbww5kd8oe4&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/3cabfa0f6ec93580a61a6537003a552ebaae1fd1062a257081ba5333b1424b54.jpg",
+          "file": null
+        },
+        {
+          "name": "EllaBooTokes SG April",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/garx74manhgp7ml2e1595/EllaBooTokes-SG-April.mp4?rlkey=fp0eudxmhelo4wzhd1unfnr00&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/21f0f2638e42e004cddaeed183b27dff8421ec1d003ed17f516a74ec4b6b9190.jpg",
           "file": null
         },
         {
@@ -3507,6 +3523,22 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "SG_420 ARGirl May",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/wr9ht352czxcmm06hrcl8/SG_420-ARGirl-May.mp4?rlkey=m3p7pj4hfaex86kgs3dgob8ov&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/78f76842579dc76f7ad931d51818bf998abca19ff674e09f72ad3a8e07d0f97c.jpg",
+          "file": null
+        },
+        {
+          "name": "Silenced Hippie SG Pumpkin",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/r4tr5a2fb3te863k66t0o/Silenced-Hippie-SG-Pumpkin.mp4?rlkey=xxza4xnuxg8j2l21ixr28ji27&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/fe20b4a1c872b7071195540ae2a2c3e240cd52520a931bf1a6723910a4977304.jpg",
+          "file": null
+        },
+        {
           "name": "Small Globes Clear Upstems Black",
           "type": "video",
           "format": "MP4",
@@ -3589,6 +3621,14 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "How To Use Your Stündenglass)",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/r7uxhehy9pvj9g84wkaa5/How-To-Use-Your-St-ndenglass.mp4?rlkey=svpcpabdnpfswqcfzgzcmedxh&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/be8fc4338cf78153e6108e26e5424749156ecbe9856be22896db4310c6f828b4.jpg",
+          "file": null
+        },
+        {
           "name": "HR Cassy Clip_01",
           "type": "video",
           "format": "MP4",
@@ -3645,48 +3685,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Stünden - Cleaning condensed",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/8kngurtccir16xxow43td/St-nden-Cleaning-condensed.mp4?rlkey=38x3flbowb70i6lizh260pmwd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/781b6c951769e55633a1698b4c08ba7898dd81abd48e5c6e63e92e5773087d0c.jpg",
-          "file": null
-        },
-        {
-          "name": "Stünden Loft Connect",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/ilalh0cdjq7swvicmhbpl/St-nden-Loft-Connect.mp4?rlkey=y3lpaegohp7e4hn5lv0zmq4vz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6bcfb419e41ae83fae2ba474f3f62658d0025b6bd222b57568facba05003fcc6.jpg",
-          "file": null
-        },
-        {
-          "name": "Stünden Loft Hookah",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/uszdma1qxjc3diyds6k0p/St-nden-Loft-Hookah.mp4?rlkey=4l828tg1sas0x0t0ex80vmqum&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/dae82a67ae543bd311e92a8d153f8b4570d0c481c26da53cc755d27f9e81f45e.jpg",
-          "file": null
-        },
-        {
-          "name": "Stündenglass Tutorial 2024",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/oyypwwe1qo2nhyvn93vzd/St-ndenglass-Tutorial-2024.mp4?rlkey=zp085hf4l3c252rauuz6lwv84&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3c642e85da2b68722df1ee887eb78216043a8b2f85680fa18afd804b2e6cfde5.jpg",
-          "file": null
-        }
-      ],
-      "TV Screen Videos / How To Use Videos": [
-        {
-          "name": "How To Use Your Stündenglass)",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/r7uxhehy9pvj9g84wkaa5/How-To-Use-Your-St-ndenglass.mp4?rlkey=svpcpabdnpfswqcfzgzcmedxh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/be8fc4338cf78153e6108e26e5424749156ecbe9856be22896db4310c6f828b4.jpg",
-          "file": null
-        },
-        {
           "name": "SG Pineapple Globes Tutorial",
           "type": "video",
           "format": "MP4",
@@ -3698,7 +3696,7 @@ window.PORTAL_SYNCED = {
           "name": "Stünden - Cleaning condensed",
           "type": "video",
           "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/avfo6thr0aenlh4wzl2dp/St-nden-Cleaning-condensed.mp4?rlkey=spn3r4zl9us9m9gd9ljjnd5p9&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/8kngurtccir16xxow43td/St-nden-Cleaning-condensed.mp4?rlkey=38x3flbowb70i6lizh260pmwd&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/781b6c951769e55633a1698b4c08ba7898dd81abd48e5c6e63e92e5773087d0c.jpg",
           "file": null
         },
@@ -3727,6 +3725,22 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "Stünden Loft Connect",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/ilalh0cdjq7swvicmhbpl/St-nden-Loft-Connect.mp4?rlkey=y3lpaegohp7e4hn5lv0zmq4vz&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/6bcfb419e41ae83fae2ba474f3f62658d0025b6bd222b57568facba05003fcc6.jpg",
+          "file": null
+        },
+        {
+          "name": "Stünden Loft Hookah",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/uszdma1qxjc3diyds6k0p/St-nden-Loft-Hookah.mp4?rlkey=4l828tg1sas0x0t0ex80vmqum&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/dae82a67ae543bd311e92a8d153f8b4570d0c481c26da53cc755d27f9e81f45e.jpg",
+          "file": null
+        },
+        {
           "name": "Stündenglass Hookah - How To Use",
           "type": "video",
           "format": "MP4",
@@ -3735,11 +3749,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Stündenglass Hookah - How To Use (1)",
+          "name": "Stündenglass Tutorial 2024",
           "type": "video",
           "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/zys3ley2g35hxt6gf77ox/St-ndenglass-Hookah-How-To-Use-1.mp4?rlkey=xh8xzqw9ofkhpwuwu2a9s7nu3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/294312d75c4b4fb39e69d786298be71a48c09400e4d0efdfd8b90aad91302121.jpg",
+          "url": "https://www.dropbox.com/scl/fi/oyypwwe1qo2nhyvn93vzd/St-ndenglass-Tutorial-2024.mp4?rlkey=zp085hf4l3c252rauuz6lwv84&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/3c642e85da2b68722df1ee887eb78216043a8b2f85680fa18afd804b2e6cfde5.jpg",
           "file": null
         }
       ],
@@ -3991,6 +4005,14 @@ window.PORTAL_SYNCED = {
       ],
       "Cookies / Social Videos": [
         {
+          "name": "Brecreation Cookies SGmp4",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/bhj9f3z3ytml3uk0krmsy/Brecreation-Cookies-SGmp4.mp4?rlkey=fur1u6r68968dahrnwhau3d04&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/c97eccabc428f61d4218eb88161a524f42346f53b637b23247ca0ec63e990b30.jpg",
+          "file": null
+        },
+        {
           "name": "Cookies Flip_Oct",
           "type": "video",
           "format": "MP4",
@@ -4012,6 +4034,14 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/gua4d9t0s9bi946vx5zqb/Cookies-Vegas-Party.mp4?rlkey=mqmxvvz3gziiii09vvd5j0rhl&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/a458b4d69f3a7de23a99b684f2aff18883c9f700ebc7710e16596513df171a08.jpg",
+          "file": null
+        },
+        {
+          "name": "Lake Tahoe Reggae Fest",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/9ux47hk2y3bfm8u4xs496/Lake-Tahoe-Reggae-Fest.mp4?rlkey=lkh2pmo00mg1vdvyvdt6tv3ii&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/bc2de11271e6eec7c860c7dc5f31d1eaf23007f84f365b1c06881c5e679e81f9.jpg",
           "file": null
         },
         {
@@ -4385,24 +4415,6 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
-      "Full Line": [
-        {
-          "name": "_ALF0081",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1cqp9ab0rq51r3uupdr0f/_ALF0081.jpg?rlkey=yi3wls8r2zwu6bwhgxydscgkr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/41bc241e6922f95d7a3ee2635964d6fc2742fa5e7918dfc9a6a01619d2010b84.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7789",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/j5g0xzjsyofeg627r7a7p/_ALF7789.jpg?rlkey=ayu7ule76fvvjcemibrrsbfrb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7729d2d7b1ad1f3ba38a223a8a79357f997b38b564810f105fa06a18e606c336.jpg",
-          "file": null
-        }
-      ],
       "Grateful Dead / Legacy Patchwork / Product Photos": [
         {
           "name": "GD_LP_web_StickerSheet_a",
@@ -4617,11 +4629,29 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "Larry CaliRoots Recap A",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/62szxqu0875trdvpvx2mi/Larry-CaliRoots-Recap-A.mp4?rlkey=g8tclpmlqqw8rm8qeb5sc5jhq&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/b663edad02ae4df52f55108918a8631d6a3cbb3954892ef01a31bb1713bc1459.jpg",
+          "file": null
+        },
+        {
           "name": "Larry Labubu GD SG",
           "type": "video",
           "format": "MOV",
           "url": "https://www.dropbox.com/scl/fi/cljdh0954k01uwnvxm5g6/Larry-Labubu-GD-SG.mov?rlkey=kdmw9sjujefacz0joya7k73de&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/1f6da0f106c4bee1b9f93e3b1d54fe1113f4147107e0ea571b7915988630ddaa.jpg",
+          "file": null
+        }
+      ],
+      "Grateful Dead / Legacy Patchwork / TV Screen Video": [
+        {
+          "name": "SG GD Visualizer Horizontal",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/bhwcz5ardihyec8ykfody/SG-GD-Visualizer-Horizontal.mp4?rlkey=5np5i2bc4fjm754c2pbif9isz&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/438bb27558b9499e2b27584b58fc7ec94583f18bcac8cb576e68926066b70171.jpg",
           "file": null
         }
       ],
@@ -4919,6 +4949,22 @@ window.PORTAL_SYNCED = {
       ],
       "Grateful Dead / Stealy Lock Up / Social Videos": [
         {
+          "name": "Bert Kreischer GD",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/uvumzes8ch3ptgwbm8amx/Bert-Kreischer-GD.mp4?rlkey=626r46ptwdcsd3u45fmpmq9ek&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/afa633a979b812d7c2f88da7478294e02e295868bcd004829f300b9ed9abebe1.jpg",
+          "file": null
+        },
+        {
+          "name": "Earth GD Kompact Sphere",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/xyywnqyd09i4abxsv1b56/Earth-GD-Kompact-Sphere.mp4?rlkey=jbyll7tswwcbuad1sguq99ebj&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/e5788096789a927a912d5b92a895f35949c362838e179d8b9f57b7710a1c6e3a.jpg",
+          "file": null
+        },
+        {
           "name": "GD SG Flip VV ASMR",
           "type": "video",
           "format": "MP4",
@@ -4932,6 +4978,22 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/9cx0las4bvek3ik3uobdv/GD-SG-Flip-VV-Blue-Globes-ASMR.mp4?rlkey=mh5umns31d8vi9k0fmbquk5cj&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/68587b707798282c902aeccadcfd3c57c4452d1ecd5f872f32bf748558ba0243.jpg",
+          "file": null
+        },
+        {
+          "name": "GD SG HighWomanXmas",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/tnl8lx2l5lhxg724j97u5/GD-SG-HighWomanXmas.mp4?rlkey=wmdrf0zo51dd6uadts3bu7ear&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/9fac910de602ce03c83cf1b18def313542bcca2480383b5304b8c82995c53210.jpg",
+          "file": null
+        },
+        {
+          "name": "Larry GD SG Metal Detector",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/g1ozc7vyv2d2q3lay108d/Larry-GD-SG-Metal-Detector.mp4?rlkey=h8k9zdb5m230x6hv67wm9u8d7&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/0dad51365f05b1328cda3b6af40713daf4e85efb521907b6f2d0d7e3dc5e9628.jpg",
           "file": null
         },
         {
@@ -5006,6 +5068,24 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/lvck8yk3ony60ai8tn3yv/Wide-GD-SG-Single-Smoke.mp4?rlkey=e1qcdnoak6njk5w8chg708l9e&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/f1941417112c4007eef1cabad862778d6d68df8c59d18aef16f79ce0c670bd45.jpg",
+          "file": null
+        }
+      ],
+      "Group Photos": [
+        {
+          "name": "_ALF0081",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/1cqp9ab0rq51r3uupdr0f/_ALF0081.jpg?rlkey=yi3wls8r2zwu6bwhgxydscgkr&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/41bc241e6922f95d7a3ee2635964d6fc2742fa5e7918dfc9a6a01619d2010b84.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF7789",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/j5g0xzjsyofeg627r7a7p/_ALF7789.jpg?rlkey=ayu7ule76fvvjcemibrrsbfrb&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7729d2d7b1ad1f3ba38a223a8a79357f997b38b564810f105fa06a18e606c336.jpg",
           "file": null
         }
       ],
@@ -5321,6 +5401,22 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "Jamison.David KK Unboxing",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/lgpf28n8y1xb69f6mvsqx/Jamison.David-KK-Unboxing.mp4?rlkey=s9lfi0ls88ledztgtz61v3k5m&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/2346185ef4ec9cd6012b7011afece2c853653910e370bb3364206b0b1b4ea522.jpg",
+          "file": null
+        },
+        {
+          "name": "Jon Z- So Fine KK SG",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/acbwfj0v6xv630n6htv8h/Jon-Z-So-Fine-KK-SG.mp4?rlkey=bqd3s06xf0b00sl4ejntx4znd&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/4c4b90837d2c6ab5c331887642133ad5c4d73dc002f33d64645a7bb3aab5dc8f.jpg",
+          "file": null
+        },
+        {
           "name": "Jonzmen KK OJ",
           "type": "video",
           "format": "MP4",
@@ -5433,6 +5529,30 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "Larry CaliRoots KK Raw A",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/jzgqf5efayzah31mfw2pw/Larry-CaliRoots-KK-Raw-A.mp4?rlkey=1mtxeucjeh6y0n8rlzwzpfdz2&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/27927494caa1e8667a6ca0424876ed7df10c8a394b80750fa2ec04788179269a.jpg",
+          "file": null
+        },
+        {
+          "name": "Larry CaliRoots KK Raw B",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/00mllf91tl8ffuj32y6vo/Larry-CaliRoots-KK-Raw-B.mp4?rlkey=u9uagevvgszshtczvlaariczl&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/c5956ee059d39ceb0dd57758730310209d63915891609ee81edebabd965da150.jpg",
+          "file": null
+        },
+        {
+          "name": "Larry HitHug KK SG Reggae Rise Up",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/xq40pyzkz4jhzsb4csd2e/Larry-HitHug-KK-SG-Reggae-Rise-Up.mp4?rlkey=bg4jzkqin28r4hdq2tri6yjrw&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/137f4b8fef786b21937903523bd6bbefc54b3485263f08ef99f468041be42172.jpg",
+          "file": null
+        },
+        {
           "name": "Larry KK SG Modül 2x",
           "type": "video",
           "format": "MP4",
@@ -5478,6 +5598,14 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/5od6f992ppj5nzswclztk/taestayshigh-KK-SG-Mod-l-Dec.mp4?rlkey=5faray44taw8lrt1h65f57t8s&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/7cac957fb3e7219f9c8ee693b17dcd1d598e43818ae2332d295f69cbdeb70229.jpg",
+          "file": null
+        },
+        {
+          "name": "tatum.bell KK SG Spin Off March",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/e5v5c1w0stzwwacdslal0/tatum.bell-KK-SG-Spin-Off-March.mp4?rlkey=cf4f3i8jhnuievqlgg0ej81ym&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/dbe8fa5068b6b20881302169bdc5f2535d43a61df587d66962f0c698a9d367c4.jpg",
           "file": null
         },
         {
@@ -6161,6 +6289,14 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "TheHighWomancleaningSG",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/yfssh55kvz9ngwy7vkkgu/TheHighWomancleaningSG.mp4?rlkey=w1tdcv5opetohqoipszb8wf7q&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/a828a58c0a8e1252e643dd5cbd5d2ef085ade6aa89d2fecc3a78878fa4a909fd.jpg",
+          "file": null
+        },
+        {
           "name": "UGC Pink SG Aug 24",
           "type": "video",
           "format": "MP4",
@@ -6675,11 +6811,35 @@ window.PORTAL_SYNCED = {
       ],
       "Taylor Gang / Social Videos": [
         {
+          "name": "Call Her Daddy TG SG 420",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/wyp2sbrkpgl3se32rnpsd/Call-Her-Daddy-TG-SG-420.mp4?rlkey=aqmbonemesrcxjewf7qvnrq5c&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/80b787820fc4b05f1ffd62a12c37b2b5a0665aeb8a86ebf09ec0e950ce19d067.jpg",
+          "file": null
+        },
+        {
+          "name": "Ganga Guru TG SG",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/7s96olebee7jwqoi7to7s/Ganga-Guru-TG-SG.mp4?rlkey=krx9pycjnyhujna7djlneplb9&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/c52d0b68b158a3f7479d68d3cf7df2cd9666d749c96d3b29200649c83e03bb40.jpg",
+          "file": null
+        },
+        {
           "name": "Hustletrees TG SG",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/dbs5fy9of4kk2dniu7wnd/Hustletrees-TG-SG.mp4?rlkey=gq7ig27p1j4kra0odcvbz1mhs&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/9a11347583e4ab87ff929bf504d9df81a5f4630a4b8343ef83b4688f9891e3d7.jpg",
+          "file": null
+        },
+        {
+          "name": "MotorMane_TGSG",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/w4pmq998pcgnblitw6v36/MotorMane_TGSG.mp4?rlkey=mihda65hjg7c6n1aveox0jcfr&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/06d556c02c3d3043e5e5b9ce66e43ea1b8fd3babe263a3dc2ede184ad101ab55.jpg",
           "file": null
         },
         {
@@ -6712,6 +6872,14 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/jy0dprq3ga594pdfquy8z/Wiz-TG-SG-Headphones.mp4?rlkey=bpond3wdl85vyb617dscx902i&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/6fd9af1ced33a79dd7935655bbaffe144cf227b60d794c8f366f14cafc6500fe.jpg",
+          "file": null
+        },
+        {
+          "name": "Wiz TG SG Uplight_May",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/t0sxi12g89sb9k1nyjet8/Wiz-TG-SG-Uplight_May.mp4?rlkey=cxes4ydi9glzw2z16xpx5ebwt&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/c26f88d0c6a15f795502bc9ab9d3c31a3637654f7e443689377d3b3b92d3ddcb.jpg",
           "file": null
         },
         {
@@ -7230,322 +7398,6 @@ window.PORTAL_SYNCED = {
           "thumb": "assets/synced/classic-gravity-infusers/dace55ab4b63e3f6545764b90a43ebebce0d8e46851f7896caf3956cb0f63720.jpg",
           "file": null
         }
-      ],
-      "UGC - Stundenglass": [
-        {
-          "name": "Bert Kreischer GD",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/uvumzes8ch3ptgwbm8amx/Bert-Kreischer-GD.mp4?rlkey=626r46ptwdcsd3u45fmpmq9ek&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/afa633a979b812d7c2f88da7478294e02e295868bcd004829f300b9ed9abebe1.jpg",
-          "file": null
-        },
-        {
-          "name": "Black SG EDC",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/ahgzxxqwfjdgf5d59na81/Black-SG-EDC.mp4?rlkey=xh4qkv4ftl543m7wo53qdj329&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e249464a3fd4ed5ecdce7a4191f4927dccce9363f92aa46cf298af51b72d600d.jpg",
-          "file": null
-        },
-        {
-          "name": "BlazinwithBri Tyson Hyer SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/07gwt40xshzb9hs08ixlz/BlazinwithBri-Tyson-Hyer-SG.mp4?rlkey=3b6ivdn23pzzhi93djyrhpezb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7519eade301583282808e1999c6fb9d04aa88b1adcdc80f7ad4fac6b5418534e.jpg",
-          "file": null
-        },
-        {
-          "name": "Brecreation Cookies SGmp4",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/r9qhcwjwhn2jz1y01pa0v/Brecreation-Cookies-SGmp4.mp4?rlkey=30my3vnz7i43ac95lqmo0w1wk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c97eccabc428f61d4218eb88161a524f42346f53b637b23247ca0ec63e990b30.jpg",
-          "file": null
-        },
-        {
-          "name": "Call Her Daddy TG SG 420",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/v8yt3c5sl0jd0ynjzmm17/Call-Her-Daddy-TG-SG-420.mp4?rlkey=mphxnwd5os2nc91hkg7tbj7xx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/80b787820fc4b05f1ffd62a12c37b2b5a0665aeb8a86ebf09ec0e950ce19d067.jpg",
-          "file": null
-        },
-        {
-          "name": "Cannabista SG Clean ASMR",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/3jp4m2xcatm3rk5egjieb/Cannabista-SG-Clean-ASMR.mp4?rlkey=3qxadx8vxji48bjl8eujkhqbf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/df743a455aec5c6089cca5ee72e34a46456a47e0f3c437f1c27d182bfe10c803.jpg",
-          "file": null
-        },
-        {
-          "name": "DanielSonWilliams Silver SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/vwxkrzuygwzrfc1sruw4m/DanielSonWilliams-Silver-SG.mp4?rlkey=fup18m9o3o2oaiaicwrildrmc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4716c8354e6ff18a32b34d7595de6ac36afcaf5289dc938147640caf33567204.jpg",
-          "file": null
-        },
-        {
-          "name": "Earth GD Kompact Sphere",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/xyywnqyd09i4abxsv1b56/Earth-GD-Kompact-Sphere.mp4?rlkey=jbyll7tswwcbuad1sguq99ebj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e5788096789a927a912d5b92a895f35949c362838e179d8b9f57b7710a1c6e3a.jpg",
-          "file": null
-        },
-        {
-          "name": "EarthSmokesTysonHyerSG March",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/hpicxaxpl8xx5hv8iaxzk/EarthSmokesTysonHyerSG-March.mp4?rlkey=ya8jfvi1i45ipkfu76zqqfmn4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c81361663217ecd9425b41e40cea235d8a3429ad45c55e2758a28cfbf02f962e.jpg",
-          "file": null
-        },
-        {
-          "name": "EllaBooTokes SG April",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/to41a2lbqka3wttzqnk1f/EllaBooTokes-SG-April.mp4?rlkey=t5g8phvdilljfht8n6cb5i81p&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/21f0f2638e42e004cddaeed183b27dff8421ec1d003ed17f516a74ec4b6b9190.jpg",
-          "file": null
-        },
-        {
-          "name": "Evergreen inside_1",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/j5a59dq82y9hkty3nagra/Evergreen-inside_1.mp4?rlkey=t2sa1nw9e8uz50zzmgzy42hdm&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6f39764e2dfd1237398c17c5f4eb1151e4289d2c66ca86e59f9fc9e44e5c0b3f.jpg",
-          "file": null
-        },
-        {
-          "name": "Evergreen Outside_1",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/kx2m4f2cbojpfd27machx/Evergreen-Outside_1.mp4?rlkey=em8adr6u4gyclbxr50lcnvav0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a576375ab41ea08d076b6a47d41a5ea5ebca5ae026d810567daa9d1d8f297aca.jpg",
-          "file": null
-        },
-        {
-          "name": "Ganga Guru TG SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/kw9p9j7kgvznj3jwx7vvr/Ganga-Guru-TG-SG.mp4?rlkey=r1j29twuipczkdomtswkwf4nh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c52d0b68b158a3f7479d68d3cf7df2cd9666d749c96d3b29200649c83e03bb40.jpg",
-          "file": null
-        },
-        {
-          "name": "GD SG HighWomanXmas",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/tnl8lx2l5lhxg724j97u5/GD-SG-HighWomanXmas.mp4?rlkey=wmdrf0zo51dd6uadts3bu7ear&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9fac910de602ce03c83cf1b18def313542bcca2480383b5304b8c82995c53210.jpg",
-          "file": null
-        },
-        {
-          "name": "Hustletrees TG SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/pt86z5wgkf5z79ilfpwpf/Hustletrees-TG-SG.mp4?rlkey=w7a2fh12fende0390n3p93fns&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9a11347583e4ab87ff929bf504d9df81a5f4630a4b8343ef83b4688f9891e3d7.jpg",
-          "file": null
-        },
-        {
-          "name": "Jamison.David KK Unboxing",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/tqovgld4fqxlxlolbw40f/Jamison.David-KK-Unboxing.mp4?rlkey=4464jm5zklsdafasq0r6wesq4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2346185ef4ec9cd6012b7011afece2c853653910e370bb3364206b0b1b4ea522.jpg",
-          "file": null
-        },
-        {
-          "name": "Jon Z- So Fine KK SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/9tpsifbf4w9j887zss8b2/Jon-Z-So-Fine-KK-SG.mp4?rlkey=rr8qtowik5bp64g858y68pwtf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4c4b90837d2c6ab5c331887642133ad5c4d73dc002f33d64645a7bb3aab5dc8f.jpg",
-          "file": null
-        },
-        {
-          "name": "Jonzmen KK OJ",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/le3v6zcafgvkuzc0iu4pu/Jonzmen-KK-OJ.mp4?rlkey=hk7qjbwtrqnhcv5ry0tqchti7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5ebcd761075168900cf25e5bd9dd3080c7405135dbcab867c1e90d08095cec92.jpg",
-          "file": null
-        },
-        {
-          "name": "Lake Tahoe Reggae Fest",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/hgcur3eqk1qm88kte2ug8/Lake-Tahoe-Reggae-Fest.mp4?rlkey=oia43m4kn0ghq26uvuw1wemtk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/bc2de11271e6eec7c860c7dc5f31d1eaf23007f84f365b1c06881c5e679e81f9.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry CaliRoots KK Raw A",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/566lj6fycli2iwupaupx4/Larry-CaliRoots-KK-Raw-A.mp4?rlkey=wsqgb9picq8nqwyjjtyry1poh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/27927494caa1e8667a6ca0424876ed7df10c8a394b80750fa2ec04788179269a.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry CaliRoots KK Raw B",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/43fih9glm22lffcc46ydm/Larry-CaliRoots-KK-Raw-B.mp4?rlkey=w9bo1tuvnsadts0e158nwq6qi&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c5956ee059d39ceb0dd57758730310209d63915891609ee81edebabd965da150.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry CaliRoots Recap A",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/x2op2vok9wvocnfg3l9t8/Larry-CaliRoots-Recap-A.mp4?rlkey=qcvy8s5pvin7u96umlmv5nkd3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b663edad02ae4df52f55108918a8631d6a3cbb3954892ef01a31bb1713bc1459.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry GD SG Metal Detector",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/dlyrq0ej4uh63btiik6pv/Larry-GD-SG-Metal-Detector.mp4?rlkey=8o8xh1gd1i3oly1jr6b4hx7vk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0dad51365f05b1328cda3b6af40713daf4e85efb521907b6f2d0d7e3dc5e9628.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry HitHug KK SG Reggae Rise Up",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/ztyetomo4s1ad6fwyd84i/Larry-HitHug-KK-SG-Reggae-Rise-Up.mp4?rlkey=38kxyap0y17nk7xp9vzln5pgw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/137f4b8fef786b21937903523bd6bbefc54b3485263f08ef99f468041be42172.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry Strains and Sounds DGT SG Sept",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/6doeupud8vkhgelyu39gi/Larry-Strains-and-Sounds-DGT-SG-Sept.mp4?rlkey=x1tarahma0196oynfif9hoygh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f2d14947af9dd09756fe8225f295ce59d81587847acb617ab01c4d17f76ba73a.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry Tyson Tuesday",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/mogbghdh3cq0zcfx3ipnn/Larry-Tyson-Tuesday.mp4?rlkey=m44nu8y4mhedq6n888tp8sypk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fade3084434408333118b770d14342c7b845ccac18ad03ab64fb7b97a745b351.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry_DGT SG River",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/lsa316wyu6opws52a1399/Larry_DGT-SG-River.mp4?rlkey=lxer0ftgxwz5s21yuygf00cng&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/78797030df8d3e61afd0fd6ae686203c8f53f0797e79a3ee1622a7e6f27d9bd1.jpg",
-          "file": null
-        },
-        {
-          "name": "LoudPackLu Tyson Red Gloves",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/5zvsa173v761udf021v14/LoudPackLu-Tyson-Red-Gloves.mp4?rlkey=vb56vcc6xoojz139g8iwmkpqj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1d71a62098416d842ec2dff99eb45fa03abe5f78f21abfb6c7e89bfcefd2c127.jpg",
-          "file": null
-        },
-        {
-          "name": "MotorMane_TGSG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/33gjd9by25r87ooogroms/MotorMane_TGSG.mp4?rlkey=op45z2wkw9qhh2k8q6dbbv45v&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/06d556c02c3d3043e5e5b9ce66e43ea1b8fd3babe263a3dc2ede184ad101ab55.jpg",
-          "file": null
-        },
-        {
-          "name": "post_10000000_647344436689803_512053032985064073_n",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/7ztvz5tc5i9o86efqgtky/post_10000000_647344436689803_512053032985064073_n.mp4?rlkey=da35xvxh3w3gquua9q59qz98x&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/520efa88e7a5738926c95c46b6dd0952f0bb4e9490cc12ca53c7053dfe60b74c.jpg",
-          "file": null
-        },
-        {
-          "name": "SG Coffee Recipe_music",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/15qip6kds60js0bzqzvy4/SG-Coffee-Recipe_music.mp4?rlkey=80hmvlqoeh3rdsdgo4fdla4po&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b7f9ce49c6dbadbd26e3f829c2d37db0dcaaf48b596e4be20255b18140166476.jpg",
-          "file": null
-        },
-        {
-          "name": "SG_420 ARGirl May",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/6x593f9tu97ughs5mq9fr/SG_420-ARGirl-May.mp4?rlkey=27u2bjz4juw11c51ge546qr74&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/78f76842579dc76f7ad931d51818bf998abca19ff674e09f72ad3a8e07d0f97c.jpg",
-          "file": null
-        },
-        {
-          "name": "SG_420girlpijeyJune",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/16008gkbcnwdw3v95ifgs/SG_420girlpijeyJune.mp4?rlkey=y0yp2qflrn6tdxgb22pug04ga&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2e3e06ecdf9d5748a606447162d354a02663046843cbf9ddf2e42d68e62d39a8.jpg",
-          "file": null
-        },
-        {
-          "name": "Silenced Hippie SG Pumpkin",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/k9bit4qihu272jjhy02k7/Silenced-Hippie-SG-Pumpkin.mp4?rlkey=bnmcir1sf96tfxwitfaljnm8l&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fe20b4a1c872b7071195540ae2a2c3e240cd52520a931bf1a6723910a4977304.jpg",
-          "file": null
-        },
-        {
-          "name": "Silenced SG Pumpkin shortened",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/qzeibmdop25ni08pcvgaz/Silenced-SG-Pumpkin-shortened.mp4?rlkey=bdiwiwv1jb0xd0pjrenzbivej&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/91d7dc4a657898016e52279f9722a9955d3a388ef0a3786223455c3b6e04c920.jpg",
-          "file": null
-        },
-        {
-          "name": "tatum.bell KK SG Spin Off March",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/x90fkdxi4ea09tjlc2n6c/tatum.bell-KK-SG-Spin-Off-March.mp4?rlkey=fkv1560l5ngqqd3nnppjn0bd8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/dbe8fa5068b6b20881302169bdc5f2535d43a61df587d66962f0c698a9d367c4.jpg",
-          "file": null
-        },
-        {
-          "name": "TheHighWomancleaningSG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/xl40c9ldnfmmjmv5bawu5/TheHighWomancleaningSG.mp4?rlkey=29bbt5k3yzrxu7k82hto3vjqv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a828a58c0a8e1252e643dd5cbd5d2ef085ade6aa89d2fecc3a78878fa4a909fd.jpg",
-          "file": null
-        },
-        {
-          "name": "Wiz TG SG Uplight_May",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/6nout4sz74fevc8ve2ibx/Wiz-TG-SG-Uplight_May.mp4?rlkey=omgxz3t2rlhnjz6jg1cnvk7za&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c26f88d0c6a15f795502bc9ab9d3c31a3637654f7e443689377d3b3b92d3ddcb.jpg",
-          "file": null
-        }
-      ],
-      "UGC - Stundenglass / USED UGC - Stundenglass": [
-        {
-          "name": "71D39F95-862E-4601-84A4-F2C887ECBC97",
-          "type": "video",
-          "format": "MOV",
-          "url": "https://www.dropbox.com/scl/fi/mwq2loyc46lss4b1on7ww/71D39F95-862E-4601-84A4-F2C887ECBC97.MOV?rlkey=3pylexcyr8k6lx14r92br9h9g&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8f5663ee651deb0a0dedebda660b29853ffbe1f25a0ed1c798782d991b08bd1b.jpg",
-          "file": null
-        }
       ]
     },
     "dropbox": "https://www.dropbox.com/scl/fo/zg2lt1b24hyg51akxtqyr/h?rlkey=umf2vggz3vro82dduczc419q1&dl=1",
@@ -7554,7 +7406,6 @@ window.PORTAL_SYNCED = {
       "Lifestyle Photos": "https://www.dropbox.com/scl/fo/bsveld9djpo5bvwxynfy7/AOQjwI3hkNuld2Zo_KmQpmA?rlkey=kbyxd3iahiia3zhym38perftr&dl=1",
       "Social Videos": "https://www.dropbox.com/scl/fo/6l0rvukl5c90kyvtjxwvp/AAZdVaVOSDYFSBooj60QxVw?rlkey=mszvgsfskhq3f4rnx4rya572a&dl=1",
       "TV Screen Videos": "https://www.dropbox.com/scl/fo/tverbynvux8t5lcgb9lv1/AJxTCaEuzaamnfKmh-LasFE?rlkey=l6sm7e5b0mduk94x5exioulad&dl=1",
-      "TV Screen Videos / How To Use Videos": "https://www.dropbox.com/scl/fo/es0ph26an2ujzsjbuzepv/ADllyR8TDxFJSfU9p8MZYTw?rlkey=q5xy3j40kj9t3wrh8cckentey&dl=1",
       "Documents": "https://www.dropbox.com/scl/fo/1shuh2num964fpwbafu0j/APTjULQzv4oJwZa1vGMgZR4?rlkey=z4odgikczob8kpictovkdw5xl&dl=1",
       "Cookies": "https://www.dropbox.com/scl/fo/xusx3oa0kfy25z8r0w5lg/AFXJxTJ7MqbtyLiJQ36rEzA?rlkey=zxwyv6yp77kzfmulxrjdd7bug&dl=1",
       "Cookies / Product Photos": "https://www.dropbox.com/scl/fo/8is7c3l5tsypw6d6azkuw/ALpxqheQmUWGuS3MtA2_11o?rlkey=f3ae30muntr4tht0zvxzgn0sd&dl=1",
@@ -7566,17 +7417,18 @@ window.PORTAL_SYNCED = {
       "Dr Greenthumbs / Lifestyle Photos": "https://www.dropbox.com/scl/fo/37mhwkqxd9hrx98pzp7ii/AEncCpRa3Dp2wB_gEYn_FpA?rlkey=dcsuj9mturkvin5l4wnt9vk3i&dl=1",
       "Dr Greenthumbs / Social Videos": "https://www.dropbox.com/scl/fo/a0eg6nupnwkutgn7monan/AEQvPGinjx3SAh-gL49VjbE?rlkey=4n8y912a0u5xrqau3xnic6xvb&dl=1",
       "Dr Greenthumbs / TV Screen Videos": "https://www.dropbox.com/scl/fo/8s1hizfxqzff1igd0n8tf/ANKjG4XEQirWXtD1PEiaAEk?rlkey=j51njg12hcy9zwgxtigp7fvf9&dl=1",
-      "Full Line": "https://www.dropbox.com/scl/fo/o5l5453b62l9snx9umkw6/AGUzJbl_KUeEx07BUUZ2YKo?rlkey=1745s1m600mty2kxcxjx585o8&dl=1",
       "Grateful Dead": "https://www.dropbox.com/scl/fo/x07xz5745djmhcskiu8yo/AF4-1Oxnb5560YbsOMwmlCs?rlkey=j7ux0gty7242h0yghhl20g95c&dl=1",
       "Grateful Dead / Legacy Patchwork": "https://www.dropbox.com/scl/fo/7lneeafhcvvvsqusjbwob/AOxQAfd_AqQVarBIYzx-x2M?rlkey=vca0s8xr0ng64d2fiukklwdo4&dl=1",
       "Grateful Dead / Legacy Patchwork / Product Photos": "https://www.dropbox.com/scl/fo/k3uzra0wb5v2imuda61oh/AExSDRIkBSTFy6NX-p0YyzM?rlkey=8ebtg1bzww7ywqatuhsz3pnj4&dl=1",
       "Grateful Dead / Legacy Patchwork / Lifestyle Photos": "https://www.dropbox.com/scl/fo/9cqbgf2uc992zh1olkk4d/AEMXgiqazawNhjegdYD7oRI?rlkey=drx1d96yuyjt8w6y5xg901qam&dl=1",
       "Grateful Dead / Legacy Patchwork / Social Videos": "https://www.dropbox.com/scl/fo/trx0yjkc99ktoqkv28enu/ADuEtEOnjOEFLidanDnOANs?rlkey=imo92gxtbvdbp8vymexq5ogpt&dl=1",
+      "Grateful Dead / Legacy Patchwork / TV Screen Video": "https://www.dropbox.com/scl/fo/jmv5mnt4fqtv26um3ejrq/ADnQN2_i_TNThxec2yvr8O8?rlkey=1wujcul38h3xhmzm0yyjg3wml&dl=1",
       "Grateful Dead / Stealy Lock Up": "https://www.dropbox.com/scl/fo/1puxls1x0j4a1pgojgwn0/AAICo__XFvs9Ej8RMbE9r6k?rlkey=v90rgnujqvz8yqq5u2z6cj2tb&dl=1",
       "Grateful Dead / Stealy Lock Up / Product Photos": "https://www.dropbox.com/scl/fo/ljnfjkj20p6r0t47xuxzw/AI0sUzU1jbEsK-2AuXvhuzI?rlkey=q9gxquhwlb0n2a4fr1g25f2pm&dl=1",
       "Grateful Dead / Stealy Lock Up / Lifestyle Photos": "https://www.dropbox.com/scl/fo/mmrn86g7vjp78y6qwmwm0/AA6J2OaQxCyKQfDrzbuM9fc?rlkey=islifjpt0ug3ohy2fhdxafosa&dl=1",
       "Grateful Dead / Stealy Lock Up / Social Videos": "https://www.dropbox.com/scl/fo/doupqdccl89nxqnx6etz4/AGlyPfAmz2if1iFyy7KA9QU?rlkey=skyyxdwffh7ik2pma2flij8q8&dl=1",
       "Grateful Dead / Stealy Lock Up / TV Screen Videos": "https://www.dropbox.com/scl/fo/f5825q3bqzipwjdnnolf1/AEXMKumYXS_FGWPEYg6iFUs?rlkey=gwesp80hpv4akqji24pwdnddy&dl=1",
+      "Group Photos": "https://www.dropbox.com/scl/fo/o5l5453b62l9snx9umkw6/AGUzJbl_KUeEx07BUUZ2YKo?rlkey=1745s1m600mty2kxcxjx585o8&dl=1",
       "Khalifa": "https://www.dropbox.com/scl/fo/yzg4c5n9b5zqe4dei6jzg/AEXb2zBuA75S0Js9nMH4Lp8?rlkey=sq2zk9x2z3jbohp7u80x6yf82&dl=1",
       "Khalifa / Product Photos": "https://www.dropbox.com/scl/fo/1ckjzdb2irhzxn6nsodtq/AAGfq2R62K_hX6tdy_PHCqw?rlkey=5oudtu4f0xiymi0dui9oa4o2g&dl=1",
       "Khalifa / Lifestyle Photos": "https://www.dropbox.com/scl/fo/tn8kpr2wrdroe6sm4a21m/AEX5rrbNjUS3ZhaG4veifPo?rlkey=f5zh6jlrc5e4qtsim91tocm9d&dl=1",
@@ -7604,9 +7456,7 @@ window.PORTAL_SYNCED = {
       "Tyson 2.0 / Lifestyle Photos": "https://www.dropbox.com/scl/fo/3an00qnm6m6mtpthqvqag/AJXwB7Q2NWzoiXdTRKL_-_E?rlkey=srz06kxmxn0cavsrqhd16iaru&dl=1",
       "Tyson 2.0 / Logos": "https://www.dropbox.com/scl/fo/6zyhuvq32oxk4z3s1jd3n/AKelg5HjF6hsbGSnACDcIBY?rlkey=hr6j3hgcmog8tfyyc0wuxr9k5&dl=1",
       "Tyson 2.0 / Social Videos": "https://www.dropbox.com/scl/fo/48j5dhjcrowprg4zvjvqk/AKI5sZa0KjJpwq6umgf7eso?rlkey=crxbw88x74w5c9zxmqjr9nv8g&dl=1",
-      "Tyson 2.0 / TV Screen Videos": "https://www.dropbox.com/scl/fo/4prr01v0nhyry1d0l7xu2/ABiSLCRuOdb_2LL4k9gjtXA?rlkey=a9ktf9xwauqc5awmeoyc570fk&dl=1",
-      "UGC - Stundenglass": "https://www.dropbox.com/scl/fo/85kr1ddzmla70wmeqngvg/AO5Nq8wHYd8WJIA6XT7kie4?rlkey=uvr6rli9cc11oz43an90wtdj1&dl=1",
-      "UGC - Stundenglass / USED UGC - Stundenglass": "https://www.dropbox.com/scl/fo/02lsiwe07t6ful1mz6db6/AKLwlKmQ0t0av38SGRq1iQU?rlkey=6zuim2jmiixesm2wgzr3g47yb&dl=1"
+      "Tyson 2.0 / TV Screen Videos": "https://www.dropbox.com/scl/fo/4prr01v0nhyry1d0l7xu2/ABiSLCRuOdb_2LL4k9gjtXA?rlkey=a9ktf9xwauqc5awmeoyc570fk&dl=1"
     }
   },
   "Modül": {
