@@ -148,6 +148,12 @@ window.PORTAL_PRODUCTS = [
     cover: "assets/img/covers/accessories.png",
     added: "2026-07-10",
     oneSheet: "",
+    /* A CATEGORY, not a single SKU'd product — it holds 13 distinct accessories
+       (Glass Globes, Upstems, Uplight, Ash Catcher, …), each of which would have
+       its own SKU. So the SKU-details and Packaging spec sections are hidden here
+       rather than rendering an all-blank table. Remove this flag once per-accessory
+       SKU data exists (or split them into their own products). */
+    isCategory: true,
     folders: {},
   },
   {

@@ -2264,7 +2264,9 @@
       "</div></div>";
   }
   function packagingHTML(p) {
-    if (p.isLogo) return "";
+    // Same as skuHTML: a category has no single retail box, and its note points at
+    // the (hidden) SKU details — so drop the whole section instead of dangling.
+    if (p.isLogo || p.isCategory) return "";
     var info = p.info || {};
     // Auto-detect the single-box shot vs the POP-display shot from the product's
     // own "Packaging" Dropbox folder by filename. "POP" in the name → the display;
@@ -2356,7 +2358,9 @@
 
   // SKU details: identifiers + the pack/case breakdown for stores & ops.
   function skuHTML(p) {
-    if (p.isLogo) return "";
+    // Categories (e.g. Accessories) have no single SKU — an all-blank table reads
+    // as broken to a store, so hide the section entirely. See `isCategory` in assets.js.
+    if (p.isLogo || p.isCategory) return "";
     var info = p.info || {};
     // Every product shows the full SKU/packaging field set (like Dash II) so
     // it's clear what still needs filling in — blanks render as a muted "—".
