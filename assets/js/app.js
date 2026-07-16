@@ -522,7 +522,10 @@
   // history entries and never fires hashchange.
   function syncURL() {
     var qs = buildQuery();
-    try { history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "")); } catch (e) {}
+    // Preserve the fragment — otherwise a #catalog/<slug> deep link loses its hash
+    // the moment renderHome() runs behind the viewer, which breaks refresh/bookmark
+    // AND means a language switch re-renders home instead of the open catalog.
+    try { history.replaceState(null, "", location.pathname + (qs ? "?" + qs : "") + (location.hash || "")); } catch (e) {}
   }
   function parseURL() {
     var q = location.search.replace(/^\?/, "");
@@ -1346,7 +1349,9 @@
     $$(".cat-card", box).forEach(function (card) {
       var cover = $(".cat-cover", card), img = $(".cat-img", card);
       function cur() { return catalogBySlug(card.getAttribute("data-cur")); }
-      clickKey(cover, function () { openCatalog(card.getAttribute("data-cur")); });
+      // Route through the hash so the URL is the source of truth (survives a
+      // language switch / refresh / share).
+      clickKey(cover, function () { navCatalog(card.getAttribute("data-cur")); });
       $$(".cat-pill", card).forEach(function (p) {
         p.addEventListener("click", function (e) {
           e.stopPropagation();
@@ -1371,7 +1376,10 @@
       });
     });
   }
-  function closeCatalog() {
+  // Tear the viewer down WITHOUT touching the URL. openCatalog() uses this to
+  // replace an existing viewer — clearing the hash there would delete the very
+  // route that is re-opening it (e.g. on a language switch).
+  function teardownCatalog() {
     var ov = document.getElementById("catlb");
     if (!ov) return;
     if (ov.__key) document.removeEventListener("keydown", ov.__key);
@@ -1379,13 +1387,28 @@
     if (ov.__doc) { try { ov.__doc.destroy(); } catch (e) {} ov.__doc = null; }
     ov.remove();
     document.body.style.overflow = "";
-    if (/^#catalog\//.test(location.hash)) history.replaceState(null, "", location.pathname);
+  }
+  // The user actually closing the viewer: tear down AND drop the catalog route.
+  function closeCatalog() {
+    if (!document.getElementById("catlb")) return;
+    teardownCatalog();
+    // Keep location.search — dropping it wiped the user's ?q=/?t= filters (and
+    // ?lang=) just because they closed a catalog.
+    if (/^#catalog\//.test(location.hash)) history.replaceState(null, "", location.pathname + location.search);
+  }
+  // Open a catalog by routing through the hash, so the URL is the source of truth.
+  // Without this the viewer is pure DOM state: any re-render (e.g. switching
+  // language) leaves a stale viewer in the old language over a re-rendered page.
+  function navCatalog(slug) {
+    var h = "#catalog/" + slug;
+    if (location.hash !== h) location.hash = h;   // hashchange -> route() -> openCatalog
+    else openCatalog(slug);
   }
   function openCatalog(slug) {
     var c = catalogBySlug(slug);
     if (!c) { toast(tr("Catalog not found")); return; }
     if (!c.file) { catalogDownload(c); return; }   // not committed yet → Dropbox
-    closeCatalog();
+    teardownCatalog();   // replace any open viewer, but keep the #catalog/ route
     var ov = document.createElement("div");
     ov.className = "catlb"; ov.id = "catlb";
     ov.innerHTML =
