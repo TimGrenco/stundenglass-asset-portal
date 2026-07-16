@@ -7519,14 +7519,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Modül_dtscase_open",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/794jq1i9cxoyxxq4gmynv/Mod-l_dtscase_open.png?rlkey=vt4d76kjzeafb1ry6drm0ciap&dl=0",
-          "thumb": "assets/synced/modul/f94e96275f30d144afccbf6c28797c24edcc285011a612037b20f60c67bc6f70.jpg",
-          "file": null
-        },
-        {
           "name": "Modül_tankstogether",
           "type": "image",
           "format": "PNG",
@@ -7743,14 +7735,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Modül_dtscase_open",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/yiwf1ai33ydjdcrooacqv/Mod-l_dtscase_open.png?rlkey=ccc07ltg09gaajolnuvuvxu7q&dl=0",
-          "thumb": "assets/synced/modul/f94e96275f30d144afccbf6c28797c24edcc285011a612037b20f60c67bc6f70.jpg",
-          "file": null
-        },
-        {
           "name": "Modül_tankstogether",
           "type": "image",
           "format": "PNG",
@@ -7860,14 +7844,6 @@ window.PORTAL_SYNCED = {
         }
       ],
       "Product Photos / Purple": [
-        {
-          "name": "Modül_dtscase_open",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/750nkfb1bi79cyq5jabiz/Mod-l_dtscase_open.png?rlkey=rngqhjbqz4mlv8q5ogde4m5jf&dl=0",
-          "thumb": "assets/synced/modul/f94e96275f30d144afccbf6c28797c24edcc285011a612037b20f60c67bc6f70.jpg",
-          "file": null
-        },
         {
           "name": "Modül_tankstogether",
           "type": "image",
@@ -10553,7 +10529,6 @@ window.PORTAL_SYNCED = {
       "Logos": "https://www.dropbox.com/scl/fo/fr4vr34ca294htljbiuhx/AEIes6o9JPyNrbHHZdXzNpY?rlkey=sy75elykl6t4r9a3pdmg1h9ec&dl=1",
       "Social Videos": "https://www.dropbox.com/scl/fo/z1ahs3ip3yhvc5c8b3a92/AFsKIPGY5lkrrEeakneo7L8?rlkey=sxas37m8yykgqxx1erolwgjfz&dl=1",
       "TV Screen Videos": "https://www.dropbox.com/scl/fo/y8rpfklc65slciefg7lnv/APvGu7z1tpThl2NBjeLBtwU?rlkey=3heiqzy2hcicm9ckou3qebpdv&dl=1",
-      "Packaging": "https://www.dropbox.com/scl/fo/35neaeuo95ke5v92ij9jf/AOZ-TkWyK7DToRmz4i8vFcw?rlkey=umloycs9ye8pv0f6fcaf4pbsv&dl=1",
       "In-Store Marketing": "https://www.dropbox.com/scl/fo/d4nfpclb2qg66xkvvmetl/AM3LHSBXA5-awM0Nfiz34cI?rlkey=4kazlk99l8bfrfmlnle34h9ds&dl=1",
       "Documents": "https://www.dropbox.com/scl/fo/v8slxkoistoqmh5apk9f1/AG7Sro0d51vOiDYACtQkVK8?rlkey=42qgvwt91vfyiy9xtmxagujw5&dl=1",
       "Grateful Dead Legacy Patchwork": "https://www.dropbox.com/scl/fo/17cmskqesov9z2y0nqwk0/ANNKty1pKRV1CXk_nbV8pd0?rlkey=tjeswqibqe95qa0lrtvcw25g5&dl=1",
@@ -10568,13 +10543,11 @@ window.PORTAL_SYNCED = {
       "Khalifa / Logos": "https://www.dropbox.com/scl/fo/yas750ynp8l58fvl6nbue/AAdsoWt-62mpYc2c6X8PED0?rlkey=v6upvzyy7barkiopinqh9j408&dl=1",
       "Khalifa / Social Videos": "https://www.dropbox.com/scl/fo/evamavd49vgh3isa8xuu7/APkPtA6eddumq4XtTfsPizk?rlkey=lj285vq472w3iwm3brfoz0i67&dl=1",
       "Khalifa / TV Screen Videos": "https://www.dropbox.com/scl/fo/9gd5947dp0s33gmj0th7x/AImJLTSJ8qHxlMk7TuZ13ds?rlkey=3r32sf7qdcrm45i60i0wmhhsk&dl=1",
-      "Khalifa / Documents": "https://www.dropbox.com/scl/fo/wcrnzeeef7zyjwmv70zi3/AN81CV1en-zSfCSKS5qBqKI?rlkey=s0ug9k4zacq0ja18a4lcx45xz&dl=1",
       "Tyson 2.0": "https://www.dropbox.com/scl/fo/vo6df3lvqrpzasf60vld7/AIqn_--xwRH7fsx9iojHsic?rlkey=9nud2di4m7aakgbbuhavulzc0&dl=1",
       "Tyson 2.0 / Product Photos": "https://www.dropbox.com/scl/fo/x246e28jkvah0qnt8xpbj/APd2eC89ErbSjOjBIa5Zvmc?rlkey=suhpiy3e8iqd311zzctdnk3p4&dl=1",
       "Tyson 2.0 / Lifestyle Photos": "https://www.dropbox.com/scl/fo/ccp23g4ubrjp1jop9kuud/APWqyXOOxnauN961rIZu_uM?rlkey=9k1qr1jhd618l9e9rmpu46ia1&dl=1",
       "Tyson 2.0 / Social Videos": "https://www.dropbox.com/scl/fo/qrlkggreb74z51gg9hywk/AIbmaPQru4lklWrIFHtQYgs?rlkey=p7ujjm8y2k1e9tqztlf8wr46c&dl=1",
-      "Tyson 2.0 / TV Screen Videos": "https://www.dropbox.com/scl/fo/l113hsy2t7jg7isc5j644/AEJoSyRJYOYCw6cBXUD3bvg?rlkey=kh2d6y1irvmz1z23920gjlop4&dl=1",
-      "Tyson 2.0 / Documents": "https://www.dropbox.com/scl/fo/ec93w3dehms36owxugitg/AMpn7rdYwEF5AOTELHS-rV8?rlkey=8n00u36tjffgi81z0qqcut4jz&dl=1"
+      "Tyson 2.0 / TV Screen Videos": "https://www.dropbox.com/scl/fo/l113hsy2t7jg7isc5j644/AEJoSyRJYOYCw6cBXUD3bvg?rlkey=kh2d6y1irvmz1z23920gjlop4&dl=1"
     }
   },
   "Accessories": {
