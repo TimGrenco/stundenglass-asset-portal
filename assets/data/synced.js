@@ -15796,6 +15796,14 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "_ALF7385",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/v47nnaorq9r1juwv3vyx8/_ALF7385.jpg?rlkey=05fe4ivy2epzw3eg63788vqfs&dl=0",
+          "thumb": "assets/synced/modul/7ce6d793f53504ab60943b5b766b5d6592427dcd48ff4fa2cc936521f7ffbf8c.jpg",
+          "file": null
+        },
+        {
           "name": "_ALF7701",
           "type": "image",
           "format": "JPG",
@@ -15820,11 +15828,27 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "_GSH0742 (1)",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/27odlwb6ibqflwkyu540o/_GSH0742-1.jpg?rlkey=1bkr6xmlig1ksliuc2v38hv15&dl=0",
+          "thumb": "assets/synced/modul/7e4bf86ad26fbdc49fded4c094f830f67d0bab396c620376f0d34d077c55f99a.jpg",
+          "file": null
+        },
+        {
           "name": "_GSH0751",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/idcc8uyoz4fe1r0zuldk8/_GSH0751.jpg?rlkey=uw332hiqgs1g36qi07o05i7vt&dl=0",
           "thumb": "assets/synced/modul/31865af38acf6477ffc959633708766eab8ec666db4d80e6d0c20ae2442a68a1.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH0760",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ravapagcgb5ubbtz1l6co/_GSH0760.jpg?rlkey=ymwamuw0vp0d33swhmo57y6ox&dl=0",
+          "thumb": "assets/synced/modul/91e1ad5b374b10fb9b8be12f0303b7d4783ed340628a8381a85657c6ebedca4c.jpg",
           "file": null
         },
         {
@@ -16170,6 +16194,22 @@ window.PORTAL_SYNCED = {
           "url": "https://www.dropbox.com/scl/fi/hqabdzewphxrgxm42lwdl/_GSH7717.jpg?rlkey=yka0nyxk30kiclmkrhnh6iye3&dl=0",
           "thumb": "assets/synced/modul/c5506df67792c028ea94ada7827cd888e8c9da1757807cd74f204219a7389d25.jpg",
           "file": null
+        },
+        {
+          "name": "_GSH7717 (1)",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/n9ue7awztm0cvpvk27tks/_GSH7717-1.jpg?rlkey=d07xzzpe3ip58mhvrrbxoquno&dl=0",
+          "thumb": "assets/synced/modul/c5506df67792c028ea94ada7827cd888e8c9da1757807cd74f204219a7389d25.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH7919",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/rny0yke3zosj4ejlem76c/_GSH7919.jpg?rlkey=q7h8pg469wglqn7qyfn5z97pn&dl=0",
+          "thumb": "assets/synced/modul/d924b0a7a357169aded1755a831aecbe238b3c3564573d8c7aa643a8bae3eee8.jpg",
+          "file": null
         }
       ],
       "Logos": [
@@ -16461,14 +16501,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/r9kg63jetxpcagpn0cdo3/Mod-l-Commercial-DTLA-IG-Reels.mp4?rlkey=me0c87ubdbct9k9ooadh8f8rh&dl=0",
           "thumb": "assets/synced/modul/34be3fba0cb6d215d1c9472ffb509e6e53683c8e01cb5f6887299e0bf6f29e6d.jpg",
-          "file": null
-        },
-        {
-          "name": "Modül Commercial DTLA Tik Tok",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/pa1ofmn0v9w2pvz2vzii1/Mod-l-Commercial-DTLA-Tik-Tok.mp4?rlkey=khx74wnhdhw7pgsiao1e4lxig&dl=0",
-          "thumb": "assets/synced/modul/ab4f5d10a7ce98045571cb7f45a3af5d0903061d0e2faf43b9027d793d029670.jpg",
           "file": null
         },
         {
