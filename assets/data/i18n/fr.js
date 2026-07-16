@@ -313,6 +313,7 @@ window.PORTAL_I18N.fr = {
   "Store Name": "Nom de la boutique",
   "Store name": "Nom de la boutique",
   "Street, City, State, ZIP": "Rue, ville, région, code postal",
+  "TV Screen Video": "Vidéo pour écrans TV",
   "TV Screen Videos": "Vidéos pour écrans TV",
   "Talk to our team.": "Parlez à notre équipe.",
   "Text Overlays": "Textes superposés",

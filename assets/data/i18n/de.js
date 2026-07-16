@@ -313,6 +313,7 @@ window.PORTAL_I18N.de = {
   "Store Name": "Name des Geschäfts",
   "Store name": "Name des Geschäfts",
   "Street, City, State, ZIP": "Straße, Ort, Bundesland, PLZ",
+  "TV Screen Video": "TV-Screen-Video",
   "TV Screen Videos": "TV-Screen-Videos",
   "Talk to our team.": "Sprechen Sie mit unserem Team.",
   "Text Overlays": "Text-Overlays",

@@ -313,6 +313,7 @@ window.PORTAL_I18N.es = {
   "Store Name": "Nombre de la tienda",
   "Store name": "Nombre de la tienda",
   "Street, City, State, ZIP": "Calle, Ciudad, Estado, C.P.",
+  "TV Screen Video": "Video para pantalla",
   "TV Screen Videos": "Videos para pantalla",
   "Talk to our team.": "Hable con nuestro equipo.",
   "Text Overlays": "Textos superpuestos",
