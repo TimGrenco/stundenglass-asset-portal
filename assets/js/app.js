@@ -906,18 +906,18 @@
       '<button class="back" id="sg-back">' + icon("arrowLeft") + " Back to library</button>" +
       '<div class="sg-hero">' +
         '<div class="sg-word">' + b.wordmark + "</div>" +
-        "<h2>Brand &amp; Style Guide</h2>" +
+        "<h2>" + tr("Brand &amp; Style Guide") + "</h2>" +
         '<p class="sg-note">' + icon("info") + "<span>Placeholder guide — the official " + b.name + " brand guide will replace this. Colors, type, and logos below reflect current brand usage.</span></p>" +
         '<div class="sg-actions">' +
           '<button class="btn" data-view-brand="' + bk + '">' + icon("stack") + " View " + b.name + " assets</button>" +
           (b.logoProduct ? '<button class="btn ghost" data-logo="' + b.logoProduct + '">' + icon("download") + " " + tr("Download logos") + "</button>" : "") +
         "</div>" +
       "</div>" +
-      '<div class="section-head"><h2>Colors</h2><span class="badge">tap to copy</span></div>' +
+      '<div class="section-head"><h2>' + tr("Colors") + '</h2><span class="badge">tap to copy</span></div>' +
       '<div class="sg-colors">' + (b.colors || []).map(swatchBigHTML).join("") + "</div>" +
-      '<div class="section-head"><h2>Typography</h2></div>' +
+      '<div class="section-head"><h2>' + tr("Typography") + '</h2></div>' +
       '<div class="sg-fonts">' + (b.fonts || []).map(fontSpecimenHTML).join("") + "</div>" +
-      '<div class="section-head"><h2>Logos</h2></div>' +
+      '<div class="section-head"><h2>' + tr("Logos") + '</h2></div>' +
       '<div class="sg-logos">' +
         '<div class="sg-logo-tile"><span>' + b.wordmark + "</span></div>" +
         (b.logoProduct ? '<button class="btn ghost" data-logo="' + b.logoProduct + '">' + icon("download") + " " + tr("Download logo files") + "</button>" : "") +
@@ -1030,7 +1030,7 @@
 
     var browseCount = $("#browse-count");
     if (browseCount) browseCount.textContent = current.length + (current.length === 1 ? " product" : " products");
-    $("#count-badge").textContent = current.length + (current.length === 1 ? " product" : " products");
+    $("#count-badge").textContent = tr(current.length === 1 ? "{n} product" : "{n} products").replace("{n}", current.length);
 
     renderActiveFilters();
 
@@ -1116,7 +1116,7 @@
         (fileRes.facet ? " " + fileRes.facet.toLowerCase() : " matching") + " files — add a word to narrow it down.</p>"
       : "";
     sf.innerHTML =
-      '<div class="section-head"><h2>Matching files &amp; assets</h2><span class="badge">' + fileRes.total + "</span></div>" +
+      '<div class="section-head"><h2>' + tr("Matching files &amp; assets") + '</h2><span class="badge">' + fileRes.total + "</span></div>" +
       facetChips +
       '<div class="sf-grid">' + tiles + "</div>" + more;
     bindSearchFiles(sf);
@@ -1476,7 +1476,7 @@
       '<div class="locator-card">' +
         '<div class="locator-copy">' +
           '<div class="locator-eyebrow">Retailers</div>' +
-          "<h2>Get your store on our Store Locator</h2>" +
+          "<h2>" + tr("Get your store on our Store Locator") + "</h2>" +
           "<p>Carry Stündenglass? Request to be added to our official store locator so customers can find your shop.</p>" +
         "</div>" +
         '<a class="btn lg" href="#locator">' + icon("mapPin") + " Request to be listed</a>" +
@@ -1572,7 +1572,7 @@
 
     var mats = availableMaterials();
     var head = '<button class="back" id="mat-back">' + icon("arrowLeft") + " Back to library</button>" +
-      '<div class="section-head"><h2>Marketing Materials</h2>' +
+      '<div class="section-head"><h2>' + tr("Marketing Materials") + '</h2>' +
         (mats.length ? '<span class="badge">' + tr("{n} available").replace("{n}", mats.length) + "</span>" : "") + "</div>";
 
     if (!mats.length) {
@@ -2606,9 +2606,9 @@
     } else {
       // Ships in single retail boxes — no POP display for these products.
       cards = boxCard(tr("Single Retail Packaging"), info.boxImg, null, boxFile) + pkgCard(tr("Master carton"), info.cartonImg);
-      note = "Ships in single retail boxes. See SKU details for case and pallet quantities and specs.";
+      note = tr("Ships in single retail boxes. See SKU details for case and pallet quantities and specs.");
     }
-    return '<div class="section-head"><h2>Packaging</h2>' + (info.pop ? '<span class="badge">Ships in POP display</span>' : "") + "</div>" +
+    return '<div class="section-head"><h2>' + tr("Packaging") + '</h2>' + (info.pop ? '<span class="badge">' + tr("Ships in POP display") + '</span>' : "") + "</div>" +
       (cards ? '<div class="pkg-grid">' + cards + "</div>" : "") +
       '<p class="pkg-note">' + note + "</p>";
   }
@@ -2629,7 +2629,7 @@
         '<div class="cway-codes">' + code("SKU", w.sku) + code("UPC", w.upc) + "</div>" +
       "</div>";
     }).join("");
-    return '<div class="section-head cways-head"><h2>Collection Colorways</h2>' +
+    return '<div class="section-head cways-head"><h2>' + tr("Collection Colorways") + '</h2>' +
       '<span class="badge">' + ways.length + " colors</span></div>" +
       '<div class="cways">' + cards + "</div>";
   }
@@ -2665,7 +2665,7 @@
       orNA("Units Per Pallet", info.palletUnits) +
       orNA("Pallet Weight", info.palletWeight) +
       row("HTS (Harmonized Tariff Schedule) Code", info.htsCode);
-    return '<div class="section-head"><h2>SKU details</h2></div>' +
+    return '<div class="section-head"><h2>' + tr("SKU details") + '</h2></div>' +
       '<div class="sku-table">' + rows + "</div>" +
       (missing ? '<p class="pkg-note">' + icon("info") + " Fields shown as <strong>—</strong> are still to be confirmed." + "</p>" : "");
   }
@@ -2691,14 +2691,14 @@
   function highlightsHTML(p) {
     var info = infoOf(p);
     if (!(info.highlights && info.highlights.length)) return "";
-    return '<div class="section-head"><h2>Highlights</h2></div>' +
+    return '<div class="section-head"><h2>' + tr("Highlights") + '</h2></div>' +
       '<ul class="highlights">' + info.highlights.map(function (h) { return "<li>" + h + "</li>"; }).join("") + "</ul>";
   }
   // Official scraped product description (copy-to-clipboard).
   function fullDescHTML(p) {
     var info = infoOf(p);
     if (!(info.fullDescription && info.fullDescription.length)) return "";
-    return '<div class="section-head"><h2>Official Product Description</h2>' +
+    return '<div class="section-head"><h2>' + tr("Official Product Description") + '</h2>' +
         '<button class="btn ghost sm fd-copy" id="copy-desc">' + icon("copy") + " " + tr("Copy") + "</button></div>" +
       '<div class="fulldesc"><div class="fd-body">' +
         info.fullDescription.map(function (t) { return "<p>" + t + "</p>"; }).join("") +
@@ -2710,7 +2710,7 @@
     var b = infoOf(p).box;
     if (!b || !(b.contents && b.contents.length)) return "";
     var list = '<ul class="box-list">' + b.contents.map(function (c) { return "<li>" + c + "</li>"; }).join("") + "</ul>";
-    var head = '<div class="section-head"><h2>What’s In the Box?</h2></div>';
+    var head = '<div class="section-head"><h2>' + tr("What’s In the Box?") + '</h2></div>';
     if (!b.image) return head + '<div class="box-single">' + list + "</div>";
     var img = '<div class="box-media"><img src="' + b.image + '" alt=tr("What’s in the box") loading="lazy"/></div>';
     return head + '<div class="box-grid">' + list + img + "</div>";
@@ -3175,8 +3175,8 @@
     syncClear();
 
     // lightbox / asset viewer
-    $("#lb-copy").innerHTML = icon("link") + tr(" Copy link");
-    $("#lb-dl").innerHTML = icon("download") + tr(" Download");
+    $("#lb-copy").innerHTML = icon("link") + " " + tr("Copy link");
+    $("#lb-dl").innerHTML = icon("download") + " " + tr("Download");
     $("#lb-close").addEventListener("click", closeLightbox);
     $("#lb-prev").addEventListener("click", function () { lbStep(-1); });
     $("#lb-next").addEventListener("click", function () { lbStep(1); });

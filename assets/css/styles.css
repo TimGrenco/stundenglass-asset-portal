@@ -1084,7 +1084,8 @@ a.logo-tile { cursor: pointer; }
   .nav-link { white-space: nowrap; font-size: 13px; }
 }
 @media (hover: none) {
-  /* Language selector — small type made this only ~22px tall to thumb. */
-  .langsel-btn { padding: 9px 10px 9px 11px; }
-  .langmenu-item { padding: 11px 10px; }
+  /* Language selector — the small type leaves this ~27px tall, and padding alone
+     still lands short of the 40px touch minimum, so set the height explicitly. */
+  .langsel-btn { min-height: 40px; padding: 0 10px 0 11px; }
+  .langmenu-item { min-height: 44px; padding: 8px 10px; }
 }
