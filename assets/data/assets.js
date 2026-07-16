@@ -380,7 +380,7 @@ var PRODUCT_SKU = {
   // in cases (Units/Case + Case Weight/Dimensions).
   "Gravity Infusers": {
     fullName: "Stündenglass Gravity Infuser",
-    dimensions: "260 × 175 × 390 mm", unitWeight: "2.52 kg",
+    dimensions: "210 × 175 × 390 mm", unitWeight: "2.52 kg",
     caseUnits: "N/A", caseWeight: "N/A", caseDimensions: "N/A",
     palletUnits: "98", palletWeight: "446.2 kg",
     htsCode: "9614.00.00",
@@ -388,12 +388,14 @@ var PRODUCT_SKU = {
   "Kompact Gravity Infusers": {
     sku: "SG3-KIT-STBK-02", upc: "811736024884",
     fullName: "Stündenglass Kompact Gravity Infuser",
+    dimensions: "175 × 155 × 280 mm", unitWeight: "2.57 kg",
     caseUnits: "N/A", caseWeight: "N/A", caseDimensions: "N/A",
     palletUnits: "96", palletWeight: "413.4 kg",
     htsCode: "9614.00.00",
   },
   "Classic Gravity Infusers": {
     fullName: "Stündenglass Gravity Infuser — Classic",
+    dimensions: "195 × 180 × 380 mm", unitWeight: "3.12 kg",
     caseUnits: "N/A", caseWeight: "N/A", caseDimensions: "N/A",
     palletUnits: "60", palletWeight: "378.6 kg",
     htsCode: "9614.00.00",
@@ -402,7 +404,9 @@ var PRODUCT_SKU = {
     fullName: "Stündenglass Modül + Dok Deluxe Travel Set",
     dimensions: "280 × 200 × 85 mm", unitWeight: "1.62 kg",
     caseUnits: "10", caseWeight: "17.2 kg", caseDimensions: "450 × 430 × 320 mm",
-    htsCode: "",
+    // Modül classifies differently from the infusers (electronic device, not a
+    // smoking pipe): sheet gives 8543709099.
+    htsCode: "8543.70.9099",
   },
 };
 
@@ -518,6 +522,10 @@ window.PORTAL_COLORWAYS = {
     { color: "Violet Purple", hex: "#7A4EAB", sku: "SG4-KIT-STPU-02", upc: "811736020299", name: "Stündenglass Gravity Infuser — Violet Purple" },
     { color: "Olive Green", hex: "#6B7A3A", sku: "SG4-KIT-STGR-02", upc: "852570004168", name: "Stündenglass Gravity Infuser — Olive Green" },
     { color: "Desert Rose", hex: "#C08497", sku: "SG4-KIT-STDR-02", upc: "811736023108", name: "Stündenglass Gravity Infuser — Desert Rose" },
+    // Added from the updated SKU sheet. No Dropbox assets for this colourway yet —
+    // the card is informational (swatch + SKU/UPC), so it's safe to list. ⚠️ hex is
+    // an approximation of "Velvet Burgundy" — confirm against the brand files.
+    { color: "Velvet Burgundy", hex: "#722F37", sku: "SG4-KIT-STBU-02", upc: "852570004458", name: "Stündenglass Gravity Infuser — Velvet Burgundy" },
   ],
   "Classic Gravity Infusers": [
     { color: "Black", hex: "#0A0A0A", sku: "SG2-KIT-STBK-02", upc: "852570004014", name: "Stündenglass Gravity Infuser — Classic" },
