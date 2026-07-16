@@ -15,11 +15,13 @@
      language is selected — so English visitors download zero translation bytes,
      and adding a language never slows the default experience.
 
-     A pack is { ui, training, products }:
+     A pack is { ui, products, training? }:
        ui        keyed by the ENGLISH source string; a missing key falls back to
                  English rather than showing a raw key.
-       training  courses/quizzes mirroring PORTAL_TRAINING (answers stay on the
-                 English data — see trainingOf).
+       training  OPTIONAL, and not authored for any language yet: courses/quizzes
+                 mirroring PORTAL_TRAINING, which is itself still empty. When a
+                 course is added, trainingOf() merges the localized copy over the
+                 English data so stored answer indexes stay valid.
        products  description / highlights / warranty / fullDescription.
      Product names, brand names, filenames, SKUs, units and prices are never
      translated. To revise a language, edit only its pack — no code change. */
@@ -87,7 +89,7 @@
   // buttons behave the same however the bar came to be visible.
   function bindLangBar() {
     var yes = $("#lang-bar-yes"), no = $("#lang-bar-no");
-    if (yes) yes.addEventListener("click", function () { dismissLangBar(); setLang(_offerLang || "es"); });
+    if (yes) yes.addEventListener("click", function () { dismissLangBar(); setLang(_offerLang); });
     if (no) no.addEventListener("click", dismissLangBar);
   }
   // Offer the visitor's own language once, and only to browsers that actually
@@ -167,7 +169,7 @@
     // Fetch the pack BEFORE switching, so we never render a half-translated page.
     // If it fails to load we stay put rather than degrade.
     loadLangPack(l, function (ok) {
-      if (!ok && l !== "en") { toast("Couldn’t load that language — staying in " + LANGS[state.lang]); return; }
+      if (!ok && l !== "en") { toast(tr("Couldn’t load that language — staying in {lang}").replace("{lang}", LANGS[state.lang])); return; }
       applyLang(l);
     });
   }
@@ -182,9 +184,14 @@
     document.documentElement.lang = l;
     syncLangToggle();
     applyStaticI18n();
+    applyJsChrome();
+    resetSuggest();   // its chips are built once and cached — force a re-translate
     route();   // re-render whatever view is open, in the new language
     restoreQuizState(quiz);
     if (y) window.scrollTo(0, y);
+    // Focus was on the menu item we just destroyed; put it back on the trigger
+    // so keyboard/screen-reader users aren't dropped to document.body.
+    var lb = $("#lang-btn"); if (lb) lb.focus();
   }
   // Snapshot / restore in-progress quiz answers around a language switch.
   // Answers are stored as choice INDEXES, which are language-independent — the
@@ -241,7 +248,7 @@
   function syncLangToggle() {
     var lbl = $("#lang-btn-code"); if (lbl) lbl.textContent = state.lang.toUpperCase();
     var b = $("#lang-btn");
-    if (b) b.setAttribute("aria-label", "Language: " + LANGS[state.lang]);
+    if (b) b.setAttribute("aria-label", tr("Language") + ": " + LANGS[state.lang]);
     renderLangMenu();
   }
   // Static copy that lives in index.html (nav, hero, section headings, support
@@ -271,7 +278,8 @@
   // ---- tiny helpers --------------------------------------------------------
   var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
   var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
-  // "New" badges are fully manual — set `newBadge: true` (or a colour) on any
+  // "New" badges are fully manual — set `newBadge` to a colour name matching a
+  // .tag-new-<colour> rule in styles.css (not `true`, which yields .tag-new-true) on any
   // product in assets.js. (No longer auto-shown by upload date, so there's no
   // date-difference helper here anymore.)
   function fmtDate(iso) {
@@ -374,18 +382,6 @@
   function pid(p) { return p.brand + "::" + p.name; }
   function fileKey(folder, file) { return folder + "::" + file.name + "." + (file.format || ""); }
 
-  // ---- recently viewed (local to the browser) ------------------------------
-  function loadRecent() {
-    try { return JSON.parse(localStorage.getItem("portal_recent") || "[]"); } catch (e) { return []; }
-  }
-  function recordRecent(p) {
-    try {
-      var id = pid(p);
-      var arr = loadRecent().filter(function (x) { return x !== id; });
-      arr.unshift(id);
-      localStorage.setItem("portal_recent", JSON.stringify(arr.slice(0, 8)));
-    } catch (e) {}
-  }
   // Curated display names + print dimensions for in-store marketing materials,
   // keyed by synced filename. Overrides the raw filename wherever the piece shows.
   var INSTORE_LABELS = {
@@ -493,16 +489,21 @@
   }
 
   // ---- shareable filtered views + active filters ---------------------------
+  // Display names for raw folder segments. Values stay ENGLISH: this map is built at
+  // module eval, before any pack is loaded, so a tr() here would freeze to English
+  // anyway. Callers translate via tr(typeLabel(seg)); segments that are proper nouns
+  // (colorways, collabs like "Grateful Dead") have no key and correctly fall through.
   var TYPE_LABELS = {
     "E-Comm Render Photos": "Product photos", "Lifestyle Photos": "Lifestyle Photos",
-    "Logos": tr("Logos"), "Social Videos": "Social Videos", "TV Screen Videos": "TV Screen Videos",
+    "Logos": "Logos", "Social Videos": "Social Videos", "TV Screen Videos": "TV Screen Videos",
     "Misc": "Documents",
   };
   function typeLabel(t) { return TYPE_LABELS[t] || t; }
   // Canonical folder-card sort order — matches the sync's FOLDER_ORDER
   // (dropbox-sync.mjs) so cards appear in the same order the sync canonicalizes to.
   // (E-Comm/Misc were dropped: the sync aliases those to Product Photos/Documents.)
-  var FOLDER_TAB_ORDER = ["Product Photos", "Lifestyle Photos", "Web Banners", tr("Logos"), "Social Videos", "TV Screen Videos", tr("Packaging"), "In-Store Marketing", "Documents"];
+  // Matched against raw Dropbox folder names, which are always English — not display text.
+var FOLDER_TAB_ORDER = ["Product Photos", "Lifestyle Photos", "Web Banners", "Logos", "Social Videos", "TV Screen Videos", "Packaging", "In-Store Marketing", "Documents"];
   function folderRank(f) { var i = FOLDER_TAB_ORDER.indexOf(f); return i < 0 ? 99 : i; }
 
   function buildQuery() {
@@ -570,7 +571,7 @@
     var chips = [];
     // escapeHTML the labels — state.query is free-text (typed or from ?q=) and
     // state.type flows from ?t=; without escaping, ?q=<img onerror=…> would run.
-    if (state.type !== "all") chips.push({ k: "type", label: escapeHTML(typeLabel(state.type)) });
+    if (state.type !== "all") chips.push({ k: "type", label: escapeHTML(tr(typeLabel(state.type))) });
     if (state.query) chips.push({ k: "query", label: "“" + escapeHTML(state.query) + "”" });
     // Nothing filtered → keep the top clean (the bar hides itself when empty).
     if (!chips.length) { box.innerHTML = ""; return; }
@@ -589,7 +590,7 @@
   // ---- filtering -----------------------------------------------------------
   function visibleProducts() {
     return PRODUCTS.filter(function (p) {
-      if (state.view !== "both" && p.brand !== state.view) return false;
+      if (p.brand !== state.view) return false;
       if (state.type !== "all" && !p.folders[state.type]) return false;
       if (state.query) {
         var q = state.query.toLowerCase();
@@ -656,16 +657,18 @@
   function facetOf(folder, file) {
     if (file && (file.type === "video" || /video/i.test(file.format || ""))) return "Videos";
     var f = folder || "";
-    if (/logo/i.test(f)) return tr("Logos");
+    if (/logo/i.test(f)) return "Logos";
     if (/lifestyle/i.test(f)) return "Lifestyle";
-    if (/pack/i.test(f)) return tr("Packaging");
+    if (/pack/i.test(f)) return "Packaging";
     if (/in.?store|marketing/i.test(f)) return "In-store";
     if (/photo|render|e-?comm|banner/i.test(f)) return "Photos";
     if (/video/i.test(f)) return "Videos";
     if (/doc|misc|manual|sheet/i.test(f)) return "Documents";
-    return tr("Assets");
+    return "Assets";
   }
-  var FACET_ORDER = ["Photos", "Lifestyle", tr("Logos"), tr("Packaging"), "Videos", "Catalogs", "In-store", "Documents", tr("Assets")];
+  // Stable ENGLISH bucket keys — these are lookup values matched against facetOf()/cached
+// _fileIndex entries, never display text. The chips translate at render (see tr(fc.kind)).
+var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catalogs", "In-store", "Documents", "Assets"];
 
   // Flat, cached index of every downloadable thing: product files + how-to videos.
   var _fileIndex = null;
@@ -714,10 +717,15 @@
     var groups = queryAliasGroups(q), bk = state.view, rawQ = q.toLowerCase().trim();
     return PRODUCTS.map(function (p) {
       if (p.brand !== bk) return null;
-      var info = infoOf(p);
+      // Search the English prose AND the localized prose: a link shared with ?q=<english>
+      // must still match for a visitor reading the page in Spanish, and vice versa.
+      var en = p.info || {};
+      var loc = (pack() && pack().products && pack().products[p.name]) || {};
+      function prose(i) {
+        return " " + (i.description || "") + " " + (i.fullName || "") + " " + ((i.highlights || []).join(" "));
+      }
       var hay = (p.name + " " + (p.category || "") + " " + (p.type || "") + " " + (p.label || "") +
-        " " + BRANDS[p.brand].name + " " + (info.description || "") +
-        " " + (info.fullName || "") + " " + ((info.highlights || []).join(" "))).toLowerCase();
+        " " + BRANDS[p.brand].name + prose(en) + prose(loc)).toLowerCase();
       if (!matchTerms(hay, groups)) return null;
       return { p: p, score: relScore(p.name, hay, groups, rawQ) };
     }).filter(Boolean).sort(function (a, b) {
@@ -794,14 +802,14 @@
   // ---- social hub ----------------------------------------------------------
   function socialListHTML(bk) {
     var items = BRANDS[bk].social || [];
-    if (!items.length) return '<p class="fnone">Social links coming soon.</p>';
+    if (!items.length) return '<p class="fnone">' + tr("Social links coming soon.") + "</p>";
     return '<div class="socials">' + items.map(function (s) {
       return '<div class="social-card">' +
         '<a class="social-main" href="' + s.url + '" target="_blank" rel="noopener noreferrer">' +
           '<span class="social-ic">' + socialIcon(s.network) + "</span>" +
           '<span class="social-meta"><span class="social-net">' + s.network + '</span><span class="social-handle">' + s.handle + "</span></span>" +
         "</a>" +
-        '<button class="social-copy" data-copylink="' + s.url + '" title=tr("Copy link") aria-label="Copy ' + s.network + ' link">' + icon("link") + "</button>" +
+        '<button class="social-copy" data-copylink="' + s.url + '" title="' + tr("Copy link") + '" aria-label="Copy ' + s.network + ' link">' + icon("link") + "</button>" +
       "</div>";
     }).join("") + "</div>";
   }
@@ -942,15 +950,13 @@
     return (layout || state.layout) === "list" ? rowHTML(p) : gridCardHTML(p);
   }
   function gridCardHTML(p) {
-    var showBrand = state.view === "both";
     return (
       '<article class="card" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="Open ' + p.name + '">' +
         '<div class="card-frame">' +
-          (p.newBadge && !p.isLogo ? '<span class="tag-new' + (p.newBadge ? " tag-new-" + p.newBadge : "") + '">' + tr("New") + '</span>' : "") +
-          (showBrand ? '<span class="tag-brand">' + BRANDS[p.brand].name + "</span>" : "") +
+          (p.newBadge && !p.isLogo ? '<span class="tag-new tag-new-' + p.newBadge + '">' + tr("New") + "</span>" : "") +
           coverHTML(p) +
           '<div class="quick">' +
-            '<button class="qbtn" data-act="download" title=tr("Download all")>' + icon("download") + "</button>" +
+            '<button class="qbtn" data-act="download" title="' + tr("Download all") + '">' + icon("download") + "</button>" +
           "</div>" +
         "</div>" +
         '<div class="card-name">' + p.name + "</div>" +
@@ -960,7 +966,6 @@
     );
   }
   function rowHTML(p) {
-    var showBrand = state.view === "both";
     return (
       '<article class="card row" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="Open ' + p.name + '">' +
         '<div class="row-thumb">' + coverHTML(p) + "</div>" +
@@ -968,8 +973,7 @@
           '<div class="row-name">' + p.name + (p.newBadge && !p.isLogo ? ' <span class="row-new' + (p.newBadge ? " row-new-" + p.newBadge : "") + '">' + tr("New") + '</span>' : "") + (p.label ? ' <span class="row-label">' + tr(p.label) + "</span>" : "") + "</div>" +
           '<div class="row-sub">' + (p.isLogo ? tr("{n} logo files").replace("{n}", p.total) : tr(p.total === 1 ? "{n} asset" : "{n} assets").replace("{n}", p.total) + (p.label ? "" : " · " + tr(p.category))) + "</div>" +
         "</div>" +
-        (showBrand ? '<span class="row-brand">' + BRANDS[p.brand].name + "</span>" : "") +
-        '<button class="row-dl" data-act="download" title=tr("Download all")>' + icon("download") + "</button>" +
+        '<button class="row-dl" data-act="download" title="' + tr("Download all") + '">' + icon("download") + "</button>" +
       "</article>"
     );
   }
@@ -1089,8 +1093,8 @@
       allGrid.innerHTML = "";
       sf.innerHTML =
         '<div class="search-empty">' + icon("search") +
-          "<div><strong>No matches for “" + escapeHTML(q) + "”.</strong>" +
-          "<span>Try a product name (Dash), a file type (PNG, MP4), or a category (lifestyle, packaging).</span></div>" +
+          "<div><strong>" + tr("No matches for") + " “" + escapeHTML(q) + "”.</strong>" +
+          "<span>" + tr("Try a product name (Gravity Infuser), a file type (PNG, MP4), or a category (lifestyle, packaging).") + "</span></div>" +
           '<a class="btn ghost sm" href="mailto:' + CFG.requestEmail + "?subject=" +
             encodeURIComponent("Asset request — " + q) + '">' + icon("mail") + " " + tr("Request this asset") + "</a>" +
         "</div>";
@@ -1153,7 +1157,7 @@
             '<span class="sf-sub">' + (r.openHash ? highlight(subOf(r) || r.folder, q || "") : escapeHTML(pName) + " · " + highlight(trFolderPath(r.folder), q || "")) +
               (f.format ? ' · <span class="sf-fmt">' + f.format + "</span>" : "") + "</span></span>" +
         "</button>" +
-        (dl ? '<button class="sf-dl" data-sfdl="' + dl + '" data-sfname="' + safe + '" title=tr("Download")>' + icon("download") + "</button>" : "") +
+        (dl ? '<button class="sf-dl" data-sfdl="' + dl + '" data-sfname="' + safe + '" title="' + tr("Download") + '">' + icon("download") + "</button>" : "") +
       "</div>";
   }
   function bindSearchFiles(ctx) {
@@ -1418,14 +1422,14 @@
         '<div class="catlb-acts">' +
           '<button class="btn ghost sm" id="catlb-dl">' + icon("download") + " " + tr("Download PDF") + "</button>" +
           '<button class="btn ghost sm" id="catlb-share">' + icon("link") + " " + tr("Share") + "</button>" +
-          '<button class="catlb-x" id="catlb-x" aria-label=tr("Close viewer")>' + icon("x") + "</button>" +
+          '<button class="catlb-x" id="catlb-x" aria-label="' + tr("Close viewer") + '">' + icon("x") + "</button>" +
         "</div></div>" +
-      '<div class="catlb-stage"><div class="catlb-load" id="catlb-load">Loading catalog…</div>' +
+      '<div class="catlb-stage"><div class="catlb-load" id="catlb-load">' + tr("Loading catalog…") + "</div>" +
         '<canvas id="catlb-canvas"></canvas></div>' +
       '<div class="catlb-nav">' +
-        '<button class="btn ghost sm" id="catlb-prev">' + icon("arrowLeft") + " Prev</button>" +
+        '<button class="btn ghost sm" id="catlb-prev">' + icon("arrowLeft") + " " + tr("Prev") + "</button>" +
         '<span class="catlb-page" id="catlb-page">–</span>' +
-        '<button class="btn ghost sm" id="catlb-next">Next ' + icon("arrowRight") + "</button>" +
+        '<button class="btn ghost sm" id="catlb-next">' + tr("Next") + " " + icon("arrowRight") + "</button>" +
       "</div>";
     document.body.appendChild(ov);
     document.body.style.overflow = "hidden";
@@ -1612,7 +1616,7 @@
       if (m.thumb) {
         var li = lbItems.length;
         lbItems.push({ src: m.thumb, name: m.name, url: m.url || m.thumb });
-        thumb = '<button class="mat-thumb mat-thumb-zoom" data-lbi="' + li + '" title=tr("Click preview to enlarge") aria-label="Enlarge ' + m.name.replace(/"/g, "") + '">' +
+        thumb = '<button class="mat-thumb mat-thumb-zoom" data-lbi="' + li + '" title="' + tr("Click preview to enlarge") + '" aria-label="Enlarge ' + m.name.replace(/"/g, "") + '">' +
           '<img src="' + m.thumb + '" alt="' + m.name.replace(/"/g, "") + '" loading="lazy"/>' +
           '<span class="mat-zoom-badge">' + icon("search") + "</span></button>";
       } else {
@@ -1621,9 +1625,9 @@
       return '<div class="mat-row">' + thumb +
         '<div class="mat-info"><div class="mat-name">' + m.name + "</div>" +
           (m.dim ? '<div class="mat-dim">' + m.dim + "</div>" : "") + "</div>" +
-        '<div class="mat-qty"><button class="mat-step" data-step="-1" aria-label=tr("Decrease")>–</button>' +
+        '<div class="mat-qty"><button class="mat-step" data-step="-1" aria-label="' + tr("Decrease") + '">–</button>' +
           '<input type="number" min="0" value="0" data-mat="' + i + '" aria-label="Quantity for ' + m.name.replace(/"/g, "") + '"/>' +
-          '<button class="mat-step" data-step="1" aria-label=tr("Increase")>+</button></div>' +
+          '<button class="mat-step" data-step="1" aria-label="' + tr("Increase") + '">+</button></div>' +
       "</div>";
     }).join("");
 
@@ -1635,8 +1639,8 @@
         '<aside class="mat-side">' +
           '<div class="mat-side-h">' + tr("Your details") + '</div>' +
           '<div class="mat-fields">' +
-            '<label class="mat-field"><span>' + tr("Store Name") + '</span><input type="text" id="mat-store-name" placeholder=tr("Store name")/></label>' +
-            '<label class="mat-field"><span>' + tr("Mailing Address") + '</span><input type="text" id="mat-store-address" placeholder=tr("Street, City, State, ZIP")/></label>' +
+            '<label class="mat-field"><span>' + tr("Store Name") + '</span><input type="text" id="mat-store-name" placeholder="' + tr("Store name") + '"/></label>' +
+            '<label class="mat-field"><span>' + tr("Mailing Address") + '</span><input type="text" id="mat-store-address" placeholder="' + tr("Street, City, State, ZIP") + '"/></label>' +
             '<label class="mat-field"><span>' + tr("Email Address") + '</span><input type="email" id="mat-store-email" placeholder="you@store.com"/></label>' +
           "</div>" +
           '<button class="btn lg mat-order-btn" id="mat-order">' + icon("mail") + " " + tr("Order Materials") + '<span id="mat-count"></span></button>' +
@@ -1695,7 +1699,7 @@
     "</button>";
   }
   function trainingHash(p) { return "#train/" + p.brand + "/" + slugify(p.name); }
-  function certKey(p) { return "gp-cert-" + p.brand + "-" + slugify(p.name); }
+  function certKey(p) { return "sg-cert-" + p.brand + "-" + slugify(p.name); }
   function getCert(p) { try { return JSON.parse(localStorage.getItem(certKey(p)) || "null"); } catch (e) { return null; } }
   function saveCert(p, data) { try { localStorage.setItem(certKey(p), JSON.stringify(data)); } catch (e) {} }
   function navTraining(p) {
@@ -1719,7 +1723,7 @@
     animateIn(pg);
     window.scrollTo(0, 0);
 
-    var t = window.PORTAL_TRAINING[p.name];
+    var t = trainingOf(p);
     var name = fullProductName(p);
     setTitle(name + " Training");
     var cert = getCert(p);
@@ -1849,7 +1853,7 @@
         "<span>Enter your name to generate your Product Specialist certificate.</span></div>" +
     "</div>" +
     '<div class="trn-certform">' +
-      '<label class="mat-field"><span>Your Name</span><input type="text" id="trn-name" placeholder=tr("Full name") autocomplete="name"/></label>' +
+      '<label class="mat-field"><span>Your Name</span><input type="text" id="trn-name" placeholder="' + tr("Full name") + '" autocomplete="name"/></label>' +
       '<button class="btn lg" id="trn-getcert">' + icon("award") + " Get My Certificate</button>" +
     "</div>" +
     '<div id="trn-cert"></div>';
@@ -1981,11 +1985,11 @@
     return '<div class="loc-store" data-store>' +
         '<div class="loc-store-h">' +
           '<span class="loc-store-n">Store <span class="loc-store-i">' + n + "</span></span>" +
-          '<button class="loc-remove" data-remove title=tr("Remove this store")>' + icon("trash") + " Remove</button>" +
+          '<button class="loc-remove" data-remove title="' + tr("Remove this store") + '">' + icon("trash") + " Remove</button>" +
         "</div>" +
         '<div class="loc-fields">' +
-          '<label class="mat-field loc-wide"><span>' + tr("Store Name") + '</span><input type="text" data-f="name" placeholder=tr("Store name")/></label>' +
-          '<label class="mat-field loc-wide"><span>Address</span><input type="text" data-f="address" placeholder=tr("123 Main St, City, State ZIP")/></label>' +
+          '<label class="mat-field loc-wide"><span>' + tr("Store Name") + '</span><input type="text" data-f="name" placeholder="' + tr("Store name") + '"/></label>' +
+          '<label class="mat-field loc-wide"><span>Address</span><input type="text" data-f="address" placeholder="' + tr("123 Main St, City, State ZIP") + '"/></label>' +
           '<div class="loc-row">' +
             '<label class="mat-field"><span>Phone</span><input type="tel" data-f="phone" placeholder="(555) 555-5555"/></label>' +
             '<label class="mat-field"><span>Website</span><input type="text" data-f="website" placeholder="yourstore.com"/></label>' +
@@ -2020,7 +2024,7 @@
         '<aside class="mat-side">' +
           '<div class="mat-side-h">Your contact info</div>' +
           '<div class="mat-fields">' +
-            '<label class="mat-field"><span>Your Name</span><input type="text" id="loc-contact-name" placeholder=tr("Full name")/></label>' +
+            '<label class="mat-field"><span>Your Name</span><input type="text" id="loc-contact-name" placeholder="' + tr("Full name") + '"/></label>' +
             '<label class="mat-field"><span>' + tr("Email Address") + '</span><input type="email" id="loc-contact-email" placeholder="you@company.com"/></label>' +
             '<label class="mat-field"><span>Phone <em>(optional)</em></span><input type="tel" id="loc-contact-phone" placeholder="(555) 555-5555"/></label>' +
           "</div>" +
@@ -2118,7 +2122,6 @@
     d.style.display = "block";
     animateIn(d);
     window.scrollTo(0, 0);
-    recordRecent(p);
 
     // The In-Store Marketing folder also has its own section below the gallery. In
     // the gallery it's PNG-de-duplicated (no white-bg doubles) and pinned as the
@@ -2299,7 +2302,7 @@
         // ancestor of it (the "Black" card when "Black / Product Photos" is open).
         var isOpen = active === fp || active.indexOf(fp + SEP) === 0;
         var cls = branch ? ("is-branch" + (isOpen ? " on" : "")) : (isOpen ? "on" : "");
-        return catCard(typeLabel(seg), branch ? "stack" : folderIcon(seg), count, fp, cls);
+        return catCard(tr(typeLabel(seg)), branch ? "stack" : folderIcon(seg), count, fp, cls);
       }).join("");
       // Breadcrumb — appears once drilled in from the root.
       var crumb = "";
@@ -2309,8 +2312,8 @@
         segs.forEach(function (s, i) {
           acc = acc ? acc + SEP + s : s;
           crumb += '<span class="crumb-sep">/</span>' + (i < segs.length - 1
-            ? '<button class="crumb-btn crumb-mid" data-path="' + escapeHTML(acc) + '">' + typeLabel(s) + "</button>"
-            : '<span class="crumb-cur">' + typeLabel(s) + "</span>");
+            ? '<button class="crumb-btn crumb-mid" data-path="' + escapeHTML(acc) + '">' + tr(typeLabel(s)) + "</button>"
+            : '<span class="crumb-cur">' + tr(typeLabel(s)) + "</span>");
         });
         crumb += "</div>";
       }
@@ -2318,7 +2321,7 @@
         (kids.length > 4 ? '<div class="catgrid-hint"><span>Swipe to see more</span>' + icon("arrowRight") + "</div>" : "") +
         (kids.length ? '<div class="catgrid" id="asset-nav">' + navCards + "</div>" : "");
       var activeCount = (p.folders[openPath] || []).length;   // files directly in this folder
-      var activeLabel = openPath ? typeLabel(openPath.split(SEP).pop()) : "";
+      var activeLabel = openPath ? tr(typeLabel(openPath.split(SEP).pop())) : "";
       var catTotal = folderNames.reduce(function (s, f) { return s + p.folders[f].length; }, 0);
       // Eyebrow shows the product type (falls back to category); the title is the
       // full brand-prefixed name (e.g. "Stündenglass Gravity Infuser"), without
@@ -2653,7 +2656,7 @@
       "</div>";
     }).join("");
     return '<div class="section-head cways-head"><h2>' + tr("Collection Colorways") + '</h2>' +
-      '<span class="badge">' + ways.length + " colors</span></div>" +
+      '<span class="badge">' + tr("{n} colors").replace("{n}", ways.length) + "</span></div>" +
       '<div class="cways">' + cards + "</div>";
   }
 
@@ -2668,14 +2671,14 @@
     var missing = 0;
     function row(label, val) {
       var v = val ? '<span class="sku-v">' + val + "</span>" : (missing++, '<span class="sku-v sku-tbd">—</span>');
-      return '<div class="sku-row"><span class="sku-l">' + label + "</span>" + v + "</div>";
+      return '<div class="sku-row"><span class="sku-l">' + tr(label) + "</span>" + v + "</div>";
     }
     // Multi-colour collections list per-colour SKU/UPC in the Colorways section,
     // so the collection-level Product SKU/UPC rows are omitted here to avoid
     // duplicating the POP-display codes.
     var multiColor = !!(window.PORTAL_COLORWAYS && window.PORTAL_COLORWAYS[p.name]);
     // "N/A" values are shown as-is (not counted as a to-be-confirmed blank).
-    function orNA(label, val) { return val ? '<div class="sku-row"><span class="sku-l">' + label + '</span><span class="sku-v">' + val + "</span></div>" : row(label, val); }
+    function orNA(label, val) { return val ? '<div class="sku-row"><span class="sku-l">' + tr(label) + '</span><span class="sku-v">' + val + "</span></div>" : row(label, val); }
     var rows =
       row("Product Name", info.fullName) +
       // Multi-variant products list per-variant SKU/UPC in Collection Colorways.
@@ -2735,7 +2738,7 @@
     var list = '<ul class="box-list">' + b.contents.map(function (c) { return "<li>" + c + "</li>"; }).join("") + "</ul>";
     var head = '<div class="section-head"><h2>' + tr("What’s In the Box?") + '</h2></div>';
     if (!b.image) return head + '<div class="box-single">' + list + "</div>";
-    var img = '<div class="box-media"><img src="' + b.image + '" alt=tr("What’s in the box") loading="lazy"/></div>';
+    var img = '<div class="box-media"><img src="' + b.image + '" alt="' + tr("What’s in the box") + '" loading="lazy"/></div>';
     return head + '<div class="box-grid">' + list + img + "</div>";
   }
 
@@ -2754,7 +2757,7 @@
 
       var thumb = '<div class="vthumb' + (playSrc ? " vplay" : "") + '"' +
         (playSrc ? ' data-play="' + playSrc + '" data-title="' + safe + '"' + (dl ? ' data-dl="' + dl + '" data-dlname="' + dlname + '"' : "") + ' role="button" tabindex="0" aria-label="Watch ' + safe + '"' : "") + ">" +
-        poster + '<span class="play-badge">' + icon("play") + "</span>" + (playSrc ? '<span class="vthumb-hint">Click to watch</span>' : "") + "</div>";
+        poster + '<span class="play-badge">' + icon("play") + "</span>" + (playSrc ? '<span class="vthumb-hint">' + tr("Click to watch") + "</span>" : "") + "</div>";
 
       // Only offer a download when there's a real downloadable file; watch-only
       // tutorials (YouTube/Vimeo) just show Watch + the YouTube link.
@@ -2762,7 +2765,7 @@
         ? '<button class="vbtn" data-vdl="' + dl + '" data-vname="' + dlname + '">' + icon("download") + " " + tr("Download") + "</button>"
         : "";
       var ytBtn = v.youtube
-        ? '<a class="vbtn" href="' + v.youtube + '" target="_blank" rel="noopener noreferrer" title="Share on YouTube">' + icon("youtube") + " YouTube</a>"
+        ? '<a class="vbtn" href="' + v.youtube + '" target="_blank" rel="noopener noreferrer" title="' + tr("Share on YouTube") + '">' + icon("youtube") + " YouTube</a>"
         : "";
 
       return '<div class="vcard">' + thumb +
@@ -2792,10 +2795,10 @@
       ? '<iframe src="' + src + (src.indexOf("?") === -1 ? "?" : "&") + 'autoplay=1" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>'
       : '<video src="' + src + '" controls autoplay playsinline></video>';
     ov.innerHTML =
-      '<button class="vlb-close" aria-label="Close">' + icon("x") + "</button>" +
+      '<button class="vlb-close" aria-label="' + tr("Close") + '">' + icon("x") + "</button>" +
       '<div class="vlb-stage">' + media + "</div>" +
       '<div class="vlb-bar"><span class="vlb-name">' + (title || "") + "</span>" +
-        (dlUrl ? '<button class="btn vlb-dl">' + icon("download") + " Download video</button>" : "") + "</div>";
+        (dlUrl ? '<button class="btn vlb-dl">' + icon("download") + " " + tr("Download video") + "</button>" : "") + "</div>";
     document.body.appendChild(ov);
     ov.addEventListener("click", function (e) { if (e.target === ov || e.target.classList.contains("vlb-stage")) closeVideoModal(); });
     $(".vlb-close", ov).addEventListener("click", closeVideoModal);
@@ -2811,7 +2814,7 @@
     var files = p.folders[folder] || [];
     if (!files.length) {
       $("#gallery").innerHTML = '<div class="gallery-empty">' + icon("photo") +
-        "<p><strong>" + typeLabel(folder) + "</strong> are coming soon — check back shortly.</p></div>";
+        "<p><strong>" + tr(typeLabel(folder)) + "</strong> are coming soon — check back shortly.</p></div>";
       if (onChange) onChange();
       return;
     }
@@ -2849,9 +2852,9 @@
             (file.format ? '<span class="gfmt">' + escapeHTML(file.format) + "</span>" : "") + "</div>" +
           '<div class="gbar"><span class="gn">' + nmSafe + '</span>' +
           '<span class="ga">' +
-            '<button type="button" class="ga-btn" data-copy="' + escapeHTML(copyUrl) + '" title=tr("Copy link") aria-label="Copy link to ' + nmAttr + '">' + icon("link") + "</button>" +
+            '<button type="button" class="ga-btn" data-copy="' + escapeHTML(copyUrl) + '" title="' + tr("Copy link") + '" aria-label="Copy link to ' + nmAttr + '">' + icon("link") + "</button>" +
             '<button type="button" class="ga-btn" data-dl="' + escapeHTML(dlUrl) + '" data-name="' + nmAttr + '"' + (file.file ? ' data-direct="1"' : "") +
-              ' title="' + (ext ? "Watch on YouTube" : tr("Download")) + '" aria-label="' + (ext ? "Watch " + nmAttr + " on YouTube" : "Download " + nmAttr) + '">' + icon(ext ? "play" : "download") + "</button>" +
+              ' title="' + (ext ? tr("Watch on YouTube") : tr("Download")) + '" aria-label="' + (ext ? "Watch " + nmAttr + " on YouTube" : "Download " + nmAttr) + '">' + icon(ext ? "play" : "download") + "</button>" +
           "</span></div>" +
         "</div>"
       );
@@ -2946,7 +2949,7 @@
     if (committed.length) {
       if (files.length === 1) { directDownload(committed[0].file, fileLabel(committed[0])); return; }
       var skipped = files.length - committed.length;
-      toast("Preparing " + committed.length + " files as a .zip…");
+      toast(tr("Preparing {n} files as a .zip…").replace("{n}", committed.length));
       loadJSZip(function (JSZip) {
         if (!JSZip) { toast(tr("Couldn’t load the zipper — try again")); return; }
         var zip = new JSZip();
@@ -2957,7 +2960,8 @@
             var href = URL.createObjectURL(blob);
             directDownload(href, String(label || tr("assets")).replace(/[^\w.-]+/g, "_") + ".zip");
             setTimeout(function () { URL.revokeObjectURL(href); }, 8000);
-            toast("Downloaded " + committed.length + " files" + (skipped ? " · " + skipped + " from Dropbox separately" : ""));
+            toast(tr("Downloaded {n} files").replace("{n}", committed.length) +
+              (skipped ? " · " + tr("{n} from Dropbox separately").replace("{n}", skipped) : ""));
           })
           .catch(function () { toast(tr("Couldn’t build the zip")); });
       });
@@ -3072,9 +3076,9 @@
     el.innerHTML =
       '<div class="wrap support-inner">' +
         '<div class="support-copy">' +
-          '<div class="support-eyebrow">' + escapeHTML(s.eyebrow || "Questions about a product?") + "</div>" +
-          '<h2 class="support-h">' + escapeHTML(s.heading || "Talk to our team.") + "</h2>" +
-          (s.copy ? "<p>" + escapeHTML(s.copy) + "</p>" : "") +
+          '<div class="support-eyebrow">' + escapeHTML(tr(s.eyebrow || "Questions about a product?")) + "</div>" +
+          '<h2 class="support-h">' + escapeHTML(tr(s.heading || "Talk to our team.")) + "</h2>" +
+          (s.copy ? "<p>" + escapeHTML(tr(s.copy)) + "</p>" : "") +
         "</div>" +
         '<div class="support-actions">' + btns +
           (s.hours ? '<div class="support-hours">' + escapeHTML(s.hours) + "</div>" : "") +
@@ -3082,14 +3086,26 @@
       "</div>";
   }
 
+  // Chrome that JS writes rather than markup: applyStaticI18n() only walks
+  // [data-i18n] elements in index.html, so anything assigned from JS (hero copy
+  // out of CFG, the lightbox action buttons) has to be re-labelled here on every
+  // language switch or it stays frozen at whatever language booted first.
+  // Set by init(): drops the cached popular-searches panel so it rebuilds in the
+  // new language. Lives here because suggestEl is closed over inside init().
+  var _resetSuggest = null;
+  function resetSuggest() { if (_resetSuggest) _resetSuggest(); }
+
+  function applyJsChrome() {
+    var t = $("#hero-tagline"); if (t) t.textContent = tr(CFG.tagline);
+    var hi = $("#hero-intro"); if (hi) hi.textContent = tr(CFG.intro);
+    var lc = $("#lb-copy"); if (lc) lc.innerHTML = icon("link") + " " + tr("Copy link");
+    var ld = $("#lb-dl"); if (ld) ld.innerHTML = icon("download") + " " + tr("Download");
+    renderSupport();   // lives outside route(), so it must be re-rendered here too
+  }
+
   // ---- wire up the static shell -------------------------------------------
   function init() {
-    // hero text from config
-    $("#hero-tagline").textContent = CFG.tagline;
-    var heroIntro = $("#hero-intro"); if (heroIntro) heroIntro.textContent = CFG.intro;
     $$(".req-mail").forEach(function (a) { a.href = "mailto:" + CFG.requestEmail; });
-
-    renderSupport();
 
     // nav "Catalogs" jumps to the catalogs section. The button hides itself when
     // no catalogs have synced yet, so it can't scroll to an empty section.
@@ -3141,8 +3157,14 @@
     var syncClear = function () { if (clearEl) clearEl.classList.toggle("show", !!searchEl.value); };
 
     // Popular-search suggestions, shown when the (empty) box is focused.
-    var SUGGESTIONS = ["Lifestyle", "Product Photos", tr("Logos"), tr("Packaging"), "Videos", "PNG"];
+    // Values are ENGLISH on purpose: data-q is a query run against English asset
+    // data, so only the chip's label is translated. Built lazily (not at module
+    // eval) so the pack is loaded, and torn down by applyLang() to re-translate.
+    var SUGGESTIONS = ["Lifestyle", "Product Photos", "Logos", "Packaging", "Videos", "PNG"];
     var suggestEl = null;
+    _resetSuggest = function () {
+      if (suggestEl) { suggestEl.remove(); suggestEl = null; }
+    };
     function buildSuggest() {
       if (suggestEl) return suggestEl;
       var host = document.querySelector(".browse-search");
@@ -3150,11 +3172,11 @@
       suggestEl = document.createElement("div");
       suggestEl.className = "search-suggest";
       suggestEl.innerHTML =
-        '<div class="ss-label">Popular searches</div>' +
+        '<div class="ss-label">' + tr("Popular searches") + "</div>" +
         '<div class="ss-chips">' + SUGGESTIONS.map(function (s) {
-          return '<button type="button" class="ss-chip" data-q="' + s + '">' + s + "</button>";
+          return '<button type="button" class="ss-chip" data-q="' + s + '">' + tr(s) + "</button>";
         }).join("") + "</div>" +
-        '<div class="ss-hint">Press <kbd>/</kbd> to search from anywhere · <kbd>Enter</kbd> opens the top result</div>';
+        '<div class="ss-hint">' + tr("Press <kbd>/</kbd> to search from anywhere · <kbd>Enter</kbd> opens the top result") + "</div>";
       host.appendChild(suggestEl);
       $$(".ss-chip", suggestEl).forEach(function (b) {
         b.addEventListener("mousedown", function (e) { e.preventDefault(); });   // keep focus
@@ -3198,8 +3220,7 @@
     syncClear();
 
     // lightbox / asset viewer
-    $("#lb-copy").innerHTML = icon("link") + " " + tr("Copy link");
-    $("#lb-dl").innerHTML = icon("download") + " " + tr("Download");
+
     $("#lb-close").addEventListener("click", closeLightbox);
     $("#lb-prev").addEventListener("click", function () { lbStep(-1); });
     $("#lb-next").addEventListener("click", function () { lbStep(1); });
@@ -3215,12 +3236,9 @@
 
     // keyboard shortcuts
     document.addEventListener("keydown", function (e) {
-      var el = document.activeElement;
-      var typing = el && /^(INPUT|TEXTAREA)$/.test(el.tagName);
       if (e.key === "Escape") {
         if ($("#vlb")) { closeVideoModal(); return; }
         if (lbOpen()) { closeLightbox(); return; }
-        if (typing && el.id === "search") { el.value = ""; state.query = ""; var ce = $("#search-clear"); if (ce) ce.classList.remove("show"); el.blur(); renderHome(true); }
         return;
       }
       if (lbOpen()) {
@@ -3228,7 +3246,6 @@
         else if (e.key === "ArrowRight") lbStep(1);
         return;
       }
-      if (e.key === "/" && !typing) { e.preventDefault(); var s = $("#search"); if (s) s.focus(); }
     });
 
     // floating scroll-to-top — shows once you're a screen or two down
@@ -3271,6 +3288,7 @@
       document.documentElement.lang = state.lang;
       syncLangToggle();
       applyStaticI18n();
+      applyJsChrome();
       bindLangBar();
       maybeOfferLang();
       route();

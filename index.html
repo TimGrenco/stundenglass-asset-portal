@@ -59,7 +59,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
             </span>
           </button>
-          <div class="langsel-menu" id="lang-menu" role="menu" aria-label="Select language"></div>
+          <div class="langsel-menu" id="lang-menu" role="menu" aria-label="Select language" data-i18n-aria></div>
         </div>
         <button class="nav-link" id="nav-catalogs" data-i18n>Catalogs</button>
         <button class="nav-link" id="nav-guides" data-i18n>Logos &amp; assets</button>
@@ -198,7 +198,7 @@
     </div>
   </div>
 
-  <div class="toast" id="toast"></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
   <!-- Floating scroll-to-top (shown after scrolling down) -->
   <button class="to-top" id="to-top" aria-label="Scroll to top" data-i18n-aria>
