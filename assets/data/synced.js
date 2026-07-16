@@ -3171,11 +3171,27 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "chillinitBlackSG",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/wnx57g6m6feoh6gu96azp/chillinitBlackSG.mp4?rlkey=4wsoiwkom2zo2ke881ehkiszu&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/abe105fabb05dd4ffb14156660f1775e005fefeba2ba3d83e57531ebbca04e83.jpg",
+          "file": null
+        },
+        {
           "name": "Cloud 9 with Dad Modül",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/gmpepwvho9tw6s8ga19s8/Cloud-9-with-Dad-Mod-l.mp4?rlkey=cak76hpagzc51vhc964qpfdz3&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/3420f19fd0586a893e460347fc8cb65c6a35911914e953dd1f5cfeebd23e13f1.jpg",
+          "file": null
+        },
+        {
+          "name": "Clouded Queen Black SG",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/2sak0ytklq2riwbjmah5h/Clouded-Queen-Black-SG.mp4?rlkey=nj4q65aoy5kwl1tbww5kd8oe4&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/3cabfa0f6ec93580a61a6537003a552ebaae1fd1062a257081ba5333b1424b54.jpg",
           "file": null
         },
         {
@@ -3403,6 +3419,14 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "PotheadPrincess_SG_April",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/ut9czftcsibld68el8g0f/PotheadPrincess_SG_April.mp4?rlkey=b36nopda980drbwv93v95g792&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/b5ea9777cffaafb1cd1c4a868968acb6c8484a4cd3ef277216a8373fe7f31ce6.jpg",
+          "file": null
+        },
+        {
           "name": "Reels_Modül Tutorial Cleaning",
           "type": "video",
           "format": "MP4",
@@ -3475,11 +3499,27 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "SG_3CT 98_May",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/c5kjzbixnv42f8arunvf5/SG_3CT-98_May.mp4?rlkey=vwkgjxut690m3tqdsdkeb02w1&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/fc3ecca1047b603fb3bb84599bf3707fb20f34ba4461f42593241491b92eede1.jpg",
+          "file": null
+        },
+        {
           "name": "Small Globes Clear Upstems Black",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/0ciwl6cn1qvximcct9n7i/Small-Globes-Clear-Upstems-Black.mp4?rlkey=2ekmljhcqhke2mqd9mcq469dz&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/a92c19113949593a9b007bcce4509440f6473e53b78bafc264b85cd95a8e8092.jpg",
+          "file": null
+        },
+        {
+          "name": "Snappernickel SG snow",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/mtfr5ysqx55er4qwtfyb0/Snappernickel-SG-snow.mp4?rlkey=ju2b7qp2oczjfajvqp6yha3hh&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/c179ee5e02d9d374e6803a08ad626ad2f68daae1399654888a927be12ac9c56c.jpg",
           "file": null
         },
         {
@@ -3496,6 +3536,22 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/plp8e4bk1p3y55kyi0cq1/St-nden-Loft-Connect_Reels.mp4?rlkey=g8jxs60u39q389ehs11zjvujp&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/c375960598f8365c224e8eebc8f8458adeebcbf916f35e29f18ef9a59b6a9412.jpg",
+          "file": null
+        },
+        {
+          "name": "TaeStaysHigh Pineapples Wingstop",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/q5ld3ex787ojnb95p6993/TaeStaysHigh-Pineapples-Wingstop.mp4?rlkey=df0irtyk6lj1hifd3whanevkk&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/f8a553f69885f4acb12b0dfe7919140bdcf3376ec94ae952e8a1366e80948d7e.jpg",
+          "file": null
+        },
+        {
+          "name": "Wacka Flacka Flame SG June",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/h6zmkh7m7wup3wr330vqr/Wacka-Flacka-Flame-SG-June.mp4?rlkey=2nlirpmc41ow56zwg8e7hhd08&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/92f32c2951619a1de2a32c0c40b9fdeaa4b96d10e5b60728ce585ef7620ab804.jpg",
           "file": null
         }
       ],
@@ -5599,99 +5655,11 @@ window.PORTAL_SYNCED = {
       ],
       "Pink / Lifestyle Photos": [
         {
-          "name": "_ALF4653",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kza9dlyj9u32odm1w746a/_ALF4653.jpg?rlkey=ten8a7ph463lnulcbwxn11ez8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a690a9c2e7bbeb0adfc5a77fa3a44dbd3e9eee5796e25bddd65bbf7e76927aaa.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4655",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8o0zlxuk1872azmahayyy/_ALF4655.jpg?rlkey=7z042dzxz7elvu2e3nqttk7sg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fb7226cbb229c9d2b8eda1b2816ab51daa63f3c036fb25208bbeb0ce4c12b079.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4657",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/rj8zffq8j5zv82ktuc349/_ALF4657.jpg?rlkey=por50mlveoex3n96nb4pvatri&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0e3af440b9061cffbb9f1b5221a94974d0731836032787cb5e29e5a9c2ae6a87.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4661",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ssjz69uugd0gp0qmyd84u/_ALF4661.jpg?rlkey=b3wx2kzk93751t5fweu7t1r1u&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d88dc9763cf40518404bc90092d17d93e316cf054f12dfa98ba7442e287b3899.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4663",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/k560ykw8c4kifmzdt1w2o/_ALF4663.jpg?rlkey=u3z69ewn0i0m08gfqj6dl9jwk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3b1b252a5278d890769d6d628568cecf446626b5f2128d28445f0bcde7c70824.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4666",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4pf0tnmi0ul1xk0ckai3q/_ALF4666.jpg?rlkey=74ib6edbqhby8rx7wxsjymppg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/642892281783a945b97f49c8c0df83920230e1789ce58d308f65fd5c80998502.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4670",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/k7bazymtvbl7nsuzfa58a/_ALF4670.jpg?rlkey=1rz9ryf3bilygfk13x0rzrorh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/136b8ace58484c34aeade030db5b46f12bce427dc1c39b9adc9a704876fbfa52.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4672",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ondhzvat3akj12y5gx93y/_ALF4672.jpg?rlkey=dy2z4fpgwbgswtevzotu3s4j4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/23673fde73fbcf9ec3a617c9eb94d509c27d681cd928e8f29ba31a427432436c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4676",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zohxpauriav8362tgf23c/_ALF4676.jpg?rlkey=cgzz7fxmj2tkjve2kbfdj1t8e&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4b9cf58bf3ccfda9e524f3b4afd5d881b06f0f9c6ceec29b97fe48cb119d74e5.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF4677",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/hjv8el8d0w8dpda2ycn67/_ALF4677.jpg?rlkey=yxjrmhfmzooxityvnymu1zxmg&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/aa985769f1931faa5b78a8db09c835313d57e674bce71a367018fea51119c063.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4681",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ii0y0fozpftnpp81mu2kj/_ALF4681.jpg?rlkey=yargox9cxrle8nbnspk12ajf4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d5261abff10512ccf4cf427e89358cf776533a9d617ea927e577da7bf6c9bbab.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4683",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7o66nkiwpnh5k88vsgwk0/_ALF4683.jpg?rlkey=217wq1fck5k9uucmg2vl5tzu8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2b7a4e5ec0247a5f41e6f4d734be101e247c278ae8e9b7cd623b022ea680c3ed.jpg",
           "file": null
         },
         {
@@ -5711,91 +5679,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF4693",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/2t8r2yu67rr36ie5ueqkg/_ALF4693.jpg?rlkey=sylf1srz3rdjhmjwizivf5otl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/565d6e79ea9dfa91ec034b49ae6cdd374d66679125d2fe708eec91c1c76a096c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4698",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ovhjxa4cmwfpagdrlzd6l/_ALF4698.jpg?rlkey=ckeagh9x0j605bxiasqbnf2c1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ec8a38dff59565af009205d99929a2bfa39f93609680e2887e8196f88d0094d1.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF4703",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/lztt1bganw6qojx4f0yfk/_ALF4703.jpg?rlkey=we9vj07l8n77o0uf7jut94u64&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/4918d4e355e137b80ad18c9bc9f0bd37526398f8d869988b3b634120e5c4347c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4705",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/z5sbvokw100ceirgh9ar7/_ALF4705.jpg?rlkey=dde193fhtlnedk8th2htdvv81&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0d61861a00c161c74a2df1c93fec463819c52048a71ae8d9a9af7ffb1f88fd64.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4707",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ndac3anihwk6f9njvtg6g/_ALF4707.jpg?rlkey=xqvo344smn104zbzubl4r4deh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/90bfca4ccaccb6c5c0859f5b8ba70b52ce6d367580cb68f81df911433d3f920b.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4710",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/t0rec56uct23xz6urppt4/_ALF4710.jpg?rlkey=rvogquf52hrzankymubirea6i&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/edca93ae2f9441f7f77ffe28c883c59cdaa2a53a6093abd45f88206a5bed1a8a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4711",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/oubmo4cxpzkepbzycfubk/_ALF4711.jpg?rlkey=t6ih7m6w1hkjg9y7xl0ggsaia&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e8e5c1f8c73cbca3045d040b0cdfe473c4364ffdccc97c556160f332a75fc762.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4713",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/40hu5aybhqifcui1ykz8i/_ALF4713.jpg?rlkey=n027dn02q96ax6t5ms4wyb58w&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5cf25fbfdd56ebcf2dc9477fd3927e1743ea806d5377b75925e590688d1bc3ec.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4718",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/30kwz1kzowjot3tc1jl57/_ALF4718.jpg?rlkey=cmeb179cg7j2fkoqml7va2mnk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/085f46bc978adf5e3936f1e723b1c240eacd1cd5f56e80562a39ad1b64a17a84.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4722",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/b4ebosfoihhm54d39rxv3/_ALF4722.jpg?rlkey=78jvlxtr2zv2zfoca697705kw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fb549ac6cbcfb35bd8e2a41c372d8391f8953c13c4d66a2f83732fc7795e14e5.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4728",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/djqj4sv1eagd0f0x1v0ng/_ALF4728.jpg?rlkey=h2wpyhlnscgwzc7u0g4ejtznl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/76fbbc36989f288f74aef319999e086f1b13d93daa364a7820f546138e95f42f.jpg",
           "file": null
         },
         {
@@ -5807,59 +5695,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF4745",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/p501x49kfhww1qtuijgxd/_ALF4745.jpg?rlkey=c4ru7cszr9wqaytcg8jbijda9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3a9209ae6e8eebf2e7df7f40c1fe7a48428377c5ca207acbdd1160bda5f23a26.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4749",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wp61y9xzaap1ru64hazze/_ALF4749.jpg?rlkey=baw8bgu6dlc3829v21mnvvwp2&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e2fc470ab03fa8039c861ead83d7ef60cbd10395a32bbe363cd399c9b3c56c59.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF4754",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/klbg7infljtoqelit81ly/_ALF4754.jpg?rlkey=3zgkqam9hdnz2s0xu9tgz8isi&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/c0fe302f60c07d8141d43c3a0393e3a54ee03658a6f7518cc711e1014618fb8e.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4756",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qa8046z59d5eo8ksoyx54/_ALF4756.jpg?rlkey=znkfmj7eupwdmg6i9mfknr6fl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/75363c39fb41e8f1b9e3f65c793ef2173784c073e226ecd7da226110b98b268a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4757",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/25w5mxjybrbz3w742r8uu/_ALF4757.jpg?rlkey=7aslp0dxauhoq2gqhdvdecny1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a8febd9d7cf5374f38886d7e4d53666f2060e549f75eb1a8c8e15e5d44707c6c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5013",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bp8c6xehc9f6pnr2923c6/_ALF5013.jpg?rlkey=67fmnncjhrc9x7jx3fz2sfdwf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0b4686800731fd600706d83c954ebd686d7d48d733d896b7d6bb02dbb3711d4a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5014",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/uegiv0574vxpftks4rbqs/_ALF5014.jpg?rlkey=b21i43lcanx9hs5c3dp451ey5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2254e789c0e41a454a11ed508597c5d3f19878b04ce97bf9f2441d2b50190d83.jpg",
           "file": null
         },
         {
@@ -5871,107 +5711,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF5020",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/y7oun0wex6sv1176zx3qk/_ALF5020.jpg?rlkey=dc8u4f836crd4kziw6eldgxrl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3887efc9bf00d5f060cb8903697f9e9102f929188eb53766b816a6e678f819aa.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5021",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/aqdjr68vznty6sg5v001y/_ALF5021.jpg?rlkey=tvci0d122vrdk0ojwd6spk34o&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f5f2cb5d1bed8826a1595336a4252317bd1732f7529e9943025152b37c0f7c80.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5023",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/747uqyh137mih7xzzuucz/_ALF5023.jpg?rlkey=2x7mny6ll05cieq2haelzkeaa&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9d0b5120ef428d62ad44a5590b3d0cc63af8d999057f55812e9c5909775ddaa0.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF5028",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/d5wg8mcx0zw7zlhhgcxkg/_ALF5028.jpg?rlkey=f8f5wycx4ttw4ji3sje5vuwfa&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/9ad5ac49f972b8dbd909824f20f0596b93afb47436e9e4aed1e0cf73b6f4397c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5031",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9gtn6ywmmhypdd51q8rdo/_ALF5031.jpg?rlkey=c02f0m1gehz5e0wkejepmfzw5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/431ae9de151bfc2b92ad8029e6e35cc3620232a2a346dc3e066436d6c31416ba.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5032",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tkxxmebemz2lncpumroiv/_ALF5032.jpg?rlkey=hy2fefvpkm7p3ve9m3aogrmoz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d577123d28d5e4acb21c55c95ea95fca6b3a4cb61ae6adaf739e55dce78e4518.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5036",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1s967oyj6ftg3xc0jiv5q/_ALF5036.jpg?rlkey=sebwkenwq9g03artc1i4x900l&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cb2b2d5795481900180769a08cf7dd46c47befa724b102e7551783c09ce41d82.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5037",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kas611pbeuufz9wypd4wr/_ALF5037.jpg?rlkey=jd634o7c37yk7e4olmm497sch&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3b1331d013e81dfd1490ebaa500e591f541c35d16638612ca33d69937292bdb2.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5043",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1wi6ky10wskonire9c9x4/_ALF5043.jpg?rlkey=pljciphji2i14i6el0eowyz8n&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/70ede5a9e34c12dc1ae8ece397c39ee037bf4bf1b6d0f4f22c27bb3633413901.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5050",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8r434cryxrajsvjjkxdyg/_ALF5050.jpg?rlkey=w50x7e4875obu6n742co3f8xd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e787172eae850178259eab015826bb4509903dd544143df6193586379399902f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5071",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hcdtp3a1lrhddt9k7athh/_ALF5071.jpg?rlkey=q9hpgu3zoy9acho6rvhvmbn3u&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/323405239b89c377dd591f38f27db51865186362967753da0f7e0fdb3e425178.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5076",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/n643mn0iayzhc4kpdbdk5/_ALF5076.jpg?rlkey=b2wf5e43kic7tvjv3nu0zfk7n&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a0dabd9e8d7cda756fa1a1854a438ba2c4843bbee7988f8c78fa3b5bc5669a41.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5083",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1mn4ns58jagyu4f0l0g9v/_ALF5083.jpg?rlkey=h7hmjzo2037f51w8sxhjqnior&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/174f5a53d8cca00c719a35e5a0ad7190529cfa06267e3c75d534433bac9b2db2.jpg",
           "file": null
         },
         {
@@ -5983,99 +5727,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF5086",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/otue4qk317jjb3jal4pvs/_ALF5086.jpg?rlkey=blh8shrsupab3ugdgwcta9kmj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7fa6339e89cf7adeb97b9dd21bd6f0330830077220fb62ef046e9375f2462fd2.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5087",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/pj9uddgdvza1o9qmkv8dt/_ALF5087.jpg?rlkey=1rewq4f4xx0t6rhxtyza3najv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2b98ca715a0ec7e429f654f47d85c34e8e2389b5e0645eb062334ff39dd1b50c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5088",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/h0z5iuqtadqmevavf3bxs/_ALF5088.jpg?rlkey=lcj7y5gx0j4xm62y4oj3rqmwj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6f4e79c7eba3c3fb199850034c00a20ffd67605b9a0c4b5a8f700c2a1cf93cd2.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5096",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/pz1ladcvy5swg3ecrq57q/_ALF5096.jpg?rlkey=63d6u8h19spno5b8wg8gyjbcd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c3add474fc4ccf333ac445cf7ac6bbd7a47c5b5071dfdc5455a4c7210072bd4c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5097",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bqxzeklx6lgydowa6gxda/_ALF5097.jpg?rlkey=rzhj5w3cohehpf77z2tofc0wy&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1f3af2fa8d63e95ec8fddf81003970068eaf7159346095511ee5b7c664b9f950.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5103",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/n6zq1t6jgkch9jmmqy3kb/_ALF5103.jpg?rlkey=lbosdasmhbcn8zilttffu1sf0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2101aa4c037467f7e3998049fb0cd0c556a1971692d77aae2a68de91c079255e.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5109",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/l7pteod7hnr9wz2629s06/_ALF5109.jpg?rlkey=ph6djo4r8g7msyjtu432qm4q5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0dd874868f751d5c07bfb7705321fc8596fabf2aad4a2858af969143ebc710c3.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5112",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/36zfq964n7jywuzggh5qz/_ALF5112.jpg?rlkey=vz8ddsjx16v2itplxtsussj8d&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4e18b52abe5f5bc2c882f3b8ee0704086cdba6fd83d7b3aacfe5b0654716e090.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5121",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/s8x28a9kpvv7lixtyv98g/_ALF5121.jpg?rlkey=xd3cz78b9kwmum2c2m665ns49&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/67e18a4b1c4a21e2d7543ec9b772c9888f11df86283ab4d491d6a50d36924835.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF5160",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/sokvqxlv5zu6uctq5yns6/_ALF5160.jpg?rlkey=jvp72knkbm8q8bzbkbhtz5rxn&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/492ef31a4fbb7ea7a1c8400f64c56052bf1f9d3df3d5514422c4d83fe265ab91.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5166",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/s48ozcd3rxy1e1mpd6579/_ALF5166.jpg?rlkey=qnfdno2ayfzd5n5aiq7m2md4h&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5191d29dca22b866fdc4ba68240eab225cc8635e5f47eb65b351519997360fe1.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5167",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zqihlukmwl7zefcqzlbka/_ALF5167.jpg?rlkey=34wefkb9b64rwmpkro1nszqr3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a1b983b34fea4349f9a01f956e4a6ac943d9ad6522ca3fd9e1f825d2764e00a9.jpg",
           "file": null
         },
         {
@@ -6087,291 +5743,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF5836",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xlw3b9hu3sfathcswy898/_ALF5836.jpg?rlkey=m7funotzrs4f5u1qh4j0jz6ld&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/897ba68d9f7cdf83a830b616549efef7c8ffd7ad14efc41edd4bfce2aeec1e5c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5840",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nfw11ux36l9dc01njnii7/_ALF5840.jpg?rlkey=hmbksrvu0t6ptfses49p20sbt&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/302d3f30ed8ca52e0189bf1e4cbee1fc551dd6440d6e9bb7bbb642d0df278040.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5844",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/75agvfl93h2ha2jytwtx9/_ALF5844.jpg?rlkey=zbwjx09y8ipwb08adps13ivp6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/64faecc9636c560dcdc2be8903c52ba846c3cec3d06d29b1825d0ae1e752cf82.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5846",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hw9fc4qstpm437irjlnnq/_ALF5846.jpg?rlkey=nrhcxhp65c49vwxj9v28y0j7o&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0f1b2516a503cc0709030de24fa8e678c4c92e5e1c2b725e924026ea4b74e4be.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF5854",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/0vfqjfmwk3we293afl7u8/_ALF5854.jpg?rlkey=rn4u1mffpv8yuum8nm3880joj&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/4cb84af2851b1fc8c822e8bed5a8c1b3d7a2ecd17b1ab95305b0f3e914779ffa.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5868",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ltiblzfoaf99yedhpwcot/_ALF5868.jpg?rlkey=md9cg8mjvdqjw4kdlo4pbykjp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4eee067e1714f42654a0c1ab3cce9b2df306f7b69238a658b49c212b0299ec98.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5875",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/i1a4vs7ngiegzvy0g7r1m/_ALF5875.jpg?rlkey=2172bfh4m4do71wayd6yx4w04&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b853ef1c2f5147990c9b19eea742267427281c2c54a360eadc4c3d6c890e7e5c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5886",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/d5xk9wud3seez0gsdocpu/_ALF5886.jpg?rlkey=8j4zaqn1wpejc90rhmi7vqpl3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d2ab18a83e5be3a9caadce2374d88664dad9d5fbf9182b7d0b127bcab011ab44.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5888",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1uzbyffh55fdkhiy7cklw/_ALF5888.jpg?rlkey=85u0zuzmcmsgu8iz961bgb6gv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/02213ba05c8cdb59e953b65ac79e0b3be0112768a514dd14a4680ae1d381958c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5890",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xt0exjj48wg09m5ko6e6s/_ALF5890.jpg?rlkey=w1yyql60h7zd1xnzolcqrj03d&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6c19b068e379179f0fa4e61f0feecd1d5ba1157b1d433eff9d44342c0b07b862.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5891",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0euhntte4jozvsn3rczb1/_ALF5891.jpg?rlkey=1a1kyth79p71n8hwtdztyosce&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0c683e50ed6ee38ebd711f1f506243b33f0c56f9ec135f828b04e1c59bf33151.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5907",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5zicvk33jlzapajmregn2/_ALF5907.jpg?rlkey=jen0ilx3nl28w46epxvuzut7q&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a9804d01f35e9a9bdaf80c567a05410b37e65de9e63555a1d1974eceaf5379e5.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5912",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5ltmr26a1acjdttcdd4h1/_ALF5912.jpg?rlkey=kh4z5pmtcn2k3pu81txhkypqx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/13902a5002f9cbe34e7f503f48df0f14e2e3e5cdc8839609fa2b4f0da6e91b8d.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5913",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qf2lap0gicduy6pa0xx2w/_ALF5913.jpg?rlkey=rjkhr4ihqlh5pi47cptxtxore&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e44c7d594198e4beed1d76ba79c9aebe87f731b9eb60434f9442f81c43f7efcb.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5914",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/i96o7rsnn5zi7hmmxmobd/_ALF5914.jpg?rlkey=3f8uj752vues0doj2pl620shk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/bedc79da83bdbff5c818d861c0c0ffb58d025cfe52c2fa61c390155a686d109a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5915",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3bu14lo92y0v7dv8udb20/_ALF5915.jpg?rlkey=axix9gidfpc2y2kv9we6igc0l&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a4135e397d418fc0fe9589fb5f08152828c47da88cab749f8d55c4daf18cc564.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5916",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/78n7gtit64xxb6st08y7z/_ALF5916.jpg?rlkey=hqv3rt14n9w91if8lfte1q8dr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1bcad8d711b5b948bc90ab8a1702206aeba55c8b63097191d0d10c608fe70acb.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5917",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/36sci5sdggnr75rbh8yq3/_ALF5917.jpg?rlkey=elcwv296a1ce5sw8borciqnu1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a5e1cd3665d2e49f6099943d91b6d9ef551c22a56d3540599b9679c8cea74e39.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5920",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/uvi7lgi3myo8elbdmx0hv/_ALF5920.jpg?rlkey=i71u3ofn235qhfav7xpgnmmat&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2f8af74e1677e212bc4841de9406668ef48928fd95471be7e26716b751c81e06.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5925",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4wjwbrjyttwfz6g3z5trb/_ALF5925.jpg?rlkey=twr9xwgu6zqc39tp93xvzqn0o&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5d96206e56c6db108b5193280ff9e0b4c1b12cc160acf37eb74e132717af0e75.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5934",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ucz6jyde2b3qvofovqyq4/_ALF5934.jpg?rlkey=i70k36ho9qjbw7j0zstizrfm6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c2fecd54b27957de305dc8fe2b68697adf7e1a25336528fb415359147faa3399.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5936",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ti752lj4lf8optsa2glpl/_ALF5936.jpg?rlkey=3ui7es0hw4pr111yc4qiuz9gt&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/761e64bbc8a40e53102db1aae80f48826faaf336e5a0211769ad61b5d386f694.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5965",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1hc38bhzf8tyq2yst479c/_ALF5965.jpg?rlkey=eeyz9ii1e7y17fckoqvorkcjf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/bbf80edc531b28540d6bb26eb74c0b79a46a3c059cd91b1b44ba7ba85fc8ea40.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5972",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vwxmav19cmffgjv9c6pc9/_ALF5972.jpg?rlkey=0y6qsb0z1l0kfzldz9f1cb4n9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f2dd5b4d2f95c1e7564a6a04ea3a7f132ba5a32f2af0e2daf6ad37e388e41cec.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5975",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6y53xjnstx7gska3wogyq/_ALF5975.jpg?rlkey=yvxjkbs8e5ppdvguemdad1z3c&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4c4ed277b68f4926babb0976b284f9ab9a21170d41acaf8cacae25d879d88838.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5978",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7d19253wpmw3j557h53vc/_ALF5978.jpg?rlkey=ikl3lpwx8c2ovs5exdfw03wrd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d5730c0e2d34cf80bb28964c5a1602b70db237b02eaba2570f798ded6bee4bdf.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5989",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/co385gvj1sdh9qx2vbl1g/_ALF5989.jpg?rlkey=afxg3k09iuq05rthzkkm4n60x&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/dbb4921974fcd5987b863ce5eaa8ac4687f6a95e46f26e5af50fab3f360bfaa0.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5991",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/aphxrp1245fxojpk9epbk/_ALF5991.jpg?rlkey=ub88vdw6191oywuhes9aywbjl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f331e1bc5355b6e6a0a1dee6ba4c5372f7a32efb93026e444ca8a3f0d4895321.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF6005",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/efnwbai6xzbojdlzf5bzj/_ALF6005.jpg?rlkey=69pudw1ec0whecuct0wrk0wkq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/191182e8686d9eeb1592d117a6f0d43b302cbecf8048186c15299e701d3769a3.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF6023",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/sri1jpw3cuggdk6aj32l7/_ALF6023.jpg?rlkey=ohtm7nrcqagffbtbca6r81mq0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0a378a7607216fff1ead6e337db3669cec3dde037f83d07b3aac25fd5ab9c188.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7208",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hwja5vev6rlgcf1n3r03g/_ALF7208.jpg?rlkey=c5ru2b0ic1s780old3verq1lv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4c3f8db9d258147f35f1bb536160b204019fdfee81a501efdb1afc2a1e7ccd70.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7210",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/y4vb750soj7kdh1qr2u1x/_ALF7210.jpg?rlkey=0pbkma4zv672yjds4a7666w11&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3db0841fbb40eac281d8bbbdf576c0aa8ac26da2464c3ad68b085b3041612756.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7212",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/iqolxthwpnwoc4omessn8/_ALF7212.jpg?rlkey=44msmhz6ufp1h2caan9rtzdsq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/65d14e6d863efc6690bad4bbbda516e71e381f41e8722e37e1d0be6e9ae31d7f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7213",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1jn7q0oyn7wturc2its0j/_ALF7213.jpg?rlkey=mkdqfo1gg2oh1rsqhjbrqou8a&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e3cadabaf906fbfa07f4c0cf60fc04c113e6a2358a3f5a5a93a38455163c6735.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7217",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ic9zeieof78iyoyoykjpu/_ALF7217.jpg?rlkey=ry0nzqimn5b5oxnfjlkpsby5w&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d36d1347e9b159480ee9572a4575808ca160f3a506328a851414343e28f19d42.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7223",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/2erlnrikhwgl0ea4fz8bb/_ALF7223.jpg?rlkey=o5i3lmm2wpfkawyv86hv3xw1e&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b95ee24fef4806bb3d34bce9491241f21326fa28ac22ae9efc6c40cada764c67.jpg",
           "file": null
         },
         {
@@ -6383,51 +5759,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF7227",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kboapjbo97316wh4li8a7/_ALF7227.jpg?rlkey=rr4jcjjg2ztt1z7bx45bbc9uz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/70c9f45d268f8e3d27c0e6901ab914248dd2b730ff2b52357767041b1d423168.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7238",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/g4qi9omxv5q6r8pw6b7ra/_ALF7238.jpg?rlkey=095jroh5pq0lm2ra7oxj3goa2&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0dd91f1c6d45c7b690f6467cf3cfaa6fa2ad3dc93c1cb01d679e5346ad234af0.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF7240",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/vhqiew7h9avxdptp2vv3g/_ALF7240.jpg?rlkey=laqewv6fwcb73brn0msklc9b9&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/3ec1c2abd1e949a7c214745d63eddd1719758921f69ace375b8c6b14d9b33a3a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7264",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yxfbo2au5f3geja6mcps5/_ALF7264.jpg?rlkey=k1se6s011kdaldkxp8fuip30f&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6128e1adffe159c874081dce3b186ed098897f20550aacd0eece52b5624e5635.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7265",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/dd3jktn2r91qr7btduz5x/_ALF7265.jpg?rlkey=hof421ryueonynpqtxdns78zz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8c7803a70659727f5520474bdb17ac76eadf52b88ab17868b8d0612d36aa5480.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7268",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bpa088hf4bogb2p2n96l1/_ALF7268.jpg?rlkey=krwr9h2eqw4xtb06yluh5k9xr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1d56123e213ff0622cb2367f9fc7c1a0b4050563979ebe28a08274e43b095ebb.jpg",
           "file": null
         },
         {
@@ -6439,38 +5775,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF7271",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/v6q1p1to9d8ftb63behht/_ALF7271.jpg?rlkey=pw571kcmh8b0i1tkugu954kfe&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a58536646b05e365bd9f7174b7c91c85e30c74aae520fa1497da801a3e867050.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7278",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/y177z4r4l6l40yvz5zy3g/_ALF7278.jpg?rlkey=bk1xeo0gqb1gfqpsed90px28u&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7786e392dad21ed1b8bedec7d641af7bab54c8fe51e401ce13154dfd579a5b43.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7280",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ey7388xvyoko3b0ko7hoj/_ALF7280.jpg?rlkey=f340z85knfhdmq4xqhy34ltwf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/733da55db7f13b2915a024e06c5e63108df6c521545894d8cd331b1af32fa57f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7287",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/iasc066smtxj1lfhtdmdq/_ALF7287.jpg?rlkey=ul0xme168u6ui6lzevvyisecg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fa14e45c9be81006f291743ebca637a6f55019b857c61341c48551796f32b5b3.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF7335",
           "type": "image",
           "format": "JPG",
@@ -6479,347 +5783,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF7416",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/iaqn5y7q452y25umhyv6i/_ALF7416.jpg?rlkey=ct68buc1o9z7nd2ysmec79tog&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fced5394eed0b20ccc5b2a19530186446ca762a06d4e6b4ab0d7ad8554568782.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7435",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gkaom2y5kuxi1udxfdp8a/_ALF7435.jpg?rlkey=9ruyl62h9hrjlz0c7cnuqoqw7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5b1fe8aac0e5a592ebd98002b32d7801cebf214338fedb8bc5f3c906a6ad4baa.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7447",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/avedr19dtu7759htc2rte/_ALF7447.jpg?rlkey=9pnkdvyw2thrahesatx0ua4ps&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cc78f5ba45a96e35277a98b9f72917ce78a1a222d882400387a923af21b532a6.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7449",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/e60dotsklnwadmdf51r4a/_ALF7449.jpg?rlkey=4679qiihjm247ja33h55jv4oi&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/64648b840f18306def1a8276da5138371b62c24177bd14e4f484765dc93a26ef.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7463",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nup8ayg7b0grep8v3xpnp/_ALF7463.jpg?rlkey=g7k7ukmgep8bg1mf9tgdjcosd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/faaadef95c262e3bc2807214ecbb0d096dd1c83478a98963f0f0623dbcbcbf37.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7464",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/r92y7ugrlfbrgb7aifq6u/_ALF7464.jpg?rlkey=dr34pp65n651vtuys7k4ny55v&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/684ed2cc7e4ed6e88a95a7e59bc1733814ea70a94e33c762d43f36cf0f93291f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7466",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/24x6cjvtbtuv5f8ubp3we/_ALF7466.jpg?rlkey=m0zsdyithw1qsj2k14hdaki90&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0d266b3269d398ae8392ab242cc4057b95dfc5470727108642a81d2bc8629508.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7489",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lyg2if1xbagwow32unv74/_ALF7489.jpg?rlkey=yvn9fz6bvu5h9h4fo9m6zds45&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d3678092b3e4d256840dd07e6e513914afcef5b088f3fddf4e8184a0d62724c7.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7493",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9ysdonzba2r5hyh7wvbvh/_ALF7493.jpg?rlkey=97yk8c1m934mi9dt62o9ovd6m&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b3791b596c0d60e2dc76b55eb1667e058515f93fcd847875782b56b98ba97aa8.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7521",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0pe8p5sejzprox5ddx248/_ALF7521.jpg?rlkey=te0nypu71yvvdiherhmm1r8vc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4ee5a18f9483e0f9b0a00827d2390a425c374df9ccc5bf5f8bf86e2a8771c7e4.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7522",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hlqlnlk6nib02ocnho6l3/_ALF7522.jpg?rlkey=n30qbj8b6lpzd01nf7lybgfrq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a95639690487847fb1eb3306de6b7538e69c700784a8f873a18fa6370b23670e.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7523",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4xtgsfzvewlt2vzedmpio/_ALF7523.jpg?rlkey=g8gt0p778vou2c8apog2ho3j1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f0b366eadd6d2d7dc5e959e74ddf18854cab6c6cc0d4c7111987a1fc6e199122.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7524",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/h79gl8hhyazwovbllieul/_ALF7524.jpg?rlkey=xs9qxgiyfbe8tawyey1trs9g4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5cce4ca2e97dea0af3c99e1d4a914e814b2af2d171f828718e04fdc4c4636217.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7528",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1qu1mn8si53l364h723lk/_ALF7528.jpg?rlkey=z54q19jo49fudcw8l86o3j6dy&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0b7d8d986cbb237b72f0c133012b903ae68c282d6079aab74ed96c9c41ca13bc.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7530",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yxesmvpo3rdz0qwt9rjw1/_ALF7530.jpg?rlkey=jbvhxqfdvjlmnttk778tqtktq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/29f1a1232ffae26b45e80685afd760856a50022ea6232f005e4826ea663fe8f2.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7534",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gxqlocztdboiy46kbekvz/_ALF7534.jpg?rlkey=w6o4f7s4pxhivke0t3wxt7hd8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0b794e0bd98050ee0f5d49e556ae35622d0aefafc2edde2ab7ed391a27f39353.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7535",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lmq6xodzg3lqjjh4bbx18/_ALF7535.jpg?rlkey=kusyxqxw31thssgi0yngi76o0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7928f37008a092ab9c5c9225aec841f3de92ffb6c274debe17e2868404293051.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7537",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/iav23e8eqiltmmy80mg34/_ALF7537.jpg?rlkey=wdt1z40vgfvq27851x3lbzr1y&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d7894b76f5e4a29e2550f344b2c0c2a7ecf0265ef713d513cdcb5b275e32c0a5.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7547",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/apalj7siyib8pdxwh9wim/_ALF7547.jpg?rlkey=52rb7s8tuhpig1rh10ici0tmx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7c0f0bb550b2e8388f5e0e85673bd6bb518bdfe572c02f843973a2d64dc0f295.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7554",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0t0z9pnvpyipgesnyiwy4/_ALF7554.jpg?rlkey=tyjdkjvdu74ydvn4h42yeg9yk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0c37aa61223be2bd19ba74e5d8c3444aed6917fdaa8ea53dff51157f8f5be27e.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7558",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/cb79hg1xuu1txjg5lsfm2/_ALF7558.jpg?rlkey=jywolkdz0c1rc8wbckh8ddnhh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/641b786df994a6da76757665d733424e8b76b061cf2820bb5bb513601f6311b7.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7573",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1wdj8zqaxh6ovx41zl0az/_ALF7573.jpg?rlkey=sdlu6rzji7n730325ek14tynu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/65899cd97c1c78aeb329fcffdf5aa984f75446934b1d73aff65de14f2825f76f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7668",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/eozhlhsbji7ny3u1tev6y/_ALF7668.jpg?rlkey=4wyg96qr1vnebaqb9eql0pmli&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/636b165745b3fbff83ad6de7b544a502a58e9bb0fcb9fc5699eaf7370da23ff6.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7670",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/2hkyuvz9mnu6sitcdn8yg/_ALF7670.jpg?rlkey=m5v6ptto4allp9jqruo5buw4v&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/929a0ed3a836bcf87a8abeccab44b017bc3cf3ce78bc47cde2d6403b3415029f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7674",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/h03m0xf3wm8vkqmma8k4w/_ALF7674.jpg?rlkey=teaw8bw1xdb8j8rqo5wuyj0gi&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c56e7821671055a41519505b80d1d113c3853b10d2019e1f9e67fc8f8eb914ee.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7676",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/s409xamxuwz7t171644c2/_ALF7676.jpg?rlkey=r4053zr7cnc3x3sfm0mhxpccf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d1bd777dd2736aafe688d0df8d6726e258d4a5af81eb254206ce128b5a45c1c4.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7677",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lr485v6kqmuwbi9zdkhqb/_ALF7677.jpg?rlkey=tdtu66a5u3qvgp5dl2s3isz8i&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/eb7a874d1ee858f421bbafbbc56cd536df1e2e2405c995ad7a5b1e34561a94c7.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7682",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/cn90jw16r3xa4ai1i1h5g/_ALF7682.jpg?rlkey=ijqcbfj2ini9w4iuxc4f482dm&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/13a0d4d84850c6cfff6957d257f2f40748b3293d2c03c9cdae9956123628f25a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7684",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ixd09tlj7wi3lm1s7b27h/_ALF7684.jpg?rlkey=vebmsmfafph8ndjfklk00vfwj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1c687aa9aa3ed67e410e5a3581f5f707aace97e99cd85e3ff38a59f162a93703.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7705",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6y8zdulgh09m2mo4tf96e/_ALF7705.jpg?rlkey=6m569pkj91z67quexyvigt58u&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1b9fee518f1fa74caff559b0383dd4a3788d0f27e5d54cc6cd965148fff7e304.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7723",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1uxrx8es4f1sm3erwk2yb/_ALF7723.jpg?rlkey=u1rn1bsghifr1sq7dg36vzxad&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/050b4e69637b82ca693ed7c0dd956fe579d17b853d097561b81e90b3b21b2c0b.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7739",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/h3mjep0128lydlyc3mvmm/_ALF7739.jpg?rlkey=q9247oa9htifzh8wcp7pyoegy&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/347b694f567b3d9f50fa11c6d65431f089ef914271fb510c77364ca72f2c42aa.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7741",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/krrf5sbditoxdewh8k577/_ALF7741.jpg?rlkey=ix6do6in350awued16r4omdob&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b89a6756025bbce702e055df0a764c45c3bfe949619312572d1a4e755f7a150b.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7752",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/e0zmc0k5okvplvo795qnb/_ALF7752.jpg?rlkey=mi164twhh2dtv3v4pko31kgwk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3e4b20cc3d9546095700c8421e837cebc67214728ef31cc8179559c14dfa2560.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7757",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hoasztjftqd8bgw0asypy/_ALF7757.jpg?rlkey=bflsmj6td2whixq8di4tyibu0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c29cb387106f41ccfc913df98b8a9fbba96d564f8c48f651f2ba945c4625d7ae.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7762",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/57c4jtmeiuca959nnd15n/_ALF7762.jpg?rlkey=29z3n56tpce540oscgc4i073f&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c6b135c7a7ecd9424c84e3cb79aec7c789c18c0ac5ce157b9503f95b9c0b1307.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7764",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/2zdp2fl6s10u03dksas0o/_ALF7764.jpg?rlkey=3p30vvp2sk3dm1p0jfxzjfgpw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a73d70c1f303b9858677a4648267ff17eabf8df22bda21df2d8c403b525b2a3a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7766",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nyledprlz5e70i1ujj9a1/_ALF7766.jpg?rlkey=ukaod358fsmt1as1y67wayjkk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/213529704f12bdf693afce5e6d4fe96923137ce490ad6bdd893d4de5b8fdb716.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7775",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/c8k7ilucnifhzecw2o9rq/_ALF7775.jpg?rlkey=k6awmml3424x6jazudpfr9hlp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/350c1471ff782e17831b186fb1ae8c0ea968e5dda65b7f6a3db033a57039b7fa.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7777",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kyr8dsb8hbhhr4f8moqw1/_ALF7777.jpg?rlkey=dt0y3yr1cazm4ojgis0ynp5hh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a9024bd487017c57dcb95c333c7339821a2d5425eb63e9e7c87754a53a2a1fc1.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7779",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1enqk89e9bso53atwicuu/_ALF7779.jpg?rlkey=thtf919dfw1p4eihzj3f75dhs&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fc370a728a1271e7a9a7cf870a0bae0003aaf964a61d3107eb5a3569c2541878.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF7792",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/tgulzve3wny6yzkogbq6h/_ALF7792.jpg?rlkey=jns10zo56g0uvhlfkzkud8djz&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/a26262521e23ac04f0222961401f6913168cdadaa24efb7b0935dc724f0713ec.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7794",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/mejql8voanspmfhlgwix9/_ALF7794.jpg?rlkey=xf4ff8fr4upqlsbllxvea02bw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e35852aa0c35bfc2ded713eeaad70a592b32c6add04f66413ca97f58c2c2c74a.jpg",
           "file": null
         },
         {
@@ -6839,179 +5807,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF7838",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/jxg4eoaz41aturz2izj8o/_ALF7838.jpg?rlkey=xsjjnip3yn438nu3qkj2ewiwr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/def9460cdd97667684acef4b4343ffe6ddafce88985539da2ce4b78991378a73.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7845",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/cr0ss2fy12in9t2yrra8w/_ALF7845.jpg?rlkey=w6vdsjbj8pp3cijhdwstlhfxs&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0ef7cbc453a9bc73f7152f386adf2fed4322b15164f90a78d56fb56936fe7018.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7850",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gzx7jxzje73j8v9dwwtol/_ALF7850.jpg?rlkey=ttkrdhsathic0sjt384h7yera&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/de851a01b49ffc1a8baf0b41e33c33b4700c8c489bd795ca9103ae3b9905766a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7854",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/y1wdd3wgi4xu7v3qt2h2s/_ALF7854.jpg?rlkey=ii3nl5iye5rogiu2bummu3uul&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5ca760cdb35a320eef10e9278812445e6c500765ebcb123c2c079619c4438236.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7855",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kbbh5ya00q9ddskz7rfj9/_ALF7855.jpg?rlkey=2zvyrivj17fg1kqepkhdgvuq1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d45ec9ed94ca2700f3e52d83ccabbcaa92a32cf856256de28d555fa60da491d0.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7860",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/k6xix3ii5kze8hkigyf9f/_ALF7860.jpg?rlkey=ic9trndd5lutso5k5uzi00kog&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/333e3dcc22495a5f7b01d48dcc44f16f5d95af913f1a9cd2fd8bc6f20ce24524.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7881",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6atvmpaaoprcjj0ifbvbm/_ALF7881.jpg?rlkey=0uxttrr4tmnyznd1d6ioi3ocw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/28bd0e1fe93a4ad9aee287b89aae23957e6f8cc5a5c9e81983a1beae76585051.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7895",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lc11exasr2hbv1vfbgdbz/_ALF7895.jpg?rlkey=ptry0gatpocfu7vquqtvh1i6t&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5ec5ed633a5891c845db5f1567ff2deed822e235d99cf23f4bf29b311d000761.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF7899",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/m0n2fnl4snnhi8t8kzunv/_ALF7899.jpg?rlkey=stuu6bq0kk8sank2247qrf4h3&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/ce4750ca8090f56c906c42ee24cdfd60d7014d079f96dea7b9478819132e4752.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7902",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/d4zne5r8cr6tw3ai85oyk/_ALF7902.jpg?rlkey=l85j8qhrffltf7w4848gd6d1b&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/954cd2b9b578aa5cf92cb59712b97832624dbb301658cfa2309aab8d4594ee23.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7913",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nm5diwfumnud8a0kj2k2m/_ALF7913.jpg?rlkey=71984vde1l90cp90gqq5a7fia&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b6154308f3b22c69f7586aee8d899a2fc25d220eee18c7fa0d92bb18a0ecb900.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7915",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/rbfahwwm07y13tph4hm7a/_ALF7915.jpg?rlkey=l5opt72ny3so9ctscv0orz9ut&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0980c83972d10082b2ca9a433ad819450d143f0beeea6a47e6c630fd5f792fa9.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7916",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xw3yiz6g9k2wyqmk2zj07/_ALF7916.jpg?rlkey=2ffz5bh296bm3oh09iuj2fq7n&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c512c79949554f4701dd1be9508f76be488e9990e9f424d1cc987ade1eb2b59e.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7918",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gxut4wsjn52wnzw1ngurv/_ALF7918.jpg?rlkey=5y4jil75mlz1qeykktyaj33jx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a95fbedf414c05a07e63d45fb46071e05a15c487eeca413f988018e49329102f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7926",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/87b8xtp41znzeaafzowim/_ALF7926.jpg?rlkey=v8qy70erqfbhbkkjp2cysr7i8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5816579d7c71c09daab97a739ec1d0171a01c917aaee296a718550f04b72e53b.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7938",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/awj2vgm7ws7t5zbu7w4ls/_ALF7938.jpg?rlkey=kutcvlakgxotzlwveu7036wgh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0b8684eda9c4b2d2df1455d8e5d291effd354dd152fc640b40746ed4208c5332.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7945",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/pxu6i29euwf45zfiuq0ra/_ALF7945.jpg?rlkey=svwtykoaucqgq9xy9h63m13bk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/33fbefd61a8e2087bf91722f86e9f109e53f064f973b1065ef4b183cc781a497.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7959",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/k770wagq3hyoezjvrrine/_ALF7959.jpg?rlkey=ktclb95vsu8mv9bur40xyp4ly&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/adc3199ed83b9696e0df987d48ed662872c1ce28ab23df2cc92eb64ce7a21583.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF7974",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/oby5kj8whmpuqj6ywgcsc/_ALF7974.jpg?rlkey=wyrl8sumrtkm1w1tj67mkhrhh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/bfa92eb11754397ae4993de51b9ae6df248896d52534053b7feb7b92b7a8d1d9.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9277",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3epj5zj9cd0nes73i9deu/_ALF9277.jpg?rlkey=2lnyktprntfh4todmkhtoiizw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/72beb43dd617f4c2266c392e9f2dd9aa8595d560cff237914ef5586324c04611.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9278",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/rql5xlkyy5er5dksu5dv2/_ALF9278.jpg?rlkey=bpmudwwtfn4s8lspgr62n4qf0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f02e0551b4e008f964cdae8badef7b7aafd988d32e9d64adb7849c53c46f5730.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9280",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bv5yd0xgdc620navozc1x/_ALF9280.jpg?rlkey=56bxf4j1qkery42lboxylll4m&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cd740a97261a6ea8d8ab948579da73432839c636a9da9044837641dc647b65c4.jpg",
           "file": null
         },
         {
@@ -7023,30 +5823,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF9287",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/odehh9gkgyd1gr293bw30/_ALF9287.jpg?rlkey=ekdbl815zytb07f80itpzb0cj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e6bc417457d12ac4a55d200061211cd50d9c9df843e8d14d0a69079ffd92c35f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9290",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fwdrwh7u21nt6giu5kpnw/_ALF9290.jpg?rlkey=0jel841nav54igjhhw2qmdbnv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f2ba927d67e2d49febaa63e1b589c1b000a57d30d354dddbdbdc40196ec0bf51.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9291",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/uwyaxg2bnfe5jhje1d5lm/_ALF9291.jpg?rlkey=zyr0kfdszlg3g8o53bxm43qcx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c9e74a6d874584fa871e1cdc963e37a45f3c6f105528b74916e1b1e914b99545.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF9292",
           "type": "image",
           "format": "JPG",
@@ -7055,107 +5831,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF9298",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fb3g9o19ybqrhjuzjakxs/_ALF9298.jpg?rlkey=p51vnm6myv7iwo9rfn5jmtme9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9ffc361001fe9153d2f4a1d4f911e8c94eef8b9fa502d1cc0a88c426a98ddea0.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9299",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/73v9hs3qxqw6gdluxvi2l/_ALF9299.jpg?rlkey=w6li9gzrxzubo50t96r8gwmtf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d5cae187c04e53579e9ea44711bcc72661467a475204204e83cc97ead934a6df.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9308",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zsyjser5bpvlm39kaax07/_ALF9308.jpg?rlkey=n8snlpc5ojyx4lfmuf1d8n21t&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b8d92ef5134752d9bb5e3fefd96aa4ea1565156300d705273cddde50e932876a.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF9312",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/7hpt9uhowjnpe2rm2xkzl/_ALF9312.jpg?rlkey=ejni1o3fvkdnmg3bfvie6u7ua&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/3dc4892763e52681646a03b70f94b36fc2fc5c284c8d76ed98ece98d1c5d89d1.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9313",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/t3anaza1xkehk6cmoyavl/_ALF9313.jpg?rlkey=d0c3cggbk3ke1tdw4qmafnvmf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9b8855bb6a4abdba58c6a3eb80678a44c98c0ea8bde8f37a043539b4f9b7f38f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9315",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yo068qrdt6xkl1twt4ubb/_ALF9315.jpg?rlkey=28fxwb7t9kge0w72twbflclo7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2bccdcf415f5324ec7876308caaeedfaaf260f5d03c72699cd427d247a979bd2.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9316",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9irtftlibecqs1zdfl0p4/_ALF9316.jpg?rlkey=5q8jjtwjjmi6jkkmsb0ryaftc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c89b2d78adde60edef86f1b13802a31ec6b8a226db028af0d25b405a048ae5da.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9322",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/04fjbabshw5t90ctypnaz/_ALF9322.jpg?rlkey=0vro540j2u0y60erylo6ne9qr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/15b9d2a119b6bf40353a60bf483f281362ad9e6b261b8d1dc504b14ddaefc8f6.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9323",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/eu97myfhbcemivoyqfgdf/_ALF9323.jpg?rlkey=btnb10jfddl5vca1p299b3qkf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/70330884f7b1b1af0193f31081504e1fd5691250ab57bcf5c5c6f6fe4fc30d35.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9325",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/giqbjwo800at8b8po4820/_ALF9325.jpg?rlkey=xwtjty375lb6qe2f6b44hf7hz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0ba2e4a72f3a2e1620ac888e9ee7da1c506593a10722ab9423d9322a8fcc5bbd.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9326",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qy4k1mb7ekqpb419ltrgm/_ALF9326.jpg?rlkey=3482v8njjkfzjbyeztpesbk4u&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7f4031f3480750b2dccc299b03ab9e400ea6a7e1e67de64320885474ee4a9eab.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9327",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/w0a0v59e8po4dh5bc7jv2/_ALF9327.jpg?rlkey=kz1hbeynp03fhoo3ayofr370s&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/95c1fe75ee422e02d7805bf9e60eeffda6dd5910d8ed8161c0f83fbeecce0f7f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9329",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/rvytgh74r9zf0p2ygfbiz/_ALF9329.jpg?rlkey=u4qgfjdtbfagubcdsl2h8lwyt&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/189aa1487d45b489a0f699a8d1e6c544337e16d01f801eb1b474338509f5f33c.jpg",
           "file": null
         },
         {
@@ -7183,38 +5863,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF9375",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8ty1yehif7s4fnp38k1zw/_ALF9375.jpg?rlkey=emu1s8uy6j6j3065rrdf01lup&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3d9bb90bb5e00eacd0f5106bdb55b3d3853d0a1fa3b91653daff016eb938d1ca.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9378",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bhrup7000f48ru2hih1t5/_ALF9378.jpg?rlkey=ry2dmrd1wp5fm5if936h3u7ri&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/dbf53203e7fa26ca4764cb3afcbfac09c379805f7aee87b1bf2a30e5e32dbc96.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9379",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qu9jjrey5h3dsga6p7ehi/_ALF9379.jpg?rlkey=iol8lcf6p6s9l1dyhkalgnrj3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/75419fce57d7e7707ffca665f8822f43b61ee8f2ce397c173e76ceba6dfb9600.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF9380",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/805gpr3a1is4nqpbzam8b/_ALF9380.jpg?rlkey=xlwik0o8u0s1rv87fvch2ivxy&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/df04290ec7a1b8a238f155c2c7f7d0335e111420a4be541bd7287c7ce2990e7e.jpg",
-          "file": null
-        },
-        {
           "name": "_ALF9384",
           "type": "image",
           "format": "JPG",
@@ -7223,195 +5871,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_ALF9388",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/c6mtsvq66u5v42s5t9ha1/_ALF9388.jpg?rlkey=g2wdesqe6qlx50i88d0q1z4rh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5b4055e10d6f9927933a5606f5cf2764568ee734085d8b0df3504b0405dff6e7.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0504",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/uuue67tjvl1c1i4okog87/_GSH0504.jpg?rlkey=hu6r62pip50owokwp63wn41u8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4cf5d7571529ed780de8d2cf1810f848bdb639e166193d3a2add29a6dbe5fec9.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0505",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/pmq273xoyyg7oovnlxbys/_GSH0505.jpg?rlkey=2oez4y1rdykzvtppiltzby8mz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/90ae9a794f5566749c11df68839fb8b0cf9e982f78a64e820a1ab97842ce1c04.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0507",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/s615eltnxlbytrl8lur5x/_GSH0507.jpg?rlkey=2n8y323e427eaztverhtm2sr6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7318d7fdb87da272592bf8e5fc45a27aa924ce110f095b31c98ce69d317c8020.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0510",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vahhnm6fz8d891arb8ct0/_GSH0510.jpg?rlkey=oo2wneo8gkiywismyse13396k&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e1c37b7474cc99f996b41d6e5e7be9c102a91bd32372a736fa5f84cf01677d34.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0512",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3szhny9q7gindle4as02x/_GSH0512.jpg?rlkey=nl6t8z6x0mblslqheaapy9ue9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9a12bba512a69fb1b864be44fb60457f2f27a935152805c90d058aa792cd9d2e.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0513",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4kxwd0bvz4lugxo37at3q/_GSH0513.jpg?rlkey=mnhrt5vw20wxe43slm4cu3p3z&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e066239470852c78ac10d2a112370baafc3b77b54bd671010cd4a39623c3c931.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0515",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/q7gd40uexfl15xgfqijb7/_GSH0515.jpg?rlkey=g9etluysze60az37b7tuy49ev&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2c421f724b29ef1054f600fce3460c0b7c7db6e4608f87d44cc69c5d646fb817.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0516",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/m3bgp77y9kwseoy078a1c/_GSH0516.jpg?rlkey=x7c4x93izeobax8gqn0ea0yxx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5a1c3bd7152b98aed4753c3f5bef2631c6ac272f71b2c5de4d10a985da768f4e.jpg",
-          "file": null
-        },
-        {
           "name": "_GSH0518",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/qhbtv6h8cqh7pqotms9vj/_GSH0518.jpg?rlkey=8eea8ghn42jn3bezxzn6q4yhk&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/30ea17323a89f123a7a1712aefee366375e6beb4c30ee1580e3559e73e63d1db.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0524",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/2tae37ax2yqm4tnxz3uva/_GSH0524.jpg?rlkey=yfxn3obip8lunwah262frzl4d&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7c7348a8d5b389daa3655ff586e79943649265d6ac0d8df4a2c172893c6b7fe3.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0525",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/87mnhmu1fu29vdxpv3cbj/_GSH0525.jpg?rlkey=avc9hnm30ns14zd594kgre1xn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/762bb2c522e394ab083244b1828c43825067507d39ab7bfebafb5bea40cff86a.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0526",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/c1yfniqg5687kgkffjc8d/_GSH0526.jpg?rlkey=c1oyjtcyxou9r8xzi2l1o5ir9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5c7c8f7d2fd19dffbccdb0b0244f6282bbd244e341a4f41f12fb7bb01a10e45f.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0527",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/g1k3c5vmd97slpmqre37j/_GSH0527.jpg?rlkey=aoq1kyik1i036x4uhw8uvxsph&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b779fc8ea6ef8420a1baeeb35dafdbf02e91cd8760224c71f1e3e6a481785295.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0528",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hpiev0d7k276vs46g3npt/_GSH0528.jpg?rlkey=bh6k395d11k3upi6ugziq8tvv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/330d813c85c562157ed27e2c130fb2352ae2a488d2c7fcc844bc2821fc0d9d48.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0530",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/34bgnzplean82qqcsn6zs/_GSH0530.jpg?rlkey=q17udavcbnbzwlnmpnkx2jdzw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3a6384d46958862f4b00255f6feb5faaa0c42ec2dba7dc70d7283e5e361541f6.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0531",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/f0qukv4zc4etglhl2zmpu/_GSH0531.jpg?rlkey=9pix24hpegw9apiffgya878ig&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5f41df4a817506423a98eb8b60dd44aa9338a644492dec8f8c43aaf32b953d27.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0532",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/g3vvde59cokdrqknpfwv9/_GSH0532.jpg?rlkey=j3i1p66oypg5oeso6ekmakjss&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9c876489fd4afb6a4e88c3533f4bb326f5b6871bfe95b4d574d4f20340ce4748.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0533",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/x4vxqjhunmt8cdwxieaa7/_GSH0533.jpg?rlkey=vndqmg75gcpj45kuz0olc7rya&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6ac916845cf0e54e8235367148b115acb8de5eac604b0dde8d6b9ab64c1e5fc4.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0536",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3kr0ljhvm70pad1e9t6s0/_GSH0536.jpg?rlkey=0t0mov38t6pi09r5q1f3gplpg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/911551dfbbbc887961788f46b012404c2f28b347b059f40202fac3b6f8a2a789.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0538",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/h6egvkj19qa7dvi3evffo/_GSH0538.jpg?rlkey=ez4xy93hi1ufin62oyhjy7vlb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9faae6ecf42fe3c1c086116de550fe864153fcb9ce5bf54f64834136b2b40ad6.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0541",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/mp1gkth1ulz0dow4nxjuq/_GSH0541.jpg?rlkey=n38fkxwxo6fpvrqxmonjthw57&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2915d8be07f54373c9b77837224e1054b6373e8b9cf6be0231e853e40917218e.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0545",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lnmk7ihy3r18n9k5x3vvp/_GSH0545.jpg?rlkey=xv9a3bg1kdv4m855cb7e2ug5e&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/047d1c610914e48d453f87a84f61b519cec3b684581ee4a960297875b7eb1238.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0550",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zh05msns4oghfq5izha35/_GSH0550.jpg?rlkey=qlszjw4y2b0cfjor38f1hyxad&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8e1867b9e4524131949fd53a0f74af1814679524e084e9342717c694d2e95053.jpg",
           "file": null
         },
         {
@@ -7431,91 +5895,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_STZ0020",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/dktgceq6p5166y324i4xs/_STZ0020.jpg?rlkey=jwovef4w354l3b2f57jjcuq4w&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d4f48ab4e2b466ca967b7e8a4c5bbb4d764656696d9b8304b21154a491d510bc.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ0021",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0i9s64x53umbq0dyzyc11/_STZ0021.jpg?rlkey=ajay8u9x3ew4qyd4njderpvwr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0e48d7ca12821a6b9307802a4bd441bf772fc59c1e98995318ae3636f51616ae.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ0023",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/x73btsvjssc31aj43klga/_STZ0023.jpg?rlkey=p7hgtzdyq4fpgid5x2jdui31f&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/332826afdda7ebd49a70a98a06f5d10823db4b786aa0883cafcc0974182009a0.jpg",
-          "file": null
-        },
-        {
           "name": "_STZ0024",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/db7sds5fhykyskg51r6ky/_STZ0024.jpg?rlkey=789cr899mxprwyjt57rcilqxt&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/c388c47bd2b8ceed0133d62c6a4b93ebabac4b8c5543cca7347d11ec638d5a68.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ0026",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/rs3h6cj7fwjpi71peb1qk/_STZ0026.jpg?rlkey=vf3snf7b99wdit2un4ucybsrg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/aab27b224114251633f8fee99da50236012d02a7beba4de4b37906db6c2d7114.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ0027",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lfxt82ulhq029wyqa9ep3/_STZ0027.jpg?rlkey=gi2bcsbs4t2712npd6l1d3ffb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8182033bd2eabaffadf2497d6293e8ba35f4e578fa0d9e88888f869cd9ea5a6d.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ0029",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5xkc2bywur7j7lqdgrtub/_STZ0029.jpg?rlkey=tygbrus4bq9wgfn7msnaes2k2&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2b59abbb12655247d25c2eb18a3a16e93031214c3c0d6b627906560a44c4e51c.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ0031",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/flomx6r699k2n0w7foyr4/_STZ0031.jpg?rlkey=1fknyzzmg10z1xh2xh2lkc87x&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4d6587fdd8e67ce9d0ec8a37e2b389074ca7892a0e144c8a015f6f221c08f105.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ0036",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/urji5ls0rs5x9uio61s3k/_STZ0036.jpg?rlkey=hll77e3hpghtehfgi2zqy6znz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/00ee5784a8c918150c0444e1e5bbb4e2bf36f799ff21228e21d67a3821ba81ff.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ0037",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tu68hhxxmmvvn03kdas08/_STZ0037.jpg?rlkey=shiiv91weyge714f2ux0l6f1x&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/434c466aa3bafe8e72090c2f2b5669efbcb3c76efdda5e267ae14f6a6943cc3d.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ0041",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lkbvcz366jfmt643kk3o1/_STZ0041.jpg?rlkey=1j0fla41wyqyxnla50bhc3rjq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/60872026f95ff44af66e7708ed7e8472da95b5adff531980469f769851b0a721.jpg",
           "file": null
         },
         {
@@ -7527,43 +5911,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "_STZ0070",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4s566zcyajhcwq0ccrd2a/_STZ0070.jpg?rlkey=wqxdnvzrqzlczfuvy3v1dgkxp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3367288096735a004db5b1eb5df7ba86c29e9dde940647b9fd04f2e3a6630b0c.jpg",
-          "file": null
-        },
-        {
           "name": "_STZ0074",
           "type": "image",
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/ez4w4gxl156lg5rxxzjus/_STZ0074.jpg?rlkey=kmgzgb9vbu9znng8iilqunu44&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/068a04e15a5f05323f65fef5551a8ba7bcfe353b49f8074c6e56f0e34db9fb7e.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ0075",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yox0f6rhlt5zhmav4etlb/_STZ0075.jpg?rlkey=y40f3nu72138qdl2ovn31o4ww&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6ff149340d72639d23eb3290ae9a5342d2544fbc447cc660af12b3db395e1896.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ0076",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/12v7f3kolv4vtbgg0uxhd/_STZ0076.jpg?rlkey=5tt6k9d7uuwmy60pbqicy8xjr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8c42f5b067490ca22dd8796606f23c8c5b34900f1fade7e8e9e20a813388fde3.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ0079",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vohl9uiryoyxyyhl8uv8b/_STZ0079.jpg?rlkey=uo20wjuxjvik8ghhv5eiefrf0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/75f962f1ae9052b5de89d5c138c6fb5dcf052f0fa7de3c3c2054dcefa46b0c46.jpg",
           "file": null
         },
         {
@@ -7593,11 +5945,59 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "ElegantxLeaf Pink SG June",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/yus3yn36t11ekzqho6osm/ElegantxLeaf-Pink-SG-June.mp4?rlkey=lrulh6nbyerv62d78islr721h&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/c253c9f1cc1337dea8fc696f40cb03fe40bfc7b12a900742ff0a828917b38210.jpg",
+          "file": null
+        },
+        {
           "name": "Kimmy Tan Pink SG Hyer",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/t6t1xy33wkvjxtgmzxw9z/Kimmy-Tan-Pink-SG-Hyer.mp4?rlkey=tochg2v2k4tuwkn3swzj4eqcv&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/e21e1d24af86bf8b54ac6ae2231be0cc0e6b00f9d64ca4d929dd30fa8d33b311.jpg",
+          "file": null
+        },
+        {
+          "name": "Kimmy Tan Pink SG Livestream",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/p5ja062fv88qirovxudpt/Kimmy-Tan-Pink-SG-Livestream.mp4?rlkey=1c571q03uli6tkd7cgbt2uqmr&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/590fb052fa1d6d3c7350c402836832f5a22cc79fd146d67ecd8e8059883152df.jpg",
+          "file": null
+        },
+        {
+          "name": "Koala Pink SG Rock Paper Scissors",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/mio4grgrtmtn4eccg4z52/Koala-Pink-SG-Rock-Paper-Scissors.mp4?rlkey=ztay31ltsfru30xx47y5yme89&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/8a4c6f4fb625b6de42d1a62ec691c64906c3c324e3e3b2af72e8334e0b5c3058.jpg",
+          "file": null
+        },
+        {
+          "name": "Larry Pink SG by boat",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/4zr3gd2v9ua6b1zfvnqto/Larry-Pink-SG-by-boat.mp4?rlkey=mb7xcrl0u5hq6ok2hqq8oywov&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/2a404c5cc5b9857e51429c8d341d106445269c82338c10ae5dfad280a06119a5.jpg",
+          "file": null
+        },
+        {
+          "name": "Larry Pink SG Rocks",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/eh0qw8k1f2gujx66gx3yh/Larry-Pink-SG-Rocks.mp4?rlkey=9ytxzmi42lnkq5a995gqp4nus&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/cd79f0fb87d1b85ccef894d6f008928034f7e3226a4b47280153d10b82e48c3b.jpg",
+          "file": null
+        },
+        {
+          "name": "Larry Pink SG Waterfall",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/lb9h15epllv7h5s8aev4r/Larry-Pink-SG-Waterfall.mp4?rlkey=or6o9rj7poaqejouhb9xysk0i&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/57912d0714d806aeb0ffd12a670897f2ed514d1918f48ed13ef9d342df8e12a8.jpg",
           "file": null
         },
         {
@@ -7609,27 +6009,27 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Pink Palace Pink SG Flip_A",
+          "name": "Lifebeingdest PinkSG",
           "type": "video",
           "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/1earn26r5oo9kgsske7yd/Pink-Palace-Pink-SG-Flip_A.mp4?rlkey=2wt49xxaekx932vpw472wsp19&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c6ad7d6edbda0e13158e6080c38a2f2ba14c92a14c3a1d7e12343625fdff5e87.jpg",
+          "url": "https://www.dropbox.com/scl/fi/3lfj6qk4srdjll3xah6pe/Lifebeingdest-PinkSG.mp4?rlkey=v30e8ox4ajw2mzl89u4w6o4pr&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/b3849ce4fa55ad1f4e2864175f81ad80d5575506d06d3a16ea118baaac467c69.jpg",
           "file": null
         },
         {
-          "name": "Pink Palace Pink SG Flip_B",
+          "name": "MsKrystale PinkSG",
           "type": "video",
           "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/un7m2qrcurcevele22ps1/Pink-Palace-Pink-SG-Flip_B.mp4?rlkey=hr1km9sljak69yzfw9ga0w6yl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f7ca87a1e02c92502896d1123a49f42f5e8edca79ba0c597d4f74ed43bce0029.jpg",
+          "url": "https://www.dropbox.com/scl/fi/4myt18u27cpfe39bm3j0j/MsKrystale-PinkSG.mp4?rlkey=y5gopanwzzvx1o2qajmhacde0&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/84faa97a63ebcaf8ded760c5010d28163516cc12af35039e85170c32982ae96b.jpg",
           "file": null
         },
         {
-          "name": "Pink Palace Pink SG Flip_C",
+          "name": "Officialkkbooga Pink SG Pumpkins",
           "type": "video",
           "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/g5ij1a40occq0ad5gvh8d/Pink-Palace-Pink-SG-Flip_C.mp4?rlkey=sh62qu8w04t8xp4eh4kcr491e&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/de5e762ca58b0c9e1924c92e1da10e556f15a8d1f3ba7ff392199ba186294f9d.jpg",
+          "url": "https://www.dropbox.com/scl/fi/r8wrd6aj1y2f05f9lfc36/Officialkkbooga-Pink-SG-Pumpkins.mp4?rlkey=nzessioruhywjb8s5bx4t3nta&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/6997f3aa145822c9e08b2503f252068835d5fcbdde2f8fb901f31c87e6566338.jpg",
           "file": null
         },
         {
@@ -7649,6 +6049,14 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "Pink SG Berlin_June",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/ujwk5zfzqfee41ix16auv/Pink-SG-Berlin_June.mp4?rlkey=c351qg68hujvvjaof71gxomsn&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/ec6edf546c6a04f376c71aa4fe2082615c2a6daf255fc51029dfd3fa77428441.jpg",
+          "file": null
+        },
+        {
           "name": "Pink SG Boat Delivery",
           "type": "video",
           "format": "MP4",
@@ -7665,19 +6073,19 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Pink SG Cassy Hyer B Reels",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/1d658md65qgk5tuen1sgj/Pink-SG-Cassy-Hyer-B-Reels.mp4?rlkey=e49ww8n7hwz42fb9wsnvjy7u2&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cb89a9720c2a038a1c98c77258f24b9a3474062e7ef7d2ef4d5b542a9d7a9623.jpg",
-          "file": null
-        },
-        {
           "name": "Pink SG Hyer Bathroom",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/pc0r66pk1g3vdyyjn98wy/Pink-SG-Hyer-Bathroom.mp4?rlkey=uq54blnblv9olw0l76mk8svuw&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/1a914d4742dff3a88ed3997134d0b4be2e163af61f7846eeae844b4cc8ce2e03.jpg",
+          "file": null
+        },
+        {
+          "name": "Pink SG Influencer Recap",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/fs0isfk328v3hu35txe7j/Pink-SG-Influencer-Recap.mp4?rlkey=54hf5ern5k4p9apze9i6x8c4q&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/b512d78a52b2d82d1df850acd62e4a8917ebd517714f9d420ac40052c84f3514.jpg",
           "file": null
         },
         {
@@ -7705,6 +6113,22 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "Plantmomjojo Pink SG",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/c63yfzl3hq9saoh9o025x/Plantmomjojo-Pink-SG.mp4?rlkey=1ssa1b6viyg4c9r6c3rq42idx&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/d8724aa611ef320db0f3de9c722a578eb4efe499bea2127828d1562ea7816244.jpg",
+          "file": null
+        },
+        {
+          "name": "Queen Cyn Pink SG Hyer",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/fajh4mki2schym41xulwd/Queen-Cyn-Pink-SG-Hyer.mp4?rlkey=knwg2fxr484wmn7zjgbjrx8t5&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/2022c3466e85ca2059c853f406733da6f0adac5254df92997225a13cb30df52a.jpg",
+          "file": null
+        },
+        {
           "name": "Reels Pink Ladies SG Hookah",
           "type": "video",
           "format": "MP4",
@@ -7729,19 +6153,27 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Shiona Pink SG Hyer A",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/r6esq1tjej1sg8vgb89s3/Shiona-Pink-SG-Hyer-A.mp4?rlkey=gue48dvp6gvqzs7lwex6fdjbp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/763fd331b495e2500f9b35153b2c554d9931222af82ad756b909284bc1ae303e.jpg",
-          "file": null
-        },
-        {
           "name": "Shirley Unboxing Pink SG Modül",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/ucuebgkr5u1nm8ys66edr/Shirley-Unboxing-Pink-SG-Mod-l.mp4?rlkey=kp8il4ll3nnc81ptxdb8zgot4&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/b2b31690b146e6944e72a4425e7c440c80f21c3b130db102a0ceb607977c45d7.jpg",
+          "file": null
+        },
+        {
+          "name": "UGC Pink SG Aug 24",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/cytdvoi5etl6xoz8sgsnt/UGC-Pink-SG-Aug-24.mp4?rlkey=ouh89z56f4992oi4vuyjvjjj1&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/9f282318877a862035f3514556b4183c9dd330c1171bff9127c5d626c1d91d37.jpg",
+          "file": null
+        },
+        {
+          "name": "WulanRussel Pink SG",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/qb6qhkqu26mvjy48nxi1d/WulanRussel-Pink-SG.mp4?rlkey=81mz996ohpl6tq7dolh65g2dp&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/581247c8381ced31b5e0811fd71ca680acdef795804e5d16c7cc787d69447d44.jpg",
           "file": null
         }
       ],
@@ -7755,933 +6187,7 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
-      "Silver / Food": [
-        {
-          "name": "STU_spaghetti_VO",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/y7c6muinmzwwpamqtj2ne/STU_spaghetti_VO.mp4?rlkey=ksrxqhfxvgg70tr4ymvol19y7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f02a57100bfae2a753d1e0b4d9edbbcc9275bea16e5ce09c18d91ed88527131e.jpg",
-          "file": null
-        },
-        {
-          "name": "STU_spaghetti_VO+music",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/kqid2out6ipxkj5r8s73i/STU_spaghetti_VO-music.mp4?rlkey=yo6t3mtp4y1i0s8qob6ejc0d7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8db85239c95311e0594e601e2bee70035c1438a59121ac0cc5e82ecbaa1b8978.jpg",
-          "file": null
-        }
-      ],
-      "Silver / Hookah / Social Videos": [
-        {
-          "name": "Reels_Silver Hookah Encino",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/5mb3k45yhis993r0mjjfw/Reels_Silver-Hookah-Encino.mp4?rlkey=b3qyv2wtniwdg8sm8mwpg1uqz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6a0c05f6a52247b6833d1484773564b0e7498d5a628aea36ed483fd3f0a68f39.jpg",
-          "file": null
-        },
-        {
-          "name": "Silver Hookah Encino",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/hxfehrks9anfuig2unqqw/Silver-Hookah-Encino.mp4?rlkey=curo1s7ccrpiz0gf1tqtuyzeq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/56b8d9900044317555af276068e6364b5fa80f5075758c74ae8b4e308870106a.jpg",
-          "file": null
-        },
-        {
-          "name": "Silver_Oct_A",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/zr4vwcqyade30k82tje1c/Silver_Oct_A.mp4?rlkey=di88ry88zt7qzl66nk8u6xhf0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0ff131ee9aa40ab473b673cbbd8f1d5e971e0fd5977bf6c4fb691bb4d70f9909.jpg",
-          "file": null
-        },
-        {
-          "name": "Silver_Oct_B",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/ca6ulegfjbnz83b37srrm/Silver_Oct_B.mp4?rlkey=zf45tn7e82jkt8s1scj1juqeb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5c1d46ea7b2454ebc2447374939714941e19cd258902568d760ebe5b2f6a437a.jpg",
-          "file": null
-        }
-      ],
-      "Silver / Hookah / Photos / Oct 2022": [
-        {
-          "name": "_GSH7988",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0uoatgnuzy4r2xpb7pwim/_GSH7988.jpg?rlkey=ytxf4099446rbug7op7ebgydi&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ae54f521b533a452b635d82c89f48bad7b80d78001e62d88ddaa41f433a069cd.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH7991",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8h09rqtwv7pwpr747didk/_GSH7991.jpg?rlkey=5oedho7ij4qpj05fqutwpv3q2&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a1fa8af204db5f4d5ea9dc02c0a87a48440589a4922011ca8b82fd8e7380e44a.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH8047",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nwd874nglv2gnd0e5t2cu/_GSH8047.jpg?rlkey=v8zp94h8jtgxkk8lacvsrb6qh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c82a29b1d8fc1acb779df0341d4f7c56dc26c3e5940d59dc3cd3b1b1f4ed6075.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH8057",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9wn9iwysdi7o7dbcz5p4q/_GSH8057.jpg?rlkey=5d61dun1lwabyt9op6tncnssu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a51be08cf475e2cb86c4b574c907a6626dafe4f66a33bb2ebe8595f3c597ce77.jpg",
-          "file": null
-        }
-      ],
-      "Silver / Hookah / Photos / Vivian and Jordan": [
-        {
-          "name": "_ALF2460",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/v3f3kk7h20renn5hbxtx0/_ALF2460.jpg?rlkey=lx10n5vm8yb3eoeqbnk5j3hkr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cd899618ea575e6363addf2d4d78b9a4387d3bebb923ed772d9c7c1baabb9e01.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2464",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/d27otk1q4i7kuiwnnfdnj/_ALF2464.jpg?rlkey=pzak1mpagua1eajny498xo9d6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ba2d56d2ddbcbd19a9b58c6600119c135fd845c639f5d94ce8eb3e14f36234f4.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2533",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wiadu5yorho35x9a18bg2/_ALF2533.jpg?rlkey=9f5yh3pe8fdso6jh30x7rl8tv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5fc7d9ec7659b46669d6ac0d830ef4f8ff4d86d5525bd921a33d06136dc0d3e8.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2551",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ku6k3jebbblcagucetqz0/_ALF2551.jpg?rlkey=cndpafdxqyhto1m8ifkyoxqw6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9a9b3f5c2f9f99b2be3e65e6af89e94066ad0f406b9eb50e79eba0ad901bf3c3.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2553",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/odb6gsvig961pl2rsojmt/_ALF2553.jpg?rlkey=9wtn4c9avn4d4fe4ndos8pkj2&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fcb9a75a8519b529463e8cbce523594f27e603b6db0cb0cbae1384e40f228b0a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2562",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/g7fw6pp0ej1mygrf7e6fj/_ALF2562.jpg?rlkey=1z9ncoyjmdqyjj83n8z15ca44&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1fb312f5bc1afa5f2e935fc8fff536a9e0c93bd8b38701b4b4b2cdd654da5f83.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2570",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/u2hani7ah0a9daqn45saf/_ALF2570.jpg?rlkey=bc883k0vt1acarq0i124uk5v8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e8ff16297b886c842dee0b486806ec8faa069e4b2f827ecf16c926ae99a9b734.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2582",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/g1hr5ird8p5fa0yxtpz0r/_ALF2582.jpg?rlkey=ojopzb3cj53c02pjdaihb233g&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4f3a35056d12d90e28f4496b151469ac3f01cb9cf3cd261c1758d03baf7f0d49.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2636",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/u41sxrsz57jgpuxm55e7q/_ALF2636.jpg?rlkey=v0o8afgm2vd0tod536tuk62st&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/31e78f12634c7f638481979d5f68dbd4bd1cc75c8080f26a59bdb3401608a738.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2652",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/v0zvpyxmkguk89kg5gvod/_ALF2652.jpg?rlkey=9shypue1glha5wtf79wcr3c7z&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2332aba8af573d32b0947e0e690d43e44c33a2130beba6fe34fe8e58606503c0.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2673",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/rvbvyv0jkmo3khlq9hr7c/_ALF2673.jpg?rlkey=yik20h64qd7avgxf8hupt29nz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/63b4978e2b1a36431f47b0764282016444c085395272015d7a37fe8ffdff76ca.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2678",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/boa47yker05gj5wkzpeov/_ALF2678.jpg?rlkey=5ktvlugq693l7lzgct7vwbhk2&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/238aafc01ccde7e2c823b34e6556f2dfed6122e88a6394ae5969c68e84717066.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2683",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5qah8jrl9dph5drl711ei/_ALF2683.jpg?rlkey=6z2t9g76g2bupcajpy63xaxdv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/125fce2a014ffef20011fe7dccdcdf1c716be4dfb92c3ea1f87df957f3fe559c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2690",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bjvb2puhoe5ktg71dhkja/_ALF2690.jpg?rlkey=i99c1p9v9sjmxkfzkrgdg8r7q&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0d9194ccbe25ac4a3a87f7a6a5ad47c534f4c759e01e68602232775b8264e45c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2716",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/2qttquazoctemkcunukyj/_ALF2716.jpg?rlkey=6zqja7okpfexdvsnsio8evtax&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/67d2de2ff94832a0a2b5f0337aba8467fc5c26a2ddb3a303cf3f6e9768ac53b8.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2717",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ni7f6wvnqjxlt0k88id2t/_ALF2717.jpg?rlkey=tdatvapcggm1wonfd1s6tysvn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/576a56f3eebbe16f6dd7ed4bff2c5718bf73a3a39c33d27e58f9d90f6c031b6b.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2719",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/e2fyss80lzxqbkopl60ge/_ALF2719.jpg?rlkey=cilyvfd9gg85v894maxmm9y1m&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/049ca94e53973194f4704935ee11bd4b879c767f9c3b835b55715e297b8716bb.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2731",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/t3n0i2omkfdfc5ng2o400/_ALF2731.jpg?rlkey=vl6q52o2exmrtwxz03u0j69a1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1ca10dfbf111baf8cf8e8106322115e980dd6612912d04dfd8801d4e5d1d2494.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2735",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vch7iovw96d16yvnpn1ne/_ALF2735.jpg?rlkey=p58smtdi2cc5ns9ua8308or0z&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b1011bf6af8f9d0547ac8f3cd8e059c3db7b3914a734139aa7523b65aede1a69.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2741",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3e26dxnvppc502xch1bee/_ALF2741.jpg?rlkey=fsag7j9ecai0vskrdr1jnfui1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1627a6eacb087307284724d2f2ff5930c0cdf5d5d75775cdf9d79ba7dc8159ce.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2750",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/123rccm2me2xqnfpodjvo/_ALF2750.jpg?rlkey=ai5hlqvhp9izimg9lhad6ifix&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ffa7d229427dd7aa15e9a78b7313af8cb5b42ad747f7031949e24bef58dc4b4f.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5619",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/69cbbavwzpbgk92esfah7/_STZ5619.jpg?rlkey=alcjhty7ovy56937918em8418&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/56743cf0877b0525717f6e9af0c009660c0b7d9269f5c2e8e0c1a12453ed6df6.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5626",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zdrzy08hbo55qtqrbrxho/_STZ5626.jpg?rlkey=4j6ogkmnn3iww6034uyv0pr4w&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8a6e9ae6adb95dff681a04a3276d930b9d82287b08e291d3d901ef1081132ee8.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5628",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/l6nq17nnzmgg3qj0ca75g/_STZ5628.jpg?rlkey=2nhvzrghxpbefd77mffcz996q&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/56e2e855e3eee68c11461c31b7e7d6962cb183d93ae5a5c3a67792de5a8e655d.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5645",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5pn4gt367aagp08xsnjjp/_STZ5645.jpg?rlkey=9euccnxe5jon61jmmj78rfged&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/48bb7d83186bf18221097d48e86154ba7cd2292174b3894c6d701a2c6bdf0e41.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5650",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ezm8wilqe6xojbtqxkrn7/_STZ5650.jpg?rlkey=1qd784cvyht82t0v0djnt2r6q&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d32d14fe2899fbba2396ddd28b914a93396a27b2798dea0a594d1790a6c9c247.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5656",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wanh51z06usq6oayl6eiq/_STZ5656.jpg?rlkey=xiy63mqxl78ncabebs419t7ru&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c60144be9753ecd160945fc331ccc213544b2d209cfafe5e7a3f4ae15adee55d.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5663",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1cmdacihgb25wc0l9gy36/_STZ5663.jpg?rlkey=s0tvhdkqvfrv19434gipr4lfn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/610ade34f68546e9f9d71b2a439d7d2cb9f3a47b9d031329d02e5b811b7f2f9c.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5664",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kl5tctg4ce8vasn5bulsu/_STZ5664.jpg?rlkey=9vx1ajszl37i4m7htgtlf6xwu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7be6991e02eccf2c2b0bf6f94ad5b28a91d03b35e7e1e466d53007f6a74ed36a.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5668",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/shszb38hy1e37ttpi3jv6/_STZ5668.jpg?rlkey=avcz1kbp6uhrcwxnx1qhj4yr2&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ed7fa86a40530404866d179165e688ef890b82642dd91f85da8657916fbb805f.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5674",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/w9yoy50j0ln8esfrcqy34/_STZ5674.jpg?rlkey=02crc2ivegqhjem6wjs64b7rp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/89ece0112c8ec113c41f209eadd3ea4c38cab6949cee408d178710e6daff6ed7.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5675",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ap49cbcp1jqmxmzq3rf4n/_STZ5675.jpg?rlkey=sq9jjdz9gd0lendi8um7o653x&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/efb76ee28b54535b700e637d720daba2a3b200e6ef6e6d1959a73edb8f7873c8.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5676",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/u9m11drxb0myoht2g2d4w/_STZ5676.jpg?rlkey=n4evhtg5yvzqvywx5rg5aev3t&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/18a451cba4844d2c62b35e992603df95134aa610f9818a122e1fe49229d63945.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5678",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wxiqqbm76gpagwed21fbk/_STZ5678.jpg?rlkey=5z4hluxdwge8li73tis100mqh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7f858d3ac6b04b67271de58bdc0a4d2b5bc240e728bd15f9e78774a8b398a074.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5683",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/jjfdf8yws06fa0tfzcbt3/_STZ5683.jpg?rlkey=yzcka8w2oxvsbfw3gj9g9hm1j&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8d87450027ae2faef7f10c960216ca64e460667b12f4f9cbf4702ee5e360d1f0.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5684",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/pyztul8b7q1rb42gehuhz/_STZ5684.jpg?rlkey=zkcmiffowxxmxt3nnh8bn6m32&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ed992ddccf9b27a786aebf8aa2e97d4faf2c480c6a1a69d1de1c7fd3b7f049e6.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5686",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1o7r7uvusfjwjwsviz623/_STZ5686.jpg?rlkey=f9p867xh5ib5iw9kpmdrpao30&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/db1e91873964e625c61c02ce6f31bf91f4100310e8fbb1da50c2a3d61117fe1a.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5689",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/anykncorrpki654cxo4rr/_STZ5689.jpg?rlkey=xw6ltldeg0d8d3t0r3hulnshb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7b8e4da779e1ddc82c178bf07447b844b814f2d2c99574c39646b3ba2efafe9f.jpg",
-          "file": null
-        }
-      ],
-      "Silver / Hyer / Social Videos": [
-        {
-          "name": "Silver Pink Globes Hyer",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/dp74ssvxd0bsmyjinq1k5/Silver-Pink-Globes-Hyer.mp4?rlkey=zofgi9y8kx047gs0trgd0h4vp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/291f1e46d7f76cfc93372d9f4449cb9d70d9f787c5d2c4c0b0e552100f1885ab.jpg",
-          "file": null
-        },
-        {
-          "name": "Silver SG Hyer",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/w306g7ppd8qd3wtdivr36/Silver-SG-Hyer.mp4?rlkey=xjzcs7oio4bjmwufyctyjiyr6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/099e106d36d3a4aecf530f3e9a2c473bfea4833900da5199ee23f5706e32f772.jpg",
-          "file": null
-        },
-        {
-          "name": "Silver SG Hyer Contest Winner",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/nenwx7h4hweun2lcfsiu4/Silver-SG-Hyer-Contest-Winner.mp4?rlkey=wngrvpp4iknxjbomlsz51ni7d&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8e3592fee8d0f3989ee1ec325a8efaa832ab857514f2e4959aa07ad97c0a72dd.jpg",
-          "file": null
-        }
-      ],
-      "Silver / Hyer / Photos": [
-        {
-          "name": "_GSH0676",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/mriz9g339i2vvpmy0it33/_GSH0676.jpg?rlkey=mvcnrk8kd2p1j72787r6uwbop&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e98880fa2547fd1fd857af7774f06420b1c8833fc43846a40c6456cf856f8ec9.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0684",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/br9suu2iw27kh6ignpgn2/_GSH0684.jpg?rlkey=mja142dpfsnpphgwat8mwueom&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e10501a840d5cfe2b79d4c2b2441af96df7e509b1672a5dd6bf4eaece5029d6d.jpg",
-          "file": null
-        }
-      ],
-      "Silver / Hyer / Photos / Boho": [
-        {
-          "name": "_ALF3129",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/54i0gk516w9227tg471gb/_ALF3129.jpg?rlkey=31yjr3o6ogjyt772mivwx540i&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a1d533a8cb663648d40963fc69fc445bdbf3af264fd8db29cfbc6a8b013f9b17.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3136",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/e3psn6bdd6h6gr07vtuxf/_ALF3136.jpg?rlkey=x71wvarsde7exs7bq8dtb6gc7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/08b1353c10320d81617e9415cc81e3a2e7ee4c2fb77ceff8e724d3317bcd85be.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3151",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ybxqo4ves8hob47xcn7mo/_ALF3151.jpg?rlkey=g7twoitti4rnt3jsn05u82han&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3247414c256874785d420c9ced4829f02aef5b2da9218465d912bcb6f97e95ea.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3152",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7xlo6ilxjydt5kl3asex9/_ALF3152.jpg?rlkey=fjz7cyda8sc066mrd5kn2or16&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4c6aa31da104e580b800ff4ef92c31b2a4558ac4d15ecdc915e0ba32d41be4ce.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3174",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3tcd8h6bgm3dqwo0bhano/_ALF3174.jpg?rlkey=0oqv5ji4wyimv3heeg1cul7s7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9aefe72824bc607321c7396afb10aea40257c0106d4cedb9fb8915513c5c9b7b.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0531",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/10gb7jp1rbayvflpfb0fi/_GSH0531.jpg?rlkey=x7kyth7fu9k184a2ady9thpy0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6fb16a0dde74869991a4837bb04e5d6db923c195b128daf823a28b5fc038c3b6.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0532",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ulztvtjiia7vpnpj8xm06/_GSH0532.jpg?rlkey=3v8eoztv6c4d10c6luwilghj7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7d77753903ee438897c01dff306277e3f93844474e4aa077297ae7695f36aed1.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0533",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4q18yl6dbuemauruu6f24/_GSH0533.jpg?rlkey=0d0hhkzuiemktsr9c2q8lhp0r&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0a0203b915311ef768bc201191531dfae6a944016ac57af84dc327ad1de53c60.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0540",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lhp6vtwtyt655cqcsc7r7/_GSH0540.jpg?rlkey=2h3jiy54krg3nv49p8p5ee83v&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/acbd56c1d9208f5ee11ca3f68715e7fed3246c971d90a789f2fa5589b98e8515.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0551",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/sa1xiqvavu0qtqs60ccwy/_GSH0551.jpg?rlkey=s4yfmc2rms47wacqh8bncrjzq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1621a414bef8fa64d954cdf7032ba0b3f5728e621212d3d2a39181a3813278c0.jpg",
-          "file": null
-        }
-      ],
-      "Silver / Mixology / Vivian and Jordan / Social Videos": [
-        {
-          "name": "Reels_SG Silver Mixology",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/h5fprsaax9oiiy89m5o63/Reels_SG-Silver-Mixology.mp4?rlkey=35juwkus5bw7j62xzg5jbmzzw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9f18a60804be3630899335318fd88c0455d093fe8aa30084c706e5e49a4b865d.jpg",
-          "file": null
-        },
-        {
-          "name": "SG Silver Mixology_Encino",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/4hq6fhu6aqhoi8am7abn7/SG-Silver-Mixology_Encino.mp4?rlkey=3w04tonozkrpq95zxctnehs2u&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f8c8caaeb482a1b6f458803caab1e93621a65192deee0b24d4e2039b9bba86d2.jpg",
-          "file": null
-        }
-      ],
-      "Silver / Mixology / Vivian and Jordan / Photos": [
-        {
-          "name": "_ALF2762",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ht2oq96m4qybte93t435d/_ALF2762.jpg?rlkey=g30ezjlio6tuznb4r7c6zq3y3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9f24ccc4a61b285e969dbbd1b8a36947fa3177dc3145268a0bd80132df82f9db.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2771",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hhtrkzp861r3f11qfcsim/_ALF2771.jpg?rlkey=kj7mk1wsc6oh7t2hw9kq7ziqx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/00f666b29aa335610d34ee1b255c8fbb31882910a43d060f222062335b6f6c84.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2778",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zsx04kpz9z4cmtbyxxdfh/_ALF2778.jpg?rlkey=sskumewftd7k2jyp4oaydcvea&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/59fe1141841d79bea09bf69b95d189bb22eec25dd65df1e90e25dcf641190a07.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2790",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/mt1vhfnhnku8q7266w6o3/_ALF2790.jpg?rlkey=780yp3qrff4cuziuvho2bw0lk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/bfd21583277e1199b5d52ab66fa20823bd0e80c8a4bfe50d4c0c4c78cf03d896.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2812",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bblirnk4rzh6xtuvbxzs0/_ALF2812.jpg?rlkey=wpkyi80zpv2o5sef3ect83r6j&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a8be811b3dfb4dca9568095da0de6db4535149de40e9244e96cec3ada8efbc1f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2833",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gevn8fkzroh0ybgkh2a6r/_ALF2833.jpg?rlkey=si4crcbvzbfaljyycvxyc7sws&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/46eae7be273a71bbcbe67d8c319d792435934e17e33441f2b90c755bffb0fb73.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2852",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kumrxhcdvxiefqkilp8tm/_ALF2852.jpg?rlkey=e0vpgboi0l80fi0h2e6jzvnga&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4ae87a92662e54e7d94e90f9ccbaa2b0579b27b2e45b889a76a913be1b338d10.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2857",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/riyc8b7p9tkzb2vzafnoo/_ALF2857.jpg?rlkey=lyse03e6chgl9bq6wagms1xsw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/88f64d9fd4c3e788125199875a2b1e2dd931af2b4ff3705fb90f95b63c3f0942.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2859",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vv9bzfvtukqsfb3qcxcpe/_ALF2859.jpg?rlkey=scqh2x05doeml80zhxn1uju2v&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8e669498fc1fdbb0799c65611ee9fd0fe374a2a880e09e6dff8bff9a695c5f08.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2866",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ijneq4t0dimjr3wivhu2v/_ALF2866.jpg?rlkey=kz8vn81vvqow07amw6l1iosqd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/aa7b4076c3251539a88678b26b6ef12d76b4bd150a04de973a7402a8ac3043e1.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2875",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/royeze1htopmwh8f3z7uv/_ALF2875.jpg?rlkey=msa5y9nxnhktw9ogeyhzxzqhj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9f47eb9140da35de6eb962f54b849da23d93dac74a71b7be57fbd4b79a79a6ca.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2907",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/v43g4wak1bm3c5m2pd0mn/_ALF2907.jpg?rlkey=jduuwyd1axhm3ielyops0lup1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9373b9d95f118558f52f86d14d3fb6e3a79c9500e944394a04a57fd9bc4f9512.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2932",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lim49gkylo1t7nwh6rfcb/_ALF2932.jpg?rlkey=mup1fzl8s0ravb5znvl7fkynn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/57b0ca37c37f7e80c4be334e479ad61e7b1edf7525a5f96550c45587a7cd58e7.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2948",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wlvg2yxdqvt3j1efj7c1a/_ALF2948.jpg?rlkey=tc4c4003wlsa4mdaiq797hgc0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e0cdbd063f0065ce813a05b16d730bf6fd6c6f5dcbf848c5d7507ace1fd0a780.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2953",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xyonfd81xss6p6h88cncm/_ALF2953.jpg?rlkey=s65vsk5bpla5hg00veroxdez3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f84e61ddeee8202761fbfd4b7543b2d6e2d3c9460ec13e332c12567e04fe0dbf.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3006",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7umrfnvdp0pznv63efi8l/_ALF3006.jpg?rlkey=prgo2l3regqcyqlizsmn7ij7k&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a56c3b0f501b40a282220a7c94a2590e0f64c1c8134399981608e74176427d4b.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3017",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/dzq9ar86x602gymt8vjwc/_ALF3017.jpg?rlkey=d0oq83svi9sjy00buzx5vs8gl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6d9b52007f0cea483f10b20a1dd401938acd9f3d4383d77d2693cbd75e2cd945.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3034",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/mpzjwy1fedea6hlxh3fre/_ALF3034.jpg?rlkey=hjryfpln8p1urtyfqbnf6fjvm&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e2e503fab087916e2fa514c4bd255d3a3ebcdd4755dbd51d1abad5259ddfa90a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3049",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8boivx11wpq1uoudhbfa0/_ALF3049.jpg?rlkey=2ya73msjvd2f5wxtl4a2z2zjo&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/47aec738f869504a2132286c0b16ff301a29eaf4d0d3bde20586085ebfed41df.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3080",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fl9z5km5wr04zv1so7abb/_ALF3080.jpg?rlkey=p572j8a2d2qi7s6o91nr8dyy7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/279a22cfe2eee9eefc2be29bbc462db1e9eecab9311451fd6a4632d4e2aaea6c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3104",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/uwdsrrsay427jc0v69r61/_ALF3104.jpg?rlkey=p29l9ycsveerv2scjzcwlq3u5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/63816c6a932fd5fd08a75bc4d0ac5a69632ebc37281fe12ef047bbb4b4d68455.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3125",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8ulmv93hw1qv3vo5n1n3z/_ALF3125.jpg?rlkey=ilkkpvfx3t3zsyjvbuzucr2mf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/abf847229039c74a610a8fb44e72ef93174936f5d1b4430c6457f1e25824ce59.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3159",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xejzi91pgme2it2rwyngw/_ALF3159.jpg?rlkey=p0m97k8msl9psb8frjlcvc9rj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/303773b5d362ea52be66479f6b9f9e32cdfa646a5405c75bd59625ece832292e.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3172",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/aepre03tdfym0qw17962b/_ALF3172.jpg?rlkey=gt7jchyd3e5i2ibc2n7z3qu5b&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/32d43c5abc2c1777b5e2e395e1fd5db2c0b3fb55c7aa0706b44ac9df41de3dfc.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3177",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/of7qxvwjf5sbu3u8venav/_ALF3177.jpg?rlkey=yqbfytsbzc5mqagegatevkkgp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4d11e86f1a84b86381adf708697a2288d3117b83eb8c20f03692e007135e5a42.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3179",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ke9ul0fn6tngxodrdldog/_ALF3179.jpg?rlkey=kw8of17z6q9inh1jdtiq2dmif&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c81a264088f21588024979033256b1824f8d5845849fa756e1a43401987d87e7.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3184",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/i9p2p19u74wkv2c4k3t4d/_ALF3184.jpg?rlkey=b9yv8v770ekw3l17zvj6grcdb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4a29e519c00a212074d6dc32d8c9cebc8f6c9ba8c03944e4d16c4e6c4aed52bd.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3191",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zur9xwx7v587qpszo5nq9/_ALF3191.jpg?rlkey=qbjp327ub45mlslkczt7ox2te&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5579ef52d70cc4caae4517e3b950ef44861120b198c1319c5f28576205b5b002.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3194",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fx9osqunsmmx5gwqmp7sl/_ALF3194.jpg?rlkey=lopv039zh9q29s9xuvnkm5gyg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5ba29b6963e4eb4bf2ea55c692e567cf38e76de432f9ebdc0708476291216cd2.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5697",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yu8vh0b59r4n1mirluzgk/_STZ5697.jpg?rlkey=wj3eip06fnyqo9wj2tsncpwit&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e351db27b606b83df2c2ecf18de2c901325d5574598d0e1acc518a1daee1c8ac.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5698",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/m1maat4h4yt0j13utveig/_STZ5698.jpg?rlkey=idwdzsvo9sj2it5ztaowqaa7c&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/dcff12e011ec4a724a16916ece247bd3af11c070778025ec05302b20a20c4516.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5703",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hbukjh3ela372ol907c7t/_STZ5703.jpg?rlkey=22pjwzxglxj0a40hs2e9nzlgc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0db84de87f38985bf362b9635d25c4167dadddb85ac8bbed14a0878e5833a1af.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5716",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/mnc9a2b5c9ymznthl9fzq/_STZ5716.jpg?rlkey=xuqz3olp3cr6sphyz2qmghefg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/467f0b7aa60b548b61110c0df1fb3b2fd4060e3ef24494db8779480d4ed63902.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5717",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5rc5maw3npfdan0thc1az/_STZ5717.jpg?rlkey=82unutka96mjly5uvdjdya0r7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/80cbc40c4bfe9660e04715b60582cd5a1272c37b38f2fedc8a839f56b40dc3a9.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5725",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/u4ueh16jczf5yhwjjl8we/_STZ5725.jpg?rlkey=mhpplwpk2026bf3ako67u3aur&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/23eab7ac7baf224808504082a13f3a996119a414029b9fb8c0e5ea24c3d3f48c.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5728",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/jly6lavnj9owozjs1k6fs/_STZ5728.jpg?rlkey=lk77o9mybtehetgl0p7shpti4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/764fa8aa6a3d3d86c5709c3fbb27a442c8a0cad45afb48ad18442d2b97735546.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5729",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/499vlr6dxxo9giibeecpq/_STZ5729.jpg?rlkey=73ut1cxsclozuu1dqasclnaxq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/22a962dfaadaf1805b59920cc134256d6085df7a72c6dcc9933fc5cb43a0d55f.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5738",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/b3rnasiv5xs8m7nsimlyd/_STZ5738.jpg?rlkey=k0385oerj32uxr034gb6mt3xu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b77cd6365775e26b5623a508b32b6bdf5a0adce09c5c1f8e821a4bb0c2d9c01a.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5744",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/v7y2znuo33tge1akaz7fc/_STZ5744.jpg?rlkey=4di7567wv0b8l6c052yqc89q0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ee78d6ed1009db5f8e62465edf37a8164a0d28370ead3984a400f66d626eef44.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5747",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kdz55a0v2tanxf8dulrif/_STZ5747.jpg?rlkey=b97csmfxy5yzt4d5mrsi2jxwh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/11e113512a5f5b74895c1af2ae5cde177fff1adc8e05683ccfd66eb8383b7095.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5757",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ge6k4q1y3oxsa6m5tpm82/_STZ5757.jpg?rlkey=r4pk7to7ltk4m6g5ft6d5tu4j&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c4d7a11ff9ca65330f9f9c7cbeef4655c641bbe05a0eef7ef478291bed14235d.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5758",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/in8ozjkhkakwckwwiaeaz/_STZ5758.jpg?rlkey=f6alub4q3wki97ugxgyaymzpi&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cb3368ddb6bc3825232a66a2bb3cb869161a3e94df34c3d4871aa446d0ff749b.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5760",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/rr96e1vj24ruav4ylfm5t/_STZ5760.jpg?rlkey=yibfw88qqm82q4f7rjdfnahsw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/49c3653d9abc9ceb2cfa7f8c94c447a635b0b553ee0c1ee1797087a0a0ff9ca3.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5771",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3ekal5cp0dz7amkv033ub/_STZ5771.jpg?rlkey=j7v8blyecokuy2aj93jknw91q&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b03e19f5474573f5ef6796a15e7c22318e713b6ce6a261d8f444239b9b907188.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5784",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0scw4pw3vstso9iiq3jek/_STZ5784.jpg?rlkey=yiyyzi2olekaod7y5u75uzge7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4da260d227a7a2ca8f05e3385eb18b1f8c93b35479a11609b50c4bf76ce37606.jpg",
-          "file": null
-        }
-      ],
-      "Silver / Product Renders": [
-        {
-          "name": "stundenglass_silver_render_web_lay-flat_with-cleaning-kit",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/hm2nczco6xn71lhkue75x/stundenglass_silver_render_web_lay-flat_with-cleaning-kit.png?rlkey=dvt39wkvfqm7zxfx1nk7y749h&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1fb6082e232023df881905873359bd2bbc1f46645ed1226d242faf159e725a6c.jpg",
-          "file": null
-        }
-      ],
-      "Silver / Product Renders / Packaging": [
-        {
-          "name": "polished-silver_stundenglass_packaging-render_serial-number-sticker_web--BACK",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4bubd7zp99jecbgv878td/polished-silver_stundenglass_packaging-render_serial-number-sticker_web-BACK.jpg?rlkey=615t7y5ot8lis0f3yzwlprtq5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/33d26cd0cc008620099d60677abd722550207e90a520b26db28a13e062767a2f.jpg",
-          "file": null
-        },
-        {
-          "name": "polished-silver_stundenglass_packaging-render_serial-number-sticker_web--FRONT",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/a93ld1dnmjvu63z3b2uir/polished-silver_stundenglass_packaging-render_serial-number-sticker_web-FRONT.jpg?rlkey=h8f9unoign2hacjpdx8uessvd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/df472d4e6e5320c4574a7c773ece02667a00355faba7fbee2c4fdb5d22aa6466.jpg",
-          "file": null
-        }
-      ],
-      "Silver / Product Renders / 1200x1200": [
+      "Silver / Product Photos": [
         {
           "name": "Kompact_TwoGlobes",
           "type": "image",
@@ -8803,2437 +6309,133 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
-      "Silver / Product Renders / 600x600": [
+      "Silver / Lifestyle Photos": [
         {
-          "name": "Silver Large Upstem",
+          "name": "_ALF2533",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/p2qnomdofi7ko1t4ae8pf/Silver-Large-Upstem.png?rlkey=e9fmn990jyvvy9zn0k2juiq0y&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7dd28a86a77f68bfa971c5cad88ab2b539005c846b6fc82d83d3311a74003e98.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/wiadu5yorho35x9a18bg2/_ALF2533.jpg?rlkey=9f5yh3pe8fdso6jh30x7rl8tv&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/5fc7d9ec7659b46669d6ac0d830ef4f8ff4d86d5525bd921a33d06136dc0d3e8.jpg",
           "file": null
         },
         {
-          "name": "Silver Small Upstem",
+          "name": "_ALF2562",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/9lyspwwit3kjifz1k6p25/Silver-Small-Upstem.png?rlkey=qbmmivzy8iu2tvwhudjemmytz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1b9f69a4d82b12c4336b0cf1f83bd848e2c23ae6a824c31e396a7aba58090430.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/g7fw6pp0ej1mygrf7e6fj/_ALF2562.jpg?rlkey=1z9ncoyjmdqyjj83n8z15ca44&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/1fb312f5bc1afa5f2e935fc8fff536a9e0c93bd8b38701b4b4b2cdd654da5f83.jpg",
           "file": null
         },
         {
-          "name": "web_CleaningKit_All_Transparent",
+          "name": "_ALF2582",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/9cnq4rv6gc9gnn1derxix/web_CleaningKit_All_Transparent.png?rlkey=e8u5rg6ajqyengw10qlxou34m&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0b954cef5579b1da347bafebcee29918024bc7a34c7c7ece9d5ea6448c3aee88.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/g1hr5ird8p5fa0yxtpz0r/_ALF2582.jpg?rlkey=ojopzb3cj53c02pjdaihb233g&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/4f3a35056d12d90e28f4496b151469ac3f01cb9cf3cd261c1758d03baf7f0d49.jpg",
           "file": null
         },
         {
-          "name": "web_Glass_Liner_Shadowed",
+          "name": "_ALF2678",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/5k8pop1ls82cbbxr7tkfu/web_Glass_Liner_Shadowed.png?rlkey=fguul11sjodib7ze8cs8t3a70&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/93c997d58c8b28a6a73df22d64da3dc46c9b6ce8dd3de9edd9af4ccf18c45b16.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/boa47yker05gj5wkzpeov/_ALF2678.jpg?rlkey=5ktvlugq693l7lzgct7vwbhk2&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/238aafc01ccde7e2c823b34e6556f2dfed6122e88a6394ae5969c68e84717066.jpg",
           "file": null
         },
         {
-          "name": "web_Mouthpiece_Replacement_Silver",
+          "name": "_ALF2683",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/lbev1mltsjqbnv6xo0lol/web_Mouthpiece_Replacement_Silver.png?rlkey=tnh26h7ku0bnaxztl2ycs5rz6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7fa4b58cd8df7d13316ac4113e320618c7c7a000f26eef193b55207a00764b04.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/5qah8jrl9dph5drl711ei/_ALF2683.jpg?rlkey=6z2t9g76g2bupcajpy63xaxdv&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/125fce2a014ffef20011fe7dccdcdf1c716be4dfb92c3ea1f87df957f3fe559c.jpg",
           "file": null
         },
         {
-          "name": "web_Silver_Front_Unit_Shadowed",
+          "name": "_ALF2741",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/57lb5ws76a248i266i149/web_Silver_Front_Unit_Shadowed.png?rlkey=21nck6z8u7tor9x7bgej6c1py&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ae236e9d572e439ef443fc1d8594e1f7620b6a4ef1bf8ec07cd3759ec128838e.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/3e26dxnvppc502xch1bee/_ALF2741.jpg?rlkey=fsag7j9ecai0vskrdr1jnfui1&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/1627a6eacb087307284724d2f2ff5930c0cdf5d5d75775cdf9d79ba7dc8159ce.jpg",
           "file": null
         },
         {
-          "name": "web_Silver_Hookah_Gear",
+          "name": "_STZ5626",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/kdf5lmun4v7pyfqsj8h7b/web_Silver_Hookah_Gear.png?rlkey=wfr59hq4a8joznw1cfdlsj9av&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/faf3284c7b3dab558793e456bb1e91245c59b89fd9e82066bc741b4249db6d71.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/zdrzy08hbo55qtqrbrxho/_STZ5626.jpg?rlkey=4j6ogkmnn3iww6034uyv0pr4w&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/8a6e9ae6adb95dff681a04a3276d930b9d82287b08e291d3d901ef1081132ee8.jpg",
           "file": null
         },
         {
-          "name": "web_Silver_HoseAccessories",
+          "name": "_STZ5675",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/5y5n4qb9byzawso4db4u6/web_Silver_HoseAccessories.png?rlkey=rh2q41l5kuu1fwuqwb41es386&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5d70d0417e90d3b772342de6098da4973b5efcb268e7167227e2d0e3540e19d6.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ap49cbcp1jqmxmzq3rf4n/_STZ5675.jpg?rlkey=sq9jjdz9gd0lendi8um7o653x&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/efb76ee28b54535b700e637d720daba2a3b200e6ef6e6d1959a73edb8f7873c8.jpg",
           "file": null
         },
         {
-          "name": "web_Silver_LayFlat_Render",
+          "name": "_STZ5676",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/f55r8hxxkhlab2vigjbpc/web_Silver_LayFlat_Render.png?rlkey=y1isser3vpdnzv1yhevp1t5g8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/aa65d87d9f3117b8f96b65a3b3af23b536c0cb03c46aa3120a00607d6fd4b978.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/u9m11drxb0myoht2g2d4w/_STZ5676.jpg?rlkey=n4evhtg5yvzqvywx5rg5aev3t&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/18a451cba4844d2c62b35e992603df95134aa610f9818a122e1fe49229d63945.jpg",
           "file": null
         },
         {
-          "name": "web_Silver_LayFlat_Render_BlackBG",
+          "name": "_STZ5678",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/py7mq08v028vuy6yyvsu3/web_Silver_LayFlat_Render_BlackBG.png?rlkey=3ywh5bcpvt8pzpzwqmfpa2l28&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cd610e291f8e291bcf04c7d45913a46a67c62c8d7d294c05e93a6fe13f12e306.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Silver_Upstems_Large",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/cs0tp37lll4w9oac6m8h0/web_Silver_Upstems_Large.png?rlkey=r8o1nkgcuj6t8wqij84yc8k28&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9143b09ef4a24a7552df4c6f1c4b3f916a753a6dc6e16ebb16d6e66545cde320.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Silver_Upstems_Small",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/gye488yw76y8hnbgf7ne1/web_Silver_Upstems_Small.png?rlkey=z7yk3pqszpaw8ifa44smgodiv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3b0501987eeb0e7b4175647e1078cf15929798578e69fe2effb8b044057eacde.jpg",
-          "file": null
-        },
-        {
-          "name": "web_silver_wallmount",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/niw695hj7ye6ii51ak6sg/web_silver_wallmount.png?rlkey=wa98d709hb6ckfiejkhrbubpn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/bb5e6a320c6d0a9fdcd03b55086a92c0d8d6d982f4cbf0943d5c3b1bedd7add1.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Stundenglass_Silver_FrontFacing",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/kzsmvcgf3fs4hvkxqy4u6/web_Stundenglass_Silver_FrontFacing.png?rlkey=vwju75h5505qax88txuubx28h&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/150b1621cf679b3f689b8da429034e15b8dca518e4a2e569fe028b97f301f319.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Wand_NoGlass_Silver",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/vwrfeaexg6ylmx8jctu9h/web_Wand_NoGlass_Silver.png?rlkey=59zesqqqvi0le24o6p107ke6b&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a5e2049fd5671629820b689cd579481936f870b2ebd6b522376427c3a15e61fa.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/wxiqqbm76gpagwed21fbk/_STZ5678.jpg?rlkey=5z4hluxdwge8li73tis100mqh&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7f858d3ac6b04b67271de58bdc0a4d2b5bc240e728bd15f9e78774a8b398a074.jpg",
           "file": null
         }
       ],
-      "Silver / Product Renders / Beauty Renders": [
+      "Silver / Social Videos": [
         {
-          "name": "Silver_Beauty_BlackBG_NoShadow",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/9nwc77pcqafwzrhqatxlr/Silver_Beauty_BlackBG_NoShadow.png?rlkey=lrwxlnbqwyxgdm96u2tpibdot&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/860ab75979cdcb19148f6fdbd4533ae657ee2b4609408e7cdd5b600721a1281f.jpg",
+          "name": "Reels_Silver Hookah Encino",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/5mb3k45yhis993r0mjjfw/Reels_Silver-Hookah-Encino.mp4?rlkey=b3qyv2wtniwdg8sm8mwpg1uqz&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/6a0c05f6a52247b6833d1484773564b0e7498d5a628aea36ed483fd3f0a68f39.jpg",
           "file": null
         },
         {
-          "name": "Silver_Beauty_BlackBG_Reflections",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/pcwz5oqtn1g0e7hsho6nr/Silver_Beauty_BlackBG_Reflections.png?rlkey=6mmy76979hwkrjxkiypal2lg8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/079b9f73e9cbd0098a72412025c91f7a1a85db094a92440465d41984085b4b70.jpg",
+          "name": "Silver Pink Globes Hyer",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/dp74ssvxd0bsmyjinq1k5/Silver-Pink-Globes-Hyer.mp4?rlkey=zofgi9y8kx047gs0trgd0h4vp&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/291f1e46d7f76cfc93372d9f4449cb9d70d9f787c5d2c4c0b0e552100f1885ab.jpg",
           "file": null
         },
         {
-          "name": "Silver_Beauty_WhiteBG_NoShadow",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/ki8rykz35soi65ny3qpwt/Silver_Beauty_WhiteBG_NoShadow.png?rlkey=zrxrpypzr9szmvz513d9w7ewv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/55e9e4535a0a9ceca9bed6579f8349c223d3ba5dfb490392bf004d4e34c130f6-lt2.jpg",
+          "name": "Silver SG Hyer",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/w306g7ppd8qd3wtdivr36/Silver-SG-Hyer.mp4?rlkey=xjzcs7oio4bjmwufyctyjiyr6&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/099e106d36d3a4aecf530f3e9a2c473bfea4833900da5199ee23f5706e32f772.jpg",
           "file": null
         },
         {
-          "name": "Silver_Beauty_WhiteBG_Reflections",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/1bi92sxkqs0vyo2kxzifs/Silver_Beauty_WhiteBG_Reflections.png?rlkey=cvpujcwkc0rx7oncyocfddwv4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/749431f0ddacd8e4b6fcafd943811718b845121ebf8be1b200d54fecef9d029e-lt2.jpg",
+          "name": "Silver_Oct_A",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/zr4vwcqyade30k82tje1c/Silver_Oct_A.mp4?rlkey=di88ry88zt7qzl66nk8u6xhf0&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/0ff131ee9aa40ab473b673cbbd8f1d5e971e0fd5977bf6c4fb691bb4d70f9909.jpg",
           "file": null
         }
       ],
-      "Taylor Gang / Social Videos / Documents": [
+      "Silver / TV Screen Videos": [
         {
-          "name": "Hustletrees TG SG",
+          "name": "Silver Hookah Encino",
           "type": "video",
           "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/dbs5fy9of4kk2dniu7wnd/Hustletrees-TG-SG.mp4?rlkey=gq7ig27p1j4kra0odcvbz1mhs&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9a11347583e4ab87ff929bf504d9df81a5f4630a4b8343ef83b4688f9891e3d7.jpg",
-          "file": null
-        },
-        {
-          "name": "Wiz CHD Camping",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/ojxvybkb1ks60mx40tpye/Wiz-CHD-Camping.mp4?rlkey=d5zcf0o8czlbqsot8ei2vl9dt&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ecb6f4ef029c1c3124e2da6f64570fb7e3461a6e54f85f02508bab444abf5c88.jpg",
-          "file": null
-        },
-        {
-          "name": "Wiz TG SG Headphones",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/jy0dprq3ga594pdfquy8z/Wiz-TG-SG-Headphones.mp4?rlkey=bpond3wdl85vyb617dscx902i&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6fd9af1ced33a79dd7935655bbaffe144cf227b60d794c8f366f14cafc6500fe.jpg",
-          "file": null
-        },
-        {
-          "name": "WizTGFlip",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/up8hhp304oucepisy4utn/WizTGFlip.mp4?rlkey=jdhs7ehfe1ykr6jj73jqokt67&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7826e650431895b10d51a46f17e8bc91f69b75ef87d5fba92c7676561ce998a3.jpg",
+          "url": "https://www.dropbox.com/scl/fi/hxfehrks9anfuig2unqqw/Silver-Hookah-Encino.mp4?rlkey=curo1s7ccrpiz0gf1tqtuyzeq&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/56b8d9900044317555af276068e6364b5fa80f5075758c74ae8b4e308870106a.jpg",
           "file": null
         }
       ],
-      "Taylor Gang / Social Videos / Hookah": [
-        {
-          "name": "Reels TG Hookah MichelleStatic",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/suo7ojv3v6mjpz2aqj0im/Reels-TG-Hookah-MichelleStatic.mp4?rlkey=whwzxyduis77qibwr9o8xj3iu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fb53e0ba25302cb34b7c4cf2b4405e95a6f94fa6b0122c76371e341b3457bfa3.jpg",
-          "file": null
-        },
-        {
-          "name": "Reels TG Hookah Solo",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/e3hgepvnt14490try5t55/Reels-TG-Hookah-Solo.mp4?rlkey=4lovxlp35t3h8m8l2doq2cktf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3edf0ab6ee05b9c402110dd1c8b12b5263b99c827a0a30f529f51be670b529a2.jpg",
-          "file": null
-        },
-        {
-          "name": "Reels_TG Hookah Dante",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/nj9leqbn0wr7jlhe2krtn/Reels_TG-Hookah-Dante.mp4?rlkey=z06v0dmi8xqg4llg1rjz96bhr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/17c22a7eeb1f3328900194fb1d564b1cb38186fea6465ca80244de2eeeb7a9d2.jpg",
-          "file": null
-        },
-        {
-          "name": "Reels_TG Hookah Teaser",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/z3dofeok4iyy728y7q9q3/Reels_TG-Hookah-Teaser.mp4?rlkey=9gcla9kf46lx3vax86h36bjtp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/15d2f8b118fdc3a32d0522e6ee7b10a2569dd1bc779fd08acc95b57a537158c4.jpg",
-          "file": null
-        },
-        {
-          "name": "TG Hookah Dante",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/iw188c20yqw4jd7vxlac7/TG-Hookah-Dante.mp4?rlkey=f89l12rd4op2446zm4ows8rx8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8ab922d9c575e2a2717d9308b8ec477c48e29ac4dae23273de86cd5505ccf65e.jpg",
-          "file": null
-        },
-        {
-          "name": "TG Hookah Michelle",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/oow1yl6s5ox92wf1fbp9n/TG-Hookah-Michelle.mp4?rlkey=v1eucslqzf3g02hc14s6zejlu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/41ac095e859d9ac9b6b9bdbab44a3179d288bdbf6b9662181715fce9b2ad6e0b.jpg",
-          "file": null
-        },
-        {
-          "name": "TG_Oct_A",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/skl585mdpu7o83k9797c4/TG_Oct_A.mp4?rlkey=p5u5axsl67tbjf9ip4fdkkhmf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f860062bf4db20854a11481109113a3ab07629d008d349efa972005ff8c9e629.jpg",
-          "file": null
-        },
-        {
-          "name": "TG_Oct_B",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/lheucyn8io3irvh54xh69/TG_Oct_B.mp4?rlkey=r4hf381st9hlufop08y4lb10h&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5c0e36447f46ffb0208499d709da2fcebff0c201dbe1ec8bebccf61729939c73.jpg",
-          "file": null
-        }
-      ],
-      "Taylor Gang / Social Videos / Hyer": [
-        {
-          "name": "Bearded Larry TG SG Hyer March",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/i03kae0xfbz41gkwp99rv/Bearded-Larry-TG-SG-Hyer-March.mp4?rlkey=cycncu7c9hj6sdlul0x5wwuur&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4b5b6914a85a8a2a757c08a9f2120d261bcdf9ba6494c0c63a697ef77e0fc47d.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry TG SG Holo Vegas",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/zj0lm6yx413fme1fcmfuy/Larry-TG-SG-Holo-Vegas.mp4?rlkey=w9c8gctq0nvjuckztz5n5x023&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/49f7e383b63b8c0699371b2ef3308c1e346b46bd98a769c9838cd5bd11dad810.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry Venice TG SG Hyer",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/vhrlxdhsg41iku1af4ms8/Larry-Venice-TG-SG-Hyer.mp4?rlkey=lecaxwptfkj5xve0nj713c9io&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4761877a1b1ca7f77da6022624e7cd99533f4181b37afa4eb868ce6f56239eae.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry_Strains and Sounds_TG SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/5n2qcmcfzsbfu8hrn28yy/Larry_Strains-and-Sounds_TG-SG.mp4?rlkey=fy817kdmmicmbs5dti3kpclap&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5a6a10190b2d2763d21bb4df03cd9e3ad1aa802e6ebbb0b6221b49136fcd7cdd.jpg",
-          "file": null
-        },
-        {
-          "name": "TG Hyer Flip",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/pmmhsgqlie9xrur3ynvhe/TG-Hyer-Flip.mp4?rlkey=bymx9l3fv68jh7aacjxc2qgmw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3e6952c5652a82674df7f721ea9cfdb234cfba769a3b886c3955052736c20f0c.jpg",
-          "file": null
-        },
-        {
-          "name": "TG Hyer GIF",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/5dnyt1afomozapsce83qz/TG-Hyer-GIF.mp4?rlkey=pgslxsvff55m75mjxsbx6iu8s&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f92db78e810caf4dc70ac68b22075e8102dac2eb503f796e35d3d9ef286ff80f.jpg",
-          "file": null
-        },
-        {
-          "name": "Wiz n Friends_Reels",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/dz8292du4sn90ng8plkjy/Wiz-n-Friends_Reels.mp4?rlkey=8cqpmhl4qsrx1c8u38g5d52ee&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b3d97fb93281f25deb6cafa91bfb9a64243de8c1885467f475747bba62bae62d.jpg",
-          "file": null
-        },
-        {
-          "name": "Wiz Twitch SG Flips",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/1dawph0pwe3held9egqel/Wiz-Twitch-SG-Flips.mp4?rlkey=zf60ns6eqrjivftzzu2maxgh9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ddd75e04a0f82931ea17f9a033ff80dac866d914d2f5ea029c969d521e0fa2f3.jpg",
-          "file": null
-        },
-        {
-          "name": "WizHyerReels",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/svjbpd7zqax0pwmzpcoax/WizHyerReels.mp4?rlkey=i05ifh5qdu59prgs77lio70cc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6e8a4e6bb247664efb789467114aef5cec224fe6b33853ec6638e3d02faf4dfe.jpg",
-          "file": null
-        }
-      ],
-      "Taylor Gang / Social Videos / Hyer / UGC": [
-        {
-          "name": "LarryTG SG 360_Florida",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/jp58oraja7pfypqg96efr/LarryTG-SG-360_Florida.mp4?rlkey=y0hzo8xfecw7fx2640eqhzntn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9fa128183d45af6d2f023f6e1232181455164cdeeb593d25dd78761e2ff30ff7.jpg",
-          "file": null
-        }
-      ],
-      "Taylor Gang / Social Videos / Mixology": [
-        {
-          "name": "Reels_TG Mixology Dante",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/7zl7vsuiv9vx1h2bi8bve/Reels_TG-Mixology-Dante.mp4?rlkey=lfjgq86hbn1ftlfjuhyto95ny&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f082219cb53e7a497624a9ed9b6df36e51c78aeeb7da035c5f98734c033c4076.jpg",
-          "file": null
-        },
-        {
-          "name": "Reels_TG Mixology Michelle",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/t9a34yp9c6tqpfk13ra2x/Reels_TG-Mixology-Michelle.mp4?rlkey=g1ubcvhyk3i8cwmsg1o93b5vq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d50bcb22bc5a8c7a9b29e7d80daae174aaf3e50ebef70476c6fd288cf1fb0964.jpg",
-          "file": null
-        },
-        {
-          "name": "TG Mixology Dante",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/twupe9tawaqskpsspy9na/TG-Mixology-Dante.mp4?rlkey=ghbqvgv2ja46b4rb606a4r7eu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/433c8866fd3fc08c0484ffcd1a5ff4517ee2eb858ece7d7af38c44cbc554dbe8.jpg",
-          "file": null
-        },
-        {
-          "name": "TG Mixology Michelle",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/j1uluam0ojm1b3l45m1y4/TG-Mixology-Michelle.mp4?rlkey=hxyydt38ixexys5292tswang5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1f901cdcd9cbbdee3e0943fa86400f8a5173c10e372721cb8f418afa1075755f.jpg",
-          "file": null
-        }
-      ],
-      "Taylor Gang / Photos / Documents / Colored Glass Liner": [
-        {
-          "name": "_ALF0039",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wuq0mee4r9jzc04iotf14/_ALF0039.jpg?rlkey=vxvwsxx4o9qpvamhojd7ipkc1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/485aa4bb7cf08b5f227107fcba58349c55bb610c8339842f7df41e90d9dae20a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0040",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ip888sb8zdh8tf7bbfqlr/_ALF0040.jpg?rlkey=ar6e2dlyeafa094r2aj1zdjek&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/51b65eda5bbe1175a65068c217f55cb6bab01ced102b1fa563fbd68f2fea3db3.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0041",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/n2atqqamd7vm6d0i6bbrq/_ALF0041.jpg?rlkey=5o437oc7zmnslec4u1sl1x0e1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c9418b1193cad01e34e46a65eb0f54305ed180e22ff52a81f9e4e404100f7ec8.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0042",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fuyvit766hbl336ulztu4/_ALF0042.jpg?rlkey=k1nkvjji99zztzxp8mhafvf80&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/060e898405273aa342fc12aea104e4e39d64fde7b2631760a5cf20530ebb803e.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0043",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tj34yie3i254yvltzvd99/_ALF0043.jpg?rlkey=csf5pfvkd45o7w0cn6dxyjhjp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b1a59274675d6adfd7e442647edb341e439d0b4315bc2c9722d18c461ec24cd5.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0044",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/p6zx6kevr07xed4ge1o6u/_ALF0044.jpg?rlkey=7s212ypz3kfg568krqeub2o26&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5ef3162474229c9301246f614ff3e171517bb0fd6bf51d258374486cfe7649a9.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0078",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1uvwwml4zbhag5b5epc8w/_GSH0078.jpg?rlkey=v7chkj55gdqna3cdomek4pbig&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/341d3c41f4bc11210bbcd0cc3069b506e0426822387cf6ca20819340df43301c.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0079",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1i7fzjft2jkf11est9wa1/_GSH0079.jpg?rlkey=y5f15cv0yr3gv89y41eeniqie&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/dd90f1857f3dbcb71a096a5d603cdb1e3f623282c501dcecf930d957d28b185b.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0082",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/v8dn85m7pcl90ezymzn6g/_GSH0082.jpg?rlkey=a70sil2zkqwbrss8seyyv2n3g&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/64765bd8040ad12ee95540784b41568cea4e0a9d96ddbae545e12fb84707af37.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0083",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8ghy46obdlipcdyfmqbn5/_GSH0083.jpg?rlkey=t8r4n25wmkln3uf80me97yfvn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6cb5c59a8ac316a7f6c18579d0b6a25a95d414661d3620feca316e252c242f34.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0102",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/07m7ovtyatbq12x9saf66/_GSH0102.jpg?rlkey=qgyxgbcr8o80giy0ayc1dp27o&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e5409e9e139a7d762f06b4d7648b72de18f6f28215204b36cdb2f04f4b351984.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0106",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/k1nlje52qa7tpg62oepfc/_GSH0106.jpg?rlkey=ef1esxnfnhqyo89czl28nsjly&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7d4c3b4703137f2b27f4ea60f36095b8cb886dea2eb65e876833d64b8c508fa9.jpg",
-          "file": null
-        }
-      ],
-      "Taylor Gang / Photos / Hookah / Encino": [
-        {
-          "name": "_ALF1972",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/31419zgbrcfj80pvsnr7m/_ALF1972.jpg?rlkey=pbpkktxgd2vvjpg8og9sde0ko&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7f1a3bad5f79821e2086a293bc6e2497014f0efa17db428cdaf8ae9445d744c5.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF1979",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/32xyitkcah76ragwr131x/_ALF1979.jpg?rlkey=6h2kbobiduxebs6uuwx6dtt94&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/983b925f5d80edb3f1fd0bca6d4f0dfd4d846b485f111709a0d2c0663e812846.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF1983",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/cknpscvkn2sa9dc4f7u5w/_ALF1983.jpg?rlkey=fgj4druaetn5r42d4ln87yyry&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6baef60cf1e95defee6c25a3e60d3087d2c0cd1f9af5a0aef7f592944832d0db.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF1989",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0pwbjvhzio0bstotkhrxb/_ALF1989.jpg?rlkey=ar7i3ab646v1i7290k11x7ozg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2842d9c3a882366d3fe57e1c887ce618a3aa21f24e3926ae58b3a86cb13e9f56.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2005",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yvjonn1unuq39lykyk1ql/_ALF2005.jpg?rlkey=wimsuackvpe63qy82ox1pl839&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/dc2b3cd02b638761840a07a0f5be54c686600a86133b9aaee044fd905bf74816.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2027",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tmddianu2au0gam1uxpga/_ALF2027.jpg?rlkey=7ujzdnm6iuz3krbbt2sjw9ii3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/329c9081e0d84aebe4169ca05ae19ebfc84a33e28111b048d817678caaa45349.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2035",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/423vqemphihs2cacvj0xe/_ALF2035.jpg?rlkey=5hn3oqgti63pxbyi3hn8t0cl9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/94d2a582a17593eb439192db6b95e5af0ce8b4ad6991c6e29105110c9cd4a59a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2040",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4muylgucslgq2cgc0706h/_ALF2040.jpg?rlkey=vhavj0atu56mz63sagxudq6i5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/02537f4921216abda02074d64c4f55dfec1343ecbd5656f08ad7e94dca4a26fe.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2047",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/oatmw22t1r3l3vjn0f1w7/_ALF2047.jpg?rlkey=4o6kbn8rzcz3l31oc9cw3xtlt&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/14c22d271c153420af4ca1e984a27bd83cd6782da9ed48a01c9ca845225b5841.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2061",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8xqekd6b5wsn5bb3ixmvk/_ALF2061.jpg?rlkey=90oi0nyvo0ktpuut4zmdgkha2&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/96dcbd4f74cd39e0f0d8ef4b393bba13b76357bac33ebac77de2da8f0ead5316.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2063",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9716j8ghwxhsexapk9rgz/_ALF2063.jpg?rlkey=b7btjnfs60usesooy7ckmmtp0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7e62043984b2b9df5fb072c3b200eaa9d768d7ad46bd94da41a48bd125e753f4.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2070",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qjnhec6o3qihjfptd7px2/_ALF2070.jpg?rlkey=1c0iy44uk1a1e17n8z32jkwws&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2f9c151af0884c14d50dec668396deedd8e17a3673f31701985b9d50ebebfcc5.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2076",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gm9oysimwz9bs3uvn93al/_ALF2076.jpg?rlkey=9x8vecuwkkjcigi6uz2v9p3qu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/dd675df563f0d8f223a7dc732c814d8d7c6bbca30e55d67108991290729b8bde.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2098",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/cwo70i6qs4glmgalcyavc/_ALF2098.jpg?rlkey=m19rpwml2snzcf6j0y6x8pt1f&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f8f7924448e2fb0e7fb4dbfdc3af4927eaff33d68371a466318d6c7a3b12d406.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2102",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/btfub72twwj5zlx9fjbqm/_ALF2102.jpg?rlkey=y2qjooqwpv816zzkbm9wnherz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3aa55a6e97584a4a706ed96d11742e4a31d675a4a4fd8ad1f6549157f76ee89a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2115",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5m0vqcegg3wwz6i0opti5/_ALF2115.jpg?rlkey=fmc03rgnzelp2hi9xwci5z2nq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/918fd378cde1d69140c9dc68f28d6afdee62f1c22b9eeb65238b906756c061f7.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2121",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4oj7g0tgmsx64d3ly80q0/_ALF2121.jpg?rlkey=cm4gxsmmrfcozooyn6r823d3j&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2aeb5a077e8c6fb9213c59a75f8ce8cdfe9b4fd97f8f9e259d2b406cd991102e.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2131",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9gxwywysqlr6nq3tki8xq/_ALF2131.jpg?rlkey=k99kd0w66uso7h3ng85apknsg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7da20d8bace04a57ca00857999ef7943baebed83666f8a3531db31e4e40ddbed.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2144",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/peikgnlsgb9p61jgf2fyi/_ALF2144.jpg?rlkey=t2cuvguogzyb0zlw5csvknfzf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/616c4e3d31ac596864db43d42dde570063d93def8e028417a379a5666cc54082.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF2150",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/we0dos5d9h7qmd9ruy5o3/_ALF2150.jpg?rlkey=0x5qc8q5zz1wk4r5i31gsbfq0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8ea398d4f25a5b7ee6b11e1df283bd26c84344b4e4271737493254fe9d1efbd3.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5027",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8icqj4gife49g5bl3012z/_STZ5027.jpg?rlkey=bl8x7266kdstg5vxcyufofrf3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1d92022c87f1932bf411f59868ba75b7d531c2836eb6185ec272b70f8bf594f0.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5040",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6rg48xfm9mxarwcn5ouu0/_STZ5040.jpg?rlkey=vc5jvnrhvsdqrrs9rfakre1qy&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d9c7b88750022c89eb922a1a023c47bcc101e892e2ae50da09264b2cae2afea1.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5041",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wbzrte39rbxv6kc8py5cm/_STZ5041.jpg?rlkey=89nyivrb3pq9ji250qpgduwla&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f4655b8a8eb29022d8c84c7c815d8b1d775199c3ada28a05b81f81f90df5f3e6.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5044",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/syku2i2l1h9t64wknlcr4/_STZ5044.jpg?rlkey=x5dxxtplgmd91ouobuun5n2d2&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/10ba6525aa47a5406ab7576caef57ec688bb3db2fae142e515fd3213863a22e1.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5048",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/swtyjzhbmoqxi23klkvtt/_STZ5048.jpg?rlkey=g2asbn0lrg53aa1ps6jrnqadx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/70f27d30f4ae8fa05c89bece139c38c327d516a56d18de5d80402cce4e021125.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5053",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nl573d1to4m20qullfmo6/_STZ5053.jpg?rlkey=5cnwrr8gxmvuptgjmouwipslg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/62c10347280f9069984cf82e63738bae6e0f52225ad8c0a3d1aa089a530f5f17.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020001",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yxtp79dkq5edqrzl9p9bu/JM020001.jpg?rlkey=6ztj6p3gsnsmafiw0wa9c63c1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7145fd4a5c22db3aaec994f9252cc9441f22a774bfcea7f626e2895bad025a02.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020007",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/357vcy8bstxv8a6v13zcx/JM020007.jpg?rlkey=mhm0dg6qwuglymzdax0ku0am8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b314588de18557fd78f07d6f8df31895e4858f5c0c4ec63a0f600582cbba4067.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020009",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/34zq5qw6yrwmeve3j331o/JM020009.jpg?rlkey=wzprrk0j10subl5ajmrgvarxb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/aedf1d852b117c2a028df8191708d628c699f522d5875613e00848903e165d0a.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020010",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8wkildmz7ft0ya99o1q9s/JM020010.jpg?rlkey=bpyltyakw4v48uzh5r2iidu9d&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/777698fe5a7581ffe0ecd88aaa7fdf53e3e5005e94d31008edf7466cca5447b1.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020013",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/z5pao09ln89rqyjdjshkh/JM020013.jpg?rlkey=rb875l9cg1dyb0b5g21jjbfyj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9dbe1eb9cb0862e734fea6a2d1081bd19651faebae224d15a06a6ee0f73877c0.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020017",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/rmw4s0awuvk65eu4oe9hg/JM020017.jpg?rlkey=ifqynz90km3gtexg2awxi0gc2&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/202d7a1d8f3d8897efa501f12dcde70cad2ab33e59657e0cda975fc6b68f5251.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020019",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/47v9tfk6fw8zwwtgjsdio/JM020019.jpg?rlkey=acvw1fpqe28dfmbcibvtwqj1m&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/da4261d18148113c8f2027069e0621656f0f01ddc7ed335b2c163470cf65fca3.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020021",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7h42g5xpyp4qh7b4jzz22/JM020021.jpg?rlkey=uy1epauods023p94nzrb9b8ul&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/204c8773724072e6f9c419417ef262f705bc651a61058b399e2442a2f9a506c4.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020022",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/92r13fbtw5d1b59rooiee/JM020022.jpg?rlkey=cngnhk994ffllrb8bjge7k8sq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0ab515f0cd4b110d8d0467b2332a6620a5bc8da16b0e227dba7e221a10da8e87.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020025",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6n3k1xdyy6lgqs1lxc052/JM020025.jpg?rlkey=1kl77u17h0f1yo51xr7ga8g4z&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1792470611cedcb5939ed962100cbe931df4320d31ea7c1f3e367f445ad703be.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020028",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9ya7t3twpy5ygxlxirdxq/JM020028.jpg?rlkey=mkp3gkf0sfw2lbbeym15s36m7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/59f0f5125bc3757abf619914e1a9f5a1e5692652465733f43446b9a67b369945.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020035",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/d39oi12ztt91efe3uqu44/JM020035.jpg?rlkey=u6xneh52uuvekm37xi9975d1z&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b709195c3817e72f1583e60e8f319a85e0af84c40814f034769add14caf17346.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020040",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/u6rwu4s1z15haw0jzn56p/JM020040.jpg?rlkey=7ed62xiqwx3gr8rvru210ho42&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ec395ce295fb305c9b57926c701cd3d5a3a871d03d05443ffa609b5bef34eb1a.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020043",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bwpeuxg44t53llyl1zbjo/JM020043.jpg?rlkey=nhweffvhpbqmvq4mybzwv7hgr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9e322749cd6062425b4f0082dead57e2bd8fe41b20f95bcf252ed558ba63da3f.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020044",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ulrm7fbausqhs1vx0xamv/JM020044.jpg?rlkey=6iucbnd8befiqieaf2wp6i4cx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/73c7c3769a0030a40425df2bac8fc3ed9bc246921d03cc21e529cd73f2feb90d.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020053",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ojvbf78altfv020bip1mx/JM020053.jpg?rlkey=rg6ve2xj5whbbs7lcja8itcti&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b82cfc75b1d8e282c1c41de397fcd269b38150d8fa213802fd24d74964efe561.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020065",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/oichjytqrjhmkups6gn18/JM020065.jpg?rlkey=rlvedm1ff6wjj32y1h51hnb2h&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9c321a9b885eea20a78e3c3640ca0c8feaeb644f4057deee17cb05ba470971b3.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020077",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/v7pt40ba11ap4wo4zdk2c/JM020077.jpg?rlkey=03iytc3oftqdsh1micul1sbjk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/337434692c30615aac5d62979e4de266076be4ac88e6d4e093a0d3c0d7f2c59c.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020085",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/haogdwr9fwn4adk41e8nl/JM020085.jpg?rlkey=2cytrh529mq536gqex933md7e&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/41ab5257e30292455a172912f4f1d8f3f2c0e695a2f634b7048f31557e1e359a.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020087",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/x7hi0annx8nat21c2v3l9/JM020087.jpg?rlkey=lbzfhdk8taqonm8i0e7kotjiq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8eb7091a5629c86ee142a3af3150eff5ee6d224d191b21f60f05b862db909c48.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020103",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gbupqklp4owwd8zgf9191/JM020103.jpg?rlkey=rea81iv5exwiqtdd2uvd2bjf5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/00b1490625fe87fe5b86e7e603ba7f45a9912e9c0d955db7cc94b1d9cad79060.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020105",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/33txpi2pmcgugpfayxszx/JM020105.jpg?rlkey=n4r5r036l752bua9r3deqi7rq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/53119446c70e2c5d41cb22c16b406e616eb0a4e1df1b7b224a5232fae486f96c.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020137",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kkhdh1c0lblp20ne8cm78/JM020137.jpg?rlkey=umxcs028yypep91cuw7hpr5ca&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4b507ff8fbe1cc7123fe83e3b6dc210822f5b8183afa7e3fb4024a8726d0d998.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020145",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/2h77g4d1ik76vt6ifcdhi/JM020145.jpg?rlkey=o9rz4uxhcnm7nbwuj9rnz3wzm&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/14c8180109161481251be667a4ebf1cc1e093d89f3330e0f398c30ba5317dcf3.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020148",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/o0hrdqchcilrclr03m8ab/JM020148.jpg?rlkey=j57d6tzfnaqxmbusg90gxodom&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3763a6a3b5bdaa6297cb35c2899b662b2e8fc3b838357d486a874f8627c8b5e1.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020155",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/earp5qw6fgey8ym9tkcvh/JM020155.jpg?rlkey=orkzoysuo2n8j8yakmaugags3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e658013e9666248df1e5e754b82b823c20080bd508156338a2c0336ce805dd54.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020160",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/2e8vmzn0xeu3z36y6q1qs/JM020160.jpg?rlkey=8ae472ra0sxurlayj49sh19x0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b0ac5ffff6ebb2e67dc36b13b07545e8c9907e6f70fb8d40f7f6b481f5c02e05.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020161",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0l7ju22frh2d0nrssrfl3/JM020161.jpg?rlkey=qkrpr42piew4zoo2ao4sna40v&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e341766daa797f6c3f6787ff935fe5002cc123c384da247a2dbc6a25f454eeac.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020169",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yl38x4srrzjqj7vbzdlah/JM020169.jpg?rlkey=zjq427xcmj0r4wq2wg1uzafwh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d2c8042cdd6b41f59e34fbe137e2d677edd8f8a2a54e51521470d22e46c122c1.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020197",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/12485qt2frjmbruqyeub0/JM020197.jpg?rlkey=4dfhbvzezkcnez7w13jod5gl1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4a8cf4b79360d0a4854f45075ef3ae25dca48f6dd158b3c43e993310569ceddd.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020203",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ulluslv8n2b48nvvjvx29/JM020203.jpg?rlkey=ig2eey1dadhn6scm3pyk4faxm&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cbc58adecc5238e62ef024ac11ff3f36605bf54f1a93480904d833a97c9eb810.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020205",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/764mgssx8z18vqjjq20x2/JM020205.jpg?rlkey=c96r9xyxjjqvs5kieh6c75al6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/90f18d309669cdedaa30d742822b885363f3924c7fdbd208afacc84bbbfab01e.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020223",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zilld5utpvnnvo0geb62s/JM020223.jpg?rlkey=rqvxca87dy9is75m3nva6xl1b&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/be3ab23a48dcd53d3dc468652570d54b49c06171821c3a6c93b1832f59b1fd79.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020227",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1zofsztqiof7jm2a6hqyi/JM020227.jpg?rlkey=zgba1kjmi3op927gi2t693oex&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/eab2b6eaa5b70109b7cf47e72e5b4fbe0b8377cfd41c74aa88e205ffc71e9394.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020231",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ipqk0lu2luj4ev2sfzicz/JM020231.jpg?rlkey=q6nug1ec885cmowc6j53dse5l&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5728a6e6041450d8deaddf6a2dd6278252f2cf7c7f4c4d46034ccccb190e0cfe.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020236",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6ann2wk4irnwx7dr8uw54/JM020236.jpg?rlkey=6ja4phtzg1sj5ytr3ski1nsui&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/63903ad2c8a6c6385d610577a50c3a5a6b88cf8fc655f45cfc74e71256858a80.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020241",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yr2kzom716s622496otet/JM020241.jpg?rlkey=fkqgi4lj8skylex119nbsd04n&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7999f17336889ab5cfc5b3f585c09decaca16cd435184bc7488f3d0a7da8c4d3.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020245",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8suw38zpho2auo36q3wch/JM020245.jpg?rlkey=8y0l9wnkovn8jr4u50p21j36k&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e9db2e6e86cbbe5303c038fac19f1849a79b253259f6481913f1c27bd23416d9.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020246",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/e19tryag3sw8ugwrua56m/JM020246.jpg?rlkey=74facnjxaxxp6sm5in516c2yn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a113aa9e180dc2633abd0afeb23a48331eba0b3034e497c2b78c940dfa33fc31.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020249",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kfu7cdhwqbjz7sp1rn4n4/JM020249.jpg?rlkey=240vww8et8igis8yoyyu93jhz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1aa8cced3b57f1cfc329e4e2dedd4f68b221c83d2e6ed9ed880f30f3971eb997.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020250",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kf06v7hht71e7bpqvtp7k/JM020250.jpg?rlkey=xv4gtcer6bch99ob80vq5rgtk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/34976937f6e20cdeb45cfe5625f298cbe3d7b0d2fa26c8354058b88d2e46c583.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020253",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/pdbduku7v00jf6tl9vjfm/JM020253.jpg?rlkey=zzmvog3t1pjq35bzwwzqfirvl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/92acb0d79e552d6c87ef4da1c4569a686afd51a5401683d38ebfc6d5be7a6531.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020256",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1pdi13wi7pnltp3g109rd/JM020256.jpg?rlkey=2v8j86qeo3pjb4v0q8286s6s6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/70342e7c6672a96752c51326b0b5637e856e7b2bbfa4d4da89ae6e5023a97425.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020259",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/mazbw1tt8pbsozsumeief/JM020259.jpg?rlkey=ev616y55ylybg6j7uha6b6yck&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/970bde2d6ec03c267e52c9064133553581c5d31a8b487ffb715ac7305e3caf25.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020260",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0npayamoqw6viu8d1dxyk/JM020260.jpg?rlkey=qpca9yh1twr6fc8loxphhk7iw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b7772d2a0a9a0b51ca6b83c06235329dc9e3a26666be523f7e40823686c09706.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020261",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wzi8pjjjqanunfbgwtzfe/JM020261.jpg?rlkey=3f1xtee78yiu9awu7za5cgixh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b9707669b8b20929c95170e9d44a94a08bafdbb9a8bbb2c4e6aed17ff59d81dc.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020265",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/v72ah63gnu228uly7m4ax/JM020265.jpg?rlkey=zwblksubaarza98co1y0c4g1f&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ae372fbd1bc9566083d5f40fb6be0ad6cb664cddaa0837378e686c26bfb3d521.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020271",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9001a9hbkfhspssrpvc4i/JM020271.jpg?rlkey=7u0g8gk2ll3zvjz6ere236i6y&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d17b9b5f47ac99bd78e7e6a891fb5df192184c6c4db99a96e573764c7b7eb10e.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020274",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/h4y451ktvf07tl082a3c7/JM020274.jpg?rlkey=wdbzbt6eh33fb0do19h56e9lq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3d29a8e9dd1a7eff469b6e23ce4839da252acd88c8dfef796f83e289fb88b3bc.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020277",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vcawav9mft8skomu8yk73/JM020277.jpg?rlkey=vv04lhei7hep9ir15l0694yr4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3d0b70bdcb389926894795b9e6b868d30b1bf2453b6b8c3dd321c5695dab9456.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020284",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/a7ey7xbjd2kj5en457kow/JM020284.jpg?rlkey=g8w66zvmhg2rdb34dzax4zg7u&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3abec7075d795d3df137a4301faef11546974d6c62a08b6cc6b523dcc42d48cb.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020296",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/i4i2e1eekcwz8i2q5avl4/JM020296.jpg?rlkey=efe09rlmfdos5extg3hl7v6ul&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/50e57c104d6212a1a5591734009638e99875fa6a6cdc6487fafbda7aa27cc7b1.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020298",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/pdtvxp8v9qm09oypnvqga/JM020298.jpg?rlkey=60zf9kophg1yh7cksk8ol02n5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1670df6599be964d067cdead4d51f4babfdd478e307a3590351ac34f7ee098fe.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020313",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vubploevwsslj2hoe2ynk/JM020313.jpg?rlkey=9w7tti3mnx56o7rzv591f0mpi&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c710afb639670227411ffcd8836b448cc2cb823531b6ef70de4208d63be95757.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020321",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/b3m2n1ysbdoet2d774qwh/JM020321.jpg?rlkey=6vehwbgxzduw83xi51gzoe8at&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b35db890ecc295b15c98da12db9e372bb8e85fb8845501e7f8c1a3030dcdb2af.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020326",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tnwjzbbvdol0y5m2kd4mq/JM020326.jpg?rlkey=zm5v7p7oxl7a0afefkh66qi7r&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/82e01c3b6461edf39359c0cef4e2bfcf24883c87782be8a91db3b292059b442c.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020330",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lkczcvfa5gkuigmr71u2o/JM020330.jpg?rlkey=1oj5dh6e6aab2uv3fwiiky1m8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4edae1b2a79580e648941ccecca48f5c86ea3372914b800c338cec48d7a5738e.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020331",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tt0jhuhmetsoy3fiq7u13/JM020331.jpg?rlkey=uog5nmqlnj432gquwk8i3f0hw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3e187946d6f20017db6cb0c649115d622625cee2bef7d617c3a63b717feae595.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020334",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/93xdodk9w42p1bnab3b8v/JM020334.jpg?rlkey=cdtp433z9szzy9x8h8vnuzda7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/41e0c694dca5791e133d2724665ff320114563b70b6bc5c86b97f31841a280ab.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020337",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nmhg809hhjy4ithspaar0/JM020337.jpg?rlkey=hohtepsoi7cgacx8tg48cb3za&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/88422f980d08cf0a0e7d0321730d38d48dde1b0c8729b6f4f5e74f96012b85f3.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020344",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gnp62wu1x4je6rz1v9gy4/JM020344.jpg?rlkey=5ip6qfyp2bc6dgl6iankqqbl1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d5eec38590a5a96471098fc5f3eb4c276c4141fe94be36c6ad98c3513f102a8d.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020349",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/k7cxfa24ne0u4gca2t16v/JM020349.jpg?rlkey=42a6ktgxmo18pa6zhhrnk6vp4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/22428146b565fdfe8bd3f8a24866f867b8eaeebc2a842314124262970e1d1bbc.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020355",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hw3vly45mnkiicd4visyt/JM020355.jpg?rlkey=snxp34184zqcjedaptg635ynp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/92f216f275d6f01a00ef2dda00e79b3a1e713d27e8a1c767b980041f7d954de3.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020358",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gc8wgx05822ur3vxwoacz/JM020358.jpg?rlkey=gsow6mcnbcfetx1durakfv8d0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4a7685f3614e2f2438082e679dfcec1b26f5c45722ef020c74c54babca2a6e4e.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020366",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/awcs75u2vh9e67o6n9fxs/JM020366.jpg?rlkey=d7qfzgytvmqbygec8bfnplqba&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/aca69b724d1312a2d7308897192b5dfb5e9bb5f4b9a8d4892c74a1dfd30f697f.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020368",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/dc5g8a40l928wjjd4x4xl/JM020368.jpg?rlkey=pvovro99t4grr32ldckcawu2d&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/57ab8c67ede98e9638ef9126b8d1b755d673ccea8c34f2eea25ca296c97bb801.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020371",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/a942y1vzitpd20v832ecy/JM020371.jpg?rlkey=thy35f54gioqd1ta8m3kxncnt&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cd15cc3a39076156bdc66779d2d07df9f3eb7b9c130f937e5ba4cb66af382db6.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020373",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wcjcgk6paoj34f1livse1/JM020373.jpg?rlkey=2icyiia6wxcjo1qphu31tjpho&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b974ff203fdbffd66e3439d2881ae803d8b4cfd416e0a8104f09595304b83f76.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020375",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/01zc2o70rim1svn2d35da/JM020375.jpg?rlkey=5wjbvecu37il2t3pdk6kesj80&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a702c72a2698156a07593ebb78f8f0f9cafcd6d8eea144148eedaf294fbd185a.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020376",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/uw81mkhpezkmwzpvuun2o/JM020376.jpg?rlkey=k6pa4iirutmpq4ccftyhchl05&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fcc98c24e65f9737586a2cbe12e10030144077cb7d05be23ae4704db7a58a0ce.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020377",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/41km3zmewfj2uek0wx4p8/JM020377.jpg?rlkey=g1dn1h9nexl5eq992t30myh1d&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a7a14271ee192c7418cda074f23f78ac93412bf7a0726809ca65d59660caac5d.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020379",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/c49nnngwgcixy23i1ln2w/JM020379.jpg?rlkey=xhzcbzrffb1tw440ehvo52ge8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/696f3bcaeab8cbf02370ff911c417f1d6a97df6e6091b8ce2c0631395b51329c.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020380",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8a66r0s92mncoa3a7f45a/JM020380.jpg?rlkey=royquiswm2uw26o451pcepkjo&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/109917ce816d05aa94d523d124e873d88d7b0624fa12c78b89712a24a71868c3.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020381",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qrlcb9qdosqxi5uury7lt/JM020381.jpg?rlkey=z8wpb4bgxbl1b5nxbzj8row47&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/329617cf9252e0a05514a11e7cb8bf943038793015f319bf19057faa837961d2.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020387",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qfrt46j6kukyw6yq80qfu/JM020387.jpg?rlkey=p7wws7xl2drgr3783jzzdmvbg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6c57823252d45aee23f7f796abe4b1b19620253054c104aa377ef0f5ee1d167c.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020391",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bhdylbzvxwespxdb0k47b/JM020391.jpg?rlkey=kwbrlq6ourikc9jb76hta8t4g&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3d130fccaa10473631bc28b46eac1c77508bb62f88e18dbf68fc867672472dee.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020392",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9shi5ijhk0u8c2vo3tm23/JM020392.jpg?rlkey=3euztu30z1ffrlrybmtf298qs&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/eb6b3a134a2ea71ec73bab9ab0d44361b3b6aae8faca928d74e91bb55f8dbc80.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020394",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xq9c75q6qx52u7vjd3vko/JM020394.jpg?rlkey=uhzzb5xnb98vsv5e43h3yrodm&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4079229e98fed979685b29834969fb4ede74a7e8754c37d953921ad9e830fc1f.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020400",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7iai1mdwhs2sqilxiyrxd/JM020400.jpg?rlkey=n9kfcuajvqr3xrscqtyad1eim&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e81c9b2c4d00195d48ec6174170d3f1670d40b6b9fbe431e4d85742b4d0990bf.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020402",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/q5pvj051rvp6ejzphvwvg/JM020402.jpg?rlkey=jghfbl36za37efsk6g980fmqq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ba21ef3a0a4e58fe9001bffa29207809bc503a8a35dc19f581b0fab426ffa82e.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020404",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fsbnrlt8q59k1hjymp1zf/JM020404.jpg?rlkey=dtfmz17pex2w1fx9bcpn0raak&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3a3758435d3fe755d3f0e2abfd7f8714efe8373053c33c4e5057186523c76b1e.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020405",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/y0e6lgakwo3gud1gmv63y/JM020405.jpg?rlkey=2wf4c8i95cl48otf6j3puqcwc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/01eca6ee5f95d6457265f902ff6945f929549fdf14f8f66db20f3731a8a0f272.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020423",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/g2ni8gqivo4nmwtlvy911/JM020423.jpg?rlkey=6s48ban1vyupoadjqafszjcwv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4d740e8c1999004cc32552a41e8d5c2e52a71a63e9c80f253d68dd5cecef987f.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020425",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4in1qgeuyjzanr40jiqvd/JM020425.jpg?rlkey=isgs7e8qmbjbdon9u2n5yk25r&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/94e0567d2f380e967c8c0bc32aaaec22a9b137c6ac17a69a7446069ae9b103ab.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020426",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4leu7r8lsdqqwm9j1evom/JM020426.jpg?rlkey=62mh2uekhm670d2dyliy50e2o&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7ece2279daa3ce873069f9e086c9988d4bca8acc1551c83a971d14adcd5f71cf.jpg",
-          "file": null
-        }
-      ],
-      "Taylor Gang / Photos / Hookah / Oct 2022": [
-        {
-          "name": "_GSH7924",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/scdsu730qefh3s23qzlae/_GSH7924.jpg?rlkey=fy9pv3biixcrkmgtlvubv3tvh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/91017d98c4da239de5c8eed163c9acdcb021819e0467d93a8ac0ada087fc388d.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH7925",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lwshhrb1nni0aet3lnr06/_GSH7925.jpg?rlkey=1845m401ss9dejlkm4p4vug5x&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/54ca5b4090ea190aaa654b678e9914e41831c1a21a555574816bd67e9ca4eb4a.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH7957",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/b3sqpknvnf8l4ais3h0e9/_GSH7957.jpg?rlkey=0h5lsy6sgzrbje6lq9kt8n61a&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b5a0460698c969b408c814674277b4d41e0d8c3a8ec751a029892798f913fb38.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH7960",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hj6817e03ngurk5ugj84c/_GSH7960.jpg?rlkey=955c1fgi4p0ahiz32w75ofjcl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ec3ead54ba0fed179627f2662673a3a5c17b1b9346c93c8e1bc1704a8df78b1f.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH7985",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/33z0798fzty547dfnfbsg/_GSH7985.jpg?rlkey=kj6fl52t1u553rbfef0cmdkej&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/49ee268fedf41922d95d7978bcafe52d27697643853d5d46a2101db16af31944.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH7987",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/citoq2zkgn4iqalky3txj/_GSH7987.jpg?rlkey=uumpld8n9sz79ni2hcvobimpx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3ea071c68570305d26a224c15a948b18d542780ca2647d1037360da96469821a.jpg",
-          "file": null
-        }
-      ],
-      "Taylor Gang / Photos / Hookah / Signed by Wiz": [
-        {
-          "name": "_GSH7397",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1cbf0ntwzajtak867qwzp/_GSH7397.jpg?rlkey=6vao2saznwj0lfqmpyca45u6f&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c8391a7f8f477084a22a6f2b476f4c7109e92ef68c3140a5ad07a4edacc4d4be.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH7399",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/48ytgdzhrm0vwhj74byrq/_GSH7399.jpg?rlkey=rguz4aki89pi2adjw2lo11z0q&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b8d1250ff8cd4c20f466ba8104d95194101ea64558b8183fef92a56775a8522a.jpg",
-          "file": null
-        }
-      ],
-      "Taylor Gang / Photos / Hyer / Glen Feliz": [
-        {
-          "name": "_ALF3407",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/m77m3g9047au2gjyruaa1/_ALF3407.jpg?rlkey=r3nl51irpkiefv2jr0stwkgro&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1ad9c5d1638be7bbbf07fbb9692449ffae7d1026f3e91d94b28eea8e88ea8f71.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3419",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/m50wh8ysrf7gw8wmarfm3/_ALF3419.jpg?rlkey=84dk2uptg00dqoc36qk9jd2vc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e156ade8a1c9d1da8f40228588821458e8c06410acdd1b845ffc8a1d7c2d4aff.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3420",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vt5xchkckdmuu7zjn743o/_ALF3420.jpg?rlkey=4jzmso0vd10fixlrri836rkxf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5d36f920a46e9c709e054b3ebd6110b4386b33a70d1dfcc31fd2e359ada325c2.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3430",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/c1yom5fk8d0k8d5xnjfjz/_ALF3430.jpg?rlkey=wo9pi382zjvb1avlxkg0kqlri&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/70ba878bdd8c2a5f511d3db2450ca4815238f3d6382f22faa948731778d5c39e.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3434",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3mxttc63es1tm6kzyvyn7/_ALF3434.jpg?rlkey=7pindtr82dxzndny29mnxpjbv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3e20f5994a1446a36e2fb01faf32c85f2e2f45deaceee7886ecb8ab54e43ec8b.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3476",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nx5o2z7zgw3uf1sta1hh7/_ALF3476.jpg?rlkey=eypc8l7104dhb7ft3dlcd99kv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a9ca3134555f62cb0236f5fb4e9938bcdc8d8f6f8ffe1a4fc8ccf7c384441e27.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3489",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xp1z8kazbr61fok1g9zub/_ALF3489.jpg?rlkey=e5ta6wp20y2bh6bmyly5dyxyp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b7e4d5f0d537107e15f6fa3c859f004951f726cd950cff9439fdf9c03922f71f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3495",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/sj5sabyy4e2sge1jmjvkc/_ALF3495.jpg?rlkey=v9ro1asbkp2n3bevw857is8cs&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e96e34f8ba0eef148b203114816cda5771401bece6b80489e470c39cd81f45fc.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3496",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/odc8fh8v9vs1bb086j2hm/_ALF3496.jpg?rlkey=bgcto8fmteykdr0a04ytoxctb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/001fc06ea140e8f5cb4b358ec7a45d5ac3e7566373f1c772922ba94ca949ead5.jpg",
-          "file": null
-        }
-      ],
-      "Taylor Gang / Photos / Hyer / Wiz n Friends / Selects": [
-        {
-          "name": "_ALF4777",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6yk7d92gtlmoo3p7znq8e/_ALF4777.jpg?rlkey=zpou6k0mzrliz1472ffqxevze&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/271bfe8e198ec8970276c11db115c493b1648d674cdbbda484e593000ebb4018.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4794",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/z6kk3djmtaja04us04onp/_ALF4794.jpg?rlkey=cx811yahv531azdr0dksj0uia&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/03356792ce6ab57e0ab161e708b09804fbd295af99a69391d9f9d66bdd2d8ea5.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4798",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/c62jjnbxp10jgh0b8fz9h/_ALF4798.jpg?rlkey=oe0v4qziak9rgo6orvfrla51g&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d6bb07793c3d7546d9b687956af8e95b87085a54b0c5a2028fb525b6beb50347.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4801",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qn8zgaqvzrkrp55tu718p/_ALF4801.jpg?rlkey=ai81xlwhas40zjeowt69ybb8x&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c5f948b0c300670c87c4a0405f72605f8b5379190eec45576d4ca6ee8aa80597.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4803",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6wulm26onxji9chre567m/_ALF4803.jpg?rlkey=7h516kafxl9vdox25gp3953d6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e8fec4ede5cd376bd117924d8a968c02cd9a7c93ff108fa6bba3e97e3c363838.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4852",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kv26752wdcbhit9ypx1c5/_ALF4852.jpg?rlkey=l8vweyjls5ydqglsi3h5kw8jg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/48a964548f0652b26bf29c60841f584331cb5d35016dc2e9a275ab7069c324c8.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4865",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bptenenhm4985qycxyj0y/_ALF4865.jpg?rlkey=dcbtw4unb9g7y797zk5zakauc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cca7aa47c28dd6e5ee4ee51d2f69b51414afbc683e8122c0c87302bcdcb73897.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4868",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4us4tql1uzbtq7z955sh8/_ALF4868.jpg?rlkey=cnu23sfhzui9vnpyxs2cq44wh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b79c3cef3b17bf307ba9ee4f7fccba9a63345612ffd54fe1cf3eef2bf5253bbe.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4871",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bm6qj6kv332bp60kxetth/_ALF4871.jpg?rlkey=gmitxq1a124n8l5n1anvprluk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2761b64fd0f5962a290bd316b97edb776dd2aeef607cd775529d9140c78c7b92.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4872",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zp5ts7i13o7tva7uay6v1/_ALF4872.jpg?rlkey=gvja2pyudk1dzm8sb9o912u34&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4082724807e30fda11852a6c8e42ef3880b59efa889b246cd808c922e4e2cfc7.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4875",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/n6pjkywaq89x7nwkudkfl/_ALF4875.jpg?rlkey=ununln9e5mng28bjawk202b1z&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9ac97215d2acac9b0f7de51af1744ca904a62a7ae2439dfa98a738e4f2f1e33d.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4878",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qjuqfhfqfi4rhv53fl1n7/_ALF4878.jpg?rlkey=mw46e6vyfbze76z7u8glu6r7o&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4be07493b3443d666a127ba8970142be06e60d46bce3233ea0f28c5974b7120d.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4892",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/58pcn0kh7yhhmcsd29qei/_ALF4892.jpg?rlkey=9l9lbcdenno0z52vt4qd40mej&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/221b59bd779ba10f4b257753dae8b12e6e39ba51f7afd7c3eb31846049c5ef9d.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4893",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/el1rkjic5gv8z951e5kjc/_ALF4893.jpg?rlkey=hxloi3wl4czekwfuhwq3uofmt&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1f0c87323f9c1a6d1e8a96fdbd740480f9bac82bbbe4caf04492af83efd5fb17.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4895",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6b1qhi2ubl44zqssr1ofq/_ALF4895.jpg?rlkey=21xpv1oe05iiqu9h2w73qu7ey&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a3371b88958aa2386885970d7836e0607ecd6108b491539be092d49a6b7461a1.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4896",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fsxiltugkvf1uhnzbg3f2/_ALF4896.jpg?rlkey=n0z692iwe4r35ta0cvaoimna3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2389bf268089b2a14b551001e45f87191484ed6dcdd2209eeb9d2d2f26725a7c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4901",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8i77j5bon0ggipnh892x4/_ALF4901.jpg?rlkey=nxl1l75c5ojepbwv6j8ygp46w&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1dabec6f5665c86459c26e8f10ca3882ff5df1cc3e890689b52bd5808a0415a4.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4903",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xpkxzrwkicmxmaodcfv8l/_ALF4903.jpg?rlkey=9d2391spzuwn888n6ldi26ibf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4b8420408b07def3306832769e7de472424724ff5bd5d1db409cc5281d9f9502.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4904",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7lwjq5uvvmkgxqf0y5i52/_ALF4904.jpg?rlkey=1nfe8101hbthrxk7gfos2zinv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a02016fff387d6aa44006f43161f72b0cf7b926fb37669714b7dfdb9c6512066.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4908",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/povruelypralz4swzrmt8/_ALF4908.jpg?rlkey=nh786kfwunxha2h3r5tqwegnz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/60b3d8e93c8d9b3d180c325574b71cadc6e9857675cb14bc7ec43fc6945963f5.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4911",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ww4smd5f90e3dyjztks2f/_ALF4911.jpg?rlkey=3t4ty9x188o8hltn38m4o7b8b&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9b97950bbbbe66b1fd247a62894c1fb6caf9ee1e51a53318949969a4b5725ebe.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4912",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3pbq8i98tqjfrcj3tosqz/_ALF4912.jpg?rlkey=6zf0pf6x4q3s3et2g3xec3oo6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/767847cb2cb12689465895b120d7058fd61a3b1dd4fdf2f9c7de212d2538d567.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4923",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nevl8zru06amcw741x4aq/_ALF4923.jpg?rlkey=4y4wycwa6yztd844zhk260szl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0f20f5388f9834aca5c93a6970b51a40cd6cbb4f8aef484e4f99532da81ea340.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF4978",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7mdj71o1lnj489b5bsv4p/_ALF4978.jpg?rlkey=su7jvucheadqsqvf7qqoawncy&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0522c60545f9c2bd8f83e00794b933d2ed965af62c8442800c8d00d9a93a065b.jpg",
-          "file": null
-        }
-      ],
-      "Taylor Gang / Photos / Hyer / Wiz n Friends / TG Set": [
-        {
-          "name": "DSC00658",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tury89jfvkz3dk62gnozh/DSC00658.jpg?rlkey=o0w0kgt0vr73ltiyx5r0moimi&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/746c8974b951f363d08f4e440c228beba3459785d56b87758a287b57403227de.jpg",
-          "file": null
-        },
-        {
-          "name": "DSC00769",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/w4or3zw99za9xmrlrhmpk/DSC00769.jpg?rlkey=vzmciqlighehbmb4jz6tjrlbw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3ac389bb554c0e949752564d78dbf53fbe560d7450ae11dc87c8175261ee335d.jpg",
-          "file": null
-        },
-        {
-          "name": "Gameover_WizKhalifa_20230614_143316_0485",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/23vpczvqfngdjvvuj8qrs/Gameover_WizKhalifa_20230614_143316_0485.jpg?rlkey=4lz5b6ix0yf6rwvmnsegao3wn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5e69717443d8c91710e5fbd0bdb5adf5319615dbd3ed944e54acf34784d317d7.jpg",
-          "file": null
-        },
-        {
-          "name": "Gameover_WizKhalifa_20230614_150542_0615",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/l47anl6e7r7xoiomm3etf/Gameover_WizKhalifa_20230614_150542_0615.jpg?rlkey=h1bvur7hwfxau2wbvn6n7h4zr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/daaef31930ab34373034597b34b90999790157b9d7a492a371b554c8a187aa0a.jpg",
-          "file": null
-        },
-        {
-          "name": "kellyliu.space20230614-Knights-wizandfriends19273",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/d8tt2c640qz2mor711it2/kellyliu.space20230614-Knights-wizandfriends19273.jpg?rlkey=ifohrdwvdzgcyq4bcsucsay6r&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e554310ce4ac517fc42f1f770624f0e463594a45e57fcc7888148963f3ee86ff.jpg",
-          "file": null
-        }
-      ],
-      "Taylor Gang / Photos / Mixology / Encino": [
-        {
-          "name": "_GSH2964",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gxi2tudybev9yx9sfcjw9/_GSH2964.jpg?rlkey=oeg38nehqwrbh5f320yyi7h63&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0289ea96e289c48dfb7c798c6b4165ea32e4bc5232ed73add5eb5849f28bbee4.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH2987",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4pxqry2sn1gl0rjix25or/_GSH2987.jpg?rlkey=90jvzsvbq1fw9dn892vvjrhpp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/12457ac7ead7ba13da1900c433a5560470fb9345c5eeea7b177014dda44afe21.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH2988",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/trdpjf0yc7x6m4fgoqr9c/_GSH2988.jpg?rlkey=5uz1oful5sy83n9ub4zm8mpeb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fdbb8979c2807e5d241e30eb7e2bf94cc0e45e5060556dbd3beae516f4a83cbd.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH2989",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/2w4fcdxmc04y376zjn5wu/_GSH2989.jpg?rlkey=3v8rofna8qz9clb5cjxzogmdg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6b87dc5e0a00bcf65777777112728d69e0ca2f6973e8c25923b22c03d869f109.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH2990",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wmrxftzfq3pk4o69axie6/_GSH2990.jpg?rlkey=mhnvb97muuy6jxpqewcwndbbp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f72c7321ec29e377773b0ad3f0af551c1a63dd6ec73da17379089768f8bc7c7c.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3001",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/py1iolzy0u8zv0ykrmpoe/_GSH3001.jpg?rlkey=d6o0tu3aqr34yfh0zs5lf45s8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ccaf7c883ad2d2402cc694ce95c687ceea82c59bf8fafd7c23f6e5cf25061dad.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3018",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/cfxf4p15tovyjyu2mkr58/_GSH3018.jpg?rlkey=30bb7z5laeb1mwi4rqih5wgry&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/519d0552932c3ff2a362156e22cc6b3ed95e00454c99497af176f82a2ba39f61.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3027",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/rtlianyw2mrwnk7wospgw/_GSH3027.jpg?rlkey=ynbtknj3dtm8kw5cq303f1294&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f990f442d1cf158867be5ebffdc5ac414066838c8d9ef1dd3c741448afff88b7.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3045",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hlltb7h67jrqzrauts30e/_GSH3045.jpg?rlkey=kp2gri54183teupoqwe7hqsjx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/93c92a2ec9e5c1c71ac96cb2d993a4ab295534c57622c625769b6aebd6525b19.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3064",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ezoycrhwz3em98ogazln5/_GSH3064.jpg?rlkey=e0gzsksznmn0i7pbhzy19shbp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/638d478e97d18cd940b8e8f1523ba7fae4c484de32590c3f8e537f144818e45d.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3065",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/eqq03a4tf1l4wgu00l4zh/_GSH3065.jpg?rlkey=5a409biq558945bdhol6lsbkv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5377e69d72a491d70a751d7d47f45ecb91f86d3f24ed17f62eb2aa717402f7b5.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3066",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tjhfv2r83s39w2n31dxyd/_GSH3066.jpg?rlkey=xq8yfoxvfkj5aw1tuelurjjfu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/aa0a3164f4477ea9121ba2d8c9f61ed9b2db0d701ea7324b02481738cee785a7.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3067",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4ndo92fmkstvwdum6x9c5/_GSH3067.jpg?rlkey=u0n1r32eippbinmlu7bu93xbw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/348de1cb2c83f6f29bbb34b07245dde7783f97a466b40055f87d82333e6d2992.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3068",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ufk2rlv987xr5urgw2798/_GSH3068.jpg?rlkey=v1ijp3g886127rqnp3ywvmvjg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4ebe63c8771fefed649648f71be18d8786caeefe0f58f692c5a3d89a0b0bb855.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3084",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ccowrgr3qcqy265lp5uxy/_GSH3084.jpg?rlkey=zrbtph1qgdys4rrayige9vpwr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c3b7f2d2437258f42f6183a5947fcc589f81278aba57363b22289d04998b3a46.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3100",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/830wa6j6ox3n0g86cm9lf/_GSH3100.jpg?rlkey=03nc36k98wjz7ctjsc4wppm5i&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6e534dcb969f898b13473f68d1c238f5f9b0f7b6f3deade6ce055a3b0ac428e6.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3108",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qr7veew2jrsn5aowco86z/_GSH3108.jpg?rlkey=kolnuz6g3exp2xlam72lhfkie&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/940c0ad9a0db9bd9a7ec8262782f6a3a4d72812f60ae55e1f1b2773917fd6bab.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3118",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/mc8z0jyqz2p70i4gqfvvj/_GSH3118.jpg?rlkey=3miikdo6gqiku6tl9fftvq7lj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6dd6762fd8f8bdb30dd0573eafd54d91d959cb7b2fd5be8cd65aae02123f4a73.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH3134",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/gucl5mqap7skoc7nlacae/_GSH3134.jpg?rlkey=n0fmwpwaoadtjgn5n92flgo2f&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8794474d86ee486d3e996d9439276e417dee49b4dd3893c77a56ff6735dc859b.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5130",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/rty3nk0io3iu2t8266mup/_STZ5130.jpg?rlkey=p398km69hqnfr95j0yi4n2z17&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/65515d2dfbc82d27e1a15e08e67df5d0681dbda27b23a73a0b457a0fee9d3af8.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5131",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vyew577gq93bb7kh3m4br/_STZ5131.jpg?rlkey=h7bqaj2d1sv3ax2o51l8ba4g3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/711cf0186f083bd79813c96bb44f353988549d80f5590479c788e8c5e5ae3d2b.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5133",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6v220vxa3vpfjph4kn5sc/_STZ5133.jpg?rlkey=86v8el2owjt3y9p84qwy09ov5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9dcbdd3ce26e0620bf0f3dd7c6e5677ea57abf4373a1f8a4f6d842e97e84c46b.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5135",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/39zywxccv8w3rjiui49rx/_STZ5135.jpg?rlkey=szwhwemefqjd06ah8ft9dm48x&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8f4aa3d8736aecaf68961bdad4baa645fd39478fb006fe0cd5134474656fa15d.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5137",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vfs6xigtzvig2k14haqvp/_STZ5137.jpg?rlkey=3kr0o054rkavl6ot3m0zdhtku&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f2b4ae903104c9c9acab96fea109280c5c4d3854b577caee46a9d1e714ee0f6e.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5144",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8hk577e1dgtt1kviy885y/_STZ5144.jpg?rlkey=l1n5089rqsuh9rqt1zkaz3ph7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9fc888094e144720a7618765a63f7f482cb9edc769e5fce8f0745a759034b351.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5147",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1bqwu2yo80b20bi19kscb/_STZ5147.jpg?rlkey=pyo0fuuujo1l743eh02uyv2dz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/22d456c0c999554172d673f034d422b6d33dbfa927bc5822ec19b1fbb3080749.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5150",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vntjnsm270f66jtnxun8q/_STZ5150.jpg?rlkey=49egzr439d3wxe41jfv2vv6yt&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/24b1a1726bdc975c8a903590818969ca036c6efff3f72ee4b7d39166e51dcd20.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5153",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/roa4lzysvc2pv9ug89zvr/_STZ5153.jpg?rlkey=0d82vkhcessfiv9zq1sbbeekf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6f0de4396439d774e488d161874024d6884b7dc744ae2537126350342e495e49.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5156",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0nwc94bid8kwxoeszvlwx/_STZ5156.jpg?rlkey=qp0nzh2mfdtxjtyd58m61fc0t&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7feea1b7699894c9a1b5efee4e70b6857ca9bfc3938c8d54292dd9694c63110a.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5160",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/z51npcjpbtkwk0mg3082r/_STZ5160.jpg?rlkey=vo8dkgbdjv2r5pjbho606surj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a4d51cb35b0ec5ac36bad38bc9d4b32eea4d4e974d656cd564440a99b8f1b5fd.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5164",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nzqtfo7npp550yxblr0jd/_STZ5164.jpg?rlkey=ohzvhd2bf8p23bq1g1mxin60y&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/275e281db46c9861a374a4283aef90748dd785d7a93df5909ba6d1bb77f5dfb3.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5166",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/didy80qtxslemwnb8ten6/_STZ5166.jpg?rlkey=923bgkpz6gwkljowik9f3ba9l&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0aab241c3ec9f1e988e936ad20d7a44d61fe0c0cbcf376f0f5d66459c262a350.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5169",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wz4a6mbgj8mq2ef1pfu6w/_STZ5169.jpg?rlkey=ecomnxm8g48yp1l59yp91ygt3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6769f54d9883b6d9dd81cc8cea93787a95206ea4de323c66d5b4826eab7737ad.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5170",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/j4et3k35ghniom16582mo/_STZ5170.jpg?rlkey=mxm762hbng6lty5czuc4hrpr0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c72880d09bcde8635e532a67edf6491688c74c42f8a557b60979e939e90a3998.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ5171",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/n2nnd9ru1t10fphcti8oy/_STZ5171.jpg?rlkey=pbb58gcx6nz9hw5e8c81gmdjs&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/417e7d0d4175a0bbc0865b2d4d9ff6afcea77c31909a5b6dc343570577b48620.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020795",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hpdthx5vatnrmyzpnm2mg/JM020795.jpg?rlkey=4xr0u7zqzgngoydjzsnipsrvg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f1a5fa07ae86adbcaa5bf65802125a44eda8a6df0185f6271cc46af4d2c1730f.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020917",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0ti2dd13hh0ok4iwduenj/JM020917.jpg?rlkey=akqvg4hv78fymre6l6gjvd57m&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/233f2cc7a8c45b0464a7492d8763d7bb873d797f2ed860f1864da1c146af9d32.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020920",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/b5s03dfghauhq0z1jd1kp/JM020920.jpg?rlkey=905bgiwmht21dixr75xoo723a&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7f69ca6162285c8e9769f6397fa2dffaabfe8127721e502cb44ba7c175d73a6d.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020924",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/idcqi71r4hl161irv9aql/JM020924.jpg?rlkey=9s1t6cwo0miz96dcvnaj4yq31&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/021853d5e5c9294a9b496ce63360ac9392d6d95af21d0f1937dc9e4967344818.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020925",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/z5ngf7q8bj6u5h7n9sxee/JM020925.jpg?rlkey=4m2qex1vlu7jcg8ut4zrrz5ev&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e69605d6495cc631f6bf00d8ca64c00e1f6cdc906953ee0b23ea68bfa390f39a.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020926",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zahvuv5c33uhosjh976b5/JM020926.jpg?rlkey=9830sx6xmc31bw7nijck4sg5r&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f9de5ad9707845c2b792dfe3ea5efd34007a91c15d8fe9f4524d3b500e783b3d.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020927",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lj3l09e73wzn920o42uhz/JM020927.jpg?rlkey=dru50gbywxpzuf0t1mhxpgejt&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a90ece0c7c5cf422b244a5295a89b9cff1bd1e980cc7dc46473b49ee2afb6ef5.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020928",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/atayha3k9vbu1b3f34rtp/JM020928.jpg?rlkey=y27hh2o65beapc9ggu04zpxrl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/93cca7394f12f9859eb2745b9a1c0e38de3494ab4622a0bce1fc15d6c3b78fe4.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020929",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5hiz3lcryuo0fpnza8o9n/JM020929.jpg?rlkey=ectbeeafd8dlsmt2cw5rfq4pe&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8eb77fe8e3501d74f611b7730daef29ba8ae6bacd7957f3427dd3d877c7712d8.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020930",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nfqjocf3mqybxdw65a7av/JM020930.jpg?rlkey=nnge63f0ehst82pmv1reay0dx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d329c5bcbc9d1ba4ade68b18dc3485668c4f20144380c0d2aed636043efb9b41.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020931",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/eneqhl25l767bn2vtl6n4/JM020931.jpg?rlkey=h1jnc40h0kjamgh7xwu60r4cu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8f7d6dadc6cd0b0e68d8d3fdfc739a0af09af5680fb3d4710f99f30f50888601.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020932",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0zw4woik8ousyqikboa6a/JM020932.jpg?rlkey=2eaoo2upeen3xe8hycbeek7fe&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/923de0e39266ba72f8000e110bf53956257c0e17d333ea39e0d8101c88089e0c.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020933",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/awa920c0d3emxui1k0z51/JM020933.jpg?rlkey=vku06f0n7t0krpeshnaus7830&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/01e469013c483907dafffce1c48d2fa98ad1b81a4e9e65a2860e6a04ff5d4d49.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020934",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tb4x5vd563vbte9pvr9rd/JM020934.jpg?rlkey=79hdbeieumtfy1irgatd687uz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3d58b38d135b0eb5fb0d5a23842dfc6ba634dd9b43a55743a79e3a2ec758954c.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020935",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qwppxjmfbg31xgxuiyeqn/JM020935.jpg?rlkey=ke47clhj5976dupgy4i78yh8o&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a8d0dd59dd279078a8e859c1a2c47b6decf47450adf2c997cc46edc4e7d52b28.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020936",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xye1kremtejhmqcvvbnu6/JM020936.jpg?rlkey=9zd7mfrqq6lno20d18eylvlto&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/38fd8dec889f9efa83c146b5d52a91f5d4edc072f5757696e9dfe5d9b977bb05.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020937",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vvlcp4a96npzb0w8mowvp/JM020937.jpg?rlkey=tpkpbvt2on9d4rr4rz57fvtlj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1e2546f1701ec31e0c247b861343fdda987437efb3ed383c36a37ccefe985f21.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020938",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/r9w1cx9qo71ne88vsv79b/JM020938.jpg?rlkey=2b3j67a266srd7uhlhrcohk1a&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/18750750028d9a3443c76f76d4532de94c147d258d5dfb22063f31cf4a98fcaf.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020939",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ypt1zgbczgisve7bpd3ff/JM020939.jpg?rlkey=lkjr5gpvqig15r611kzo3cpax&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/21099af0ec3d622a914703303733821263b444c073b92d34fb0b5a6eb054be14.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020941",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4gfccvj4wlkugifgejnaz/JM020941.jpg?rlkey=6i4k4q2qi9ouwxa5u80r35cdl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b64670593a1b9a9380de5e2c5d8159a6d10c777393c5797577b1f8bceef31805.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020943",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/l5v5u17zgnx1c63lhey3u/JM020943.jpg?rlkey=bz9i07c1pq7uf48lduzw0felj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cf34cdce8a81597eb9a99a08025f82c1eab7299035ae5d6b46e30796e29853ae.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020944",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/i2pwvr53lqyve6zcb1yba/JM020944.jpg?rlkey=e3fmvpy5c6qexldxvmsmwxrck&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1da9f1e9833f5ff9a46d0043265c8d000cbfb30bde9869c675007b9b4f97db8f.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020945",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bwpnx8a4dgkjw9rblh12o/JM020945.jpg?rlkey=9n8s9a0638woabpir34es83et&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/efb3b5814ffd4f08ce3f4a823f2eaebd0112b826e8d6c28d92ec04b1176489bb.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020953",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vf03q4twv81pyzoqpd00d/JM020953.jpg?rlkey=87cbxwja7yurppj99pkvgbmbf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/229ebe6c902923cb8543384f754724fe98e927fb961212f1bf82ce8ddda70efd.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020955",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/t8m4bzdaos3dwhtls2xac/JM020955.jpg?rlkey=deqh88ajuy3n3m1xe2nxmi0yf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d9fcb0495c427e22617428dc1c840f78b965f0ee2de4c7875fff6128c2e72612.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020956",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/behxn371c20lmfb7dt9dj/JM020956.jpg?rlkey=4qu8kvfipn3cdabmd4l1bv1sg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8025b7c0d11fb5ad82c1aa7d32a83721c5d30693fa9361266090a14c62ca921f.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020959",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7etvj4blmel5ifl4xt4ap/JM020959.jpg?rlkey=iot9wu2xtu64s3ohybautwomj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/addda7cb7d04b1da28573519385a2dc48c3156992fb4453161e88b33c5582ace.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020964",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/28d08xycndkqd48kzcb8c/JM020964.jpg?rlkey=ah0u36o28t9fxgkjq2d0vdd1e&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ddf836f8bad5710883fc431f85e0eaab8fe6d940ef3fe59bd59195e56c771e5f.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020968",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ss64tsqp0mh9gw02m0k3c/JM020968.jpg?rlkey=a3jpsz79tgvn54mptl0g3tk43&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5723f09d3180c309451e73e1b8798ccf7872b39d9340b70bd2ae98ae0f98a008.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020972",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5afupju1gl85upvb07834/JM020972.jpg?rlkey=6fvubb1gkqldt2pzylsrnbw0u&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/80681d51f56e8a0ac3256a2876295dd4e167fedff7b1f87371df490a6d590388.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020976",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/h52uxw451p7vjvktxq5li/JM020976.jpg?rlkey=me952eughwuipno79rhtdp0ga&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a7ecf8d485937c7fce4562af5751f2c6fbe04cc1e51258770c31cf6cd8aacf18.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020981",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/o6fi14y43ce2bndo3q9pd/JM020981.jpg?rlkey=nfocy84fg519lztt9bviiswux&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ffb21d22c503a35b40ed351ade9c4a4eaacdac6e6929626958e46da8c68f858d.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020982",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5aly2dooxkctk9zaewace/JM020982.jpg?rlkey=m3wylqw9yzo6r5q5om10bonqp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4b077a9ca7ba75fd6f33c9e47aeb7eed40293a46711ff732b4336c4caefd266b.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020983",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/miyhnw5fv9hk5i9js9eid/JM020983.jpg?rlkey=5nhkukjzw9dhxam8upkzp7t37&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/819b01c2a303e18cd396cabb9dfef50845bb6cf1ecf7f84437a25d2eafbde8ff.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020984",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/k5cxsjv3laz81s2swa3fy/JM020984.jpg?rlkey=dnbitu5aspuqlur0445atjcsv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d9855f38dc499af1ab5aff0bd1b37ed3f0d1408a5f69ef4d5f5e4cf7dcb088a1.jpg",
-          "file": null
-        },
-        {
-          "name": "JM020985",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wzby9juhyxcwbgvcnw9dy/JM020985.jpg?rlkey=11stcoxin3w6m8rhf6czrx7nm&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/58d46108841b0123eb8699ffce0d3d56528b55e2d70592ccdfcf9d46d1c5c675.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021008",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/n456a44hzopbrmyertub8/JM021008.jpg?rlkey=twvc9fzrnto0ghfofr1y2z05w&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5b26d1f64d808c860ae24f8943c761bbc86fc730643363009439681cf05f3341.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021016",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/a4mb7jfcg85lnlk5fzr7o/JM021016.jpg?rlkey=ofmu7oorw567q1hvji05g3ik0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/689983d0c033f08fb2cc684d7db4b2b6e6551e40aef08df0134493ea67f15ff5.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021020",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/niwhel26myaduacr559j8/JM021020.jpg?rlkey=30ygph330ahfxt8scr9ek97tr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b48e65de31dc9403af40a3c9f271b0d821efa81f8303edc2d26a7bfd1f72aebf.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021025",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lvk28yhlaf2ocblyn23cg/JM021025.jpg?rlkey=a96o2tehgd904a774xwkn5fgd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fe802550b30057306e0e773a62e61c07d329bcfe69bba5ef0fa26e929e690d5f.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021029",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/we95mxlhhexpjyjs0j8ai/JM021029.jpg?rlkey=f8kiqc1p0uwqsjrqoubd3m1m0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0456e6c4e35a6ff261a183362e462cb81a2ac41904fb9e08226dbc86c0701f1c.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021033",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0031sikg9ur1gjbe6e4n5/JM021033.jpg?rlkey=gwoshlian7peu1hsfrcgwsd02&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/359486b999e21b8a8e6c85e9866468c676c70f51f7133ef4f906914f31570847.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021040",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7kitqoz8m4fkx27ulumfx/JM021040.jpg?rlkey=cbbqvv3wtalj22bcn6g2co1xg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6f252fcfa8e14f7a26d1b179b7aa179784d67aa8721c4a6c64228c34d9e47f8f.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021041",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vnx9r92hnaq7twafzawi3/JM021041.jpg?rlkey=qcj7n0ijccj89qxburtrih3yk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4db6e120b4264886530de7e9c385a02b32bc99d9cffbe5eebf06611231465cd1.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021045",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wp844xui64nh3por8zo0u/JM021045.jpg?rlkey=smtov63x5qgdixhrxvvbti46n&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/15eb161fcfa0c00ebbf316a4e9b5aac43804c8eb71c717ec85f3e7987dbcfae9.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021049",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/q8io7kvu7na65bcq4l20p/JM021049.jpg?rlkey=bxeo8qsirf8wl2m4bxejz6yhi&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/950949b786aa7da2609fe63e2bf519e8032aed127342c0a7b1f9cac137294836.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021052",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/4fqlnhtuj79ro84ymn6lo/JM021052.jpg?rlkey=avshc6m2cgz2rrktx27wgjxts&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cc9656d3914665405427f0c4a95a4b635b323349bf9945b57e26104bd32b8db5.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021056",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ll3rdtkia1i8wfys5hedg/JM021056.jpg?rlkey=aumau0g0zzbukqtpy8s247vzy&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/21d54cf9fedbac1208467ca1ff996ce720b7e9f40e7742d447e5579808c01dd2.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021062",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wvql0na08y9fh6wzp69e9/JM021062.jpg?rlkey=f8k9i18w7v9su5ptl24z0fc3e&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/38b59f8b2848f35833d424868c5b2714fb5e4b72f0b8dc9979dd87c9455fc083.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021063",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9o6tthsq4rdub8l2soti8/JM021063.jpg?rlkey=lw6tewlem3j6fxl10bk8zhtuq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0c96102ca6a2517a17e10684f78ca88be2693f5921cd869c39e11f69641e5220.jpg",
-          "file": null
-        },
-        {
-          "name": "JM021064",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1i5xupgn2wtc1ue1r4r38/JM021064.jpg?rlkey=07iuoz9k71w58ururo7fnjylo&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/01436366c56b89ba2f1db54994ae5cb2b9dc48d4c1149bf3e3c1e94f335d63bc.jpg",
-          "file": null
-        }
-      ],
-      "Taylor Gang / Product Renders / 1200x1200": [
+      "Taylor Gang / Product Photos": [
         {
           "name": "Kompact_TwoGlobes",
           "type": "image",
@@ -11307,7 +6509,7 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
-      "Taylor Gang / Product Renders / 1200x1200 / OLD": [
+      "Taylor Gang / Product Photos / OLD": [
         {
           "name": "web_TG_Front_Unit_SG_Logo",
           "type": "image",
@@ -11349,119 +6551,493 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
-      "Taylor Gang / Product Renders / 600x600": [
+      "Taylor Gang / Lifestyle Photos": [
         {
-          "name": "TG_Wand_Only",
+          "name": "_ALF1983",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/6bgw2691lhy22mesqtr5p/TG_Wand_Only.png?rlkey=0jlhnyke52g9ew5ex6587zwfj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8752347271ca17346dc8ab62177f2e7f902ea2928f70525f3f4b39c1e679d92f.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/cknpscvkn2sa9dc4f7u5w/_ALF1983.jpg?rlkey=fgj4druaetn5r42d4ln87yyry&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/6baef60cf1e95defee6c25a3e60d3087d2c0cd1f9af5a0aef7f592944832d0db.jpg",
           "file": null
         },
         {
-          "name": "web_CleaningKit_All_Transparent",
+          "name": "_ALF1989",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/kzju75kgmc8syx7y5xh1z/web_CleaningKit_All_Transparent.png?rlkey=wm67w7befpd1kxouecb44qjmy&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9951d66e6c486043326d290d0405109930e98b07b19b053887262ed6f4a70a32.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/0pwbjvhzio0bstotkhrxb/_ALF1989.jpg?rlkey=ar7i3ab646v1i7290k11x7ozg&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/2842d9c3a882366d3fe57e1c887ce618a3aa21f24e3926ae58b3a86cb13e9f56.jpg",
           "file": null
         },
         {
-          "name": "web_Glass_Liner_Shadowed",
+          "name": "_ALF2035",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/92ttxgz30nlmj54raefm3/web_Glass_Liner_Shadowed.png?rlkey=7emzy4nrht2ecpun8blj21lph&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ac75e9c608206ab0e2dbbf1a5064972e2de35977ed8559f54a5bb5eed3663867.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/423vqemphihs2cacvj0xe/_ALF2035.jpg?rlkey=5hn3oqgti63pxbyi3hn8t0cl9&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/94d2a582a17593eb439192db6b95e5af0ce8b4ad6991c6e29105110c9cd4a59a.jpg",
           "file": null
         },
         {
-          "name": "web_Hookah_Gear",
+          "name": "_ALF2121",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/e49u67mnaakjk9hku3gxp/web_Hookah_Gear.png?rlkey=vp9jvgewx6vduszwfnqxt674j&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4d8a86055da2a338c625ab390cb81c610b219cd6997e2594fcddbc43dc4f44e8.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/4oj7g0tgmsx64d3ly80q0/_ALF2121.jpg?rlkey=cm4gxsmmrfcozooyn6r823d3j&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/2aeb5a077e8c6fb9213c59a75f8ce8cdfe9b4fd97f8f9e259d2b406cd991102e.jpg",
           "file": null
         },
         {
-          "name": "web_Stundenglass_TaylorGang_FrontFacing",
+          "name": "_ALF3430",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/srwi4ki3e6xfuakdzidj8/web_Stundenglass_TaylorGang_FrontFacing.png?rlkey=9mws7ylru7eamhg4rbcq9ztfh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5b2fb79c7a9eae7a5355856d42e2e9dffddcd5bdf141ea2fe2a85a02bc67fd2f.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/c1yom5fk8d0k8d5xnjfjz/_ALF3430.jpg?rlkey=wo9pi382zjvb1avlxkg0kqlri&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/70ba878bdd8c2a5f511d3db2450ca4815238f3d6382f22faa948731778d5c39e.jpg",
           "file": null
         },
         {
-          "name": "web_TG_HoseAccessories",
+          "name": "_ALF4865",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/ynzhuh43mm893dn6rkjet/web_TG_HoseAccessories.png?rlkey=elgvsb1i5h76afvph0zamo1sl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/08f24f1755ba4cdb24c1930918fe2c74e8fe04a4985b879a2634421be3682533.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/bptenenhm4985qycxyj0y/_ALF4865.jpg?rlkey=dcbtw4unb9g7y797zk5zakauc&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/cca7aa47c28dd6e5ee4ee51d2f69b51414afbc683e8122c0c87302bcdcb73897.jpg",
           "file": null
         },
         {
-          "name": "web_TG_LayFlat_Render",
+          "name": "_ALF4878",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/j7eb2ortvf9q0ibzowhmj/web_TG_LayFlat_Render.png?rlkey=mjucxnfarzv99z0wqqwc6uhgl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/486e53057f73e8b8271b32c23dd5699a6979bbda1330aa5e938044c7d44192e5.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/qjuqfhfqfi4rhv53fl1n7/_ALF4878.jpg?rlkey=mw46e6vyfbze76z7u8glu6r7o&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/4be07493b3443d666a127ba8970142be06e60d46bce3233ea0f28c5974b7120d.jpg",
           "file": null
         },
         {
-          "name": "web_TG_WallMount",
+          "name": "_STZ5040",
           "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/3e7lljpyr3tj61gedwxs0/web_TG_WallMount.png?rlkey=0jlkmt2lc7on411mk4jogvid4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/44c445bb032f46164bd377c4db3c2e12ed78f5bf1f2dd3b3b96e6226d8507f5f.jpg",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/6rg48xfm9mxarwcn5ouu0/_STZ5040.jpg?rlkey=vc5jvnrhvsdqrrs9rfakre1qy&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/d9c7b88750022c89eb922a1a023c47bcc101e892e2ae50da09264b2cae2afea1.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ5053",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/nl573d1to4m20qullfmo6/_STZ5053.jpg?rlkey=5cnwrr8gxmvuptgjmouwipslg&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/62c10347280f9069984cf82e63738bae6e0f52225ad8c0a3d1aa089a530f5f17.jpg",
+          "file": null
+        },
+        {
+          "name": "JM020065",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/oichjytqrjhmkups6gn18/JM020065.jpg?rlkey=rlvedm1ff6wjj32y1h51hnb2h&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/9c321a9b885eea20a78e3c3640ca0c8feaeb644f4057deee17cb05ba470971b3.jpg",
+          "file": null
+        },
+        {
+          "name": "JM020145",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/2h77g4d1ik76vt6ifcdhi/JM020145.jpg?rlkey=o9rz4uxhcnm7nbwuj9rnz3wzm&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/14c8180109161481251be667a4ebf1cc1e093d89f3330e0f398c30ba5317dcf3.jpg",
+          "file": null
+        },
+        {
+          "name": "JM020223",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/zilld5utpvnnvo0geb62s/JM020223.jpg?rlkey=rqvxca87dy9is75m3nva6xl1b&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/be3ab23a48dcd53d3dc468652570d54b49c06171821c3a6c93b1832f59b1fd79.jpg",
+          "file": null
+        },
+        {
+          "name": "JM020331",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/tt0jhuhmetsoy3fiq7u13/JM020331.jpg?rlkey=uog5nmqlnj432gquwk8i3f0hw&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/3e187946d6f20017db6cb0c649115d622625cee2bef7d617c3a63b717feae595.jpg",
+          "file": null
+        },
+        {
+          "name": "JM020377",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/41km3zmewfj2uek0wx4p8/JM020377.jpg?rlkey=g1dn1h9nexl5eq992t30myh1d&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/a7a14271ee192c7418cda074f23f78ac93412bf7a0726809ca65d59660caac5d.jpg",
+          "file": null
+        },
+        {
+          "name": "kellyliu.space20230614-Knights-wizandfriends19273",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/d8tt2c640qz2mor711it2/kellyliu.space20230614-Knights-wizandfriends19273.jpg?rlkey=ifohrdwvdzgcyq4bcsucsay6r&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/e554310ce4ac517fc42f1f770624f0e463594a45e57fcc7888148963f3ee86ff.jpg",
           "file": null
         }
       ],
-      "Taylor Gang / Text Overlays": [
+      "Taylor Gang / Social Videos": [
         {
-          "name": "Taylor Gang SocialSquare",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wcd9cvp1z5ycqp7g3545r/Taylor-Gang-SocialSquare.jpg?rlkey=ahcg1zdtl56ybhua9i6bma0nl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/bd9ae0c9e7040f1a1d3f3436b8233b65e820234691cb07b729e37b8885bf8719.jpg",
+          "name": "Hustletrees TG SG",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/dbs5fy9of4kk2dniu7wnd/Hustletrees-TG-SG.mp4?rlkey=gq7ig27p1j4kra0odcvbz1mhs&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/9a11347583e4ab87ff929bf504d9df81a5f4630a4b8343ef83b4688f9891e3d7.jpg",
           "file": null
         },
         {
-          "name": "Taylor Gang SocialStory ",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qiffah58uc972a3awbt30/Taylor-Gang-SocialStory.jpg?rlkey=t1bcx0n7zofttoscp9fc8xitg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cd9594dc3b5339cab0492a757e8839f174550a131117f23df9223df3c93daa89.jpg",
+          "name": "Reels TG Hookah MichelleStatic",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/suo7ojv3v6mjpz2aqj0im/Reels-TG-Hookah-MichelleStatic.mp4?rlkey=whwzxyduis77qibwr9o8xj3iu&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/fb53e0ba25302cb34b7c4cf2b4405e95a6f94fa6b0122c76371e341b3457bfa3.jpg",
           "file": null
         },
         {
-          "name": "TGxSG-Crypto-Square",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qmh81usdulg4ou8197oct/TGxSG-Crypto-Square.jpg?rlkey=6g9lihj6fukrltffsnonu97kh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/980d4f09fa041264a8f99372e8f19c2d14166028e7f79749c9478e908be57ec7.jpg",
+          "name": "Reels TG Hookah Solo",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/e3hgepvnt14490try5t55/Reels-TG-Hookah-Solo.mp4?rlkey=4lovxlp35t3h8m8l2doq2cktf&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/3edf0ab6ee05b9c402110dd1c8b12b5263b99c827a0a30f529f51be670b529a2.jpg",
           "file": null
         },
         {
-          "name": "TGxSG-Crypto-Story",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zgzzb09mfr9dx6yv2tle0/TGxSG-Crypto-Story.jpg?rlkey=pqivyc0x3ddblvixv4p8ntfc4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a6075bacdb4d163f0bc03804cac7de6fb7e140e3b584cae0a35360b46e3943c4.jpg",
+          "name": "Wiz CHD Camping",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/ojxvybkb1ks60mx40tpye/Wiz-CHD-Camping.mp4?rlkey=d5zcf0o8czlbqsot8ei2vl9dt&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/ecb6f4ef029c1c3124e2da6f64570fb7e3461a6e54f85f02508bab444abf5c88.jpg",
           "file": null
         },
         {
-          "name": "TGxSG-SezzleSquare",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/q5ahb1h8ilpztvbnj1gpe/TGxSG-SezzleSquare.jpg?rlkey=rr5okguf7e1el4tdl1o47vlog&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/978f526fb799805a9383b0bec6bd6598ee1197525752b684f08d38f7a043765b.jpg",
+          "name": "Wiz TG SG Headphones",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/jy0dprq3ga594pdfquy8z/Wiz-TG-SG-Headphones.mp4?rlkey=bpond3wdl85vyb617dscx902i&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/6fd9af1ced33a79dd7935655bbaffe144cf227b60d794c8f366f14cafc6500fe.jpg",
           "file": null
         },
         {
-          "name": "TGxSG-SezzleStory",
+          "name": "Wiz Twitch SG Flips",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/1dawph0pwe3held9egqel/Wiz-Twitch-SG-Flips.mp4?rlkey=zf60ns6eqrjivftzzu2maxgh9&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/ddd75e04a0f82931ea17f9a033ff80dac866d914d2f5ea029c969d521e0fa2f3.jpg",
+          "file": null
+        },
+        {
+          "name": "WizHyerReels",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/svjbpd7zqax0pwmzpcoax/WizHyerReels.mp4?rlkey=i05ifh5qdu59prgs77lio70cc&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/6e8a4e6bb247664efb789467114aef5cec224fe6b33853ec6638e3d02faf4dfe.jpg",
+          "file": null
+        },
+        {
+          "name": "WizTGFlip",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/up8hhp304oucepisy4utn/WizTGFlip.mp4?rlkey=jdhs7ehfe1ykr6jj73jqokt67&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7826e650431895b10d51a46f17e8bc91f69b75ef87d5fba92c7676561ce998a3.jpg",
+          "file": null
+        }
+      ],
+      "Taylor Gang / TV Screen Videos": [
+        {
+          "name": "TG Hookah Dante",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/iw188c20yqw4jd7vxlac7/TG-Hookah-Dante.mp4?rlkey=f89l12rd4op2446zm4ows8rx8&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/8ab922d9c575e2a2717d9308b8ec477c48e29ac4dae23273de86cd5505ccf65e.jpg",
+          "file": null
+        },
+        {
+          "name": "TG Hookah Michelle",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/oow1yl6s5ox92wf1fbp9n/TG-Hookah-Michelle.mp4?rlkey=v1eucslqzf3g02hc14s6zejlu&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/41ac095e859d9ac9b6b9bdbab44a3179d288bdbf6b9662181715fce9b2ad6e0b.jpg",
+          "file": null
+        }
+      ],
+      "Tyson 2.0 / Product Photos": [
+        {
+          "name": "web_Tyson_Front_Gloves_1",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/xl8z5980gi3ubx243wc6l/web_Tyson_Front_Gloves_1.png?rlkey=jsy55sdpph15vegp1pk8yp7x4&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/1e5e7ae7f6d6cadfc9d77ed7382671b41a043c36c97fc889c21d4a0c6da5ab60.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Tyson_Front_Gloves_2",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/mr32pd0p0d5zt8cjo5rqx/web_Tyson_Front_Gloves_2.png?rlkey=jysrjngj2dfjsf33uqk3x3a3h&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/4422fd94df4c8c9971452c19e2d8af482348376b919c2d257c1a7f7feb736209.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Tyson_Front_Transparent",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/b8be3i6q0m5s2a7a2kheh/web_Tyson_Front_Transparent.png?rlkey=2kajzjovvgkjqrru8191o5uy1&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/9da66b651685f9621e1e129c2f6fddbd0765f49cc8bf915fdb7c53eddf7830fe.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Tyson_Glove_and_Stem",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/nk8bwvqut5sanwz4dv597/web_Tyson_Glove_and_Stem.png?rlkey=hun1nfxq0ox4qbzremkgv9bwj&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/1c244b3d21956f3dda524cc0c33600df6902323ce4192936420f0842d8b7ea4b.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Tyson_HoseAccessories",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/s7q482iml7l3i0s0a872l/web_Tyson_HoseAccessories.png?rlkey=ljzjm8wbf3lcij5d2nlesvbl1&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/2c74584fc710b6800feafe730eb5ca4a01ab7227ff832fd544e1dd9506c8f886.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Tyson_LayFlat_Render",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/pooi7n4xukdzacjmxrx3s/web_Tyson_LayFlat_Render.png?rlkey=vcxtyzs40n04lgkgc4d2ii66k&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/43387b01f969ba6ddacb080c155fdfb48f693f168ec4b82ab44043bd4cb3c7c5.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Tyson_Mouthpiece_Solo_Transparent",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/9ipyu01gyk6az8h76atm2/web_Tyson_Mouthpiece_Solo_Transparent.png?rlkey=tkhtz3i7eu0slwnzjibmryiq9&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/f2878139edaf98d9b859b2d64cf8ec7f57a1f883905c76b537864538894ddb7b.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Tyson_Rear",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/akyc6yt3stqd37u6n2ybt/web_Tyson_Rear.png?rlkey=yze0iqr0crqmw5cs9zpgi1ygp&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/cd9019a233bb79915c51124bddd6a0270c84f366d00fa344affb20f7c486047c.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Tyson_SingleGlobe_Front_",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/i8fgj6ncavdujisk6dtvl/web_Tyson_SingleGlobe_Front_.png?rlkey=e9ipcmy9t4o0ic10p62fwls8a&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/afe02c109ef0b60705b03c3616cb762c8bcf91878673601cc4248dabb502678d.jpg",
+          "file": null
+        },
+        {
+          "name": "web_Tyson_Wand_Only",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/bvuxk6u5yihjnp3l56xwz/web_Tyson_Wand_Only.png?rlkey=k3qlx6lz9wbjxb1gmrsu3vc6o&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/b8648e6a30e6b8e7995371e7d993e7e1b7cc9978a3e3ef1547447e329b7c47b8.jpg",
+          "file": null
+        }
+      ],
+      "Tyson 2.0 / Lifestyle Photos": [
+        {
+          "name": "_ALF0054",
           "type": "image",
           "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/e5aediwdphrsh204qrmpk/TGxSG-SezzleStory.jpg?rlkey=xxsjtq7xkqwsvcmmr3n6512we&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3c9f97036d3fd07457b86ba1d655c95cbc80a2406b6fc1c0a1f4bc3c24924383.jpg",
+          "url": "https://www.dropbox.com/scl/fi/yxfdxj89iesw07h1p00qy/_ALF0054.jpg?rlkey=jdccglreyn23am91zpgyr3om8&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/11d0f50299273cd0e2fdd9113613349481c642bed6fa22e207ba1efc623ab9a7.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF8846",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/hl8duzqntgnzgpbce9h6m/_ALF8846.jpg?rlkey=s8ttgvcjm2nal2m8ybb98lcj0&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/94685e744ae8a4dd25fcf8c81dfa0378f8a8e79031ee91a16da5aaf4c82c679e.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH0093",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ymj96mmxs3vv7r12fhzr3/_GSH0093.jpg?rlkey=chox5pjjthwn60hh0ly7aqq1q&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/8906a31878035bd88acf5334b422e7e71e0812f7a008f5e224fbdf4722365f16.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH0707",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/rhcd3b52f7gqyu48yfpuf/_GSH0707.jpg?rlkey=3htydsascl2rak38fi62bmea0&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/d8a32129bc6fdd3a75c0c059c178ae51e30c37dc8fb50cd879aa501fd8bc6fcb.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH5078",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/uyfag73q2fstbtx3brhr0/_GSH5078.jpg?rlkey=f7m2xt5g8l5x914oq8gtz3liy&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/ea343da5eb23055afea456ae125633b7afd246d3c53b7df090e5c05636676434.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH5358",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/laofm4jo9igljzj847wti/_GSH5358.jpg?rlkey=044f6i6ftsybjnqnxap6lb7g1&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/2f89d325237437d4f2ad56792b42fb4a44782b7081968198093227d8f32f6d30.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH5362",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/nlbx3zk14swplbjwm3psg/_GSH5362.jpg?rlkey=bxnx28gnaxojqq6jdag5cfsq9&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/836bf5fa3173780c55a3782b5a5934acd52fa683d4d7afaa8c488c3546926407.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH5535",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/fi1w0iyf4b8kim4f7jtnw/_GSH5535.jpg?rlkey=4ozyh78lhjgl7jx3edluzg724&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/325741ce0bc64ea4c3f5deb92e53f5db3ed3ea6494d24ecf4ac4ee66d8325b95.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH8169",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/2jzyi555j6xn8oc8apex6/_GSH8169.jpg?rlkey=jiyyaa7k6l4krapj29cs0h0op&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/5f355ed4949b6d5e5d1d20bb84710a4e8e5486dcaab59ce4e1f9462717fdfe9a.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH8260",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/h0kx0cxd1uznpaxj4ombu/_GSH8260.jpg?rlkey=zkx99c5y5p8pn7sx1txmkvlws&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/996c9cf0403000274932e04cf6db1c899e44f9fc4330badc72a6dd0c75baa9b4.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ6271",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/i7mjzhu7j8ym8shwuzgc4/_STZ6271.jpg?rlkey=6u4mtxc9aj2clz44625vr7el6&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/b51e991fe1f29aa6e37f951e9cc2990e9fc744ec87e097a56cb3bd4f97f8b13b.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ6301",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/p6fp23usskv03s3yieate/_STZ6301.jpg?rlkey=7hurc7n7aywi73mcjcxe8y5n7&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/19dcbba84357c143b6d81f6a3a30939c84b31f55bafd691f7b6b596b1629bb8f.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ6338",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/tiaq77lcmlfheqzcfx81l/_STZ6338.jpg?rlkey=f96q6kq7qaqr54i0vpoqip9t5&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/4fba6427108034c2fa3f81bd66eec50c70c1f60fa7246613e6b2ddfb9b677c23.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ6361",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/55fouchdfmc1k7d4ezzvf/_STZ6361.jpg?rlkey=1k5wy5p8u3o0th2g8b8f4iu6h&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/9a57d2bd2b52ed95ed2c24fcc2e2831224d0e79397aad16d5f1310bb90638806.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ6502",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/i2nsdjqubc8b69v43b2kr/_STZ6502.jpg?rlkey=1tpdsqn031uw1plqohs63f4qs&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/bdc2d95fe0db21adeff1fc70257d7bd7ba20a44901bc164c3bfea7658d48807c.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ6504",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/i6vwxzvy6azgl3i0snqpa/_STZ6504.jpg?rlkey=uhyky08jtrg0dwm358ynr04nj&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/ab267df5dd3ab70e22abaf1b5e22094b3d32761514c3f03386f89c0d4393c0b8.jpg",
+          "file": null
+        },
+        {
+          "name": "_STZ9111",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/tw54qsx3tf4sofi85chvc/_STZ9111.jpg?rlkey=3msw0a1c1tgj3iaojfgqs8jij&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/2b94b8cf806c79034bcc4f4e1e63b664f3b34349e7d6d2b71c2771d7f1fb3b0d.jpg",
+          "file": null
+        },
+        {
+          "name": "DSCF7312",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ge9v8vkcx7qxrhzqutjcm/DSCF7312.jpg?rlkey=ht0rba8g6sxd2pwyo05pq9ryd&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/33f72cb9cabb90253b53d8d644614cd98a426ccc37650978f476c9df4738b77e.jpg",
+          "file": null
+        },
+        {
+          "name": "DSCF8881",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/53go9xpm5askwq7ahilky/DSCF8881.jpg?rlkey=5ypy2qz2ypuutryme2dz2ux5j&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/9a66f2f558600d64b374ee7636e42cb7f37037a32450442009c0fd491a201880.jpg",
+          "file": null
+        },
+        {
+          "name": "DSCF8955",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/jd8611a4r3t9mxu50xkmj/DSCF8955.jpg?rlkey=n7nhip25bl6eood7y843n1fds&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/0b99c46e4a0db4d4a03bec1e4397cb554834d6ee1168b496f0d1e1f08d91e9cf.jpg",
+          "file": null
+        },
+        {
+          "name": "DSCF8965",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/bwpkedvksa5zg4hz3oacj/DSCF8965.jpg?rlkey=0um7cb91bwgfgug7qx0gloi83&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/8176367776ff004460d9974df25abb812dddcf8d5c5bff288ebde1dc5f821b6f.jpg",
+          "file": null
+        },
+        {
+          "name": "DSCF9069",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/u8mc99ut3yb5pqb8h4wd9/DSCF9069.jpg?rlkey=3koikar24dmkwrqr6zcxukq9c&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/0db44df554952824f3f5ca64993d90a5aba0fb62878130f5a83cbbc2d245e95f.jpg",
+          "file": null
+        },
+        {
+          "name": "DSCF9271",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ss3bid70xbfpcijbxmhmj/DSCF9271.jpg?rlkey=l0n1wxr78jwq4a5dza687ut2j&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/b8ea04ae1c205a0550aac6f63646cd92be82d823cfce5e1781527fe38ecdb4e3.jpg",
+          "file": null
+        },
+        {
+          "name": "DSCF9297",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/o9nb649fo6s46phtjfsh9/DSCF9297.jpg?rlkey=k0qwjhrso392520gatn6a09uh&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/797a210edb6dd1f43321ab9a988c3858486aed243647dcc254fcdc65b7aa03b2.jpg",
+          "file": null
+        },
+        {
+          "name": "DSCF9381",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ul9t56msaw1vvy4y53bif/DSCF9381.jpg?rlkey=d669f35ihp15vg9ys29t2k8gc&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/d525178d2afe51ca7cb2b98acd789398fcb95a1142c800e223882c1bb47d1ba7.jpg",
           "file": null
         }
       ],
@@ -11493,14 +7069,6 @@ window.PORTAL_SYNCED = {
       ],
       "Tyson 2.0 / Social Videos": [
         {
-          "name": "Big Jay Joe Rogan_Horizontal",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/xm2gt5c5neyldmflzkskj/Big-Jay-Joe-Rogan_Horizontal.mp4?rlkey=8lahorfvza9ll3s4wufs2cxow&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a322264e945e188f39ef30b86b06b1dd4d2ac829d305a4dc21458eaef5f28052.jpg",
-          "file": null
-        },
-        {
           "name": "Big Jay Joe Rogan_Reels",
           "type": "video",
           "format": "MP4",
@@ -11514,38 +7082,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/l508qqag38t40o60hhpqi/Larry-Tyson-SG-High-on-Life.mp4?rlkey=skeefj6e6t80skk4y8z6enu0w&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/499e2281055fba89b6f75a7129d0ce6b0af2d7905c586fe6b66640c9e37f85a2.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry_May 4_Tyson SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/blb2uadxr4tat50nwpwj5/Larry_May-4_Tyson-SG.mp4?rlkey=whj0dt9dzp5egpfatmxkv2ae0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/63b8c31aeebca727cd250e65b6b1a331d187ec54bf3d3b4343caea69fd2b58f5.jpg",
-          "file": null
-        },
-        {
-          "name": "SG Tyson_horizontal 15 sec",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/m8xc3539jzz5xd18jgkz8/SG-Tyson_horizontal-15-sec.mp4?rlkey=02hokk13s8uk8wac96xxc0mlp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/dace55ab4b63e3f6545764b90a43ebebce0d8e46851f7896caf3956cb0f63720.jpg",
-          "file": null
-        },
-        {
-          "name": "SG Tyson2 Ad Spec Horizontal",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/nxc6f1ktaobpbhuruttlc/SG-Tyson2-Ad-Spec-Horizontal.mp4?rlkey=qe4ha6ok93c4qpi9vya53n3yl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/dbd1781ff3a14563868985f6dce02ecffaabb0635eece7e4303e8d69b98982f9.jpg",
-          "file": null
-        },
-        {
-          "name": "SG Tyson2 Ad Spec_horizontalwTitle",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/l1ypk3b74asz64xiaytc2/SG-Tyson2-Ad-Spec_horizontalwTitle.mp4?rlkey=vlp1obw7o0p6dzt4abkpptk82&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/58d7b69746ce66ebed83e4f9c2fb00ddae826062af47927da72d3f26bb8486f8.jpg",
           "file": null
         },
         {
@@ -11594,14 +7130,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/ow5wl57377fxx7a0xdfx4/Tyson-Glove-Flip-Oct_A.mp4?rlkey=sulbm3if7n1xmynqtely4j1yl&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/81e88400b3dcc2d329fdf7773629a9d43c9878040dfed50f42e317141451943f.jpg",
-          "file": null
-        },
-        {
-          "name": "Tyson Glove Flip Oct_B",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/iv96fzyzdedbj6knq9qay/Tyson-Glove-Flip-Oct_B.mp4?rlkey=3ej2lzf81s80ox0b2kn6s4bhd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/478038b1600400a1a92f9e856332de67f212fbd3b424dee186fe689dcdf30b3b.jpg",
           "file": null
         },
         {
@@ -11685,1421 +7213,21 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
-      "Tyson 2.0 / Photos / Documents / Colored Glass Liner": [
+      "Tyson 2.0 / TV Screen Videos": [
         {
-          "name": "_ALF0072",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/2cxrggjtgqwfy17ffp6sx/_ALF0072.jpg?rlkey=ikany3x90d9vnqv5boi5bgvh5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3c29884eb8a8243eb46676ecf973621e6951c79432a3c9a9758117a5301c3569.jpg",
+          "name": "Big Jay Joe Rogan_Horizontal",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/xm2gt5c5neyldmflzkskj/Big-Jay-Joe-Rogan_Horizontal.mp4?rlkey=8lahorfvza9ll3s4wufs2cxow&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/a322264e945e188f39ef30b86b06b1dd4d2ac829d305a4dc21458eaef5f28052.jpg",
           "file": null
         },
         {
-          "name": "_ALF0074",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lj0ohgyh4j4jw66clrph8/_ALF0074.jpg?rlkey=o4g5q8bnt6yzi7ejqruy8y97c&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6f4907c1abf24580d9f85d73fd29b5f9b772794d591b97a1fc8d6584415b6c22.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0075",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ijjjvclqm8mzmrdgess9m/_ALF0075.jpg?rlkey=zy1wlrwyfjq7usv2tc1w67onh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/890fe9e9ae27bbc1f11da7b2003d33e2eb22f9d02a3cafa76691305237c2631a.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0076",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/igxbzby5cz0gytlmyc26p/_ALF0076.jpg?rlkey=8ph60l3eo4h856rx29ualgsg2&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f3870dc5d85f9ef453bb5c41fc0aae1f9d21446d13a450f0301c7dfc3024f577.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0077",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/2vqe4h1s2bb50oh1gcj3l/_ALF0077.jpg?rlkey=al2r9gcgt7bezkwiwv0y10p7i&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a85e9e102da32354f33c055635854047ad5c8735c55377c65fcb893c5e7067bb.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0078",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3k99pl4mh6bvlu103syl4/_ALF0078.jpg?rlkey=22r40eqeyf704lbjzvooaihlq&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/93d1b81af673e1512dc422376a1aa332a035d10dc8dfffa918b91d0ddbb6f292.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0092",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hemu93takd4sokxlmgutm/_GSH0092.jpg?rlkey=36dp45sszqji62fswvc53dfse&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/97d3f2a213de06a54f4657125819dcd760fd194e64b570ca19a0e7661433136e.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0093",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ymj96mmxs3vv7r12fhzr3/_GSH0093.jpg?rlkey=chox5pjjthwn60hh0ly7aqq1q&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8906a31878035bd88acf5334b422e7e71e0812f7a008f5e224fbdf4722365f16.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0110",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/pznfr6vqbypq7rox58879/_GSH0110.jpg?rlkey=wleixlbvpspm58oxlgig4aide&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/49d492081e7a27773beadc42b71ce44ead212eae418a3f8c32c3b4750f6c5775.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Photos / Champs Collage images": [
-        {
-          "name": "TysonSG_Champs__01",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nigg3p3tos7tjorr9luyk/TysonSG_Champs__01.jpg?rlkey=t9og6vpelw9wf1d02boe5juz6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/90d852149ac3428ef8d52f052f829774dfc6576643e72eb064efeae1f91b54c8.jpg",
-          "file": null
-        },
-        {
-          "name": "TysonSG_Champs__02",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/werlguceqjyynmfwu6osg/TysonSG_Champs__02.jpg?rlkey=dtciayz4l0ig2mxsqaodwxmgv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2413ef0516131f41bdc20c41c9f85b6c06c9396dbc64c6ff58eed1c06c11271a.jpg",
-          "file": null
-        },
-        {
-          "name": "TysonSG_Champs__03",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0z5arm8xvhhzqzrfyd0vo/TysonSG_Champs__03.jpg?rlkey=5pi3k49padfn2asav1c9njkym&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fec6b6ae5302cc5311001f79c3e1ffb922b481bd486d8db22ad7fa9d956d885f.jpg",
-          "file": null
-        },
-        {
-          "name": "TysonSG_Champs__04",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/jam3g6wts6lapwas54kop/TysonSG_Champs__04.jpg?rlkey=nqq3kicd2p5j1lhuq7j5va9tn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/473ea63e473eaa47c1174e141dc3581d70d673e7537c8982e462b86ba8d6bf54.jpg",
-          "file": null
-        },
-        {
-          "name": "TysonSG_Champs__05",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/sdnsfllh7ehn8gkwinyzh/TysonSG_Champs__05.jpg?rlkey=7sr77wqfzei1b6bg6i3mdgqoh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2981d03f95542cdfe9853d10ee85e8b46a97c3b621de737fb6b6028e29ab2cf1.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Photos / Clear Gloves": [
-        {
-          "name": "_STZ9108",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vk77fbxr89cw7h7ingsh1/_STZ9108.jpg?rlkey=1iaessu7kqumcft8qvawkncr9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e36907f9f7d2867a1bf774d45682089b36091e480799c54464b29dfa599c9177.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ9109",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vseralbo950rqqnjkmi1e/_STZ9109.jpg?rlkey=hxp8yzmmnbv2gsxjehgqhqm1r&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b50d71ced31a429288931ad7ab260e9cf1e2134aad521341760180c45d5036f9.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ9110",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/cnlzsr3ekdhav57hd5e5x/_STZ9110.jpg?rlkey=1dxbdpkjvgacdvxttej3ma68x&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0cb1f64830657eaf8eca4031c8269aeb5861454c244769f7eae4e2d20a5ab47e.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ9111",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tw54qsx3tf4sofi85chvc/_STZ9111.jpg?rlkey=3msw0a1c1tgj3iaojfgqs8jij&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2b94b8cf806c79034bcc4f4e1e63b664f3b34349e7d6d2b71c2771d7f1fb3b0d.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9297",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/o9nb649fo6s46phtjfsh9/DSCF9297.jpg?rlkey=k0qwjhrso392520gatn6a09uh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/797a210edb6dd1f43321ab9a988c3858486aed243647dcc254fcdc65b7aa03b2.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9309",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hogi027lzvit0do36l0ij/DSCF9309.jpg?rlkey=ky4qyxawap8xn1hy9l2268kkc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e6563de52683590d066e091363bed5eb7caa2f96625268458b002e2292c9b068.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9311",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yhl0jrmzea9m5zzidvn0c/DSCF9311.jpg?rlkey=cr5bzdjcqxloqczujo4vcend5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6bbbede17f64cf56bb47553824c7cde7ad777e5206f749338cfa57476f01efd2.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9381",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ul9t56msaw1vvy4y53bif/DSCF9381.jpg?rlkey=d669f35ihp15vg9ys29t2k8gc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d525178d2afe51ca7cb2b98acd789398fcb95a1142c800e223882c1bb47d1ba7.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9389",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/p3h8pd5nhy7xfcv03cvjw/DSCF9389.jpg?rlkey=ifvk5u41w6frwlwpt9hkxm0n9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/12b3c678ff07f51c77d3a80da7e071ec081b166d6d20aa494d72203517c8aaf7.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9397",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/swkrwha92cta8jss23tau/DSCF9397.jpg?rlkey=brp9ajotf839sfg25c40mb4gr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0b3a1ed634111452ef886ecd489056d6531cc55aab51ef3ee74bd65c74dd19ed.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Photos / Coffee Shop Amsterdam": [
-        {
-          "name": "1K2A3387",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/u29g0sxqvlxs50x5zoove/1K2A3387.jpg?rlkey=f84ii28maxz0ahlg8mfn40avg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5cfb9c307faa86a79fd5b969c9b571e02ef1daf0e3852729cff25e363dffb585.jpg",
-          "file": null
-        },
-        {
-          "name": "1K2A3436",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6uqa1k8ixpxko0i7jiknm/1K2A3436.jpg?rlkey=1ff500gowf50uys2pk1iuap86&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d49a99fa9d1b2abfef4a9b29e67351cfa8295eafa7b45106bc25f4a698a46522.jpg",
-          "file": null
-        },
-        {
-          "name": "1K2A3463",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bj2yuxaag7s7nba8bl0c8/1K2A3463.jpg?rlkey=8tgte4ty8typldalb5mekp39r&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/030bf3a44c1ded4a4a61ba25cad2758522bed7d3f50f19e121d9fb8fd04eb78d.jpg",
-          "file": null
-        },
-        {
-          "name": "1K2A3484",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0dzk3tvnb0spyuhy1zcw0/1K2A3484.jpg?rlkey=r60pgh2tofqq4i8vz3c5grbsz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1bbbe5bef35514aa158e74fbc854f54cbb5db1e3a104d13485d0e7a977ec839e.jpg",
-          "file": null
-        },
-        {
-          "name": "1K2A3487",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5gunk6gq71ao3uiglcfz9/1K2A3487.jpg?rlkey=lyxjy1ua4k1q5lcszoyl7mktz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/15d9291811424c4fbeb93ccca75e5768e3e5d610c2ff257520d93742642753af.jpg",
-          "file": null
-        },
-        {
-          "name": "1K2A3552",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/sivoh5fbui7jr14ipmd7q/1K2A3552.jpg?rlkey=d5hj9nzqdxslz3egn1u1b40xz&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a3ea15676ff80bb76bd5f52b007c5e2d4b66cf5a5ec49b3caa763bd7041c5553.jpg",
-          "file": null
-        },
-        {
-          "name": "1K2A3567",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/6kobl64ioqkgc6bdx01pr/1K2A3567.jpg?rlkey=zmotq7jugwop6veqp23gveoyj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c49e4a800866d2131ea07aa489bce737865eadddf097127008fa54908407eeae.jpg",
-          "file": null
-        },
-        {
-          "name": "1K2A3598",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ldvfzpc3e0hkn7f22jybu/1K2A3598.jpg?rlkey=w8bckz7pqdfbbwly67std9crv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fda0912922504d949f504c2b861654f2446208f105a81cdb6c0797823674c57c.jpg",
-          "file": null
-        },
-        {
-          "name": "1K2A3610",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yrhxje6zudp5xtpf2ieei/1K2A3610.jpg?rlkey=duzlv16i6e421tulnhrptw4eu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/29e0dca6b1c4ae9869fff9e19f250195e4bdd45c9b9708dda89c5e1ea7d108ab.jpg",
-          "file": null
-        },
-        {
-          "name": "1K2A3728",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/x1snw9yfe27wwtklb2pyt/1K2A3728.jpg?rlkey=c5t6e4mhvo1ih0383pwim50zg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/302aadfff7ddbf62b83c9aa80b92dc102c7e9af40d74b39b771d3fe0758c8d98.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Photos / Gray Gloves / DTLA July": [
-        {
-          "name": "_ALF0002",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9mnhm9u2hnaw9ugmm3xeg/_ALF0002.jpg?rlkey=5jys1a2wpgsic72lyjjmvg77s&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/25259720fb20acec0448ab0e602e3075a7c8e0f05634867de834c04ec990afe8.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0019",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/sgcmolwt3dtsp8maep5ca/_ALF0019.jpg?rlkey=t8m3t8s9f7nqe0xu98xfsa233&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e2c59daf7f858f9b45656dad56521a6e6ef29fad3f6e07a2a3a747b0c66a1b70.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0054",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yxfdxj89iesw07h1p00qy/_ALF0054.jpg?rlkey=jdccglreyn23am91zpgyr3om8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/11d0f50299273cd0e2fdd9113613349481c642bed6fa22e207ba1efc623ab9a7.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0070",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/7bboztusqqqeo4p7irs1s/_ALF0070.jpg?rlkey=91qph1cpe9qt2dr2xauaneifv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/75fcf2b7a82602069ac4af1fdc1f9e58277f9ae10ad1980f09d41ad214da4a72.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0074",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bfkrahxbyx4ujilnrl64c/_ALF0074.jpg?rlkey=tzz34gfcluvrb17xwnd4g3rju&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/42e24db4aa7c9ee321890969a8304ffc95f5601a6c9c1098b2da68780b2da543.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0075",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ty72jgjmxx4q9am0kljjc/_ALF0075.jpg?rlkey=4u1imc22e2p848o65ex24ta1b&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/785c58df225f54d25861b2d72445a1e3309ab461f1e747c1ce7985826fef70ca.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0104",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/kt9jlezqmizygzi0xv1xn/_ALF0104.jpg?rlkey=ktypkoqr7xil3s3c8rjr1y3bg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5a717f821df2fe1ca15154646c95595a742487a3e0eb1f33f23b0b5181368808.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF0109",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/d9e9ep0n6gwfvcvrbblb1/_ALF0109.jpg?rlkey=sgh9bxh4fd2opqg927x9wdoux&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/14b3d17837f475ad925eb0613da82e9f6c0a1b5b547b6e46aeffc498c81e2568.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH5078",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/uyfag73q2fstbtx3brhr0/_GSH5078.jpg?rlkey=f7m2xt5g8l5x914oq8gtz3liy&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ea343da5eb23055afea456ae125633b7afd246d3c53b7df090e5c05636676434.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH5176",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/8fi3oe9rc7w8kvupd2n4q/_GSH5176.jpg?rlkey=ss2zjkopop5bunimbyttkmbba&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/db5d496ef927a54398bbe8507f1315764e381ff48da90c9f5dc9246f049b889c.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH5354",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/x2ai0vauu6ftbbwlxijea/_GSH5354.jpg?rlkey=yuibyx64ouv6c0ssm7835o2s0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c7bd01399e00895b3047fe4d1ed496be3ec3c050c713c726bf0cac1ba47d713a.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH5358",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/laofm4jo9igljzj847wti/_GSH5358.jpg?rlkey=044f6i6ftsybjnqnxap6lb7g1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2f89d325237437d4f2ad56792b42fb4a44782b7081968198093227d8f32f6d30.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH5362",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/nlbx3zk14swplbjwm3psg/_GSH5362.jpg?rlkey=bxnx28gnaxojqq6jdag5cfsq9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/836bf5fa3173780c55a3782b5a5934acd52fa683d4d7afaa8c488c3546926407.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH5471",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yilftbhxnj7rnc02flajr/_GSH5471.jpg?rlkey=mvufvc01vneb54gjiqsh5h5fg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/eb693a07648521d48c73f5b794b3f881f5f9366dca6f4336f5e8ad03696d864f.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH5535",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fi1w0iyf4b8kim4f7jtnw/_GSH5535.jpg?rlkey=4ozyh78lhjgl7jx3edluzg724&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/325741ce0bc64ea4c3f5deb92e53f5db3ed3ea6494d24ecf4ac4ee66d8325b95.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH5540",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5k862ok07kxpwllq9622p/_GSH5540.jpg?rlkey=v5mkh62jx2vpsi3oj5nmkth6e&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/225f67d74068c933d14b7ce12ccdbdc3fe72d3e04c3ba5ea7fbaf5c6638039ba.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH5545",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xdrujxlw05rgxgwdx8jbw/_GSH5545.jpg?rlkey=z9yzzwfom5qemlhe69nu1uz8f&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8465a7608d3a8166abe48183cee9fa3e0c27bd163894bb369b3e86d69b4a2f24.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH5631",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fsw4s11fyvczd6wxxet20/_GSH5631.jpg?rlkey=7o6hohgodu4xdvk1lh1cut2yc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7b3a5a9fbeafa70eea5f2d1d67ca58b9ccba1c5e94b64ca74eb9b5c1eef4d851.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH5685",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hx5g5y99d4xjmzq6uesua/_GSH5685.jpg?rlkey=su9nyg6fwsp444qu5p1y7mnem&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7008ad0f9d63f9a20f34da8a38cd94f781c78396492eba050b36999b2f822291.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH5769",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tqptwht4lwf8x5hxcf4m9/_GSH5769.jpg?rlkey=4q580pgrvobycqoj3jof2wh7x&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b77798a1f1205b074940476be6fbc57f8cd01096a72045ddfb116971a3e7ae49.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Photos / Hyer": [
-        {
-          "name": "_ALF3201",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/h5v91x07sq0858ag1qe8c/_ALF3201.jpg?rlkey=702bz90x2b2qdhll8wtzjdopl&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1b0a822893770abd083c81188d5b3025c0725745d36e11acdb7c068b53d94f03.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3216",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/d0w3fmjcne5nnhgm2tgeo/_ALF3216.jpg?rlkey=upavczwkx4blpfqeyvouocvtd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/770d6fca14e16f0fffe37d1056e33e5b1d0976662e9d3d4da820f38c8dcae0ca.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3224",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/khor98xp9hjhsrqtd87jx/_ALF3224.jpg?rlkey=6wy7nh5fo3j1925qex0kzg4a4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a5489cb42033dd740a524ef3807773f3ead1ff868a38675732c898aa919e9bcd.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3243",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/n1udoy8p6csyxyegb81sr/_ALF3243.jpg?rlkey=h12a03hbvyj7wi4nya7jn80g1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/421336e98394d2d2454067f66c4fbfe841b75cb8296ab7d16c1532e3639917c1.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3264",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/fg6l44qrq6jer8by5yx35/_ALF3264.jpg?rlkey=on1u1ake65leoymf7jmnucerw&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/830399f672b53422a18134438472e63e183f21695f7f153cd3b5ae760ff64e76.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3295",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/sf147zz5spjiuqc63dddk/_ALF3295.jpg?rlkey=ptmcx7u534ks7h8asqt80gzlf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/412d7892ec14cfb57964530094e2731829b6c3d4b0e14e236f807bacd9407853.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3319",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zba7fewgfmbzbmqwg284v/_ALF3319.jpg?rlkey=7bb06g5bpky5rg9g1mq4nc8oc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/564a8d0ad81fa383c012b0fa9848e184092edecc807f235daa8cbf22a376791c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF3326",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/d93hlbfmdi983hfijd07n/_ALF3326.jpg?rlkey=z7shrfak1u6bicy9v7z9opwkp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7123f625e43c766c3a0999a3e10209859f97ac7b51ddb5c4757e8c1a8766fb5f.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0695",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/cypwxdtdxwxpt4z86owib/_GSH0695.jpg?rlkey=t6aed01qpdnysp5s3o0ogugir&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0fe65716f2576de094b3d1d693cb35de005750e6eaaff119933ff080fda1ee22.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0701",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/54pu0oulzqns5an2s2xp6/_GSH0701.jpg?rlkey=9hx0h0tkb36s2vsjivmvw0i5i&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8a7b91748a963a4057aeacbcb69f4b2b27a41ff978ee0c6ae1b641b62d9b649f.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0703",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/vfbawuecm82tmvmg0kkm3/_GSH0703.jpg?rlkey=h4fw5edxubxkguh4qs9pftbgv&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b00a23623bf7b9fe91a417f5255e0e4af13a0ab3ee2000bba7ba1a6f67fe9eb5.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0707",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/rhcd3b52f7gqyu48yfpuf/_GSH0707.jpg?rlkey=3htydsascl2rak38fi62bmea0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d8a32129bc6fdd3a75c0c059c178ae51e30c37dc8fb50cd879aa501fd8bc6fcb.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0729",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/omxf5n2flikweful19lcg/_GSH0729.jpg?rlkey=zmto4qzweufkqzme2z8ooakk4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cd29f5c3e1d9410a9a418b5b7d8dbc56552aa311914c15c31979fb83b99a569f.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0741",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ikv9qvso3gemp8emjj6dr/_GSH0741.jpg?rlkey=mis40dikceord7ksz4o8844e4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2e0666d4b14131df33c65a09eaf3c43a1435277ff9a28e1ff250192a93dbe94d.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH0743",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/mc1uo4q7tl3x0aetur8ma/_GSH0743.jpg?rlkey=tvrjw0bsoj2x7yu8nqm6wtyg9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b291ca740ddd54042f87d85f4c55427bdefb7e49313671faf08043be2b616e32.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH8563",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/83b2st9nuioz9m71v63lz/_GSH8563.jpg?rlkey=yxjm1xlrbyj2y91h6n0va9tbk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0b8ceb0c0a49d62a146f761750e7a06e9c9cd071a1ff5281f85ca64b56715caf.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH8566",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/e8gzz9k24dvfk5ru2cqlp/_GSH8566.jpg?rlkey=1b0o5n54bioonx3t82kjzbh5x&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/17330a3009f15d0b235300b32be30768e25f31d7ebe3a8b9ce5922fe1d92ba9b.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Photos / Mike Tyson Santa Monica": [
-        {
-          "name": "_STZ6259",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yraislml59rxchg8nskd7/_STZ6259.jpg?rlkey=1uv3hcfsde8zt5xexucgecbco&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b8edb297e843e00cccbc1a49ff90babd74755818d36e5c4e193592326a71b21e.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ6260",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/eqxi5deni54i527zaorsb/_STZ6260.jpg?rlkey=vwscpdvx5ef59xom7thps1wdj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ba0bd6012a5e02d58a4a2a3b99a612024b9f8b86550fc132fc287ec8e5f29dfb.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ6271",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/i7mjzhu7j8ym8shwuzgc4/_STZ6271.jpg?rlkey=6u4mtxc9aj2clz44625vr7el6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b51e991fe1f29aa6e37f951e9cc2990e9fc744ec87e097a56cb3bd4f97f8b13b.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ6276",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/w28k9f51n4vsh2jbhpxwu/_STZ6276.jpg?rlkey=f3levmj5sbadl19lpvg7l6bob&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/45988aaed37471bd687163f6e82ade2abfa3f4824d15e6d30884cc4457a15bf4.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ6301",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/p6fp23usskv03s3yieate/_STZ6301.jpg?rlkey=7hurc7n7aywi73mcjcxe8y5n7&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/19dcbba84357c143b6d81f6a3a30939c84b31f55bafd691f7b6b596b1629bb8f.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ6303",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qo1lctd4lrwatcwewszg6/_STZ6303.jpg?rlkey=pq0lmg9h568qpdg9w9l2c5pbd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/bbe1681010075ed933bc3536f718ea09d176310b16fb5bba829facf26f6f95a9.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ6338",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/tiaq77lcmlfheqzcfx81l/_STZ6338.jpg?rlkey=f96q6kq7qaqr54i0vpoqip9t5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4fba6427108034c2fa3f81bd66eec50c70c1f60fa7246613e6b2ddfb9b677c23.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ6349",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ouv8tvu0xf2q4r1jxjj2j/_STZ6349.jpg?rlkey=kpx6oi808i17vnb8krt6bdc9z&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/10be1ca9ccbb76f81ddd81d6cba24578b9b9fa982aa476a0d3b1fadd5e848e44.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ6361",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/55fouchdfmc1k7d4ezzvf/_STZ6361.jpg?rlkey=1k5wy5p8u3o0th2g8b8f4iu6h&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9a57d2bd2b52ed95ed2c24fcc2e2831224d0e79397aad16d5f1310bb90638806.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ6502",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/i2nsdjqubc8b69v43b2kr/_STZ6502.jpg?rlkey=1tpdsqn031uw1plqohs63f4qs&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/bdc2d95fe0db21adeff1fc70257d7bd7ba20a44901bc164c3bfea7658d48807c.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ6504",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/i6vwxzvy6azgl3i0snqpa/_STZ6504.jpg?rlkey=uhyky08jtrg0dwm358ynr04nj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ab267df5dd3ab70e22abaf1b5e22094b3d32761514c3f03386f89c0d4393c0b8.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF7312",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ge9v8vkcx7qxrhzqutjcm/DSCF7312.jpg?rlkey=ht0rba8g6sxd2pwyo05pq9ryd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/33f72cb9cabb90253b53d8d644614cd98a426ccc37650978f476c9df4738b77e.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF7312medium",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/i7hwuegalbqux2fzadyb8/DSCF7312medium.jpg?rlkey=catabcb9myzfp8hojevlfisnj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/723858ab8625493d035757f7cfe53cd6bce703e6c0350ed5227d8c26a3adc120.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Photos / Oct 2022": [
-        {
-          "name": "_GSH8113",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/h3hiptqdedyyaibnstq5g/_GSH8113.jpg?rlkey=tskr2xyjxi8l8vg14jo70iux8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5253e7d07b3ba30a4add2217a084b6e15fda8416895c096243702bea1b9220a1.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH8132",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/b7pj37ugca7vuksvfcfld/_GSH8132.jpg?rlkey=12jrnwkna4xlyejhhvpf5in8t&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f083264bd06ac3274a0f67b9fcee44d8620a980a5a1b88c796edc30e8b4a3442.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH8169",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/2jzyi555j6xn8oc8apex6/_GSH8169.jpg?rlkey=jiyyaa7k6l4krapj29cs0h0op&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5f355ed4949b6d5e5d1d20bb84710a4e8e5486dcaab59ce4e1f9462717fdfe9a.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH8215",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qk6aa6n7n5jct828ppkxx/_GSH8215.jpg?rlkey=49kkf28amm99ts08k4vx4tky1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d4fdab4f54dc39ccf0ddfc1a51977a8bd863468d9c79c0a5fcb68001e0975bec.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH8237",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xcnjy3b7wh27wg7gbdyp5/_GSH8237.jpg?rlkey=gm2hx72rt8l69bbc2lupuumr6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/100c66b883a120b2b03f88dd9f6cde89d44822696a0072ebc186156019093114.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH8248",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/s3v29khv9x5mtoi9ih3g9/_GSH8248.jpg?rlkey=vkwnh7ug9lg9ql8ncun672pob&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/67eba91d1ec83777e45facc5bb3b7211c72fe4a7350b562bd14cc50b1fa3ed13.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH8260",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/h0kx0cxd1uznpaxj4ombu/_GSH8260.jpg?rlkey=zkx99c5y5p8pn7sx1txmkvlws&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/996c9cf0403000274932e04cf6db1c899e44f9fc4330badc72a6dd0c75baa9b4.jpg",
-          "file": null
-        },
-        {
-          "name": "_GSH8265",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9xc2rm9xs6ya95di0d5ls/_GSH8265.jpg?rlkey=89svbzg3muaowk6pgjxlgs74z&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/80efbbdea11d0384588dcff01a8f8a82e86bb86c16b4534314a3ea904b93af61.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Photos / Palm Springs": [
-        {
-          "name": "_ALF8842",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/952k5ke32avx54zl1aw04/_ALF8842.jpg?rlkey=exq1tf2i4imtw401r770apr49&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a0943dc0e46387629735142f3ba4d90ed2d41a69ed8191f7ef01d5d6d61912cc.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF8843",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/a9pfeyr7cdxo4q6rg3y9z/_ALF8843.jpg?rlkey=kcp1wkcni3baeyrvqbfhaef8o&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/11497c0ed534a04d81f8ade9a05894e94fb2b354f8a2f6d27858357749316471.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF8846",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hl8duzqntgnzgpbce9h6m/_ALF8846.jpg?rlkey=s8ttgvcjm2nal2m8ybb98lcj0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/94685e744ae8a4dd25fcf8c81dfa0378f8a8e79031ee91a16da5aaf4c82c679e.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Photos / Red Gloves / DJ Whoo Kid": [
-        {
-          "name": "DSCF9047",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0tnnpmlrn6n1qbvzb07vn/DSCF9047.jpg?rlkey=wq08xkf0886c307xl32wfuj1g&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ae51e36ce5b8b402e831131c35b12d9e94ca105d80bbfb51bd54462552fd0512.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9049",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/npjc44gnf48jrxauxqaxn/DSCF9049.jpg?rlkey=hcka7yao5vd5pl7nadc066nhc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/73b8c109a1dc275851f755a537956bf5bc2c9cce2ddee33b354dd2872854910d.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9066",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/jrv4h7r7ryloa8azbvh20/DSCF9066.jpg?rlkey=24swilbllva7w2o715ow9zc4b&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ebb7274635db294a3151635d866c14a1c026962b0b875832f31257ae079c90d8.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9068",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/s0fg5p9w2af665fud10jg/DSCF9068.jpg?rlkey=6cuwqvyjkl6yp288lruhy4qnc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c560815097d57a628fb27bac2853f227aa81cf9513dc0a6482eca6be00f72906.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9069",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/u8mc99ut3yb5pqb8h4wd9/DSCF9069.jpg?rlkey=3koikar24dmkwrqr6zcxukq9c&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0db44df554952824f3f5ca64993d90a5aba0fb62878130f5a83cbbc2d245e95f.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9079",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/jabrq1991bj27wv5k2if5/DSCF9079.jpg?rlkey=vxdyrs5im1gvzuxl4n2v948f9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1fc5d981d989aba941011ebea4c34edaf83f45e231d47039a0a95ff1e17a6376.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9083",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lsfbsrtxa1k16biwr08dt/DSCF9083.jpg?rlkey=5nguusd0ucf828fhe65a4bh8s&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/97e51645da96d7841908f3f7928a84626b0e67660546250450660e497f1b51e8.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9084",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ovnd4etplwn8yqevbh667/DSCF9084.jpg?rlkey=6sh93hpf6q78nlwah0cozul20&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ce5923bc8e4739e08aafa5a25ba0e46eae547b9dd4b8911e64ae3e53a01b2518.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Photos / Red Gloves / Mike Tyson with Red Gloves": [
-        {
-          "name": "DSCF8881",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/53go9xpm5askwq7ahilky/DSCF8881.jpg?rlkey=5ypy2qz2ypuutryme2dz2ux5j&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9a66f2f558600d64b374ee7636e42cb7f37037a32450442009c0fd491a201880.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8890",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/h7xpvef0e5ig7cyqnfhey/DSCF8890.jpg?rlkey=jx20x89pn5cpn0y01u2ke1bz4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/963dafd98d9b1eed68b9b1ed332e01044b2cbc4b7e83b1c7936e7023ece1b409.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8893",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/b1c7xd0kmdjfzbfak3kq8/DSCF8893.jpg?rlkey=jtluky0pmhu250x8w0k2bv23m&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/edb7f6bd2fb19c3977005e7ccac65b0e23556422540a47a4e38617f90b89cfa0.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8906",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/zi3crtblm1o50ntdt7jr2/DSCF8906.jpg?rlkey=8e552k3326znnuhrl0lituss9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/48e95d9689da6ec0b1634fdf9c232c3c88a744c8791fcc22e36a9fdd6298fb71.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8914",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ngubfp7wq7jzi1g4wl4nj/DSCF8914.jpg?rlkey=axzsw8f1278bqyn6fml9u6btu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/85f172f5db234a5cd3d77f1907244f0f6775cbe458df1ebf918477d87542b286.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8951",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lwonl400j9toqas1hx9ld/DSCF8951.jpg?rlkey=eumjuhipw2om4or7j7jdmpdy8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/60bc8fa3fdbdc3c1847b2db349144a2ff99653d80a4a111fe3849beba408d921.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8953",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ucrk89l7xdffn4ujerd5q/DSCF8953.jpg?rlkey=6k8f1thuj4xoyytuauvchwvqe&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f93f15a6a7bceb0407ef523dce0cb3c1f15528326fafcedcb74888b90d048ad8.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8955",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/jd8611a4r3t9mxu50xkmj/DSCF8955.jpg?rlkey=n7nhip25bl6eood7y843n1fds&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0b99c46e4a0db4d4a03bec1e4397cb554834d6ee1168b496f0d1e1f08d91e9cf.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8965",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bwpkedvksa5zg4hz3oacj/DSCF8965.jpg?rlkey=0um7cb91bwgfgug7qx0gloi83&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8176367776ff004460d9974df25abb812dddcf8d5c5bff288ebde1dc5f821b6f.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8986",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/60eq6kw7mmqa3e7uy4o1u/DSCF8986.jpg?rlkey=1g27ap2o016leydxjs6icl3jn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/374d24303df3d7b6a63f425be8e62b126da25b8cebcf53260525ca851fad4f1e.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9007",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/mxzkb1wvwyzg48gtgi416/DSCF9007.jpg?rlkey=g807eqsk9422rxbl008ivfnph&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/827d1a3e7a626bb3ffd3aec20047b407b0c65e3249802d994759c1754c29702a.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Photos / Red Gloves / Red Gloves Alone": [
-        {
-          "name": "_ALF8048",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hazuedmfs05a890gknh6v/_ALF8048.jpg?rlkey=q37vd0b7w4pvmylfeoru5k1cg&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3eaca4cb85e59557a92c8b664dfc055a2b0900c33959802a2fee19430abab593.jpg",
-          "file": null
-        },
-        {
-          "name": "_STZ9102",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/lg2waoak0gshf1bk5scgq/_STZ9102.jpg?rlkey=7w1te5ok7amts6rpe905e3dzr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/536ef67fe5ad3af6852e0b6ac15eed8f9c64c7206bcd00cd2eff56660856d775.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8652",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5y798lvm29h826czoidmu/DSCF8652.jpg?rlkey=00lo0k96f2d0wtny0i3lmo6n1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/79e46595e75e1d022e49b5663205dcc40b3e84ea82944f753e882fa5fdfab1c5.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8653",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/wnbsq2j040dr4bmjts6ve/DSCF8653.jpg?rlkey=0zk9dd7x2nmd8xjhvk4v9om2j&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7efd4bea5d5101aaa12a087c4b912bdf8672eb2b999c2b08929d6546c9fd8515.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8656",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/yoaqh8frfqwk4nx1k8f8e/DSCF8656.jpg?rlkey=wunyd4svd1qy2pma595goe8nb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/28a49817fbe31340ff731e4e98c39915b13017aa02240ef15fc49b48bb9ee2fa.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8802",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/s6fok2u3vbn6omnoz4lvf/DSCF8802.jpg?rlkey=44l0xx9jocksajoejy2feb74o&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/54fadfff19239e27aed80cbdf3fcccada3fb584a8bb56bbc18c7a0b4809a2cf7.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8828",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/qk3vfllwgzbzjwr0u3z97/DSCF8828.jpg?rlkey=ruud959s97eymvzzcbwwxmixc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0694e5b7b861d7f147d00c16fd1f40fcce30f19fd5c7eac277787314faeb404c.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF8844",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/984j1agh4m70jtouc4ynv/DSCF8844.jpg?rlkey=c9rhlws87c2dyean3pajo0cmx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/5f7754a4732c97abce38d8817d6903c38a99d0c68c087381d1d98c8a92cf2194.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9259",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/jy0id7iitwc9hyrs396rj/DSCF9259.jpg?rlkey=v2jf7o3v2fvw0s9futnfsknha&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/7a9c1f3567a910a9b40474b11af7923d6ed40ffc19e2004797604bd7d787e281.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9261",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bx11oxmy4fs7xneai8ca2/DSCF9261.jpg?rlkey=9qdfiuci3ero8rhswox2dens3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4ca7626dbae7d5c3ecb59bb53845d37dffb5f8795be1f8ecf4b773a2af5f3e72.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9264",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/5bvggqwgja56onyzckicb/DSCF9264.jpg?rlkey=dl1ro1n80z2y0o65uem33r9yf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c3008182d7d923e4f10f8bd85b744d30cca0dac628528b6316ab6ea6338f3aad.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9271",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/ss3bid70xbfpcijbxmhmj/DSCF9271.jpg?rlkey=l0n1wxr78jwq4a5dza687ut2j&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b8ea04ae1c205a0550aac6f63646cd92be82d823cfce5e1781527fe38ecdb4e3.jpg",
-          "file": null
-        },
-        {
-          "name": "DSCF9291",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/xzm4te2ugu0dm0rtbwy7z/DSCF9291.jpg?rlkey=fodcerxuuzylrnmtnhl8kg7o1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/042055aaa58f9492075752ac6dab2dfc365f71e45e553d4bf7e202402311e74d.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Photos / Signed Unit Gym": [
-        {
-          "name": "_ALF5720",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/pydu9bnflzlpcdq9kawzr/_ALF5720.jpg?rlkey=kt3dx70e2ywenbmihfecggwxh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e3da517360981e636279172c9cb66611e2c1a684ad2f65ed3b2092cf72f90e42.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5721",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/9wnzoth739t6huz8jlyw4/_ALF5721.jpg?rlkey=97kt4ww8fj4h0ds1wkbj4lf84&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a447c530a62854dd3a43b0a06e8c53eaeb266cb9de5a2474f2ab7183b401d9b0.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5722",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/1toxauyaqy1pmbeyy8jok/_ALF5722.jpg?rlkey=bgqz783tei1u0o6maqpyivtwn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cf9eeb1850935db0951ad7989c62f309c23b84ea169c1e6f65e7def541ac467c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5723",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0nr5e469etpph6yz597v5/_ALF5723.jpg?rlkey=vmjl299cpb6eejzog6w5zhksp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9fa0387a472d0a3000e719855aafb037573877ca144199c6e2dc0f0d797ad97d.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5725",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/0vfrb3og3ev5ewbnyu7mc/_ALF5725.jpg?rlkey=xmq8nxpvea9smdfhdekxxwhmc&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a217d213ad1e043f3807ff2ad88e93fac9c7d3d2686eb2279e74eb8f2e77c95c.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5726",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/c4f3ay1y9aiobupcwrv1g/_ALF5726.jpg?rlkey=r72u5xinil0d63jg9zpauti72&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6f7a202f1bde51a72442948f2d11335785b6b47b252dab68ded13da5ffac80d2.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5727",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/3osj70g46018u0cio6k8p/_ALF5727.jpg?rlkey=7r9ra3jn9sq6f1evjchwkfgfb&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4f07aa1b79f49268226dea62c6b41bbd4d528196bce24580f0234faa357c0a8f.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5728",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/mr12tl95rgpzgg07hpnoo/_ALF5728.jpg?rlkey=rwfzswfro6wr1sfnn19gqdqho&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2543206fca269f980775124e8f174ebdbb20e7d048e10e1cfcc4bdba32eb7df3.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5729",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/76pxlhzyr4oin4yekjl2l/_ALF5729.jpg?rlkey=kkds5xxi8p7rpgcsfcf6fi2g0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/58f905771023c345c5877adb2272365b5b8e55a67dc4ed71497316a95866fe21.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5730",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/bht148kor7a0cu99e7o02/_ALF5730.jpg?rlkey=r0r8cp6zoovyysrpkbx87we7y&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/55943193b59e0118ae29516a8e1ba7f5132b3c2caf5a0673bb823ff7528fb52b.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5731",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/px80van3l1wrbmhoolbbh/_ALF5731.jpg?rlkey=pdgcq0tl9fkcfg4ienuk4v2va&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fe901dc081b1efed3cc0a87fabf4bd932bc0ac2a28c8e8eb6c3a4e09856bbf74.jpg",
-          "file": null
-        },
-        {
-          "name": "_ALF5732",
-          "type": "image",
-          "format": "JPG",
-          "url": "https://www.dropbox.com/scl/fi/hs8tobwj04b9ybcywx1x9/_ALF5732.jpg?rlkey=uns2f39d2x6v1ffdxs3e79zi0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c3526f5fd22918bd9cdcd6120d9f3321a01c8026b21d9a983a018acc48a71113.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Product Renders / 1200x1200": [
-        {
-          "name": "web_Tyson_HoseAccessories",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/s7q482iml7l3i0s0a872l/web_Tyson_HoseAccessories.png?rlkey=ljzjm8wbf3lcij5d2nlesvbl1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2c74584fc710b6800feafe730eb5ca4a01ab7227ff832fd544e1dd9506c8f886.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_LayFlat_Render",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/pooi7n4xukdzacjmxrx3s/web_Tyson_LayFlat_Render.png?rlkey=vcxtyzs40n04lgkgc4d2ii66k&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/43387b01f969ba6ddacb080c155fdfb48f693f168ec4b82ab44043bd4cb3c7c5.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Mouthpiece_Solo",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/dagcsfjqitnqs3fs0aomk/web_Tyson_Mouthpiece_Solo.png?rlkey=96kmagz0objzu7fuabr3n00ic&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/16e3413c3d2b64c8a5137fd06b5c0e6e9cb6a8717eac0bcb930f9ea2cf388a85.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Mouthpiece_Solo_Transparent",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/9ipyu01gyk6az8h76atm2/web_Tyson_Mouthpiece_Solo_Transparent.png?rlkey=tkhtz3i7eu0slwnzjibmryiq9&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f2878139edaf98d9b859b2d64cf8ec7f57a1f883905c76b537864538894ddb7b.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Wand_Only",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/bvuxk6u5yihjnp3l56xwz/web_Tyson_Wand_Only.png?rlkey=k3qlx6lz9wbjxb1gmrsu3vc6o&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b8648e6a30e6b8e7995371e7d993e7e1b7cc9978a3e3ef1547447e329b7c47b8.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Product Renders / 600x600": [
-        {
-          "name": "web_Stundenglass_Tyson_FrontFacing",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/tku7mhclhzi0xrgwk7794/web_Stundenglass_Tyson_FrontFacing.png?rlkey=dlsmzd1dl19yh17vrtzkr7hs4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2d61287672044a65bc5aea045b10c363bb07f8f3a6efdfcbe709e8d5bda841e6.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_HoseAccessories",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/igc4pnowi7ta8xqqs08ah/web_Tyson_HoseAccessories.png?rlkey=1tzp6gkupky79z3gl7hv6yr54&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cf5083a31f045fa1bb0b62cf67f37b261841d5732876e1c71a9911c004f6e7b7.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_LayFlat_Render",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/ryxk0ock9wiojqbqsqh75/web_Tyson_LayFlat_Render.png?rlkey=ji6kwuyypg6e9m44xrhu3pkox&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d503c622975d244670c796ff15947e09791a437108c8b6d64870e7baecdb7b1b.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Mouthpiece_Solo",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/tuqi48npswk5px9chz2b8/web_Tyson_Mouthpiece_Solo.png?rlkey=r1vhjg4wccvfkwbn8jsii772d&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/af823e3bb80412ac38fd89c6999108edac95aa3d5b567fdae65548c1a7057d37.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_WallMount_standing",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/oz612tr1fql1jdfmwejxm/web_Tyson_WallMount_standing.png?rlkey=zprzrsf99w7bcplnak1n8lb97&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/09fde5c9fa73c8c58c75c82689e31c2b839021a991dc599b486230cb20e51323.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Wand_Only",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/3mozd1sjwk7j9h8is22th/web_Tyson_Wand_Only.png?rlkey=9i0v7vijjncomldjnv47zwx1s&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/df726345278ed526ef031677ece11054c82e86c4f95515f6d3cc812558baaf3a.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Web Renders / 1200x1200": [
-        {
-          "name": "web_Tyson_Front",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/7733zj8b4x5z36jwgu757/web_Tyson_Front.png?rlkey=ye6np44z6hq6xblx4f9od6ywk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9da20c99ecea99e791218040f70f1fd32746fae7e1f21497894e34981f2042bb.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Front_Gloves",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/zy2a9uii2pwzgfz3cr79i/web_Tyson_Front_Gloves.png?rlkey=81puaaa0iqnvcuewvyreec16s&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1c4dddc2ebb4ff2175a0ac417b32224a055139e9dbb51030111ebd85a40b43aa.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Front_Gloves_1",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/xl8z5980gi3ubx243wc6l/web_Tyson_Front_Gloves_1.png?rlkey=jsy55sdpph15vegp1pk8yp7x4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1e5e7ae7f6d6cadfc9d77ed7382671b41a043c36c97fc889c21d4a0c6da5ab60.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Front_Gloves_2",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/mr32pd0p0d5zt8cjo5rqx/web_Tyson_Front_Gloves_2.png?rlkey=jysrjngj2dfjsf33uqk3x3a3h&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4422fd94df4c8c9971452c19e2d8af482348376b919c2d257c1a7f7feb736209.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Front_Transparent",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/b8be3i6q0m5s2a7a2kheh/web_Tyson_Front_Transparent.png?rlkey=2kajzjovvgkjqrru8191o5uy1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9da66b651685f9621e1e129c2f6fddbd0765f49cc8bf915fdb7c53eddf7830fe.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Glove_and_Stem",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/nk8bwvqut5sanwz4dv597/web_Tyson_Glove_and_Stem.png?rlkey=hun1nfxq0ox4qbzremkgv9bwj&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1c244b3d21956f3dda524cc0c33600df6902323ce4192936420f0842d8b7ea4b.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Glove_Solo",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/nb3j8thfhl7aatie0lxf4/web_Tyson_Glove_Solo.png?rlkey=q1dnmv91vcgywklvlin3kmrtp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/1cacf9cbb75b12dc69c2d5ac3eb9d1e8423ba15f8ebee6a0ccbcb59c2f75fe37.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_HoseAccessories",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/1e8flu05u0pzo21p450mv/web_Tyson_HoseAccessories.png?rlkey=u6n5dmtgwofw4kpif3zwukua6&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2c74584fc710b6800feafe730eb5ca4a01ab7227ff832fd544e1dd9506c8f886.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_LayFlat_Render",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/jxfq8wkmkdplij55kzmpu/web_Tyson_LayFlat_Render.png?rlkey=lx3j71uyzb7sgufhxtm4959bf&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/43387b01f969ba6ddacb080c155fdfb48f693f168ec4b82ab44043bd4cb3c7c5.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Rear",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/akyc6yt3stqd37u6n2ybt/web_Tyson_Rear.png?rlkey=yze0iqr0crqmw5cs9zpgi1ygp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cd9019a233bb79915c51124bddd6a0270c84f366d00fa344affb20f7c486047c.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_SingleGlobe_Front_",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/i8fgj6ncavdujisk6dtvl/web_Tyson_SingleGlobe_Front_.png?rlkey=e9ipcmy9t4o0ic10p62fwls8a&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/afe02c109ef0b60705b03c3616cb762c8bcf91878673601cc4248dabb502678d.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_WallMount_standing",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/hgwm7isepwifriwxhlz6s/web_Tyson_WallMount_standing.png?rlkey=ensfcphyak5ov6r1t1zltxpw0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/0c11d8c0060be8b927d8892f7f727248c7f927e01fff49b237255ca17762b0e0.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Wand_Only",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/tzm5thxs8ycytutazkizc/web_Tyson_Wand_Only.png?rlkey=3wqmrifvmf0kkz4rqgtibkeud&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b8648e6a30e6b8e7995371e7d993e7e1b7cc9978a3e3ef1547447e329b7c47b8.jpg",
-          "file": null
-        }
-      ],
-      "Tyson 2.0 / Web Renders / 600x600": [
-        {
-          "name": "web_Tyson_Front",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/ucioqq81tu45hpxzrmakt/web_Tyson_Front.png?rlkey=fbmrtaco4it7wu4m7pvz9hmha&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/de420dda16419720f647670584db3b4aeaf77998fac771c47d15e984277b7c71.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Front_Gloves",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/welfw9dnwxi6ifqcq9b0i/web_Tyson_Front_Gloves.png?rlkey=yfup090dqitd1y1px4hdjhsf3&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ca74e70288ed21ac5f76af4f96808571a97976909e6d9e30ded6257d994af4f9.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Front_Transparent",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/vp3zqgebsmfrfspivc0cy/web_Tyson_Front_Transparent.png?rlkey=1o4uutqq5mvunoozly93605qd&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a330cd91ffd8dc79a5568abf50d79cc49818e358cd4358017533e15d2e4ae768.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Glove_and_Stem",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/if0bxtfgtk3msqpetfuw5/web_Tyson_Glove_and_Stem.png?rlkey=78n7kguktuk19095ewxd5i7ti&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d7848df974d4115837106dc0375caf8bc800303130d5e885c75d4bd47a60ec43.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Glove_Solo",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/y549gdvd3w9xvyirp92h0/web_Tyson_Glove_Solo.png?rlkey=i39cm4gtcxukj9f4dngg6enp8&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/84b422a962a2bfd4afac89e49e8e3a361dfbc7cf1ffa1272dc555d560c2891eb.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_HoseAccessories",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/sz5h6hjrmk0xpeyobk2kf/web_Tyson_HoseAccessories.png?rlkey=20mukiivp7tucwsomreu7qmbp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cf5083a31f045fa1bb0b62cf67f37b261841d5732876e1c71a9911c004f6e7b7.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_LayFlat_Render",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/rgm2uok1r1hm9ajx7sny3/web_Tyson_LayFlat_Render.png?rlkey=12j3syrg90he8882zerlm2v4s&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d503c622975d244670c796ff15947e09791a437108c8b6d64870e7baecdb7b1b.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Rear",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/uk1ty2zntbnx4yxzn4c8i/web_Tyson_Rear.png?rlkey=1et0kexgg6qyl407640uu9wo1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/10f233ece82bce538f26225792eaebf02632e660454bbabec0bacb43fa142d2d.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_WallMount_standing",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/wtpweh6p8j8kou4k4ocae/web_Tyson_WallMount_standing.png?rlkey=ha6p1d9pauhcwdqhrjq6adu42&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/09fde5c9fa73c8c58c75c82689e31c2b839021a991dc599b486230cb20e51323.jpg",
-          "file": null
-        },
-        {
-          "name": "web_Tyson_Wand_Only",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/pbbhrsdne112szh3li8lf/web_Tyson_Wand_Only.png?rlkey=phbeez7rtxbepxtosjlr8vx01&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/df726345278ed526ef031677ece11054c82e86c4f95515f6d3cc812558baaf3a.jpg",
+          "name": "SG Tyson_horizontal 15 sec",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/m8xc3539jzz5xd18jgkz8/SG-Tyson_horizontal-15-sec.mp4?rlkey=02hokk13s8uk8wac96xxc0mlp&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/dace55ab4b63e3f6545764b90a43ebebce0d8e46851f7896caf3956cb0f63720.jpg",
           "file": null
         }
       ],
@@ -13153,22 +7281,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "chillinitBlackSG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/wnx57g6m6feoh6gu96azp/chillinitBlackSG.mp4?rlkey=4wsoiwkom2zo2ke881ehkiszu&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/abe105fabb05dd4ffb14156660f1775e005fefeba2ba3d83e57531ebbca04e83.jpg",
-          "file": null
-        },
-        {
-          "name": "Clouded Queen Black SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/2sak0ytklq2riwbjmah5h/Clouded-Queen-Black-SG.mp4?rlkey=nj4q65aoy5kwl1tbww5kd8oe4&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/3cabfa0f6ec93580a61a6537003a552ebaae1fd1062a257081ba5333b1424b54.jpg",
-          "file": null
-        },
-        {
           "name": "DanielSonWilliams Silver SG",
           "type": "video",
           "format": "MP4",
@@ -13190,14 +7302,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/hpicxaxpl8xx5hv8iaxzk/EarthSmokesTysonHyerSG-March.mp4?rlkey=ya8jfvi1i45ipkfu76zqqfmn4&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/c81361663217ecd9425b41e40cea235d8a3429ad45c55e2758a28cfbf02f962e.jpg",
-          "file": null
-        },
-        {
-          "name": "ElegantxLeaf Pink SG June",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/yus3yn36t11ekzqho6osm/ElegantxLeaf-Pink-SG-June.mp4?rlkey=lrulh6nbyerv62d78islr721h&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c253c9f1cc1337dea8fc696f40cb03fe40bfc7b12a900742ff0a828917b38210.jpg",
           "file": null
         },
         {
@@ -13249,14 +7353,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Irish Wick SG Hyer",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/mdhumvee10litl9lmovlb/Irish-Wick-SG-Hyer.mp4?rlkey=khdeuo9l92rpomljzfjj3lcer&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/a0ce3032f49c7d6a3f4c99b7d40d1ec08c2a808ee32b26d631923379aa0dbb95.jpg",
-          "file": null
-        },
-        {
           "name": "Jamison.David KK Unboxing",
           "type": "video",
           "format": "MP4",
@@ -13278,22 +7374,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/le3v6zcafgvkuzc0iu4pu/Jonzmen-KK-OJ.mp4?rlkey=hk7qjbwtrqnhcv5ry0tqchti7&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/5ebcd761075168900cf25e5bd9dd3080c7405135dbcab867c1e90d08095cec92.jpg",
-          "file": null
-        },
-        {
-          "name": "Kimmy Tan Pink SG Livestream",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/p5ja062fv88qirovxudpt/Kimmy-Tan-Pink-SG-Livestream.mp4?rlkey=1c571q03uli6tkd7cgbt2uqmr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/590fb052fa1d6d3c7350c402836832f5a22cc79fd146d67ecd8e8059883152df.jpg",
-          "file": null
-        },
-        {
-          "name": "Koala Pink SG Rock Paper Scissors",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/mio4grgrtmtn4eccg4z52/Koala-Pink-SG-Rock-Paper-Scissors.mp4?rlkey=ztay31ltsfru30xx47y5yme89&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/8a4c6f4fb625b6de42d1a62ec691c64906c3c324e3e3b2af72e8334e0b5c3058.jpg",
           "file": null
         },
         {
@@ -13329,14 +7409,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Larry Chestmount Motorcycle",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/vqxdkl6x6x2n6zzocv5xp/Larry-Chestmount-Motorcycle.mp4?rlkey=j9weynzx0ba3s4av4vd7corod&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/4b705d3641f0ef9404d92326f5bba4aaa345cc1de884e5944a5932f36496d970.jpg",
-          "file": null
-        },
-        {
           "name": "Larry GD SG Metal Detector",
           "type": "video",
           "format": "MP4",
@@ -13350,30 +7422,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/ztyetomo4s1ad6fwyd84i/Larry-HitHug-KK-SG-Reggae-Rise-Up.mp4?rlkey=38kxyap0y17nk7xp9vzln5pgw&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/137f4b8fef786b21937903523bd6bbefc54b3485263f08ef99f468041be42172.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry Pink SG by boat",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/4zr3gd2v9ua6b1zfvnqto/Larry-Pink-SG-by-boat.mp4?rlkey=mb7xcrl0u5hq6ok2hqq8oywov&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2a404c5cc5b9857e51429c8d341d106445269c82338c10ae5dfad280a06119a5.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry Pink SG Rocks",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/eh0qw8k1f2gujx66gx3yh/Larry-Pink-SG-Rocks.mp4?rlkey=9ytxzmi42lnkq5a995gqp4nus&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cd79f0fb87d1b85ccef894d6f008928034f7e3226a4b47280153d10b82e48c3b.jpg",
-          "file": null
-        },
-        {
-          "name": "Larry Pink SG Waterfall",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/lb9h15epllv7h5s8aev4r/Larry-Pink-SG-Waterfall.mp4?rlkey=or6o9rj7poaqejouhb9xysk0i&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/57912d0714d806aeb0ffd12a670897f2ed514d1918f48ed13ef9d342df8e12a8.jpg",
           "file": null
         },
         {
@@ -13401,14 +7449,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Lifebeingdest PinkSG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/3lfj6qk4srdjll3xah6pe/Lifebeingdest-PinkSG.mp4?rlkey=v30e8ox4ajw2mzl89u4w6o4pr&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b3849ce4fa55ad1f4e2864175f81ad80d5575506d06d3a16ea118baaac467c69.jpg",
-          "file": null
-        },
-        {
           "name": "LoudPackLu Tyson Red Gloves",
           "type": "video",
           "format": "MP4",
@@ -13425,46 +7465,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "MsKrystale PinkSG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/4myt18u27cpfe39bm3j0j/MsKrystale-PinkSG.mp4?rlkey=y5gopanwzzvx1o2qajmhacde0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/84faa97a63ebcaf8ded760c5010d28163516cc12af35039e85170c32982ae96b.jpg",
-          "file": null
-        },
-        {
-          "name": "Officialkkbooga Pink SG Pumpkins",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/r8wrd6aj1y2f05f9lfc36/Officialkkbooga-Pink-SG-Pumpkins.mp4?rlkey=nzessioruhywjb8s5bx4t3nta&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/6997f3aa145822c9e08b2503f252068835d5fcbdde2f8fb901f31c87e6566338.jpg",
-          "file": null
-        },
-        {
-          "name": "Pink SG Berlin_June",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/ujwk5zfzqfee41ix16auv/Pink-SG-Berlin_June.mp4?rlkey=c351qg68hujvvjaof71gxomsn&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/ec6edf546c6a04f376c71aa4fe2082615c2a6daf255fc51029dfd3fa77428441.jpg",
-          "file": null
-        },
-        {
-          "name": "Pink SG Influencer Recap",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/fs0isfk328v3hu35txe7j/Pink-SG-Influencer-Recap.mp4?rlkey=54hf5ern5k4p9apze9i6x8c4q&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b512d78a52b2d82d1df850acd62e4a8917ebd517714f9d420ac40052c84f3514.jpg",
-          "file": null
-        },
-        {
-          "name": "Plantmomjojo Pink SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/c63yfzl3hq9saoh9o025x/Plantmomjojo-Pink-SG.mp4?rlkey=1ssa1b6viyg4c9r6c3rq42idx&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/d8724aa611ef320db0f3de9c722a578eb4efe499bea2127828d1562ea7816244.jpg",
-          "file": null
-        },
-        {
           "name": "post_10000000_647344436689803_512053032985064073_n",
           "type": "video",
           "format": "MP4",
@@ -13473,35 +7473,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "PotheadPrincess_SG_April",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/ut9czftcsibld68el8g0f/PotheadPrincess_SG_April.mp4?rlkey=b36nopda980drbwv93v95g792&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/b5ea9777cffaafb1cd1c4a868968acb6c8484a4cd3ef277216a8373fe7f31ce6.jpg",
-          "file": null
-        },
-        {
-          "name": "Queen Cyn Pink SG Hyer",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/fajh4mki2schym41xulwd/Queen-Cyn-Pink-SG-Hyer.mp4?rlkey=knwg2fxr484wmn7zjgbjrx8t5&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/2022c3466e85ca2059c853f406733da6f0adac5254df92997225a13cb30df52a.jpg",
-          "file": null
-        },
-        {
           "name": "SG Coffee Recipe_music",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/15qip6kds60js0bzqzvy4/SG-Coffee-Recipe_music.mp4?rlkey=80hmvlqoeh3rdsdgo4fdla4po&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/b7f9ce49c6dbadbd26e3f829c2d37db0dcaaf48b596e4be20255b18140166476.jpg",
-          "file": null
-        },
-        {
-          "name": "SG_3CT 98_May",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/c5kjzbixnv42f8arunvf5/SG_3CT-98_May.mp4?rlkey=vwkgjxut690m3tqdsdkeb02w1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/fc3ecca1047b603fb3bb84599bf3707fb20f34ba4461f42593241491b92eede1.jpg",
           "file": null
         },
         {
@@ -13537,30 +7513,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Snappernickel SG snow",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/mtfr5ysqx55er4qwtfyb0/Snappernickel-SG-snow.mp4?rlkey=ju2b7qp2oczjfajvqp6yha3hh&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/c179ee5e02d9d374e6803a08ad626ad2f68daae1399654888a927be12ac9c56c.jpg",
-          "file": null
-        },
-        {
-          "name": "Stundenglass x The Sauceress",
-          "type": "video",
-          "format": "MOV",
-          "url": "https://www.dropbox.com/scl/fi/gr7u6r5t2wg2ad8qs1mbk/Stundenglass-x-The-Sauceress.mov?rlkey=8p2grmrtvs7ptnh6yu239ktkm&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/400344b04b6454efbc4be9f22f8ff87372a5b3b3e59744a9dcecadda38711b88.jpg",
-          "file": null
-        },
-        {
-          "name": "TaeStaysHigh Pineapples Wingstop",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/q5ld3ex787ojnb95p6993/TaeStaysHigh-Pineapples-Wingstop.mp4?rlkey=df0irtyk6lj1hifd3whanevkk&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/f8a553f69885f4acb12b0dfe7919140bdcf3376ec94ae952e8a1366e80948d7e.jpg",
-          "file": null
-        },
-        {
           "name": "tatum.bell KK SG Spin Off March",
           "type": "video",
           "format": "MP4",
@@ -13577,51 +7529,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "UGC Pink SG Aug 24",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/cytdvoi5etl6xoz8sgsnt/UGC-Pink-SG-Aug-24.mp4?rlkey=ouh89z56f4992oi4vuyjvjjj1&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/9f282318877a862035f3514556b4183c9dd330c1171bff9127c5d626c1d91d37.jpg",
-          "file": null
-        },
-        {
-          "name": "Wacka Flacka Flame SG June",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/h6zmkh7m7wup3wr330vqr/Wacka-Flacka-Flame-SG-June.mp4?rlkey=2nlirpmc41ow56zwg8e7hhd08&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/92f32c2951619a1de2a32c0c40b9fdeaa4b96d10e5b60728ce585ef7620ab804.jpg",
-          "file": null
-        },
-        {
           "name": "Wiz TG SG Uplight_May",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/6nout4sz74fevc8ve2ibx/Wiz-TG-SG-Uplight_May.mp4?rlkey=omgxz3t2rlhnjz6jg1cnvk7za&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/c26f88d0c6a15f795502bc9ab9d3c31a3637654f7e443689377d3b3b92d3ddcb.jpg",
-          "file": null
-        },
-        {
-          "name": "Wu Pink Kompact SG Modül Day",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/xules65z8amkh14844gxm/Wu-Pink-Kompact-SG-Mod-l-Day.mp4?rlkey=nagkcz5rj26lllnjixwnvms68&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/e90c53ec8ed054f6fb9053e3f99897e80ccbf5853a5097cc9f6fc7991c36ca88.jpg",
-          "file": null
-        },
-        {
-          "name": "WulanRussel Pink SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/qb6qhkqu26mvjy48nxi1d/WulanRussel-Pink-SG.mp4?rlkey=81mz996ohpl6tq7dolh65g2dp&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/581247c8381ced31b5e0811fd71ca680acdef795804e5d16c7cc787d69447d44.jpg",
-          "file": null
-        },
-        {
-          "name": "YouCut_20220203_124059330",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/87l75z9u1ensgj143yww8/YouCut_20220203_124059330.mp4?rlkey=askqs6tn4uitov7lyc9oor3b0&dl=0",
-          "thumb": "assets/synced/classic-gravity-infusers/cb81726701de3758a45bed74d9a2bec417065213422655f10b2198474e115c5c.jpg",
           "file": null
         }
       ],
@@ -13677,77 +7589,22 @@ window.PORTAL_SYNCED = {
       "Pink / Social Videos": "https://www.dropbox.com/scl/fo/dc62jl42s4yduppjuv14u/AKvnhRDEWWwKE4uEWIJl0Bc?rlkey=rlij5l41kj3582i13h24toa1c&dl=1",
       "Pink / TV Screen Videos": "https://www.dropbox.com/scl/fo/n65nj8wtnv7t2p5ellvkj/AMYImsZAUcOZ1TPOQ9hsZIc?rlkey=rihyyu62epbgbm5xpsrm5auwg&dl=1",
       "Silver": "https://www.dropbox.com/scl/fo/2oho6mcibb7p5qpj7qrdd/APIcYfWGy98fFmb85GyxlvI?rlkey=ujfvd2vmqf8o4epmc21bk8sfr&dl=1",
-      "Silver / Food": "https://www.dropbox.com/scl/fo/ksqhl813qor0ie38dkn92/AGHpWuLTPlu6y76hA3IZYKs?rlkey=v2gb1n31h3l329h6b4wgkmk7z&dl=1",
-      "Silver / Hookah": "https://www.dropbox.com/scl/fo/ot08llqoi82vg4ii17n2v/ANyNHlUTUSFaR1KcidImo5k?rlkey=7fn047mcp2f6qgmn1an06gr70&dl=1",
-      "Silver / Hookah / Social Videos": "https://www.dropbox.com/scl/fo/pik505vjgx7uj64x4j33m/AH9wxVsoOJHgP-4MEBqy0AU?rlkey=yal1drnqrdr7aavshyqbjuh2y&dl=1",
-      "Silver / Hookah / Photos": "https://www.dropbox.com/scl/fo/i022gk6cy65wyttu33594/AO-I6Lxy5rt0TV_IYn2dEnQ?rlkey=1rwdqbvgqctpfx49lcsgsfiuw&dl=1",
-      "Silver / Hookah / Photos / Oct 2022": "https://www.dropbox.com/scl/fo/gnv08gwk90plmy0ss3lrw/AIyayyovALLsp_BNf4HKHXc?rlkey=wk5hsh8bss4hedgvcvg29qrq5&dl=1",
-      "Silver / Hookah / Photos / Vivian and Jordan": "https://www.dropbox.com/scl/fo/klhszxm7bhumwqe382m6w/AHs7-SUaKc3mvnmdUGLp6dM?rlkey=rw6esphyw3w55qiajii58slq7&dl=1",
-      "Silver / Hyer": "https://www.dropbox.com/scl/fo/4e2bpauv3zxdqvvqwenx4/AKecx0Xyg2hHlqSxyP1cEtk?rlkey=kh0jf0nrx9dnkgj4jpl3w6qzu&dl=1",
-      "Silver / Hyer / Social Videos": "https://www.dropbox.com/scl/fo/e50s338j4qevwachxorw2/AG7UzKHSiRfEmwiq5UwfQeY?rlkey=r7k5ownslbmu3ptls4y6v1dn4&dl=1",
-      "Silver / Hyer / Photos": "https://www.dropbox.com/scl/fo/dp2fxremifxxop39ws0c7/AOFam4Nj3wgHfVjbEqxoAwk?rlkey=hkpdreax4mfi732nbqmdk5xcx&dl=1",
-      "Silver / Hyer / Photos / Boho": "https://www.dropbox.com/scl/fo/vpldafqn0nr8jdpvttv2u/AJrANKHyF8GtT7_jFet0GS8?rlkey=srjrs11c4co28c1ha7d30mnxs&dl=1",
-      "Silver / Mixology": "https://www.dropbox.com/scl/fo/1qy0vtjmxqr3h72u9osob/AAvqae7R219nG4PBKGV9o5k?rlkey=b1xt3qydir9oe4nj77l89bwau&dl=1",
-      "Silver / Mixology / Vivian and Jordan": "https://www.dropbox.com/scl/fo/70iih6vn38runxfy3ak6l/AOFzmndlIX50fpuLw0iJ6OU?rlkey=6t28vpchb8moy9jp606ownnt2&dl=1",
-      "Silver / Mixology / Vivian and Jordan / Social Videos": "https://www.dropbox.com/scl/fo/ltg8mgd02wy5mn4qwitym/AHmU-jjX_Scz2V5NeK6mcfk?rlkey=5amm6kk3u60dmpl762dh2vxwe&dl=1",
-      "Silver / Mixology / Vivian and Jordan / Photos": "https://www.dropbox.com/scl/fo/3g87qqulyb0lc595fn4d7/AI5wDJ1by0XWkBxcYyBgigY?rlkey=ufzceoqapbdbsgj8uebopmglb&dl=1",
-      "Silver / Product Renders": "https://www.dropbox.com/scl/fo/uwvaygk4eyh19cyxjaqco/AJPtGuodcYDlkADqVAgX3NE?rlkey=hj8kkkxk6a5oyi3ti0yutvhx4&dl=1",
-      "Silver / Product Renders / Packaging": "https://www.dropbox.com/scl/fo/wawv0cwwztwevchdn02f4/AKmfMYqWyZYbWuQDbYYXle4?rlkey=1imkgsn8uytariz7531wgywmz&dl=1",
-      "Silver / Product Renders / 1200x1200": "https://www.dropbox.com/scl/fo/sp8j7i0po3tdr9y8t2q7v/AFwtL7DlEodzldLtwHvJEUA?rlkey=5467qk9xx65bipohrvbetnmc6&dl=1",
-      "Silver / Product Renders / 600x600": "https://www.dropbox.com/scl/fo/49s6op3zo7ksr9uufjtau/ACRrnsPcN159xXaszOLHfmQ?rlkey=aq6u8x284nb7q1y7g1oy3ls89&dl=1",
-      "Silver / Product Renders / Beauty Renders": "https://www.dropbox.com/scl/fo/okow2ug640u7f1iwzaopc/ABLM2MxwKm6tEJFyC2dHTwk?rlkey=mk2cf5dtppk7vy7sv2uslkwuf&dl=1",
+      "Silver / Product Photos": "https://www.dropbox.com/scl/fo/sp8j7i0po3tdr9y8t2q7v/AFwtL7DlEodzldLtwHvJEUA?rlkey=5467qk9xx65bipohrvbetnmc6&dl=1",
+      "Silver / Lifestyle Photos": "https://www.dropbox.com/scl/fo/zm6b8vzndeoeptk68ksfz/AKSLk1YO3327nS1SpmLNQ1E?rlkey=cqvxm7tpi7wcxh5hxog2n6iyr&dl=1",
+      "Silver / Social Videos": "https://www.dropbox.com/scl/fo/wl7va4vw7ngy7d9vrnfzp/AEXWZu8Sc8fxDu1YzsDkVmE?rlkey=4rougw5vevc1tntcralsedazg&dl=1",
+      "Silver / TV Screen Videos": "https://www.dropbox.com/scl/fo/a38ji3kjlos794khy0lbr/AIutjrIRDh883MIDSvBKnw4?rlkey=urnvlq8pse7rqxc2irn5xv983&dl=1",
       "Taylor Gang": "https://www.dropbox.com/scl/fo/sn9l0tlodwvtzy4ynq9sn/ADAHByu2Ed4nBl9ZgsUTGlg?rlkey=y7r5tlg0en00y9echpj5t0alp&dl=1",
-      "Taylor Gang / Social Videos": "https://www.dropbox.com/scl/fo/pjwlybo8eycsqtw81tth3/AMU-o8svDQ70W8A7T96UU24?rlkey=dst0jo914ntv4jv1d0y4o0wit&dl=1",
-      "Taylor Gang / Social Videos / Documents": "https://www.dropbox.com/scl/fo/zivdyvccpxk0e57t3mgra/AGWy0ODPm-jX8yL4mZWyXaE?rlkey=8rz6u3lawe5o9s8g2ctd5lnmq&dl=1",
-      "Taylor Gang / Social Videos / Hookah": "https://www.dropbox.com/scl/fo/pgmrpbfj28g52i5o53x0w/ALKSrekc2bFNLGOtuOdLNe4?rlkey=ktfpii2iws411ti4wxtvkm765&dl=1",
-      "Taylor Gang / Social Videos / Hyer": "https://www.dropbox.com/scl/fo/j5q5zt8hhawiuuf2iic28/AGIH3Qffaf7ahVdIhJaxfks?rlkey=18qbr1wi2hwg6w9dg4ah5j9p1&dl=1",
-      "Taylor Gang / Social Videos / Hyer / UGC": "https://www.dropbox.com/scl/fo/5llxmsvt4d1iyzohmpkzm/AELUinQV-JqKRMxryLtf8TA?rlkey=a988zhge0c1kh7o1y0dv0otyv&dl=1",
-      "Taylor Gang / Social Videos / Mixology": "https://www.dropbox.com/scl/fo/9y96ib6k55v1copg6aoaz/AGOIueKBiax0rd0lQck8sfw?rlkey=ihuvvdzo9279o34tu0wtruruj&dl=1",
-      "Taylor Gang / Photos": "https://www.dropbox.com/scl/fo/9swdhnjw8xl3dbiebdpob/AArC674tHJq9LVO4f6WTnvA?rlkey=bm1vkh5r5fp0g7m5ypc87gbtn&dl=1",
-      "Taylor Gang / Photos / Documents": "https://www.dropbox.com/scl/fo/d12n8yy99lyu4huh07gid/ANGbCW9ljUuwwUOwWBTIcKo?rlkey=eqjjrpg3hhiwc78q6nx3boml2&dl=1",
-      "Taylor Gang / Photos / Documents / Colored Glass Liner": "https://www.dropbox.com/scl/fo/x3pafi23t8tmi01gu447z/AEDhCHkLXsoPC8MztDwDEEU?rlkey=bwrgc7ufg4hv8y7ct2im69rd7&dl=1",
-      "Taylor Gang / Photos / Hookah": "https://www.dropbox.com/scl/fo/ahzaiqw0n6p0wg7huvein/ACeXgN8PILCoMO8K97Qlxdo?rlkey=q4fxwfgop5t9evay1l1d0o446&dl=1",
-      "Taylor Gang / Photos / Hookah / Encino": "https://www.dropbox.com/scl/fo/j5tp9iqcofs2w3d19hjal/AEbUTmlKy5JC4zyeZB8qsxw?rlkey=0ad7jxi5rp397cgt594zx3aec&dl=1",
-      "Taylor Gang / Photos / Hookah / Oct 2022": "https://www.dropbox.com/scl/fo/wmhxygieq66k5iosw6ulb/APiY3mbIC_CzTSVMeMV4HDo?rlkey=7ji77m6z29yzewzhjbzm8akv7&dl=1",
-      "Taylor Gang / Photos / Hookah / Signed by Wiz": "https://www.dropbox.com/scl/fo/rbriiv35tc7boccm3b7sn/AFO9XkHfrRwRK_LS98GKI8c?rlkey=t1rggb03xencx551a1sy0voy2&dl=1",
-      "Taylor Gang / Photos / Hyer": "https://www.dropbox.com/scl/fo/nuatst573e3k799rjg81h/AGDPSPMwdJRbr3xugYNJTEY?rlkey=7dmhy2y6f8m1htdssj4j7z9ph&dl=1",
-      "Taylor Gang / Photos / Hyer / Glen Feliz": "https://www.dropbox.com/scl/fo/wduhxvl09fcqkwpimpkqb/ACsLCDOjQaSr74nsOhFYBW0?rlkey=66q53fp4of2fdxekf5uxth8bn&dl=1",
-      "Taylor Gang / Photos / Hyer / Wiz n Friends": "https://www.dropbox.com/scl/fo/qqjzdgiztr6mqlp53ynyt/AK4fK9IsE1piFyxZ1NyiqaE?rlkey=akuvyc7hx4s8unvrygzw9x29v&dl=1",
-      "Taylor Gang / Photos / Hyer / Wiz n Friends / Selects": "https://www.dropbox.com/scl/fo/tpyaxddfva664lzs618t6/AAHQT6cPkEJqwe6tzIbnzp4?rlkey=grc18rwl9f6uqo1y5szhid9m3&dl=1",
-      "Taylor Gang / Photos / Hyer / Wiz n Friends / TG Set": "https://www.dropbox.com/scl/fo/nygx1fjglwqbsz7ts2e78/AJ2kaBqycHiIW77RdhjPlvU?rlkey=ygxypvr85l2lcz05nimn2r5sp&dl=1",
-      "Taylor Gang / Photos / Mixology": "https://www.dropbox.com/scl/fo/6xjrt5odgh3vgqpydnx10/AA4nHDZeghnPtqSHcAhMoXM?rlkey=5838hmrlbsw3utxgro3yhcfu5&dl=1",
-      "Taylor Gang / Photos / Mixology / Encino": "https://www.dropbox.com/scl/fo/n0t1gqhkp3agxuglkpz04/AA3WNpBoxw3n_XEGtxiUQYw?rlkey=66rgx0xj20ex95fcf3ze8wuh3&dl=1",
-      "Taylor Gang / Product Renders": "https://www.dropbox.com/scl/fo/ak7bfrea1sm5mltrx8mph/AAxuYDI65kEXl4CwpscbqgI?rlkey=s3a428m16jevkugfgr54yy5ob&dl=1",
-      "Taylor Gang / Product Renders / 1200x1200": "https://www.dropbox.com/scl/fo/a1yl8o9gqls7ggtk5lfbp/AH-EgiP1q_j5-k-GMfyNMc4?rlkey=993e300jh9gx3m2g97xc0zcis&dl=1",
-      "Taylor Gang / Product Renders / 1200x1200 / OLD": "https://www.dropbox.com/scl/fo/pjcs5bde236apzv0bw32o/AAbOMzTX_Hag4IGpmJtEhgo?rlkey=bnebw2r75urxczdwlnmz1eeja&dl=1",
-      "Taylor Gang / Product Renders / 600x600": "https://www.dropbox.com/scl/fo/rdysyg7b6ky3kdzbg358h/AE4ELHG2PrJY8j8MwtiWb6A?rlkey=9jsv4440sd8v1u4j6k2ggi1sg&dl=1",
-      "Taylor Gang / Text Overlays": "https://www.dropbox.com/scl/fo/djqpw3f3nr37bknczyqnl/APERrKCvUxOQmOm5z5JYtjE?rlkey=sdc94bgylxounoigqlwf91yur&dl=1",
+      "Taylor Gang / Product Photos": "https://www.dropbox.com/scl/fo/a1yl8o9gqls7ggtk5lfbp/AH-EgiP1q_j5-k-GMfyNMc4?rlkey=993e300jh9gx3m2g97xc0zcis&dl=1",
+      "Taylor Gang / Product Photos / OLD": "https://www.dropbox.com/scl/fo/pjcs5bde236apzv0bw32o/AAbOMzTX_Hag4IGpmJtEhgo?rlkey=bnebw2r75urxczdwlnmz1eeja&dl=1",
+      "Taylor Gang / Lifestyle Photos": "https://www.dropbox.com/scl/fo/0x1zcxcdiyxjixf9zhh8w/AOjoxvzjj9iFxm3SQIsLsP8?rlkey=mzbv04i7gltqfk8zsyjtfgq7n&dl=1",
+      "Taylor Gang / Social Videos": "https://www.dropbox.com/scl/fo/nyfjg8u58hzu9mzbhcmkq/AK5k7YRQXAA_2b2e6o1Ko3k?rlkey=ccnad9eg7ij3bo6gvdgh9lfhr&dl=1",
+      "Taylor Gang / TV Screen Videos": "https://www.dropbox.com/scl/fo/564nzw5f2w7bvf92fwpli/AE8sif4ch9GAQt3kcV6u4A8?rlkey=sng9gfp4mtcy9ug237anaulmm&dl=1",
       "Tyson 2.0": "https://www.dropbox.com/scl/fo/a0zrk3zjs6feb390zjwtp/AKvSRGXTM-vmU6ENZfLJSWk?rlkey=boud80njh8uqdpo09elyosnj6&dl=1",
+      "Tyson 2.0 / Product Photos": "https://www.dropbox.com/scl/fo/5rnd84uwec91itc1p5u9q/AH7yLRQADgra4ePFIclQV2Y?rlkey=g62oeyql6m2iqrhdxhu2dol3i&dl=1",
+      "Tyson 2.0 / Lifestyle Photos": "https://www.dropbox.com/scl/fo/3an00qnm6m6mtpthqvqag/AJXwB7Q2NWzoiXdTRKL_-_E?rlkey=srz06kxmxn0cavsrqhd16iaru&dl=1",
       "Tyson 2.0 / Logos": "https://www.dropbox.com/scl/fo/6zyhuvq32oxk4z3s1jd3n/AKelg5HjF6hsbGSnACDcIBY?rlkey=hr6j3hgcmog8tfyyc0wuxr9k5&dl=1",
       "Tyson 2.0 / Social Videos": "https://www.dropbox.com/scl/fo/48j5dhjcrowprg4zvjvqk/AKI5sZa0KjJpwq6umgf7eso?rlkey=crxbw88x74w5c9zxmqjr9nv8g&dl=1",
-      "Tyson 2.0 / Photos": "https://www.dropbox.com/scl/fo/3an00qnm6m6mtpthqvqag/AJXwB7Q2NWzoiXdTRKL_-_E?rlkey=srz06kxmxn0cavsrqhd16iaru&dl=1",
-      "Tyson 2.0 / Photos / Documents": "https://www.dropbox.com/scl/fo/d9me4d4pbxy78pcq75cpl/AIViqEdRcPYafz9KX9EV8Tc?rlkey=eup9y6igjmdovtt9ht0txmebm&dl=1",
-      "Tyson 2.0 / Photos / Documents / Colored Glass Liner": "https://www.dropbox.com/scl/fo/7oxvwy7scxqezxqt911k1/AD3NiEnTallUOEy-EN6Dvos?rlkey=qofb65r4dpdhybvqwfe0wri98&dl=1",
-      "Tyson 2.0 / Photos / Champs Collage images": "https://www.dropbox.com/scl/fo/lhh2mr5x88yxjitaymnxl/AArBbYxWR7SoplyhYUL1cxM?rlkey=vujii5986ca368eob5vz2u7lm&dl=1",
-      "Tyson 2.0 / Photos / Clear Gloves": "https://www.dropbox.com/scl/fo/9470z8042va6thgobfho7/ADZZBHN3N8QY_g5gEqq-oD0?rlkey=veu2m5atd2eb5nnjmbfrv12zn&dl=1",
-      "Tyson 2.0 / Photos / Coffee Shop Amsterdam": "https://www.dropbox.com/scl/fo/go33v0qdo0heuyz3kf07z/ANywX_Wamo1ljd33xEXBFCc?rlkey=rnibrv9ujqukgmb83q0darnkg&dl=1",
-      "Tyson 2.0 / Photos / Gray Gloves": "https://www.dropbox.com/scl/fo/b143df273m6pwmoet2dor/ANzGsiOJrEtIFxTTjG4A8Xs?rlkey=1b0gtwnlx8xbqcryybxinf7l1&dl=1",
-      "Tyson 2.0 / Photos / Gray Gloves / DTLA July": "https://www.dropbox.com/scl/fo/u4c2dmcuqti75gxdwt7xt/ADls2UmNiFMYBahe8Y3PQg0?rlkey=5d4zkdxdtv6em688wpbsgpqi9&dl=1",
-      "Tyson 2.0 / Photos / Hyer": "https://www.dropbox.com/scl/fo/p9sva6dt9rked57pdc8fi/APbpzx9jTzsV8LbNLAOElgk?rlkey=1tbj835bcz5cdbvi6vcyljdmn&dl=1",
-      "Tyson 2.0 / Photos / Mike Tyson Santa Monica": "https://www.dropbox.com/scl/fo/3fnfixktwg4nlqpiw0a9o/AOG9ZExl-sGI6ThY7q8NIms?rlkey=92m1tpuc1cs10vamhhzxb1orb&dl=1",
-      "Tyson 2.0 / Photos / Oct 2022": "https://www.dropbox.com/scl/fo/n26ouvl177975cf7h84wr/AN6eWMO3yKoW9ncDPXtNY28?rlkey=yq5pmpbnl94903g8c4ef2xsqd&dl=1",
-      "Tyson 2.0 / Photos / Palm Springs": "https://www.dropbox.com/scl/fo/6b3d7mmcci8qs6y2mi8qm/AKpMs9v4i_uQeXV9z-biamg?rlkey=pggeq3s992akgq4dfrhl6zmpa&dl=1",
-      "Tyson 2.0 / Photos / Red Gloves": "https://www.dropbox.com/scl/fo/394v2ofk4zq2ku2177775/AKuR8AqtaQWe4J1dujKMCB4?rlkey=bzp4pbnxf2s1xmd43rr5epopw&dl=1",
-      "Tyson 2.0 / Photos / Red Gloves / DJ Whoo Kid": "https://www.dropbox.com/scl/fo/5fuyruwliofect0y60ppt/AEd8PxXYHTYh2GqXznEbCtw?rlkey=1ut3jxifawj6zzgpgnqlao8m8&dl=1",
-      "Tyson 2.0 / Photos / Red Gloves / Mike Tyson with Red Gloves": "https://www.dropbox.com/scl/fo/jkpspolw1habybznt03bd/AHNPnA61S8GB8ohFkzHbq7Y?rlkey=u7qlfey5zxct0at7ejv1qtx4w&dl=1",
-      "Tyson 2.0 / Photos / Red Gloves / Red Gloves Alone": "https://www.dropbox.com/scl/fo/ntd35pydrdmhz7gqruj3e/ANPcUAg_P7kEmU52_AZ0kdo?rlkey=d1g8r1xsw5ee0yzzyw5lkfo26&dl=1",
-      "Tyson 2.0 / Photos / Signed Unit Gym": "https://www.dropbox.com/scl/fo/k9lmgpy00nd69k7s42l0w/AECnkqV1cOM_0gYVQTUH93I?rlkey=8jl8inrphjgjz00qbdda5idpk&dl=1",
-      "Tyson 2.0 / Product Renders": "https://www.dropbox.com/scl/fo/vbozectocar7qpttiwrka/AJvYeKpmFzmQF7WR5o2w2co?rlkey=wxy9f3s440c82buzu2xh991a4&dl=1",
-      "Tyson 2.0 / Product Renders / 1200x1200": "https://www.dropbox.com/scl/fo/5rnd84uwec91itc1p5u9q/AH7yLRQADgra4ePFIclQV2Y?rlkey=g62oeyql6m2iqrhdxhu2dol3i&dl=1",
-      "Tyson 2.0 / Product Renders / 600x600": "https://www.dropbox.com/scl/fo/cjoc1xz9u2stu0kipmhc8/AKDxxqbrs8TxnRVle3c4bPo?rlkey=4hc3v3w7mafux5s0j1kw2tp71&dl=1",
-      "Tyson 2.0 / Web Renders": "https://www.dropbox.com/scl/fo/i2pcje39ibjh650vlton5/AGp28x8YyYeMfTNZ5MoZre8?rlkey=q8ns9t3v6fp4i4a15i454i2nw&dl=1",
-      "Tyson 2.0 / Web Renders / 1200x1200": "https://www.dropbox.com/scl/fo/a2rwobhwnccsuk61gsqug/AANsVhqzPwa7MkebTNhE83Q?rlkey=oggifd3ele9u4p3c9c774oy2m&dl=1",
-      "Tyson 2.0 / Web Renders / 600x600": "https://www.dropbox.com/scl/fo/k3p0m5578memphssepsn0/AANP_2EdTUEKuW4F3p7VvLw?rlkey=8cffocf2hsaf0y57y79npcfol&dl=1",
+      "Tyson 2.0 / TV Screen Videos": "https://www.dropbox.com/scl/fo/4prr01v0nhyry1d0l7xu2/ABiSLCRuOdb_2LL4k9gjtXA?rlkey=a9ktf9xwauqc5awmeoyc570fk&dl=1",
       "UGC - Stundenglass": "https://www.dropbox.com/scl/fo/85kr1ddzmla70wmeqngvg/AO5Nq8wHYd8WJIA6XT7kie4?rlkey=uvr6rli9cc11oz43an90wtdj1&dl=1",
       "UGC - Stundenglass / USED UGC - Stundenglass": "https://www.dropbox.com/scl/fo/02lsiwe07t6ful1mz6db6/AKLwlKmQ0t0av38SGRq1iQU?rlkey=6zuim2jmiixesm2wgzr3g47yb&dl=1"
     }
