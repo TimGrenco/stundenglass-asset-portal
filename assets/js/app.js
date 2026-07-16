@@ -9,6 +9,265 @@
   var BRANDS = window.PORTAL_BRANDS;
   var PRODUCTS = window.PORTAL_PRODUCTS;
 
+  /* ---- i18n: portal-wide language selector ----------------------------------
+     English is the source and needs no pack. Every other language lives in its
+     own file (assets/data/i18n/<code>.js) that is LAZY-LOADED the first time the
+     language is selected — so English visitors download zero translation bytes,
+     and adding a language never slows the default experience.
+
+     A pack is { ui, training, products }:
+       ui        keyed by the ENGLISH source string; a missing key falls back to
+                 English rather than showing a raw key.
+       training  courses/quizzes mirroring PORTAL_TRAINING (answers stay on the
+                 English data — see trainingOf).
+       products  description / highlights / warranty / fullDescription.
+     Product names, brand names, filenames, SKUs, units and prices are never
+     translated. To revise a language, edit only its pack — no code change. */
+  var LANGS = { en: "English", es: "Español", de: "Deutsch", it: "Italiano", fr: "Français" };
+  function isLang(l) { return Object.prototype.hasOwnProperty.call(LANGS, l); }
+  var LANG_VER = "20260711n";   // bump with the other asset tokens
+  // Load a language pack once. English is a no-op (it IS the source).
+  var _langLoading = {};
+  function loadLangPack(l, cb) {
+    if (l === "en" || (window.PORTAL_I18N && window.PORTAL_I18N[l])) return cb(true);
+    if (_langLoading[l]) { _langLoading[l].push(cb); return; }
+    _langLoading[l] = [cb];
+    var s = document.createElement("script");
+    s.src = "assets/data/i18n/" + l + ".js?v=" + LANG_VER;
+    function done(ok) {
+      var q = _langLoading[l] || []; _langLoading[l] = null;
+      q.forEach(function (f) { f(ok); });
+    }
+    s.onload = function () { done(!!(window.PORTAL_I18N && window.PORTAL_I18N[l])); };
+    // If a pack fails to load we stay in English rather than render half-broken.
+    s.onerror = function () { done(false); };
+    document.head.appendChild(s);
+  }
+  function pack() { return (window.PORTAL_I18N && window.PORTAL_I18N[state.lang]) || null; }
+  function readLang() {
+    try {
+      // A ?lang= link wins, and it STICKS: persist it, otherwise a recipient of a
+      // translated link drops back to English the moment they refresh or navigate.
+      var q = (location.search.match(/[?&]lang=([a-z]{2})\b/) || [])[1];
+      if (q && isLang(q)) { try { localStorage.setItem("portal_lang", q); } catch (e2) {} return q; }
+      var s = localStorage.getItem("portal_lang");
+      // hasOwnProperty, not LANGS[s] — a stored "constructor"/"toString" is truthy
+      // against Object.prototype and would boot into a broken language.
+      if (isLang(s)) return s;
+    } catch (e) {}
+    return "en";
+  }
+  // Has the visitor made an explicit choice (picked a language, followed a
+  // ?lang= link, or dismissed the offer)? If not, we may offer once.
+  function hasLangPreference() {
+    try {
+      return isLang(localStorage.getItem("portal_lang")) || localStorage.getItem("portal_lang_asked") === "1";
+    } catch (e) { return false; }
+  }
+  // Which supported language does this browser prefer, if any? Returns "" when
+  // English (or nothing we support) is ranked highest — we only offer to people
+  // who'd actually want it.
+  function browserLang() {
+    var list = (navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ""]);
+    for (var i = 0; i < list.length; i++) {
+      var l = String(list[i] || "").toLowerCase().slice(0, 2);
+      if (l === "en") return "";              // an English preference ranked higher wins
+      if (l !== "en" && isLang(l)) return l;  // es / de / it / fr
+    }
+    return "";
+  }
+  function dismissLangBar() {
+    var bar = $("#lang-bar"); if (!bar) return;
+    try { localStorage.setItem("portal_lang_asked", "1"); } catch (e) {}
+    bar.classList.remove("show"); bar.hidden = true;
+  }
+  // The language the offer bar is proposing (set when we decide to show it).
+  var _offerLang = "";
+  // Wiring is bound once at init, independent of whether the bar is shown, so the
+  // buttons behave the same however the bar came to be visible.
+  function bindLangBar() {
+    var yes = $("#lang-bar-yes"), no = $("#lang-bar-no");
+    if (yes) yes.addEventListener("click", function () { dismissLangBar(); setLang(_offerLang || "es"); });
+    if (no) no.addEventListener("click", dismissLangBar);
+  }
+  // Offer the visitor's own language once, and only to browsers that actually
+  // prefer one we support. Deliberately does NOT auto-switch: flipping a
+  // retailer's portal under them is worse than asking.
+  var OFFER_COPY = {
+    es: { q: "¿Prefiere ver este portal en español?", yes: "Ver en español", no: "No, gracias" },
+    de: { q: "Möchten Sie dieses Portal auf Deutsch ansehen?", yes: "Auf Deutsch ansehen", no: "Nein, danke" },
+    it: { q: "Preferisce visualizzare questo portale in italiano?", yes: "Visualizza in italiano", no: "No, grazie" },
+    fr: { q: "Préférez-vous consulter ce portail en français ?", yes: "Voir en français", no: "Non, merci" },
+  };
+  function maybeOfferLang() {
+    var bar = $("#lang-bar"); if (!bar) return;
+    if (hasLangPreference() || state.lang !== "en") return;
+    var l = browserLang(); if (!l || !OFFER_COPY[l]) return;
+    _offerLang = l;
+    var c = OFFER_COPY[l];
+    $("#lang-bar-txt").textContent = c.q;
+    $("#lang-bar-yes").textContent = c.yes;
+    $("#lang-bar-no").textContent = c.no;
+    bar.hidden = false;
+    bar.classList.add("show");
+  }
+  // tr(): translate a UI string. Falls back to the English source text.
+  // (Named tr, not t — the training code already uses `t` for the course object.)
+  function tr(s) {
+    if (state.lang === "en") return s;
+    var p = pack();
+    return (p && p.ui && p.ui[s]) || s;
+  }
+  // Localized training course for a product (falls back to English).
+  function trainingOf(p) {
+    var en = (window.PORTAL_TRAINING || {})[p.name];
+    if (state.lang === "en") return en;
+    var pk = pack();
+    var loc = pk && pk.training && pk.training[p.name];
+    if (!loc || !en) return en;
+    // Merge so anything untranslated still renders, and the stored answer indexes
+    // (which live only on the English data) always win.
+    return {
+      tagline: loc.tagline || en.tagline,
+      minutes: en.minutes, passPct: en.passPct,
+      modules: (loc.modules && loc.modules.length === en.modules.length) ? loc.modules : en.modules,
+      quiz: en.quiz.map(function (q, i) {
+        var e = loc.quiz && loc.quiz[i];
+        if (!e || !e.choices || e.choices.length !== q.choices.length) return q;
+        return { q: e.q || q.q, choices: e.choices, why: e.why || q.why, answer: q.answer };
+      }),
+    };
+  }
+  // Localized product prose (description / highlights / warranty).
+  function infoOf(p) {
+    var en = p.info || {};
+    if (state.lang === "en") return en;
+    var pk = pack();
+    var loc = pk && pk.products && pk.products[p.name];
+    if (!loc) return en;
+    var out = {}; for (var k in en) out[k] = en[k];
+    if (loc.description) out.description = loc.description;
+    if (loc.highlights && loc.highlights.length) out.highlights = loc.highlights;
+    if (loc.warranty) out.warranty = loc.warranty;
+    // Long-form "Official Product Description" — the copy stores paste into their
+    // own menus. Only swap when the paragraph count matches, so a partial
+    // translation can never drop or duplicate a paragraph.
+    if (loc.fullDescription && en.fullDescription && loc.fullDescription.length === en.fullDescription.length) {
+      out.fullDescription = loc.fullDescription;
+    }
+    // "What's In the Box" contents — same length guard; the image stays as-is.
+    if (loc.box && loc.box.contents && en.box && en.box.contents &&
+        loc.box.contents.length === en.box.contents.length) {
+      out.box = { contents: loc.box.contents, image: en.box.image };
+    }
+    return out;
+  }
+  function setLang(l) {
+    if (!isLang(l) || l === state.lang) return;
+    // Fetch the pack BEFORE switching, so we never render a half-translated page.
+    // If it fails to load we stay put rather than degrade.
+    loadLangPack(l, function (ok) {
+      if (!ok && l !== "en") { toast("Couldn’t load that language — staying in " + LANGS[state.lang]); return; }
+      applyLang(l);
+    });
+  }
+  function applyLang(l) {
+    // Re-rendering the page throws away transient DOM state, so carry the two
+    // things a user would be upset to lose across a language switch: the answers
+    // they've already picked in a quiz, and how far down the page they were.
+    var quiz = captureQuizState();
+    var y = window.pageYOffset;
+    state.lang = l;
+    try { localStorage.setItem("portal_lang", l); } catch (e) {}
+    document.documentElement.lang = l;
+    syncLangToggle();
+    applyStaticI18n();
+    route();   // re-render whatever view is open, in the new language
+    restoreQuizState(quiz);
+    if (y) window.scrollTo(0, y);
+  }
+  // Snapshot / restore in-progress quiz answers around a language switch.
+  // Answers are stored as choice INDEXES, which are language-independent — the
+  // whole point of keeping the English answer key — so they carry over exactly.
+  function captureQuizState() {
+    var form = $("#trn-form"); if (!form) return null;
+    var picked = {}, n = 0;
+    $$('input[type="radio"]:checked', form).forEach(function (r) { picked[r.name] = r.value; n++; });
+    return n ? { picked: picked, graded: !!$(".trn-q.graded") } : null;
+  }
+  function restoreQuizState(s) {
+    if (!s) return;
+    var form = $("#trn-form"); if (!form) return;
+    Object.keys(s.picked).forEach(function (name) {
+      var r = form.querySelector('input[name="' + name + '"][value="' + s.picked[name] + '"]');
+      if (r) { r.checked = true; r.dispatchEvent(new Event("change", { bubbles: true })); }
+    });
+    // If they'd already submitted, re-grade so the score and the (now translated)
+    // explanations come straight back instead of silently vanishing.
+    if (s.graded) { var b = $("#trn-submit"); if (b) b.click(); }
+  }
+  // ---- language selector (globe + current language + menu) -------------------
+  // Languages are listed by their own endonym (Deutsch, not German) — that's what
+  // a speaker scans for. English stays first as the default.
+  var LANG_ORDER = ["en", "es", "de", "it", "fr"];
+  function renderLangMenu() {
+    var menu = $("#lang-menu"); if (!menu) return;
+    menu.innerHTML = LANG_ORDER.map(function (l) {
+      var on = l === state.lang;
+      return '<button type="button" role="menuitemradio" aria-checked="' + (on ? "true" : "false") +
+        '" class="langmenu-item' + (on ? " on" : "") + '" data-lang="' + l + '">' +
+        '<span class="langmenu-code">' + l.toUpperCase() + "</span>" +
+        '<span class="langmenu-name">' + LANGS[l] + "</span>" +
+        (on ? '<span class="langmenu-tick">' + icon("check") + "</span>" : "") +
+      "</button>";
+    }).join("");
+    $$(".langmenu-item", menu).forEach(function (b) {
+      b.addEventListener("click", function () { closeLangMenu(); setLang(b.getAttribute("data-lang")); });
+    });
+  }
+  function openLangMenu() {
+    var w = $("#lang-select"); if (!w) return;
+    w.classList.add("open");
+    $("#lang-btn").setAttribute("aria-expanded", "true");
+    var first = $(".langmenu-item.on", w) || $(".langmenu-item", w);
+    if (first) first.focus();
+  }
+  function closeLangMenu() {
+    var w = $("#lang-select"); if (!w) return;
+    w.classList.remove("open");
+    var b = $("#lang-btn"); if (b) b.setAttribute("aria-expanded", "false");
+  }
+  function langMenuOpen() { var w = $("#lang-select"); return !!(w && w.classList.contains("open")); }
+  function syncLangToggle() {
+    var lbl = $("#lang-btn-code"); if (lbl) lbl.textContent = state.lang.toUpperCase();
+    var b = $("#lang-btn");
+    if (b) b.setAttribute("aria-label", "Language: " + LANGS[state.lang]);
+    renderLangMenu();
+  }
+  // Static copy that lives in index.html (nav, hero, section headings, support
+  // band, footer) isn't re-rendered by JS, so translate it in place. The original
+  // English is cached on first pass and used as the lookup key both ways.
+  function applyStaticI18n() {
+    $$("[data-i18n]").forEach(function (el) {
+      // Collapse whitespace: multi-line copy in the markup would otherwise carry
+      // newlines/indentation into the lookup key and never match the catalog.
+      if (el.__en === undefined) el.__en = el.textContent.replace(/\s+/g, " ").trim();
+      el.textContent = tr(el.__en);
+    });
+    $$("[data-i18n-title]").forEach(function (el) {
+      if (el.__title === undefined) el.__title = el.getAttribute("title") || "";
+      el.setAttribute("title", tr(el.__title));
+    });
+    $$("[data-i18n-ph]").forEach(function (el) {
+      if (el.__ph === undefined) el.__ph = el.getAttribute("placeholder") || "";
+      el.setAttribute("placeholder", tr(el.__ph));
+    });
+    $$("[data-i18n-aria]").forEach(function (el) {
+      if (el.__aria === undefined) el.__aria = el.getAttribute("aria-label") || "";
+      el.setAttribute("aria-label", tr(el.__aria));
+    });
+  }
+
   // ---- tiny helpers --------------------------------------------------------
   var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
   var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
@@ -103,6 +362,7 @@
 
   // ---- state ---------------------------------------------------------------
   var state = {
+    lang: readLang(),  // en | es | de | it | fr — portal-wide (localStorage + ?lang=)
     view: "stundenglass",      // single-brand portal (Stündenglass)
     type: "all",       // all | E-Comm Render Photos | Lifestyle Photos | Logos | Video | Misc
     query: "",
@@ -156,7 +416,7 @@
     var lbl = labelFor(file.name);
     if (lbl) return lbl.name;   // curated in-store material name (no extension)
     var f = file.format || "";
-    if (!f || f === "YouTube" || f === "Link") return file.name;  // links keep their title, no fake extension
+    if (!f || f === tr("YouTube") || f === "Link") return file.name;  // links keep their title, no fake extension
     return file.name + "." + f.toLowerCase();
   }
   function isExtVideo(file) { return file.type === "video" && /youtube\.com|youtu\.be|vimeo\.com/.test(file.url || ""); }
@@ -225,7 +485,7 @@
         ta.value = text; ta.style.position = "fixed"; ta.style.opacity = "0";
         document.body.appendChild(ta); ta.select(); document.execCommand("copy");
         document.body.removeChild(ta); toast(okMsg);
-      } catch (e) { toast("Copy failed"); }
+      } catch (e) { toast(tr("Copy failed")); }
     }
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(function () { toast(okMsg); }, fallback);
@@ -235,14 +495,14 @@
   // ---- shareable filtered views + active filters ---------------------------
   var TYPE_LABELS = {
     "E-Comm Render Photos": "Product photos", "Lifestyle Photos": "Lifestyle Photos",
-    "Logos": "Logos", "Social Videos": "Social Videos", "TV Screen Videos": "TV Screen Videos",
+    "Logos": tr("Logos"), "Social Videos": "Social Videos", "TV Screen Videos": "TV Screen Videos",
     "Misc": "Documents",
   };
   function typeLabel(t) { return TYPE_LABELS[t] || t; }
   // Canonical folder-card sort order — matches the sync's FOLDER_ORDER
   // (dropbox-sync.mjs) so cards appear in the same order the sync canonicalizes to.
   // (E-Comm/Misc were dropped: the sync aliases those to Product Photos/Documents.)
-  var FOLDER_TAB_ORDER = ["Product Photos", "Lifestyle Photos", "Web Banners", "Logos", "Social Videos", "TV Screen Videos", "Packaging", "In-Store Marketing", "Documents"];
+  var FOLDER_TAB_ORDER = ["Product Photos", "Lifestyle Photos", "Web Banners", tr("Logos"), "Social Videos", "TV Screen Videos", tr("Packaging"), "In-Store Marketing", "Documents"];
   function folderRank(f) { var i = FOLDER_TAB_ORDER.indexOf(f); return i < 0 ? 99 : i; }
 
   function buildQuery() {
@@ -252,6 +512,9 @@
     if (state.query) parts.push("q=" + encodeURIComponent(state.query));
     if (state.sort !== "featured") parts.push("s=" + state.sort);
     if (state.layout !== "grid") parts.push("l=" + state.layout);
+    // Carry the language so "Share view" / a copied URL opens in the same language
+    // (and so ?lang=es isn't stripped out of the address bar on first render).
+    if (state.lang !== "en") parts.push("lang=" + state.lang);
     return parts.join("&");
   }
   // Keep the address bar in sync with the current filters (home view only, so
@@ -288,7 +551,7 @@
   }
   function shareView() {
     var qs = buildQuery();
-    copyText(location.origin + location.pathname + (qs ? "?" + qs : ""), "View link copied");
+    copyText(location.origin + location.pathname + (qs ? "?" + qs : ""), tr("View link copied"));
   }
   function clearFilter(k) {
     // Brand is fixed to Stündenglass for this portal, never a clearable
@@ -313,7 +576,7 @@
     }).join("") + '<button class="fclear" data-clear="all">Clear all</button>';
     box.innerHTML =
       '<div class="fb-left">' + left + "</div>" +
-      '<div class="fb-right"><button class="btn ghost sm" id="share-view">' + icon("link") + " Share view</button></div>";
+      '<div class="fb-right"><button class="btn ghost sm" id="share-view">' + icon("link") + " " + tr("Share view") + "</button></div>";
     $$("[data-clear]", box).forEach(function (b) {
       b.addEventListener("click", function () { clearFilter(b.getAttribute("data-clear")); });
     });
@@ -390,16 +653,16 @@
   function facetOf(folder, file) {
     if (file && (file.type === "video" || /video/i.test(file.format || ""))) return "Videos";
     var f = folder || "";
-    if (/logo/i.test(f)) return "Logos";
+    if (/logo/i.test(f)) return tr("Logos");
     if (/lifestyle/i.test(f)) return "Lifestyle";
-    if (/pack/i.test(f)) return "Packaging";
+    if (/pack/i.test(f)) return tr("Packaging");
     if (/in.?store|marketing/i.test(f)) return "In-store";
     if (/photo|render|e-?comm|banner/i.test(f)) return "Photos";
     if (/video/i.test(f)) return "Videos";
     if (/doc|misc|manual|sheet/i.test(f)) return "Documents";
-    return "Assets";
+    return tr("Assets");
   }
-  var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catalogs", "In-store", "Documents", "Assets"];
+  var FACET_ORDER = ["Photos", "Lifestyle", tr("Logos"), tr("Packaging"), "Videos", "Catalogs", "In-store", "Documents", tr("Assets")];
 
   // Flat, cached index of every downloadable thing: product files + how-to videos.
   var _fileIndex = null;
@@ -413,7 +676,7 @@
             product: p, brand: p.brand, folder: folder, file: file,
             label: fileLabel(file), kind: facetOf(folder, file),
             // Nested folders read as "Product · Black / Product Photos"
-            sub: p.name + " · " + folder,
+            subFn: function () { return p.name + " · " + trFolderPath(folder); },
             hay: (fileLabel(file) + " " + folder + " " + (file.format || "") + " " + p.name + " " + (p.category || "") + " " + BRANDS[p.brand].name).toLowerCase()
           });
         });
@@ -422,7 +685,7 @@
         out.push({
           product: p, brand: p.brand, folder: "How-to Videos", video: v,
           file: { name: v.title, format: "Video", thumb: v.thumb, url: v.url, type: "video" },
-          label: v.title, kind: "Videos", sub: p.name + " · How-to Videos",
+          label: v.title, kind: "Videos", subFn: function () { return p.name + " · " + tr("How-to Videos"); },
           hay: (v.title + " video how to " + p.name + " " + BRANDS[p.brand].name).toLowerCase()
         });
       });
@@ -433,7 +696,7 @@
       var nm = c.title + (c.region ? " (" + c.region + ")" : "");
       out.push({
         brand: "stundenglass", folder: c.group || "Catalogs", kind: "Catalogs",
-        label: nm, sub: (c.group || "Catalog") + (c.region ? " · " + c.region : ""),
+        label: nm, subFn: function () { return tr(c.group || "Catalog") + (c.region ? " · " + c.region : ""); },
         openHash: "catalog/" + c.slug,
         file: { name: nm, format: "PDF", thumb: c.thumb, url: c.file || c.url, file: c.file || null, type: "pdf" },
         hay: (c.title + " " + (c.region || "") + " " + (c.group || "") + " catalog document pdf stundenglass").toLowerCase()
@@ -448,7 +711,7 @@
     var groups = queryAliasGroups(q), bk = state.view, rawQ = q.toLowerCase().trim();
     return PRODUCTS.map(function (p) {
       if (p.brand !== bk) return null;
-      var info = p.info || {};
+      var info = infoOf(p);
       var hay = (p.name + " " + (p.category || "") + " " + (p.type || "") + " " + (p.label || "") +
         " " + BRANDS[p.brand].name + " " + (info.description || "") +
         " " + (info.fullName || "") + " " + ((info.highlights || []).join(" "))).toLowerCase();
@@ -521,7 +784,7 @@
   }
   function wireSocial(ctx) {
     $$("[data-copylink]", ctx).forEach(function (b) {
-      b.addEventListener("click", function () { copyText(b.getAttribute("data-copylink"), "Link copied"); });
+      b.addEventListener("click", function () { copyText(b.getAttribute("data-copylink"), tr("Link copied")); });
     });
   }
 
@@ -535,7 +798,7 @@
           '<span class="social-ic">' + socialIcon(s.network) + "</span>" +
           '<span class="social-meta"><span class="social-net">' + s.network + '</span><span class="social-handle">' + s.handle + "</span></span>" +
         "</a>" +
-        '<button class="social-copy" data-copylink="' + s.url + '" title="Copy link" aria-label="Copy ' + s.network + ' link">' + icon("link") + "</button>" +
+        '<button class="social-copy" data-copylink="' + s.url + '" title=tr("Copy link") aria-label="Copy ' + s.network + ' link">' + icon("link") + "</button>" +
       "</div>";
     }).join("") + "</div>";
   }
@@ -585,8 +848,8 @@
           '<p class="logo-card-note">Official ' + b.name + " logos — black, white &amp; various versions. For approved partner, press &amp; retail use; please don’t alter, recolor, or distort the marks.</p>" +
           (fmts ? '<div class="logo-card-fmts"><span class="logo-card-fmts-l">Formats</span>' + fmts + "</div>" : "") +
           '<div class="logo-card-actions">' +
-            '<button class="btn" id="logo-dl">' + icon("download") + " Download all logos</button>" +
-            '<button class="logo-browse-link" id="logo-browse">' + icon("eye") + " Browse all " + logoP.total + " logo files →</button>" +
+            '<button class="btn" id="logo-dl">' + icon("download") + " " + tr("Download all logos") + "</button>" +
+            '<button class="logo-browse-link" id="logo-browse">' + icon("eye") + " " + tr("Browse all {n} logo files →").replace("{n}", logoP.total) + "</button>" +
           "</div>" +
         "</div>" +
         (tiles ? '<div class="logo-preview">' + tiles + "</div>" : "") +
@@ -621,7 +884,7 @@
     return '<div class="fontspec">' +
       '<div class="fontspec-aa" style="font-family:' + f.stack + '">Aa</div>' +
       '<div class="fontspec-body">' +
-        '<div class="fontspec-head"><span class="fontspec-name">' + f.name + '</span><span class="fontspec-role">' + f.role + "</span></div>" +
+        '<div class="fontspec-head"><span class="fontspec-name">' + f.name + '</span><span class="fontspec-role">' + tr(f.role) + "</span></div>" +
         '<div class="fontspec-line big" style="font-family:' + f.stack + '">The quick brown fox jumps over the lazy dog</div>' +
         '<div class="fontspec-line" style="font-family:' + f.stack + '">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>' +
       "</div></div>";
@@ -647,7 +910,7 @@
         '<p class="sg-note">' + icon("info") + "<span>Placeholder guide — the official " + b.name + " brand guide will replace this. Colors, type, and logos below reflect current brand usage.</span></p>" +
         '<div class="sg-actions">' +
           '<button class="btn" data-view-brand="' + bk + '">' + icon("stack") + " View " + b.name + " assets</button>" +
-          (b.logoProduct ? '<button class="btn ghost" data-logo="' + b.logoProduct + '">' + icon("download") + " Download logos</button>" : "") +
+          (b.logoProduct ? '<button class="btn ghost" data-logo="' + b.logoProduct + '">' + icon("download") + " " + tr("Download logos") + "</button>" : "") +
         "</div>" +
       "</div>" +
       '<div class="section-head"><h2>Colors</h2><span class="badge">tap to copy</span></div>' +
@@ -657,7 +920,7 @@
       '<div class="section-head"><h2>Logos</h2></div>' +
       '<div class="sg-logos">' +
         '<div class="sg-logo-tile"><span>' + b.wordmark + "</span></div>" +
-        (b.logoProduct ? '<button class="btn ghost" data-logo="' + b.logoProduct + '">' + icon("download") + " Download logo files</button>" : "") +
+        (b.logoProduct ? '<button class="btn ghost" data-logo="' + b.logoProduct + '">' + icon("download") + " " + tr("Download logo files") + "</button>" : "") +
       "</div>" +
       '<div class="section-head"><h2>Follow ' + b.name + "</h2></div>" +
       socialListHTML(bk);
@@ -680,16 +943,16 @@
     return (
       '<article class="card" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="Open ' + p.name + '">' +
         '<div class="card-frame">' +
-          (p.newBadge && !p.isLogo ? '<span class="tag-new' + (p.newBadge ? " tag-new-" + p.newBadge : "") + '">New</span>' : "") +
+          (p.newBadge && !p.isLogo ? '<span class="tag-new' + (p.newBadge ? " tag-new-" + p.newBadge : "") + '">' + tr("New") + '</span>' : "") +
           (showBrand ? '<span class="tag-brand">' + BRANDS[p.brand].name + "</span>" : "") +
           coverHTML(p) +
           '<div class="quick">' +
-            '<button class="qbtn" data-act="download" title="Download all">' + icon("download") + "</button>" +
+            '<button class="qbtn" data-act="download" title=tr("Download all")>' + icon("download") + "</button>" +
           "</div>" +
         "</div>" +
         '<div class="card-name">' + p.name + "</div>" +
-        (p.label ? '<div class="card-label">' + p.label + "</div>" : "") +
-        '<div class="card-sub">' + (p.isLogo ? p.total + " logo files" : p.total + " assets" + (p.label ? "" : " · " + p.category)) + "</div>" +
+        (p.label ? '<div class="card-label">' + tr(p.label) + "</div>" : "") +
+        '<div class="card-sub">' + (p.isLogo ? tr("{n} logo files").replace("{n}", p.total) : tr(p.total === 1 ? "{n} asset" : "{n} assets").replace("{n}", p.total) + (p.label ? "" : " · " + tr(p.category))) + "</div>" +
       "</article>"
     );
   }
@@ -699,11 +962,11 @@
       '<article class="card row" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="Open ' + p.name + '">' +
         '<div class="row-thumb">' + coverHTML(p) + "</div>" +
         '<div class="row-main">' +
-          '<div class="row-name">' + p.name + (p.newBadge && !p.isLogo ? ' <span class="row-new' + (p.newBadge ? " row-new-" + p.newBadge : "") + '">New</span>' : "") + (p.label ? ' <span class="row-label">' + p.label + "</span>" : "") + "</div>" +
-          '<div class="row-sub">' + (p.isLogo ? p.total + " logo files" : p.total + " assets" + (p.label ? "" : " · " + p.category)) + "</div>" +
+          '<div class="row-name">' + p.name + (p.newBadge && !p.isLogo ? ' <span class="row-new' + (p.newBadge ? " row-new-" + p.newBadge : "") + '">' + tr("New") + '</span>' : "") + (p.label ? ' <span class="row-label">' + tr(p.label) + "</span>" : "") + "</div>" +
+          '<div class="row-sub">' + (p.isLogo ? tr("{n} logo files").replace("{n}", p.total) : tr(p.total === 1 ? "{n} asset" : "{n} assets").replace("{n}", p.total) + (p.label ? "" : " · " + tr(p.category))) + "</div>" +
         "</div>" +
         (showBrand ? '<span class="row-brand">' + BRANDS[p.brand].name + "</span>" : "") +
-        '<button class="row-dl" data-act="download" title="Download all">' + icon("download") + "</button>" +
+        '<button class="row-dl" data-act="download" title=tr("Download all")>' + icon("download") + "</button>" +
       "</article>"
     );
   }
@@ -786,6 +1049,16 @@
     syncURL();
   }
 
+  // A result's caption is built at RENDER time (subFn), never cached — the file
+  // index is built once and reused, so a baked string would freeze captions in
+  // whichever language happened to load first.
+  function subOf(r) { return r.subFn ? r.subFn() : (r.sub || ""); }
+  // Translate each segment of a folder path ("Black / Product Photos"); colourway
+  // segments pass through untranslated, category segments resolve via TYPE_LABELS.
+  function trFolderPath(f) {
+    return String(f).split(" / ").map(function (seg) { return tr(typeLabel(seg)); }).join(" / ");
+  }
+
   // Search results view: matching products (cards) + matching individual files.
   function renderSearch() {
     var q = state.query;
@@ -796,8 +1069,8 @@
     var total = prods.length + fileRes.total;
     _lastSearch = { prods: prods, fileRes: fileRes };   // Enter → open the top hit
 
-    $("#all-title").textContent = "Search results";
-    var label = total + (total === 1 ? " result" : " results");
+    $("#all-title").textContent = tr("Search results");
+    var label = tr(total === 1 ? "{n} result" : "{n} results").replace("{n}", total);
     var bc = $("#browse-count"); if (bc) bc.textContent = label;
     $("#count-badge").textContent = label;
     renderActiveFilters();
@@ -816,7 +1089,7 @@
           "<div><strong>No matches for “" + escapeHTML(q) + "”.</strong>" +
           "<span>Try a product name (Dash), a file type (PNG, MP4), or a category (lifestyle, packaging).</span></div>" +
           '<a class="btn ghost sm" href="mailto:' + CFG.requestEmail + "?subject=" +
-            encodeURIComponent("Asset request — " + q) + '">' + icon("mail") + " Request this asset</a>" +
+            encodeURIComponent("Asset request — " + q) + '">' + icon("mail") + " " + tr("Request this asset") + "</a>" +
         "</div>";
       return;
     }
@@ -831,10 +1104,10 @@
     var facetChips = "";
     if (fileRes.facets.length > 1) {
       facetChips = '<div class="sf-facets" role="tablist" aria-label="Filter results by type">' +
-        '<button class="sf-facet' + (fileRes.facet ? "" : " on") + '" data-facet="">All <span>' + fileRes.total + "</span></button>" +
+        '<button class="sf-facet' + (fileRes.facet ? "" : " on") + '" data-facet="">' + tr("All") + ' <span>' + fileRes.total + "</span></button>" +
         fileRes.facets.map(function (fc) {
           return '<button class="sf-facet' + (fileRes.facet === fc.kind ? " on" : "") + '" data-facet="' + fc.kind + '">' +
-            escapeHTML(fc.kind) + " <span>" + fc.n + "</span></button>";
+            escapeHTML(tr(fc.kind)) + " <span>" + fc.n + "</span></button>";
         }).join("") + "</div>";
     }
     var tiles = fileRes.items.map(function (r) { return searchFileTile(r, q); }).join("");
@@ -866,18 +1139,18 @@
     // Product-less results (catalogs) route by hash instead of product + folder.
     var pName = r.product
       ? (r.product.name.indexOf(BRANDS[r.product.brand].name) === 0 ? r.product.name : BRANDS[r.product.brand].name + " " + r.product.name)
-      : (r.sub || r.folder);
+      : (subOf(r) || r.folder);
     var openAttr = r.openHash
       ? ' data-open="' + escapeHTML(r.openHash) + '"'
       : ' data-pid="' + pid(r.product) + '" data-folder="' + escapeHTML(r.folder) + '"';
     return '<div class="sf-cell">' +
-        '<button class="sf-open"' + openAttr + ' title="' + (r.openHash ? "Open " + safe : "Open in " + pName.replace(/"/g, "")) + '">' +
+        '<button class="sf-open"' + openAttr + ' title="' + (r.openHash ? tr("Open") + " " + safe : tr("Open in") + " " + pName.replace(/"/g, "")) + '">' +
           '<span class="sf-thumb' + (isVid ? " is-video" : "") + '">' + media + (isVid ? '<span class="sf-play">' + icon("play") + "</span>" : "") + "</span>" +
           '<span class="sf-meta"><span class="sf-name">' + highlight(r.label, q || "") + "</span>" +
-            '<span class="sf-sub">' + (r.openHash ? highlight(r.sub || r.folder, q || "") : escapeHTML(pName) + " · " + highlight(r.folder, q || "")) +
+            '<span class="sf-sub">' + (r.openHash ? highlight(subOf(r) || r.folder, q || "") : escapeHTML(pName) + " · " + highlight(trFolderPath(r.folder), q || "")) +
               (f.format ? ' · <span class="sf-fmt">' + f.format + "</span>" : "") + "</span></span>" +
         "</button>" +
-        (dl ? '<button class="sf-dl" data-sfdl="' + dl + '" data-sfname="' + safe + '" title="Download">' + icon("download") + "</button>" : "") +
+        (dl ? '<button class="sf-dl" data-sfdl="' + dl + '" data-sfname="' + safe + '" title=tr("Download")>' + icon("download") + "</button>" : "") +
       "</div>";
   }
   function bindSearchFiles(ctx) {
@@ -952,7 +1225,7 @@
       .filter(Boolean)
       .forEach(function (p) { instoreOwn(p).forEach(pushMat); });
 
-    var orderCta = '<a class="btn" href="#materials">' + icon("mail") + " Order materials</a>";
+    var orderCta = '<a class="btn" href="#materials">' + icon("mail") + " " + tr("Order materials") + "</a>";
     if (!mats.length) {
       box.innerHTML =
         '<div class="instore-empty">' +
@@ -975,11 +1248,11 @@
     box.innerHTML =
       '<div class="logo-card">' +
         '<div class="logo-card-info">' +
-          '<div class="logo-card-name">Retail Marketing Materials</div>' +
+          '<div class="logo-card-name">' + tr("Retail Marketing Materials") + '</div>' +
           '<p class="logo-card-note">Retail displays, posters, shelf talkers and other in-store materials for ' + bname +
             " — order what you need for your shop.</p>" +
           '<div class="logo-card-actions">' + orderCta +
-            '<span class="instore-count">' + mats.length + " material" + (mats.length === 1 ? "" : "s") + " available</span>" +
+            '<span class="instore-count">' + tr(mats.length === 1 ? "{n} material available" : "{n} materials available").replace("{n}", mats.length) + "</span>" +
           "</div>" +
         "</div>" +
         '<div class="logo-preview' + (featured ? " single" : "") + '">' + tiles + "</div>" +
@@ -1050,13 +1323,13 @@
       : (c.region ? '<div class="cat-pills"><span class="cat-region">' + escapeHTML(c.region) + "</span></div>" : "");
     return '<div class="cat-card" data-cur="' + c.slug + '">' +
       '<div class="cat-cover" role="button" tabindex="0" data-catopen aria-label="View ' + alt + '">' +
-        cover + '<span class="cat-view">' + icon("eye") + " View</span></div>" +
+        cover + '<span class="cat-view">' + icon("eye") + " " + tr("View") + "</span></div>" +
       '<div class="cat-meta"><span class="cat-grp">' + escapeHTML(f.group) + "</span>" +
         '<span class="cat-title">' + escapeHTML(f.title) + "</span></div>" +
       regions +
       '<div class="cat-acts">' +
-        '<button class="cat-act" data-catdl>' + icon("download") + " Download</button>" +
-        '<button class="cat-act" data-catshare>' + icon("link") + " Share</button>" +
+        '<button class="cat-act" data-catdl>' + icon("download") + " " + tr("Download") + "</button>" +
+        '<button class="cat-act" data-catshare>' + icon("link") + " " + tr("Share") + "</button>" +
       "</div></div>";
   }
   function renderCatalogs() {
@@ -1067,7 +1340,7 @@
     if (!list.length) { sec.style.display = "none"; box.innerHTML = ""; return; }
     sec.style.display = "";
     var cnt = $("#catalog-count");
-    if (cnt) cnt.textContent = list.length + " document" + (list.length === 1 ? "" : "s");
+    if (cnt) cnt.textContent = tr(list.length === 1 ? "{n} document" : "{n} documents").replace("{n}", list.length);
     box.innerHTML = '<div class="cat-grid">' + catalogFamilies().map(catalogCard).join("") + "</div>";
 
     $$(".cat-card", box).forEach(function (card) {
@@ -1094,7 +1367,7 @@
       var sh = $("[data-catshare]", card);
       if (sh) sh.addEventListener("click", function (e) {
         e.stopPropagation();
-        var c = cur(); if (c) copyText(catalogShareUrl(c), "Catalog link copied");
+        var c = cur(); if (c) copyText(catalogShareUrl(c), tr("Catalog link copied"));
       });
     });
   }
@@ -1110,7 +1383,7 @@
   }
   function openCatalog(slug) {
     var c = catalogBySlug(slug);
-    if (!c) { toast("Catalog not found"); return; }
+    if (!c) { toast(tr("Catalog not found")); return; }
     if (!c.file) { catalogDownload(c); return; }   // not committed yet → Dropbox
     closeCatalog();
     var ov = document.createElement("div");
@@ -1120,9 +1393,9 @@
         '<div class="catlb-t">' + escapeHTML(c.title) +
           (c.region ? ' <span class="cat-region">' + escapeHTML(c.region) + "</span>" : "") + "</div>" +
         '<div class="catlb-acts">' +
-          '<button class="btn ghost sm" id="catlb-dl">' + icon("download") + " Download PDF</button>" +
-          '<button class="btn ghost sm" id="catlb-share">' + icon("link") + " Share</button>" +
-          '<button class="catlb-x" id="catlb-x" aria-label="Close viewer">' + icon("x") + "</button>" +
+          '<button class="btn ghost sm" id="catlb-dl">' + icon("download") + " " + tr("Download PDF") + "</button>" +
+          '<button class="btn ghost sm" id="catlb-share">' + icon("link") + " " + tr("Share") + "</button>" +
+          '<button class="catlb-x" id="catlb-x" aria-label=tr("Close viewer")>' + icon("x") + "</button>" +
         "</div></div>" +
       '<div class="catlb-stage"><div class="catlb-load" id="catlb-load">Loading catalog…</div>' +
         '<canvas id="catlb-canvas"></canvas></div>' +
@@ -1138,7 +1411,7 @@
     $("#catlb-x").addEventListener("click", closeCatalog);
     ov.addEventListener("click", function (e) { if (e.target === ov) closeCatalog(); });
     $("#catlb-dl").addEventListener("click", function () { catalogDownload(c); });
-    $("#catlb-share").addEventListener("click", function () { copyText(catalogShareUrl(c), "Catalog link copied"); });
+    $("#catlb-share").addEventListener("click", function () { copyText(catalogShareUrl(c), tr("Catalog link copied")); });
     $("#catlb-prev").addEventListener("click", function () { go(page - 1); });
     $("#catlb-next").addEventListener("click", function () { go(page + 1); });
     ov.__key = function (e) {
@@ -1170,14 +1443,14 @@
         $("#catlb-page").textContent = page + " / " + doc.numPages;
         $("#catlb-prev").disabled = page <= 1;
         $("#catlb-next").disabled = page >= doc.numPages;
-      }).catch(function () { busy = false; toast("Couldn’t render that page"); });
+      }).catch(function () { busy = false; toast(tr("Couldn’t render that page")); });
     }
     // Never sit on "Loading catalog…" forever — hand over the PDF instead.
     var settled = false;
     var giveUp = setTimeout(function () {
       if (settled || doc) return;
       settled = true;
-      toast("Viewer is taking too long — downloading instead");
+      toast(tr("Viewer is taking too long — downloading instead"));
       catalogDownload(c); closeCatalog();
     }, 20000);
     function bail(msg) {
@@ -1242,8 +1515,9 @@
     var legacy = legacyProducts(bk).slice().sort(function (a, b) { return a.name.localeCompare(b.name); });
     ad.innerHTML =
       '<button class="back" id="add-back">' + icon("arrowLeft") + " Back to library</button>" +
-      '<div class="section-head"><h2>Additional ' + BRANDS[bk].name + " Products</h2><span class=\"badge\">" + legacy.length + " product" + (legacy.length === 1 ? "" : "s") + "</span></div>" +
-      '<p class="additional-note">Products we no longer sell — assets kept here for partners who still need them.</p>' +
+      '<div class="section-head"><h2>' + tr("Additional {brand} Products").replace("{brand}", BRANDS[bk].name) + '</h2><span class="badge">' +
+        tr(legacy.length === 1 ? "{n} product" : "{n} products").replace("{n}", legacy.length) + "</span></div>" +
+      '<p class="additional-note">' + tr("Products we no longer sell — assets kept here for partners who still need them.") + '</p>' +
       '<div class="grid">' + legacy.map(function (p) { return cardHTML(p, "grid"); }).join("") + "</div>";
     $("#add-back").addEventListener("click", navHome);
     bindCards(ad);
@@ -1293,18 +1567,18 @@
     var pg = $("#materials-page");
     pg.style.display = "block";
     animateIn(pg);
-    setTitle("Order Marketing Materials");
+    setTitle(tr("Order Marketing Materials"));
     window.scrollTo(0, 0);
 
     var mats = availableMaterials();
     var head = '<button class="back" id="mat-back">' + icon("arrowLeft") + " Back to library</button>" +
       '<div class="section-head"><h2>Marketing Materials</h2>' +
-        (mats.length ? '<span class="badge">' + mats.length + " available</span>" : "") + "</div>";
+        (mats.length ? '<span class="badge">' + tr("{n} available").replace("{n}", mats.length) + "</span>" : "") + "</div>";
 
     if (!mats.length) {
       pg.innerHTML = head +
         '<div class="instore-empty"><p>Orderable in-store marketing materials will be listed here soon. In the meantime, reach out and we’ll let you know what’s available.</p>' +
-        '<a class="btn ghost sm" href="mailto:' + CFG.orderEmail + "?subject=" + encodeURIComponent("Marketing Material Request") + '">' + icon("mail") + " Contact us</a></div>";
+        '<a class="btn ghost sm" href="mailto:' + CFG.orderEmail + "?subject=" + encodeURIComponent("Marketing Material Request") + '">' + icon("mail") + " " + tr("Contact us") + "</a></div>";
       $("#mat-back").addEventListener("click", navHome);
       return;
     }
@@ -1315,7 +1589,7 @@
       if (m.thumb) {
         var li = lbItems.length;
         lbItems.push({ src: m.thumb, name: m.name, url: m.url || m.thumb });
-        thumb = '<button class="mat-thumb mat-thumb-zoom" data-lbi="' + li + '" title="Click preview to enlarge" aria-label="Enlarge ' + m.name.replace(/"/g, "") + '">' +
+        thumb = '<button class="mat-thumb mat-thumb-zoom" data-lbi="' + li + '" title=tr("Click preview to enlarge") aria-label="Enlarge ' + m.name.replace(/"/g, "") + '">' +
           '<img src="' + m.thumb + '" alt="' + m.name.replace(/"/g, "") + '" loading="lazy"/>' +
           '<span class="mat-zoom-badge">' + icon("search") + "</span></button>";
       } else {
@@ -1324,9 +1598,9 @@
       return '<div class="mat-row">' + thumb +
         '<div class="mat-info"><div class="mat-name">' + m.name + "</div>" +
           (m.dim ? '<div class="mat-dim">' + m.dim + "</div>" : "") + "</div>" +
-        '<div class="mat-qty"><button class="mat-step" data-step="-1" aria-label="Decrease">–</button>' +
+        '<div class="mat-qty"><button class="mat-step" data-step="-1" aria-label=tr("Decrease")>–</button>' +
           '<input type="number" min="0" value="0" data-mat="' + i + '" aria-label="Quantity for ' + m.name.replace(/"/g, "") + '"/>' +
-          '<button class="mat-step" data-step="1" aria-label="Increase">+</button></div>' +
+          '<button class="mat-step" data-step="1" aria-label=tr("Increase")>+</button></div>' +
       "</div>";
     }).join("");
 
@@ -1336,13 +1610,13 @@
       '<div class="mat-layout">' +
         '<div class="mat-list">' + rows + "</div>" +
         '<aside class="mat-side">' +
-          '<div class="mat-side-h">Your details</div>' +
+          '<div class="mat-side-h">' + tr("Your details") + '</div>' +
           '<div class="mat-fields">' +
-            '<label class="mat-field"><span>Store Name</span><input type="text" id="mat-store-name" placeholder="Store name"/></label>' +
-            '<label class="mat-field"><span>Mailing Address</span><input type="text" id="mat-store-address" placeholder="Street, City, State, ZIP"/></label>' +
-            '<label class="mat-field"><span>Email Address</span><input type="email" id="mat-store-email" placeholder="you@store.com"/></label>' +
+            '<label class="mat-field"><span>' + tr("Store Name") + '</span><input type="text" id="mat-store-name" placeholder=tr("Store name")/></label>' +
+            '<label class="mat-field"><span>' + tr("Mailing Address") + '</span><input type="text" id="mat-store-address" placeholder=tr("Street, City, State, ZIP")/></label>' +
+            '<label class="mat-field"><span>' + tr("Email Address") + '</span><input type="email" id="mat-store-email" placeholder="you@store.com"/></label>' +
           "</div>" +
-          '<button class="btn lg mat-order-btn" id="mat-order">' + icon("mail") + ' Order Materials<span id="mat-count"></span></button>' +
+          '<button class="btn lg mat-order-btn" id="mat-order">' + icon("mail") + " " + tr("Order Materials") + '<span id="mat-count"></span></button>' +
           '<p class="mat-side-note">You’ll confirm and send from your email app.</p>' +
         "</aside>" +
       "</div>";
@@ -1372,7 +1646,7 @@
       var q = parseInt(inp.value, 10) || 0;
       if (q > 0) lines.push(mats[+inp.getAttribute("data-mat")].name + " — Qty: " + q);
     });
-    if (!lines.length) { toast("Set a quantity for at least one item first"); return; }
+    if (!lines.length) { toast(tr("Set a quantity for at least one item first")); return; }
     var v = function (id) { var el = $(id); return el ? el.value.trim() : ""; };
     var body = "Store Name: " + v("#mat-store-name") +
       "\nAddress: " + v("#mat-store-address") +
@@ -1392,9 +1666,9 @@
       '<span class="trn-entry-ic">' + icon("graduation") + "</span>" +
       '<span class="trn-entry-txt">' +
         '<span class="trn-entry-t">' + (cert ? "You’re a certified " + p.name + " Specialist" : "Become a " + p.name + " Product Specialist") + "</span>" +
-        '<span class="trn-entry-s">' + (cert ? "Certificate earned " + cert.date + " · review the course or retake anytime" : "Watch the videos, learn the product, and pass a short quiz to get certified.") + "</span>" +
+        '<span class="trn-entry-s">' + (cert ? "Certificate earned " + cert.date + " · review the course or retake anytime" : tr("Watch the videos, learn the product, and pass a short quiz to get certified.")) + "</span>" +
       "</span>" +
-      '<span class="trn-entry-go">' + (cert ? icon("check") + " Certified" : "Start training →") + "</span>" +
+      '<span class="trn-entry-go">' + (cert ? icon("check") + " Certified" : tr("Start training →")) + "</span>" +
     "</button>";
   }
   function trainingHash(p) { return "#train/" + p.brand + "/" + slugify(p.name); }
@@ -1447,7 +1721,7 @@
       "</div>" +
       // 1 — Watch
       '<div class="section-head"><span class="trn-sec-n">1</span><h2>Watch</h2></div>' +
-      '<p class="trn-lead">' + icon("info") + " Watch the how-to-use and cleaning videos — click a video to play it in the large viewer, or download it.</p>" +
+      '<p class="trn-lead">' + icon("info") + " " + tr("Watch the how-to-use and cleaning videos — click a video to play it in the large viewer, or download it.") + "</p>" +
       videoHubGridHTML(p) +
       // 2 — Learn
       '<div class="section-head"><span class="trn-sec-n">2</span><h2>Learn</h2></div>' +
@@ -1480,7 +1754,7 @@
       b.addEventListener("click", function (e) { e.stopPropagation(); directDownload(b.getAttribute("data-vdl"), b.getAttribute("data-vname")); });
     });
     $$("[data-soon]", ctx).forEach(function (b) {
-      b.addEventListener("click", function (e) { e.stopPropagation(); toast("Downloadable file coming soon — Dropbox link on the way"); });
+      b.addEventListener("click", function (e) { e.stopPropagation(); toast(tr("Downloadable file coming soon — Dropbox link on the way")); });
     });
   }
 
@@ -1552,13 +1826,13 @@
         "<span>Enter your name to generate your Product Specialist certificate.</span></div>" +
     "</div>" +
     '<div class="trn-certform">' +
-      '<label class="mat-field"><span>Your Name</span><input type="text" id="trn-name" placeholder="Full name" autocomplete="name"/></label>' +
+      '<label class="mat-field"><span>Your Name</span><input type="text" id="trn-name" placeholder=tr("Full name") autocomplete="name"/></label>' +
       '<button class="btn lg" id="trn-getcert">' + icon("award") + " Get My Certificate</button>" +
     "</div>" +
     '<div id="trn-cert"></div>';
     $("#trn-getcert").addEventListener("click", function () {
       var nm = ($("#trn-name").value || "").trim();
-      if (!nm) { toast("Enter your name for the certificate"); $("#trn-name").focus(); return; }
+      if (!nm) { toast(tr("Enter your name for the certificate")); $("#trn-name").focus(); return; }
       var d = new Date();
       var dateStr = d.toLocaleDateString(undefined, { year: "numeric", month: "long", day: "numeric" });
       saveCert(p, { name: nm, date: dateStr, score: pct });
@@ -1622,7 +1896,7 @@
         encodeURIComponent(name + " — Product Specialist Certification") + "&body=" + encodeURIComponent(body);
     });
     box.scrollIntoView({ behavior: "smooth", block: "center" });
-    toast("Certified! 🎓");
+    toast(tr("Certified! 🎓"));
   }
 
   // Draw the (light, print-style) certificate to a canvas and download as PNG.
@@ -1643,13 +1917,13 @@
     }
     ls("4px"); x.fillStyle = GOLD; x.font = "700 22px Archivo, Arial, sans-serif";
     x.fillText("STÜNDENGLASS · PRODUCT SPECIALIST PROGRAM", cx, 322); ls("0px");
-    x.fillStyle = INK; x.font = "800 46px Archivo, Arial, sans-serif"; x.fillText("Certificate of Completion", cx, 388);
-    x.fillStyle = MUTE; x.font = "400 24px Archivo, Arial, sans-serif"; x.fillText("This certifies that", cx, 462);
+    x.fillStyle = INK; x.font = "800 46px Archivo, Arial, sans-serif"; x.fillText(tr("Certificate of Completion"), cx, 388);
+    x.fillStyle = MUTE; x.font = "400 24px Archivo, Arial, sans-serif"; x.fillText(tr("This certifies that"), cx, 462);
     x.fillStyle = INK; x.font = "800 78px Archivo, Arial, sans-serif"; x.fillText(nm, cx, 552);
     x.fillStyle = GOLD; x.fillRect(cx - 150, 582, 300, 3);
     x.fillStyle = MUTE; x.font = "400 23px Archivo, Arial, sans-serif";
-    x.fillText("has successfully completed the Product Specialist training", cx, 648);
-    x.fillText("and demonstrated expert product knowledge of the", cx, 682);
+    x.fillText(tr("has successfully completed the Product Specialist training"), cx, 648);
+    x.fillText(tr("and demonstrated expert product knowledge of the"), cx, 682);
     x.fillStyle = INK; x.font = "800 46px Archivo, Arial, sans-serif"; x.fillText(product, cx, 748);
     // gold seal
     var scy = 872, r = 70;
@@ -1659,7 +1933,7 @@
     x.fillStyle = INK; x.font = "800 34px Archivo, Arial, sans-serif"; x.fillText(pct + "%", cx, scy + 12);
     ls("1.5px"); x.fillStyle = GOLD; x.font = "700 11px Archivo, Arial, sans-serif"; x.fillText("STÜNDENGLASS", cx, scy + 38); ls("0px");
     // footer columns
-    var fy = 1035, cols = [[dateStr, "DATE ISSUED"], ["Stündenglass", "AUTHORIZED BY"], [cid || "", "CERTIFICATE ID"]], xs = [cx - 400, cx, cx + 400];
+    var fy = 1035, cols = [[dateStr, tr("DATE ISSUED")], ["Stündenglass", tr("AUTHORIZED BY")], [cid || "", tr("CERTIFICATE ID")]], xs = [cx - 400, cx, cx + 400];
     cols.forEach(function (col, i) {
       x.strokeStyle = GOLD; x.lineWidth = 1; x.beginPath(); x.moveTo(xs[i] - 120, fy - 34); x.lineTo(xs[i] + 120, fy - 34); x.stroke();
       x.fillStyle = INK; x.font = "700 24px Archivo, Arial, sans-serif"; x.fillText(col[0], xs[i], fy);
@@ -1684,11 +1958,11 @@
     return '<div class="loc-store" data-store>' +
         '<div class="loc-store-h">' +
           '<span class="loc-store-n">Store <span class="loc-store-i">' + n + "</span></span>" +
-          '<button class="loc-remove" data-remove title="Remove this store">' + icon("trash") + " Remove</button>" +
+          '<button class="loc-remove" data-remove title=tr("Remove this store")>' + icon("trash") + " Remove</button>" +
         "</div>" +
         '<div class="loc-fields">' +
-          '<label class="mat-field loc-wide"><span>Store Name</span><input type="text" data-f="name" placeholder="Store name"/></label>' +
-          '<label class="mat-field loc-wide"><span>Address</span><input type="text" data-f="address" placeholder="123 Main St, City, State ZIP"/></label>' +
+          '<label class="mat-field loc-wide"><span>' + tr("Store Name") + '</span><input type="text" data-f="name" placeholder=tr("Store name")/></label>' +
+          '<label class="mat-field loc-wide"><span>Address</span><input type="text" data-f="address" placeholder=tr("123 Main St, City, State ZIP")/></label>' +
           '<div class="loc-row">' +
             '<label class="mat-field"><span>Phone</span><input type="tel" data-f="phone" placeholder="(555) 555-5555"/></label>' +
             '<label class="mat-field"><span>Website</span><input type="text" data-f="website" placeholder="yourstore.com"/></label>' +
@@ -1707,7 +1981,7 @@
     var pg = $("#locator-page");
     pg.style.display = "block";
     animateIn(pg);
-    setTitle("Store Locator Request");
+    setTitle(tr("Store Locator Request"));
     window.scrollTo(0, 0);
 
     pg.innerHTML =
@@ -1723,8 +1997,8 @@
         '<aside class="mat-side">' +
           '<div class="mat-side-h">Your contact info</div>' +
           '<div class="mat-fields">' +
-            '<label class="mat-field"><span>Your Name</span><input type="text" id="loc-contact-name" placeholder="Full name"/></label>' +
-            '<label class="mat-field"><span>Email Address</span><input type="email" id="loc-contact-email" placeholder="you@company.com"/></label>' +
+            '<label class="mat-field"><span>Your Name</span><input type="text" id="loc-contact-name" placeholder=tr("Full name")/></label>' +
+            '<label class="mat-field"><span>' + tr("Email Address") + '</span><input type="email" id="loc-contact-email" placeholder="you@company.com"/></label>' +
             '<label class="mat-field"><span>Phone <em>(optional)</em></span><input type="tel" id="loc-contact-phone" placeholder="(555) 555-5555"/></label>' +
           "</div>" +
           '<button class="btn lg mat-order-btn" id="loc-submit">' + icon("mail") + ' Submit Request<span id="loc-count"></span></button>' +
@@ -1739,13 +2013,13 @@
       });
       var multi = $$(".loc-store", stores).length > 1;
       stores.classList.toggle("has-multi", multi);
-      var c = $("#loc-count"); if (c) c.textContent = multi ? " · " + $$(".loc-store", stores).length + " stores" : "";
+      var c = $("#loc-count"); if (c) c.textContent = multi ? " · " + tr("{n} stores").replace("{n}", $$(".loc-store", stores).length) : "";
     }
     function bindRemove(ctx) {
       $$("[data-remove]", ctx).forEach(function (b) {
         if (b.__bound) return; b.__bound = true;
         b.addEventListener("click", function () {
-          if ($$(".loc-store", stores).length <= 1) { toast("At least one store is required"); return; }
+          if ($$(".loc-store", stores).length <= 1) { toast(tr("At least one store is required")); return; }
           b.closest(".loc-store").remove();
           renumber();
         });
@@ -1779,9 +2053,9 @@
         "\n  Website: " + website
       );
     });
-    if (!valid) { toast("Add at least one store's details first"); return; }
+    if (!valid) { toast(tr("Add at least one store's details first")); return; }
     var v = function (id) { var el = $(id); return el ? el.value.trim() : ""; };
-    var body = "Store Locator Request" +
+    var body = tr("Store Locator Request") +
       "\n\nSubmitted by: " + v("#loc-contact-name") +
       "\nContact Email: " + v("#loc-contact-email") +
       "\nContact Phone: " + v("#loc-contact-phone") +
@@ -1984,7 +2258,7 @@
           '<span class="catcard-tx"><span class="catcard-name">' + label + "</span>" +
           '<span class="catcard-c">' + count + "</span></span></button>";
       }
-      function fcount(n) { return n + " file" + (n === 1 ? "" : "s"); }
+      function fcount(n) { return tr(n === 1 ? "{n} file" : "{n} files").replace("{n}", n); }
       // Which folders to show as cards:
       //  • on the default landing, the TOP-LEVEL folders (so every colourway is one
       //    click away even though the gallery is already showing one of them);
@@ -2008,7 +2282,7 @@
       var crumb = "";
       if (openPath) {
         var segs = openPath.split(SEP), acc = "";
-        crumb = '<div class="folder-crumb"><button class="crumb-btn" data-path="">' + icon("arrowLeft") + " All folders</button>";
+        crumb = '<div class="folder-crumb"><button class="crumb-btn" data-path="">' + icon("arrowLeft") + " " + tr("All folders") + "</button>";
         segs.forEach(function (s, i) {
           acc = acc ? acc + SEP + s : s;
           crumb += '<span class="crumb-sep">/</span>' + (i < segs.length - 1
@@ -2026,11 +2300,13 @@
       // Eyebrow shows the product type (falls back to category); the title is the
       // full brand-prefixed name (e.g. "Stündenglass Gravity Infuser"), without
       // double-prefixing names that already lead with the brand.
-      var typeLine = p.type || p.category || BRANDS[p.brand].name;
+      var typeLine = tr(p.type || p.category || BRANDS[p.brand].name);
       var fullName = p.name.indexOf(BRANDS[p.brand].name) === 0 ? p.name : BRANDS[p.brand].name + " " + p.name;
       setTitle(fullName);
 
-      var stat = p.total + " assets" + (p.videos && p.videos.length ? " · " + p.videos.length + " videos" : "") + " · updated " + fmtDate(p.added);
+      var stat = tr(p.total === 1 ? "{n} asset" : "{n} assets").replace("{n}", p.total) +
+        (p.videos && p.videos.length ? " · " + tr(p.videos.length === 1 ? "{n} video" : "{n} videos").replace("{n}", p.videos.length) : "") +
+        " · " + tr("updated {date}").replace("{date}", fmtDate(p.added));
       d.innerHTML =
         '<button class="back" id="back-btn">' + icon("arrowLeft") + " Back to library</button>" +
         '<div class="detail-hero">' +
@@ -2039,7 +2315,7 @@
             '<div class="detail-eyebrow">' + typeLine + "</div>" +
             "<h2>" + fullName + "</h2>" +
             '<div class="detail-stat">' + stat + "</div>" +
-            ((p.info && p.info.description) ? '<p class="detail-desc">' + p.info.description + "</p>" : "") +
+            (infoOf(p).description ? '<p class="detail-desc">' + infoOf(p).description + "</p>" : "") +
             '<div class="detail-actions">' +
               '<button class="btn" id="dl-all">' + icon("download") + " Download all</button>" +
               '<button class="btn ghost" id="copy-link">' + icon("link") + " Copy link</button>" +
@@ -2055,27 +2331,27 @@
         // Empty products (no synced files yet) show a friendly note instead of an
         // empty gallery with an "undefined" folder tab.
         (catTotal > 0
-          ? '<div class="section-head" id="docs-head"><h2>Download assets by category</h2><span class="badge">' + catTotal + " file" + (catTotal === 1 ? "" : "s") + "</span></div>" +
+          ? '<div class="section-head" id="docs-head"><h2>' + tr("Download assets by category") + '</h2><span class="badge">' + tr(catTotal === 1 ? "{n} file" : "{n} files").replace("{n}", catTotal) + "</span></div>" +
             assetNav +
             // A folder that only holds other folders still gets its own actions —
             // you can share or download "Black" without drilling into a leaf.
             (openPath && activeCount === 0
               ? '<div class="folder-toolbar">' +
                   '<h3 class="folder-title">' + escapeHTML(lastSeg(openPath)) +
-                    '<span class="ft-count">' + filesUnder(openPath) + " file" + (filesUnder(openPath) === 1 ? "" : "s") + "</span></h3>" +
+                    '<span class="ft-count">' + fcount(filesUnder(openPath)) + "</span></h3>" +
                   '<div class="gallery-toolbar">' +
-                    '<button class="btn ghost sm" id="copy-folder">' + icon("link") + " Copy folder link</button>" +
-                    '<button class="btn ghost sm" id="dl-folder">' + icon("download") + " Download folder</button>" +
+                    '<button class="btn ghost sm" id="copy-folder">' + icon("link") + " " + tr("Copy folder link") + "</button>" +
+                    '<button class="btn ghost sm" id="dl-folder">' + icon("download") + " " + tr("Download folder") + "</button>" +
                   "</div>" +
                 "</div>"
               : "") +
             (activeCount > 0
               ? '<div class="folder-toolbar">' +
-                  '<h3 class="folder-title">' + activeLabel + '<span class="ft-count">' + activeCount + " file" + (activeCount === 1 ? "" : "s") + "</span></h3>" +
+                  '<h3 class="folder-title">' + activeLabel + '<span class="ft-count">' + fcount(activeCount) + "</span></h3>" +
                   '<div class="gallery-toolbar">' +
-                    '<label class="selectall"><input type="checkbox" id="sel-all"/> Select all</label>' +
-                    '<button class="btn ghost sm" id="copy-folder">' + icon("link") + " Copy folder link</button>" +
-                    '<button class="btn ghost sm" id="dl-folder">' + icon("download") + " Download folder</button>" +
+                    '<label class="selectall"><input type="checkbox" id="sel-all"/> ' + tr("Select all") + "</label>" +
+                    '<button class="btn ghost sm" id="copy-folder">' + icon("link") + " " + tr("Copy folder link") + "</button>" +
+                    '<button class="btn ghost sm" id="dl-folder">' + icon("download") + " " + tr("Download folder") + "</button>" +
                   "</div>" +
                 "</div>" +
                 '<div class="gallery" id="gallery"></div>' +
@@ -2083,10 +2359,10 @@
                   '<span class="selcount"><strong id="sel-n">0</strong> selected</span>' +
                   '<span class="selacts">' +
                     '<button class="btn ghost sm" id="sel-clear">Clear</button>' +
-                    '<button class="btn sm" id="sel-dl">' + icon("download") + " Download selected</button>" +
+                    '<button class="btn sm" id="sel-dl">' + icon("download") + " " + tr("Download selected") + "</button>" +
                   "</span>" +
                 "</div>"
-              : (kids.length ? '<p class="pkg-note">' + icon("info") + " Choose a folder above to view and download its files." + "</p>" : ""))
+              : (kids.length ? '<p class="pkg-note">' + icon("info") + " " + tr("Choose a folder above to view and download its files.") + "</p>" : ""))
           : '<div class="section-head"><h2>Download assets by category</h2></div>' +
             '<div class="usage"><span>Assets for this product are being added — check back soon, or use “Request an asset” for something specific.</span></div>') +
         (CFG.usageNote ? '<div class="usage usage-foot">' + icon("info") + "<span>" + CFG.usageNote + "</span></div>" : "") +
@@ -2107,7 +2383,7 @@
         b.addEventListener("click", function (e) { e.stopPropagation(); directDownload(b.getAttribute("data-vdl"), b.getAttribute("data-vname")); });
       });
       $$("[data-soon]", d).forEach(function (b) {
-        b.addEventListener("click", function (e) { e.stopPropagation(); toast("Downloadable file coming soon — Dropbox link on the way"); });
+        b.addEventListener("click", function (e) { e.stopPropagation(); toast(tr("Downloadable file coming soon — Dropbox link on the way")); });
       });
       // POP-display / packaging image → enlarge in the lightbox.
       $$("[data-lbimg]", d).forEach(function (b) {
@@ -2133,11 +2409,13 @@
       $("#dl-all").addEventListener("click", function () { downloadAll(p); });
       $("#copy-link").addEventListener("click", function () {
         var url = location.origin + location.pathname + productHash(p);
-        copyText(url, "Link copied");
+        copyText(url, tr("Link copied"));
       });
       var copyDesc = $("#copy-desc");
       if (copyDesc) copyDesc.addEventListener("click", function () {
-        copyText(((p.info && p.info.fullDescription) || []).join("\n\n"), "Description copied");
+        // infoOf, not p.info — a store reading the portal in Spanish must copy the
+        // SPANISH menu copy, which is the whole point of the button.
+        copyText((infoOf(p).fullDescription || []).join("\n\n"), tr("Description copied"));
       });
       // Folder actions work at every level: `active` is the leaf being shown, and
       // for a branch folder it equals openPath, so both resolve to the open folder.
@@ -2155,10 +2433,10 @@
         // link — say so instead. (The sync mints one per folder; a miss means it
         // hasn't run for a folder added since.)
         if (!link || (p.dropbox && link.split("?")[0] === p.dropbox.split("?")[0])) {
-          toast("No Dropbox link for this folder yet — it'll appear after the next sync");
+          toast(tr("No Dropbox link for this folder yet — it'll appear after the next sync"));
           return;
         }
-        copyText(viewLink(link), "Dropbox folder link copied");
+        copyText(viewLink(link), tr("Dropbox folder link copied"));
       });
       var selAllBox = $("#sel-all");
       if (selAllBox) selAllBox.addEventListener("change", function (e) {
@@ -2223,8 +2501,8 @@
   function inStoreHTML(p) {
     if (p.isLogo) return "";
     var r = inStoreItems(p), items = r.items;
-    var head = '<div class="section-head"><h2>In Store Marketing Materials</h2>' +
-      (items.length ? '<span class="badge">' + items.length + " item" + (items.length === 1 ? "" : "s") + "</span>" : "") + "</div>";
+    var head = '<div class="section-head"><h2>' + tr("In Store Marketing Materials") + '</h2>' +
+      (items.length ? '<span class="badge">' + tr(items.length === 1 ? "{n} item" : "{n} items").replace("{n}", items.length) + "</span>" : "") + "</div>";
     if (!items.length) {
       return head + '<div class="instore-empty">' +
         "<p>Printed in-store materials (posters, shelf talkers, displays) for this product will appear here as they’re added.</p>" +
@@ -2267,12 +2545,12 @@
     // Same as skuHTML: a category has no single retail box, and its note points at
     // the (hidden) SKU details — so drop the whole section instead of dangling.
     if (p.isLogo || p.isCategory) return "";
-    var info = p.info || {};
+    var info = infoOf(p);
     // Auto-detect the single-box shot vs the POP-display shot from the product's
     // own "Packaging" Dropbox folder by filename. "POP" in the name → the display;
     // everything else → the single retail box. Prefer transparent renders, and the
     // 3/4 hero angle for the box.
-    var pkgFolder = (p.folders && p.folders["Packaging"]) || [];
+    var pkgFolder = (p.folders && p.folders[tr("Packaging")]) || [];
     var imgs = pkgFolder.filter(function (f) { return f.thumb; });
     function pick(wantPop) {
       var pool = imgs.filter(function (f) { return wantPop === /pop/i.test(f.name); });
@@ -2311,23 +2589,23 @@
       return out;
     }
     var popLabel = (info.innerPack && info.innerPack !== "N/A")
-      ? info.innerPack + "-Pack Retail POP Display" : "Retail POP display";
+      ? info.innerPack + "-Pack Retail POP Display" : tr("Retail POP display");
     var cards, note;
     var colorCards = /retro/i.test(p.name) ? colorBoxCards() : "";
     if (colorCards) {
       // Retro collection: one retail box per colourway, then the collection POP display.
       cards = colorCards + boxCard(popLabel, info.popImg, info.popImgDl, popFile) +
-        pkgCard("Master carton", info.cartonImg);
-      note = "Ships in a retail-ready POP display — one retail box shown per colorway. See SKU details for inner-pack &amp; master-carton quantities.";
+        pkgCard(tr("Master carton"), info.cartonImg);
+      note = tr("Ships in a retail-ready POP display — one retail box shown per colorway. See SKU details for inner-pack &amp; master-carton quantities.");
     } else if (info.pop) {
       // Ships in a retail-ready POP display. Label the POP card with its pack count.
-      cards = boxCard("Single Retail Packaging", info.boxImg, null, boxFile) +
+      cards = boxCard(tr("Single Retail Packaging"), info.boxImg, null, boxFile) +
         boxCard(popLabel, info.popImg, info.popImgDl, popFile) +
-        pkgCard("Master carton", info.cartonImg);
-      note = "Ships in a retail-ready POP display — see SKU details for inner-pack &amp; master-carton quantities.";
+        pkgCard(tr("Master carton"), info.cartonImg);
+      note = tr("Ships in a retail-ready POP display — see SKU details for inner-pack &amp; master-carton quantities.");
     } else {
       // Ships in single retail boxes — no POP display for these products.
-      cards = boxCard("Single Retail Packaging", info.boxImg, null, boxFile) + pkgCard("Master carton", info.cartonImg);
+      cards = boxCard(tr("Single Retail Packaging"), info.boxImg, null, boxFile) + pkgCard(tr("Master carton"), info.cartonImg);
       note = "Ships in single retail boxes. See SKU details for case and pallet quantities and specs.";
     }
     return '<div class="section-head"><h2>Packaging</h2>' + (info.pop ? '<span class="badge">Ships in POP display</span>' : "") + "</div>" +
@@ -2346,7 +2624,7 @@
           '<span class="cway-cv">' + (v || "—") + "</span></div>";
       };
       return '<div class="cway-card" style="--c:' + w.hex + '">' +
-        '<div class="cway-top"><span class="cway-dot"></span><span class="cway-color">' + w.color + "</span></div>" +
+        '<div class="cway-top"><span class="cway-dot"></span><span class="cway-color">' + tr(w.color) + "</span></div>" +
         '<div class="cway-name">' + escapeHTML(w.name) + "</div>" +
         '<div class="cway-codes">' + code("SKU", w.sku) + code("UPC", w.upc) + "</div>" +
       "</div>";
@@ -2361,7 +2639,7 @@
     // Categories (e.g. Accessories) have no single SKU — an all-blank table reads
     // as broken to a store, so hide the section entirely. See `isCategory` in assets.js.
     if (p.isLogo || p.isCategory) return "";
-    var info = p.info || {};
+    var info = infoOf(p);
     // Every product shows the full SKU/packaging field set (like Dash II) so
     // it's clear what still needs filling in — blanks render as a muted "—".
     var missing = 0;
@@ -2394,7 +2672,7 @@
 
   // MSRP / warranty facts + FAQ/site CTAs (sits in the hero info column).
   function overviewFactsHTML(p) {
-    var info = p.info || {};
+    var info = infoOf(p);
     var faq = info.faqUrl || BRANDS[p.brand].faqUrl;
     var factItems =
       (info.msrp ? '<div class="ov-fact">' + icon("tag") + '<div class="ov-fact-t"><div class="ov-fact-l">MSRP</div><div class="ov-fact-v">' + info.msrp + "</div></div></div>" : "") +
@@ -2411,17 +2689,17 @@
   }
   // Highlights — a full-width two-column grid below the hero.
   function highlightsHTML(p) {
-    var info = p.info || {};
+    var info = infoOf(p);
     if (!(info.highlights && info.highlights.length)) return "";
     return '<div class="section-head"><h2>Highlights</h2></div>' +
       '<ul class="highlights">' + info.highlights.map(function (h) { return "<li>" + h + "</li>"; }).join("") + "</ul>";
   }
   // Official scraped product description (copy-to-clipboard).
   function fullDescHTML(p) {
-    var info = p.info || {};
+    var info = infoOf(p);
     if (!(info.fullDescription && info.fullDescription.length)) return "";
     return '<div class="section-head"><h2>Official Product Description</h2>' +
-        '<button class="btn ghost sm fd-copy" id="copy-desc">' + icon("copy") + " Copy</button></div>" +
+        '<button class="btn ghost sm fd-copy" id="copy-desc">' + icon("copy") + " " + tr("Copy") + "</button></div>" +
       '<div class="fulldesc"><div class="fd-body">' +
         info.fullDescription.map(function (t) { return "<p>" + t + "</p>"; }).join("") +
       "</div></div>";
@@ -2429,12 +2707,12 @@
   // "What's In the Box?" — contents list + components image.
   function whatsInBoxHTML(p) {
     if (p.isLogo) return "";
-    var b = p.info && p.info.box;
+    var b = infoOf(p).box;
     if (!b || !(b.contents && b.contents.length)) return "";
     var list = '<ul class="box-list">' + b.contents.map(function (c) { return "<li>" + c + "</li>"; }).join("") + "</ul>";
     var head = '<div class="section-head"><h2>What’s In the Box?</h2></div>';
     if (!b.image) return head + '<div class="box-single">' + list + "</div>";
-    var img = '<div class="box-media"><img src="' + b.image + '" alt="What’s in the box" loading="lazy"/></div>';
+    var img = '<div class="box-media"><img src="' + b.image + '" alt=tr("What’s in the box") loading="lazy"/></div>';
     return head + '<div class="box-grid">' + list + img + "</div>";
   }
 
@@ -2458,7 +2736,7 @@
       // Only offer a download when there's a real downloadable file; watch-only
       // tutorials (YouTube/Vimeo) just show Watch + the YouTube link.
       var dlBtn = v.mp4
-        ? '<button class="vbtn" data-vdl="' + dl + '" data-vname="' + dlname + '">' + icon("download") + " Download</button>"
+        ? '<button class="vbtn" data-vdl="' + dl + '" data-vname="' + dlname + '">' + icon("download") + " " + tr("Download") + "</button>"
         : "";
       var ytBtn = v.youtube
         ? '<a class="vbtn" href="' + v.youtube + '" target="_blank" rel="noopener noreferrer" title="Share on YouTube">' + icon("youtube") + " YouTube</a>"
@@ -2471,7 +2749,7 @@
         "</div>" +
       "</div>";
     }).join("");
-    return '<div class="section-head"><h2>How to use videos</h2><span class="badge">' + p.videos.length + " video" + (p.videos.length > 1 ? "s" : "") + "</span></div>" +
+    return '<div class="section-head"><h2>' + tr("How to use videos") + '</h2><span class="badge">' + tr(p.videos.length === 1 ? "{n} video" : "{n} videos").replace("{n}", p.videos.length) + "</span></div>" +
       '<p class="vhub-note">' + icon("eye") + " Click a video to watch it, and download it or open it on YouTube where available.</p>" +
       '<div class="vhub">' + cards + "</div>";
   }
@@ -2548,9 +2826,9 @@
             (file.format ? '<span class="gfmt">' + escapeHTML(file.format) + "</span>" : "") + "</div>" +
           '<div class="gbar"><span class="gn">' + nmSafe + '</span>' +
           '<span class="ga">' +
-            '<button type="button" class="ga-btn" data-copy="' + escapeHTML(copyUrl) + '" title="Copy link" aria-label="Copy link to ' + nmAttr + '">' + icon("link") + "</button>" +
+            '<button type="button" class="ga-btn" data-copy="' + escapeHTML(copyUrl) + '" title=tr("Copy link") aria-label="Copy link to ' + nmAttr + '">' + icon("link") + "</button>" +
             '<button type="button" class="ga-btn" data-dl="' + escapeHTML(dlUrl) + '" data-name="' + nmAttr + '"' + (file.file ? ' data-direct="1"' : "") +
-              ' title="' + (ext ? "Watch on YouTube" : "Download") + '" aria-label="' + (ext ? "Watch " + nmAttr + " on YouTube" : "Download " + nmAttr) + '">' + icon(ext ? "play" : "download") + "</button>" +
+              ' title="' + (ext ? "Watch on YouTube" : tr("Download")) + '" aria-label="' + (ext ? "Watch " + nmAttr + " on YouTube" : "Download " + nmAttr) + '">' + icon(ext ? "play" : "download") + "</button>" +
           "</span></div>" +
         "</div>"
       );
@@ -2591,8 +2869,8 @@
     $$("[data-copy]", $("#gallery")).forEach(function (b) {
       b.addEventListener("click", function () {
         var url = b.getAttribute("data-copy");
-        if (!url || url === "#") { toast("No link yet"); return; }
-        copyText(url, "Link copied");
+        if (!url || url === "#") { toast(tr("No link yet")); return; }
+        copyText(url, tr("Link copied"));
       });
     });
   }
@@ -2607,7 +2885,7 @@
   //  • the anchor is removed on a delay — removing it immediately can cancel the
   //    download on some mobile browsers.
   function directDownload(href, name) {
-    if (!href || href === "#") { toast("Download coming soon"); return; }
+    if (!href || href === "#") { toast(tr("Download coming soon")); return; }
     var crossOrigin = /^https?:\/\//i.test(href) && href.indexOf(location.origin) !== 0;
     var a = document.createElement("a");
     a.href = href;
@@ -2629,7 +2907,7 @@
   // A single file: force a direct download from its Dropbox link (dl=1) so the
   // browser saves the file instead of opening Dropbox's preview page.
   function downloadOne(url) {
-    if (!url || url === "#") { toast("Connect storage to enable downloads"); return; }
+    if (!url || url === "#") { toast(tr("Connect storage to enable downloads")); return; }
     // Per-file Dropbox links (scl/fi) → force a direct download. Leave folder
     // links (scl/fo) alone so a single-file click never pulls the whole folder.
     if (/dropbox\.com\/scl\/fi\//.test(url)) url = dropboxZipUrl(url);
@@ -2639,7 +2917,7 @@
   // .zip in the browser. Files too large to host (big videos) come via the
   // Dropbox "Download all" instead.
   function downloadFiles(files, label) {
-    if (!files || !files.length) { toast("Select at least one asset first"); return; }
+    if (!files || !files.length) { toast(tr("Select at least one asset first")); return; }
     var committed = files.filter(function (f) { return f && f.file; });
     // Same-origin committed files → bundle into a .zip in the browser.
     if (committed.length) {
@@ -2647,25 +2925,25 @@
       var skipped = files.length - committed.length;
       toast("Preparing " + committed.length + " files as a .zip…");
       loadJSZip(function (JSZip) {
-        if (!JSZip) { toast("Couldn’t load the zipper — try again"); return; }
+        if (!JSZip) { toast(tr("Couldn’t load the zipper — try again")); return; }
         var zip = new JSZip();
         Promise.all(committed.map(function (f) {
           return fetch(f.file).then(function (r) { return r.blob(); }).then(function (b) { zip.file(fileLabel(f), b); });
         })).then(function () { return zip.generateAsync({ type: "blob" }); })
           .then(function (blob) {
             var href = URL.createObjectURL(blob);
-            directDownload(href, String(label || "assets").replace(/[^\w.-]+/g, "_") + ".zip");
+            directDownload(href, String(label || tr("assets")).replace(/[^\w.-]+/g, "_") + ".zip");
             setTimeout(function () { URL.revokeObjectURL(href); }, 8000);
             toast("Downloaded " + committed.length + " files" + (skipped ? " · " + skipped + " from Dropbox separately" : ""));
           })
-          .catch(function () { toast("Couldn’t build the zip"); });
+          .catch(function () { toast(tr("Couldn’t build the zip")); });
       });
       return;
     }
     // Dropbox-hosted files: browsers can't zip cross-origin content, so pull each
     // one straight from Dropbox. A hidden iframe per file dodges the popup blocker.
     var links = files.map(function (f) { return f && f.url ? dropboxZipUrl(f.url) : null; }).filter(Boolean);
-    if (!links.length) { toast("Use “Download all” to get these from Dropbox"); return; }
+    if (!links.length) { toast(tr("Use “Download all” to get these from Dropbox")); return; }
     if (links.length === 1) { downloadOne(files[0].url); return; }
     toast("Downloading " + links.length + " files from Dropbox…");
     links.forEach(function (u, i) {
@@ -2681,7 +2959,7 @@
   // fall back to the product link, then to bundling committed files.
   function downloadFolder(p, folderName) {
     var link = (p.folderLinks && p.folderLinks[folderName]) || p.dropbox;
-    if (link) { toast("Opening Dropbox download…"); window.open(dropboxZipUrl(link), "_blank", "noopener"); return; }
+    if (link) { toast(tr("Opening Dropbox download…")); window.open(dropboxZipUrl(link), "_blank", "noopener"); return; }
     downloadFiles((p.folders && p.folders[folderName]) || [], folderName);
   }
   // Turn a Dropbox shared-folder link into a direct "download whole folder as
@@ -2703,7 +2981,7 @@
     // link (works on the static site, no backend). Per-file/zip-of-selection
     // still needs the Dropbox API sync (see GitHub Action) to resolve paths.
     if (p.dropbox) {
-      toast("Opening Dropbox download…");
+      toast(tr("Opening Dropbox download…"));
       window.open(dropboxZipUrl(p.dropbox), "_blank", "noopener");
       return;
     }
@@ -2840,7 +3118,7 @@
     var syncClear = function () { if (clearEl) clearEl.classList.toggle("show", !!searchEl.value); };
 
     // Popular-search suggestions, shown when the (empty) box is focused.
-    var SUGGESTIONS = ["Lifestyle", "Product Photos", "Logos", "Packaging", "Videos", "PNG"];
+    var SUGGESTIONS = ["Lifestyle", "Product Photos", tr("Logos"), tr("Packaging"), "Videos", "PNG"];
     var suggestEl = null;
     function buildSuggest() {
       if (suggestEl) return suggestEl;
@@ -2897,15 +3175,15 @@
     syncClear();
 
     // lightbox / asset viewer
-    $("#lb-copy").innerHTML = icon("link") + " Copy link";
-    $("#lb-dl").innerHTML = icon("download") + " Download";
+    $("#lb-copy").innerHTML = icon("link") + tr(" Copy link");
+    $("#lb-dl").innerHTML = icon("download") + tr(" Download");
     $("#lb-close").addEventListener("click", closeLightbox);
     $("#lb-prev").addEventListener("click", function () { lbStep(-1); });
     $("#lb-next").addEventListener("click", function () { lbStep(1); });
     $("#lb-copy").addEventListener("click", function () {
       var u = lbCurrent().url;
-      if (!u || u === "#") { toast("No link yet"); return; }
-      copyText(u, "Link copied");
+      if (!u || u === "#") { toast(tr("No link yet")); return; }
+      copyText(u, tr("Link copied"));
     });
     $("#lb-dl").addEventListener("click", function () { var it = lbCurrent(); if (it.file) directDownload(it.file, it.name); else downloadOne(it.url); });
     $("#lightbox").addEventListener("click", function (e) {
@@ -2939,13 +3217,41 @@
       onScroll();
     }
 
+    // language selector — persists per visitor, ?lang= makes it shareable
+    var langBtn = $("#lang-btn");
+    if (langBtn) {
+      langBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        langMenuOpen() ? closeLangMenu() : openLangMenu();
+      });
+      // Click-away / Escape close, and Escape returns focus to the button.
+      document.addEventListener("click", function (e) {
+        if (langMenuOpen() && !e.target.closest("#lang-select")) closeLangMenu();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && langMenuOpen()) { closeLangMenu(); langBtn.focus(); }
+      });
+    }
+
     // restore filters from the URL (shareable views), then route to product/home
     parseURL();
     window.addEventListener("hashchange", function () {
       if (ignoreHash) { ignoreHash = false; return; }
       route();
     });
-    route();
+
+    // A returning visitor's language must be ready BEFORE the first render —
+    // otherwise the page paints English and then visibly flips. If the pack
+    // can't be fetched we fall back to English rather than render half-translated.
+    loadLangPack(state.lang, function (ok) {
+      if (!ok) state.lang = "en";
+      document.documentElement.lang = state.lang;
+      syncLangToggle();
+      applyStaticI18n();
+      bindLangBar();
+      maybeOfferLang();
+      route();
+    });
   }
 
   // Re-trigger a subtle fade-in each time a page renders.
