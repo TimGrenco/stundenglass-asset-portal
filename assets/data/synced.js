@@ -15532,6 +15532,16 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "Modül Accessories / Modül Dry Herb Vape Tank / Social Videos": [
+        {
+          "name": "Reels Modül Dry Herb Vape Tutorial",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/oyhxo90azjk3l01iell4u/Reels-Mod-l-Dry-Herb-Vape-Tutorial.mp4?rlkey=zktkw2dwkdel2q70nuhj8arkx&dl=0",
+          "thumb": "assets/synced/accessories/09914962c36e5602070898106813d96444e18cc7c37ea262821e308ab887c60e.jpg",
+          "file": null
+        }
+      ],
       "Modül Accessories / Modül Dry Herb Vape Tank / TV Screen Videos": [
         {
           "name": "Modül Dry Herb Vape Tank Tutorial",
