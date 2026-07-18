@@ -288,6 +288,7 @@ window.PORTAL_I18N.fr = {
   "Request this asset": "Demander cette ressource",
   "Retail Marketing Materials": "Supports marketing pour points de vente",
   "Retail POP display": "Présentoir POP de vente",
+  "SKU": "SKU",
   "SKU details": "Détails SKU",
   "Scroll to top": "Revenir en haut",
   "Search all assets": "Rechercher dans toutes les ressources",

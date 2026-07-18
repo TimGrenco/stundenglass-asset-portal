@@ -288,6 +288,7 @@ window.PORTAL_I18N.it = {
   "Request this asset": "Richiedi questo asset",
   "Retail Marketing Materials": "Materiali marketing retail",
   "Retail POP display": "Espositore POP per punto vendita",
+  "SKU": "SKU",
   "SKU details": "Dettagli SKU",
   "Scroll to top": "Torna su",
   "Search all assets": "Cerca in tutti gli asset",

@@ -288,6 +288,7 @@ window.PORTAL_I18N.de = {
   "Request this asset": "Dieses Asset anfragen",
   "Retail Marketing Materials": "Marketingmaterialien für den Handel",
   "Retail POP display": "Retail-POP-Display",
+  "SKU": "SKU",
   "SKU details": "SKU-Details",
   "Scroll to top": "Nach oben scrollen",
   "Search all assets": "Alle Assets durchsuchen",

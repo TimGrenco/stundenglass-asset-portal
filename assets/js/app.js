@@ -389,12 +389,12 @@
     // keyed by the synced Dropbox filename (no extension). Drives the friendly
     // captions on product tiles and in the order cart. Add an entry per new file.
     "Stundenglass-Sticker-Mockup":              { name: "Die-Cut Stickers",         dim: '2" × 2"' },
-    "Stundenglass-v3-Mockup":                   { name: "Stündenglass Poster",       dim: '11" × 17"' },
-    "Stundenglass-v3-Postcard-Mockup":          { name: "Stündenglass Postcard",     dim: '4" × 6"' },
-    "Stundenglass-V3-window-cling-mockup copy": { name: "Stündenglass Window Cling", dim: '8" × 8"' },
-    "Stundenglass-v3-Table-Tent-Mockup":        { name: "Stündenglass Table Tent",   dim: '4" × 6"' },
-    "Stundenglass-Wiz-Mockup":                  { name: "Khalifa Poster",            dim: '18" × 24"' },
-    "Modul-Table-Tent-Mockup":                  { name: "Modül Table Tent",          dim: '4" × 6"' },
+    "Stundenglass-v3-Mockup":                   { name: "Stündenglass Poster",       dim: '11" × 17"', sku: "SG4-PSR-STMK-02" },
+    "Stundenglass-v3-Postcard-Mockup":          { name: "Stündenglass Postcard",     dim: '4" × 6"',   sku: "SG4-PCD-STMK-02" },
+    "Stundenglass-V3-window-cling-mockup copy": { name: "Stündenglass Window Cling", dim: '8" × 8"',   sku: "SG4-WCL-STMK-02" },
+    "Stundenglass-v3-Table-Tent-Mockup":        { name: "Stündenglass Table Tent",   dim: '4" × 6"',   sku: "SG4-TBT-STMK-02" },
+    "Stundenglass-Wiz-Mockup":                  { name: "Khalifa Poster",            dim: '18" × 24"', sku: "SG2-KKP-STMK-02" },
+    "Modul-Table-Tent-Mockup":                  { name: "Modül Table Tent",          dim: '4" × 6"',   sku: "SGM-MTT-STMK-02" },
     "Screenshot 2026-07-15 at 1.19.29 PM":      { name: "Stündenglass Wooden Logo",  dim: '12" × 12"' },
   };
   // The featured "main" image on the home Retail Marketing Materials card (by
@@ -1566,8 +1566,8 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     (window.PORTAL_INSTORE_GENERAL || []).forEach(function (x) {
       if (seen[x.name]) return;
       seen[x.name] = true;
-      var lbl = instoreLabel(x);   // friendly name + print dimensions when mapped
-      out.push({ name: lbl ? lbl.name : x.name, dim: lbl ? lbl.dim : (x.dim || null), thumb: x.thumb, url: x.file || x.url || null });
+      var lbl = instoreLabel(x);   // friendly name + print dimensions + SKU when mapped
+      out.push({ name: lbl ? lbl.name : x.name, dim: lbl ? lbl.dim : (x.dim || null), sku: lbl ? lbl.sku || null : null, thumb: x.thumb, url: x.file || x.url || null });
     });
     PRODUCTS.forEach(function (p) {
       if (p.isLogo) return;
@@ -1578,6 +1578,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         out.push({
           name: lbl ? lbl.name : x.name + " — " + p.name,
           dim: lbl ? lbl.dim : (x.dim || null),
+          sku: lbl ? lbl.sku || null : null,
           thumb: x.thumb, url: x.file || x.url || null
         });
       });
@@ -1624,7 +1625,8 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       }
       return '<div class="mat-row">' + thumb +
         '<div class="mat-info"><div class="mat-name">' + m.name + "</div>" +
-          (m.dim ? '<div class="mat-dim">' + m.dim + "</div>" : "") + "</div>" +
+          (m.dim ? '<div class="mat-dim">' + m.dim + "</div>" : "") +
+          (m.sku ? '<div class="mat-sku">' + tr("SKU") + " " + escapeHTML(m.sku) + "</div>" : "") + "</div>" +
         '<div class="mat-qty"><button class="mat-step" data-step="-1" aria-label="' + tr("Decrease") + '">–</button>' +
           '<input type="number" min="0" value="0" data-mat="' + i + '" aria-label="Quantity for ' + m.name.replace(/"/g, "") + '"/>' +
           '<button class="mat-step" data-step="1" aria-label="' + tr("Increase") + '">+</button></div>' +
@@ -1671,7 +1673,10 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var lines = [];
     $$("[data-mat]", $("#materials-page")).forEach(function (inp) {
       var q = parseInt(inp.value, 10) || 0;
-      if (q > 0) lines.push(mats[+inp.getAttribute("data-mat")].name + " — Qty: " + q);
+      if (q > 0) {
+        var m = mats[+inp.getAttribute("data-mat")];
+        lines.push(m.name + (m.sku ? " (" + m.sku + ")" : "") + " — Qty: " + q);
+      }
     });
     if (!lines.length) { toast(tr("Set a quantity for at least one item first")); return; }
     var v = function (id) { var el = $(id); return el ? el.value.trim() : ""; };
@@ -2542,7 +2547,8 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       var media = x.thumb ? '<img src="' + x.thumb + '" alt="' + fileLabel(x).replace(/"/g, "") + '" loading="lazy"/>' : window.__icon("photo");
       var lbl = instoreLabel(x);
       var cap = lbl ? '<span class="instore-tile-cap"><span class="instore-tile-nm">' + escapeHTML(lbl.name) +
-        "</span><span class=\"instore-tile-dim\">" + escapeHTML(lbl.dim) + "</span></span>" : "";
+        "</span><span class=\"instore-tile-dim\">" + escapeHTML(lbl.dim) + "</span>" +
+        (lbl.sku ? '<span class="instore-tile-sku">' + tr("SKU") + " " + escapeHTML(lbl.sku) + "</span>" : "") + "</span>" : "";
       return '<a class="instore-tile' + (lbl ? " has-cap" : "") + '" href="#materials" title="Order ' + fileLabel(x).replace(/"/g, "") + '">' +
         '<span class="instore-tile-media">' + media + '<span class="instore-tile-order">' + icon("mail") + " Order</span></span>" +
         cap + "</a>";

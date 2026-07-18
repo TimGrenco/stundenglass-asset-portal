@@ -288,6 +288,7 @@ window.PORTAL_I18N.es = {
   "Request this asset": "Solicitar este recurso",
   "Retail Marketing Materials": "Materiales de marketing minorista",
   "Retail POP display": "Exhibidor POP para tienda",
+  "SKU": "SKU",
   "SKU details": "Detalles de SKU",
   "Scroll to top": "Volver arriba",
   "Search all assets": "Buscar en todos los recursos",
