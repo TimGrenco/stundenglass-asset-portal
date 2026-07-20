@@ -15350,57 +15350,7 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
-      "Modül Accessories / Modül Dry Herb Vape Tank / Product Photos / PNGs": [
-        {
-          "name": "herbvapetank_01",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/ajw37mvfcla12gz8efx7f/herbvapetank_01.png?rlkey=v7idpakcmdnpcnvxo0j7p6jlu&dl=0",
-          "thumb": "assets/synced/accessories/5dddd6cfa8ffaf0027c38df23d8f80a60b25e568f2e214739dc7e3ff6d7f60d9.jpg",
-          "file": null
-        },
-        {
-          "name": "herbvapetank_02",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/j76vkvdvraekmub0acjf2/herbvapetank_02.png?rlkey=f1xokfdr7s78bubwyg75xv4po&dl=0",
-          "thumb": "assets/synced/accessories/cedd05b91fdfb67852aef9af54dc4c274a862ae17a94b68e92392d424b842550.jpg",
-          "file": null
-        },
-        {
-          "name": "herbvapetank_03",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/eymb1b3qyu9lmdqqixajt/herbvapetank_03.png?rlkey=ofu1mgypmcbzvblrixr7koevv&dl=0",
-          "thumb": "assets/synced/accessories/33ee22c91ed6cbdb680d44cd4398e74f9c0fb14916c073121909facc0890f96b.jpg",
-          "file": null
-        },
-        {
-          "name": "herbvapetank_04",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/vy9j0ozgl4n6ax3q55a6e/herbvapetank_04.png?rlkey=lw8n6xis1dpe5g68iql698k59&dl=0",
-          "thumb": "assets/synced/accessories/5f35e34aba15e79b14f56944055e83c1eded85727922bbeb859a9251d171bc63.jpg",
-          "file": null
-        },
-        {
-          "name": "herbvapetank_05",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/sg9u4hfoqzrifo7t2ww4s/herbvapetank_05.png?rlkey=di8faaj0rh6shzhqkglhfj3m9&dl=0",
-          "thumb": "assets/synced/accessories/f35958f178cbed1bfb597c1baccd23e7f99579464751a229805fb577fffd32d6.jpg",
-          "file": null
-        },
-        {
-          "name": "herbvapetank_06",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/9qll390z53qtqftqdj6pc/herbvapetank_06.png?rlkey=6kdxl4dgwe5lt7cn6j63rrpse&dl=0",
-          "thumb": "assets/synced/accessories/1dff060cea6bde4b5aa43e05fca87741c586556b09f909d2e5b50d0946a4f2c2.jpg",
-          "file": null
-        }
-      ],
-      "Modül Accessories / Modül Dry Herb Vape Tank / Product Photos / PNGs Compressed": [
+      "Modül Accessories / Modül Dry Herb Vape Tank / Product Photos": [
         {
           "name": "herbvapetank_01",
           "type": "image",
@@ -17877,8 +17827,6 @@ window.PORTAL_SYNCED = {
       "Modül Accessories": "https://www.dropbox.com/scl/fo/x0hcld6fc6jvagfbxxy6o/AFu4-V0IG2um7X9Tf7hCP8I?rlkey=kk342v9n4iemhap21xodxkjgu&dl=1",
       "Modül Accessories / Modül Dry Herb Vape Tank": "https://www.dropbox.com/scl/fo/0cqyy2s35kzzmoxd3x67a/ANhjv84hhtjI1YitSpY--NA?rlkey=yc73s3fehx33iswqc49hqxs1b&dl=1",
       "Modül Accessories / Modül Dry Herb Vape Tank / Product Photos": "https://www.dropbox.com/scl/fo/2v0nenwr6afakj3k055ud/AMdiuEMjyfsS0rfkijL69hY?rlkey=ht08vnevhrf0l9rj71cyj2tyz&dl=1",
-      "Modül Accessories / Modül Dry Herb Vape Tank / Product Photos / PNGs": "https://www.dropbox.com/scl/fo/4b3s11d9gms0feb79h5hd/AAOyuDYbsM_qT6J54QhuyUY?rlkey=8kumjl3o7caka91tcboqssis9&dl=1",
-      "Modül Accessories / Modül Dry Herb Vape Tank / Product Photos / PNGs Compressed": "https://www.dropbox.com/scl/fo/do90lgp7l515a3m77pvs3/AJdr7BCb5_CP04ZJPEfRZ8U?rlkey=9vrqlruvge9o5ptj7gcwwd4rc&dl=1",
       "Modül Accessories / Modül Dry Herb Vape Tank / Lifestyle Photos": "https://www.dropbox.com/scl/fo/iextfzvrr05yqciuymrg3/AOuoqaotvB-R-9ntXYDxa9w?rlkey=mszyty5f27pr8k3i8wk5asxhe&dl=1",
       "Modül Accessories / Modül Dry Herb Vape Tank / Lifestyle Photos / Larry Venice": "https://www.dropbox.com/scl/fo/8bvp5chg6l38bibbgn5pf/AMgm2hEn3iz3taAuv-mPfoE?rlkey=wzal07kvnmxxietwbrmhr0d4g&dl=1",
       "Modül Accessories / Modül Dry Herb Vape Tank / Social Videos": "https://www.dropbox.com/scl/fo/4338dg8ysw1j203rbuoia/AEVMhAz9y5GwzmxIK-IDjP0?rlkey=7j52yw6jsrszg872jgcef2jno&dl=1",
