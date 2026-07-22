@@ -190,6 +190,8 @@
     _fileIndex = null;   // its haystacks embed translated text — rebuild in the new language
     _trAlias = null;     // translated→English search aliases come from the pack
     route();   // re-render whatever view is open, in the new language
+    syncURL();  // route() only rewrites the URL on the home view — without this a stale
+                // ?lang= survives and wins over localStorage on the next load
     restoreQuizState(quiz);
     if (y) window.scrollTo(0, y);
     // Focus was on the menu item we just destroyed; put it back on the trigger
@@ -231,8 +233,20 @@
         (on ? '<span class="langmenu-tick">' + icon("check") + "</span>" : "") +
       "</button>";
     }).join("");
-    $$(".langmenu-item", menu).forEach(function (b) {
+    var items = $$(".langmenu-item", menu);
+    items.forEach(function (b, i) {
       b.addEventListener("click", function () { closeLangMenu(); setLang(b.getAttribute("data-lang")); });
+      // role="menu" promises roving focus — Tab alone doesn't satisfy that contract.
+      b.addEventListener("keydown", function (e) {
+        var to = null;
+        if (e.key === "ArrowDown") to = items[(i + 1) % items.length];
+        else if (e.key === "ArrowUp") to = items[(i - 1 + items.length) % items.length];
+        else if (e.key === "Home") to = items[0];
+        else if (e.key === "End") to = items[items.length - 1];
+        if (!to) return;
+        e.preventDefault();
+        to.focus();
+      });
     });
   }
   function openLangMenu() {
@@ -849,7 +863,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           '<span class="social-ic">' + socialIcon(s.network) + "</span>" +
           '<span class="social-meta"><span class="social-net">' + s.network + '</span><span class="social-handle">' + s.handle + "</span></span>" +
         "</a>" +
-        '<button class="social-copy" data-copylink="' + s.url + '" title="' + tr("Copy link") + '" aria-label="Copy ' + s.network + ' link">' + icon("link") + "</button>" +
+        '<button class="social-copy" data-copylink="' + s.url + '" title="' + tr("Copy link") + '" aria-label="' + tr("Copy {name} link").replace("{name}", s.network) + '">' + icon("link") + "</button>" +
       "</div>";
     }).join("") + "</div>";
   }
@@ -992,7 +1006,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   }
   function gridCardHTML(p) {
     return (
-      '<article class="card" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="Open ' + p.name + '">' +
+      '<article class="card" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="' + tr("Open {name}").replace("{name}", tr(p.name)) + '">' +
         '<div class="card-frame">' +
           (p.newBadge && !p.isLogo ? '<span class="tag-new tag-new-' + p.newBadge + '">' + tr("New") + "</span>" : "") +
           coverHTML(p) +
@@ -1008,7 +1022,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   }
   function rowHTML(p) {
     return (
-      '<article class="card row" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="Open ' + p.name + '">' +
+      '<article class="card row" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="' + tr("Open {name}").replace("{name}", tr(p.name)) + '">' +
         '<div class="row-thumb">' + coverHTML(p) + "</div>" +
         '<div class="row-main">' +
           '<div class="row-name">' + tr(p.name) + (p.newBadge && !p.isLogo ? ' <span class="row-new' + (p.newBadge ? " row-new-" + p.newBadge : "") + '">' + tr("New") + '</span>' : "") + (p.label ? ' <span class="row-label">' + tr(p.label) + "</span>" : "") + "</div>" +
@@ -1152,7 +1166,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   function renderFileResults(sf, fileRes, q) {
     var facetChips = "";
     if (fileRes.facets.length > 1) {
-      facetChips = '<div class="sf-facets" role="tablist" aria-label="Filter results by type">' +
+      facetChips = '<div class="sf-facets" role="tablist" aria-label="' + tr("Filter results by type") + '">' +
         '<button class="sf-facet' + (fileRes.facet ? "" : " on") + '" data-facet="">' + tr("All") + ' <span>' + fileRes.total + "</span></button>" +
         fileRes.facets.map(function (fc) {
           return '<button class="sf-facet' + (fileRes.facet === fc.kind ? " on" : "") + '" data-facet="' + fc.kind + '">' +
@@ -1197,7 +1211,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         '<button class="sf-open"' + openAttr + ' title="' + (r.openHash ? tr("Open") + " " + safe : tr("Open in") + " " + pName.replace(/"/g, "")) + '">' +
           '<span class="sf-thumb' + (isVid ? " is-video" : "") + '">' + media + (isVid ? '<span class="sf-play">' + icon("play") + "</span>" : "") + "</span>" +
           '<span class="sf-meta"><span class="sf-name">' + highlight(r.label, q || "") + "</span>" +
-            '<span class="sf-sub">' + (r.openHash ? highlight(subOf(r) || r.folder, q || "") : escapeHTML(pName) + " · " + highlight(trFolderPath(r.folder), q || "")) +
+            '<span class="sf-sub">' + (r.openHash ? highlight(subOf(r) || r.folder, q || "") : escapeHTML(fullProductName(r.product)) + " · " + highlight(trFolderPath(r.folder), q || "")) +
               (f.format ? ' · <span class="sf-fmt">' + f.format + "</span>" : "") + "</span></span>" +
         "</button>" +
         (dl ? '<button class="sf-dl" data-sfdl="' + dl + '" data-sfname="' + safe + '" title="' + tr("Download") + '">' + icon("download") + "</button>" : "") +
@@ -1332,7 +1346,10 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   }
   function catalogBySlug(s) { return (window.PORTAL_CATALOGS || []).filter(function (x) { return x.slug === s; })[0]; }
   function catalogFileName(c) { return (c.title + (c.region ? " - " + c.region : "")).replace(/[^\w.-]+/g, "_") + ".pdf"; }
-  function catalogShareUrl(c) { return location.origin + location.pathname + "#catalog/" + c.slug; }
+  // Shared links must carry the sender's language: the recipient has no ?lang= and no
+  // localStorage, so without this they land on the English portal.
+  function langQuery() { return state.lang !== "en" ? "?lang=" + state.lang : ""; }
+  function catalogShareUrl(c) { return location.origin + location.pathname + langQuery() + "#catalog/" + c.slug; }
   function catalogDownload(c) { if (c.file) directDownload(c.file, catalogFileName(c)); else downloadOne(c.url); }
 
   // One card per document family (e.g. "Stündenglass 2026 Catalog"); regional
@@ -1361,7 +1378,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       : window.__icon("file");
     var multi = f.variants.length > 1;
     var regions = multi
-      ? '<div class="cat-pills" role="group" aria-label="Region for ' + alt + '">' +
+      ? '<div class="cat-pills" role="group" aria-label="' + tr("Region for {name}").replace("{name}", alt) + '">' +
           f.variants.map(function (v) {
             var on = v === c;
             return '<button class="cat-pill' + (on ? " on" : "") + '" data-slug="' + v.slug + '"' +
@@ -1370,9 +1387,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           }).join("") + "</div>"
       : (c.region ? '<div class="cat-pills"><span class="cat-region">' + escapeHTML(c.region) + "</span></div>" : "");
     return '<div class="cat-card" data-cur="' + c.slug + '">' +
-      '<div class="cat-cover" role="button" tabindex="0" data-catopen aria-label="View ' + alt + '">' +
+      '<div class="cat-cover" role="button" tabindex="0" data-catopen aria-label="' + tr("View {name}").replace("{name}", alt) + '">' +
         cover + '<span class="cat-view">' + icon("eye") + " " + tr("View") + "</span></div>" +
-      '<div class="cat-meta"><span class="cat-grp">' + escapeHTML(f.group) + "</span>" +
+      '<div class="cat-meta"><span class="cat-grp">' + escapeHTML(tr(f.group || "")) + "</span>" +
         '<span class="cat-title">' + escapeHTML(f.title) + "</span></div>" +
       regions +
       '<div class="cat-acts">' +
@@ -1669,7 +1686,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           (m.dim ? '<div class="mat-dim">' + m.dim + "</div>" : "") +
           (m.sku ? '<div class="mat-sku">' + tr("SKU") + " " + escapeHTML(m.sku) + "</div>" : "") + "</div>" +
         '<div class="mat-qty"><button class="mat-step" data-step="-1" aria-label="' + tr("Decrease") + '">–</button>' +
-          '<input type="number" min="0" value="0" data-mat="' + i + '" aria-label="Quantity for ' + m.name.replace(/"/g, "") + '"/>' +
+          '<input type="number" min="0" value="0" data-mat="' + i + '" aria-label="' + tr("Quantity for {name}").replace("{name}", m.name.replace(/"/g, "")) + '"/>' +
           '<button class="mat-step" data-step="1" aria-label="' + tr("Increase") + '">+</button></div>' +
       "</div>";
     }).join("");
@@ -2419,7 +2436,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
             // you can share or download "Black" without drilling into a leaf.
             (openPath && activeCount === 0
               ? '<div class="folder-toolbar">' +
-                  '<h3 class="folder-title">' + escapeHTML(lastSeg(openPath)) +
+                  '<h3 class="folder-title">' + escapeHTML(tr(typeLabel(lastSeg(openPath)))) +
                     '<span class="ft-count">' + fcount(filesUnder(openPath)) + "</span></h3>" +
                   '<div class="gallery-toolbar">' +
                     '<button class="btn ghost sm" id="copy-folder">' + icon("link") + " " + tr("Copy folder link") + "</button>" +
@@ -2490,7 +2507,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       if (heroCover) heroCover.addEventListener("click", function () { openLightbox([{ src: p.cover, name: fullName, url: p.cover }], 0); });
       $("#dl-all").addEventListener("click", function () { downloadAll(p); });
       $("#copy-link").addEventListener("click", function () {
-        var url = location.origin + location.pathname + productHash(p);
+        var url = location.origin + location.pathname + langQuery() + productHash(p);
         copyText(url, tr("Link copied"));
       });
       var copyDesc = $("#copy-desc");
@@ -2813,7 +2830,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       var dl = v.mp4 ? dropboxZipUrl(v.mp4) : "";
 
       var thumb = '<div class="vthumb' + (playSrc ? " vplay" : "") + '"' +
-        (playSrc ? ' data-play="' + playSrc + '" data-title="' + safe + '"' + (dl ? ' data-dl="' + dl + '" data-dlname="' + dlname + '"' : "") + ' role="button" tabindex="0" aria-label="Watch ' + safe + '"' : "") + ">" +
+        (playSrc ? ' data-play="' + playSrc + '" data-title="' + safe + '"' + (dl ? ' data-dl="' + dl + '" data-dlname="' + dlname + '"' : "") + ' role="button" tabindex="0" aria-label="' + tr("Watch {name}").replace("{name}", safe) + '"' : "") + ">" +
         poster + '<span class="play-badge">' + icon("play") + "</span>" + (playSrc ? '<span class="vthumb-hint">' + tr("Click to watch") + "</span>" : "") + "</div>";
 
       // Only offer a download when there's a real downloadable file; watch-only
@@ -2889,10 +2906,10 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       if (ext && hasImg) {
         ytAttr = ' data-yt="' + file.url + '"';
         badge = '<span class="play-badge">' + icon("play") + "</span>";
-        a11yAttr = ' role="button" tabindex="0" aria-label="Watch ' + fileLabel(file).replace(/"/g, "") + ' on YouTube"';
+        a11yAttr = ' role="button" tabindex="0" aria-label="' + tr("Watch {name} on YouTube").replace("{name}", fileLabel(file).replace(/"/g, "")) + '"';
       } else if (hasImg) {
         lbAttr = ' data-lbidx="' + items.length + '"';
-        a11yAttr = ' role="button" tabindex="0" aria-label="Enlarge ' + fileLabel(file).replace(/"/g, "") + '"';
+        a11yAttr = ' role="button" tabindex="0" aria-label="' + tr("Enlarge {name}").replace("{name}", fileLabel(file).replace(/"/g, "")) + '"';
         items.push({ src: file.thumb, name: fileLabel(file), url: file.url || "#", file: file.file || null });
       }
       // Dropbox-derived strings (name, url, thumb) are escaped on every path so a
@@ -2904,14 +2921,14 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       var dlUrl = file.file || file.url || "#", copyUrl = file.url || "#";
       return (
         '<div class="gcell' + (on ? " sel" : "") + '" data-key="' + escapeHTML(key) + '">' +
-          '<label class="gselect"><input type="checkbox" class="gcheck"' + (on ? " checked" : "") + ' aria-label="Select ' + nmAttr + '"/></label>' +
+          '<label class="gselect"><input type="checkbox" class="gcheck"' + (on ? " checked" : "") + ' aria-label="' + tr("Select {name}").replace("{name}", nmAttr) + '"/></label>' +
           '<div class="gthumb' + (ext ? " is-video" : "") + '"' + lbAttr + ytAttr + a11yAttr + ">" + thumb +
             (file.format ? '<span class="gfmt">' + escapeHTML(file.format) + "</span>" : "") + "</div>" +
           '<div class="gbar"><span class="gn">' + nmSafe + '</span>' +
           '<span class="ga">' +
-            '<button type="button" class="ga-btn" data-copy="' + escapeHTML(copyUrl) + '" title="' + tr("Copy link") + '" aria-label="Copy link to ' + nmAttr + '">' + icon("link") + "</button>" +
+            '<button type="button" class="ga-btn" data-copy="' + escapeHTML(copyUrl) + '" title="' + tr("Copy link") + '" aria-label="' + tr("Copy link to {name}").replace("{name}", nmAttr) + '">' + icon("link") + "</button>" +
             '<button type="button" class="ga-btn" data-dl="' + escapeHTML(dlUrl) + '" data-name="' + nmAttr + '"' + (file.file ? ' data-direct="1"' : "") +
-              ' title="' + (ext ? tr("Watch on YouTube") : tr("Download")) + '" aria-label="' + (ext ? "Watch " + nmAttr + " on YouTube" : "Download " + nmAttr) + '">' + icon(ext ? "play" : "download") + "</button>" +
+              ' title="' + (ext ? tr("Watch on YouTube") : tr("Download")) + '" aria-label="' + (ext ? tr("Watch {name} on YouTube").replace("{name}", nmAttr) : tr("Download {name}").replace("{name}", nmAttr)) + '">' + icon(ext ? "play" : "download") + "</button>" +
           "</span></div>" +
         "</div>"
       );
@@ -3078,11 +3095,27 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
 
   // ---- lightbox / asset viewer ---------------------------------------------
   var lbItems = [], lbIdx = 0;   // items: { src, name, url }
+  var _lbReturn = null;
   function openLightbox(items, idx) {
     lbItems = items && items.length ? items : [];
     lbIdx = idx || 0;
     showLb();
     $("#lightbox").classList.add("open");
+    // Dialog behaviour: remember the opener, move focus in, and stop the page behind
+    // from scrolling. Without this a keyboard user tabs straight out of the viewer
+    // into the page underneath while it is still covering the screen.
+    _lbReturn = document.activeElement;
+    document.body.style.overflow = "hidden";
+    var first = $("#lb-close"); if (first) first.focus();
+  }
+  // Keep Tab inside the open viewer.
+  function lbTrap(e) {
+    if (e.key !== "Tab" || !lbOpen()) return;
+    var f = $$("#lightbox button, #lightbox a[href]").filter(function (el) { return el.offsetParent !== null; });
+    if (!f.length) return;
+    var first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   }
   function lbCurrent() { return lbItems[lbIdx] || {}; }
   function showLb() {
@@ -3101,7 +3134,14 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     lbIdx = (lbIdx + d + lbItems.length) % lbItems.length;
     showLb();
   }
-  function closeLightbox() { $("#lightbox").classList.remove("open"); $("#lightbox img").src = ""; lbItems = []; }
+  function closeLightbox() {
+    $("#lightbox").classList.remove("open");
+    $("#lightbox img").src = "";
+    lbItems = [];
+    document.body.style.overflow = "";
+    if (_lbReturn && _lbReturn.focus) _lbReturn.focus();   // back to the thumbnail that opened it
+    _lbReturn = null;
+  }
   function lbOpen() { return $("#lightbox").classList.contains("open"); }
 
   // ---- toast ---------------------------------------------------------------
@@ -3293,6 +3333,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
 
     // keyboard shortcuts
     document.addEventListener("keydown", function (e) {
+      lbTrap(e);
       if (e.key === "Escape") {
         if ($("#vlb")) { closeVideoModal(); return; }
         if (lbOpen()) { closeLightbox(); return; }

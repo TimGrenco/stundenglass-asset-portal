@@ -516,6 +516,11 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 .gcell { position: relative; }
 .gselect { position: absolute; top: 8px; left: 8px; z-index: 3; display: inline-flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.92); border: 1px solid var(--hair); border-radius: 6px; padding: 3px; line-height: 0; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08); cursor: pointer; }
 .gcheck { width: 16px; height: 16px; margin: 0; accent-color: var(--ink); cursor: pointer; }
+/* Touch: enlarge the tappable area around the small checkbox to the 40px minimum
+   without changing how big the control looks. */
+@media (hover: none) {
+  .gselect { padding: 11px; }
+}
 .gcell.sel { border-color: var(--ink); box-shadow: 0 0 0 1px var(--ink); }
 .gcell.sel .gthumb { background: var(--mist-2); }
 
@@ -988,6 +993,11 @@ a.logo-tile { cursor: pointer; }
 .support-h { font-family: var(--serif); font-size: clamp(22px, 3vw, 30px); font-weight: 800;
   letter-spacing: -0.02em; color: #fff; margin: 0 0 12px; }
 .support-copy p { margin: 0; font-size: 14px; line-height: 1.62; color: rgba(255,255,255,0.74); max-width: 62ch; }
+/* The support e-mail is one unbreakable token; on very narrow phones it forced the
+   grid column wider than the screen and .support's overflow:hidden clipped the
+   translated copy beside it. Let the columns shrink and the address wrap. */
+.support-inner > * { min-width: 0; }
+.support-btn { max-width: 100%; overflow-wrap: anywhere; }
 .support-actions { display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
 .support-btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px;
   background: #fff; color: var(--ink); text-decoration: none; font-weight: 700; font-size: 14.5px;
