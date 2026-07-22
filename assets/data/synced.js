@@ -15538,6 +15538,14 @@ window.PORTAL_SYNCED = {
           "url": "https://www.dropbox.com/scl/fi/1pt42n8ssw56j3p3p4caw/herbvapetank_06.png?rlkey=nlswknm9zvgddxpq95nlmne50&dl=0",
           "thumb": "assets/synced/accessories/dda95d357a376ebca3efe837619a09a4180a3109501681f0e1043cf793b375f2.jpg",
           "file": null
+        },
+        {
+          "name": "herbvapetank_07",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/apw773noxsyacfb8rthgm/herbvapetank_07.png?rlkey=7wmohxlt6gran20fveuxqa91j&dl=0",
+          "thumb": "assets/synced/accessories/6f0369eed1965e11a8f357d3985e5010b5ce7df7307c20150f222035168217ec.jpg",
+          "file": null
         }
       ],
       "Modül Accessories / Modül Dry Herb Vape Tank / Lifestyle Photos / Larry Venice": [
