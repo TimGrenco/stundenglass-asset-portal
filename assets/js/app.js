@@ -187,6 +187,8 @@
     applyStaticI18n();
     applyJsChrome();
     resetSuggest();   // its chips are built once and cached — force a re-translate
+    _fileIndex = null;   // its haystacks embed translated text — rebuild in the new language
+    _trAlias = null;     // translated→English search aliases come from the pack
     route();   // re-render whatever view is open, in the new language
     restoreQuizState(quiz);
     if (y) window.scrollTo(0, y);
@@ -578,7 +580,7 @@ var FOLDER_TAB_ORDER = ["Product Photos", "Lifestyle Photos", "Web Banners", "Lo
     if (!chips.length) { box.innerHTML = ""; return; }
     var left = chips.map(function (c) {
       return '<button class="fchip" data-clear="' + c.k + '">' + c.label + ' <span class="x">' + icon("x") + "</span></button>";
-    }).join("") + '<button class="fclear" data-clear="all">Clear all</button>';
+    }).join("") + '<button class="fclear" data-clear="all">' + tr("Clear all") + '</button>';
     box.innerHTML =
       '<div class="fb-left">' + left + "</div>" +
       '<div class="fb-right"><button class="btn ghost sm" id="share-view">' + icon("link") + " " + tr("Share view") + "</button></div>";
@@ -620,10 +622,39 @@ var FOLDER_TAB_ORDER = ["Product Photos", "Lifestyle Photos", "Web Banners", "Lo
     modul: ["modül"], kompact: ["kompact", "compact"], compact: ["kompact"],
     tv: ["tv screen"], instore: ["in store", "in-store"], "in-store": ["in store"],
   };
+  // Translated word → its English source, derived from the active pack. Much of the
+  // searchable data is English no matter the language (Dropbox filenames, formats), so
+  // a retailer typing "embalagem" has to reach files named "…Packaging Render". Only
+  // single-word translations are mapped, which keeps the expansion precise. Rebuilt on
+  // language switch (see applyLang).
+  var _trAlias = null;
+  function trAliasMap() {
+    if (_trAlias) return _trAlias;
+    var m = {}, p = pack();
+    if (p && p.ui) {
+      Object.keys(p.ui).forEach(function (en) {
+        var tx = p.ui[en];
+        if (typeof tx !== "string") return;
+        var k = tx.toLowerCase().trim();
+        if (!k || k.indexOf(" ") !== -1) return;          // single-word translations only
+        if (/[{<>]/.test(en) || en.indexOf(" ") !== -1) return;
+        var v = en.toLowerCase().trim();
+        if (k === v) return;
+        if (!m[k]) m[k] = [];
+        if (m[k].indexOf(v) === -1) m[k].push(v);
+      });
+    }
+    _trAlias = m;
+    return m;
+  }
   function termAliases(t) {
-    var syn = SEARCH_SYNONYMS[t];
-    if (!syn) return [t];
-    var out = [t]; syn.forEach(function (s) { if (out.indexOf(s) === -1) out.push(s); });
+    var out = [t];
+    function add(x) { if (out.indexOf(x) === -1) out.push(x); }
+    (trAliasMap()[t] || []).forEach(function (en) {
+      add(en);
+      (SEARCH_SYNONYMS[en] || []).forEach(add);   // then the English term's own synonyms
+    });
+    (SEARCH_SYNONYMS[t] || []).forEach(add);
     return out;
   }
   // A haystack matches when EVERY term (or one of its aliases) is present.
@@ -684,7 +715,13 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
             label: fileLabel(file), kind: facetOf(folder, file),
             // Nested folders read as "Product · Black / Product Photos"
             subFn: function () { return p.name + " · " + trFolderPath(folder); },
-            hay: (fileLabel(file) + " " + folder + " " + (file.format || "") + " " + p.name + " " + (p.category || "") + " " + BRANDS[p.brand].name).toLowerCase()
+            // Both English AND localized text: a retailer types the folder name the
+            // portal shows them ("Fotos de produto"), while a shared ?q=<english>
+            // link from a colleague must keep working in any language.
+            hay: (fileLabel(file) + " " + folder + " " + trFolderPath(folder) +
+              " " + (file.format || "") + " " + p.name + " " + tr(p.name) +
+              " " + (p.category || "") + " " + tr(p.category || "") +
+              " " + BRANDS[p.brand].name).toLowerCase()
           });
         });
       });
@@ -725,7 +762,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       function prose(i) {
         return " " + (i.description || "") + " " + (i.fullName || "") + " " + ((i.highlights || []).join(" "));
       }
-      var hay = (p.name + " " + (p.category || "") + " " + (p.type || "") + " " + (p.label || "") +
+      var hay = (p.name + " " + tr(p.name) +
+        " " + (p.category || "") + " " + tr(p.category || "") +
+        " " + (p.type || "") + " " + (p.label || "") + " " + tr(p.label || "") +
         " " + BRANDS[p.brand].name + prose(en) + prose(loc)).toLowerCase();
       if (!matchTerms(hay, groups)) return null;
       return { p: p, score: relScore(p.name, hay, groups, rawQ) };
@@ -818,7 +857,8 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var box = $("#social-hub"); if (!box) return;
     var bk = state.view;
     box.innerHTML =
-      '<div class="section-head"><h2>Follow ' + BRANDS[bk].name + " On Socials</h2><span class=\"badge\">Official accounts</span></div>" +
+      '<div class="section-head"><h2>' + tr("Follow {brand} On Socials").replace("{brand}", BRANDS[bk].name) +
+        '</h2><span class="badge">' + tr("Official accounts") + "</span></div>" +
       '<div class="hub-wrap"><div class="hub-brand">' + socialListHTML(bk) + "</div></div>";
     wireSocial(box);
   }
@@ -856,9 +896,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     box.innerHTML =
       '<div class="logo-card">' +
         '<div class="logo-card-info">' +
-          '<div class="logo-card-name">' + b.name + " Logos</div>" +
-          '<p class="logo-card-note">Official ' + b.name + " logos — black, white &amp; various versions. For approved partner, press &amp; retail use; please don’t alter, recolor, or distort the marks.</p>" +
-          (fmts ? '<div class="logo-card-fmts"><span class="logo-card-fmts-l">Formats</span>' + fmts + "</div>" : "") +
+          '<div class="logo-card-name">' + tr("{brand} Logos").replace("{brand}", b.name) + "</div>" +
+          '<p class="logo-card-note">' + tr("Official {brand} logos — black, white &amp; various versions. For approved partner, press &amp; retail use; please don’t alter, recolor, or distort the marks.").replace("{brand}", b.name) + "</p>" +
+          (fmts ? '<div class="logo-card-fmts"><span class="logo-card-fmts-l">' + tr("Formats") + "</span>" + fmts + "</div>" : "") +
           '<div class="logo-card-actions">' +
             '<button class="btn" id="logo-dl">' + icon("download") + " " + tr("Download all logos") + "</button>" +
             '<button class="logo-browse-link" id="logo-browse">' + icon("eye") + " " + tr("Browse all {n} logo files →").replace("{n}", logoP.total) + "</button>" +
@@ -915,7 +955,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     window.scrollTo(0, 0);
 
     sg.innerHTML =
-      '<button class="back" id="sg-back">' + icon("arrowLeft") + " Back to library</button>" +
+      '<button class="back" id="sg-back">' + icon("arrowLeft") + " " + tr("Back to library") + "</button>" +
       '<div class="sg-hero">' +
         '<div class="sg-word">' + b.wordmark + "</div>" +
         "<h2>" + tr("Brand &amp; Style Guide") + "</h2>" +
@@ -1121,8 +1161,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     }
     var tiles = fileRes.items.map(function (r) { return searchFileTile(r, q); }).join("");
     var more = fileRes.shownTotal > fileRes.items.length
-      ? '<p class="sf-more">Showing the top ' + fileRes.items.length + " of " + fileRes.shownTotal +
-        (fileRes.facet ? " " + fileRes.facet.toLowerCase() : " matching") + " files — add a word to narrow it down.</p>"
+      ? '<p class="sf-more">' + tr("Showing the top {n} of {total} {kind} files — add a word to narrow it down.")
+          .replace("{n}", fileRes.items.length).replace("{total}", fileRes.shownTotal)
+          .replace("{kind}", fileRes.facet ? tr(fileRes.facet).toLowerCase() : tr("matching")) + "</p>"
       : "";
     sf.innerHTML =
       '<div class="section-head"><h2>' + tr("Matching files &amp; assets") + '</h2><span class="badge">' + fileRes.total + "</span></div>" +
@@ -1238,8 +1279,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     if (!mats.length) {
       box.innerHTML =
         '<div class="instore-empty">' +
-          "<p>Retail displays, posters, shelf talkers and other in-store materials for " + bname +
-            " will show here as they’re added — order what you need for your shop.</p>" + orderCta +
+          "<p>" + tr("Retail displays, posters, shelf talkers and other in-store materials for {brand} will show here as they’re added — order what you need for your shop.").replace("{brand}", bname) + "</p>" + orderCta +
         "</div>";
       return;
     }
@@ -1258,8 +1298,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       '<div class="logo-card">' +
         '<div class="logo-card-info">' +
           '<div class="logo-card-name">' + tr("Retail Marketing Materials") + '</div>' +
-          '<p class="logo-card-note">Retail displays, posters, shelf talkers and other in-store materials for ' + bname +
-            " — order what you need for your shop.</p>" +
+          '<p class="logo-card-note">' + tr("Retail displays, posters, shelf talkers and other in-store materials for {brand} — order what you need for your shop.").replace("{brand}", bname) + "</p>" +
           '<div class="logo-card-actions">' + orderCta +
             '<span class="instore-count">' + tr(mats.length === 1 ? "{n} material available" : "{n} materials available").replace("{n}", mats.length) + "</span>" +
           "</div>" +
@@ -1489,12 +1528,12 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     }
     loadPdfJs(function (lib) {
       if (settled) return;
-      if (!lib) return bail("Viewer unavailable — downloading instead");
+      if (!lib) return bail(tr("Viewer unavailable — downloading instead"));
       lib.getDocument(c.file).promise.then(function (d) {
         if (settled) { try { d.destroy(); } catch (e) {} return; }
         settled = true; clearTimeout(giveUp);
         doc = d; ov.__doc = d; render();
-      }).catch(function () { bail("Couldn’t open the catalog — downloading instead"); });
+      }).catch(function () { bail(tr("Couldn’t open the catalog — downloading instead")); });
     });
   }
 
@@ -1504,11 +1543,11 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     box.innerHTML =
       '<div class="locator-card">' +
         '<div class="locator-copy">' +
-          '<div class="locator-eyebrow">Retailers</div>' +
+          '<div class="locator-eyebrow">' + tr("Retailers") + "</div>" +
           "<h2>" + tr("Get your store on our Store Locator") + "</h2>" +
-          "<p>Carry Stündenglass? Request to be added to our official store locator so customers can find your shop.</p>" +
+          "<p>" + tr("Carry Stündenglass? Request to be added to our official store locator so customers can find your shop.") + "</p>" +
         "</div>" +
-        '<a class="btn lg" href="#locator">' + icon("mapPin") + " Request to be listed</a>" +
+        '<a class="btn lg" href="#locator">' + icon("mapPin") + " " + tr("Request to be listed") + "</a>" +
       "</div>";
   }
 
@@ -1520,11 +1559,11 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     box.innerHTML =
       '<button class="additional-entry-card" id="additional-entry-btn">' +
         '<span class="ae-main">' +
-          '<span class="ae-title">Additional Products</span>' +
-          '<span class="ae-sub">' + legacy.length + " older " + BRANDS[bk].name +
-            " products we no longer sell — assets kept for partners who still need them.</span>" +
+          '<span class="ae-title">' + tr("Additional Products") + "</span>" +
+          '<span class="ae-sub">' + tr("{n} older {brand} products we no longer sell — assets kept for partners who still need them.")
+            .replace("{n}", legacy.length).replace("{brand}", BRANDS[bk].name) + "</span>" +
         "</span>" +
-        '<span class="ae-go">View all →</span>' +
+        '<span class="ae-go">' + tr("View all →") + "</span>" +
       "</button>";
     $("#additional-entry-btn").addEventListener("click", function () { navToAdditional(bk); });
   }
@@ -1543,7 +1582,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     window.scrollTo(0, 0);
     var legacy = legacyProducts(bk).slice().sort(function (a, b) { return a.name.localeCompare(b.name); });
     ad.innerHTML =
-      '<button class="back" id="add-back">' + icon("arrowLeft") + " Back to library</button>" +
+      '<button class="back" id="add-back">' + icon("arrowLeft") + " " + tr("Back to library") + "</button>" +
       '<div class="section-head"><h2>' + tr("Additional {brand} Products").replace("{brand}", BRANDS[bk].name) + '</h2><span class="badge">' +
         tr(legacy.length === 1 ? "{n} product" : "{n} products").replace("{n}", legacy.length) + "</span></div>" +
       '<p class="additional-note">' + tr("Products we no longer sell — assets kept here for partners who still need them.") + '</p>' +
@@ -1601,7 +1640,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     window.scrollTo(0, 0);
 
     var mats = availableMaterials();
-    var head = '<button class="back" id="mat-back">' + icon("arrowLeft") + " Back to library</button>" +
+    var head = '<button class="back" id="mat-back">' + icon("arrowLeft") + " " + tr("Back to library") + "</button>" +
       '<div class="section-head"><h2>' + tr("Marketing Materials") + '</h2>' +
         (mats.length ? '<span class="badge">' + tr("{n} available").replace("{n}", mats.length) + "</span>" : "") + "</div>";
 
@@ -1619,7 +1658,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       if (m.thumb) {
         var li = lbItems.length;
         lbItems.push({ src: m.thumb, name: m.name, url: m.url || m.thumb });
-        thumb = '<button class="mat-thumb mat-thumb-zoom" data-lbi="' + li + '" title="' + tr("Click preview to enlarge") + '" aria-label="Enlarge ' + m.name.replace(/"/g, "") + '">' +
+        thumb = '<button class="mat-thumb mat-thumb-zoom" data-lbi="' + li + '" title="' + tr("Click preview to enlarge") + '" aria-label="' + tr("Enlarge {name}").replace("{name}", m.name.replace(/"/g, "")) + '">' +
           '<img src="' + m.thumb + '" alt="' + m.name.replace(/"/g, "") + '" loading="lazy"/>' +
           '<span class="mat-zoom-badge">' + icon("search") + "</span></button>";
       } else {
@@ -1636,7 +1675,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     }).join("");
 
     pg.innerHTML = head +
-      '<p class="mat-lead">' + icon("info") + " Set a quantity for each item, add your store details, then send your request." +
+      '<p class="mat-lead">' + icon("info") + " " + tr("Set a quantity for each item, add your store details, then send your request.") +
         (lbItems.length ? " Click a preview to enlarge it." : "") + "</p>" +
       '<div class="mat-layout">' +
         '<div class="mat-list">' + rows + "</div>" +
@@ -1860,7 +1899,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         "<span>Enter your name to generate your Product Specialist certificate.</span></div>" +
     "</div>" +
     '<div class="trn-certform">' +
-      '<label class="mat-field"><span>Your Name</span><input type="text" id="trn-name" placeholder="' + tr("Full name") + '" autocomplete="name"/></label>' +
+      '<label class="mat-field"><span>' + tr("Your Name") + '</span><input type="text" id="trn-name" placeholder="' + tr("Full name") + '" autocomplete="name"/></label>' +
       '<button class="btn lg" id="trn-getcert">' + icon("award") + " Get My Certificate</button>" +
     "</div>" +
     '<div id="trn-cert"></div>';
@@ -1991,15 +2030,15 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   function storeBlockHTML(n) {
     return '<div class="loc-store" data-store>' +
         '<div class="loc-store-h">' +
-          '<span class="loc-store-n">Store <span class="loc-store-i">' + n + "</span></span>" +
-          '<button class="loc-remove" data-remove title="' + tr("Remove this store") + '">' + icon("trash") + " Remove</button>" +
+          '<span class="loc-store-n">' + tr("Store") + ' <span class="loc-store-i">' + n + "</span></span>" +
+          '<button class="loc-remove" data-remove title="' + tr("Remove this store") + '">' + icon("trash") + " " + tr("Remove") + "</button>" +
         "</div>" +
         '<div class="loc-fields">' +
           '<label class="mat-field loc-wide"><span>' + tr("Store Name") + '</span><input type="text" data-f="name" placeholder="' + tr("Store name") + '"/></label>' +
-          '<label class="mat-field loc-wide"><span>Address</span><input type="text" data-f="address" placeholder="' + tr("123 Main St, City, State ZIP") + '"/></label>' +
+          '<label class="mat-field loc-wide"><span>' + tr("Address") + '</span><input type="text" data-f="address" placeholder="' + tr("123 Main St, City, State ZIP") + '"/></label>' +
           '<div class="loc-row">' +
-            '<label class="mat-field"><span>Phone</span><input type="tel" data-f="phone" placeholder="(555) 555-5555"/></label>' +
-            '<label class="mat-field"><span>Website</span><input type="text" data-f="website" placeholder="yourstore.com"/></label>' +
+            '<label class="mat-field"><span>' + tr("Phone") + '</span><input type="tel" data-f="phone" placeholder="(555) 555-5555"/></label>' +
+            '<label class="mat-field"><span>' + tr("Website") + '</span><input type="text" data-f="website" placeholder="yourstore.com"/></label>' +
           "</div>" +
         "</div>" +
       "</div>";
@@ -2019,19 +2058,19 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     window.scrollTo(0, 0);
 
     pg.innerHTML =
-      '<button class="back" id="loc-back">' + icon("arrowLeft") + " Back to library</button>" +
-      '<div class="section-head"><h2>Store Locator Request</h2></div>' +
-      '<p class="mat-lead">' + icon("info") + "<span>Add each store you'd like listed on our official locator, then send your request. Have more than one location? Use <strong>Add another store</strong> to include them all.</span>" +
+      '<button class="back" id="loc-back">' + icon("arrowLeft") + " " + tr("Back to library") + "</button>" +
+      '<div class="section-head"><h2>' + tr("Store Locator Request") + "</h2></div>" +
+      '<p class="mat-lead">' + icon("info") + "<span>" + tr("Add each store you’d like listed on our official locator, then send your request. Have more than one location? Use <strong>Add another store</strong> to include them all.") + "</span>" +
       "</p>" +
       '<div class="mat-layout">' +
         '<div class="loc-left">' +
           '<div class="loc-stores" id="loc-stores">' + storeBlockHTML(1) + "</div>" +
-          '<button class="btn ghost loc-add" id="loc-add">' + icon("plus") + " Add another store</button>" +
+          '<button class="btn ghost loc-add" id="loc-add">' + icon("plus") + " " + tr("Add another store") + "</button>" +
         "</div>" +
         '<aside class="mat-side">' +
-          '<div class="mat-side-h">Your contact info</div>' +
+          '<div class="mat-side-h">' + tr("Your contact info") + "</div>" +
           '<div class="mat-fields">' +
-            '<label class="mat-field"><span>Your Name</span><input type="text" id="loc-contact-name" placeholder="' + tr("Full name") + '"/></label>' +
+            '<label class="mat-field"><span>' + tr("Your Name") + '</span><input type="text" id="loc-contact-name" placeholder="' + tr("Full name") + '"/></label>' +
             '<label class="mat-field"><span>' + tr("Email Address") + '</span><input type="email" id="loc-contact-email" placeholder="you@company.com"/></label>' +
             '<label class="mat-field"><span>Phone <em>(optional)</em></span><input type="tel" id="loc-contact-phone" placeholder="(555) 555-5555"/></label>' +
           "</div>" +
@@ -2325,7 +2364,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         crumb += "</div>";
       }
       var assetNav = crumb +
-        (kids.length > 4 ? '<div class="catgrid-hint"><span>Swipe to see more</span>' + icon("arrowRight") + "</div>" : "") +
+        (kids.length > 4 ? '<div class="catgrid-hint"><span>' + tr("Swipe to see more") + '</span>' + icon("arrowRight") + "</div>" : "") +
         (kids.length ? '<div class="catgrid" id="asset-nav">' + navCards + "</div>" : "");
       var activeCount = (p.folders[openPath] || []).length;   // files directly in this folder
       var activeLabel = openPath ? tr(typeLabel(openPath.split(SEP).pop())) : "";
@@ -2341,7 +2380,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         (p.videos && p.videos.length ? " · " + tr(p.videos.length === 1 ? "{n} video" : "{n} videos").replace("{n}", p.videos.length) : "") +
         " · " + tr("updated {date}").replace("{date}", fmtDate(p.added));
       d.innerHTML =
-        '<button class="back" id="back-btn">' + icon("arrowLeft") + " Back to library</button>" +
+        '<button class="back" id="back-btn">' + icon("arrowLeft") + " " + tr("Back to library") + "</button>" +
         '<div class="detail-hero">' +
           '<div class="detail-cover-lg' + (p.cover ? " clickable" : "") + '"' + (p.cover ? ' id="hero-cover"' : "") + ">" + coverHTML(p) + "</div>" +
           '<div class="detail-info">' +
@@ -2389,9 +2428,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
                 "</div>" +
                 '<div class="gallery" id="gallery"></div>' +
                 '<div class="selbar" id="selbar">' +
-                  '<span class="selcount"><strong id="sel-n">0</strong> selected</span>' +
+                  '<span class="selcount"><strong id="sel-n">0</strong> ' + tr("selected") + '</span>' +
                   '<span class="selacts">' +
-                    '<button class="btn ghost sm" id="sel-clear">Clear</button>' +
+                    '<button class="btn ghost sm" id="sel-clear">' + tr("Clear") + '</button>' +
                     '<button class="btn sm" id="sel-dl">' + icon("download") + " " + tr("Download selected") + "</button>" +
                   "</span>" +
                 "</div>"
@@ -2552,7 +2591,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         "</span><span class=\"instore-tile-dim\">" + escapeHTML(lbl.dim) + "</span>" +
         (lbl.sku ? '<span class="instore-tile-sku">' + tr("SKU") + " " + escapeHTML(lbl.sku) + "</span>" : "") + "</span>" : "";
       return '<a class="instore-tile' + (lbl ? " has-cap" : "") + '" href="#materials" title="Order ' + fileLabel(x).replace(/"/g, "") + '">' +
-        '<span class="instore-tile-media">' + media + '<span class="instore-tile-order">' + icon("mail") + " Order</span></span>" +
+        '<span class="instore-tile-media">' + media + '<span class="instore-tile-order">' + icon("mail") + " " + tr("Order") + "</span></span>" +
         cap + "</a>";
     }).join("");
     return head + note + '<div class="instore-grid">' + tiles + "</div>" +
@@ -2618,7 +2657,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       COLORS.forEach(function (cp) {
         var pool = nonpop.filter(function (f) { return cp[1].test(f.name); });
         pool.sort(function (a, b) { return s(b) - s(a); });
-        if (pool[0]) out += pkgCard("Single Retail Packaging — " + cp[0], pool[0].thumb, pool[0].url);
+        if (pool[0]) out += pkgCard(tr("Single Retail Packaging") + " — " + cp[0], pool[0].thumb, pool[0].url);
       });
       return out;
     }
@@ -2701,7 +2740,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       row("HTS (Harmonized Tariff Schedule) Code", info.htsCode);
     return '<div class="section-head"><h2>' + tr("SKU details") + '</h2></div>' +
       '<div class="sku-table">' + rows + "</div>" +
-      (missing ? '<p class="pkg-note">' + icon("info") + " Fields shown as <strong>—</strong> are still to be confirmed." + "</p>" : "");
+      (missing ? '<p class="pkg-note">' + icon("info") + " " + tr("Fields shown as <strong>—</strong> are still to be confirmed.") + "</p>" : "");
   }
 
   // MSRP / warranty facts + FAQ/site CTAs (sits in the hero info column).
@@ -2709,12 +2748,12 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var info = infoOf(p);
     var faq = info.faqUrl || BRANDS[p.brand].faqUrl;
     var factItems =
-      (info.msrp ? '<div class="ov-fact">' + icon("tag") + '<div class="ov-fact-t"><div class="ov-fact-l">MSRP</div><div class="ov-fact-v">' + info.msrp + "</div></div></div>" : "") +
-      (info.warranty ? '<div class="ov-fact">' + icon("shield") + '<div class="ov-fact-t"><div class="ov-fact-l">Warranty</div><div class="ov-fact-v">' + info.warranty + "</div></div></div>" : "");
+      (info.msrp ? '<div class="ov-fact">' + icon("tag") + '<div class="ov-fact-t"><div class="ov-fact-l">' + tr("MSRP") + '</div><div class="ov-fact-v">' + info.msrp + "</div></div></div>" : "") +
+      (info.warranty ? '<div class="ov-fact">' + icon("shield") + '<div class="ov-fact-t"><div class="ov-fact-l">' + tr("Warranty") + '</div><div class="ov-fact-v">' + info.warranty + "</div></div></div>" : "");
     var ctas =
-      (info.manual ? '<a class="btn ghost sm" href="' + info.manual + '" target="_blank" rel="noopener noreferrer">' + icon("file") + " Product Manual</a>" : "") +
-      (faq ? '<a class="btn ghost sm" href="' + faq + '" target="_blank" rel="noopener noreferrer">' + icon("info") + " Product FAQs</a>" : "") +
-      (info.productUrl ? '<a class="btn ghost sm" href="' + info.productUrl + '" target="_blank" rel="noopener noreferrer">' + icon("link") + " View on site</a>" : "");
+      (info.manual ? '<a class="btn ghost sm" href="' + info.manual + '" target="_blank" rel="noopener noreferrer">' + icon("file") + " " + tr("Product Manual") + "</a>" : "") +
+      (faq ? '<a class="btn ghost sm" href="' + faq + '" target="_blank" rel="noopener noreferrer">' + icon("info") + " " + tr("Product FAQs") + "</a>" : "") +
+      (info.productUrl ? '<a class="btn ghost sm" href="' + info.productUrl + '" target="_blank" rel="noopener noreferrer">' + icon("link") + " " + tr("View on site") + "</a>" : "");
     if (!factItems && !ctas) return "";
     return '<div class="ov-facts">' +
       (factItems ? '<div class="ov-fact-group">' + factItems + "</div>" : "") +
@@ -2822,7 +2861,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var files = p.folders[folder] || [];
     if (!files.length) {
       $("#gallery").innerHTML = '<div class="gallery-empty">' + icon("photo") +
-        "<p><strong>" + tr(typeLabel(folder)) + "</strong> are coming soon — check back shortly.</p></div>";
+        "<p><strong>" + tr(typeLabel(folder)) + "</strong> " + tr("are coming soon — check back shortly.") + "</p></div>";
       if (onChange) onChange();
       return;
     }
@@ -2980,7 +3019,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var links = files.map(function (f) { return f && f.url ? dropboxZipUrl(f.url) : null; }).filter(Boolean);
     if (!links.length) { toast(tr("Use “Download all” to get these from Dropbox")); return; }
     if (links.length === 1) { downloadOne(files[0].url); return; }
-    toast("Downloading " + links.length + " files from Dropbox…");
+    toast(tr("Downloading {n} files from Dropbox…").replace("{n}", links.length));
     links.forEach(function (u, i) {
       setTimeout(function () {
         var f = document.createElement("iframe");

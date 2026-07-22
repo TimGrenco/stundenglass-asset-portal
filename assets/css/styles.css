@@ -205,7 +205,7 @@ button.mat-thumb { padding: 0; }
 .mat-sku { font-size: 11.5px; color: var(--stone); margin-top: 2px; letter-spacing: 0.03em; font-variant-numeric: tabular-nums; }
 /* segmented quantity stepper */
 .mat-qty { flex: 0 0 auto; display: inline-flex; align-items: stretch; border: 1px solid var(--hair); border-radius: 9px; overflow: hidden; }
-.mat-step { width: 34px; border: none; background: var(--paper); font-size: 17px; font-weight: 600; color: var(--ink); cursor: pointer; line-height: 1; transition: background 0.12s; }
+.mat-step { width: 40px; min-height: 40px; border: none; background: var(--paper); font-size: 17px; font-weight: 600; color: var(--ink); cursor: pointer; line-height: 1; transition: background 0.12s; }
 .mat-step:hover { background: var(--mist); }
 .mat-qty input { width: 44px; height: 36px; border: none; border-left: 1px solid var(--hair); border-right: 1px solid var(--hair); text-align: center; font-size: 14px; font-weight: 700; font-family: inherit; background: var(--paper); color: var(--ink); -moz-appearance: textfield; }
 .mat-qty input::-webkit-outer-spin-button, .mat-qty input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
@@ -388,11 +388,14 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
   box-shadow: 0 6px 16px -12px color-mix(in srgb, var(--c) 60%, transparent); }
 .cway-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 5px;
   background: linear-gradient(90deg, var(--c), color-mix(in srgb, var(--c) 45%, #fff)); }
-.cway-top { display: flex; align-items: center; gap: 8px; margin-top: 3px; }
+.cway-top { display: flex; align-items: center; gap: 8px; margin-top: 3px; min-width: 0; }
 .cway-dot { width: 13px; height: 13px; border-radius: 50%; background: var(--c); flex: 0 0 auto;
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 22%, transparent); }
 .cway-color { font-weight: 800; font-size: 15px; text-transform: uppercase; letter-spacing: 0.02em;
-  color: color-mix(in srgb, var(--c) 80%, #171713); }
+  color: color-mix(in srgb, var(--c) 80%, #171713);
+  /* Translated colour names run much longer than the English ("Velvet Burgundy" ->
+     "SAMTBORDEAUX"); wrap rather than be clipped by the card's overflow:hidden. */
+  min-width: 0; overflow-wrap: anywhere; }
 .cway-name { margin: 9px 0 13px; font-size: 11px; line-height: 1.35; font-weight: 600; color: var(--stone); }
 .cway-codes { display: flex; flex-direction: column; gap: 8px; }
 .cway-code { display: flex; flex-direction: column; gap: 1px; }
@@ -713,7 +716,11 @@ a.logo-tile { cursor: pointer; }
 @media (max-width: 600px) { .to-top { right: 14px; bottom: 14px; width: 42px; height: 42px; } }
 
 /* Subtle content fade-in when a page renders. */
-@keyframes fadeUp { from { opacity: 0; transform: translateY(7px); } to { opacity: 1; transform: none; } }
+/* Opacity only — deliberately NO transform. animation-fill-mode:both leaves the
+   final `transform: none` computed as matrix(1,0,0,1,0,0), and ANY transform makes
+   this element the containing block for its position:fixed children, which sent the
+   floating select bar thousands of pixels down the page. */
+@keyframes fadeUp { from { opacity: 0; } to { opacity: 1; } }
 .page-anim { animation: fadeUp 0.28s ease both; }
 @media (prefers-reduced-motion: reduce) { .page-anim { animation: none; } .to-top { transition: none; } }
 
@@ -974,7 +981,8 @@ a.logo-tile { cursor: pointer; }
 .support::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: 0.75; }
 .support-inner { display: grid; grid-template-columns: 1.4fr 1fr; gap: 44px; align-items: center;
-  padding: 46px 0 48px; }
+  /* padding-block only — the `padding` shorthand would wipe .wrap's side gutters. */
+  padding-top: 46px; padding-bottom: 48px; }
 .support-eyebrow { font-size: 10.5px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700;
   color: var(--gold); margin-bottom: 10px; }
 .support-h { font-family: var(--serif); font-size: clamp(22px, 3vw, 30px); font-weight: 800;
@@ -993,7 +1001,7 @@ a.logo-tile { cursor: pointer; }
   color: rgba(255,255,255,0.56); margin-top: 2px; }
 .support :focus-visible { outline-color: var(--gold); }
 @media (max-width: 860px) {
-  .support-inner { grid-template-columns: 1fr; gap: 26px; padding: 38px 0 40px; }
+  .support-inner { grid-template-columns: 1fr; gap: 26px; padding-top: 38px; padding-bottom: 40px; }
 }
 
 /* Folder cards carry a real photo pulled from inside the folder (see folderCover
@@ -1054,7 +1062,8 @@ a.logo-tile { cursor: pointer; }
 }
 .langbar.show { display: block; animation: lb-in 0.22s ease both; }
 @keyframes lb-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
-.langbar-inner { display: flex; align-items: center; gap: 14px; padding: 10px 0; flex-wrap: wrap; }
+/* padding-block only — see .support-inner: the shorthand would drop .wrap's gutters. */
+.langbar-inner { display: flex; align-items: center; gap: 14px; padding-top: 10px; padding-bottom: 10px; flex-wrap: wrap; }
 .langbar-ic { flex: 0 0 auto; display: inline-flex; color: var(--gold); }
 .langbar-ic svg { width: 18px; height: 18px; }
 .langbar-txt { flex: 1 1 auto; min-width: 180px; font-size: 13.5px; font-weight: 600; }
@@ -1070,7 +1079,7 @@ a.logo-tile { cursor: pointer; }
 }
 .langbar-no:hover { border-color: #fff; color: #fff; }
 @media (max-width: 600px) {
-  .langbar-inner { gap: 10px; padding: 10px 0 12px; }
+  .langbar-inner { gap: 10px; padding-top: 10px; padding-bottom: 12px; }
   .langbar-txt { flex: 1 1 100%; min-width: 0; font-size: 13px; }
   .langbar-actions { flex: 1 1 100%; }
   .langbar-yes, .langbar-no { flex: 1 1 auto; text-align: center; padding: 10px 14px; }
