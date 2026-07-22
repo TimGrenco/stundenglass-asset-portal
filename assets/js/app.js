@@ -1037,8 +1037,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     if (state.sort === "az") current = current.slice().sort(byName);
 
     var browseCount = $("#browse-count");
-    if (browseCount) browseCount.textContent = current.length + (current.length === 1 ? " product" : " products");
-    $("#count-badge").textContent = tr(current.length === 1 ? "{n} product" : "{n} products").replace("{n}", current.length);
+    var countLabel = tr(current.length === 1 ? "{n} product" : "{n} products").replace("{n}", current.length);
+    if (browseCount) browseCount.textContent = countLabel;
+    $("#count-badge").textContent = countLabel;
 
     renderActiveFilters();
 
@@ -2302,7 +2303,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       var navCards = kids.map(function (seg) {
         var fp = joinPath(cardParent, seg), branch = isFolderBranch(fp), sub = branch ? childSegs(fp).length : 0;
         var count = branch
-          ? (sub + (sub === 1 ? " folder · " : " folders · ") + filesUnder(fp) + " files")
+          ? (tr(sub === 1 ? "{n} folder" : "{n} folders").replace("{n}", sub) + " · " + fcount(filesUnder(fp)))
           : fcount((p.folders[fp] || []).length);
         // Mark the card the gallery is coming from — the exact folder, or the
         // ancestor of it (the "Black" card when "Black / Product Photos" is open).

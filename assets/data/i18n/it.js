@@ -361,6 +361,8 @@ window.PORTAL_I18N.it = {
   "{n} documents": "{n} documenti",
   "{n} file": "{n} file",
   "{n} files": "{n} file",
+  "{n} folder": "{n} cartella",
+  "{n} folders": "{n} cartelle",
   "{n} from Dropbox separately": "{n} da Dropbox separatamente",
   "{n} item": "{n} articolo",
   "{n} items": "{n} articoli",
