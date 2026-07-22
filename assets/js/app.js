@@ -25,9 +25,9 @@
        products  description / highlights / warranty / fullDescription.
      Product names, brand names, filenames, SKUs, units and prices are never
      translated. To revise a language, edit only its pack — no code change. */
-  var LANGS = { en: "English", es: "Español", de: "Deutsch", it: "Italiano", fr: "Français" };
+  var LANGS = { en: "English", es: "Español", de: "Deutsch", it: "Italiano", fr: "Français", pt: "Português" };
   function isLang(l) { return Object.prototype.hasOwnProperty.call(LANGS, l); }
-  var LANG_VER = "20260711n";   // bump with the other asset tokens
+  var LANG_VER = "20260722pt";   // bump with the other asset tokens
   // Load a language pack once. English is a no-op (it IS the source).
   var _langLoading = {};
   function loadLangPack(l, cb) {
@@ -74,7 +74,7 @@
     for (var i = 0; i < list.length; i++) {
       var l = String(list[i] || "").toLowerCase().slice(0, 2);
       if (l === "en") return "";              // an English preference ranked higher wins
-      if (l !== "en" && isLang(l)) return l;  // es / de / it / fr
+      if (l !== "en" && isLang(l)) return l;  // es / de / it / fr / pt
     }
     return "";
   }
@@ -100,6 +100,7 @@
     de: { q: "Möchten Sie dieses Portal auf Deutsch ansehen?", yes: "Auf Deutsch ansehen", no: "Nein, danke" },
     it: { q: "Preferisce visualizzare questo portale in italiano?", yes: "Visualizza in italiano", no: "No, grazie" },
     fr: { q: "Préférez-vous consulter ce portail en français ?", yes: "Voir en français", no: "Non, merci" },
+    pt: { q: "Prefere ver este portal em português?", yes: "Ver em português", no: "Não, obrigado" },
   };
   function maybeOfferLang() {
     var bar = $("#lang-bar"); if (!bar) return;
@@ -216,7 +217,7 @@
   // ---- language selector (globe + current language + menu) -------------------
   // Languages are listed by their own endonym (Deutsch, not German) — that's what
   // a speaker scans for. English stays first as the default.
-  var LANG_ORDER = ["en", "es", "de", "it", "fr"];
+  var LANG_ORDER = ["en", "es", "de", "it", "fr", "pt"];
   function renderLangMenu() {
     var menu = $("#lang-menu"); if (!menu) return;
     menu.innerHTML = LANG_ORDER.map(function (l) {
@@ -918,9 +919,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       '<div class="sg-hero">' +
         '<div class="sg-word">' + b.wordmark + "</div>" +
         "<h2>" + tr("Brand &amp; Style Guide") + "</h2>" +
-        '<p class="sg-note">' + icon("info") + "<span>Placeholder guide — the official " + b.name + " brand guide will replace this. Colors, type, and logos below reflect current brand usage.</span></p>" +
+        '<p class="sg-note">' + icon("info") + "<span>" + tr("Placeholder guide — the official {brand} brand guide will replace this. Colors, type, and logos below reflect current brand usage.").replace("{brand}", b.name) + "</span></p>" +
         '<div class="sg-actions">' +
-          '<button class="btn" data-view-brand="' + bk + '">' + icon("stack") + " View " + b.name + " assets</button>" +
+          '<button class="btn" data-view-brand="' + bk + '">' + icon("stack") + " " + tr("View {brand} assets").replace("{brand}", b.name) + "</button>" +
           (b.logoProduct ? '<button class="btn ghost" data-logo="' + b.logoProduct + '">' + icon("download") + " " + tr("Download logos") + "</button>" : "") +
         "</div>" +
       "</div>" +
@@ -959,7 +960,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
             '<button class="qbtn" data-act="download" title="' + tr("Download all") + '">' + icon("download") + "</button>" +
           "</div>" +
         "</div>" +
-        '<div class="card-name">' + p.name + "</div>" +
+        '<div class="card-name">' + tr(p.name) + "</div>" +
         (p.label ? '<div class="card-label">' + tr(p.label) + "</div>" : "") +
         '<div class="card-sub">' + (p.isLogo ? tr("{n} logo files").replace("{n}", p.total) : tr(p.total === 1 ? "{n} asset" : "{n} assets").replace("{n}", p.total) + (p.label ? "" : " · " + tr(p.category))) + "</div>" +
       "</article>"
@@ -970,7 +971,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       '<article class="card row" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="Open ' + p.name + '">' +
         '<div class="row-thumb">' + coverHTML(p) + "</div>" +
         '<div class="row-main">' +
-          '<div class="row-name">' + p.name + (p.newBadge && !p.isLogo ? ' <span class="row-new' + (p.newBadge ? " row-new-" + p.newBadge : "") + '">' + tr("New") + '</span>' : "") + (p.label ? ' <span class="row-label">' + tr(p.label) + "</span>" : "") + "</div>" +
+          '<div class="row-name">' + tr(p.name) + (p.newBadge && !p.isLogo ? ' <span class="row-new' + (p.newBadge ? " row-new-" + p.newBadge : "") + '">' + tr("New") + '</span>' : "") + (p.label ? ' <span class="row-label">' + tr(p.label) + "</span>" : "") + "</div>" +
           '<div class="row-sub">' + (p.isLogo ? tr("{n} logo files").replace("{n}", p.total) : tr(p.total === 1 ? "{n} asset" : "{n} assets").replace("{n}", p.total) + (p.label ? "" : " · " + tr(p.category))) + "</div>" +
         "</div>" +
         '<button class="row-dl" data-act="download" title="' + tr("Download all") + '">' + icon("download") + "</button>" +
@@ -1025,7 +1026,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
 
     // Featured products in scope (brand), logos excluded.
     var vis = visibleProducts().filter(function (p) { return !p.isLogo; });
-    $("#all-title").textContent = "Featured " + BRANDS[state.view].name + " products";
+    $("#all-title").textContent = tr("Featured {brand} products").replace("{brand}", BRANDS[state.view].name);
 
     var curList = currentList(state.view);
     var byName = function (a, b) { return a.name.localeCompare(b.name); };
@@ -1712,7 +1713,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var h = trainingHash(p);
     if (location.hash !== h) { ignoreHash = true; location.hash = h; }
   }
-  function fullProductName(p) { return p.name.indexOf(BRANDS[p.brand].name) === 0 ? p.name : BRANDS[p.brand].name + " " + p.name; }
+  function fullProductName(p) { var n = tr(p.name); return n.indexOf(BRANDS[p.brand].name) === 0 ? n : BRANDS[p.brand].name + " " + n; }
 
   function openTraining(p) {
     $("#home").style.display = "none";
@@ -2332,7 +2333,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       // full brand-prefixed name (e.g. "Stündenglass Gravity Infuser"), without
       // double-prefixing names that already lead with the brand.
       var typeLine = tr(p.type || p.category || BRANDS[p.brand].name);
-      var fullName = p.name.indexOf(BRANDS[p.brand].name) === 0 ? p.name : BRANDS[p.brand].name + " " + p.name;
+      var fullName = fullProductName(p);
       setTitle(fullName);
 
       var stat = tr(p.total === 1 ? "{n} asset" : "{n} assets").replace("{n}", p.total) +
@@ -2348,8 +2349,8 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
             '<div class="detail-stat">' + stat + "</div>" +
             (infoOf(p).description ? '<p class="detail-desc">' + infoOf(p).description + "</p>" : "") +
             '<div class="detail-actions">' +
-              '<button class="btn" id="dl-all">' + icon("download") + " Download all</button>" +
-              '<button class="btn ghost" id="copy-link">' + icon("link") + " Copy link</button>" +
+              '<button class="btn" id="dl-all">' + icon("download") + " " + tr("Download all") + "</button>" +
+              '<button class="btn ghost" id="copy-link">' + icon("link") + " " + tr("Copy link") + "</button>" +
             "</div>" +
             overviewFactsHTML(p) +
           "</div>" +
@@ -2394,9 +2395,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
                   "</span>" +
                 "</div>"
               : (kids.length ? '<p class="pkg-note">' + icon("info") + " " + tr("Choose a folder above to view and download its files.") + "</p>" : ""))
-          : '<div class="section-head"><h2>Download assets by category</h2></div>' +
-            '<div class="usage"><span>Assets for this product are being added — check back soon, or use “Request an asset” for something specific.</span></div>') +
-        (CFG.usageNote ? '<div class="usage usage-foot">' + icon("info") + "<span>" + CFG.usageNote + "</span></div>" : "") +
+          : '<div class="section-head"><h2>' + tr("Download assets by category") + "</h2></div>" +
+            '<div class="usage"><span>' + tr("Assets for this product are being added — check back soon, or use “Request an asset” for something specific.") + "</span></div>") +
+        (CFG.usageNote ? '<div class="usage usage-foot">' + icon("info") + "<span>" + tr(CFG.usageNote) + "</span></div>" : "") +
         // ---- product info below the assets ----
         inStoreHTML(p) +
         packagingHTML(p) +
