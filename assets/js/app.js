@@ -2265,10 +2265,20 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       if (on) selected[k] = file; else delete selected[k];
     }
     // Reflect selection state into the DOM without a full re-render.
+    // Rebuilt on every change so the noun agrees with the count — English "selected"
+    // is invariant, but Portuguese/Spanish/Italian/French/German all inflect.
+    function selCountHTML(n) {
+      return tr(n === 1 ? "{n} item selected" : "{n} items selected")
+        .replace("{n}", '<strong id="sel-n">' + n + "</strong>");
+    }
     function syncSelection() {
       var n = Object.keys(selected).length;
       var bar = $("#selbar");
-      if (bar) { $("#sel-n").textContent = n; bar.classList.toggle("show", n > 0); }
+      if (bar) {
+        var sc = $(".selcount", bar);
+        if (sc) sc.innerHTML = selCountHTML(n);
+        bar.classList.toggle("show", n > 0);
+      }
       document.body.classList.toggle("has-selection", n > 0);
       var ff = folderFiles();
       var some = ff.some(function (f) { return selected[fileKey(active, f)]; });
@@ -2428,7 +2438,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
                 "</div>" +
                 '<div class="gallery" id="gallery"></div>' +
                 '<div class="selbar" id="selbar">' +
-                  '<span class="selcount"><strong id="sel-n">0</strong> ' + tr("selected") + '</span>' +
+                  '<span class="selcount">' + selCountHTML(0) + "</span>" +
                   '<span class="selacts">' +
                     '<button class="btn ghost sm" id="sel-clear">' + tr("Clear") + '</button>' +
                     '<button class="btn sm" id="sel-dl">' + icon("download") + " " + tr("Download selected") + "</button>" +
