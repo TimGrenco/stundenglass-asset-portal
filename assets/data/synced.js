@@ -15470,6 +15470,186 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "Modül Accessories / Cascade / Product Photos": [
+        {
+          "name": "Cascade_thumb_01",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/ca8725415aqmbaklh0iq0/Cascade_thumb_01.png?rlkey=k57w6kw51yyvchwx1cbab9cu4&dl=0",
+          "thumb": "assets/synced/accessories/83c425547d0fc39b83da7d5581c195e6aa522e392713fdd4c9f27043a0cfc9e0.jpg",
+          "file": null
+        },
+        {
+          "name": "Cascade_thumb_02",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/7dtv2nd8ikignu81zvfnk/Cascade_thumb_02.png?rlkey=4r3ro7tqrd8a96ja9ukmwe4pb&dl=0",
+          "thumb": "assets/synced/accessories/c8d08f2141642080a81297969eccf4beb4c71e20203581d00685c2ba7e8f8ead.jpg",
+          "file": null
+        },
+        {
+          "name": "Cascade_thumb_03",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/espa4tldlszz1ij3x0tfz/Cascade_thumb_03.png?rlkey=m4rd8dw3kp4efca6m63zgzzvn&dl=0",
+          "thumb": "assets/synced/accessories/8714464027ef2b7324f471e22dca46fd0c9a739404cb0e87d81b721c52a4e790.jpg",
+          "file": null
+        },
+        {
+          "name": "Cascade_thumb_04",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/37qrv89puj8ktikhjua3x/Cascade_thumb_04.png?rlkey=1tvk5f577wdfjbp30o94ofcpz&dl=0",
+          "thumb": "assets/synced/accessories/cd958d4496d8252b8e13c5edb5fabfb5052cf83119b0668d6ce69a12ef446ea9.jpg",
+          "file": null
+        },
+        {
+          "name": "Cascade_thumb_05",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/4rk4rwdlzkn5dszvkd2qr/Cascade_thumb_05.png?rlkey=8zhg03ctvsih6kujqgjb9afz8&dl=0",
+          "thumb": "assets/synced/accessories/47921d6968f8ac83b1e89ed58e7e5c31f51dfd5c52049ba076553970a0cb46d4.jpg",
+          "file": null
+        },
+        {
+          "name": "Cascade_thumb_06",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/3hxn3t68zladr22pdwwnn/Cascade_thumb_06.png?rlkey=2drj4cg3aejdh2316h6t0cpjd&dl=0",
+          "thumb": "assets/synced/accessories/ec3629c55add3054502e0e134f545f227ad565ad1b07745efd0f0678742a037d.jpg",
+          "file": null
+        },
+        {
+          "name": "Cascade_thumb_07",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/qyn4hex5709p70hlg0h8y/Cascade_thumb_07.png?rlkey=tn2hr6napaey3zl2ey5r7v3vs&dl=0",
+          "thumb": "assets/synced/accessories/96917b0054a6700242a1b392396b31891af012068fad0fd79713c587c8f5b799.jpg",
+          "file": null
+        },
+        {
+          "name": "Cascade_thumb_08",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/c1w3toa1afahryml4it1q/Cascade_thumb_08.png?rlkey=q2etq91fgmzfdnqnkav25wy9k&dl=0",
+          "thumb": "assets/synced/accessories/93009a503afd44d82a9a45e8e5a8b7301dc38d3ecf790f4387d590283e490d06.jpg",
+          "file": null
+        },
+        {
+          "name": "Cascade_thumb_09",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/35mjg6ypihtc0v8luw9fb/Cascade_thumb_09.png?rlkey=2eftap3p0lsl0arszwkiwl87p&dl=0",
+          "thumb": "assets/synced/accessories/7360cc3ea01f2033fe96c0f0c77c2203b76c6f5d8f1eebf423667474fb8cdaeb.jpg",
+          "file": null
+        }
+      ],
+      "Modül Accessories / Cascade / Lifestyle Photos": [
+        {
+          "name": "_ALF9088",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/u1bmnqq1u07idup5bll78/_ALF9088.jpg?rlkey=h43wgi5glr97sd4u7lk7lhizg&dl=0",
+          "thumb": "assets/synced/accessories/c4772bd6f8baa311fa84a38f80aa4210d9686b0956cc58390700e5570ae71a20.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF9149",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ssnxqjukyudz5skw7vl0h/_ALF9149.jpg?rlkey=cpxhq19skqsr8nqqwmzunek47&dl=0",
+          "thumb": "assets/synced/accessories/d9abf8e577f312142d8020468f0ce724d7ae4e28969da486470b39a483696247.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF9208",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/kkqttcyw9j14um1a540nn/_ALF9208.jpg?rlkey=v1j3g1orldkcmk4d5g5acbvjf&dl=0",
+          "thumb": "assets/synced/accessories/2a8501f93bcd1b757f00ed2b122a92ed78efb891da80b930098926a2f87cf2d1.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF9274",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/04qzw58o0xytyauf7ka2o/_ALF9274.jpg?rlkey=k6xwkq1z96kmmqgwj73f0e8yk&dl=0",
+          "thumb": "assets/synced/accessories/0be12904008b129c600a3e0d10f08f0d1a84b64baf44edbd250934feac1b86ba.jpg",
+          "file": null
+        },
+        {
+          "name": "STDN - Modul Dok-cascade_flat",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/pxv1hlf9i4fq8oyh2uopi/STDN-Modul-Dok-cascade_flat.png?rlkey=3tntmb48ao2jcrd2o64rkzae2&dl=0",
+          "thumb": "assets/synced/accessories/adcf1f1d53bbd746caacb16a78ca55823cc9000b9ba1badcf6ebd848d05cc650.jpg",
+          "file": null
+        }
+      ],
+      "Modül Accessories / Cascade / Logos": [
+        {
+          "name": "cascade_sticker_2x.5",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/wj2rcc9x922m5m2uotrdz/cascade_sticker_2x.5.pdf?rlkey=ywg9gd8j2elxf6ni9jtaog02f&dl=0",
+          "thumb": "assets/synced/accessories/a77145076ae6266c2a77952b1ce5ede0396b31c63e651d0ac0b3f8c59178924c.jpg",
+          "file": null
+        }
+      ],
+      "Modül Accessories / Cascade / Social Videos": [
+        {
+          "name": "Larry Cascade Bench Venice",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/vhln4jwywmz2hb2nwnico/Larry-Cascade-Bench-Venice.mp4?rlkey=ufj2luy7jpagx39p5pvdts4zi&dl=0",
+          "thumb": "assets/synced/accessories/70a9bfd5d639e92747aedb228ba440e594a3bdf7db565daf2d9c6893849471a2.jpg",
+          "file": null
+        },
+        {
+          "name": "Larry Cascade Melt",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/dyx5hkn5eyd1c1pdx3q29/Larry-Cascade-Melt.mp4?rlkey=ibqjv56g7fgpul8cuwoacq85n&dl=0",
+          "thumb": "assets/synced/accessories/6f3a0c38912466631fc7aa9b0eb21585ffa11754326cdbc4b5e0d7499b65453c.jpg",
+          "file": null
+        },
+        {
+          "name": "Larry Cascade Silo Announcement",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/h4c5guithw6uhzqu3fa91/Larry-Cascade-Silo-Announcement.mp4?rlkey=mhab0kx9e5ek02m23g3u3r4ow&dl=0",
+          "thumb": "assets/synced/accessories/70338470c09ba21fffea090813b96f25679123619bfcfc289556ec6d45c9c3ba.jpg",
+          "file": null
+        },
+        {
+          "name": "Larry Silo Cascade No Smoke",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/gfnd3qmveijv5ad836bng/Larry-Silo-Cascade-No-Smoke.mp4?rlkey=msumdzkyza0fs138rkyeubksh&dl=0",
+          "thumb": "assets/synced/accessories/3284fe17f3e9dfb267495d97c23582f32c86ba85eff28720daff2dad0a5fcbdb.jpg",
+          "file": null
+        }
+      ],
+      "Modül Accessories / Cascade / TV Screen Videos": [
+        {
+          "name": "Larry Cascade Horizontal",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/y48tx4dio9suouifvjyup/Larry-Cascade-Horizontal.mp4?rlkey=voso0i59fk7tfkx4in34w1wxk&dl=0",
+          "thumb": "assets/synced/accessories/00631b186f62ad6c0b9306f95af6d5d71dc3dda61573d26ca52f4bf3fddaf5c9.jpg",
+          "file": null
+        }
+      ],
+      "Modül Accessories / Cascade / Documents": [
+        {
+          "name": "20260709_Stundenglass_Modul_New_Accessories_One-Sheet_B",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/9v99wzpexsrsghvpij60r/20260709_Stundenglass_Modul_New_Accessories_One-Sheet_B.pdf?rlkey=cccxoya80rrjfrdqdhyrxee8x&dl=0",
+          "thumb": "assets/synced/accessories/0dbbc4160327799ee2fc23352945ba8b668dcc0c6c6d6266013e46782a89a06f.jpg",
+          "file": null
+        }
+      ],
       "Modül Accessories / Combustion Tank": [
         {
           "name": "Herbtank_01",
@@ -15647,6 +15827,16 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/37fpxqaq5g6v50muukru8/Mod-l-Dry-Herb-Vape-Tank-Tutorial.mp4?rlkey=hhbeh2zs6owkaep7txzeke9tt&dl=0",
           "thumb": "assets/synced/accessories/b96e9041c74f27a971521bb91ff61fb1b5a83272f546eab4518bb80b5d9ee314.jpg",
+          "file": null
+        }
+      ],
+      "Modül Accessories / Modül Dry Herb Vape Tank / Documents": [
+        {
+          "name": "20260709_Stundenglass_Modul_New_Accessories_One-Sheet_B",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/d8l5ub7qsbxxm7haifjte/20260709_Stundenglass_Modul_New_Accessories_One-Sheet_B.pdf?rlkey=c6s30tveau3xw7ra64uvu0g4n&dl=0",
+          "thumb": "assets/synced/accessories/0dbbc4160327799ee2fc23352945ba8b668dcc0c6c6d6266013e46782a89a06f.jpg",
           "file": null
         }
       ],
@@ -16315,6 +16505,218 @@ window.PORTAL_SYNCED = {
           "format": "PDF",
           "url": "https://www.dropbox.com/scl/fi/pboo9ermut3e5r5gbrj8b/Modul-Connoisseurs-Collection-One-Sheet.pdf?rlkey=w3xruquz03r4jlobs79o3vu9d&dl=0",
           "thumb": "assets/synced/accessories/1a7d28c35273ec4e03c2bd0533e5bb38801977e0ebee61b2c5662caf5a721073.jpg",
+          "file": null
+        }
+      ],
+      "Modül Accessories / Silo / Product Photos": [
+        {
+          "name": "Silo_thumb_01",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/lteebxtxlanrthdwepab6/Silo_thumb_01.png?rlkey=vasoud4hj1ry6dbw3qepx2imi&dl=0",
+          "thumb": "assets/synced/accessories/c90c6192a6be444ea0c9c9ba5fb559fdc574b8800edafbb297d91e5f90f64b19.jpg",
+          "file": null
+        },
+        {
+          "name": "Silo_thumb_02",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/octpe2gh1tggjq41fmj57/Silo_thumb_02.png?rlkey=gvmft5g66v8rey51idrl7hlal&dl=0",
+          "thumb": "assets/synced/accessories/806bcc4d3df2ce1d0eaef8db8b8bf5daf56a0042ace6e5673d4f8c8440c68fe4.jpg",
+          "file": null
+        },
+        {
+          "name": "Silo_thumb_03",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/4d3yg1jcsorvo2n7xha6e/Silo_thumb_03.png?rlkey=7w1nlz3gn42n6zclrklym3ucw&dl=0",
+          "thumb": "assets/synced/accessories/c02de8c783228970c57b483ff9613cd878cddabf710a3f0d7e15d58ef1cc1c35.jpg",
+          "file": null
+        },
+        {
+          "name": "Silo_thumb_04",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/tv3zrx3fwx3e73bljb3nx/Silo_thumb_04.png?rlkey=csih1i87aaj9zb03huzwmf9wi&dl=0",
+          "thumb": "assets/synced/accessories/2eea199a929be68a816ebc3b42d605049a37de4ad77e3829586c37c5b415f563.jpg",
+          "file": null
+        },
+        {
+          "name": "Silo_thumb_05",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/0scoaszvjx8u4g297p92w/Silo_thumb_05.png?rlkey=sbc9lsmdzhzwb9u2gcdmv9zj7&dl=0",
+          "thumb": "assets/synced/accessories/2e68ff94a333bcde729abca72b64bbb0e62b9eb8e1c32f66053de9964c6fda17.jpg",
+          "file": null
+        },
+        {
+          "name": "Silo_thumb_06",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/svhkgjldfydz3cc123n27/Silo_thumb_06.png?rlkey=ownt7hznnsub8zghs4fcmzia5&dl=0",
+          "thumb": "assets/synced/accessories/2e6c6a37246468dfa5fa62cc69e5e48c3e57d2157e7028bac512c61acae027fd.jpg",
+          "file": null
+        },
+        {
+          "name": "Silo_thumb_07",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/f8lw18tbgfdm7l94txw5r/Silo_thumb_07.png?rlkey=hg890vucxs2dtqerevyq0aphq&dl=0",
+          "thumb": "assets/synced/accessories/f6455887b67b357ca0fe95ebe85a3613f82a62f185803579c9d8f05741e53b31.jpg",
+          "file": null
+        },
+        {
+          "name": "Silo_thumb_08",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/ga0fk5aadtjbcqmlzq3wi/Silo_thumb_08.png?rlkey=0x9wwuwvwwt2td1rj4pe5bv7y&dl=0",
+          "thumb": "assets/synced/accessories/ee529964ce5b0c9853f2d0a9a512d18c30d3aade2d71b40296d0b65cfde1d066.jpg",
+          "file": null
+        },
+        {
+          "name": "Silo_thumb_09",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/eiec14ue7zy55bnafnajo/Silo_thumb_09.png?rlkey=788btwah0goml0r9bq61tp5r6&dl=0",
+          "thumb": "assets/synced/accessories/9d160c1c66858bd6183843e51bf8a5e4b85adf0e2726628d7300172afa950682.jpg",
+          "file": null
+        }
+      ],
+      "Modül Accessories / Silo / Lifestyle Photos": [
+        {
+          "name": "_ALF9097",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/sfmx6o6whxbo2cwatz9e9/_ALF9097.jpg?rlkey=9d4i7r6uz07gogxemgeiy1fsh&dl=0",
+          "thumb": "assets/synced/accessories/ebf712ba47bfbf6373de857eb8dbb5607f964fbe8faf6f44950b59479643c700.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF9100",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/r7zhdssjgbhu5pgadoj0o/_ALF9100.jpg?rlkey=hwg6n6v0o47ub896xzeu1roh5&dl=0",
+          "thumb": "assets/synced/accessories/6e32ff77fae59626b037b5f26d625bba82248194871caca0ee0ac196c9c7e738.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF9107",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/4drutir15lu3jnl62jd4h/_ALF9107.jpg?rlkey=9klhrqxhmlx76h4jfgtg6e9qt&dl=0",
+          "thumb": "assets/synced/accessories/f790c2eb448091b7eca39a9fa1dc27f9a8ffb37ef523d43e4af3b3bbf5bf0b26.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF9126",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/otw60cx86hpznqgqhp8dn/_ALF9126.jpg?rlkey=to5jklyp5jgpuoll9hbrsu7yt&dl=0",
+          "thumb": "assets/synced/accessories/00d11a5d80bf38a07bbb17db56a9e605a1f498a89c0f67b7fce9ddcdcb196b9f.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF9407",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/pwmu2h4j2f0v7f8ewh89k/_ALF9407.jpg?rlkey=jhw95ybgykn15joz8irm6l556&dl=0",
+          "thumb": "assets/synced/accessories/21427e7e85aa2d98dfca37452f837e5760da86686bd4a151f40f185cc7781b97.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF9419",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ogc432ixv1nhxjhrzt9ur/_ALF9419.jpg?rlkey=kd1hj6f8piavhekp7ztxsc23p&dl=0",
+          "thumb": "assets/synced/accessories/d69d8e1fbe31aa3680fd515725d920d497fd764c860a7beacac0dd68ea295832.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF9434",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/ua6fvmtvre6mgrit7a5ku/_ALF9434.jpg?rlkey=17lrn9exb0ndq0c59mkt3vbwi&dl=0",
+          "thumb": "assets/synced/accessories/622a0a9737f8a8e224aeb7f7a4bf80cdf40689388406f4a9762926876bbc973f.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF9449",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/xj9wmd4fem5zvursnyacl/_ALF9449.jpg?rlkey=hr5l63dyvi1u4s66siukvddmz&dl=0",
+          "thumb": "assets/synced/accessories/92731c092bf37916a9e12003894b1015d74463d1a16b433d3da7bbb3f2255604.jpg",
+          "file": null
+        },
+        {
+          "name": "STDN - Modul - Silo - Glass",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/yzg6k3xl645p14mi5khv6/STDN-Modul-Silo-Glass.png?rlkey=xcw4ujvzddjpd9h06vxv6j546&dl=0",
+          "thumb": "assets/synced/accessories/e5c3ac23c752ffd7d04ba9778a15cc64bfc7e6e1a20f50507461ff8226bbfe34.jpg",
+          "file": null
+        },
+        {
+          "name": "STDN - Modul Dok-Silo_flat",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/98stwnc8smjqgi3n5roxh/STDN-Modul-Dok-Silo_flat.png?rlkey=y9z0u1ne2de12piuz7prazqan&dl=0",
+          "thumb": "assets/synced/accessories/7c28246833aa65e1f8ffe33e8ab0b8213de42ebced0f3146fcabe9d77f52cd7b.jpg",
+          "file": null
+        }
+      ],
+      "Modül Accessories / Silo / Logos": [
+        {
+          "name": "Silo_sticker_1.25x.5",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/5ezx8aatdqibumt1vce1j/Silo_sticker_1.25x.5.pdf?rlkey=69xwjiq6s16ih65wrk2f03psi&dl=0",
+          "thumb": "assets/synced/accessories/781151dd6bd96bba9f8712d09949f429b2918e9f83e8802f7180c579a4d346c5.jpg",
+          "file": null
+        }
+      ],
+      "Modül Accessories / Silo / Social Videos": [
+        {
+          "name": "Larry Cascade Silo Announcement",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/ffit4xtn8h9prpyn3c29v/Larry-Cascade-Silo-Announcement.mp4?rlkey=5gox9xjifnjb4vtypsh5u4zic&dl=0",
+          "thumb": "assets/synced/accessories/70338470c09ba21fffea090813b96f25679123619bfcfc289556ec6d45c9c3ba.jpg",
+          "file": null
+        },
+        {
+          "name": "Larry Silo Cascade No Smoke",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/dtajfnn96cfoi4zny8xwz/Larry-Silo-Cascade-No-Smoke.mp4?rlkey=3z0bgudjswyczboeucy468nih&dl=0",
+          "thumb": "assets/synced/accessories/3284fe17f3e9dfb267495d97c23582f32c86ba85eff28720daff2dad0a5fcbdb.jpg",
+          "file": null
+        },
+        {
+          "name": "Modül Silo on Black A",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/1kx5dsujjk9ivkrsztizx/Mod-l-Silo-on-Black-A.mp4?rlkey=5m60dnuoagofovyq1hsxxxtcp&dl=0",
+          "thumb": "assets/synced/accessories/3a0ec714ed53e02b810a05616853b76738cf329415cb775e69d84b17a6bd4171.jpg",
+          "file": null
+        }
+      ],
+      "Modül Accessories / Silo / TV Screen Videos": [
+        {
+          "name": "Larry Silo Horizontal",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/9k56emu4afuva45t7j7mg/Larry-Silo-Horizontal.mp4?rlkey=1j27264txg6o3flxj464p2xvd&dl=0",
+          "thumb": "assets/synced/accessories/806a95abf909c6b6f1e2ccecaa469f8ca9bca87f3e1b21277c07c0c0bb14f878.jpg",
+          "file": null
+        }
+      ],
+      "Modül Accessories / Silo / Documents": [
+        {
+          "name": "20260709_Stundenglass_Modul_New_Accessories_One-Sheet_B",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/molfsj26f2vdwh09gqshe/20260709_Stundenglass_Modul_New_Accessories_One-Sheet_B.pdf?rlkey=6ix8f91h8d8pgucsvmqij3gds&dl=0",
+          "thumb": "assets/synced/accessories/0dbbc4160327799ee2fc23352945ba8b668dcc0c6c6d6266013e46782a89a06f.jpg",
           "file": null
         }
       ],
@@ -17973,6 +18375,13 @@ window.PORTAL_SYNCED = {
       "Hose Splitter / Social Videos": "https://www.dropbox.com/scl/fo/mepntyt34vgq18749wmzs/ABBXH1PhcASaO6Q96GaWFvQ?rlkey=jdh1v9b2jauxvkvkunbqqcc91&dl=1",
       "Hose Splitter / TV Screen Videos": "https://www.dropbox.com/scl/fo/c97wxffvglpvuwq1i16vz/AHveNE9UAQjzeIo3D817j2A?rlkey=rsaimlc4ok35d022p50p91zfb&dl=1",
       "Modül Accessories": "https://www.dropbox.com/scl/fo/x0hcld6fc6jvagfbxxy6o/AFu4-V0IG2um7X9Tf7hCP8I?rlkey=kk342v9n4iemhap21xodxkjgu&dl=1",
+      "Modül Accessories / Cascade": "https://www.dropbox.com/scl/fo/u9nxu9a8o10sk46szr9kg/AG3Vgt3WU2bWVyAdxtu8Ass?rlkey=jnuqu1sa8k9o94a4xz3ts8e9c&dl=1",
+      "Modül Accessories / Cascade / Product Photos": "https://www.dropbox.com/scl/fo/27gyu0wctiip8wk2pvgfm/AG2p78ZFiUuK8AXsNj4DaNw?rlkey=798sbnb0wy6osbbouw5r0e264&dl=1",
+      "Modül Accessories / Cascade / Lifestyle Photos": "https://www.dropbox.com/scl/fo/bufh2a17uo0vvzoorruqx/AGa__wRc8ymB3tW7DAoaHKI?rlkey=nyu6o3ln35xxideekxu394eyf&dl=1",
+      "Modül Accessories / Cascade / Logos": "https://www.dropbox.com/scl/fo/sxi5wyxwips94xo2wc4r3/ACPfA74-kMxz9SYn6Z1dWCQ?rlkey=2aqfsowvhtl4a1ml6wj8s6ymd&dl=1",
+      "Modül Accessories / Cascade / Social Videos": "https://www.dropbox.com/scl/fo/fc4qnaa34cxpoa69q18m0/AHwqm0AZgHmY4RxFg9nnaNk?rlkey=ozaghb2k1kd3nj8gi3ldgv7cf&dl=1",
+      "Modül Accessories / Cascade / TV Screen Videos": "https://www.dropbox.com/scl/fo/5ofng11xl60w0jj7t3xeq/AFlS2eOp_egxCeUp-rdDUNA?rlkey=oxh9cqmnjyri9ep4m4x2jt9hp&dl=1",
+      "Modül Accessories / Cascade / Documents": "https://www.dropbox.com/scl/fo/5guwco8rxv1rkdn74hz41/APaQzG4VabS6QtubHkACsUo?rlkey=sogxte4nto2brac9njj2lpr2l&dl=1",
       "Modül Accessories / Combustion Tank": "https://www.dropbox.com/scl/fo/nh93sg995k3z40g1nfrkn/AIN-50l-XnmeC-RZNnl6lZY?rlkey=kgppsvbm65kvnteeb558fm006&dl=1",
       "Modül Accessories / Concentrate Tank": "https://www.dropbox.com/scl/fo/cpnftmzvh4gfxrnky33he/AMziVy6Dm85EtWAa37Oaouk?rlkey=1br5tlxeuumg17hut3ztfj2qs&dl=1",
       "Modül Accessories / Modül Dry Herb Vape Tank": "https://www.dropbox.com/scl/fo/0cqyy2s35kzzmoxd3x67a/ANhjv84hhtjI1YitSpY--NA?rlkey=yc73s3fehx33iswqc49hqxs1b&dl=1",
@@ -17981,6 +18390,7 @@ window.PORTAL_SYNCED = {
       "Modül Accessories / Modül Dry Herb Vape Tank / Lifestyle Photos / Larry Venice": "https://www.dropbox.com/scl/fo/8bvp5chg6l38bibbgn5pf/AMgm2hEn3iz3taAuv-mPfoE?rlkey=wzal07kvnmxxietwbrmhr0d4g&dl=1",
       "Modül Accessories / Modül Dry Herb Vape Tank / Social Videos": "https://www.dropbox.com/scl/fo/4338dg8ysw1j203rbuoia/AEVMhAz9y5GwzmxIK-IDjP0?rlkey=7j52yw6jsrszg872jgcef2jno&dl=1",
       "Modül Accessories / Modül Dry Herb Vape Tank / TV Screen Videos": "https://www.dropbox.com/scl/fo/0pbe5qigeq7jh67rn4pn6/AO48sAmk9mNdepTbsh3tm7g?rlkey=rxkfc0ml8907n4v1oez184cn6&dl=1",
+      "Modül Accessories / Modül Dry Herb Vape Tank / Documents": "https://www.dropbox.com/scl/fo/t10n8l7m8sbe898fd0jl2/AGQlUKiWUL7xK7c0210I1To?rlkey=z30b9ux05lc2qn635lmpz1f07&dl=1",
       "Modül Accessories / Modül Glass Carb Cap": "https://www.dropbox.com/scl/fo/tk5e7ha3fk9c6uz501ths/APG4vBd1vCoUf8kUJkdIk9M?rlkey=3g0hpwo4bzhmwb9rm2blndzk8&dl=1",
       "Modül Accessories / Modül Glass Carb Cap / Product Photos": "https://www.dropbox.com/scl/fo/fzz57ogjw6oif0pgqvyu2/AD7Zdg8W2cV8_OgtC6FxMUg?rlkey=h4z67rv2f9g6crv891d1kxe4z&dl=1",
       "Modül Accessories / Modül Glass Carb Cap / Lifestyle Photos": "https://www.dropbox.com/scl/fo/aljo1wa3qpuow8rbwbmrh/ABIGYpfNFDgnvl9Wy4x6Uwc?rlkey=v3etf30x0nmri7y8szy55laq7&dl=1",
@@ -17998,6 +18408,13 @@ window.PORTAL_SYNCED = {
       "Modül Accessories / Recycler 2 / Social Videos": "https://www.dropbox.com/scl/fo/k64fltc0dxpnanvpx0x3c/ANB43KzgwD2AXXUCAyecujk?rlkey=yj9zuieysw29dnbusrzigcisx&dl=1",
       "Modül Accessories / Recycler 2 / TV Screen Videos": "https://www.dropbox.com/scl/fo/lah6xsu8g7xqzkdlxyeu1/AIWHXaO61N3SMqq_c_61UKM?rlkey=dpicot9sb1jkyeazfg5sklxfg&dl=1",
       "Modül Accessories / Recycler 2 / Documents": "https://www.dropbox.com/scl/fo/fhah7se85nv7ifbc05bay/AB-uoJnNNo0_tkFpX0Ki4P8?rlkey=wra0k3xr238vgtth8lulsz0ag&dl=1",
+      "Modül Accessories / Silo": "https://www.dropbox.com/scl/fo/8ge04wt9dpdlcw9frn1t5/AKiP79zWgXZDq_T6ai-Nlcw?rlkey=j3qh0mge0p54xz77lgb7lbjdh&dl=1",
+      "Modül Accessories / Silo / Product Photos": "https://www.dropbox.com/scl/fo/uzkj8bdu9q6j871blrbmd/AD2uqP_PDaTf1d-nAtSsf7s?rlkey=66ik6zifkgypp9dzuhifkbbw1&dl=1",
+      "Modül Accessories / Silo / Lifestyle Photos": "https://www.dropbox.com/scl/fo/y56jxt69cafzudki541u4/APprbLQUz0PfvdZ12Kz4FSU?rlkey=dznho4qbrdug9eyeofplhwvz4&dl=1",
+      "Modül Accessories / Silo / Logos": "https://www.dropbox.com/scl/fo/3j5aqcj885h9hcntyk08y/AGWA2A9HF1d0FOcqUnHWIDs?rlkey=o3ly10ihlxh5mvsgsc8dhcfx0&dl=1",
+      "Modül Accessories / Silo / Social Videos": "https://www.dropbox.com/scl/fo/6f64hr3d3vgc8js1zm2hb/APdAyGYR4Y2TnxSrOVaO3NM?rlkey=v8gd8zbcx3jnclv232wmp47c9&dl=1",
+      "Modül Accessories / Silo / TV Screen Videos": "https://www.dropbox.com/scl/fo/pfnnx272kelmeaqax8gr2/AJnrlcQsfe0DFwLW_nvCKrc?rlkey=y721a3fzkeqceozbbmejqu416&dl=1",
+      "Modül Accessories / Silo / Documents": "https://www.dropbox.com/scl/fo/5dxq9zgo1079wihga4ohr/AERV_KhxEowWhoY1c9Z3gY0?rlkey=tl5dh3aj4cg6t8hpz1cum2e72&dl=1",
       "Modül Accessories / Soft Bag - Modül Dok": "https://www.dropbox.com/scl/fo/j0qcyo8n9bvkedzq2pkez/AMqAuPALElit4iJ4ynJUCyc?rlkey=163u6zybnj1zi7yuywk9irzq5&dl=1",
       "Modül Accessories / Soft Bag - Modül Dok / Product Photos": "https://www.dropbox.com/scl/fo/a27onsrsp337ju679qjoj/AHPSAKq4uwGf4OPuiXNENIM?rlkey=v81j5vy82vbft0sbjbviwoddj&dl=1",
       "Modül Accessories / Soft Bag - Modül Dok / Lifestyle Photos": "https://www.dropbox.com/scl/fo/asq0arlwv1tgnsqk0lfjf/AOOXf4MYixz5XyOi4YgeuQc?rlkey=lwlr6x9r5s3p4vp54mwb3nxj1&dl=1",
