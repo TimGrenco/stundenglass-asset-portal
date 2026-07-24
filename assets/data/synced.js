@@ -15628,6 +15628,14 @@ window.PORTAL_SYNCED = {
           "url": "https://www.dropbox.com/scl/fi/gfnd3qmveijv5ad836bng/Larry-Silo-Cascade-No-Smoke.mp4?rlkey=msumdzkyza0fs138rkyeubksh&dl=0",
           "thumb": "assets/synced/accessories/3284fe17f3e9dfb267495d97c23582f32c86ba85eff28720daff2dad0a5fcbdb.jpg",
           "file": null
+        },
+        {
+          "name": "Modül Cascade on Black A",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/6z9pg6zt0uanf9hpg6wll/Mod-l-Cascade-on-Black-A.mp4?rlkey=8z2khftymmsr96vdulrb0759u&dl=0",
+          "thumb": "assets/synced/accessories/a3d66c601ce50dae127ee2c4c4627e6c189b68588b3de13fea58f1814598d86d.jpg",
+          "file": null
         }
       ],
       "Modül Accessories / Cascade / TV Screen Videos": [
