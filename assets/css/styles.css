@@ -78,14 +78,18 @@ a { color: inherit; text-decoration: none; }
 .hero-logo { display: block; width: auto; filter: brightness(0) invert(1); opacity: 0.95; }
 /* Centered horizontal wordmark (PNG is trimmed tight, so height == what you see). */
 .hero-logo.sg-word { height: 58px; }
-.hero-brands .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex: 0 0 auto; }
 .hero-eyebrow { font-size: 10.5px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 700; color: var(--gold); margin-bottom: 11px; }
 .hero h1 { font-family: var(--serif); font-size: clamp(26px, 4.2vw, 38px); line-height: 1.04; letter-spacing: -0.03em; font-weight: 800; color: #fff; }
 
 /* ------------------------------ BROWSE BAR -------------------------------- */
 /* The primary navigator: brand, search and asset-type filters in one place.
    Sticks under the nav on desktop so it stays reachable down a long list. */
-.browse { background: rgba(255, 255, 255, 0.92); backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid var(--hair); }
+/* position + z-index belong on the BASE rule, not only in the 721px block below:
+   backdrop-filter makes .browse a stacking context at every width, so the
+   Popular-searches panel's own z-index is trapped inside it. Without a stacking
+   position here, below 721px the panel painted BEHIND the page — its chips were
+   unclickable and a tap actuated whatever control sat underneath. */
+.browse { position: relative; z-index: 40; background: rgba(255, 255, 255, 0.92); backdrop-filter: saturate(180%) blur(14px); border-bottom: 1px solid var(--hair); }
 .browse-inner { display: flex; flex-direction: column; gap: 11px; padding-top: 13px; padding-bottom: 13px; }
 .browse-top { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .browse-search { position: relative; flex: 1 1 240px; min-width: 200px; }
@@ -98,7 +102,7 @@ a { color: inherit; text-decoration: none; }
 .search-clear:hover { background: var(--ink); color: #fff; }
 .search-clear svg { width: 13px; height: 13px; }
 .browse-count { font-size: 12px; font-weight: 600; color: var(--stone); white-space: nowrap; }
-@media (min-width: 721px) { .browse { position: sticky; top: 64px; z-index: 40; } }
+@media (min-width: 721px) { .browse { position: sticky; top: 64px; } }
 
 /* brand view toggle */
 .toggle { display: inline-flex; background: var(--mist); border: 1px solid var(--hair); border-radius: var(--radius-pill); padding: 3px; flex: 0 0 auto; }
@@ -130,7 +134,6 @@ a { color: inherit; text-decoration: none; }
 .section-head { display: flex; align-items: center; gap: 12px; margin: 0 0 20px; }
 .section-head h2 { font-family: var(--serif); font-size: 21px; font-weight: 800; letter-spacing: -0.02em; }
 .section-head h3 { font-family: var(--serif); font-size: 18px; font-weight: 700; letter-spacing: -0.015em; }
-.brand-block:not(:last-child) { margin-bottom: 6px; }
 .section-head.sub { margin: 22px 0 18px; }
 .section-head .badge { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 700; color: var(--stone); border: 1px solid var(--hair); border-radius: var(--radius-pill); padding: 3px 9px; }
 .section-head::after { content: ""; flex: 1; height: 1px; background: var(--hair); order: 5; }
@@ -157,10 +160,7 @@ a { color: inherit; text-decoration: none; }
 #instore-section { margin-top: 40px; }
 .instore-empty { border: 1px dashed var(--hair); border-radius: var(--radius); background: var(--mist); padding: 26px; display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
 .instore-empty p { font-size: 14px; color: var(--stone); max-width: 640px; margin: 0; }
-.instore-lead { font-size: 14px; color: var(--stone); display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin: 0 0 20px; }
 .instore-order { margin-top: 18px; }
-.instore-group { margin-bottom: 26px; }
-.instore-group-h { font-family: var(--serif); font-size: 15px; font-weight: 800; margin-bottom: 12px; }
 .instore-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
 .instore-tile { position: relative; display: block; border: 1px solid var(--hair); border-radius: var(--radius); background: var(--mist); overflow: hidden; cursor: pointer; padding: 0; transition: border-color 0.14s, transform 0.14s; }
 .instore-tile:hover { border-color: var(--ink); transform: translateY(-2px); }
@@ -247,8 +247,6 @@ button.mat-thumb { padding: 0; }
 .mat-field em { font-style: normal; color: var(--stone-2); }
 .loc-add { margin-top: 16px; width: 100%; justify-content: center; border-style: dashed; }
 @media (max-width: 520px) { .loc-row { grid-template-columns: 1fr; } }
-/* brand wordmark label (used in the social hub + guide heads) */
-.ess-wordmark { font-family: var(--serif); font-size: 16px; letter-spacing: 0.12em; font-weight: 700; }
 .sort { order: 10; display: inline-flex; gap: 2px; background: var(--mist); border: 1px solid var(--hair); border-radius: var(--radius-pill); padding: 3px; }
 .sort button { font-size: 11px; font-weight: 600; padding: 5px 12px; border-radius: var(--radius-pill); color: var(--stone); border: none; background: transparent; }
 .sort button.on { background: var(--ink); color: #fff; }
@@ -257,7 +255,23 @@ button.mat-thumb { padding: 0; }
 .viewmode button svg { width: 15px; height: 15px; stroke: currentColor; }
 .viewmode button.on { background: var(--ink); color: #fff; }
 
+/* Hero subtitle under the tagline — sized well below it so the hierarchy stays
+   wordmark → eyebrow → tagline → intro. Hidden when PORTAL_CONFIG.intro is "". */
+#hero-intro { margin: 14px auto 0; max-width: 68ch; font-size: 14.5px; line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+  /* Avoid a single-word last line under the tagline. */
+  text-wrap: pretty; }
+#hero-intro:empty { display: none; }
+/* On phones the fold is precious — keep the intro (it's what tells a first-time
+   retailer what this is) but scale it down so the product grid stays reachable. */
+@media (max-width: 600px) {
+  #hero-intro { margin-top: 10px; font-size: 13px; line-height: 1.5; }
+}
+
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 18px; margin-bottom: 38px; }
+/* No-results message inside the product grid — spans every column. */
+.grid-empty { grid-column: 1 / -1; color: var(--stone); font-size: 14px; padding: 30px 0; }
+.grid-empty a { text-decoration: underline; }
 
 /* product card */
 .card { cursor: pointer; }
@@ -295,11 +309,9 @@ button.mat-thumb { padding: 0; }
 .tag-new-purple, .row-new-purple { background: #7C3AED; color: #fff; }
 .row-sub { font-size: 12px; color: var(--stone); margin-top: 2px; }
 .row-label { font-size: 9px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--stone); background: var(--mist); border: 1px solid var(--hair); padding: 2px 8px; border-radius: var(--radius-pill); }
-.row-fmts { display: flex; gap: 5px; flex: 0 0 auto; }
 .row-dl { width: 34px; height: 34px; flex: 0 0 auto; border-radius: 8px; background: var(--ink); color: #fff; display: flex; align-items: center; justify-content: center; border: none; }
 .row-dl svg { width: 16px; height: 16px; stroke: #fff; }
 .row-dl:hover { background: var(--ink-2); }
-@media (max-width: 600px) { .row-fmts { display: none; } }
 
 /* --------------------------------- DETAIL --------------------------------- */
 .detail { padding: 30px 0 40px; }
@@ -329,7 +341,6 @@ button.mat-thumb { padding: 0; }
 
 
 /* product hub: facts (in the hero) + highlights (full-width grid) */
-.ov-h { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--stone); margin-bottom: 10px; }
 .highlights { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 11px 30px; margin-bottom: 30px; }
 .highlights li { position: relative; padding-left: 20px; font-size: 14px; line-height: 1.45; }
 .highlights li::before { content: ""; position: absolute; left: 2px; top: 8px; width: 6px; height: 6px; border-radius: 50%; background: var(--ink); }
@@ -342,8 +353,6 @@ button.mat-thumb { padding: 0; }
 .ov-cta { display: flex; gap: 8px; flex-wrap: wrap; }
 .fd-copy { order: 6; flex: 0 0 auto; }
 .fulldesc { margin-top: 0; border: 1px solid var(--hair); border-radius: var(--radius); padding: 18px 20px; }
-.fd-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
-.fd-head .ov-h { margin-bottom: 0; }
 .fd-body p { font-size: 13.5px; line-height: 1.6; color: var(--ink-2); margin-bottom: 9px; }
 .fd-body p:last-child { margin-bottom: 0; }
 /* What's In the Box? */
@@ -366,9 +375,6 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 .pkg-zoom { cursor: zoom-in; transition: background 0.14s; }
 .pkg-zoom:hover { background: #ededea; }
 .pkg-media img { width: 100%; height: 100%; object-fit: contain; padding: 14px; }
-.pkg-ph { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--stone-2); }
-.pkg-ph svg { width: 30px; height: 30px; stroke: #c8c8c3; }
-.pkg-ph span { font-size: 11.5px; }
 .pkg-label { font-size: 12.5px; font-weight: 600; padding: 9px 11px 9px 13px; border-top: 1px solid var(--hair); display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .pkg-dl { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border: 1px solid var(--hair); border-radius: 8px; background: var(--paper); color: var(--ink); cursor: pointer; flex: 0 0 auto; }
 .pkg-dl:hover { border-color: var(--ink); background: var(--mist); }
@@ -427,15 +433,10 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 .vplay:hover .vthumb-hint { opacity: 1; }
 .vmeta { padding: 11px 13px 13px; }
 .vtitle { font-size: 13px; font-weight: 600; line-height: 1.35; }
-.vdl { margin-top: 10px; display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: var(--radius-pill); border: 1px solid var(--hair); background: var(--paper); color: var(--ink); cursor: pointer; }
-.vdl svg { width: 14px; height: 14px; stroke: currentColor; }
-.vdl:hover { border-color: var(--ink); background: var(--mist); }
 .vactions { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
 .vbtn { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; padding: 6px 13px; border-radius: var(--radius-pill); border: 1px solid var(--hair); background: var(--paper); color: var(--ink); cursor: pointer; text-decoration: none; }
 .vbtn svg { width: 14px; height: 14px; stroke: currentColor; }
 .vbtn:hover { border-color: var(--ink); background: var(--mist); }
-.vbtn-soon { color: var(--stone); cursor: default; }
-.vbtn-soon:hover { border-color: var(--hair); background: var(--paper); }
 .vhub-note { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--stone); margin: -6px 0 16px; }
 .vhub-note svg { width: 15px; height: 15px; stroke: var(--ink); flex: 0 0 auto; }
 .vhub-note strong { color: var(--ink); font-weight: 700; }
@@ -525,8 +526,8 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 .gcell.sel .gthumb { background: var(--mist-2); }
 
 /* floating selection action bar */
-.selbar { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%) translateY(24px); display: flex; align-items: center; gap: 18px; background: var(--ink); color: #fff; padding: 10px 12px 10px 22px; border-radius: var(--radius-pill); box-shadow: var(--shadow-lg); z-index: 85; opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s; }
-.selbar.show { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+.selbar { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%) translateY(24px); display: flex; align-items: center; gap: 18px; background: var(--ink); color: #fff; padding: 10px 12px 10px 22px; border-radius: var(--radius-pill); box-shadow: var(--shadow-lg); z-index: 85; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.2s, transform 0.2s, visibility 0s 0.2s; }
+.selbar.show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); pointer-events: auto; transition: opacity 0.2s, transform 0.2s, visibility 0s; }
 .selbar .selcount { font-size: 13px; white-space: nowrap; }
 .selbar .selcount strong { font-weight: 700; }
 .selbar .selacts { display: flex; gap: 8px; }
@@ -573,7 +574,6 @@ a.logo-tile { cursor: pointer; }
 #social-hub { margin-top: 14px; }
 .hub-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
 .hub-brand { border: 1px solid var(--hair); border-radius: var(--radius); padding: 20px; background: var(--paper); }
-.hub-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
 .socials { display: flex; flex-direction: column; gap: 8px; }
 .social-card { display: flex; align-items: center; gap: 8px; }
 .social-main { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; border: 1px solid var(--hair); border-radius: 10px; padding: 10px 12px; transition: border-color 0.14s, box-shadow 0.14s; }
@@ -671,7 +671,6 @@ a.logo-tile { cursor: pointer; }
   .nav-actions { gap: 8px; }
   .nav-link { white-space: nowrap; font-size: 13px; }
   .hero-brands { gap: 18px; }
-  .hero-brands .nm { font-size: 17px; }
   .hero-logo.sg-word { height: 38px; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 13px; }
   /* asset filter chips become a single swipeable strip instead of stacking */
@@ -685,7 +684,6 @@ a.logo-tile { cursor: pointer; }
   .toggle button { padding: 9px 16px; }
   .section-head { flex-wrap: wrap; }
   .section-head::after { display: none; }
-  .ess-wrap { grid-template-columns: 1fr; }
   .selbar { left: 12px; right: 12px; bottom: 12px; transform: translateY(24px); gap: 10px; padding: 10px 12px; justify-content: space-between; }
   .selbar.show { transform: translateY(0); }
   .selbar .selcount { font-size: 12px; }
@@ -709,13 +707,10 @@ a.logo-tile { cursor: pointer; }
   .qbtn, .viewmode button, .pkg-dl, .search-clear { min-width: 40px; min-height: 40px; }
 }
 
-/* Empty (0-count) asset folders read as disabled instead of leading nowhere. */
-.catcard.is-empty { opacity: 0.4; cursor: default; }
-.catcard.is-empty:hover { border-color: var(--hair); }
 
 /* Floating scroll-to-top — appears once you're a screen or two down. */
-.to-top { position: fixed; right: 20px; bottom: 20px; width: 46px; height: 46px; border-radius: 50%; background: var(--ink); color: #fff; border: none; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.22); opacity: 0; pointer-events: none; transform: translateY(10px) scale(0.9); transition: opacity 0.2s, transform 0.2s; z-index: 95; cursor: pointer; }
-.to-top.show { opacity: 1; pointer-events: auto; transform: translateY(0) scale(1); }
+.to-top { position: fixed; right: 20px; bottom: 20px; width: 46px; height: 46px; border-radius: 50%; background: var(--ink); color: #fff; border: none; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,0.22); opacity: 0; visibility: hidden; pointer-events: none; transform: translateY(10px) scale(0.9); transition: opacity 0.2s, transform 0.2s, visibility 0s 0.2s; z-index: 95; cursor: pointer; }
+.to-top.show { opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0) scale(1); transition: opacity 0.2s, transform 0.2s, visibility 0s; }
 .to-top:hover { background: #000; transform: translateY(-2px) scale(1.04); }
 .to-top svg { width: 20px; height: 20px; stroke: #fff; }
 @media (max-width: 600px) { .to-top { right: 14px; bottom: 14px; width: 42px; height: 42px; } }
@@ -908,9 +903,6 @@ a.logo-tile { cursor: pointer; }
 
 /* Catalogs & brand documents — cover cards + in-site PDF page viewer */
 #catalogs-section { margin-bottom: 34px; }
-.cat-group + .cat-group { margin-top: 26px; }
-.cat-group-h { font-size: 10.5px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 800;
-  color: var(--stone); margin-bottom: 12px; }
 .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(248px, 1fr)); gap: 18px; }
 .cat-card { border: 1px solid var(--hair); border-radius: var(--radius); background: var(--paper); overflow: hidden;
   display: flex; flex-direction: column; transition: border-color 0.14s, transform 0.14s, box-shadow 0.14s; }

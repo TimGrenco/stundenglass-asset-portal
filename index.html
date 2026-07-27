@@ -23,18 +23,27 @@
   <meta name="twitter:description" content="Self-serve Stündenglass brand &amp; product assets, organized by product and ready to download." />
   <meta name="twitter:image" content="https://assets.stundenglass.com/assets/og-card.png?v=20260714a" />
 
-  <!-- Fonts: Archivo (display + body) — bold, modern sans -->
+  <!-- Fonts: Montserrat (display) + Inter (body) — the two the stylesheet actually
+       uses. Archivo used to be requested here in six weights and matched nothing,
+       adding ~40% of a render-blocking stylesheet for no rendered glyph. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Favicon: official Stündenglass S mark (adapts: black on light tabs, white on dark) -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=2" />
 
-  <!-- Stylesheet is loaded with a per-load cache-bust (like the scripts before
-       </body>) so pushed updates appear on a normal reload — no hard refresh. -->
-  <script>document.write('<link rel="stylesheet" href="assets/css/styles.css?v=' + Date.now() + '">');</script>
-  <noscript><link rel="stylesheet" href="assets/css/styles.css" /></noscript>
+  <!-- The version token below is rewritten to the commit SHA by
+       .github/workflows/deploy-pages.yml (in the published copy only — this file
+       keeps its placeholder). That still gives an
+       instant update on every deploy, because the URL changes whenever the code
+       does, but between deploys the browser can reuse its cache. The previous
+       Date.now() token made every URL unique, so a returning retailer re-downloaded
+       ~320 KB of CSS/JS on every single visit even though nothing had changed.
+       Plain <link>/<script defer> tags (not document.write) so the preload scanner
+       can start these downloads immediately; defer keeps synced → assets → app
+       order and still runs before DOMContentLoaded. -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=dev" />
 </head>
 <body>
   <h1 class="sr-only">Stündenglass Brand Assets Portal</h1>
@@ -63,7 +72,7 @@
         </div>
         <button class="nav-link" id="nav-catalogs" data-i18n>Catalogs</button>
         <button class="nav-link" id="nav-guides" data-i18n>Logos &amp; assets</button>
-        <a class="req-link req-mail" href="#"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span data-i18n>Request an asset</span></a>
+        <a class="req-link req-mail" href="#" aria-label="Request an asset" data-i18n-aria><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span data-i18n>Request an asset</span></a>
       </div>
     </div>
   </header>
@@ -93,6 +102,9 @@
       </div>
       <div class="hero-eyebrow" data-i18n>Official Brand &amp; Product Assets</div>
       <h1 id="hero-tagline">Everything you need, in one place.</h1>
+      <!-- Filled from PORTAL_CONFIG.intro by applyJsChrome(), translated like the
+           tagline above it. Tells a first-time retail visitor what this portal is. -->
+      <p id="hero-intro"></p>
     </div>
   </section>
 
@@ -205,15 +217,10 @@
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="m5 12 7-7 7 7"/></svg>
   </button>
 
-  <!-- Load data + app with a per-load cache-bust so live updates appear on a
-       normal reload (no hard refresh). Order matters: synced → assets → app. -->
-  <script>
-    (function () {
-      var v = Date.now();
-      ["assets/data/synced.js", "assets/data/assets.js", "assets/js/app.js"].forEach(function (src) {
-        document.write('<script src="' + src + '?v=' + v + '"><\/script>');
-      });
-    })();
-  </script>
+  <!-- Order matters: synced → assets → app. defer preserves it. See the version
+       note in <head> for how the cache-bust is stamped at deploy time. -->
+  <script defer src="assets/data/synced.js?v=dev"></script>
+  <script defer src="assets/data/assets.js?v=dev"></script>
+  <script defer src="assets/js/app.js?v=dev"></script>
 </body>
 </html>

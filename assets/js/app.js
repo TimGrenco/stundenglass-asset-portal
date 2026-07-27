@@ -301,7 +301,14 @@
   // date-difference helper here anymore.)
   function fmtDate(iso) {
     // Parse as local midnight so an ISO date doesn't shift a day in US timezones.
-    return new Date(iso + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+    // Format in the ACTIVE language — a hardcoded en-US printed "Jul 9, 2026"
+    // inside otherwise fully translated copy on every product page.
+    var loc = state.lang === "en" ? "en-US" : state.lang === "pt" ? "pt-BR" : state.lang;
+    try {
+      return new Date(iso + "T00:00:00").toLocaleDateString(loc, { month: "short", day: "numeric", year: "numeric" });
+    } catch (e) {
+      return new Date(iso + "T00:00:00").toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
+    }
   }
   function icon(name) {
     var paths = {
@@ -429,7 +436,9 @@
     var lbl = labelFor(file.name);
     if (lbl) return lbl.name;   // curated in-store material name (no extension)
     var f = file.format || "";
-    if (!f || f === tr("YouTube") || f === "Link") return file.name;  // links keep their title, no fake extension
+    // file.format is raw sync data and always ENGLISH — comparing it against tr()
+    // would stop matching in any language whose pack renders the word differently.
+    if (!f || f === "YouTube" || f === "Link") return file.name;  // links keep their title, no fake extension
     return file.name + "." + f.toLowerCase();
   }
   function isExtVideo(file) { return file.type === "video" && /youtube\.com|youtu\.be|vimeo\.com/.test(file.url || ""); }
@@ -475,6 +484,10 @@
     var mp = $("#materials-page"); if (mp && parts[0] !== "materials") mp.style.display = "none";
     var lp = $("#locator-page"); if (lp && parts[0] !== "locator") lp.style.display = "none";
     var trp = $("#training-page"); if (trp && parts[0] !== "train") trp.style.display = "none";
+    // Leaving the catalog route by BACK (the usual way to dismiss a PDF on a phone)
+    // fires hashchange, not the close button — without this the full-screen viewer
+    // stays on top of the re-rendered page with body scroll still locked.
+    if (parts[0] !== "catalog" && document.getElementById("catlb")) teardownCatalog();
     if (parts[0] === "style" && BRANDS[parts[1]]) { openStyleGuide(parts[1]); return; }
     if (parts[0] === "additional" && BRANDS[parts[1]]) { openAdditional(parts[1]); return; }
     if (parts[0] === "materials") { openMaterials(); return; }
@@ -805,7 +818,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       .map(function (k) { return { kind: k, n: counts[k] }; });
     var facet = state.fileFacet && counts[state.fileFacet] ? state.fileFacet : "";
     var shown = facet ? hits.filter(function (r) { return r.kind === facet; }) : hits;
-    return { total: hits.length, all: hits, items: shown.slice(0, SEARCH_FILE_CAP), shownTotal: shown.length, facets: facets, facet: facet };
+    return { total: hits.length, items: shown.slice(0, SEARCH_FILE_CAP), shownTotal: shown.length, facets: facets, facet: facet };
   }
   // Escape a query for use inside a RegExp (highlighting).
   function reEscape(s) { return String(s).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"); }
@@ -820,10 +833,18 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   }
 
   // ---- rendering: cover ----------------------------------------------------
-  function coverHTML(p) {
+  // `small` picks the 480px variant. The five home-page covers were shipping as
+  // 800px masters (~1.9 MB) to render at 111-216 CSS px — most of the first-load
+  // payload, for cards a quarter their size. The detail hero and the lightbox
+  // still use the master, so nothing that is actually viewed large gets softer.
+  function coverSrc(p, small) {
+    if (!small || !p.cover) return p.cover;
+    return p.cover.replace(/\.png$/i, "-480.png");
+  }
+  function coverHTML(p, small) {
     if (p.cover) {
       var safe = p.name.replace(/"/g, "");
-      return '<img src="' + p.cover + '" alt="' + safe + '" loading="lazy" onerror="window.__fallback(this,\'' + safe + '\')"/>';
+      return '<img src="' + coverSrc(p, small) + '" alt="' + safe + '" loading="lazy" decoding="async" onerror="window.__fallback(this,\'' + safe + '\')"/>';
     }
     if (p.isLogo) return '<div class="logo-tile"><span>' + BRANDS[p.brand].wordmark + "</span></div>";
     return fallbackHTML(p.name);
@@ -836,7 +857,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   // ---- shared wiring helpers (swatches / style links / socials / logos) ----
   function wireSwatches(ctx) {
     $$("[data-hex]", ctx).forEach(function (s) {
-      s.addEventListener("click", function () { var h = s.getAttribute("data-hex"); copyText(h, "Copied " + h); });
+      s.addEventListener("click", function () { var h = s.getAttribute("data-hex"); copyText(h, tr("Copied {hex}").replace("{hex}", h)); });
     });
   }
   function wireLogoLinks(ctx) {
@@ -938,7 +959,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   // ---- brand style guide page ----------------------------------------------
   function swatchBigHTML(c) {
     var rgb = hexToRgb(c.hex).join(", ");
-    return '<button class="sw-big" data-hex="' + c.hex + '" title="Copy ' + c.hex + '">' +
+    return '<button class="sw-big" data-hex="' + c.hex + '" title="' + tr("Copy {hex}").replace("{hex}", c.hex) + '">' +
       '<span class="sw-big-chip" style="background:' + c.hex + '"></span>' +
       '<span class="sw-big-meta">' +
         '<span class="sw-big-name">' + c.name + "</span>" +
@@ -979,7 +1000,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           (b.logoProduct ? '<button class="btn ghost" data-logo="' + b.logoProduct + '">' + icon("download") + " " + tr("Download logos") + "</button>" : "") +
         "</div>" +
       "</div>" +
-      '<div class="section-head"><h2>' + tr("Colors") + '</h2><span class="badge">tap to copy</span></div>' +
+      '<div class="section-head"><h2>' + tr("Colors") + '</h2><span class="badge">' + tr("tap to copy") + '</span></div>' +
       '<div class="sg-colors">' + (b.colors || []).map(swatchBigHTML).join("") + "</div>" +
       '<div class="section-head"><h2>' + tr("Typography") + '</h2></div>' +
       '<div class="sg-fonts">' + (b.fonts || []).map(fontSpecimenHTML).join("") + "</div>" +
@@ -988,7 +1009,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         '<div class="sg-logo-tile"><span>' + b.wordmark + "</span></div>" +
         (b.logoProduct ? '<button class="btn ghost" data-logo="' + b.logoProduct + '">' + icon("download") + " " + tr("Download logo files") + "</button>" : "") +
       "</div>" +
-      '<div class="section-head"><h2>Follow ' + b.name + "</h2></div>" +
+      '<div class="section-head"><h2>' + tr("Follow {brand} On Socials").replace("{brand}", b.name) + "</h2></div>" +
       socialListHTML(bk);
 
     $("#sg-back").addEventListener("click", navHome);
@@ -1009,7 +1030,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       '<article class="card" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="' + tr("Open {name}").replace("{name}", tr(p.name)) + '">' +
         '<div class="card-frame">' +
           (p.newBadge && !p.isLogo ? '<span class="tag-new tag-new-' + p.newBadge + '">' + tr("New") + "</span>" : "") +
-          coverHTML(p) +
+          coverHTML(p, true) +
           '<div class="quick">' +
             '<button class="qbtn" data-act="download" title="' + tr("Download all") + '">' + icon("download") + "</button>" +
           "</div>" +
@@ -1023,7 +1044,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   function rowHTML(p) {
     return (
       '<article class="card row" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="' + tr("Open {name}").replace("{name}", tr(p.name)) + '">' +
-        '<div class="row-thumb">' + coverHTML(p) + "</div>" +
+        '<div class="row-thumb">' + coverHTML(p, true) + "</div>" +
         '<div class="row-main">' +
           '<div class="row-name">' + tr(p.name) + (p.newBadge && !p.isLogo ? ' <span class="row-new' + (p.newBadge ? " row-new-" + p.newBadge : "") + '">' + tr("New") + '</span>' : "") + (p.label ? ' <span class="row-label">' + tr(p.label) + "</span>" : "") + "</div>" +
           '<div class="row-sub">' + (p.isLogo ? tr("{n} logo files").replace("{n}", p.total) : tr(p.total === 1 ? "{n} asset" : "{n} assets").replace("{n}", p.total) + (p.label ? "" : " · " + tr(p.category))) + "</div>" +
@@ -1177,7 +1198,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var more = fileRes.shownTotal > fileRes.items.length
       ? '<p class="sf-more">' + tr("Showing the top {n} of {total} {kind} files — add a word to narrow it down.")
           .replace("{n}", fileRes.items.length).replace("{total}", fileRes.shownTotal)
-          .replace("{kind}", fileRes.facet ? tr(fileRes.facet).toLowerCase() : tr("matching")) + "</p>"
+          // No .toLowerCase(): the packs already supply display-cased facet names, and
+          // lower-casing is only ever correct for English — German nouns must stay capitalised.
+          .replace("{kind}", fileRes.facet ? tr(fileRes.facet) : tr("matching")) + "</p>"
       : "";
     sf.innerHTML =
       '<div class="section-head"><h2>' + tr("Matching files &amp; assets") + '</h2><span class="badge">' + fileRes.total + "</span></div>" +
@@ -1198,8 +1221,13 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var media = f.thumb
       ? '<img src="' + f.thumb + '" alt="' + safe + '" loading="lazy"/>'
       : icon(typeIcon[f.type] || "photo");
-    // Everything downloads from Dropbox (nothing is hosted on the portal).
-    var dl = !isVid ? (f.url || "") : "";
+    // Everything downloads from Dropbox, except the catalogs, which are committed
+    // same-origin (f.file) and so can be saved directly under a real filename.
+    var direct = !!f.file;
+    var dl = isExtVideo(f) ? "" : (direct ? f.file : (f.url || ""));
+    var dlName = direct
+      ? String(r.label).replace(/[^\w.-]+/g, "_") + (f.format && !/\.[a-z0-9]+$/i.test(r.label) ? "." + String(f.format).toLowerCase() : "")
+      : safe;
     // Product-less results (catalogs) route by hash instead of product + folder.
     var pName = r.product
       ? (r.product.name.indexOf(BRANDS[r.product.brand].name) === 0 ? r.product.name : BRANDS[r.product.brand].name + " " + r.product.name)
@@ -1214,7 +1242,8 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
             '<span class="sf-sub">' + (r.openHash ? highlight(subOf(r) || r.folder, q || "") : escapeHTML(fullProductName(r.product)) + " · " + highlight(trFolderPath(r.folder), q || "")) +
               (f.format ? ' · <span class="sf-fmt">' + f.format + "</span>" : "") + "</span></span>" +
         "</button>" +
-        (dl ? '<button class="sf-dl" data-sfdl="' + dl + '" data-sfname="' + safe + '" title="' + tr("Download") + '">' + icon("download") + "</button>" : "") +
+        (dl ? '<button class="sf-dl" data-sfdl="' + escapeHTML(dl) + '" data-sfname="' + escapeHTML(dlName) + '"' +
+          (direct ? ' data-direct="1"' : "") + ' title="' + tr("Download") + '">' + icon("download") + "</button>" : "") +
       "</div>";
   }
   function bindSearchFiles(ctx) {
@@ -1426,7 +1455,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           var t = p.getAttribute("data-thumb");
           if (img && t) img.src = t;
           var c = cur();
-          if (c && cover) cover.setAttribute("aria-label", "View " + c.title + " — " + c.region);
+          if (c && cover) cover.setAttribute("aria-label", tr("View {name}").replace("{name}", c.title) + " — " + c.region);
         });
       });
       var dl = $("[data-catdl]", card);
@@ -1448,7 +1477,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     if (ov.__resize) window.removeEventListener("resize", ov.__resize);
     if (ov.__doc) { try { ov.__doc.destroy(); } catch (e) {} ov.__doc = null; }
     ov.remove();
-    document.body.style.overflow = "";
+    modalClose();   // restores scroll + returns focus to the catalog card
   }
   // The user actually closing the viewer: tear down AND drop the catalog route.
   function closeCatalog() {
@@ -1483,14 +1512,13 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           '<button class="catlb-x" id="catlb-x" aria-label="' + tr("Close viewer") + '">' + icon("x") + "</button>" +
         "</div></div>" +
       '<div class="catlb-stage"><div class="catlb-load" id="catlb-load">' + tr("Loading catalog…") + "</div>" +
-        '<canvas id="catlb-canvas"></canvas></div>' +
+        '<canvas id="catlb-canvas" role="img" aria-label="' + escapeHTML(tr("{name} — page preview").replace("{name}", c.title)) + '"></canvas></div>' +
       '<div class="catlb-nav">' +
         '<button class="btn ghost sm" id="catlb-prev">' + icon("arrowLeft") + " " + tr("Prev") + "</button>" +
         '<span class="catlb-page" id="catlb-page">–</span>' +
         '<button class="btn ghost sm" id="catlb-next">' + tr("Next") + " " + icon("arrowRight") + "</button>" +
       "</div>";
     document.body.appendChild(ov);
-    document.body.style.overflow = "hidden";
 
     var doc = null, page = 1, busy = false;
     $("#catlb-x").addEventListener("click", closeCatalog);
@@ -1505,6 +1533,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       else if (e.key === "ArrowRight") go(page + 1);
     };
     document.addEventListener("keydown", ov.__key);
+    modalOpen(ov, c.title, $("#catlb-x"));
     var rt = null;
     ov.__resize = function () { clearTimeout(rt); rt = setTimeout(function () { if (doc && !busy) render(); }, 180); };
     window.addEventListener("resize", ov.__resize);
@@ -1693,7 +1722,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
 
     pg.innerHTML = head +
       '<p class="mat-lead">' + icon("info") + " " + tr("Set a quantity for each item, add your store details, then send your request.") +
-        (lbItems.length ? " Click a preview to enlarge it." : "") + "</p>" +
+        (lbItems.length ? " " + tr("Click a preview to enlarge it.") : "") + "</p>" +
       '<div class="mat-layout">' +
         '<div class="mat-list">' + rows + "</div>" +
         '<aside class="mat-side">' +
@@ -1704,7 +1733,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
             '<label class="mat-field"><span>' + tr("Email Address") + '</span><input type="email" id="mat-store-email" placeholder="you@store.com"/></label>' +
           "</div>" +
           '<button class="btn lg mat-order-btn" id="mat-order">' + icon("mail") + " " + tr("Order Materials") + '<span id="mat-count"></span></button>' +
-          '<p class="mat-side-note">You’ll confirm and send from your email app.</p>' +
+          '<p class="mat-side-note">' + tr("You’ll confirm and send from your email app.") + "</p>" +
         "</aside>" +
       "</div>";
 
@@ -2005,29 +2034,29 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       var lw = 132, lh = Math.round(lw * (CERT_LOGO.naturalHeight / CERT_LOGO.naturalWidth));
       x.drawImage(CERT_LOGO, cx - lw / 2, 96, lw, lh);
     }
-    ls("4px"); x.fillStyle = GOLD; x.font = "700 22px Archivo, Arial, sans-serif";
+    ls("4px"); x.fillStyle = GOLD; x.font = "700 22px Montserrat, Arial, sans-serif";
     x.fillText("STÜNDENGLASS · PRODUCT SPECIALIST PROGRAM", cx, 322); ls("0px");
-    x.fillStyle = INK; x.font = "800 46px Archivo, Arial, sans-serif"; x.fillText(tr("Certificate of Completion"), cx, 388);
-    x.fillStyle = MUTE; x.font = "400 24px Archivo, Arial, sans-serif"; x.fillText(tr("This certifies that"), cx, 462);
-    x.fillStyle = INK; x.font = "800 78px Archivo, Arial, sans-serif"; x.fillText(nm, cx, 552);
+    x.fillStyle = INK; x.font = "800 46px Montserrat, Arial, sans-serif"; x.fillText(tr("Certificate of Completion"), cx, 388);
+    x.fillStyle = MUTE; x.font = "400 24px Montserrat, Arial, sans-serif"; x.fillText(tr("This certifies that"), cx, 462);
+    x.fillStyle = INK; x.font = "800 78px Montserrat, Arial, sans-serif"; x.fillText(nm, cx, 552);
     x.fillStyle = GOLD; x.fillRect(cx - 150, 582, 300, 3);
-    x.fillStyle = MUTE; x.font = "400 23px Archivo, Arial, sans-serif";
+    x.fillStyle = MUTE; x.font = "400 23px Montserrat, Arial, sans-serif";
     x.fillText(tr("has successfully completed the Product Specialist training"), cx, 648);
     x.fillText(tr("and demonstrated expert product knowledge of the"), cx, 682);
-    x.fillStyle = INK; x.font = "800 46px Archivo, Arial, sans-serif"; x.fillText(product, cx, 748);
+    x.fillStyle = INK; x.font = "800 46px Montserrat, Arial, sans-serif"; x.fillText(product, cx, 748);
     // gold seal
     var scy = 872, r = 70;
     x.strokeStyle = GOLD; x.lineWidth = 3; x.beginPath(); x.arc(cx, scy, r, 0, 7); x.stroke();
     x.lineWidth = 1.5; x.beginPath(); x.arc(cx, scy, r - 10, 0, 7); x.stroke();
-    x.fillStyle = GOLD; x.font = "700 26px Archivo, Arial, sans-serif"; x.fillText("★", cx, scy - 16);
-    x.fillStyle = INK; x.font = "800 34px Archivo, Arial, sans-serif"; x.fillText(pct + "%", cx, scy + 12);
-    ls("1.5px"); x.fillStyle = GOLD; x.font = "700 11px Archivo, Arial, sans-serif"; x.fillText("STÜNDENGLASS", cx, scy + 38); ls("0px");
+    x.fillStyle = GOLD; x.font = "700 26px Montserrat, Arial, sans-serif"; x.fillText("★", cx, scy - 16);
+    x.fillStyle = INK; x.font = "800 34px Montserrat, Arial, sans-serif"; x.fillText(pct + "%", cx, scy + 12);
+    ls("1.5px"); x.fillStyle = GOLD; x.font = "700 11px Montserrat, Arial, sans-serif"; x.fillText("STÜNDENGLASS", cx, scy + 38); ls("0px");
     // footer columns
     var fy = 1035, cols = [[dateStr, tr("DATE ISSUED")], ["Stündenglass", tr("AUTHORIZED BY")], [cid || "", tr("CERTIFICATE ID")]], xs = [cx - 400, cx, cx + 400];
     cols.forEach(function (col, i) {
       x.strokeStyle = GOLD; x.lineWidth = 1; x.beginPath(); x.moveTo(xs[i] - 120, fy - 34); x.lineTo(xs[i] + 120, fy - 34); x.stroke();
-      x.fillStyle = INK; x.font = "700 24px Archivo, Arial, sans-serif"; x.fillText(col[0], xs[i], fy);
-      ls("2px"); x.fillStyle = MUTE; x.font = "600 13px Archivo, Arial, sans-serif"; x.fillText(col[1], xs[i], fy + 28); ls("0px");
+      x.fillStyle = INK; x.font = "700 24px Montserrat, Arial, sans-serif"; x.fillText(col[0], xs[i], fy);
+      ls("2px"); x.fillStyle = MUTE; x.font = "600 13px Montserrat, Arial, sans-serif"; x.fillText(col[1], xs[i], fy + 28); ls("0px");
     });
     var fname = product.replace(/[^\w.-]+/g, "_") + "_Certificate.png";
     if (c.toBlob) {
@@ -2089,10 +2118,10 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           '<div class="mat-fields">' +
             '<label class="mat-field"><span>' + tr("Your Name") + '</span><input type="text" id="loc-contact-name" placeholder="' + tr("Full name") + '"/></label>' +
             '<label class="mat-field"><span>' + tr("Email Address") + '</span><input type="email" id="loc-contact-email" placeholder="you@company.com"/></label>' +
-            '<label class="mat-field"><span>Phone <em>(optional)</em></span><input type="tel" id="loc-contact-phone" placeholder="(555) 555-5555"/></label>' +
+            '<label class="mat-field"><span>' + tr("Phone") + ' <em>' + tr("(optional)") + '</em></span><input type="tel" id="loc-contact-phone" placeholder="(555) 555-5555"/></label>' +
           "</div>" +
-          '<button class="btn lg mat-order-btn" id="loc-submit">' + icon("mail") + ' Submit Request<span id="loc-count"></span></button>' +
-          '<p class="mat-side-note">You’ll confirm and send from your email app.</p>' +
+          '<button class="btn lg mat-order-btn" id="loc-submit">' + icon("mail") + " " + tr("Submit Request") + '<span id="loc-count"></span></button>' +
+          '<p class="mat-side-note">' + tr("You’ll confirm and send from your email app.") + "</p>" +
         "</aside>" +
       "</div>";
 
@@ -2154,7 +2183,8 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       encodeURIComponent("Add to Store Locator") + "&body=" + encodeURIComponent(body);
   }
   function emptyState() {
-    return '<p style="grid-column:1/-1;color:var(--stone);font-size:14px;padding:30px 0;">No assets match your filters. <a href="mailto:' + CFG.requestEmail + '" style="text-decoration:underline;">Request one →</a></p>';
+    return '<p class="grid-empty">' + tr("No assets match your filters.") +
+      ' <a href="mailto:' + CFG.requestEmail + '">' + tr("Request one →") + "</a></p>";
   }
 
   function bindCards(ctx) {
@@ -2593,7 +2623,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     // Product pages show the product's own synced "In Store Marketing Materials"
     // folder (PNG-deduped). No generic/tagged fallback — those live in the
     // brand-level section and would otherwise double up the synced pieces.
-    return { items: instoreOwn(p), generic: false };
+    return { items: instoreOwn(p) };
   }
   // In-store printed marketing materials for this product — a dedicated section
   // under Digital Assets.
@@ -2604,13 +2634,13 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       (items.length ? '<span class="badge">' + tr(items.length === 1 ? "{n} item" : "{n} items").replace("{n}", items.length) + "</span>" : "") + "</div>";
     if (!items.length) {
       return head + '<div class="instore-empty">' +
-        "<p>Printed in-store materials (posters, shelf talkers, displays) for this product will appear here as they’re added.</p>" +
+        "<p>" + tr("Printed in-store materials (posters, shelf talkers, displays) for this product will appear here as they’re added.") + "</p>" +
         '<a class="btn ghost sm" href="mailto:' + CFG.orderEmail + "?subject=" +
-          encodeURIComponent("In-store material request — " + p.name) + '">' + icon("mail") + " Request materials</a>" +
+          encodeURIComponent("In-store material request — " + p.name) + '">' + icon("mail") + " " + tr("Request materials") + "</a>" +
       "</div>";
     }
     var prodName = p.name.indexOf(BRANDS[p.brand].name) === 0 ? p.name : BRANDS[p.brand].name + " " + p.name;
-    var note = '<p class="pkg-note">' + prodName + " specific in-store materials.</p>";
+    var note = '<p class="pkg-note">' + tr("{name} specific in-store materials.").replace("{name}", prodName) + "</p>";
     var tiles = items.map(function (x) {
       var media = x.thumb ? '<img src="' + x.thumb + '" alt="' + fileLabel(x).replace(/"/g, "") + '" loading="lazy"/>' : window.__icon("photo");
       var lbl = instoreLabel(x);
@@ -2622,7 +2652,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         cap + "</a>";
     }).join("");
     return head + note + '<div class="instore-grid">' + tiles + "</div>" +
-      '<div class="instore-order"><a class="btn" href="#materials">' + icon("mail") + " Order marketing materials</a></div>";
+      '<div class="instore-order"><a class="btn" href="#materials">' + icon("mail") + " " + tr("Order materials") + "</a></div>";
   }
 
   function pkgCard(label, url, dlUrl) {
@@ -2650,7 +2680,16 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     // own "Packaging" Dropbox folder by filename. "POP" in the name → the display;
     // everything else → the single retail box. Prefer transparent renders, and the
     // 3/4 hero angle for the box.
-    var pkgFolder = (p.folders && p.folders[tr("Packaging")]) || [];
+    // Collect EVERY "Packaging" folder, at any depth. Two bugs lived on this line:
+    // it indexed with tr("Packaging"), which can never match the raw English Dropbox
+    // key in es/de/pt (and only "worked" in it/fr, which translate it to itself);
+    // and it looked only at the ROOT, while the real tree nests packaging per
+    // colourway ("Black / Packaging"). Net effect: the section rendered a heading
+    // and a note with zero images on every product, in every language.
+    var pkgFolder = [];
+    Object.keys((p && p.folders) || {}).forEach(function (f) {
+      if (f.split(" / ").pop() === "Packaging") pkgFolder = pkgFolder.concat(p.folders[f] || []);
+    });
     var imgs = pkgFolder.filter(function (f) { return f.thumb; });
     function pick(wantPop) {
       var pool = imgs.filter(function (f) { return wantPop === /pop/i.test(f.name); });
@@ -2708,8 +2747,12 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       cards = boxCard(tr("Single Retail Packaging"), info.boxImg, null, boxFile) + pkgCard(tr("Master carton"), info.cartonImg);
       note = tr("Ships in single retail boxes. See SKU details for case and pallet quantities and specs.");
     }
+    // No packaging shots synced yet → don't ship a bare heading and a note with
+    // nothing under it; that reads as a broken section to a retailer. The section
+    // reappears on its own as soon as a Packaging folder syncs.
+    if (!cards) return "";
     return '<div class="section-head"><h2>' + tr("Packaging") + '</h2>' + (info.pop ? '<span class="badge">' + tr("Ships in POP display") + '</span>' : "") + "</div>" +
-      (cards ? '<div class="pkg-grid">' + cards + "</div>" : "") +
+      '<div class="pkg-grid">' + cards + "</div>" +
       '<p class="pkg-note">' + note + "</p>";
   }
 
@@ -2850,7 +2893,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       "</div>";
     }).join("");
     return '<div class="section-head"><h2>' + tr("How to use videos") + '</h2><span class="badge">' + tr(p.videos.length === 1 ? "{n} video" : "{n} videos").replace("{n}", p.videos.length) + "</span></div>" +
-      '<p class="vhub-note">' + icon("eye") + " Click a video to watch it, and download it or open it on YouTube where available.</p>" +
+      '<p class="vhub-note">' + icon("eye") + " " + tr("Click a video to watch it, and download it or open it on YouTube where available.") + "</p>" +
       '<div class="vhub">' + cards + "</div>";
   }
   // Dropbox shared-file link → inline-streamable URL (raw=1) for <video>.
@@ -2878,10 +2921,14 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     $(".vlb-close", ov).addEventListener("click", closeVideoModal);
     var dlBtn = $(".vlb-dl", ov);
     if (dlBtn) dlBtn.addEventListener("click", function () { directDownload(dlUrl, dlName); });
+    modalOpen(ov, title || tr("Video"), $(".vlb-close", ov));
   }
   function closeVideoModal() {
     var ov = $("#vlb");
-    if (ov) { var v = $("video", ov); if (v) v.pause(); ov.remove(); }
+    if (!ov) return;
+    var v = $("video", ov); if (v) v.pause();
+    ov.remove();
+    modalClose();
   }
 
   function renderGallery(p, folder, selected, onToggle, onChange) {
@@ -3093,29 +3140,52 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     downloadFiles(files, p.name);
   }
 
-  // ---- lightbox / asset viewer ---------------------------------------------
-  var lbItems = [], lbIdx = 0;   // items: { src, name, url }
-  var _lbReturn = null;
-  function openLightbox(items, idx) {
-    lbItems = items && items.length ? items : [];
-    lbIdx = idx || 0;
-    showLb();
-    $("#lightbox").classList.add("open");
-    // Dialog behaviour: remember the opener, move focus in, and stop the page behind
-    // from scrolling. Without this a keyboard user tabs straight out of the viewer
-    // into the page underneath while it is still covering the screen.
-    _lbReturn = document.activeElement;
+  // ---- shared modal behaviour ----------------------------------------------
+  // Three overlays cover the whole screen: the image lightbox, the video player
+  // and the catalog viewer. Each must announce itself as a dialog, take focus,
+  // keep Tab inside, stop the page behind from scrolling, and hand focus back to
+  // whatever opened it. One implementation so they can't drift apart.
+  var _modalReturn = null;
+  function modalOpen(ov, label, focusEl) {
+    if (!ov) return;
+    ov.setAttribute("role", "dialog");
+    ov.setAttribute("aria-modal", "true");
+    if (label) ov.setAttribute("aria-label", label);
+    _modalReturn = document.activeElement;
     document.body.style.overflow = "hidden";
-    var first = $("#lb-close"); if (first) first.focus();
+    if (focusEl && focusEl.focus) focusEl.focus();
   }
-  // Keep Tab inside the open viewer.
-  function lbTrap(e) {
-    if (e.key !== "Tab" || !lbOpen()) return;
-    var f = $$("#lightbox button, #lightbox a[href]").filter(function (el) { return el.offsetParent !== null; });
+  function modalClose() {
+    document.body.style.overflow = "";
+    var back = _modalReturn; _modalReturn = null;
+    if (back && back.focus) back.focus();
+  }
+  // The overlay currently on top, if any.
+  function openModalEl() {
+    return document.getElementById("vlb") || document.getElementById("catlb") ||
+      (lbOpen() ? document.getElementById("lightbox") : null);
+  }
+  // Keep Tab inside whichever overlay is open.
+  function modalTrap(e) {
+    if (e.key !== "Tab") return;
+    var ov = openModalEl(); if (!ov) return;
+    var f = $$("button, a[href], input, select, textarea, [tabindex]", ov)
+      .filter(function (el) { return el.offsetParent !== null && !el.disabled && el.getAttribute("tabindex") !== "-1"; });
     if (!f.length) return;
     var first = f[0], last = f[f.length - 1];
     if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  }
+
+  // ---- lightbox / asset viewer ---------------------------------------------
+  var lbItems = [], lbIdx = 0;   // items: { src, name, url }
+  function openLightbox(items, idx) {
+    lbItems = items && items.length ? items : [];
+    lbIdx = idx || 0;
+    showLb();
+    var ov = $("#lightbox");
+    ov.classList.add("open");
+    modalOpen(ov, tr("Asset preview"), $("#lb-close"));
   }
   function lbCurrent() { return lbItems[lbIdx] || {}; }
   function showLb() {
@@ -3138,9 +3208,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     $("#lightbox").classList.remove("open");
     $("#lightbox img").src = "";
     lbItems = [];
-    document.body.style.overflow = "";
-    if (_lbReturn && _lbReturn.focus) _lbReturn.focus();   // back to the thumbnail that opened it
-    _lbReturn = null;
+    modalClose();   // restores scroll + returns focus to the thumbnail that opened it
   }
   function lbOpen() { return $("#lightbox").classList.contains("open"); }
 
@@ -3288,21 +3356,33 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     function showSuggest() { var s = buildSuggest(); if (s && !searchEl.value) s.classList.add("show"); }
     function hideSuggest() { if (suggestEl) suggestEl.classList.remove("show"); }
 
+    // Re-rendering on every keystroke rebuilds the product grid plus up to 60 result
+    // tiles (each with its own <img>) and rewrites the URL — enough to make typing
+    // visibly lag on a phone. Coalesce the render; everything the typist sees
+    // immediately (their own text, the clear button) still happens synchronously.
+    var searchTimer = null;
+    function flushSearch() {
+      if (searchTimer) { clearTimeout(searchTimer); searchTimer = null; }
+      renderHome(true);
+    }
     searchEl.addEventListener("input", function (e) {
       state.query = e.target.value.trim();
       state.fileFacet = "";   // new query → reset the results facet
       syncClear();
       if (searchEl.value) hideSuggest(); else showSuggest();
-      renderHome(true);
+      if (searchTimer) clearTimeout(searchTimer);
+      searchTimer = setTimeout(function () { searchTimer = null; renderHome(true); }, 140);
     });
     searchEl.addEventListener("focus", function () { if (!searchEl.value) showSuggest(); });
     searchEl.addEventListener("blur", function () { setTimeout(hideSuggest, 120); });
     searchEl.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") { hideSuggest(); if (state.query) { searchEl.blur(); openTopResult(); } }
-      if (e.key === "Escape") { searchEl.value = ""; state.query = ""; state.fileFacet = ""; syncClear(); hideSuggest(); renderHome(true); }
+      // Enter must act on the CURRENT query, so flush any pending render first —
+      // openTopResult() reads _lastSearch, which only renderSearch() refreshes.
+      if (e.key === "Enter") { hideSuggest(); if (state.query) { flushSearch(); searchEl.blur(); openTopResult(); } }
+      if (e.key === "Escape") { searchEl.value = ""; state.query = ""; state.fileFacet = ""; syncClear(); hideSuggest(); flushSearch(); }
     });
     if (clearEl) clearEl.addEventListener("click", function () {
-      searchEl.value = ""; state.query = ""; state.fileFacet = ""; syncClear(); renderHome(true); searchEl.focus();
+      searchEl.value = ""; state.query = ""; state.fileFacet = ""; syncClear(); flushSearch(); searchEl.focus();
     });
     // "/" focuses search from anywhere (unless already typing in a field).
     document.addEventListener("keydown", function (e) {
@@ -3333,7 +3413,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
 
     // keyboard shortcuts
     document.addEventListener("keydown", function (e) {
-      lbTrap(e);
+      modalTrap(e);
       if (e.key === "Escape") {
         if ($("#vlb")) { closeVideoModal(); return; }
         if (lbOpen()) { closeLightbox(); return; }

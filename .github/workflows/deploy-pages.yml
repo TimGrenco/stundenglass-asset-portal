@@ -53,6 +53,22 @@ jobs:
           [ -f .nojekyll ] && cp .nojekyll _site/.nojekyll || touch _site/.nojekyll
           [ -f CNAME ] && cp CNAME _site/CNAME || true
 
+      # Stamp the cache-bust token. index.html ships "?v=dev"; the PUBLISHED copy
+      # gets the commit SHA, so every deploy serves fresh CSS/JS on a normal reload
+      # (no hard refresh) while repeat visits between deploys reuse the browser
+      # cache instead of re-downloading ~320 KB. Fails loudly if nothing matched,
+      # so a future rename can't silently leave "dev" live and break caching.
+      - name: Stamp asset version
+        run: |
+          V="${GITHUB_SHA:0:12}"
+          BEFORE=$(grep -c '?v=dev' _site/index.html || true)
+          if [ "$BEFORE" -eq 0 ]; then
+            echo "::error::No '?v=dev' tokens found in index.html — cache-bust stamping is broken."
+            exit 1
+          fi
+          sed -i "s/?v=dev/?v=$V/g" _site/index.html
+          echo "Stamped $BEFORE asset URL(s) with v=$V"
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
