@@ -16700,6 +16700,14 @@ window.PORTAL_SYNCED = {
       ],
       "Modül Accessories / Silo / Social Videos": [
         {
+          "name": "DTLA Modül Dry Herb Vape July short",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/71vcouhydr5zy9rkj35qn/DTLA-Mod-l-Dry-Herb-Vape-July-short.MP4?rlkey=41rbuwaba6gw4cchq99k3wpf9&dl=0",
+          "thumb": "assets/synced/accessories/9a9c447f9f49baac9e3a4dafdca448235ae6fd503b947a7445ca7d31629f1a9b.jpg",
+          "file": null
+        },
+        {
           "name": "Larry Cascade Silo Announcement",
           "type": "video",
           "format": "MP4",
