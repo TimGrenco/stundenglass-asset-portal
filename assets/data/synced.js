@@ -15820,6 +15820,22 @@ window.PORTAL_SYNCED = {
       ],
       "Modül Accessories / Modül Dry Herb Vape Tank / Social Videos": [
         {
+          "name": "DTLA Modül Dry Herb Vape July",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/ggvf6mu6le98t1gmjg9c2/DTLA-Mod-l-Dry-Herb-Vape-July.MP4?rlkey=5a21uqrhyrevelots55x9ypm0&dl=0",
+          "thumb": "assets/synced/accessories/9660e3829a90d73877b9a2392eceb6b0b2a9dc9e87b59c1d3f17be7751741d96.jpg",
+          "file": null
+        },
+        {
+          "name": "DTLA Modül Dry Herb Vape July short",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/3g5oomgqf4wmfabi30uhz/DTLA-Mod-l-Dry-Herb-Vape-July-short.MP4?rlkey=z2zpo4qr2spi2tvfj7c721ifk&dl=0",
+          "thumb": "assets/synced/accessories/9a9c447f9f49baac9e3a4dafdca448235ae6fd503b947a7445ca7d31629f1a9b.jpg",
+          "file": null
+        },
+        {
           "name": "Reels Modül Dry Herb Vape Tutorial",
           "type": "video",
           "format": "MP4",
