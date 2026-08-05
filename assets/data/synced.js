@@ -16711,8 +16711,8 @@ window.PORTAL_SYNCED = {
           "name": "Larry Cascade Silo Announcement",
           "type": "video",
           "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/ffit4xtn8h9prpyn3c29v/Larry-Cascade-Silo-Announcement.mp4?rlkey=5gox9xjifnjb4vtypsh5u4zic&dl=0",
-          "thumb": "assets/synced/accessories/70338470c09ba21fffea090813b96f25679123619bfcfc289556ec6d45c9c3ba.jpg",
+          "url": "https://www.dropbox.com/scl/fi/10zgpy5v0vgisps6oda09/Larry-Cascade-Silo-Announcement.mp4?rlkey=y6oucrv95j8t495quee84lnhi&dl=0",
+          "thumb": "assets/synced/accessories/93ab0cb36a83482a91b231cd87c271f3535976fe8224ebdb3875477a2390a2a0.jpg",
           "file": null
         },
         {
