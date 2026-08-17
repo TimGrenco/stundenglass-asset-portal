@@ -279,6 +279,14 @@ window.PORTAL_SYNCED = {
       ],
       "Black / Documents": [
         {
+          "name": "20260717_STDN_V3_Manual",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/6okmieuzgvtjsmnnoclhq/20260717_STDN_V3_Manual.pdf?rlkey=y0hhsu9hxlbspko5ok1ar3u9h&dl=0",
+          "thumb": "assets/synced/gravity-infusers/adf876c316011542082e418a6a7af227dcfb95f1a8ec7adb5c25027efca92c05.jpg",
+          "file": null
+        },
+        {
           "name": "Stundenglass-OneSheet-V3",
           "type": "pdf",
           "format": "PDF",
@@ -514,6 +522,14 @@ window.PORTAL_SYNCED = {
         }
       ],
       "Desert Rose / Documents": [
+        {
+          "name": "20260717_STDN_V3_Manual",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/hj35odpqxo8wn9f62giwy/20260717_STDN_V3_Manual.pdf?rlkey=98k4ioq6qj03n4jt57vkptibk&dl=0",
+          "thumb": "assets/synced/gravity-infusers/adf876c316011542082e418a6a7af227dcfb95f1a8ec7adb5c25027efca92c05.jpg",
+          "file": null
+        },
         {
           "name": "Stundenglass-OneSheet-V3",
           "type": "pdf",
@@ -817,6 +833,14 @@ window.PORTAL_SYNCED = {
       ],
       "Olive Green / Documents": [
         {
+          "name": "20260717_STDN_V3_Manual",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/v7rq0s60islswmickuqpe/20260717_STDN_V3_Manual.pdf?rlkey=svzqpe9mudy0v1y4gxqb9ia9t&dl=0",
+          "thumb": "assets/synced/gravity-infusers/adf876c316011542082e418a6a7af227dcfb95f1a8ec7adb5c25027efca92c05.jpg",
+          "file": null
+        },
+        {
           "name": "Stundenglass-OneSheet-V3",
           "type": "pdf",
           "format": "PDF",
@@ -1074,6 +1098,16 @@ window.PORTAL_SYNCED = {
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/4j86p7xmrfzlv1caqoh36/Stundenglass-V3-window-cling-mockup-copy.jpg?rlkey=2bnuw8r2f92b97sihap3zjp1j&dl=0",
           "thumb": "assets/synced/gravity-infusers/17b123c4badf396977f2b5c27152fd2313359b73cfb2e8b466a55c2886f3614a.jpg",
+          "file": null
+        }
+      ],
+      "Violet Purple / Documents": [
+        {
+          "name": "20260717_STDN_V3_Manual",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/m9agmx0dpfuj0oasx2jtv/20260717_STDN_V3_Manual.pdf?rlkey=cu5m8fjp2yu3ct72f4fgwqtoa&dl=0",
+          "thumb": "assets/synced/gravity-infusers/adf876c316011542082e418a6a7af227dcfb95f1a8ec7adb5c25027efca92c05.jpg",
           "file": null
         }
       ]
