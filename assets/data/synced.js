@@ -4145,6 +4145,16 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "Cookies / Documents": [
+        {
+          "name": "2023-04-17_SG_Manual--OUTLINED",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/wp9nqskag5ja4p963yarq/2023-04-17_SG_Manual-OUTLINED.pdf?rlkey=odph1zovttizwlr28nvizc45q&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7ec897d06a50bb96580294e994266aaf1d874cdc2720a1f630c3352a7c42f42e.jpg",
+          "file": null
+        }
+      ],
       "Dr Greenthumbs / Product Photos": [
         {
           "name": "DGT web upstems-large",
@@ -4457,6 +4467,16 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "Dr Greenthumbs / Documents": [
+        {
+          "name": "2023-04-17_SG_Manual--OUTLINED",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/ugylt2h82apuj93o7m5y7/2023-04-17_SG_Manual-OUTLINED.pdf?rlkey=4o16v6v0t8p0s9simbh058idb&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7ec897d06a50bb96580294e994266aaf1d874cdc2720a1f630c3352a7c42f42e.jpg",
+          "file": null
+        }
+      ],
       "Grateful Dead / Legacy Patchwork / Product Photos": [
         {
           "name": "GD_LP_web_StickerSheet_a",
@@ -4684,6 +4704,16 @@ window.PORTAL_SYNCED = {
           "format": "MOV",
           "url": "https://www.dropbox.com/scl/fi/cljdh0954k01uwnvxm5g6/Larry-Labubu-GD-SG.mov?rlkey=kdmw9sjujefacz0joya7k73de&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/1f6da0f106c4bee1b9f93e3b1d54fe1113f4147107e0ea571b7915988630ddaa.jpg",
+          "file": null
+        }
+      ],
+      "Grateful Dead / Legacy Patchwork / Documents": [
+        {
+          "name": "2023-04-17_SG_Manual--OUTLINED",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/qnxiy42q2tf1huubktz7o/2023-04-17_SG_Manual-OUTLINED.pdf?rlkey=rsnn9i7wjppz01leawilnjgim&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7ec897d06a50bb96580294e994266aaf1d874cdc2720a1f630c3352a7c42f42e.jpg",
           "file": null
         }
       ],
@@ -5110,6 +5140,16 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/lvck8yk3ony60ai8tn3yv/Wide-GD-SG-Single-Smoke.mp4?rlkey=e1qcdnoak6njk5w8chg708l9e&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/f1941417112c4007eef1cabad862778d6d68df8c59d18aef16f79ce0c670bd45.jpg",
+          "file": null
+        }
+      ],
+      "Grateful Dead / Stealy Lock Up / Documents": [
+        {
+          "name": "2023-04-17_SG_Manual--OUTLINED",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/sfwgaor1wmf1mlgiiflm5/2023-04-17_SG_Manual-OUTLINED.pdf?rlkey=le214u2nfno7f67tzhwuy9f31&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7ec897d06a50bb96580294e994266aaf1d874cdc2720a1f630c3352a7c42f42e.jpg",
           "file": null
         }
       ],
@@ -5706,6 +5746,16 @@ window.PORTAL_SYNCED = {
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/gx4yepy4c80fh8n8418b9/Stundenglass-Wiz-Mockup.jpg?rlkey=hjnr96djnfutvm0j31rywbks2&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/83c04c320835b01330f1db488e6f93254269501c2859f63b72be545fd8e15f5b.jpg",
+          "file": null
+        }
+      ],
+      "Khalifa / Documents": [
+        {
+          "name": "2023-04-17_SG_Manual--OUTLINED",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/dhfvngk8hzdpoo3q1pz3s/2023-04-17_SG_Manual-OUTLINED.pdf?rlkey=vy82lwagj8tpcpmmpuvpamzhx&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7ec897d06a50bb96580294e994266aaf1d874cdc2720a1f630c3352a7c42f42e.jpg",
           "file": null
         }
       ],
@@ -6365,6 +6415,16 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "Pink / Documents": [
+        {
+          "name": "2023-04-17_SG_Manual--OUTLINED",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/wggqqycpv7dei2cavjb2v/2023-04-17_SG_Manual-OUTLINED.pdf?rlkey=8b2mvvfr2x8nl0tyyioy592hh&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7ec897d06a50bb96580294e994266aaf1d874cdc2720a1f630c3352a7c42f42e.jpg",
+          "file": null
+        }
+      ],
       "Silver / Product Photos": [
         {
           "name": "Kompact_TwoGlobes",
@@ -6610,6 +6670,16 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/hxfehrks9anfuig2unqqw/Silver-Hookah-Encino.mp4?rlkey=curo1s7ccrpiz0gf1tqtuyzeq&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/56b8d9900044317555af276068e6364b5fa80f5075758c74ae8b4e308870106a.jpg",
+          "file": null
+        }
+      ],
+      "Silver / Documents": [
+        {
+          "name": "2023-04-17_SG_Manual--OUTLINED",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/21ho6jpy5w8dm81m4sur0/2023-04-17_SG_Manual-OUTLINED.pdf?rlkey=wk8b3r6n393iqxhcmopvvbhmh&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7ec897d06a50bb96580294e994266aaf1d874cdc2720a1f630c3352a7c42f42e.jpg",
           "file": null
         }
       ],
@@ -6964,6 +7034,16 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/oow1yl6s5ox92wf1fbp9n/TG-Hookah-Michelle.mp4?rlkey=v1eucslqzf3g02hc14s6zejlu&dl=0",
           "thumb": "assets/synced/classic-gravity-infusers/41ac095e859d9ac9b6b9bdbab44a3179d288bdbf6b9662181715fce9b2ad6e0b.jpg",
+          "file": null
+        }
+      ],
+      "Taylor Gang / Documents": [
+        {
+          "name": "2023-04-17_SG_Manual--OUTLINED",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/0lx2wymk1u39lfqxy31mm/2023-04-17_SG_Manual-OUTLINED.pdf?rlkey=qg3l2b26j50dhqgou3cnk5k64&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7ec897d06a50bb96580294e994266aaf1d874cdc2720a1f630c3352a7c42f42e.jpg",
           "file": null
         }
       ],
@@ -7440,6 +7520,16 @@ window.PORTAL_SYNCED = {
           "thumb": "assets/synced/classic-gravity-infusers/dace55ab4b63e3f6545764b90a43ebebce0d8e46851f7896caf3956cb0f63720.jpg",
           "file": null
         }
+      ],
+      "Tyson 2.0 / Documents": [
+        {
+          "name": "2023-04-17_SG_Manual--OUTLINED",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/w35eeb4647dflrn7c1gbs/2023-04-17_SG_Manual-OUTLINED.pdf?rlkey=13jo2hyaxe9xqz5copes39dss&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7ec897d06a50bb96580294e994266aaf1d874cdc2720a1f630c3352a7c42f42e.jpg",
+          "file": null
+        }
       ]
     },
     "dropbox": "https://www.dropbox.com/scl/fo/zg2lt1b24hyg51akxtqyr/h?rlkey=umf2vggz3vro82dduczc419q1&dl=1",
@@ -7454,22 +7544,26 @@ window.PORTAL_SYNCED = {
       "Cookies / Lifestyle Photos": "https://www.dropbox.com/scl/fo/8kdv234r6ahh03koioitr/AIdKt0EueqTSCDR374HZMCc?rlkey=5ys7gwukzhav8jhq3lnv92v6n&dl=1",
       "Cookies / Social Videos": "https://www.dropbox.com/scl/fo/1h5q723dj0fsw5r1kohwq/AE4-sVBKPKdw6lnIX_iqPyg?rlkey=nwhfrkvf0xu1e0zpw4kqfwzeo&dl=1",
       "Cookies / TV Screen Videos": "https://www.dropbox.com/scl/fo/41a8afuy4jki8w1ttf4bt/AJZijfjk64X1LQxXSbDcsUo?rlkey=e11wagr0deajwgitpg596wn39&dl=1",
+      "Cookies / Documents": "https://www.dropbox.com/scl/fo/sozd544msc5u71xewr7xp/AMS1BPf-DUTmv_L3RPRjeFE?rlkey=bl18dt89w6fn8hbhwphnguw28&dl=1",
       "Dr Greenthumbs": "https://www.dropbox.com/scl/fo/uds8hp7qu9gor9ya0fcx0/AKLZE1JQEP4cRa1pXoy1lBI?rlkey=l5ymupvs3t2xcmn9nkqmbejkj&dl=1",
       "Dr Greenthumbs / Product Photos": "https://www.dropbox.com/scl/fo/22z1adti6ngb7s2rifnlb/AMTw7JFEm5OxP0diV4SYrRk?rlkey=so2yung9vyy74aptp9w6ur4y1&dl=1",
       "Dr Greenthumbs / Lifestyle Photos": "https://www.dropbox.com/scl/fo/37mhwkqxd9hrx98pzp7ii/AEncCpRa3Dp2wB_gEYn_FpA?rlkey=dcsuj9mturkvin5l4wnt9vk3i&dl=1",
       "Dr Greenthumbs / Social Videos": "https://www.dropbox.com/scl/fo/a0eg6nupnwkutgn7monan/AEQvPGinjx3SAh-gL49VjbE?rlkey=4n8y912a0u5xrqau3xnic6xvb&dl=1",
       "Dr Greenthumbs / TV Screen Videos": "https://www.dropbox.com/scl/fo/8s1hizfxqzff1igd0n8tf/ANKjG4XEQirWXtD1PEiaAEk?rlkey=j51njg12hcy9zwgxtigp7fvf9&dl=1",
+      "Dr Greenthumbs / Documents": "https://www.dropbox.com/scl/fo/jgtskxbzqcgw5bzfnz7mu/ALU2bZHbLyT6zcRW1nlM5G8?rlkey=ckurjgvdq0c4xn8kkgvgyookr&dl=1",
       "Grateful Dead": "https://www.dropbox.com/scl/fo/x07xz5745djmhcskiu8yo/AF4-1Oxnb5560YbsOMwmlCs?rlkey=j7ux0gty7242h0yghhl20g95c&dl=1",
       "Grateful Dead / Legacy Patchwork": "https://www.dropbox.com/scl/fo/7lneeafhcvvvsqusjbwob/AOxQAfd_AqQVarBIYzx-x2M?rlkey=vca0s8xr0ng64d2fiukklwdo4&dl=1",
       "Grateful Dead / Legacy Patchwork / Product Photos": "https://www.dropbox.com/scl/fo/k3uzra0wb5v2imuda61oh/AExSDRIkBSTFy6NX-p0YyzM?rlkey=8ebtg1bzww7ywqatuhsz3pnj4&dl=1",
       "Grateful Dead / Legacy Patchwork / Lifestyle Photos": "https://www.dropbox.com/scl/fo/9cqbgf2uc992zh1olkk4d/AEMXgiqazawNhjegdYD7oRI?rlkey=drx1d96yuyjt8w6y5xg901qam&dl=1",
       "Grateful Dead / Legacy Patchwork / Social Videos": "https://www.dropbox.com/scl/fo/trx0yjkc99ktoqkv28enu/ADuEtEOnjOEFLidanDnOANs?rlkey=imo92gxtbvdbp8vymexq5ogpt&dl=1",
+      "Grateful Dead / Legacy Patchwork / Documents": "https://www.dropbox.com/scl/fo/8ywxrjoh2nb4hx68pfyns/AD6Fx8nya4WDzny8nJCIxDY?rlkey=p7m16cna7g9hidxnr418pypby&dl=1",
       "Grateful Dead / Legacy Patchwork / TV Screen Video": "https://www.dropbox.com/scl/fo/jmv5mnt4fqtv26um3ejrq/ADnQN2_i_TNThxec2yvr8O8?rlkey=1wujcul38h3xhmzm0yyjg3wml&dl=1",
       "Grateful Dead / Stealy Lock Up": "https://www.dropbox.com/scl/fo/1puxls1x0j4a1pgojgwn0/AAICo__XFvs9Ej8RMbE9r6k?rlkey=v90rgnujqvz8yqq5u2z6cj2tb&dl=1",
       "Grateful Dead / Stealy Lock Up / Product Photos": "https://www.dropbox.com/scl/fo/ljnfjkj20p6r0t47xuxzw/AI0sUzU1jbEsK-2AuXvhuzI?rlkey=q9gxquhwlb0n2a4fr1g25f2pm&dl=1",
       "Grateful Dead / Stealy Lock Up / Lifestyle Photos": "https://www.dropbox.com/scl/fo/mmrn86g7vjp78y6qwmwm0/AA6J2OaQxCyKQfDrzbuM9fc?rlkey=islifjpt0ug3ohy2fhdxafosa&dl=1",
       "Grateful Dead / Stealy Lock Up / Social Videos": "https://www.dropbox.com/scl/fo/doupqdccl89nxqnx6etz4/AGlyPfAmz2if1iFyy7KA9QU?rlkey=skyyxdwffh7ik2pma2flij8q8&dl=1",
       "Grateful Dead / Stealy Lock Up / TV Screen Videos": "https://www.dropbox.com/scl/fo/f5825q3bqzipwjdnnolf1/AEXMKumYXS_FGWPEYg6iFUs?rlkey=gwesp80hpv4akqji24pwdnddy&dl=1",
+      "Grateful Dead / Stealy Lock Up / Documents": "https://www.dropbox.com/scl/fo/7ppo9ga8w4aui4ki4gspn/AN0iEVntJdEtqFq5mxj86Kw?rlkey=cet9ebxmhraj4y084yegw65bu&dl=1",
       "Group Photos": "https://www.dropbox.com/scl/fo/o5l5453b62l9snx9umkw6/AGUzJbl_KUeEx07BUUZ2YKo?rlkey=1745s1m600mty2kxcxjx585o8&dl=1",
       "Khalifa": "https://www.dropbox.com/scl/fo/yzg4c5n9b5zqe4dei6jzg/AEXb2zBuA75S0Js9nMH4Lp8?rlkey=sq2zk9x2z3jbohp7u80x6yf82&dl=1",
       "Khalifa / Product Photos": "https://www.dropbox.com/scl/fo/1ckjzdb2irhzxn6nsodtq/AAGfq2R62K_hX6tdy_PHCqw?rlkey=5oudtu4f0xiymi0dui9oa4o2g&dl=1",
@@ -7477,28 +7571,33 @@ window.PORTAL_SYNCED = {
       "Khalifa / Logos": "https://www.dropbox.com/scl/fo/l7bmyn7lyzwximnkjm0pi/AIaF6y9DscLLKPDGQsp2cxI?rlkey=carxsq3fuidth7i9uiu0tss2h&dl=1",
       "Khalifa / Social Videos": "https://www.dropbox.com/scl/fo/5hi37c75fs5cmpc3a9hqf/ALnu3QES7ipguR6ntLp6z-c?rlkey=57pphc87x5fgc5im8ovd0bq9x&dl=1",
       "Khalifa / In-Store Marketing": "https://www.dropbox.com/scl/fo/8lqluglp0ps4krb5iiio1/ALZDUznsLe5IriRnTnA2d6E?rlkey=j6cefn702318223b7334ir3sw&dl=1",
+      "Khalifa / Documents": "https://www.dropbox.com/scl/fo/t747ep5gnxfuecmigb4oi/AE7pJScinGS_TCvE0D3S2BU?rlkey=e9825dlwqvynfz0jzd9a95fae&dl=1",
       "Pink": "https://www.dropbox.com/scl/fo/b2lvxkkr2kwd18dc7rnwn/AL9KDGUArVkmEzL2eg3AKew?rlkey=jv7d3hdpx1795v5rflayj4jhk&dl=1",
       "Pink / Product Photos": "https://www.dropbox.com/scl/fo/7emdytmlf4szw2b0nlqnn/AIyD9-OVu5K3_M0z8BBOcns?rlkey=m74lwz16u95un0s6b6owtoxeb&dl=1",
       "Pink / Lifestyle Photos": "https://www.dropbox.com/scl/fo/9topbi6fyxqiopbu2c6na/AHYeNY3wDEfE01q2gL3x3ZU?rlkey=i6qhs4nfqozsfvb4lomym1ywa&dl=1",
       "Pink / Social Videos": "https://www.dropbox.com/scl/fo/dc62jl42s4yduppjuv14u/AKvnhRDEWWwKE4uEWIJl0Bc?rlkey=rlij5l41kj3582i13h24toa1c&dl=1",
       "Pink / TV Screen Videos": "https://www.dropbox.com/scl/fo/n65nj8wtnv7t2p5ellvkj/AMYImsZAUcOZ1TPOQ9hsZIc?rlkey=rihyyu62epbgbm5xpsrm5auwg&dl=1",
+      "Pink / Documents": "https://www.dropbox.com/scl/fo/k1raxibt0kgapy9eguzqg/AFeoB7gqX1gusYSQkbbE9R4?rlkey=vveytuqsls2g333aksafqtvk0&dl=1",
       "Silver": "https://www.dropbox.com/scl/fo/2oho6mcibb7p5qpj7qrdd/APIcYfWGy98fFmb85GyxlvI?rlkey=ujfvd2vmqf8o4epmc21bk8sfr&dl=1",
       "Silver / Product Photos": "https://www.dropbox.com/scl/fo/sp8j7i0po3tdr9y8t2q7v/AFwtL7DlEodzldLtwHvJEUA?rlkey=5467qk9xx65bipohrvbetnmc6&dl=1",
       "Silver / Lifestyle Photos": "https://www.dropbox.com/scl/fo/zm6b8vzndeoeptk68ksfz/AKSLk1YO3327nS1SpmLNQ1E?rlkey=cqvxm7tpi7wcxh5hxog2n6iyr&dl=1",
       "Silver / Social Videos": "https://www.dropbox.com/scl/fo/wl7va4vw7ngy7d9vrnfzp/AEXWZu8Sc8fxDu1YzsDkVmE?rlkey=4rougw5vevc1tntcralsedazg&dl=1",
       "Silver / TV Screen Videos": "https://www.dropbox.com/scl/fo/a38ji3kjlos794khy0lbr/AIutjrIRDh883MIDSvBKnw4?rlkey=urnvlq8pse7rqxc2irn5xv983&dl=1",
+      "Silver / Documents": "https://www.dropbox.com/scl/fo/8dcis8lhfq169y2rbw45n/APpjy4DOeoY2TSJAM-TPtTQ?rlkey=uv9qzwpbw3ibin6r4sb1sqgeo&dl=1",
       "Taylor Gang": "https://www.dropbox.com/scl/fo/sn9l0tlodwvtzy4ynq9sn/ADAHByu2Ed4nBl9ZgsUTGlg?rlkey=y7r5tlg0en00y9echpj5t0alp&dl=1",
       "Taylor Gang / Product Photos": "https://www.dropbox.com/scl/fo/a1yl8o9gqls7ggtk5lfbp/AH-EgiP1q_j5-k-GMfyNMc4?rlkey=993e300jh9gx3m2g97xc0zcis&dl=1",
       "Taylor Gang / Product Photos / OLD": "https://www.dropbox.com/scl/fo/pjcs5bde236apzv0bw32o/AAbOMzTX_Hag4IGpmJtEhgo?rlkey=bnebw2r75urxczdwlnmz1eeja&dl=1",
       "Taylor Gang / Lifestyle Photos": "https://www.dropbox.com/scl/fo/0x1zcxcdiyxjixf9zhh8w/AOjoxvzjj9iFxm3SQIsLsP8?rlkey=mzbv04i7gltqfk8zsyjtfgq7n&dl=1",
       "Taylor Gang / Social Videos": "https://www.dropbox.com/scl/fo/nyfjg8u58hzu9mzbhcmkq/AK5k7YRQXAA_2b2e6o1Ko3k?rlkey=ccnad9eg7ij3bo6gvdgh9lfhr&dl=1",
       "Taylor Gang / TV Screen Videos": "https://www.dropbox.com/scl/fo/564nzw5f2w7bvf92fwpli/AE8sif4ch9GAQt3kcV6u4A8?rlkey=sng9gfp4mtcy9ug237anaulmm&dl=1",
+      "Taylor Gang / Documents": "https://www.dropbox.com/scl/fo/f2p09b6c9jzcw2zp2tjsy/ANhfqXsQQ0a884NrPEED25g?rlkey=qggro6j206vermz0ly3wx9mhq&dl=1",
       "Tyson 2.0": "https://www.dropbox.com/scl/fo/a0zrk3zjs6feb390zjwtp/AKvSRGXTM-vmU6ENZfLJSWk?rlkey=boud80njh8uqdpo09elyosnj6&dl=1",
       "Tyson 2.0 / Product Photos": "https://www.dropbox.com/scl/fo/5rnd84uwec91itc1p5u9q/AH7yLRQADgra4ePFIclQV2Y?rlkey=g62oeyql6m2iqrhdxhu2dol3i&dl=1",
       "Tyson 2.0 / Lifestyle Photos": "https://www.dropbox.com/scl/fo/3an00qnm6m6mtpthqvqag/AJXwB7Q2NWzoiXdTRKL_-_E?rlkey=srz06kxmxn0cavsrqhd16iaru&dl=1",
       "Tyson 2.0 / Logos": "https://www.dropbox.com/scl/fo/6zyhuvq32oxk4z3s1jd3n/AKelg5HjF6hsbGSnACDcIBY?rlkey=hr6j3hgcmog8tfyyc0wuxr9k5&dl=1",
       "Tyson 2.0 / Social Videos": "https://www.dropbox.com/scl/fo/48j5dhjcrowprg4zvjvqk/AKI5sZa0KjJpwq6umgf7eso?rlkey=crxbw88x74w5c9zxmqjr9nv8g&dl=1",
-      "Tyson 2.0 / TV Screen Videos": "https://www.dropbox.com/scl/fo/4prr01v0nhyry1d0l7xu2/ABiSLCRuOdb_2LL4k9gjtXA?rlkey=a9ktf9xwauqc5awmeoyc570fk&dl=1"
+      "Tyson 2.0 / TV Screen Videos": "https://www.dropbox.com/scl/fo/4prr01v0nhyry1d0l7xu2/ABiSLCRuOdb_2LL4k9gjtXA?rlkey=a9ktf9xwauqc5awmeoyc570fk&dl=1",
+      "Tyson 2.0 / Documents": "https://www.dropbox.com/scl/fo/w3tb3k0wz7k0zukluh9ae/APL2PRmSRlzgTcuYTTE4bS4?rlkey=ew5cm0i5j0i0uuy0srd2d7t2f&dl=1"
     }
   },
   "Modül": {
