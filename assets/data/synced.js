@@ -3793,6 +3793,14 @@ window.PORTAL_SYNCED = {
       ],
       "Documents": [
         {
+          "name": "2023-04-17_SG_Manual--OUTLINED",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/bmsn8vdscy5cgb4ed0vj4/2023-04-17_SG_Manual-OUTLINED.pdf?rlkey=xy4rmzlr11agxj4dltahzzhwd&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7ec897d06a50bb96580294e994266aaf1d874cdc2720a1f630c3352a7c42f42e.jpg",
+          "file": null
+        },
+        {
           "name": "stundenglass_one-sheet",
           "type": "pdf",
           "format": "PDF",
