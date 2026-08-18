@@ -29,6 +29,14 @@ permissions:
 # Don't cancel an in-progress deploy (GitHub's recommended setting) — cancelling
 # mid-deploy can itself fail. Overlapping runs queue; intermediate queued runs are
 # skipped, only the latest deploys.
+#
+# NOTE (2026-08-18): this pairing is why the site silently froze for 12 days. A
+# GitHub Actions incident on 2026-08-06 left run #570 wedged in "waiting"; because
+# nothing cancels an in-progress run and the job had no timeout, it held this
+# concurrency group indefinitely and every later run queued behind it and was
+# skipped. Syncs kept committing, nothing ever published, and no job failed — so
+# no failure email either. `timeout-minutes` below bounds that: a wedged run now
+# dies on its own and the next one gets the group.
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -36,6 +44,8 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # A normal deploy takes ~1 minute. This is a deadlock breaker, not a budget.
+    timeout-minutes: 20
     environment:
       name: github-pages
       url: ${{ steps.deploy1.outputs.page_url || steps.deploy2.outputs.page_url || steps.deployment.outputs.page_url }}
