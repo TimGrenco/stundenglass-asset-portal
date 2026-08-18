@@ -43,6 +43,40 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "Documents": [
+        {
+          "name": "Stundenglass V3 - One Sheet",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/nku1eyh50h4a2chx97y1p/Stundenglass-V3-One-Sheet.pdf?rlkey=1ck4kwugt1qogzi3y9ko80icd&dl=0",
+          "thumb": "assets/synced/gravity-infusers/4cd183dfcdc00d03f250da6310ad31580d476fb75efa0f97526433952911e1ce.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass V3 - One Sheet - CAD",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/3nn6a58oo8v969qtjkuuk/Stundenglass-V3-One-Sheet-CAD.pdf?rlkey=52ds2e4c8n22gmhfe646vpm67&dl=0",
+          "thumb": "assets/synced/gravity-infusers/e81c3df19860f208fec1d7bbac06549703412bf1e2e7f52c820dfccffa45e7cc.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass V3 - One Sheet - EU",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/ivq7zs3qkowybki891iiu/Stundenglass-V3-One-Sheet-EU.pdf?rlkey=fpq981340z7dd1ujwij5c0526&dl=0",
+          "thumb": "assets/synced/gravity-infusers/fe90bff5d397ac8d66e3b17f9cc30199c247c1588f6c5403ed7f4674b5c2b811.jpg",
+          "file": null
+        },
+        {
+          "name": "Stundenglass V3 - One Sheet - UK",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/r6e6fbwh7y5xfkm1hkmux/Stundenglass-V3-One-Sheet-UK.pdf?rlkey=fmujh84jk1yijabmgan1xwbcc&dl=0",
+          "thumb": "assets/synced/gravity-infusers/1e22b85c4cefab0fa78f0dde6ee4d5e227891e606953531f3732e6d77dacb8be.jpg",
+          "file": null
+        }
+      ],
       "Black / Product Photos": [
         {
           "name": "SG_thumb_01",
@@ -1115,6 +1149,7 @@ window.PORTAL_SYNCED = {
     "dropbox": "https://www.dropbox.com/scl/fo/3j4un063pxgcbtl7yqq5z/ACmVjEjB25HyZTAucWfMCLk?rlkey=b620zqgmr0hxb5lbtazvd4qfk&dl=1",
     "folderLinks": {
       "In-Store Marketing": "https://www.dropbox.com/scl/fo/chudip3cj6y6rps1qk8so/AFoA-gXMHj7kCennbnN_3fI?rlkey=85r37dkdiykmb7auiyku5mel6&dl=1",
+      "Documents": "https://www.dropbox.com/scl/fo/ajw62u4ledorxc85h414b/AN91GJQccawDXwRO3pTr1ms?rlkey=bf704lamqqves9nfatrp1sdnt&dl=1",
       "Black": "https://www.dropbox.com/scl/fo/av79uo8aimw4f1vlgdlw6/AFPcKTpF8JENc3UrmOy1UIg?rlkey=yn5jtu9qsf5bumjg7c03i9sxs&dl=1",
       "Black / Product Photos": "https://www.dropbox.com/scl/fo/hclu0j0jk5uk5n4hfgvfa/AMn449WS9HEULBVvL8YTjks?rlkey=jzcn6rnifmnmx73qwbuc7ey9j&dl=1",
       "Black / Lifestyle Photos": "https://www.dropbox.com/scl/fo/uvoofdbcozdvgz5kromnh/AOhObnb5kT_Lz9wZkRwQiZ4?rlkey=rq4ah3g5npboml8du7gkzxmng&dl=1",
