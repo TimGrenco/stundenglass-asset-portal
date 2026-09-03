@@ -121,6 +121,18 @@
     var p = pack();
     return (p && p.ui && p.ui[s]) || s;
   }
+  // A facet name dropped mid-sentence reads lower-case in every language EXCEPT
+  // German, where every noun keeps its capital.
+  function facetInSentence(name) {
+    return state.lang === "de" ? name : String(name).toLowerCase();
+  }
+  // Count strings. English inflects on n !== 1, but French takes the SINGULAR for
+  // 0 as well ("0 résultat", not "0 résultats"), so a bare n === 1 ternary is wrong
+  // there. One helper keeps every counter in the app consistent.
+  function plural(n, one, many) {
+    var useOne = n === 1 || (n === 0 && state.lang === "fr");
+    return tr(useOne ? one : many).replace("{n}", n);
+  }
   // Localized training course for a product (falls back to English).
   function trainingOf(p) {
     var en = (window.PORTAL_TRAINING || {})[p.name];
@@ -488,6 +500,10 @@
     // fires hashchange, not the close button — without this the full-screen viewer
     // stays on top of the re-rendered page with body scroll still locked.
     if (parts[0] !== "catalog" && document.getElementById("catlb")) teardownCatalog();
+    // Same for the other two overlays: they are dismissed by their own close
+    // button or Escape, neither of which fires on a route change.
+    if (document.getElementById("vlb")) closeVideoModal();
+    if (lbOpen()) closeLightbox();
     if (parts[0] === "style" && BRANDS[parts[1]]) { openStyleGuide(parts[1]); return; }
     if (parts[0] === "additional" && BRANDS[parts[1]]) { openAdditional(parts[1]); return; }
     if (parts[0] === "materials") { openMaterials(); return; }
@@ -843,7 +859,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   }
   function coverHTML(p, small) {
     if (p.cover) {
-      var safe = p.name.replace(/"/g, "");
+      var safe = tr(p.name).replace(/"/g, "");
       return '<img src="' + coverSrc(p, small) + '" alt="' + safe + '" loading="lazy" decoding="async" onerror="window.__fallback(this,\'' + safe + '\')"/>';
     }
     if (p.isLogo) return '<div class="logo-tile"><span>' + BRANDS[p.brand].wordmark + "</span></div>";
@@ -1037,7 +1053,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         "</div>" +
         '<div class="card-name">' + tr(p.name) + "</div>" +
         (p.label ? '<div class="card-label">' + tr(p.label) + "</div>" : "") +
-        '<div class="card-sub">' + (p.isLogo ? tr("{n} logo files").replace("{n}", p.total) : tr(p.total === 1 ? "{n} asset" : "{n} assets").replace("{n}", p.total) + (p.label ? "" : " · " + tr(p.category))) + "</div>" +
+        '<div class="card-sub">' + (p.isLogo ? tr("{n} logo files").replace("{n}", p.total) : plural(p.total, "{n} asset", "{n} assets") + (p.label ? "" : " · " + tr(p.category))) + "</div>" +
       "</article>"
     );
   }
@@ -1047,7 +1063,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         '<div class="row-thumb">' + coverHTML(p, true) + "</div>" +
         '<div class="row-main">' +
           '<div class="row-name">' + tr(p.name) + (p.newBadge && !p.isLogo ? ' <span class="row-new' + (p.newBadge ? " row-new-" + p.newBadge : "") + '">' + tr("New") + '</span>' : "") + (p.label ? ' <span class="row-label">' + tr(p.label) + "</span>" : "") + "</div>" +
-          '<div class="row-sub">' + (p.isLogo ? tr("{n} logo files").replace("{n}", p.total) : tr(p.total === 1 ? "{n} asset" : "{n} assets").replace("{n}", p.total) + (p.label ? "" : " · " + tr(p.category))) + "</div>" +
+          '<div class="row-sub">' + (p.isLogo ? tr("{n} logo files").replace("{n}", p.total) : plural(p.total, "{n} asset", "{n} assets") + (p.label ? "" : " · " + tr(p.category))) + "</div>" +
         "</div>" +
         '<button class="row-dl" data-act="download" title="' + tr("Download all") + '">' + icon("download") + "</button>" +
       "</article>"
@@ -1112,7 +1128,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     if (state.sort === "az") current = current.slice().sort(byName);
 
     var browseCount = $("#browse-count");
-    var countLabel = tr(current.length === 1 ? "{n} product" : "{n} products").replace("{n}", current.length);
+    var countLabel = plural(current.length, "{n} product", "{n} products");
     if (browseCount) browseCount.textContent = countLabel;
     $("#count-badge").textContent = countLabel;
 
@@ -1154,7 +1170,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     _lastSearch = { prods: prods, fileRes: fileRes };   // Enter → open the top hit
 
     $("#all-title").textContent = tr("Search results");
-    var label = tr(total === 1 ? "{n} result" : "{n} results").replace("{n}", total);
+    var label = plural(total, "{n} result", "{n} results");
     var bc = $("#browse-count"); if (bc) bc.textContent = label;
     $("#count-badge").textContent = label;
     renderActiveFilters();
@@ -1198,9 +1214,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var more = fileRes.shownTotal > fileRes.items.length
       ? '<p class="sf-more">' + tr("Showing the top {n} of {total} {kind} files — add a word to narrow it down.")
           .replace("{n}", fileRes.items.length).replace("{total}", fileRes.shownTotal)
-          // No .toLowerCase(): the packs already supply display-cased facet names, and
-          // lower-casing is only ever correct for English — German nouns must stay capitalised.
-          .replace("{kind}", fileRes.facet ? tr(fileRes.facet) : tr("matching")) + "</p>"
+          // The packs supply display-cased facet names. Mid-sentence they read lower-case
+          // in every language EXCEPT German, where every noun keeps its capital.
+          .replace("{kind}", fileRes.facet ? facetInSentence(tr(fileRes.facet)) : tr("matching")) + "</p>"
       : "";
     sf.innerHTML =
       '<div class="section-head"><h2>' + tr("Matching files &amp; assets") + '</h2><span class="badge">' + fileRes.total + "</span></div>" +
@@ -1226,7 +1242,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var direct = !!f.file;
     var dl = isExtVideo(f) ? "" : (direct ? f.file : (f.url || ""));
     var dlName = direct
-      ? String(r.label).replace(/[^\w.-]+/g, "_") + (f.format && !/\.[a-z0-9]+$/i.test(r.label) ? "." + String(f.format).toLowerCase() : "")
+      ? safeFileName(r.label) + (f.format && !/\.[a-z0-9]+$/i.test(r.label) ? "." + String(f.format).toLowerCase() : "")
       : safe;
     // Product-less results (catalogs) route by hash instead of product + folder.
     var pName = r.product
@@ -1343,7 +1359,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           '<div class="logo-card-name">' + tr("Retail Marketing Materials") + '</div>' +
           '<p class="logo-card-note">' + tr("Retail displays, posters, shelf talkers and other in-store materials for {brand} — order what you need for your shop.").replace("{brand}", bname) + "</p>" +
           '<div class="logo-card-actions">' + orderCta +
-            '<span class="instore-count">' + tr(mats.length === 1 ? "{n} material available" : "{n} materials available").replace("{n}", mats.length) + "</span>" +
+            '<span class="instore-count">' + plural(mats.length, "{n} material available", "{n} materials available") + "</span>" +
           "</div>" +
         "</div>" +
         '<div class="logo-preview' + (featured ? " single" : "") + '">' + tiles + "</div>" +
@@ -1374,7 +1390,16 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     document.head.appendChild(s);
   }
   function catalogBySlug(s) { return (window.PORTAL_CATALOGS || []).filter(function (x) { return x.slug === s; })[0]; }
-  function catalogFileName(c) { return (c.title + (c.region ? " - " + c.region : "")).replace(/[^\w.-]+/g, "_") + ".pdf"; }
+  // Download filenames. The old /[^\w.-]+/ was ASCII-only, so every accented
+  // brand character was replaced with an underscore and the catalog saved as
+  // "St_ndenglass_…". Strip only what a filesystem actually rejects.
+  function safeFileName(s) {
+    return String(s == null ? "" : s)
+      .replace(/[\/\\?%*:|"<>\x00-\x1f]+/g, "_")   // illegal on Windows/macOS
+      .replace(/\s+/g, "_")
+      .replace(/^[._]+|[._]+$/g, "") || "download";
+  }
+  function catalogFileName(c) { return safeFileName(c.title + (c.region ? " - " + c.region : "")) + ".pdf"; }
   // Shared links must carry the sender's language: the recipient has no ?lang= and no
   // localStorage, so without this they land on the English portal.
   function langQuery() { return state.lang !== "en" ? "?lang=" + state.lang : ""; }
@@ -1434,7 +1459,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     if (!list.length) { sec.style.display = "none"; box.innerHTML = ""; return; }
     sec.style.display = "";
     var cnt = $("#catalog-count");
-    if (cnt) cnt.textContent = tr(list.length === 1 ? "{n} document" : "{n} documents").replace("{n}", list.length);
+    if (cnt) cnt.textContent = plural(list.length, "{n} document", "{n} documents");
     box.innerHTML = '<div class="cat-grid">' + catalogFamilies().map(catalogCard).join("") + "</div>";
 
     $$(".cat-card", box).forEach(function (card) {
@@ -1630,7 +1655,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     ad.innerHTML =
       '<button class="back" id="add-back">' + icon("arrowLeft") + " " + tr("Back to library") + "</button>" +
       '<div class="section-head"><h2>' + tr("Additional {brand} Products").replace("{brand}", BRANDS[bk].name) + '</h2><span class="badge">' +
-        tr(legacy.length === 1 ? "{n} product" : "{n} products").replace("{n}", legacy.length) + "</span></div>" +
+        plural(legacy.length, "{n} product", "{n} products") + "</span></div>" +
       '<p class="additional-note">' + tr("Products we no longer sell — assets kept here for partners who still need them.") + '</p>' +
       '<div class="grid">' + legacy.map(function (p) { return cardHTML(p, "grid"); }).join("") + "</div>";
     $("#add-back").addEventListener("click", navHome);
@@ -1862,7 +1887,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     return html.replace(/^<div class="section-head">[\s\S]*?<\/div>\s*<p class="vhub-note">[\s\S]*?<\/p>/, "");
   }
   function bindVideoHub(ctx, p) {
-    $$("[data-play]", ctx).forEach(function (el) {
+    $$(".vthumb[data-play]", ctx).forEach(function (el) {
       // clickKey adds Enter/Space too — the poster is a role="button" div, so it
       // needs an explicit keyboard handler to be operable, unlike a real <button>.
       clickKey(el, function () {
@@ -2058,7 +2083,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       x.fillStyle = INK; x.font = "700 24px Montserrat, Arial, sans-serif"; x.fillText(col[0], xs[i], fy);
       ls("2px"); x.fillStyle = MUTE; x.font = "600 13px Montserrat, Arial, sans-serif"; x.fillText(col[1], xs[i], fy + 28); ls("0px");
     });
-    var fname = product.replace(/[^\w.-]+/g, "_") + "_Certificate.png";
+    var fname = safeFileName(product) + "_Certificate.png";
     if (c.toBlob) {
       c.toBlob(function (blob) {
         var href = URL.createObjectURL(blob);
@@ -2315,7 +2340,10 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     // Rebuilt on every change so the noun agrees with the count — English "selected"
     // is invariant, but Portuguese/Spanish/Italian/French/German all inflect.
     function selCountHTML(n) {
-      return tr(n === 1 ? "{n} item selected" : "{n} items selected")
+      // Same 0-is-singular rule as plural(); the {n} slot takes markup here, so it
+      // can't use that helper directly.
+      var one = n === 1 || (n === 0 && state.lang === "fr");
+      return tr(one ? "{n} item selected" : "{n} items selected")
         .replace("{n}", '<strong id="sel-n">' + n + "</strong>");
     }
     function syncSelection() {
@@ -2387,7 +2415,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           '<span class="catcard-tx"><span class="catcard-name">' + label + "</span>" +
           '<span class="catcard-c">' + count + "</span></span></button>";
       }
-      function fcount(n) { return tr(n === 1 ? "{n} file" : "{n} files").replace("{n}", n); }
+      function fcount(n) { return plural(n, "{n} file", "{n} files"); }
       // Which folders to show as cards:
       //  • on the default landing, the TOP-LEVEL folders (so every colourway is one
       //    click away even though the gallery is already showing one of them);
@@ -2399,7 +2427,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       var navCards = kids.map(function (seg) {
         var fp = joinPath(cardParent, seg), branch = isFolderBranch(fp), sub = branch ? childSegs(fp).length : 0;
         var count = branch
-          ? (tr(sub === 1 ? "{n} folder" : "{n} folders").replace("{n}", sub) + " · " + fcount(filesUnder(fp)))
+          ? (plural(sub, "{n} folder", "{n} folders") + " · " + fcount(filesUnder(fp)))
           : fcount((p.folders[fp] || []).length);
         // Mark the card the gallery is coming from — the exact folder, or the
         // ancestor of it (the "Black" card when "Black / Product Photos" is open).
@@ -2433,8 +2461,8 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       var fullName = fullProductName(p);
       setTitle(fullName);
 
-      var stat = tr(p.total === 1 ? "{n} asset" : "{n} assets").replace("{n}", p.total) +
-        (p.videos && p.videos.length ? " · " + tr(p.videos.length === 1 ? "{n} video" : "{n} videos").replace("{n}", p.videos.length) : "") +
+      var stat = plural(p.total, "{n} asset", "{n} assets") +
+        (p.videos && p.videos.length ? " · " + plural(p.videos.length, "{n} video", "{n} videos") : "") +
         " · " + tr("updated {date}").replace("{date}", fmtDate(p.added));
       d.innerHTML =
         '<button class="back" id="back-btn">' + icon("arrowLeft") + " " + tr("Back to library") + "</button>" +
@@ -2460,7 +2488,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         // Empty products (no synced files yet) show a friendly note instead of an
         // empty gallery with an "undefined" folder tab.
         (catTotal > 0
-          ? '<div class="section-head" id="docs-head"><h2>' + tr("Download assets by category") + '</h2><span class="badge">' + tr(catTotal === 1 ? "{n} file" : "{n} files").replace("{n}", catTotal) + "</span></div>" +
+          ? '<div class="section-head" id="docs-head"><h2>' + tr("Download assets by category") + '</h2><span class="badge">' + plural(catTotal, "{n} file", "{n} files") + "</span></div>" +
             assetNav +
             // A folder that only holds other folders still gets its own actions —
             // you can share or download "Black" without drilling into a leaf.
@@ -2503,7 +2531,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         videoHubHTML(p);
 
       if (activeCount > 0) renderGallery(p, openPath, selected, toggle, syncSelection);
-      $$("[data-play]", d).forEach(function (el) {
+      $$(".vthumb[data-play]", d).forEach(function (el) {
         clickKey(el, function () {   // keyboard-operable (role="button" div)
           playFromEl(el);
         });
@@ -2631,7 +2659,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     if (p.isLogo) return "";
     var r = inStoreItems(p), items = r.items;
     var head = '<div class="section-head"><h2>' + tr("In Store Marketing Materials") + '</h2>' +
-      (items.length ? '<span class="badge">' + tr(items.length === 1 ? "{n} item" : "{n} items").replace("{n}", items.length) + "</span>" : "") + "</div>";
+      (items.length ? '<span class="badge">' + plural(items.length, "{n} item", "{n} items") + "</span>" : "") + "</div>";
     if (!items.length) {
       return head + '<div class="instore-empty">' +
         "<p>" + tr("Printed in-store materials (posters, shelf talkers, displays) for this product will appear here as they’re added.") + "</p>" +
@@ -2663,7 +2691,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var src = dbox ? dropboxRaw(url) : url;
     var dsrc = dlUrl || url;
     var dl = /dropbox\.com/.test(dsrc) ? dropboxZipUrl(dsrc) : dsrc;
-    var name = label.replace(/[^\w.-]+/g, "_") + (/\.png/i.test(dsrc) ? ".png" : /\.jpe?g/i.test(dsrc) ? ".jpg" : "");
+    var name = safeFileName(label) + (/\.png/i.test(dsrc) ? ".png" : /\.jpe?g/i.test(dsrc) ? ".jpg" : "");
     return '<div class="pkg-card">' +
       '<button class="pkg-media pkg-zoom" data-lbimg="' + src + '" data-lbname="' + label + '" data-lbdl="' + dl + '" title="Click to enlarge">' +
         '<img src="' + src + '" alt="' + label + '" loading="lazy"/></button>' +
@@ -2867,7 +2895,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var cards = p.videos.map(function (v) {
       var safe = v.title.replace(/"/g, "");
       var poster = v.thumb ? '<img src="' + v.thumb + '" alt="' + safe + '" loading="lazy"/>' : "";
-      var dlname = safe.replace(/[^\w.-]+/g, "_") + ".mp4";
+      var dlname = safeFileName(safe) + ".mp4";
       // Play source: a real Dropbox MP4 takes priority; else the Vimeo/YouTube embed.
       var playSrc = v.mp4 ? dropboxRaw(v.mp4) : (v.embed || v.url || "");
       var dl = v.mp4 ? dropboxZipUrl(v.mp4) : "";
@@ -2892,7 +2920,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         "</div>" +
       "</div>";
     }).join("");
-    return '<div class="section-head"><h2>' + tr("How to use videos") + '</h2><span class="badge">' + tr(p.videos.length === 1 ? "{n} video" : "{n} videos").replace("{n}", p.videos.length) + "</span></div>" +
+    return '<div class="section-head"><h2>' + tr("How to use videos") + '</h2><span class="badge">' + plural(p.videos.length, "{n} video", "{n} videos") + "</span></div>" +
       '<p class="vhub-note">' + icon("eye") + " " + tr("Click a video to watch it, and download it or open it on YouTube where available.") + "</p>" +
       '<div class="vhub">' + cards + "</div>";
   }
@@ -2935,6 +2963,11 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     if (dlBtn) dlBtn.addEventListener("click", function () { directDownload(dlUrl, dlName); });
     var cpBtn = $(".vlb-copy", ov);
     if (cpBtn) cpBtn.addEventListener("click", function () { copyText(viewLink(shareUrl), tr("Link copied")); });
+    // Don't leave a silent black stage if the source won't load or decode.
+    var vEl = $("video", ov);
+    if (vEl) vEl.addEventListener("error", function () {
+      toast(tr("Couldn’t play that video — try downloading it"));
+    });
     modalOpen(ov, title || tr("Video"), $(".vlb-close", ov));
   }
   function closeVideoModal() {
@@ -3039,7 +3072,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         onChange();
       });
     });
-    $$("[data-dl]", $("#gallery")).forEach(function (b) {
+    $$(".ga-btn[data-dl]", $("#gallery")).forEach(function (b) {
       b.addEventListener("click", function () {
         if (b.getAttribute("data-direct")) directDownload(b.getAttribute("data-dl"), b.getAttribute("data-name"));
         else downloadOne(b.getAttribute("data-dl"));
@@ -3111,7 +3144,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         })).then(function () { return zip.generateAsync({ type: "blob" }); })
           .then(function (blob) {
             var href = URL.createObjectURL(blob);
-            directDownload(href, String(label || tr("assets")).replace(/[^\w.-]+/g, "_") + ".zip");
+            directDownload(href, safeFileName(label || tr("assets")) + ".zip");
             setTimeout(function () { URL.revokeObjectURL(href); }, 8000);
             toast(tr("Downloaded {n} files").replace("{n}", committed.length) +
               (skipped ? " · " + tr("{n} from Dropbox separately").replace("{n}", skipped) : ""));
@@ -3190,7 +3223,12 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   function modalClose() {
     document.body.style.overflow = "";
     var back = _modalReturn; _modalReturn = null;
-    if (back && back.focus) back.focus();
+    // The opener may have been re-rendered away while the overlay was up (a deep
+    // link re-renders the page, THEN opens the viewer), so focusing a detached
+    // node would silently drop focus to <body>. Fall back to something real.
+    if (back && back.focus && document.contains(back)) { back.focus(); return; }
+    var fallback = $(".cat-cover[data-catopen]") || $("#search") || $("#home-link");
+    if (fallback && fallback.focus) fallback.focus();
   }
   // The overlay currently on top, if any.
   function openModalEl() {

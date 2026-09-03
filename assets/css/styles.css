@@ -444,8 +444,8 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 /* large in-browser video player (modal) */
 .vlb { position: fixed; inset: 0; background: rgba(10, 10, 10, 0.92); z-index: 100; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 40px; gap: 6px; }
 .vlb-stage { flex: 1; min-height: 0; width: 100%; display: flex; align-items: center; justify-content: center; }
-.vlb video { max-width: 92vw; max-height: 78vh; border-radius: 8px; background: #000; }
-.vlb iframe { width: min(92vw, 1200px); aspect-ratio: 16 / 9; max-height: 78vh; border: 0; border-radius: 8px; background: #000; }
+.vlb video { max-width: 100%; max-height: 100%; border-radius: 8px; background: #000; }
+.vlb iframe { width: min(100%, 1200px); aspect-ratio: 16 / 9; max-height: 100%; border: 0; border-radius: 8px; background: #000; }
 .vlb-bar { width: 100%; max-width: 920px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 4px 2px; flex-wrap: wrap; }
 .vlb-name { font-size: 14px; font-weight: 600; color: #fff; min-width: 0; overflow-wrap: anywhere; }
 /* The player sits on a near-black overlay, so the default .btn (ink on ink)
@@ -457,12 +457,11 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 .vlb-acts .btn.ghost { background: transparent; border-color: rgba(255,255,255,0.45); color: #fff; }
 .vlb-acts .btn.ghost:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
 @media (max-width: 520px) {
+  .vlb { padding: 16px; }
   .vlb-bar { gap: 10px; }
-  .vlb-acts { width: 100%; }
-  .vlb-acts .btn { flex: 1; justify-content: center; }
+  .vlb-acts { width: 100%; flex-direction: column; align-items: stretch; }
+  .vlb-acts .btn { width: 100%; justify-content: center; white-space: nowrap; }
 }
-.vlb .btn { background: #fff; color: var(--ink); border-color: #fff; }
-.vlb .btn:hover { background: var(--mist); }
 .vlb-close { position: absolute; top: 22px; right: 22px; width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.12); border: none; display: flex; align-items: center; justify-content: center; }
 .vlb-close svg { width: 20px; height: 20px; stroke: #fff; }
 

@@ -204,6 +204,7 @@ window.PORTAL_I18N.pt = {
   "Couldn’t load that language — staying in {lang}": "Não foi possível carregar esse idioma — seguimos em {lang}",
   "Couldn’t load the zipper — try again": "Não foi possível carregar o compactador — tente novamente",
   "Couldn’t open the catalog — downloading instead": "Não foi possível abrir o catálogo — o arquivo será baixado",
+  "Couldn’t play that video — try downloading it": "Não foi possível reproduzir este vídeo — tente baixá-lo",
   "Couldn’t render that page": "Não foi possível exibir essa página",
   "DATE ISSUED": "DATA DE EMISSÃO",
   "Decrease": "Diminuir",

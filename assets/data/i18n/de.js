@@ -204,6 +204,7 @@ window.PORTAL_I18N.de = {
   "Couldn’t load that language — staying in {lang}": "Diese Sprache konnte nicht geladen werden — es bleibt bei {lang}",
   "Couldn’t load the zipper — try again": "Zipper konnte nicht geladen werden — bitte erneut versuchen",
   "Couldn’t open the catalog — downloading instead": "Katalog konnte nicht geöffnet werden — Download wird gestartet",
+  "Couldn’t play that video — try downloading it": "Dieses Video konnte nicht abgespielt werden — laden Sie es herunter",
   "Couldn’t render that page": "Seite konnte nicht dargestellt werden",
   "DATE ISSUED": "AUSSTELLUNGSDATUM",
   "Decrease": "Verringern",
