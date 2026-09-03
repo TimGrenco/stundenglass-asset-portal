@@ -447,7 +447,20 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 .vlb video { max-width: 92vw; max-height: 78vh; border-radius: 8px; background: #000; }
 .vlb iframe { width: min(92vw, 1200px); aspect-ratio: 16 / 9; max-height: 78vh; border: 0; border-radius: 8px; background: #000; }
 .vlb-bar { width: 100%; max-width: 920px; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 4px 2px; flex-wrap: wrap; }
-.vlb-name { font-size: 14px; font-weight: 600; color: #fff; }
+.vlb-name { font-size: 14px; font-weight: 600; color: #fff; min-width: 0; overflow-wrap: anywhere; }
+/* The player sits on a near-black overlay, so the default .btn (ink on ink)
+   was effectively invisible. Invert both actions for this surface: solid
+   white for the primary download, outlined for the secondary copy. */
+.vlb-acts { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+.vlb-acts .btn { background: #fff; border-color: #fff; color: var(--ink); }
+.vlb-acts .btn:hover { background: var(--mist); border-color: var(--mist); }
+.vlb-acts .btn.ghost { background: transparent; border-color: rgba(255,255,255,0.45); color: #fff; }
+.vlb-acts .btn.ghost:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+@media (max-width: 520px) {
+  .vlb-bar { gap: 10px; }
+  .vlb-acts { width: 100%; }
+  .vlb-acts .btn { flex: 1; justify-content: center; }
+}
 .vlb .btn { background: #fff; color: var(--ink); border-color: #fff; }
 .vlb .btn:hover { background: var(--mist); }
 .vlb-close { position: absolute; top: 22px; right: 22px; width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.12); border: none; display: flex; align-items: center; justify-content: center; }

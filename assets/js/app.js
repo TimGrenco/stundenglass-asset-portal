@@ -1866,7 +1866,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       // clickKey adds Enter/Space too — the poster is a role="button" div, so it
       // needs an explicit keyboard handler to be operable, unlike a real <button>.
       clickKey(el, function () {
-        openVideoModal(el.getAttribute("data-play"), el.getAttribute("data-title"), el.getAttribute("data-dl"), el.getAttribute("data-dlname"));
+        playFromEl(el);
       });
     });
     $$("[data-vdl]", ctx).forEach(function (b) {
@@ -2505,7 +2505,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       if (activeCount > 0) renderGallery(p, openPath, selected, toggle, syncSelection);
       $$("[data-play]", d).forEach(function (el) {
         clickKey(el, function () {   // keyboard-operable (role="button" div)
-          openVideoModal(el.getAttribute("data-play"), el.getAttribute("data-title"), el.getAttribute("data-dl"), el.getAttribute("data-dlname"));
+          playFromEl(el);
         });
       });
       $$("[data-vdl]", d).forEach(function (b) {
@@ -2873,7 +2873,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       var dl = v.mp4 ? dropboxZipUrl(v.mp4) : "";
 
       var thumb = '<div class="vthumb' + (playSrc ? " vplay" : "") + '"' +
-        (playSrc ? ' data-play="' + playSrc + '" data-title="' + safe + '"' + (dl ? ' data-dl="' + dl + '" data-dlname="' + dlname + '"' : "") + ' role="button" tabindex="0" aria-label="' + tr("Watch {name}").replace("{name}", safe) + '"' : "") + ">" +
+        (playSrc ? ' data-play="' + playSrc + '" data-title="' + safe + '"' + (dl ? ' data-dl="' + dl + '" data-dlname="' + dlname + '"' : "") + (v.mp4 ? ' data-share="' + escapeHTML(v.mp4) + '"' : "") + ' role="button" tabindex="0" aria-label="' + tr("Watch {name}").replace("{name}", safe) + '"' : "") + ">" +
         poster + '<span class="play-badge">' + icon("play") + "</span>" + (playSrc ? '<span class="vthumb-hint">' + tr("Click to watch") + "</span>" : "") + "</div>";
 
       // Only offer a download when there's a real downloadable file; watch-only
@@ -2901,8 +2901,17 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     if (/[?&]dl=/.test(link)) return link.replace(/([?&])dl=\d/, "$1raw=1");
     return link + (link.indexOf("?") === -1 ? "?raw=1" : "&raw=1");
   }
-  // Large in-browser video player (modal overlay).
-  function openVideoModal(src, title, dlUrl, dlName) {
+  // Launch the player from any element carrying the data-play attribute set.
+  // Three places open the player; routing them all through here stops two of
+  // them silently dropping the share URL (which removed Copy link from the bar).
+  function playFromEl(el) {
+    openVideoModal(el.getAttribute("data-play"), el.getAttribute("data-title"),
+      el.getAttribute("data-dl"), el.getAttribute("data-dlname"), el.getAttribute("data-share"));
+  }
+  // Large in-browser video player (modal overlay). `shareUrl` is the plain
+  // Dropbox link (dl=0) so a viewer can copy a shareable URL without leaving the
+  // player; `dlUrl` is the dl=1 form that forces an actual download.
+  function openVideoModal(src, title, dlUrl, dlName, shareUrl) {
     closeVideoModal();
     var ov = document.createElement("div");
     ov.className = "vlb"; ov.id = "vlb";
@@ -2914,13 +2923,18 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     ov.innerHTML =
       '<button class="vlb-close" aria-label="' + tr("Close") + '">' + icon("x") + "</button>" +
       '<div class="vlb-stage">' + media + "</div>" +
-      '<div class="vlb-bar"><span class="vlb-name">' + (title || "") + "</span>" +
-        (dlUrl ? '<button class="btn vlb-dl">' + icon("download") + " " + tr("Download video") + "</button>" : "") + "</div>";
+      '<div class="vlb-bar"><span class="vlb-name">' + escapeHTML(title || "") + "</span>" +
+        '<span class="vlb-acts">' +
+          (shareUrl ? '<button class="btn ghost vlb-copy">' + icon("link") + " " + tr("Copy link") + "</button>" : "") +
+          (dlUrl ? '<button class="btn vlb-dl">' + icon("download") + " " + tr("Download video") + "</button>" : "") +
+        "</span></div>";
     document.body.appendChild(ov);
     ov.addEventListener("click", function (e) { if (e.target === ov || e.target.classList.contains("vlb-stage")) closeVideoModal(); });
     $(".vlb-close", ov).addEventListener("click", closeVideoModal);
     var dlBtn = $(".vlb-dl", ov);
     if (dlBtn) dlBtn.addEventListener("click", function () { directDownload(dlUrl, dlName); });
+    var cpBtn = $(".vlb-copy", ov);
+    if (cpBtn) cpBtn.addEventListener("click", function () { copyText(viewLink(shareUrl), tr("Link copied")); });
     modalOpen(ov, title || tr("Video"), $(".vlb-close", ov));
   }
   function closeVideoModal() {
@@ -2949,11 +2963,24 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       var on = selected && selected[key];
       var ext = isExtVideo(file);   // YouTube (or other external) video link
       var hasImg = !!file.thumb;
-      var lbAttr = "", ytAttr = "", badge = "", a11yAttr = "";
+      var lbAttr = "", ytAttr = "", playAttr = "", badge = "", a11yAttr = "";
+      var isVid = file.type === "video";
       if (ext && hasImg) {
         ytAttr = ' data-yt="' + file.url + '"';
         badge = '<span class="play-badge">' + icon("play") + "</span>";
         a11yAttr = ' role="button" tabindex="0" aria-label="' + tr("Watch {name} on YouTube").replace("{name}", fileLabel(file).replace(/"/g, "")) + '"';
+      } else if (isVid && file.url) {
+        // Plays inline in the portal's own player. Deliberately NOT pushed into
+        // `items` — the lightbox is for stills, and a video there would show a
+        // frozen poster with no way to play it.
+        var vnm = fileLabel(file).replace(/"/g, "");
+        playAttr = ' data-play="' + escapeHTML(dropboxRaw(file.url)) + '"' +
+          ' data-title="' + escapeHTML(vnm) + '"' +
+          ' data-dl="' + escapeHTML(dropboxZipUrl(file.url)) + '"' +
+          ' data-dlname="' + escapeHTML(vnm) + '"' +
+          ' data-share="' + escapeHTML(file.url) + '"';
+        badge = '<span class="play-badge">' + icon("play") + "</span>";
+        a11yAttr = ' role="button" tabindex="0" aria-label="' + tr("Watch {name}").replace("{name}", vnm) + '"';
       } else if (hasImg) {
         lbAttr = ' data-lbidx="' + items.length + '"';
         a11yAttr = ' role="button" tabindex="0" aria-label="' + tr("Enlarge {name}").replace("{name}", fileLabel(file).replace(/"/g, "")) + '"';
@@ -2969,7 +2996,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       return (
         '<div class="gcell' + (on ? " sel" : "") + '" data-key="' + escapeHTML(key) + '">' +
           '<label class="gselect"><input type="checkbox" class="gcheck"' + (on ? " checked" : "") + ' aria-label="' + tr("Select {name}").replace("{name}", nmAttr) + '"/></label>' +
-          '<div class="gthumb' + (ext ? " is-video" : "") + '"' + lbAttr + ytAttr + a11yAttr + ">" + thumb +
+          '<div class="gthumb' + (ext || isVid ? " is-video" : "") + '"' + lbAttr + ytAttr + playAttr + a11yAttr + ">" + thumb +
             (file.format ? '<span class="gfmt">' + escapeHTML(file.format) + "</span>" : "") + "</div>" +
           '<div class="gbar"><span class="gn">' + nmSafe + '</span>' +
           '<span class="ga">' +
@@ -2987,6 +3014,11 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     });
     $$(".gthumb[data-yt]", $("#gallery")).forEach(function (t) {
       clickKey(t, function () { downloadOne(t.getAttribute("data-yt")); });
+    });
+    $$(".gthumb[data-play]", $("#gallery")).forEach(function (t) {
+      clickKey(t, function () {                     // Enter/Space too
+        playFromEl(t);
+      });
     });
     // per-asset selection checkboxes (with Dropbox-style shift-click range)
     $$(".gcell", $("#gallery")).forEach(function (cell, idx) {
