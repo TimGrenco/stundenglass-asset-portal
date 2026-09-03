@@ -46,6 +46,7 @@ if (!APP_KEY || !APP_SECRET || !REFRESH) {
 //   deep: true      → recurse nested shoot folders (colorway → type → shoot)
 //   flat: "Logos"   → bucket a flat (subfolder-less) folder under this name
 //   pngThumbs: true → keep transparent PNG logo thumbnails (don't flatten to white)
+const truncated = [];   // products whose walk came back implausibly short
 const PRODUCTS = [
   // Catalogs go FIRST: they're a handful of direct file links and finish in
   // seconds, so they publish immediately instead of queueing behind the
@@ -640,8 +641,23 @@ for (const p of PRODUCTS) {
 
   writeFileSync(linkCacheFile, JSON.stringify(linkCache));
 
-  synced[p.name] = { folders, dropbox: dlLink(p.link), folderLinks };
+  // A walk can come back SHORT without failing: walkFolder() deliberately skips a
+  // restricted/locked folder and its whole subtree so one bad folder can't kill the
+  // run. But the write below REPLACES the product's folder map outright, and the
+  // result is committed and deployed with nothing having "failed" — a retailer just
+  // finds a product missing hundreds of files. Real deletions are gradual (the
+  // largest genuine drop observed here is ~3%); a >50% collapse is a truncated walk.
+  const prevFolders = (synced[p.name] || {}).folders;
+  const prevTotal = prevFolders ? Object.values(prevFolders).reduce((n, a) => n + a.length, 0) : 0;
   const total = Object.values(folders).reduce((n, a) => n + a.length, 0);
+  if (prevTotal > 20 && total < prevTotal * 0.5) {
+    console.error(`  ! REFUSING to overwrite ${p.name}: ${prevTotal} files -> ${total}. ` +
+      "That looks like a truncated walk, not a real deletion — keeping the previous data. " +
+      "If the files really were deleted, re-run once this product syncs fully.");
+    truncated.push(`${p.name} (${prevTotal} -> ${total})`);
+  } else {
+    synced[p.name] = { folders, dropbox: dlLink(p.link), folderLinks };
+  }
   const withThumb = Object.values(folders).reduce((n, a) => n + a.filter((x) => x.thumb).length, 0);
   const withLink = Object.values(folders).reduce((n, a) => n + a.filter((x) => /scl\/fi\//.test(x.url)).length, 0);
   console.log(`${p.name}: ${folderSpecs.length} folders, ${total} files, ${withThumb} thumbnails, ${withLink} per-file links`);
@@ -652,3 +668,9 @@ for (const p of PRODUCTS) {
 
 saveProgress("all products");
 console.log("Wrote assets/data/synced.js");
+if (truncated.length) {
+  console.error("\n! Kept previous data for " + truncated.length + " product(s) whose walk came back short:");
+  truncated.forEach((t) => console.error("    " + t));
+  console.error("Failing the run so this surfaces instead of publishing a gutted product.");
+  process.exit(1);
+}

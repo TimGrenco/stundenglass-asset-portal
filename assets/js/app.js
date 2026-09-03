@@ -1128,6 +1128,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     if (state.sort === "az") current = current.slice().sort(byName);
 
     var browseCount = $("#browse-count");
+    showProductChrome(true);   // normal browse always has the product grid
     var countLabel = plural(current.length, "{n} product", "{n} products");
     if (browseCount) browseCount.textContent = countLabel;
     $("#count-badge").textContent = countLabel;
@@ -1159,6 +1160,12 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     return String(f).split(" / ").map(function (seg) { return tr(typeLabel(seg)); }).join(" / ");
   }
 
+  // Show/hide the chrome that only makes sense when product cards are on screen.
+  function showProductChrome(on) {
+    ["#view-mode", "#sort-toggle"].forEach(function (sel) {
+      var el = $(sel); if (el) el.style.display = on ? "" : "none";
+    });
+  }
   // Search results view: matching products (cards) + matching individual files.
   function renderSearch() {
     var q = state.query;
@@ -1179,6 +1186,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     allGrid.className = state.layout === "list" ? "grid list" : "grid";
     allGrid.innerHTML = prods.length ? prods.map(function (p) { return cardHTML(p, state.layout); }).join("") : "";
     bindCards($("#home"));
+    // The sort and layout toggles act on the PRODUCT grid; with no product matches
+    // they were left stranded above an empty grid with nothing to control.
+    showProductChrome(prods.length > 0);
 
     var sf = $("#search-files");
     sf.style.display = "";
