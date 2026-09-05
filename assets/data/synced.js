@@ -13590,6 +13590,14 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "Pineapple Green DH B_01",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/nztam435jvufnrc5ovrvk/Pineapple-Green-DH-B_01.mp4?rlkey=soiv4u4dsxq4pl60stn40y5he&dl=0",
+          "thumb": "assets/synced/accessories/845cb1832d50159381827c759d15243f9248f21f6054cc7a4103e7a37d11d63c.jpg",
+          "file": null
+        },
+        {
           "name": "Pineapple SG Tease",
           "type": "video",
           "format": "MP4",
@@ -16017,6 +16025,14 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/3g5oomgqf4wmfabi30uhz/DTLA-Mod-l-Dry-Herb-Vape-July-short.MP4?rlkey=z2zpo4qr2spi2tvfj7c721ifk&dl=0",
           "thumb": "assets/synced/accessories/9a9c447f9f49baac9e3a4dafdca448235ae6fd503b947a7445ca7d31629f1a9b.jpg",
+          "file": null
+        },
+        {
+          "name": "Pineapple Green DH B_01",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/375hul07y7dnvir7942h6/Pineapple-Green-DH-B_01.mp4?rlkey=5nrnzbdk0lvyria6ebxquvvz8&dl=0",
+          "thumb": "assets/synced/accessories/845cb1832d50159381827c759d15243f9248f21f6054cc7a4103e7a37d11d63c.jpg",
           "file": null
         },
         {
