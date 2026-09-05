@@ -819,6 +819,14 @@ window.PORTAL_SYNCED = {
           "url": "https://www.dropbox.com/scl/fi/ar2m0y0zyrnfn8phee1lj/Olivia-Olive-Green-Flip-A.mp4?rlkey=ashqqrv6g5d4frek8z6ae5acu&dl=0",
           "thumb": "assets/synced/gravity-infusers/1371c30ad38762e861a4d445c3e11d867f8095293c18148508dbc7e8ae52f34f.jpg",
           "file": null
+        },
+        {
+          "name": "Pineapple Green DH B_01",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/eg2suiz9t5tl53trnzzhq/Pineapple-Green-DH-B_01.mp4?rlkey=q5iz63em7r98ae1wjp6tdtfqq&dl=0",
+          "thumb": "assets/synced/gravity-infusers/845cb1832d50159381827c759d15243f9248f21f6054cc7a4103e7a37d11d63c.jpg",
+          "file": null
         }
       ],
       "Olive Green / TV Screen Videos": [
