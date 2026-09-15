@@ -891,6 +891,222 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "Velvet Burgundy / Product Photos": [
+        {
+          "name": "burgundy_thumb_01",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/3sgere8sqg7iibwnsiriz/burgundy_thumb_01.png?rlkey=rzjwo24qfnvu0e2ff7g84kro0&dl=0",
+          "thumb": "assets/synced/gravity-infusers/e0f2eb9dacf1be036a338c8e0d09279ef0963f2f4513fe3c65db19e6169e508a.jpg",
+          "file": null
+        },
+        {
+          "name": "burgundy_thumb_02",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/9qa71sem9nbe0vu9t0unn/burgundy_thumb_02.png?rlkey=rq065ofmwib6ehwpmc2z8cnk3&dl=0",
+          "thumb": "assets/synced/gravity-infusers/d4a565082b6b9e8b964dc9ac2152e7a271fc1c37de244cf6014281b60d67886f.jpg",
+          "file": null
+        },
+        {
+          "name": "burgundy_thumb_03",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/m8cjatjf58tnywew9zsti/burgundy_thumb_03.png?rlkey=qfc5uwixo0xk9asox2hpeyeza&dl=0",
+          "thumb": "assets/synced/gravity-infusers/35337c87680e9757569e2986a19ba36f03ccd00eddf42ff39f1759da3b75ca06.jpg",
+          "file": null
+        },
+        {
+          "name": "burgundy_thumb_04",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/32at65n43rm1vszorwuoq/burgundy_thumb_04.png?rlkey=z5yg3cz9i7j9rg9twip2zj5zz&dl=0",
+          "thumb": "assets/synced/gravity-infusers/912d01b019f4fe468e3d5268801801a632dfd67992544683eb822ef2d44f5cbe.jpg",
+          "file": null
+        },
+        {
+          "name": "burgundy_thumb_05",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/as56bi9voqr7fo4ealvhs/burgundy_thumb_05.png?rlkey=4vrg16mod46tez9o3clnrwfmh&dl=0",
+          "thumb": "assets/synced/gravity-infusers/acdab57454c8206c0ee1f5b07eb84e61254fd0efb43f1f7f8f2bd3b0b5e4a068.jpg",
+          "file": null
+        },
+        {
+          "name": "burgundy_thumb_06",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/7za6bore9f1qgi118kxmw/burgundy_thumb_06.png?rlkey=viqja75vr17600692968ww7k0&dl=0",
+          "thumb": "assets/synced/gravity-infusers/d6b2f62bd2c02ef6a014297af1315d8461244fbbae5f93c63bb5c079049b7a62.jpg",
+          "file": null
+        },
+        {
+          "name": "burgundy_thumb_07",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/lcv064c7y4hn8tkuwnpkc/burgundy_thumb_07.png?rlkey=c8j1sc30gwhb786uid58hiyda&dl=0",
+          "thumb": "assets/synced/gravity-infusers/f7c43f4d4192fa8bfbf7a48a170a4e01066d3c07e1d78b5b2f0926b368a1714d.jpg",
+          "file": null
+        },
+        {
+          "name": "burgundy_thumb_08",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/0ewce5eqvd6ncol3r9cal/burgundy_thumb_08.png?rlkey=2yventidndod6hxqzaoxuwc1n&dl=0",
+          "thumb": "assets/synced/gravity-infusers/91b65a2856db77aaaa8a44a6d2aafaa4826be0abf84e7e9d21e8e7c1aa9ab71c.jpg",
+          "file": null
+        },
+        {
+          "name": "burgundy_thumb_09",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/qzoccok5y69wbrexjez24/burgundy_thumb_09.png?rlkey=6ze3wzcvknv9yjih6yme3veqa&dl=0",
+          "thumb": "assets/synced/gravity-infusers/343052c3bc4a57a4832d9f08bfbfd3fc669ccf4290fd467c4f0a3efbb0f37d54.jpg",
+          "file": null
+        }
+      ],
+      "Velvet Burgundy / Lifestyle Photos": [
+        {
+          "name": "Gemini_Generated_Image_l489u1l489u1l489",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/lkklr19on4c4drys8bqd3/Gemini_Generated_Image_l489u1l489u1l489.png?rlkey=ml4eyduzs2829vip5ytcpqb9n&dl=0",
+          "thumb": "assets/synced/gravity-infusers/13d7583fcab4a7301a3eaf963ec3f76feeec3edd9305837bb673f1b42e21ac64.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_160238_362776fe-57d2-4636-aeff-aa5f03222f91",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/dqe011zegokm3jiz2pyqg/hf_20260728_160238_362776fe-57d2-4636-aeff-aa5f03222f91.png?rlkey=7e8154ds4tgn3ywfkxa0kozbl&dl=0",
+          "thumb": "assets/synced/gravity-infusers/292447b8f91a48064aacfb7ca7b838b675c42a27ece6229718258c524bcce5d4.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_160336_4ddcb12b-f7b6-4e87-b38d-40e1a37522b2",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/2zsghc5uiuo8fxt59jesc/hf_20260728_160336_4ddcb12b-f7b6-4e87-b38d-40e1a37522b2.png?rlkey=6w1bf6zzsj24iqvejclh9kr58&dl=0",
+          "thumb": "assets/synced/gravity-infusers/436b9bf7e25a8d9fa0c77d82b111f1d08a973cd5e5d5722b02e57b26ec9fee82.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_160426_9e0ceabe-44cf-4c11-aeda-54d34d2263ab",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/zw0fn1soywoi8968hg82t/hf_20260728_160426_9e0ceabe-44cf-4c11-aeda-54d34d2263ab.png?rlkey=9b2tolsvw3u3inn8gd1mjb0r4&dl=0",
+          "thumb": "assets/synced/gravity-infusers/82664ae2a1125632885d59899dd50560350647dd90e4f292588cdb597490fef7.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_160918_9d1144c4-b8bc-4303-aa44-68208a789032",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/h5oob3uoj1k3w637hfj70/hf_20260728_160918_9d1144c4-b8bc-4303-aa44-68208a789032.png?rlkey=1zbg8yd74084p5bhczqh7weiy&dl=0",
+          "thumb": "assets/synced/gravity-infusers/eaa3cfff25c813a30c8b046a4aef2a22d360401c2776ec605849e9983db190cb.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_161201_45229f33-9b61-4ff4-b276-00e7907cc49e",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/x3dq3yxojdpuvv63sf6no/hf_20260728_161201_45229f33-9b61-4ff4-b276-00e7907cc49e.png?rlkey=5ujoh889u97quv70scnxsw2z4&dl=0",
+          "thumb": "assets/synced/gravity-infusers/5936feb23cd4e7f795957f554e82b592b56812439c490d09a355e72be19bdcf9.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_161415_c8953b9b-c6b6-4e92-bb88-181dc1931613",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/70r4cz6g8v6c6whaelqkd/hf_20260728_161415_c8953b9b-c6b6-4e92-bb88-181dc1931613.png?rlkey=c9hvrvh1u30bk8x9axai28omm&dl=0",
+          "thumb": "assets/synced/gravity-infusers/751d11efcf60e82146b85892c3406c4558b890dbc0afde2d8bfcb31234474cbd.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_162922_a8d98de7-d026-4fa2-83b3-0597ccc9e3da",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/4hryic91im7h4qucv0zv2/hf_20260728_162922_a8d98de7-d026-4fa2-83b3-0597ccc9e3da.png?rlkey=mixwn9p27mo270eqc4j13rnwh&dl=0",
+          "thumb": "assets/synced/gravity-infusers/6db905b9a33eedc159fc4e1e942ddf203c88841ce1ff4b76fd39b6fd5375c445.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_163345_4de07072-3bde-47e9-8cb0-cbb4d74dc63a",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/zba8ofbc7wg10jvhhh0wa/hf_20260728_163345_4de07072-3bde-47e9-8cb0-cbb4d74dc63a.png?rlkey=es7qcagw1d3oe96kpi27cftpt&dl=0",
+          "thumb": "assets/synced/gravity-infusers/acebeeb4a75211cd38a6503857e3b7a7e4588cb3d2a0b1e7955a8849fa0ef0f2.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_163852_6c60cf25-71d5-43bb-a26b-89fd4c7cac36",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/aqe72zisu6nts5x2rjiz0/hf_20260728_163852_6c60cf25-71d5-43bb-a26b-89fd4c7cac36.png?rlkey=owmo5063t7vtdjegxpruydm8b&dl=0",
+          "thumb": "assets/synced/gravity-infusers/9a32a8df34665a7cd56f09531c02c29a2f8857bd1bb86a72b19d5dc2fee0d8fd.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_163922_305bd399-9d42-4900-8e9a-18489e284a84",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/e0wg2vwt1ymk65u178mp5/hf_20260728_163922_305bd399-9d42-4900-8e9a-18489e284a84.png?rlkey=93qrq3oyc8pqic778wm9woymx&dl=0",
+          "thumb": "assets/synced/gravity-infusers/e7c647ae2d52eceeb6ad2d5c3c87eb1b86942ec40f641411cbd0937a820ee307.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_164226_32dc868d-636c-4fab-97ca-c435311d2581",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/w17dw97dgxc96g0k15k0y/hf_20260728_164226_32dc868d-636c-4fab-97ca-c435311d2581.png?rlkey=it16gcvi06a70zjb06u4usoob&dl=0",
+          "thumb": "assets/synced/gravity-infusers/1fbaeae3af0ec70d29519342cd68258a0803a82c1b9a0cbc322d27873b1c14a2.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_164334_32fe7840-13ed-4239-88cb-2f39771e4475",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/f86xorptit8b88l8vob06/hf_20260728_164334_32fe7840-13ed-4239-88cb-2f39771e4475.png?rlkey=okaivinr0pmqq2z778dluldts&dl=0",
+          "thumb": "assets/synced/gravity-infusers/8fc3523a989c7637d4bb99fafd27d96bdcecb77aeb95b2f0269d351ff446c0b9.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_165222_411031d7-6e0b-4fe2-9fe8-2a70ed22fbb8",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/4d0dv412cs85i5znx7p6j/hf_20260728_165222_411031d7-6e0b-4fe2-9fe8-2a70ed22fbb8.png?rlkey=rvpugvu3jicq8usw3jv9p77h3&dl=0",
+          "thumb": "assets/synced/gravity-infusers/0e34f6656698b17104c82f56e4fa31796dd4c44f9fcb722151c9771369bf8927.jpg",
+          "file": null
+        },
+        {
+          "name": "hf_20260728_165346_3b393fb5-2183-43f6-8d43-0c1d7a10afe3",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/9d1l51j2iqooekxcajm4j/hf_20260728_165346_3b393fb5-2183-43f6-8d43-0c1d7a10afe3.png?rlkey=t4nl791bdrsy9vxa1gcoae0g5&dl=0",
+          "thumb": "assets/synced/gravity-infusers/1294df37979b0c8dcd17416f9a00a5dce971fd8a7e24cd198f5b36b4cdc100ab.jpg",
+          "file": null
+        }
+      ],
+      "Velvet Burgundy / Social Videos": [
+        {
+          "name": "Burgundy v3 Product Page 1080",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/o9qcc6n7rsszwu6onjylk/Burgundy-v3-Product-Page-1080.mp4?rlkey=aum0m7mnevva0gdl0mlawkaug&dl=0",
+          "thumb": "assets/synced/gravity-infusers/11cbccb6b2c1f95916a496a50985bbf680042a485359286cb4deb0a78c9a81bf.jpg",
+          "file": null
+        }
+      ],
+      "Velvet Burgundy / TV Screen Videos": [
+        {
+          "name": "Burgundy Launch Horizontal",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/01wnqtop3w4n3silo5ux8/Burgundy-Launch-Horizontal.mp4?rlkey=ahofs5slkq8v072ho9js85fvu&dl=0",
+          "thumb": "assets/synced/gravity-infusers/f56176533a65dc68ac75237166af965670fc215372be592f4ef2e29fba49e8f3.jpg",
+          "file": null
+        }
+      ],
       "Violet Purple / Product Photos": [
         {
           "name": "Purple_thumb_01",
@@ -1183,6 +1399,14 @@ window.PORTAL_SYNCED = {
       "Olive Green / Packaging": "https://www.dropbox.com/scl/fo/iv41dni5d70lp0ctoibj2/AJw_y7bYpuuW4QuwF6a2lWA?rlkey=lrgn46gyemg0hu8dv7bugri0i&dl=1",
       "Olive Green / In-Store Marketing": "https://www.dropbox.com/scl/fo/5kur6c16dppfyl1po9d9n/ANV1_R-cHlX0o57Ex6LC0rg?rlkey=ie5k5xua08att3oemtoxfbzh5&dl=1",
       "Olive Green / Documents": "https://www.dropbox.com/scl/fo/7vw0g5qbif9cwvuws17q7/AFh7b1qc4sdOUNiskbnuhP4?rlkey=jahv2efzkzv7q74rliokfkvn0&dl=1",
+      "Velvet Burgundy": "https://www.dropbox.com/scl/fo/uz8lzbteum66yac3h5ngp/ABFmJp85zzirnlipSj9is_g?rlkey=p97sjld6nhvfzavfumt4k4uwh&dl=1",
+      "Velvet Burgundy / Product Photos": "https://www.dropbox.com/scl/fo/spbm5trt26o4b0a6yr0px/ANuUpV0pGcQIYFpnJ_C5UG8?rlkey=n8huxto0vfyasf7x4sjew7w0h&dl=1",
+      "Velvet Burgundy / Lifestyle Photos": "https://www.dropbox.com/scl/fo/l0fmkhyvj548beugi3j8l/AK_1Y0YrQkoIXUFYZs_1yUM?rlkey=5z037eomq4awgh6x83a3uvvd9&dl=1",
+      "Velvet Burgundy / Social Videos": "https://www.dropbox.com/scl/fo/pdhuolhnyca7f9m3vgple/AImyRuZGJFDjJZZhADjAtJA?rlkey=xuxvtbef84lieik1kpgm3k45m&dl=1",
+      "Velvet Burgundy / TV Screen Videos": "https://www.dropbox.com/scl/fo/ibktgg3w9vxpnf231oc42/AF8f_gCZ7LxDw1JDRb8tS_U?rlkey=en1exvcpjc2sexvrwcu33548k&dl=1",
+      "Velvet Burgundy / Packaging": "https://www.dropbox.com/scl/fo/0kwi2t6zxih6iuzilu6e4/AOOsGXU2S91TAw8xhQFieqg?rlkey=f7g7xvo3b47l4yguqa2p2xnws&dl=1",
+      "Velvet Burgundy / In-Store Marketing": "https://www.dropbox.com/scl/fo/xiqi7dzgvrr8qafpb43o2/AEXjgeoRmefEzOFipEtv-Og?rlkey=274kyg4cyeclqun9ux0gwpyt6&dl=1",
+      "Velvet Burgundy / Documents": "https://www.dropbox.com/scl/fo/nrvbxowpx9gzqc1e0griu/AIjcG8jRo0qsg9M3i3o1TB4?rlkey=ugcw4wi9lkydq7wem39lm4yot&dl=1",
       "Violet Purple": "https://www.dropbox.com/scl/fo/unjadzx48h1kt0ebi5yae/AF853CzAMS0_yGxYd69mUY0?rlkey=ktfvrd4b0302eh6hfsgct8oeh&dl=1",
       "Violet Purple / Product Photos": "https://www.dropbox.com/scl/fo/lpjde3g11fsv7bmo4actc/AIAyGHh1LLO9XLP6bJhmz1g?rlkey=9x9f4qsqr1wzuw7k8qho2ef2j&dl=1",
       "Violet Purple / Lifestyle Photos": "https://www.dropbox.com/scl/fo/4fto7e39co4rj05m7y819/ALTuf0Crker0aF0pl5H8aY4?rlkey=mxa9f7mnxygghlu9vsf535pdz&dl=1",
