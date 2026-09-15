@@ -1089,6 +1089,30 @@ window.PORTAL_SYNCED = {
       ],
       "Velvet Burgundy / Social Videos": [
         {
+          "name": "Burgundy Launch Reels",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/2sgl9kgc5q14ck0xnect6/Burgundy-Launch-Reels.mp4?rlkey=o2pnmsdiul6ccmtyihccdqpac&dl=0",
+          "thumb": "assets/synced/gravity-infusers/5223f5a7cf14c7358c0daef549cc48b7617c4a7a3be8bb073f8a0187d632ba48.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy SE A",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/zwtss62mzf0qczfk36vjk/Burgundy-SE-A.mp4?rlkey=ier6h9j8jpsmfnpqjtrz06v2w&dl=0",
+          "thumb": "assets/synced/gravity-infusers/bc44958dd1e3bcab280a87449803e3ae8a780a9708959401c6420f45857ca8b1.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy SE B",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/724mv8kojzkdp6w6dte8p/Burgundy-SE-B.mp4?rlkey=vogwl7416p8bofgsbjij6p5x2&dl=0",
+          "thumb": "assets/synced/gravity-infusers/26b90389a9a4ec2fb7b81d16303e763b7e9e0c13042887a626fd558016c178bc.jpg",
+          "file": null
+        },
+        {
           "name": "Burgundy v3 Product Page 1080",
           "type": "video",
           "format": "MP4",
