@@ -7891,7 +7891,8 @@ window.PORTAL_SYNCED = {
       "Tyson 2.0 / Social Videos": "https://www.dropbox.com/scl/fo/48j5dhjcrowprg4zvjvqk/AKI5sZa0KjJpwq6umgf7eso?rlkey=crxbw88x74w5c9zxmqjr9nv8g&dl=1",
       "Tyson 2.0 / TV Screen Videos": "https://www.dropbox.com/scl/fo/4prr01v0nhyry1d0l7xu2/ABiSLCRuOdb_2LL4k9gjtXA?rlkey=a9ktf9xwauqc5awmeoyc570fk&dl=1",
       "Tyson 2.0 / Documents": "https://www.dropbox.com/scl/fo/w3tb3k0wz7k0zukluh9ae/APL2PRmSRlzgTcuYTTE4bS4?rlkey=ew5cm0i5j0i0uuy0srd2d7t2f&dl=1"
-    }
+    },
+    "updated": "2026-08-17"
   },
   "Modül": {
     "folders": {
