@@ -11103,7 +11103,8 @@ window.PORTAL_SYNCED = {
       "Tyson 2.0 / Lifestyle Photos": "https://www.dropbox.com/scl/fo/ccp23g4ubrjp1jop9kuud/APWqyXOOxnauN961rIZu_uM?rlkey=9k1qr1jhd618l9e9rmpu46ia1&dl=1",
       "Tyson 2.0 / Social Videos": "https://www.dropbox.com/scl/fo/qrlkggreb74z51gg9hywk/AIbmaPQru4lklWrIFHtQYgs?rlkey=p7ujjm8y2k1e9tqztlf8wr46c&dl=1",
       "Tyson 2.0 / TV Screen Videos": "https://www.dropbox.com/scl/fo/l113hsy2t7jg7isc5j644/AEJoSyRJYOYCw6cBXUD3bvg?rlkey=kh2d6y1irvmz1z23920gjlop4&dl=1"
-    }
+    },
+    "updated": "2026-07-22"
   },
   "Accessories": {
     "folders": {
