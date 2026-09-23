@@ -2783,7 +2783,8 @@ window.PORTAL_SYNCED = {
       "Pink / Lifestyle Photos": "https://www.dropbox.com/scl/fo/v6zucy9ghyjdzpd2p3lrs/AKrMN4zGykvANPI5u36zuJc?rlkey=y9a2wb2hm7zkdmn8k9hxcd9b6&dl=1",
       "Pink / Social Videos": "https://www.dropbox.com/scl/fo/y7sgdh43ygg7cdp680jpk/ALIwZC_ik9RyUVThJ7TBSpA?rlkey=4c5lqlp6a5n947u6zwle0em5x&dl=1",
       "Pink / Documents": "https://www.dropbox.com/scl/fo/havm4iu4g4v0bme704wy5/ACHXVn-96krO7EyoQfQG8ck?rlkey=y2lzmmuvcpcjmx586ohvg9f78&dl=1"
-    }
+    },
+    "updated": "2026-07-10"
   },
   "Classic Gravity Infusers": {
     "folders": {
