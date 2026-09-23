@@ -19106,6 +19106,9 @@ window.PORTAL_SYNCED = {
       ]
     },
     "dropbox": "https://www.dropbox.com/scl/fo/uyumil4v39m7anojn1s2i/ADf7ryae4gkbl-AxhY2K3yw?rlkey=hiycgttx4hcg0vfyobizhm5r0&dl=1",
-    "folderLinks": {}
+    "folderLinks": {
+      "In-Store Marketing": "https://www.dropbox.com/scl/fo/uyumil4v39m7anojn1s2i/ADf7ryae4gkbl-AxhY2K3yw?rlkey=hiycgttx4hcg0vfyobizhm5r0&dl=1"
+    },
+    "updated": "2026-07-15"
   }
 };
