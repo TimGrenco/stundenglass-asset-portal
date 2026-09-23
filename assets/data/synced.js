@@ -18928,7 +18928,8 @@ window.PORTAL_SYNCED = {
       "Wall Mount / Grateful Dead Wall Mount": "https://www.dropbox.com/scl/fo/g7krfbxjif1zvhqsgvy5w/AEVcnyHiMe42GM8k8MFaHNg?rlkey=exb3j1or1hnwr7umrvuofyltn&dl=1",
       "Wall Mount / Grateful Dead Wall Mount / Lifestyle Photos": "https://www.dropbox.com/scl/fo/4vt60op7utnjsjzquygyp/AHU9r1IXFYzMYMDEr-qZQXY?rlkey=mm2wk0bvcop2qh1pxixqditu3&dl=1",
       "Wall Mount / Grateful Dead Wall Mount / Social Videos": "https://www.dropbox.com/scl/fo/34dlyrvzlsosk89c9jko6/AEWi0e-q6vkdXB7bV7BFIrc?rlkey=wh7oxmtws8v8u6oag2ycptnum&dl=1"
-    }
+    },
+    "updated": "2026-09-05"
   },
   "Stündenglass Logos": {
     "folders": {
