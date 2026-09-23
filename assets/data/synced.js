@@ -1441,7 +1441,8 @@ window.PORTAL_SYNCED = {
       "Violet Purple / Packaging": "https://www.dropbox.com/scl/fo/m8bxoadpkqbd3bbbvjqyp/AIY9XpKaVshnkxiJAjIlQh0?rlkey=wl5fgq1em6ruv51gjvttgwj3t&dl=1",
       "Violet Purple / In-Store Marketing": "https://www.dropbox.com/scl/fo/xxoxrw9cfturi9igz8srw/AG9qbPcbU9TCYAr1HOHu6eg?rlkey=8pjpw3xhqc7yyb7o9yijtdxmw&dl=1",
       "Violet Purple / Documents": "https://www.dropbox.com/scl/fo/ae8fj5g9sjn0qizvlatqm/AEOxtEc0hql0oHOSyuuYq_Q?rlkey=4xm183gtwqdmb8evkpg3dm60j&dl=1"
-    }
+    },
+    "updated": "2026-09-15"
   },
   "Kompact Gravity Infusers": {
     "folders": {
