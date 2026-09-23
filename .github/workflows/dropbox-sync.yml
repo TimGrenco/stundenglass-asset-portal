@@ -2,6 +2,11 @@ name: Dropbox sync
 
 on:
   workflow_dispatch:        # manual "Run sync" button
+    inputs:
+      allow_shrink:
+        description: "Product name(s), comma-separated, allowed to lose more than half their files (a real deletion, not a failed walk). Leave blank normally."
+        required: false
+        default: ""
   schedule:
     - cron: "23 * * * *"    # hourly (acts as a backstop even with a webhook)
 
@@ -40,6 +45,7 @@ jobs:
           DROPBOX_APP_KEY: ${{ secrets.DROPBOX_APP_KEY }}
           DROPBOX_APP_SECRET: ${{ secrets.DROPBOX_APP_SECRET }}
           DROPBOX_REFRESH_TOKEN: ${{ secrets.DROPBOX_REFRESH_TOKEN }}
+          ALLOW_SHRINK: ${{ github.event.inputs.allow_shrink }}
         run: node scripts/dropbox-sync.mjs
 
       - name: Commit & push if changed

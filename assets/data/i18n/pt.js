@@ -447,6 +447,19 @@ window.PORTAL_I18N.pt = {
   "{n} results": "{n} resultados",
   "{n} stores": "{n} lojas",
   "{n} video": "{n} vídeo",
-  "{n} videos": "{n} vídeos"
+  "{n} videos": "{n} vídeos",
+  "Clear (color)": "Transparente",
+  "Amber": "Âmbar",
+  "Blue": "Azul",
+  "Green": "Verde",
+  "Gray": "Cinza",
+  "Grey": "Cinza",
+  "Pink": "Rosa",
+  "Purple": "Roxo",
+  "Red": "Vermelho",
+  "Silver": "Prata",
+  "Iridescent": "Iridescente",
+  "Zoom in": "Ampliar",
+  "Fit to screen": "Ajustar à tela"
  }
 };

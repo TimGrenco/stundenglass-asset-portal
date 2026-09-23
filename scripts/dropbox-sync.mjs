@@ -379,10 +379,23 @@ async function syncDirectFiles(p) {
   mkdirSync(filesDir, { recursive: true });
   const keep = new Set(), keepFiles = new Set();
   const out = [];
+  const prevOut = ((synced[p.name] || {}).folders || {})[p.flat || "Files"] || [];
+  // One dead or revoked link must not take down the whole sync (rpc() throws on
+  // a 409) or silently drop that catalog: keep its last good entry and files.
+  function keepPrevious(spec, why) {
+    const prev = prevOut.find((x) => x.url === dlLink(spec.link));
+    console.error(`  ! ${why}: ${spec.link.slice(0, 60)}…` + (prev ? ` — keeping previous "${prev.name}"` : ""));
+    if (!prev) return;
+    out.push(prev);
+    if (prev.file) keepFiles.add(prev.file.split("/").pop());
+    if (prev.thumb) keep.add(prev.thumb.split("/").pop());
+  }
 
   for (const spec of p.files) {
-    const meta = await rpc(tok, "sharing/get_shared_link_metadata", { url: spec.link });
-    if (!meta || meta[".tag"] !== "file") { console.error(`  ! not a file link: ${spec.link.slice(0, 60)}…`); continue; }
+    let meta;
+    try { meta = await rpc(tok, "sharing/get_shared_link_metadata", { url: spec.link }); }
+    catch (e) { keepPrevious(spec, "link failed (" + String(e.message).slice(0, 80) + ")"); continue; }
+    if (!meta || meta[".tag"] !== "file") { keepPrevious(spec, "not a file link"); continue; }
     const name = meta.name;                       // e.g. "Stundenglass-2026-Catalog-US.pdf"
     const e = ext(name);
     const base = name.replace(/\.[^.]+$/, "");
@@ -392,9 +405,9 @@ async function syncDirectFiles(p) {
     const localPath = join(filesDir, cf);
     if (!existsSync(localPath)) {
       console.error(`  ↓ ${name}`);
-      await downloadFile(tok, spec.link, "", localPath);
+      try { await downloadFile(tok, spec.link, "", localPath); } catch (e) { console.error(`  ! ${e.message}`); }
     }
-    if (!existsSync(localPath)) { console.error(`  ! download failed: ${name}`); continue; }
+    if (!existsSync(localPath)) { keepPrevious(spec, "download failed"); continue; }
     keepFiles.add(cf);
 
     // First-page cover for the catalog card.
@@ -634,10 +647,11 @@ for (const p of PRODUCTS) {
     folderLinks[path] = dlLink(fl || p.link);
   }
   if (folderLinksMinted) console.error(`  ↳ minted ${folderLinksMinted} folder link(s)`);
-
-  // Prune thumbnails / originals for files that no longer exist.
-  for (const fn of readdirSync(dir)) if (fn !== "files" && !keep.has(fn)) { try { unlinkSync(join(dir, fn)); } catch {} }
-  for (const fn of readdirSync(filesDir)) if (!keepFiles.has(fn)) { try { unlinkSync(join(filesDir, fn)); } catch {} }
+  // Files sitting directly in the product's root (a flat product like Logos) are
+  // bucketed under p.flat, but the root has no folder id — its share link IS
+  // p.link. Record it, or "Copy folder link" there can never work.
+  const rootBucket = p.flat || "Files";
+  if (folders[rootBucket] && !folderLinks[rootBucket]) folderLinks[rootBucket] = dlLink(p.link);
 
   writeFileSync(linkCacheFile, JSON.stringify(linkCache));
 
@@ -650,13 +664,25 @@ for (const p of PRODUCTS) {
   const prevFolders = (synced[p.name] || {}).folders;
   const prevTotal = prevFolders ? Object.values(prevFolders).reduce((n, a) => n + a.length, 0) : 0;
   const total = Object.values(folders).reduce((n, a) => n + a.length, 0);
-  if (prevTotal > 20 && total < prevTotal * 0.5) {
+  // A deliberate large deletion (a colorway retired) needs a way past the guard:
+  // run the workflow by hand with "allow_shrink" set to the product name(s).
+  const allowShrink = (process.env.ALLOW_SHRINK || "").split(",").map((x) => x.trim()).filter(Boolean);
+  if (prevTotal > 20 && total < prevTotal * 0.5 && !allowShrink.includes(p.name)) {
     console.error(`  ! REFUSING to overwrite ${p.name}: ${prevTotal} files -> ${total}. ` +
       "That looks like a truncated walk, not a real deletion — keeping the previous data. " +
-      "If the files really were deleted, re-run once this product syncs fully.");
+      "If the files really were deleted, run the Dropbox sync workflow by hand with " +
+      `allow_shrink = "${p.name}".`);
     truncated.push(`${p.name} (${prevTotal} -> ${total})`);
+    // Keep the previous thumbnails too: the kept data still points at them, and
+    // pruning here would ship the old file list with broken images.
   } else {
-    synced[p.name] = { folders, dropbox: dlLink(p.link), folderLinks };
+    // Newest file date in the product, so the portal's "updated …" line tracks
+    // Dropbox instead of a hand-set date that never moves.
+    const newest = folderSpecs.flatMap((s) => s.files).map((f) => f.server_modified || "").sort().pop() || "";
+    synced[p.name] = { folders, dropbox: dlLink(p.link), folderLinks, ...(newest ? { updated: newest.slice(0, 10) } : {}) };
+    // Prune thumbnails / originals for files that no longer exist.
+    for (const fn of readdirSync(dir)) if (fn !== "files" && !keep.has(fn)) { try { unlinkSync(join(dir, fn)); } catch {} }
+    for (const fn of readdirSync(filesDir)) if (!keepFiles.has(fn)) { try { unlinkSync(join(filesDir, fn)); } catch {} }
   }
   const withThumb = Object.values(folders).reduce((n, a) => n + a.filter((x) => x.thumb).length, 0);
   const withLink = Object.values(folders).reduce((n, a) => n + a.filter((x) => /scl\/fi\//.test(x.url)).length, 0);

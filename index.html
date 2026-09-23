@@ -117,7 +117,7 @@
           <input id="search" type="text" placeholder="Search products, files, formats…" data-i18n-ph aria-label="Search all assets" data-i18n-aria />
           <button id="search-clear" class="search-clear" type="button" aria-label="Clear search" data-i18n-aria><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
         </div>
-        <span class="browse-count" id="browse-count"></span>
+        <span class="browse-count" id="browse-count" role="status" aria-live="polite"></span>
       </div>
     </div>
   </section>
@@ -131,12 +131,12 @@
         <h2 id="all-title">Current products</h2>
         <span class="badge" id="count-badge">0</span>
         <div class="viewmode" id="view-mode" role="group" aria-label="Layout" data-i18n-aria>
-          <button class="on" data-layout="grid" title="Grid view" data-i18n-title aria-label="Grid view" data-i18n-aria></button>
-          <button data-layout="list" title="List view" data-i18n-title aria-label="List view" data-i18n-aria></button>
+          <button class="on" data-layout="grid" aria-pressed="true" title="Grid view" data-i18n-title aria-label="Grid view" data-i18n-aria></button>
+          <button data-layout="list" aria-pressed="false" title="List view" data-i18n-title aria-label="List view" data-i18n-aria></button>
         </div>
         <div class="sort" id="sort-toggle" role="group" aria-label="Sort products" data-i18n-aria>
-          <button class="on" data-sort="featured" data-i18n>Featured</button>
-          <button data-sort="az" data-i18n>A–Z</button>
+          <button class="on" data-sort="featured" aria-pressed="true" data-i18n>Featured</button>
+          <button data-sort="az" aria-pressed="false" data-i18n>A–Z</button>
         </div>
       </div>
       <div class="grid" id="all-grid"></div>

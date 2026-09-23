@@ -447,6 +447,19 @@ window.PORTAL_I18N.it = {
   "{n} results": "{n} risultati",
   "{n} stores": "{n} negozi",
   "{n} video": "{n} video",
-  "{n} videos": "{n} video"
+  "{n} videos": "{n} video",
+  "Clear (color)": "Trasparente",
+  "Amber": "Ambra",
+  "Blue": "Blu",
+  "Green": "Verde",
+  "Gray": "Grigio",
+  "Grey": "Grigio",
+  "Pink": "Rosa",
+  "Purple": "Viola",
+  "Red": "Rosso",
+  "Silver": "Argento",
+  "Iridescent": "Iridescente",
+  "Zoom in": "Ingrandisci",
+  "Fit to screen": "Adatta allo schermo"
  }
 };

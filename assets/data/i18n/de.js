@@ -447,6 +447,19 @@ window.PORTAL_I18N.de = {
   "{n} results": "{n} Ergebnisse",
   "{n} stores": "{n} Geschäfte",
   "{n} video": "{n} Video",
-  "{n} videos": "{n} Videos"
+  "{n} videos": "{n} Videos",
+  "Clear (color)": "Transparent",
+  "Amber": "Bernstein",
+  "Blue": "Blau",
+  "Green": "Grün",
+  "Gray": "Grau",
+  "Grey": "Grau",
+  "Pink": "Pink",
+  "Purple": "Lila",
+  "Red": "Rot",
+  "Silver": "Silber",
+  "Iridescent": "Irisierend",
+  "Zoom in": "Vergrößern",
+  "Fit to screen": "An Bildschirm anpassen"
  }
 };

@@ -488,6 +488,7 @@ window.PORTAL_PRODUCTS.forEach(function (p) {
       if (s.folderLinks) p.folderLinks = s.folderLinks;
       p.synced = true;
       p.syncedAt = s.syncedAt;
+      if (s.updated && (!p.added || s.updated > p.added)) p.updated = s.updated;
       // Logo folders have no product shot — use the primary black mark as the
       // hero cover (prefers a PNG; falls back to any thumbnailed logo file).
       if (p.isLogo && !p.cover) {
@@ -528,9 +529,8 @@ window.PORTAL_COLORWAYS = {
     { color: "Violet Purple", hex: "#7A4EAB", sku: "SG4-KIT-STPU-02", upc: "811736020299", name: "Stündenglass Gravity Infuser — Violet Purple" },
     { color: "Olive Green", hex: "#6B7A3A", sku: "SG4-KIT-STGR-02", upc: "852570004168", name: "Stündenglass Gravity Infuser — Olive Green" },
     { color: "Desert Rose", hex: "#C08497", sku: "SG4-KIT-STDR-02", upc: "811736023108", name: "Stündenglass Gravity Infuser — Desert Rose" },
-    // Added from the updated SKU sheet. No Dropbox assets for this colourway yet —
-    // the card is informational (swatch + SKU/UPC), so it's safe to list. ⚠️ hex is
-    // an approximation of "Velvet Burgundy" — confirm against the brand files.
+    // Added from the updated SKU sheet; its Dropbox folder synced 2026-09-15.
+    // ⚠️ hex is an approximation of "Velvet Burgundy" — confirm against the brand files.
     { color: "Velvet Burgundy", hex: "#722F37", sku: "SG4-KIT-STBU-02", upc: "852570004458", name: "Stündenglass Gravity Infuser — Velvet Burgundy" },
   ],
   "Classic Gravity Infusers": [
@@ -568,14 +568,18 @@ window.PORTAL_COLORWAYS = {
 })();
 
 /* =============================================================================
-   CATALOGS & B2B BRAND DOCUMENTS — synced from the "Catalogs" Dropbox folder.
+   CATALOGS & B2B BRAND DOCUMENTS — synced from DIRECT Dropbox FILE links.
    These aren't product-specific, so they get their own home-page section with an
    in-site page viewer, a download, and a shareable deep link (#catalog/<slug>).
 
-   TO ADD A CATALOG: just drop the PDF in the Dropbox "Catalogs" folder. It shows
-   up on the next sync, titled by its filename. The map below is OPTIONAL — use it
-   only to give a file a prettier title, a region badge, or a group. Anything not
-   listed here still appears, so new drops never need a code change.
+   TO UPDATE A CATALOG: replace the PDF in place in Dropbox (same file, new
+   version). The next hourly sync picks it up and redraws the cover — no code change.
+
+   TO ADD A CATALOG: dropping a new PDF into a Dropbox folder does NOT add it.
+   Copy the new file's Dropbox share link into the `files` list of the "Catalogs"
+   entry in scripts/dropbox-sync.mjs, then (optionally) map its filename below to
+   give it a prettier title, a region badge, or a group. Anything synced but not
+   listed here still appears, titled by its filename.
 
      "<exact filename, no .pdf>": { title, region, group, order }
 
