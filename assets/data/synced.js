@@ -1926,14 +1926,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "KimmyTan_KompactSG_Underwater",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/uaennxql6wv6rsk20ozma/KimmyTan_KompactSG_Underwater.mp4?rlkey=7qhnqq533zl0o8wzhrp6m1ko5&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/7e74365986599e22f1ce145367dd917531b6f7fd254907c9a2cec22cfa744de0.jpg",
-          "file": null
-        },
-        {
           "name": "Kompact_3D_Teaser_Reels",
           "type": "video",
           "format": "MP4",
@@ -1955,14 +1947,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/p3q7zc3rxzmafzxs5a77z/KompactSG-Pineapple_MXGIF_01.mp4?rlkey=sjk7vgft4verpzvv1ycy7g2sa&dl=0",
           "thumb": "assets/synced/kompact-gravity-infusers/49ae9a5253ca7a672755fad1347fa65ed7fc233785c642c580dd9259631d7f9b.jpg",
-          "file": null
-        },
-        {
-          "name": "Omg_Becky_SGKompact_June",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/5dz9rxjedkh60tnfbt7mp/Omg_Becky_SGKompact_June.mp4?rlkey=u0qwxgjcjv4d3l3amhrgff7kb&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/0c5e5082e59c0b72442e6f26d658dfe80f1af7d1413d21966fd879f4c4ad8e6c.jpg",
           "file": null
         },
         {
@@ -2022,43 +2006,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "SG Kompact x The Sauceres Smoked Drink",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/c6lhcdx614f0egn50n4fu/SG-Kompact-x-The-Sauceres-Smoked-Drink.mp4?rlkey=pgi33noo3e5f4m1n1nmn33yn9&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/e8b6359113ee7670deab3773f9cec264aee490c90c171d5063baf1979acbd623.jpg",
-          "file": null
-        },
-        {
           "name": "SG Kompact_Reels_Short",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/x3jhasyfkhqih11wqglzi/SG-Kompact_Reels_Short.mp4?rlkey=f5w87ccndg2n8ggduzctpli0w&dl=0",
           "thumb": "assets/synced/kompact-gravity-infusers/313a24e2afe46b00f2a30e496b4b2b765345df10d4033b4cc91e457d007afebd.jpg",
-          "file": null
-        },
-        {
-          "name": "Silenced Hippie Kompact",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/jf8dzadb9x2lp4ta7e6j0/Silenced-Hippie-Kompact.mp4?rlkey=e8g1drr7qpiqcp11ape9ka5dc&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/1ceaf06b91f08287be8950288ad4b97cc774e11b483cc7e81960f93311a4f977.jpg",
-          "file": null
-        },
-        {
-          "name": "snappernickel Kompact Modül Lake may",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/r4qu37u5bauesn0q3nsvy/snappernickel-Kompact-Mod-l-Lake-may.mp4?rlkey=dk4lubgqll7tc3j00quskx25j&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/9b3c9b73e2ebae1398231b597f586e0f5775b0e738a6751178d868950baf20cb.jpg",
-          "file": null
-        },
-        {
-          "name": "ValeriaValWong Kompact",
-          "type": "video",
-          "format": "MOV",
-          "url": "https://www.dropbox.com/scl/fi/xd9uilew26sznwanttll0/ValeriaValWong-Kompact.MOV?rlkey=c5s7nzln4te6lm3vlm5vpr11a&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/500a9c954fa5202fad44aeae5b7f4b02b0307eb4df5d970ba0f05cda1c9f5ce5.jpg",
           "file": null
         }
       ],
@@ -2672,30 +2624,6 @@ window.PORTAL_SYNCED = {
       ],
       "Pink / Social Videos": [
         {
-          "name": "Koala LivestreamPink Kompact",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/x647tip2usnxck89ehf8x/Koala-LivestreamPink-Kompact.mp4?rlkey=y6fh0as8w0f1d6ncxh2cootir&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/ee1607831b8d9d9e88a96aaba96c330cbe93909758dfdff6ff6e55219ea403fa.jpg",
-          "file": null
-        },
-        {
-          "name": "Koala Modül Pink Kompact Feb",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/y535qinmu1qk6q4bftvs9/Koala-Mod-l-Pink-Kompact-Feb.mp4?rlkey=z0bzlybz8efubnpobea19ir4z&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/baffeb9ff8e866d13fcb915ca4adde73cc7382b2795661bea8e827e5211166b6.jpg",
-          "file": null
-        },
-        {
-          "name": "Ms_krystale_Pink Kompact Modül",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/sygapq7h0w9npkyb4sntm/Ms_krystale_Pink-Kompact-Mod-l.mp4?rlkey=i7rkq1th5v29dktpj81i06nlc&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/eabcbcaf57f2cdfb5fb2b15b879bb06ed35a5a50d855ce7e1d04ff1f3341f35e.jpg",
-          "file": null
-        },
-        {
           "name": "Pink Kompact Ash Catcher Alice",
           "type": "video",
           "format": "MP4",
@@ -2720,19 +2648,55 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Pink Kompact Silenced Hippie March",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/7nc8pusthdwdvl8uw7teo/Pink-Kompact-Silenced-Hippie-March.mp4?rlkey=gxmghfs9thvwqs2e0eci734ew&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/b471f6e84301a50813ff30b75da7d22b6c540a112808b0d4151ca503fc1c5a03.jpg",
-          "file": null
-        },
-        {
           "name": "Pink Kompact ThatHighCouple Reels",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/uizysnp80j7u9sqasg061/Pink-Kompact-ThatHighCouple-Reels.mp4?rlkey=3t897rz5kq7qpg3nix50ran4k&dl=0",
           "thumb": "assets/synced/kompact-gravity-infusers/4f00d99abd2c8a6023478d16fa4be56f7f7fc7fcc9b33fae7d0d5c2b78f4dee2.jpg",
+          "file": null
+        }
+      ],
+      "Pink / Documents": [
+        {
+          "name": "Stundenglass-Kompact_Pink_One-Sheet",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/i47z20lq6fbs72yv34wwz/Stundenglass-Kompact_Pink_One-Sheet.pdf?rlkey=7h90ggt7s1nt7ox6403ppc50l&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/21e86fe86a99b40d436748f923cd524ed43c7769add45f5135caa0e6ffe99540.jpg",
+          "file": null
+        }
+      ],
+      "Pink / UGC Videos": [
+        {
+          "name": "Koala LivestreamPink Kompact",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/x647tip2usnxck89ehf8x/Koala-LivestreamPink-Kompact.mp4?rlkey=y6fh0as8w0f1d6ncxh2cootir&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/ee1607831b8d9d9e88a96aaba96c330cbe93909758dfdff6ff6e55219ea403fa.jpg",
+          "file": null
+        },
+        {
+          "name": "Koala Modül Pink Kompact Feb",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/y535qinmu1qk6q4bftvs9/Koala-Mod-l-Pink-Kompact-Feb.mp4?rlkey=z0bzlybz8efubnpobea19ir4z&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/baffeb9ff8e866d13fcb915ca4adde73cc7382b2795661bea8e827e5211166b6.jpg",
+          "file": null
+        },
+        {
+          "name": "Ms_krystale_Pink Kompact Modül",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/sygapq7h0w9npkyb4sntm/Ms_krystale_Pink-Kompact-Mod-l.mp4?rlkey=i7rkq1th5v29dktpj81i06nlc&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/eabcbcaf57f2cdfb5fb2b15b879bb06ed35a5a50d855ce7e1d04ff1f3341f35e.jpg",
+          "file": null
+        },
+        {
+          "name": "Pink Kompact Silenced Hippie March",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/7nc8pusthdwdvl8uw7teo/Pink-Kompact-Silenced-Hippie-March.mp4?rlkey=gxmghfs9thvwqs2e0eci734ew&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/b471f6e84301a50813ff30b75da7d22b6c540a112808b0d4151ca503fc1c5a03.jpg",
           "file": null
         },
         {
@@ -2752,13 +2716,53 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
-      "Pink / Documents": [
+      "UGC Videos": [
         {
-          "name": "Stundenglass-Kompact_Pink_One-Sheet",
-          "type": "pdf",
-          "format": "PDF",
-          "url": "https://www.dropbox.com/scl/fi/i47z20lq6fbs72yv34wwz/Stundenglass-Kompact_Pink_One-Sheet.pdf?rlkey=7h90ggt7s1nt7ox6403ppc50l&dl=0",
-          "thumb": "assets/synced/kompact-gravity-infusers/21e86fe86a99b40d436748f923cd524ed43c7769add45f5135caa0e6ffe99540.jpg",
+          "name": "KimmyTan_KompactSG_Underwater",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/uaennxql6wv6rsk20ozma/KimmyTan_KompactSG_Underwater.mp4?rlkey=7qhnqq533zl0o8wzhrp6m1ko5&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/7e74365986599e22f1ce145367dd917531b6f7fd254907c9a2cec22cfa744de0.jpg",
+          "file": null
+        },
+        {
+          "name": "Omg_Becky_SGKompact_June",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/5dz9rxjedkh60tnfbt7mp/Omg_Becky_SGKompact_June.mp4?rlkey=u0qwxgjcjv4d3l3amhrgff7kb&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/0c5e5082e59c0b72442e6f26d658dfe80f1af7d1413d21966fd879f4c4ad8e6c.jpg",
+          "file": null
+        },
+        {
+          "name": "SG Kompact x The Sauceres Smoked Drink",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/c6lhcdx614f0egn50n4fu/SG-Kompact-x-The-Sauceres-Smoked-Drink.mp4?rlkey=pgi33noo3e5f4m1n1nmn33yn9&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/e8b6359113ee7670deab3773f9cec264aee490c90c171d5063baf1979acbd623.jpg",
+          "file": null
+        },
+        {
+          "name": "Silenced Hippie Kompact",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/jf8dzadb9x2lp4ta7e6j0/Silenced-Hippie-Kompact.mp4?rlkey=e8g1drr7qpiqcp11ape9ka5dc&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/1ceaf06b91f08287be8950288ad4b97cc774e11b483cc7e81960f93311a4f977.jpg",
+          "file": null
+        },
+        {
+          "name": "snappernickel Kompact Modül Lake may",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/r4qu37u5bauesn0q3nsvy/snappernickel-Kompact-Mod-l-Lake-may.mp4?rlkey=dk4lubgqll7tc3j00quskx25j&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/9b3c9b73e2ebae1398231b597f586e0f5775b0e738a6751178d868950baf20cb.jpg",
+          "file": null
+        },
+        {
+          "name": "ValeriaValWong Kompact",
+          "type": "video",
+          "format": "MOV",
+          "url": "https://www.dropbox.com/scl/fi/xd9uilew26sznwanttll0/ValeriaValWong-Kompact.MOV?rlkey=c5s7nzln4te6lm3vlm5vpr11a&dl=0",
+          "thumb": "assets/synced/kompact-gravity-infusers/500a9c954fa5202fad44aeae5b7f4b02b0307eb4df5d970ba0f05cda1c9f5ce5.jpg",
           "file": null
         }
       ]
@@ -2782,9 +2786,11 @@ window.PORTAL_SYNCED = {
       "Pink / Product Photos": "https://www.dropbox.com/scl/fo/zhprfumwrn1eoq121ycs8/AMusajiBN_Y9ljFEoHvsDjs?rlkey=51ydjn9r5ne7okjrpebe6sjfv&dl=1",
       "Pink / Lifestyle Photos": "https://www.dropbox.com/scl/fo/v6zucy9ghyjdzpd2p3lrs/AKrMN4zGykvANPI5u36zuJc?rlkey=y9a2wb2hm7zkdmn8k9hxcd9b6&dl=1",
       "Pink / Social Videos": "https://www.dropbox.com/scl/fo/y7sgdh43ygg7cdp680jpk/ALIwZC_ik9RyUVThJ7TBSpA?rlkey=4c5lqlp6a5n947u6zwle0em5x&dl=1",
-      "Pink / Documents": "https://www.dropbox.com/scl/fo/havm4iu4g4v0bme704wy5/ACHXVn-96krO7EyoQfQG8ck?rlkey=y2lzmmuvcpcjmx586ohvg9f78&dl=1"
+      "Pink / Documents": "https://www.dropbox.com/scl/fo/havm4iu4g4v0bme704wy5/ACHXVn-96krO7EyoQfQG8ck?rlkey=y2lzmmuvcpcjmx586ohvg9f78&dl=1",
+      "Pink / UGC Videos": "https://www.dropbox.com/scl/fo/k9p1ravlcw7zuoho15pab/AHMn4Y9ibDwfSRr2sj6Bh5w?rlkey=ra59sr0v6kr1bjt4ji8fnplvu&dl=1",
+      "UGC Videos": "https://www.dropbox.com/scl/fo/x2711liar3ewywap05wal/ACvxSLCRiHzGMGRgH4KiMNM?rlkey=y467txjpy081rduxjg1cgs31l&dl=1"
     },
-    "updated": "2026-07-10"
+    "updated": "2026-10-01"
   },
   "Classic Gravity Infusers": {
     "folders": {
