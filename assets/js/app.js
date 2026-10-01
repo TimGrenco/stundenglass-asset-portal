@@ -27,7 +27,7 @@
      translated. To revise a language, edit only its pack — no code change. */
   var LANGS = { en: "English", es: "Español", de: "Deutsch", it: "Italiano", fr: "Français", pt: "Português", sv: "Svenska", pl: "Polski", da: "Dansk" };
   function isLang(l) { return Object.prototype.hasOwnProperty.call(LANGS, l); }
-  var LANG_VER = "20261001b";   // bump with the other asset tokens
+  var LANG_VER = "20261001c";   // bump with the other asset tokens
   // Load a language pack once. English is a no-op (it IS the source).
   var _langLoading = {};
   function loadLangPack(l, cb) {
@@ -221,7 +221,8 @@
     resetSuggest();   // its chips are built once and cached — force a re-translate
     _fileIndex = null;   // its haystacks embed translated text — rebuild in the new language
     _trAlias = null;     // translated→English search aliases come from the pack
-    route();   // re-render whatever view is open, in the new language
+    _langSwitch = true;
+    try { route(); } finally { _langSwitch = false; }   // re-render whatever view is open, in the new language
     syncURL();  // route() only rewrites the URL on the home view — without this a stale
                 // ?lang= survives and wins over localStorage on the next load
     restoreQuizState(quiz);
@@ -594,6 +595,8 @@
     "E-Comm Render Photos": "Product photos", "Lifestyle Photos": "Lifestyle Photos",
     "Logos": "Logos", "Social Videos": "Social Videos", "TV Screen Videos": "TV Screen Videos",
     "Misc": "Documents",
+    // Spelled out, per marketing: never "UGC" on the card.
+    "UGC Videos": "User Generated Content", "UGC": "User Generated Content",
   };
   function typeLabel(t) { return own(TYPE_LABELS, t) ? TYPE_LABELS[t] : t; }
   // Folder names that collide with a UI string of a different meaning get their
@@ -2366,6 +2369,10 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   }
 
   // ---- rendering: detail ---------------------------------------------------
+  // Which folder is open on the current product page — kept outside the page so
+  // a language switch (which re-renders it) can reopen it. Never read on a
+  // normal page load.
+  var _openMemo = null, _langSwitch = false;
   function openDetail(p, initialFolder) {
     $("#home").style.display = "none";
     $("#styleguide").style.display = "none";
@@ -2438,6 +2445,10 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var openPath = "";
     var docTarget = null;
     var arrivedViaLink = false;
+    // Re-rendering for a language switch: reopen what was open, without scrolling.
+    if (!initialFolder && _langSwitch && _openMemo && _openMemo.product === p.name && _openMemo.path) {
+      openPath = isFolderBranch(_openMemo.path) || (p.folders[_openMemo.path] || []).length ? _openMemo.path : "";
+    }
     if (initialFolder && own(p.folders, initialFolder) && isDoc(initialFolder)) { docTarget = initialFolder; arrivedViaLink = true; }
     else if (initialFolder && ((own(p.folders, initialFolder) && p.folders[initialFolder].length) || isFolderBranch(initialFolder))) {
       openPath = initialFolder; arrivedViaLink = true;
@@ -2490,7 +2501,20 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     function folderCover(path) {
       if (path in _coverCache) return _coverCache[path];
       var prefix = path + SEP, best = null, fallback = null;
-      var direct = (p.folders[path] || []).filter(function (x) { return x.thumb; })[0];
+      var files = (p.folders[path] || []).filter(function (x) { return x.thumb; });
+      // A hand-picked cover (assets.js PORTAL_FOLDER_COVERS: a distinctive part
+      // of the file name) wins — e.g. a strong UGC frame instead of whatever
+      // sorts first. Falls through if that file has since left the folder.
+      var pick = ((window.PORTAL_FOLDER_COVERS || {})[p.name] || {})[path];
+      if (pick) {
+        var hit = files.filter(function (x) { return x.name.toLowerCase().indexOf(String(pick).toLowerCase()) !== -1; })[0];
+        if (hit) return (_coverCache[path] = hit.thumb);
+      }
+      // Never front a video folder with a how-to/cleaning/tutorial clip (the TV
+      // Screen Videos card was showing "How To Use") when anything else is there.
+      var HOWTO = /how ?to|tutorial|clean|getting started|unboxing|error screen|tech specs/i;
+      var showy = files.filter(function (x) { return !(x.type === "video" && HOWTO.test(x.name)); });
+      var direct = showy[0] || files[0];
       if (direct && !isFolderBranch(path)) return (_coverCache[path] = direct.thumb);
       tree.forEach(function (f) {
         if (f !== path && f.indexOf(prefix) !== 0) return;      // this folder or below it
@@ -2591,6 +2615,92 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     }
     // SALES ASSETS: every Documents folder as a labeled group (the product's own
     // "Documents", then one per colorway/collab that has its own).
+    // Regional editions of one document ("… One Sheet", "… One Sheet - CAD",
+    // "- EU", "- UK") become ONE card with a region switch instead of four
+    // near-identical file cards. A name with no region suffix is the USD edition
+    // when it has regional siblings. Only regions that exist get a button.
+    var REGION_ORDER = ["USD", "CAD", "EU", "UK"];
+    var REGION_OF = { US: "USD", USA: "USD", USD: "USD", CAD: "CAD", CA: "CAD", EU: "EU", EUR: "EU", UK: "UK", GB: "UK", GBP: "UK" };
+    function regionSplit(files) {
+      var byBase = {}, order = [];
+      files.forEach(function (x) {
+        var m = String(x.name).match(/^(.*?)[\s_-]+(US|USA|USD|CAD|CA|EU|EUR|UK|GB|GBP)$/i);
+        var base = (m ? m[1] : x.name).replace(/[\s_-]+$/, ""), region = m ? REGION_OF[m[2].toUpperCase()] : null;
+        var k = base.toLowerCase();
+        if (!byBase[k]) { byBase[k] = { base: base, items: [] }; order.push(k); }
+        byBase[k].items.push({ file: x, region: region });
+      });
+      var sets = [], rest = [];
+      order.forEach(function (k) {
+        var g = byBase[k];
+        var tagged = g.items.filter(function (it) { return it.region; });
+        if (!tagged.length || g.items.length < 2) { g.items.forEach(function (it) { rest.push(it.file); }); return; }
+        var seen = {}, variants = [];
+        g.items.forEach(function (it) {
+          var r = it.region || "USD";
+          if (seen[r]) { rest.push(it.file); return; }
+          seen[r] = 1; variants.push({ region: r, file: it.file });
+        });
+        variants.sort(function (a, b) { return REGION_ORDER.indexOf(a.region) - REGION_ORDER.indexOf(b.region); });
+        sets.push({ base: g.base, variants: variants });
+      });
+      return { sets: sets, rest: rest };
+    }
+    var _docSplit = {};   // doc folder path → regionSplit result (computed once)
+    function docSplit(f) { return _docSplit[f] || (_docSplit[f] = regionSplit(p.folders[f] || [])); }
+    function oneSheetHTML(set, key) {
+      var v = set.variants[0], f = v.file;
+      return '<div class="osheet" data-osheet="' + key + '">' +
+          '<button type="button" class="osheet-media" aria-label="' + escapeHTML(tr("Enlarge {name}").replace("{name}", set.base)) + '">' +
+            (f.thumb ? '<img src="' + escapeHTML(f.thumb) + '" alt="" loading="lazy" decoding="async"/>' : window.__icon("file")) +
+            '<span class="gfmt">' + escapeHTML(f.format || "PDF") + "</span>" +
+          "</button>" +
+          '<div class="osheet-body">' +
+            '<div class="osheet-name">' + escapeHTML(set.base) + "</div>" +
+            '<div class="osheet-regions" role="radiogroup" aria-label="' + escapeHTML(tr("Region for {name}").replace("{name}", set.base)) + '">' +
+              set.variants.map(function (x, i) {
+                return '<button type="button" role="radio" class="osheet-r' + (i ? "" : " on") + '" aria-checked="' + (i ? "false" : "true") + '" data-ri="' + i + '">' + x.region + "</button>";
+              }).join("") +
+            "</div>" +
+            '<div class="osheet-acts">' +
+              '<button type="button" class="btn ghost sm" data-oscopy>' + icon("link") + " " + tr("Copy link") + "</button>" +
+              '<button type="button" class="btn sm" data-osdl>' + icon("download") + " " + tr("Download") + "</button>" +
+            "</div>" +
+          "</div>" +
+        "</div>";
+    }
+    function bindOneSheets(ctx) {
+      $$(".osheet", ctx).forEach(function (card) {
+        var parts = card.getAttribute("data-osheet").split(":"), set = docSplit(docNames[+parts[0]]).sets[+parts[1]];
+        var cur = 0;
+        function file() { return set.variants[cur].file; }
+        function show(i) {
+          cur = i;
+          var img = $(".osheet-media img", card), f = file();
+          if (img && f.thumb) img.src = f.thumb;   // the regional layouts differ (prices, currency)
+          $$(".osheet-r", card).forEach(function (b, j) { b.classList.toggle("on", j === i); b.setAttribute("aria-checked", j === i ? "true" : "false"); });
+        }
+        $$(".osheet-r", card).forEach(function (b, j) {
+          b.addEventListener("click", function () { show(j); });
+          // Arrow keys move between regions, like any radio group.
+          b.addEventListener("keydown", function (e) {
+            var n = set.variants.length, to = e.key === "ArrowRight" || e.key === "ArrowDown" ? (j + 1) % n : e.key === "ArrowLeft" || e.key === "ArrowUp" ? (j - 1 + n) % n : -1;
+            if (to < 0) return;
+            e.preventDefault(); show(to); $$(".osheet-r", card)[to].focus();
+          });
+        });
+        $(".osheet-media", card).addEventListener("click", function () {
+          var f = file();
+          openLightbox([{ src: f.thumb, name: set.base + " — " + set.variants[cur].region, url: f.url || "#", file: f.file || null }], 0);
+        });
+        $("[data-osdl]", card).addEventListener("click", function () { var f = file(); if (f.file) directDownload(f.file, fileLabel(f)); else downloadOne(f.url); });
+        $("[data-oscopy]", card).addEventListener("click", function () {
+          var u = file().url;
+          if (!u) { toast(tr("No link yet")); return; }
+          copyText(u, tr("Link copied"));
+        });
+      });
+    }
     function salesHTML() {
       if (!docNames.length) return "";
       return '<div class="section-head" id="sales-head"><h2>' + tr("Sales Assets") + "</h2></div>" +
@@ -2602,7 +2712,10 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
                 '<h3 class="folder-title">' + escapeHTML(label) + '<span class="ft-count">' + fcount(p.folders[f].length) + "</span></h3>" +
                 folderActions(f, p.folders[f].length > 1) +
               "</div>" +
-              '<div class="gallery" data-docgal="' + i + '"></div>' +
+              (docSplit(f).sets.length
+                ? '<div class="osheets">' + docSplit(f).sets.map(function (set, j) { return oneSheetHTML(set, i + ":" + j); }).join("") + "</div>"
+                : "") +
+              (docSplit(f).rest.length ? '<div class="gallery" data-docgal="' + i + '"></div>' : "") +
             "</div>";
         }).join("") + "</div>";
     }
@@ -2712,8 +2825,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       // Document galleries render once — they don't change when folders open.
       docNames.forEach(function (f, i) {
         var box = $('[data-docgal="' + i + '"]', d);
-        if (box) renderGallery(p, f, selected, toggleIn(f), syncSelection, box);
+        if (box) renderGallery(p, f, selected, toggleIn(f), syncSelection, box, docSplit(f).rest);
       });
+      bindOneSheets(d);
       bindFolderActions($("#sales-head") ? $(".sales-groups", d) : null);
       var selClearBtn = $("#sel-clear");
       if (selClearBtn) selClearBtn.addEventListener("click", function () { selected = {}; syncSelection(); });
@@ -2765,13 +2879,19 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       }
       bindFolderActions(box);
       // Clicking a card opens it; clicking an open card (or the one above the
-      // folder you're in) closes it. Each step names the folder in the URL, so a
-      // copied link, a refresh or a language switch reopens the same folder.
+      // folder you're in) closes it. Page loads always start on the clean grid,
+      // so the open folder is NOT written to the URL (a refresh or Back would
+      // reopen it); a deliberately shared ?f= link or a search hit still opens
+      // its folder, and the first click drops that ?f= from the address bar.
+      // A language switch keeps the folder open via _openMemo.
       $$(".fcard", box).forEach(function (c) {
         c.addEventListener("click", function () {
           var fp = c.getAttribute("data-path");
           openPath = isOpen(fp) ? parentPath(fp) : fp;
-          try { history.replaceState(null, "", location.pathname + location.search + productHash(p, openPath)); } catch (e) {}
+          _openMemo = { product: p.name, path: openPath };
+          if (/\?f=/.test(location.hash)) {
+            try { history.replaceState(null, "", location.pathname + location.search + productHash(p)); } catch (e) {}
+          }
           renderAssets();
           // The cards were redrawn; keep keyboard focus on the one just used.
           var same = $$(".fcard", box).filter(function (x) { return x.getAttribute("data-path") === fp; })[0];
@@ -3136,9 +3256,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     modalClose();
   }
 
-  function renderGallery(p, folder, selected, onToggle, onChange, box) {
+  function renderGallery(p, folder, selected, onToggle, onChange, box, list) {
     box = box || $("#gallery");
-    var files = p.folders[folder] || [];
+    var files = list || p.folders[folder] || [];
     if (!files.length) {
       box.innerHTML = '<div class="gallery-empty">' + icon("photo") +
         "<p><strong>" + escapeHTML(trSeg(folder)) + "</strong> " + tr("are coming soon — check back shortly.") + "</p></div>";

@@ -465,6 +465,7 @@ window.PORTAL_I18N.pt = {
   "Sales Assets": "Materiais de vendas",
   "Other": "Outros",
   "Colorways & Collaborations": "Cores e colaborações",
-  "Products": "Produtos"
+  "Products": "Produtos",
+  "User Generated Content": "Conteúdo gerado por usuários"
  }
 };

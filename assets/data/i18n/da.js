@@ -135,6 +135,7 @@ window.PORTAL_I18N.da = {
   }
  },
  "ui": {
+  "User Generated Content": "Brugergenereret indhold",
   "(optional)": "(valgfrit)",
   "123 Main St, City, State ZIP": "Hovedgaden 1, 1234 By",
   "AUTHORIZED BY": "UDSTEDT AF",

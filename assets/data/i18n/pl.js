@@ -137,6 +137,7 @@ window.PORTAL_I18N.pl = {
   }
  },
  "ui": {
+  "User Generated Content": "Treści tworzone przez użytkowników",
   "(optional)": "(opcjonalnie)",
   "123 Main St, City, State ZIP": "ul. Główna 1, 00-001 Miasto",
   "AUTHORIZED BY": "WYSTAWIONY PRZEZ",

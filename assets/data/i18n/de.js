@@ -465,6 +465,7 @@ window.PORTAL_I18N.de = {
   "Sales Assets": "Vertriebsunterlagen",
   "Other": "Sonstiges",
   "Colorways & Collaborations": "Farbvarianten & Kollaborationen",
-  "Products": "Produkte"
+  "Products": "Produkte",
+  "User Generated Content": "Nutzergenerierte Inhalte"
  }
 };

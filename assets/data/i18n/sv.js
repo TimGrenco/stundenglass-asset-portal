@@ -135,6 +135,7 @@ window.PORTAL_I18N.sv = {
   }
  },
  "ui": {
+  "User Generated Content": "Användargenererat innehåll",
   "(optional)": "(valfritt)",
   "123 Main St, City, State ZIP": "Storgatan 1, 123 45 Stad",
   "AUTHORIZED BY": "UTFÄRDAT AV",

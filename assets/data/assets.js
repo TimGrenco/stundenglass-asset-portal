@@ -518,6 +518,28 @@ window.PORTAL_PRODUCTS.forEach(function (p) {
 
 /* Per-colourway SKU/UPC for any multi-colour collections. Shown as the
    "Collection Colorways" section on those product pages. Empty for now. */
+/* Hand-picked folder-card covers: product → folder path → a distinctive part of
+   the file name to use as that card's preview (case-insensitive). Anything not
+   listed uses the folder's first photo/video (skipping how-to clips). If a
+   listed file is renamed or removed, the card quietly falls back. */
+window.PORTAL_FOLDER_COVERS = {
+  "Kompact Gravity Infusers": {
+    "UGC Videos": "Omg_Becky",
+    "Pink / UGC Videos": "Silenced Hippie",
+  },
+  "Classic Gravity Infusers": {
+    "UGC Videos": "PotheadPrincess",
+    "Pink / UGC Videos": "UGC Pink SG Aug 24",
+    "Khalifa / UGC Videos": "taestayshigh",
+    "Grateful Dead / Stealy Lock Up / UGC Videos": "Bert Kreischer",
+    "Taylor Gang / UGC Videos": "MotorMane",
+  },
+  "Modül": {
+    "UGC Videos": "Izzie Dok",
+    "Khalifa / UGC Videos": "tnt6977",
+  },
+};
+
 window.PORTAL_COLORWAYS = {
   "Gravity Infusers": [
     { color: "Black", hex: "#0A0A0A", sku: "SG4-KIT-STBK-02", upc: "811736029896", name: "Stündenglass Gravity Infuser — Black" },
