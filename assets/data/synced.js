@@ -9837,7 +9837,7 @@ window.PORTAL_SYNCED = {
           "type": "image",
           "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/yq17jdkpcixuo7m3ice52/web-GD-dok-deluxe-bundle-rear-unit-whiteBG.png?rlkey=2qmqcq44rs609qyl6nm043cz4&dl=0",
-          "thumb": "assets/synced/modul/bc4c74b86ff851008fa6e07579bc4b95145677bca1f7be454e606c93ecc4ab03-lt2.jpg",
+          "thumb": "assets/synced/modul/bc4c74b86ff851008fa6e07579bc4b95145677bca1f7be454e606c93ecc4ab03.jpg",
           "file": null
         },
         {
@@ -9861,7 +9861,7 @@ window.PORTAL_SYNCED = {
           "type": "image",
           "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/yg2uih532mr7w5lacak8i/web-GD-dok-deluxe-bundle-turned-unit-whiteBG.png?rlkey=jbch1jwvlrz4ddi9srbec90qb&dl=0",
-          "thumb": "assets/synced/modul/ff96947d367a9c754ad0237253fb8cdcdc73fdf5cb9a8ad6ba623fbb7fe11811-lt2.jpg",
+          "thumb": "assets/synced/modul/ff96947d367a9c754ad0237253fb8cdcdc73fdf5cb9a8ad6ba623fbb7fe11811.jpg",
           "file": null
         },
         {
