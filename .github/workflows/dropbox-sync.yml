@@ -33,9 +33,19 @@ jobs:
           node-version: "20"
 
       - name: Install thumbnail tools (ffmpeg + poppler + ImageMagick)
+        # A stalled Ubuntu mirror once hung this step for 20+ minutes (2026-10-01)
+        # with nothing to stop it short of the 90-minute job cap. Bound each try
+        # and retry once — a second attempt usually gets a healthy mirror.
+        timeout-minutes: 12
         run: |
-          sudo apt-get update
-          sudo apt-get install -y --no-install-recommends ffmpeg poppler-utils imagemagick ghostscript librsvg2-bin
+          need="ffmpeg poppler-utils imagemagick ghostscript librsvg2-bin"
+          ok=0
+          for attempt in 1 2; do
+            if timeout 150 sudo apt-get update -qq && timeout 300 sudo apt-get install -y -qq --no-install-recommends $need; then ok=1; break; fi
+            echo "::warning::apt attempt $attempt failed or timed out — retrying"
+            sleep 10
+          done
+          [ "$ok" = 1 ] || { echo "::error::Could not install thumbnail tools"; exit 1; }
           # Ubuntu ships ImageMagick with PDF/AI/EPS reading disabled by policy;
           # re-enable read so white AI/PDF logos can be composited onto gray.
           sudo sed -i -E 's/rights="none" pattern="(PDF|EPS|PS|AI)"/rights="read|write" pattern="\1"/g' /etc/ImageMagick-6/policy.xml || true
