@@ -9289,14 +9289,6 @@ window.PORTAL_SYNCED = {
       ],
       "Social Videos": [
         {
-          "name": "1800Shadow Dok Jan",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/2t0bpwir8rmd834kjr7dt/1800Shadow-Dok-Jan.mp4?rlkey=5bv4huin16uwhe0ho19kvyqq5&dl=0",
-          "thumb": "assets/synced/modul/4878daba047de5dc1fa6eaf666fbd1612a885c5376745c36717dd2cc38143efd.jpg",
-          "file": null
-        },
-        {
           "name": "Addie Blue Dok A",
           "type": "video",
           "format": "MP4",
@@ -9385,22 +9377,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Cloud 9 with Dad Modül",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/58bdya1jowbdctl16vb91/Cloud-9-with-Dad-Mod-l.mp4?rlkey=un3h13xtadm0d600skjd5up4i&dl=0",
-          "thumb": "assets/synced/modul/3420f19fd0586a893e460347fc8cb65c6a35911914e953dd1f5cfeebd23e13f1.jpg",
-          "file": null
-        },
-        {
-          "name": "Damon Modül Blue Dok Unboxing",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/b88xqr58ge76tzs0lfurq/Damon-Mod-l-Blue-Dok-Unboxing.mp4?rlkey=vx41h2t3nzlk92l6t03rajb1f&dl=0",
-          "thumb": "assets/synced/modul/3322ab67f7a37d2dfa56c6353da2e07c81de0415f2fbd113398f8c0561617683.jpg",
-          "file": null
-        },
-        {
           "name": "Em Hash Venice Modül C",
           "type": "video",
           "format": "MP4",
@@ -9409,43 +9385,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "EmHash Pink Dok Review",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/onj7zecwverhtply8n9e2/EmHash-Pink-Dok-Review.mp4?rlkey=xhj9xs0w5kexvo7nk7eqne809&dl=0",
-          "thumb": "assets/synced/modul/df51d955c3ad0a1c4b01f638249c86a37eb12ba24dbd01c49a73c65e295b939f.jpg",
-          "file": null
-        },
-        {
-          "name": "EmHash PinkModül Jan",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/s789r25yqgyvw5ttuc7km/EmHash-PinkMod-l-Jan.mp4?rlkey=qjt9uy4ce0w57nabj9nccjxxc&dl=0",
-          "thumb": "assets/synced/modul/1fcafceac8b497bfbe86803e0e45af2a253b5ad3632f0149b496a84ba1b76a4d.jpg",
-          "file": null
-        },
-        {
           "name": "Forrest Modül Short",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/y19u3uz5guz7rn07jfdcb/Forrest-Mod-l-Short.mp4?rlkey=kuw8xhv4m1sq4o0hh7qpqrq8r&dl=0",
           "thumb": "assets/synced/modul/8941f51fc5ce71ec3b9096d928a834854deafe7f4327a7a17f35a9fc3fa84fff.jpg",
-          "file": null
-        },
-        {
-          "name": "glassman.710 modül trim e",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/5tmpuc95zvuvzy5291wvm/glassman.710-mod-l-trim-e.mp4?rlkey=d6i9u7hdpso8cuoblaaryfqzj&dl=0",
-          "thumb": "assets/synced/modul/1f5ce19dc0ffeb21b2d3b8a98f7545ee6ffa3188178904ffad4de7d6f474e3f0.jpg",
-          "file": null
-        },
-        {
-          "name": "Go Stoner Mödul Concentrate",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/kmd4dsi442vlri0bmgrn1/Go-Stoner-M-dul-Concentrate.mp4?rlkey=pwomiqnso17ctcu040vgvkfcm&dl=0",
-          "thumb": "assets/synced/modul/4d8511e88d2014d646c7d7926a338ab568f9782a911c7aadb440f64beddad7a3.jpg",
           "file": null
         },
         {
@@ -9462,30 +9406,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/70rlkxwahjrs6sdserch3/Introducing-Mod-l-Dok-Colored-Glass.mp4?rlkey=lpjcmhfurwp0rsbqhmnph1ga4&dl=0",
           "thumb": "assets/synced/modul/8f67bbaa66df5b7ad7b6e129411bd364458845ebb59ebbc767309ddcdf7a8d66.jpg",
-          "file": null
-        },
-        {
-          "name": "Izzie Dok Modül Citizen Short",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/2kwdhrbqefpj9ifc6t8q0/Izzie-Dok-Mod-l-Citizen-Short.mp4?rlkey=ks3v6gxqgmzh6qcipt5j8mg48&dl=0",
-          "thumb": "assets/synced/modul/b66bccd87d4c18f3598384447525ef002e7e6b596468c22f1268244236de7956.jpg",
-          "file": null
-        },
-        {
-          "name": "Koala Puffs Modül How to_Captions + Music",
-          "type": "video",
-          "format": "MOV",
-          "url": "https://www.dropbox.com/scl/fi/8h0x5860fg2t8d9b50eej/Koala-Puffs-Mod-l-How-to_Captions-Music.MOV?rlkey=7qv5wh20f195bogjtgzhzovwp&dl=0",
-          "thumb": "assets/synced/modul/b4e8a13ecdc22b338ea485c7d7fb1f94c386b85f58161262cfb537457a543127.jpg",
-          "file": null
-        },
-        {
-          "name": "KoalaPuffsModül Bestie Break",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/zsa32c5xjz40audktlzy6/KoalaPuffsMod-l-Bestie-Break.mp4?rlkey=w24xydehxl5hmnh2xl97nul90&dl=0",
-          "thumb": "assets/synced/modul/5f551d2c933a1228b8e10fb500a44817d8a5fd77574f2c2832333290be95de53.jpg",
           "file": null
         },
         {
@@ -9526,22 +9446,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/5gusj30e2rarwpyb8ntn9/Lauren-Mod-l-Blue-Dok-Travel-Case.mp4?rlkey=ympln1jcwrqtg2q6ofiefjz6v&dl=0",
           "thumb": "assets/synced/modul/bd8acd717a31965063051a70337074b30abb1d488be32a848610e417c27c08d4.jpg",
-          "file": null
-        },
-        {
-          "name": "Marty Blue Dok Sept",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/v3bkhzcfrer8rdidbgfud/Marty-Blue-Dok-Sept.mp4?rlkey=zis6ejx9oe3pkl3k51jmbihag&dl=0",
-          "thumb": "assets/synced/modul/a36bff178e1234208d692ad991765e634badad7fe338f147e2408b420f8d3e48.jpg",
-          "file": null
-        },
-        {
-          "name": "Marty Grimes Dok May",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/svdjejm4cdh2nh3btzfrm/Marty-Grimes-Dok-May.mp4?rlkey=vdlamw2epwk5p66ygamoi0caz&dl=0",
-          "thumb": "assets/synced/modul/ea2dc882fc5652b5a3b6644d6fe64b467ae3f8f8e42cba4ee6799b24ba7e9e31.jpg",
           "file": null
         },
         {
@@ -9606,14 +9510,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/l4ydi8ufaftk35ww8ql38/Mod-l-Teaser-Dial-Heat-Up.mp4?rlkey=jg71h9s38cku82yqxx8afn8aq&dl=0",
           "thumb": "assets/synced/modul/6aa8acb178fe9f57695e1340d18d4e3c50cc9553fe81e9280adfb96fcbdd989f.jpg",
-          "file": null
-        },
-        {
-          "name": "OfficialKKBooga Modül Colors April",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/qalt145m94bb3s795kmjx/OfficialKKBooga-Mod-l-Colors-April.mp4?rlkey=ore4she2znx3ot4oxmujhrofe&dl=0",
-          "thumb": "assets/synced/modul/64b84aae476f03dbe7c63559dea8b297701aba9ff16666687b0ad9522ed3aab7.jpg",
           "file": null
         },
         {
@@ -9734,22 +9630,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/3dtstuz855o580to29tnp/Snow-Globe-SG-Mod-l.mp4?rlkey=izyqpy36dboit6nlsw5kns08r&dl=0",
           "thumb": "assets/synced/modul/c47beb850fb5bd031d473fee7e87738713c1a5c3e9a497ebceb45ce18fad945e.jpg",
-          "file": null
-        },
-        {
-          "name": "stoneddiariesss Green Modül Dok Feb",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/ppr07rxo1249605gjg53u/stoneddiariesss-Green-Mod-l-Dok-Feb.mp4?rlkey=he1d1i4qqzvpmjbvgdfrar88h&dl=0",
-          "thumb": "assets/synced/modul/0b6f47a610ae9a9db862fa79bc89830560f97d301ce8d5e5689dbd8520fb3d22.jpg",
-          "file": null
-        },
-        {
-          "name": "ThatHighCouple Modül",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/lgvyzhylsn5hlpw37rwqk/ThatHighCouple-Mod-l.mp4?rlkey=5f1pgyrh0gx8yr1n3aqdt76w9&dl=0",
-          "thumb": "assets/synced/modul/3a572922baa81fc42030953646fa206f6f840e8d1983197462f8523b16789139.jpg",
           "file": null
         }
       ],
@@ -10719,14 +10599,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "Koala Livestream KK Modül Jan",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/h0srulqhsi8cqm3fhi2tc/Koala-Livestream-KK-Mod-l-Jan.mp4?rlkey=07puhj5v0gg7b3n74vjn77zs3&dl=0",
-          "thumb": "assets/synced/modul/9b65444ff73b3a266282da1302e4c11280b43734586d7dd87834b28d8264d6a5.jpg",
-          "file": null
-        },
-        {
           "name": "Maya KK Modül",
           "type": "video",
           "format": "MOV",
@@ -10740,14 +10612,6 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/planmdxaq2wi4nc6f5wqc/Maya-KK-Mod-l-Unboxing.mp4?rlkey=iuislthbi4wrx3bg8aqkcpo4z&dl=0",
           "thumb": "assets/synced/modul/839f11c67c8c44fa4bd18e7ba14b0bc9daab8f77db83be0259fa7a9935ad5935.jpg",
-          "file": null
-        },
-        {
-          "name": "tnt6977 KK Modül Jan trim",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/87fno1jj25awvzlok31a1/tnt6977-KK-Mod-l-Jan-trim.mp4?rlkey=8yphlq4qwiknz5754tt09mbgn&dl=0",
-          "thumb": "assets/synced/modul/74de5bc2248a651a699b6f313a68083a8ce4e6b6bc75ded6db3035e5af585811.jpg",
           "file": null
         },
         {
@@ -10788,6 +10652,24 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/c86in2dcas4wbgsgfrx9t/Wiz-Red-Eye-Reels-A.mp4?rlkey=cm43wo3zjvemd8wc07f3af6g1&dl=0",
           "thumb": "assets/synced/modul/bef2e0b73880b637c59c2a52d4c771ae21cf1a519aa5c73265764180f9c5d4fa.jpg",
+          "file": null
+        }
+      ],
+      "Khalifa / UGC Videos": [
+        {
+          "name": "Koala Livestream KK Modül Jan",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/h0srulqhsi8cqm3fhi2tc/Koala-Livestream-KK-Mod-l-Jan.mp4?rlkey=07puhj5v0gg7b3n74vjn77zs3&dl=0",
+          "thumb": "assets/synced/modul/9b65444ff73b3a266282da1302e4c11280b43734586d7dd87834b28d8264d6a5.jpg",
+          "file": null
+        },
+        {
+          "name": "tnt6977 KK Modül Jan trim",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/87fno1jj25awvzlok31a1/tnt6977-KK-Mod-l-Jan-trim.mp4?rlkey=8yphlq4qwiknz5754tt09mbgn&dl=0",
+          "thumb": "assets/synced/modul/74de5bc2248a651a699b6f313a68083a8ce4e6b6bc75ded6db3035e5af585811.jpg",
           "file": null
         }
       ],
@@ -11094,6 +10976,128 @@ window.PORTAL_SYNCED = {
           "thumb": "assets/synced/modul/4b0aa1e07dba6b58bfbc5892834361c211202d3ecd3282067d01d7e5bc17fc56.jpg",
           "file": null
         }
+      ],
+      "UGC Videos": [
+        {
+          "name": "1800Shadow Dok Jan",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/2t0bpwir8rmd834kjr7dt/1800Shadow-Dok-Jan.mp4?rlkey=5bv4huin16uwhe0ho19kvyqq5&dl=0",
+          "thumb": "assets/synced/modul/4878daba047de5dc1fa6eaf666fbd1612a885c5376745c36717dd2cc38143efd.jpg",
+          "file": null
+        },
+        {
+          "name": "Cloud 9 with Dad Modül",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/58bdya1jowbdctl16vb91/Cloud-9-with-Dad-Mod-l.mp4?rlkey=un3h13xtadm0d600skjd5up4i&dl=0",
+          "thumb": "assets/synced/modul/3420f19fd0586a893e460347fc8cb65c6a35911914e953dd1f5cfeebd23e13f1.jpg",
+          "file": null
+        },
+        {
+          "name": "Damon Modül Blue Dok Unboxing",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/b88xqr58ge76tzs0lfurq/Damon-Mod-l-Blue-Dok-Unboxing.mp4?rlkey=vx41h2t3nzlk92l6t03rajb1f&dl=0",
+          "thumb": "assets/synced/modul/3322ab67f7a37d2dfa56c6353da2e07c81de0415f2fbd113398f8c0561617683.jpg",
+          "file": null
+        },
+        {
+          "name": "EmHash Pink Dok Review",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/onj7zecwverhtply8n9e2/EmHash-Pink-Dok-Review.mp4?rlkey=xhj9xs0w5kexvo7nk7eqne809&dl=0",
+          "thumb": "assets/synced/modul/df51d955c3ad0a1c4b01f638249c86a37eb12ba24dbd01c49a73c65e295b939f.jpg",
+          "file": null
+        },
+        {
+          "name": "EmHash PinkModül Jan",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/s789r25yqgyvw5ttuc7km/EmHash-PinkMod-l-Jan.mp4?rlkey=qjt9uy4ce0w57nabj9nccjxxc&dl=0",
+          "thumb": "assets/synced/modul/1fcafceac8b497bfbe86803e0e45af2a253b5ad3632f0149b496a84ba1b76a4d.jpg",
+          "file": null
+        },
+        {
+          "name": "glassman.710 modül trim e",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/5tmpuc95zvuvzy5291wvm/glassman.710-mod-l-trim-e.mp4?rlkey=d6i9u7hdpso8cuoblaaryfqzj&dl=0",
+          "thumb": "assets/synced/modul/1f5ce19dc0ffeb21b2d3b8a98f7545ee6ffa3188178904ffad4de7d6f474e3f0.jpg",
+          "file": null
+        },
+        {
+          "name": "Go Stoner Mödul Concentrate",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/kmd4dsi442vlri0bmgrn1/Go-Stoner-M-dul-Concentrate.mp4?rlkey=pwomiqnso17ctcu040vgvkfcm&dl=0",
+          "thumb": "assets/synced/modul/4d8511e88d2014d646c7d7926a338ab568f9782a911c7aadb440f64beddad7a3.jpg",
+          "file": null
+        },
+        {
+          "name": "Izzie Dok Modül Citizen Short",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/2kwdhrbqefpj9ifc6t8q0/Izzie-Dok-Mod-l-Citizen-Short.mp4?rlkey=ks3v6gxqgmzh6qcipt5j8mg48&dl=0",
+          "thumb": "assets/synced/modul/b66bccd87d4c18f3598384447525ef002e7e6b596468c22f1268244236de7956.jpg",
+          "file": null
+        },
+        {
+          "name": "Koala Puffs Modül How to_Captions + Music",
+          "type": "video",
+          "format": "MOV",
+          "url": "https://www.dropbox.com/scl/fi/8h0x5860fg2t8d9b50eej/Koala-Puffs-Mod-l-How-to_Captions-Music.MOV?rlkey=7qv5wh20f195bogjtgzhzovwp&dl=0",
+          "thumb": "assets/synced/modul/b4e8a13ecdc22b338ea485c7d7fb1f94c386b85f58161262cfb537457a543127.jpg",
+          "file": null
+        },
+        {
+          "name": "KoalaPuffsModül Bestie Break",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/zsa32c5xjz40audktlzy6/KoalaPuffsMod-l-Bestie-Break.mp4?rlkey=w24xydehxl5hmnh2xl97nul90&dl=0",
+          "thumb": "assets/synced/modul/5f551d2c933a1228b8e10fb500a44817d8a5fd77574f2c2832333290be95de53.jpg",
+          "file": null
+        },
+        {
+          "name": "Marty Blue Dok Sept",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/v3bkhzcfrer8rdidbgfud/Marty-Blue-Dok-Sept.mp4?rlkey=zis6ejx9oe3pkl3k51jmbihag&dl=0",
+          "thumb": "assets/synced/modul/a36bff178e1234208d692ad991765e634badad7fe338f147e2408b420f8d3e48.jpg",
+          "file": null
+        },
+        {
+          "name": "Marty Grimes Dok May",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/svdjejm4cdh2nh3btzfrm/Marty-Grimes-Dok-May.mp4?rlkey=vdlamw2epwk5p66ygamoi0caz&dl=0",
+          "thumb": "assets/synced/modul/ea2dc882fc5652b5a3b6644d6fe64b467ae3f8f8e42cba4ee6799b24ba7e9e31.jpg",
+          "file": null
+        },
+        {
+          "name": "OfficialKKBooga Modül Colors April",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/qalt145m94bb3s795kmjx/OfficialKKBooga-Mod-l-Colors-April.mp4?rlkey=ore4she2znx3ot4oxmujhrofe&dl=0",
+          "thumb": "assets/synced/modul/64b84aae476f03dbe7c63559dea8b297701aba9ff16666687b0ad9522ed3aab7.jpg",
+          "file": null
+        },
+        {
+          "name": "stoneddiariesss Green Modül Dok Feb",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/ppr07rxo1249605gjg53u/stoneddiariesss-Green-Mod-l-Dok-Feb.mp4?rlkey=he1d1i4qqzvpmjbvgdfrar88h&dl=0",
+          "thumb": "assets/synced/modul/0b6f47a610ae9a9db862fa79bc89830560f97d301ce8d5e5689dbd8520fb3d22.jpg",
+          "file": null
+        },
+        {
+          "name": "ThatHighCouple Modül",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/lgvyzhylsn5hlpw37rwqk/ThatHighCouple-Mod-l.mp4?rlkey=5f1pgyrh0gx8yr1n3aqdt76w9&dl=0",
+          "thumb": "assets/synced/modul/3a572922baa81fc42030953646fa206f6f840e8d1983197462f8523b16789139.jpg",
+          "file": null
+        }
       ]
     },
     "dropbox": "https://www.dropbox.com/scl/fo/so2i8hzeo5p3ikqx1e1ej/h?rlkey=rb1vhopjo5qyoft8eqr7bgz0v&dl=1",
@@ -11125,13 +11129,15 @@ window.PORTAL_SYNCED = {
       "Khalifa / Logos": "https://www.dropbox.com/scl/fo/yas750ynp8l58fvl6nbue/AAdsoWt-62mpYc2c6X8PED0?rlkey=v6upvzyy7barkiopinqh9j408&dl=1",
       "Khalifa / Social Videos": "https://www.dropbox.com/scl/fo/evamavd49vgh3isa8xuu7/APkPtA6eddumq4XtTfsPizk?rlkey=lj285vq472w3iwm3brfoz0i67&dl=1",
       "Khalifa / TV Screen Videos": "https://www.dropbox.com/scl/fo/9gd5947dp0s33gmj0th7x/AImJLTSJ8qHxlMk7TuZ13ds?rlkey=3r32sf7qdcrm45i60i0wmhhsk&dl=1",
+      "Khalifa / UGC Videos": "https://www.dropbox.com/scl/fo/35kg8dntissh5yzhtay1d/AEENrf1oE36JOuj7I3BHXTA?rlkey=3e0hb1rpd07944xabb8z0n3pj&dl=1",
       "Tyson 2.0": "https://www.dropbox.com/scl/fo/vo6df3lvqrpzasf60vld7/AIqn_--xwRH7fsx9iojHsic?rlkey=9nud2di4m7aakgbbuhavulzc0&dl=1",
       "Tyson 2.0 / Product Photos": "https://www.dropbox.com/scl/fo/x246e28jkvah0qnt8xpbj/APd2eC89ErbSjOjBIa5Zvmc?rlkey=suhpiy3e8iqd311zzctdnk3p4&dl=1",
       "Tyson 2.0 / Lifestyle Photos": "https://www.dropbox.com/scl/fo/ccp23g4ubrjp1jop9kuud/APWqyXOOxnauN961rIZu_uM?rlkey=9k1qr1jhd618l9e9rmpu46ia1&dl=1",
       "Tyson 2.0 / Social Videos": "https://www.dropbox.com/scl/fo/qrlkggreb74z51gg9hywk/AIbmaPQru4lklWrIFHtQYgs?rlkey=p7ujjm8y2k1e9tqztlf8wr46c&dl=1",
-      "Tyson 2.0 / TV Screen Videos": "https://www.dropbox.com/scl/fo/l113hsy2t7jg7isc5j644/AEJoSyRJYOYCw6cBXUD3bvg?rlkey=kh2d6y1irvmz1z23920gjlop4&dl=1"
+      "Tyson 2.0 / TV Screen Videos": "https://www.dropbox.com/scl/fo/l113hsy2t7jg7isc5j644/AEJoSyRJYOYCw6cBXUD3bvg?rlkey=kh2d6y1irvmz1z23920gjlop4&dl=1",
+      "UGC Videos": "https://www.dropbox.com/scl/fo/16eixxdyso12vmwvqo5f2/ADCWxAnn39JbGMhhBp_9m5M?rlkey=47xhl5jp0c96iwuzrjpogf6my&dl=1"
     },
-    "updated": "2026-07-22"
+    "updated": "2026-10-01"
   },
   "Accessories": {
     "folders": {
