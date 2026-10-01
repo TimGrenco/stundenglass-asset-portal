@@ -548,6 +548,10 @@ window.PORTAL_FOLDER_COVERS = {
     "Grateful Dead / Stealy Lock Up / UGC Videos": "Bert Kreischer",
     "Taylor Gang / UGC Videos": "MotorMane",
   },
+  "Accessories": {
+    "Chest Mount / UGC Videos": "Snappernickel Snow",
+    "Modül Accessories / Recycler / UGC Videos": "recylcer beach",
+  },
   "Modül": {
     "UGC Videos": "Izzie Dok",
     "Khalifa / UGC Videos": "tnt6977",
