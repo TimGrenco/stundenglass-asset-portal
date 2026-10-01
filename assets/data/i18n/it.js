@@ -175,7 +175,6 @@ window.PORTAL_I18N.it = {
   "Catalogs &amp; Brand Documents": "Cataloghi &amp; documenti brand",
   "Certificate of Completion": "Certificato di completamento",
   "Certified! 🎓": "Certificato! 🎓",
-  "Choose a folder above to view and download its files.": "Scelga una cartella qui sopra per visualizzare e scaricare i file.",
   "Classic Infuser": "Classic Infuser",
   "Clear": "Deseleziona",
   "Clear Glass": "Vetro trasparente",
@@ -216,7 +215,6 @@ window.PORTAL_I18N.it = {
   "Download PDF": "Scarica PDF",
   "Download all": "Scarica tutto",
   "Download all logos": "Scarica tutti i loghi",
-  "Download assets by category": "Scarica asset per categoria",
   "Download coming soon": "Download in arrivo",
   "Download folder": "Scarica cartella",
   "Download logo files": "Scarica i file logo",
@@ -366,7 +364,6 @@ window.PORTAL_I18N.it = {
   "Store name": "Nome negozio",
   "Street, City, State, ZIP": "Via, Città, Provincia, CAP",
   "Submit Request": "Invia richiesta",
-  "Swipe to see more": "Scorra per vedere altro",
   "TV Screen Video": "Video per schermi TV",
   "TV Screen Videos": "Video per schermi TV",
   "Talk to our team.": "Parli con il nostro team.",
@@ -466,6 +463,17 @@ window.PORTAL_I18N.it = {
   "Other": "Altro",
   "Colorways & Collaborations": "Colorazioni e collaborazioni",
   "Products": "Prodotti",
-  "User Generated Content": "Contenuti generati dagli utenti"
+  "User Generated Content": "Contenuti generati dagli utenti",
+  "Add your store name and mailing address": "Aggiungi il nome del negozio e l’indirizzo postale",
+  "Enter a valid email address": "Inserisci un indirizzo email valido",
+  "Add each store’s name and address": "Aggiungi nome e indirizzo di ogni negozio",
+  "Add your name and email so we can reply": "Aggiungi nome ed email per ricevere la risposta",
+  "If your email app didn’t open, send this to {email}.": "Se l’app di posta non si è aperta, invialo a {email}.",
+  "Copy request": "Copia richiesta",
+  "Request copied": "Richiesta copiata",
+  "Order {name}": "Ordina {name}",
+  "Order marketing materials": "Ordina materiali di marketing",
+  "That file isn’t shown on this page — download it from the search results.": "Questo file non è mostrato in questa pagina: scaricalo dai risultati di ricerca.",
+  "Goes to {email}": "Destinatario: {email}"
  }
 };

@@ -175,7 +175,6 @@ window.PORTAL_I18N.fr = {
   "Catalogs &amp; Brand Documents": "Catalogues &amp; documents de marque",
   "Certificate of Completion": "Certificat de réussite",
   "Certified! 🎓": "Certifié ! 🎓",
-  "Choose a folder above to view and download its files.": "Choisissez un dossier ci-dessus pour consulter et télécharger ses fichiers.",
   "Classic Infuser": "Classic Infuser",
   "Clear": "Effacer",
   "Clear Glass": "Verre transparent",
@@ -216,7 +215,6 @@ window.PORTAL_I18N.fr = {
   "Download PDF": "Télécharger le PDF",
   "Download all": "Tout télécharger",
   "Download all logos": "Télécharger tous les logos",
-  "Download assets by category": "Télécharger les ressources par catégorie",
   "Download coming soon": "Téléchargement bientôt disponible",
   "Download folder": "Télécharger le dossier",
   "Download logo files": "Télécharger les fichiers de logos",
@@ -366,7 +364,6 @@ window.PORTAL_I18N.fr = {
   "Store name": "Nom de la boutique",
   "Street, City, State, ZIP": "Rue, ville, région, code postal",
   "Submit Request": "Envoyer la demande",
-  "Swipe to see more": "Faites glisser pour voir plus",
   "TV Screen Video": "Vidéo pour écrans TV",
   "TV Screen Videos": "Vidéos pour écrans TV",
   "Talk to our team.": "Parlez à notre équipe.",
@@ -466,6 +463,17 @@ window.PORTAL_I18N.fr = {
   "Other": "Autres",
   "Colorways & Collaborations": "Coloris et collaborations",
   "Products": "Produits",
-  "User Generated Content": "Contenu généré par les utilisateurs"
+  "User Generated Content": "Contenu généré par les utilisateurs",
+  "Add your store name and mailing address": "Ajoutez le nom de votre magasin et l’adresse postale",
+  "Enter a valid email address": "Saisissez une adresse e-mail valide",
+  "Add each store’s name and address": "Ajoutez le nom et l’adresse de chaque magasin",
+  "Add your name and email so we can reply": "Ajoutez votre nom et votre e-mail pour que nous puissions répondre",
+  "If your email app didn’t open, send this to {email}.": "Si votre messagerie ne s’est pas ouverte, envoyez ceci à {email}.",
+  "Copy request": "Copier la demande",
+  "Request copied": "Demande copiée",
+  "Order {name}": "Commander {name}",
+  "Order marketing materials": "Commander du matériel marketing",
+  "That file isn’t shown on this page — download it from the search results.": "Ce fichier n’apparaît pas sur cette page — téléchargez-le depuis les résultats de recherche.",
+  "Goes to {email}": "Envoyé à {email}"
  }
 };

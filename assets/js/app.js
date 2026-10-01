@@ -27,7 +27,7 @@
      translated. To revise a language, edit only its pack — no code change. */
   var LANGS = { en: "English", es: "Español", de: "Deutsch", it: "Italiano", fr: "Français", pt: "Português", sv: "Svenska", pl: "Polski", da: "Dansk" };
   function isLang(l) { return Object.prototype.hasOwnProperty.call(LANGS, l); }
-  var LANG_VER = "20261001c";   // bump with the other asset tokens
+  var LANG_VER = "20261002";   // bump with the other asset tokens
   // Load a language pack once. English is a no-op (it IS the source).
   var _langLoading = {};
   function loadLangPack(l, cb) {
@@ -441,12 +441,45 @@
   }
 
   // ---- derived per-product stats -------------------------------------------
-  PRODUCTS.forEach(function (p) {
-    var total = 0, fmts = {};
-    Object.keys(p.folders).forEach(function (f) {
-      p.folders[f].forEach(function (file) { total++; if (file.format) fmts[file.format] = 1; });
+  // p.total counts what the portal OFFERS for the product, the same rule the
+  // product page uses: a colorway's own copies of logos / in-store pieces
+  // aren't shown, and Documents are listed once across colorways. (Counting
+  // every synced file said "179 assets" on a page that shows 158.)
+  function catOf(seg) {
+    if (/video|reel|tv screen|\bugc\b|user.?generated/i.test(seg)) return "videos";
+    if (/logo|in.?store|marketing|point of sale|\bpos\b/i.test(seg)) return "other";
+    if (/photo|lifestyle|packag|render|banner|e-?comm/i.test(seg)) return "photos";
+    return null;
+  }
+  function visibleCount(p) {
+    var keys = Object.keys(p.folders || {}).filter(function (f) { return (p.folders[f] || []).length; });
+    var branch = {}; keys.forEach(function (f) { if (f.indexOf(" / ") !== -1) branch[f.split(" / ")[0]] = 1; });
+    var n = 0, docs = {};
+    keys.forEach(function (f) {
+      var segs = f.split(" / ");
+      if (segs.indexOf("Documents") !== -1) {
+        p.folders[f].forEach(function (x) { docs[(x.name + "." + (x.format || "")).toLowerCase()] = 1; });
+        return;
+      }
+      if (!p.isCategory && branch[segs[0]] && !catOf(segs[0])) {   // inside a colorway
+        var g = null;
+        for (var i = 1; i < segs.length && !g; i++) g = catOf(segs[i]);
+        if (!g) {
+          var fs = p.folders[f];
+          g = fs.every(function (x) { return x.type === "video"; }) ? "videos" : fs.every(function (x) { return x.type === "image"; }) ? "photos" : "other";
+        }
+        if (g === "other") return;
+      }
+      n += p.folders[f].length;
     });
-    p.total = total;
+    return n + Object.keys(docs).length;
+  }
+  PRODUCTS.forEach(function (p) {
+    var fmts = {};
+    Object.keys(p.folders).forEach(function (f) {
+      p.folders[f].forEach(function (file) { if (file.format) fmts[file.format] = 1; });
+    });
+    p.total = visibleCount(p);
     p.formats = Object.keys(fmts);
   });
 
@@ -551,9 +584,10 @@
     // Leaving the catalog route by BACK (the usual way to dismiss a PDF on a phone)
     // fires hashchange, not the close button — without this the full-screen viewer
     // stays on top of the re-rendered page with body scroll still locked.
-    if (parts[0] !== "catalog" && document.getElementById("catlb")) teardownCatalog();
+    if (parts[0] !== "catalog") { _catPushed = false; if (document.getElementById("catlb")) teardownCatalog(); }
     // Same for the other two overlays: they are dismissed by their own close
     // button or Escape, neither of which fires on a route change.
+    _ovPushed = false;   // a route change, not a dismissal — don't spend history
     if (document.getElementById("vlb")) closeVideoModal();
     if (lbOpen()) closeLightbox();
     if (parts[0] === "style" && own(BRANDS, parts[1])) { openStyleGuide(parts[1]); return; }
@@ -703,7 +737,7 @@ var FOLDER_TAB_ORDER = ["Product Photos", "Lifestyle Photos", "Web Banners", "Lo
   function visibleProducts() {
     return PRODUCTS.filter(function (p) {
       if (p.brand !== state.view) return false;
-      if (state.type !== "all" && !p.folders[state.type]) return false;
+      if (state.type !== "all" && !own(p.folders, state.type)) return false;
       if (state.query) {
         var q = state.query.toLowerCase();
         var hay = (p.name + " " + p.category + " " + BRANDS[p.brand].name + " " + p.formats.join(" ")).toLowerCase();
@@ -744,7 +778,7 @@ var FOLDER_TAB_ORDER = ["Product Photos", "Lifestyle Photos", "Web Banners", "Lo
       Object.keys(p.ui).forEach(function (en) {
         var tx = p.ui[en];
         if (typeof tx !== "string") return;
-        var k = tx.toLowerCase().trim();
+        var k = fold(tx).trim();
         if (!k || k.indexOf(" ") !== -1) return;          // single-word translations only
         if (/[{<>]/.test(en) || en.indexOf(" ") !== -1) return;
         var v = en.toLowerCase().trim();
@@ -775,12 +809,19 @@ var FOLDER_TAB_ORDER = ["Product Photos", "Lifestyle Photos", "Web Banners", "Lo
     }
     return true;
   }
-  function queryTerms(q) { return q.toLowerCase().split(/\s+/).filter(Boolean); }
+  // Lower-case and strip accents on BOTH sides of every match, so "catalogo",
+  // "zubehor", "tillbehor" or "zdjecia" find what "catálogo", "Zubehör",
+  // "tillbehör" and "zdjęcia" do. (ł and ø don't decompose — map them too.)
+  function fold(s) {
+    return String(s == null ? "" : s).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+      .replace(/ł/g, "l").replace(/ø/g, "o").replace(/æ/g, "ae").replace(/ß/g, "ss");
+  }
+  function queryTerms(q) { return fold(q).split(/\s+/).filter(Boolean); }
   // Pre-expand a query into alias groups once, for reuse across every candidate.
   function queryAliasGroups(q) { return queryTerms(q).map(termAliases); }
   // Relevance: exact/prefix name matches beat body-text matches.
   function relScore(label, hay, groups, rawQ) {
-    var name = (label || "").toLowerCase(), score = 0;
+    var name = fold(label), score = 0;
     if (rawQ && name === rawQ) score += 100;           // exact name
     if (rawQ && name.indexOf(rawQ) === 0) score += 40; // name starts with query
     if (rawQ && name.indexOf(rawQ) !== -1) score += 20; // full phrase in name
@@ -817,8 +858,19 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     if (_fileIndex) return _fileIndex;
     var out = [];
     PRODUCTS.forEach(function (p) {
+      // A colorway's copy of the product's own in-store piece / document (the
+      // same table tent under all four Gravity colorways, the same manual in
+      // every collab) is listed once — the extra hits led nowhere new.
+      var topNames = {}, docSeen = {};
+      Object.keys(p.folders || {}).forEach(function (f) {
+        if (f.indexOf(" / ") === -1) (p.folders[f] || []).forEach(function (x) { topNames[f + "::" + x.name] = 1; });
+      });
       if (p.folders) Object.keys(p.folders).forEach(function (folder) {
+        var leaf = folder.split(" / ").pop(), nested = folder.indexOf(" / ") !== -1;
         (p.folders[folder] || []).forEach(function (file) {
+          if (nested && /^(in.?store marketing|logos)$/i.test(leaf) && topNames[leaf + "::" + file.name]) return;
+          if (leaf === "Documents") { var dk = file.name + "." + (file.format || ""); if (docSeen[dk]) return; docSeen[dk] = 1; }
+          var lbl = labelFor(file.name);
           out.push({
             product: p, brand: p.brand, folder: folder, file: file,
             label: fileLabel(file), kind: facetOf(folder, file),
@@ -827,10 +879,11 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
             // Both English AND localized text: a retailer types the folder name the
             // portal shows them ("Fotos de produto"), while a shared ?q=<english>
             // link from a colleague must keep working in any language.
-            hay: (fileLabel(file) + " " + folder + " " + trFolderPath(folder) +
+            hay: fold(fileLabel(file) + " " + folder + " " + trFolderPath(folder) +
+              " " + tr(facetOf(folder, file)) + " " + (lbl && lbl.sku ? lbl.sku : "") +
               " " + (file.format || "") + " " + p.name + " " + tr(p.name) +
               " " + (p.category || "") + " " + tr(p.category || "") +
-              " " + BRANDS[p.brand].name).toLowerCase()
+              " " + BRANDS[p.brand].name)
           });
         });
       });
@@ -839,7 +892,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           product: p, brand: p.brand, folder: "How-to Videos", video: v,
           file: { name: v.title, format: "Video", thumb: v.thumb, url: v.url, type: "video" },
           label: v.title, kind: "Videos", subFn: function () { return p.name + " · " + tr("How-to Videos"); },
-          hay: (v.title + " video how to " + p.name + " " + BRANDS[p.brand].name).toLowerCase()
+          hay: fold(v.title + " video how to " + tr("How-to Videos") + " " + tr("How To Use Videos") + " " + tr("Videos") + " " + p.name + " " + BRANDS[p.brand].name)
         });
       });
     });
@@ -852,7 +905,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         label: nm, subFn: function () { return tr(c.group || "Catalog") + (c.region ? " · " + c.region : ""); },
         openHash: "catalog/" + c.slug,
         file: { name: nm, format: "PDF", thumb: c.thumb, url: c.file || c.url, file: c.file || null, type: "pdf" },
-        hay: (c.title + " " + (c.region || "") + " " + (c.group || "") + " catalog document pdf stundenglass").toLowerCase()
+        hay: fold(c.title + " " + (c.region || "") + " " + (c.group || "") + " " + tr(c.group || "") + " catalog document pdf stundenglass " + tr("Catalog") + " " + tr("Catalogs")),
+        // US first among regional editions, so "catalog" + Enter opens the US one.
+        regionRank: c.region ? (["US", "USA", "CA", "CAD", "EU", "UK"].indexOf(String(c.region).toUpperCase()) + 1 || 9) : 0
       });
     });
     _fileIndex = out;
@@ -868,7 +923,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     return " " + out.filter(Boolean).join(" ");
   }
   function searchProducts(q) {
-    var groups = queryAliasGroups(q), bk = state.view, rawQ = q.toLowerCase().trim();
+    var groups = queryAliasGroups(q), bk = state.view, rawQ = fold(q).trim();
     return PRODUCTS.map(function (p) {
       if (p.brand !== bk) return null;
       // Search the English prose AND the localized prose: a link shared with ?q=<english>
@@ -878,10 +933,15 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       function prose(i) {
         return " " + (i.description || "") + " " + (i.fullName || "") + " " + ((i.highlights || []).join(" "));
       }
-      var hay = (p.name + " " + tr(p.name) +
+      // Its colorway / collab folder names too: "Kompact Pink", "Tyson" or
+      // "Grateful Dead" should land on the products that carry them.
+      var segs = {};
+      Object.keys(p.folders || {}).forEach(function (f) { var s0 = f.split(" / ")[0]; segs[s0] = 1; });
+      var hay = fold(p.name + " " + tr(p.name) +
         " " + (p.category || "") + " " + tr(p.category || "") +
         " " + (p.type || "") + " " + (p.label || "") + " " + tr(p.label || "") +
-        " " + BRANDS[p.brand].name + prose(en) + prose(loc) + codes(p)).toLowerCase();
+        " " + Object.keys(segs).map(function (x) { return x + " " + trSeg(x); }).join(" ") +
+        " " + BRANDS[p.brand].name + prose(en) + prose(loc) + codes(p));
       if (!matchTerms(hay, groups)) return null;
       return { p: p, score: relScore(p.name, hay, groups, rawQ) };
     }).filter(Boolean).sort(function (a, b) {
@@ -892,7 +952,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   // Sorted BEFORE slicing, so the cap keeps the *best* matches.
   var SEARCH_FILE_CAP = 60;
   function searchFiles(q) {
-    var groups = queryAliasGroups(q), bk = state.view, rawQ = q.toLowerCase().trim();
+    var groups = queryAliasGroups(q), bk = state.view, rawQ = fold(q).trim();
     var hits = [];
     fileIndex().forEach(function (r) {
       if (r.brand !== bk) return;
@@ -900,7 +960,11 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       r._score = relScore(r.label, r.hay, groups, rawQ);
       hits.push(r);
     });
-    hits.sort(function (a, b) { return b._score - a._score || a.label.localeCompare(b.label); });
+    // Ties: catalogs before loose files that merely mention "catalog", and the
+    // US edition first among a catalog's regions.
+    hits.sort(function (a, b) {
+      return b._score - a._score || (a.regionRank ? 0 : 1) - (b.regionRank ? 0 : 1) || (a.regionRank || 0) - (b.regionRank || 0) || a.label.localeCompare(b.label);
+    });
     var counts = {};
     hits.forEach(function (r) { counts[r.kind] = (counts[r.kind] || 0) + 1; });
     var facets = FACET_ORDER.filter(function (k) { return counts[k]; })
@@ -928,12 +992,16 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   // still use the master, so nothing that is actually viewed large gets softer.
   function coverSrc(p, small) {
     if (!small || !p.cover) return p.cover;
-    return p.cover.replace(/\.png$/i, "-480.png");
+    // Product covers ship as WebP (≈90% lighter than the PNG masters, alpha
+    // kept) with a 480px sibling for the cards. Only our own covers have one.
+    return p.cover.replace(/^(assets\/img\/covers\/.+)\.(png|webp)$/i, "$1-480.$2");
   }
   function coverHTML(p, small) {
     if (p.cover) {
       var safe = tr(p.name).replace(/"/g, "");
-      return '<img src="' + coverSrc(p, small) + '" alt="' + safe + '" loading="lazy" decoding="async" onerror="window.__fallback(this,\'' + safe + '\')"/>';
+      // The product-page hero is the page's largest paint — load it at once.
+      var load = small ? ' loading="lazy" decoding="async"' : ' fetchpriority="high" decoding="async"';
+      return '<img src="' + coverSrc(p, small) + '" alt="' + safe + '"' + load + ' onerror="window.__fallback(this,\'' + safe + '\')"/>';
     }
     if (p.isLogo) return '<div class="logo-tile"><span>' + BRANDS[p.brand].wordmark + "</span></div>";
     return fallbackHTML(p.name);
@@ -1116,7 +1184,11 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   }
   function gridCardHTML(p) {
     return (
-      '<article class="card" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="' + tr("Open {name}").replace("{name}", tr(p.name)) + '">' +
+      // A plain card whose name is a real link stretched over the whole card
+      // (.card-open::after) — the "Download all" button sits above it as a
+      // sibling. It used to be a role="button" wrapping a <button>, which hid
+      // the inner button from screen readers.
+      '<article class="card" data-id="' + pid(p) + '">' +
         '<div class="card-frame">' +
           (p.newBadge && !p.isLogo ? '<span class="tag-new tag-new-' + p.newBadge + '">' + tr("New") + "</span>" : "") +
           coverHTML(p, true) +
@@ -1124,7 +1196,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
             '<button class="qbtn" data-act="download" title="' + tr("Download all") + '" aria-label="' + escapeHTML(tr("Download all") + " – " + tr(p.name)) + '">' + icon("download") + "</button>" +
           "</div>" +
         "</div>" +
-        '<div class="card-name">' + tr(p.name) + "</div>" +
+        '<div class="card-name"><a class="card-open" href="' + productHash(p) + '" aria-label="' + escapeHTML(tr("Open {name}").replace("{name}", tr(p.name))) + '">' + tr(p.name) + "</a></div>" +
         (p.label ? '<div class="card-label">' + tr(p.label) + "</div>" : "") +
         '<div class="card-sub">' + (p.isLogo ? tr("{n} logo files").replace("{n}", p.total) : plural(p.total, "{n} asset", "{n} assets") + (p.label ? "" : " · " + tr(p.category))) + "</div>" +
       "</article>"
@@ -1132,13 +1204,13 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   }
   function rowHTML(p) {
     return (
-      '<article class="card row" data-id="' + pid(p) + '" tabindex="0" role="button" aria-label="' + tr("Open {name}").replace("{name}", tr(p.name)) + '">' +
+      '<article class="card row" data-id="' + pid(p) + '">' +
         '<div class="row-thumb">' + coverHTML(p, true) + "</div>" +
         '<div class="row-main">' +
-          '<div class="row-name">' + tr(p.name) + (p.newBadge && !p.isLogo ? ' <span class="row-new' + (p.newBadge ? " row-new-" + p.newBadge : "") + '">' + tr("New") + '</span>' : "") + (p.label ? ' <span class="row-label">' + tr(p.label) + "</span>" : "") + "</div>" +
+          '<div class="row-name"><a class="card-open" href="' + productHash(p) + '" aria-label="' + escapeHTML(tr("Open {name}").replace("{name}", tr(p.name))) + '">' + tr(p.name) + "</a>" + (p.newBadge && !p.isLogo ? ' <span class="row-new' + (p.newBadge ? " row-new-" + p.newBadge : "") + '">' + tr("New") + '</span>' : "") + (p.label ? ' <span class="row-label">' + tr(p.label) + "</span>" : "") + "</div>" +
           '<div class="row-sub">' + (p.isLogo ? tr("{n} logo files").replace("{n}", p.total) : plural(p.total, "{n} asset", "{n} assets") + (p.label ? "" : " · " + tr(p.category))) + "</div>" +
         "</div>" +
-        '<button class="row-dl" data-act="download" title="' + tr("Download all") + '">' + icon("download") + "</button>" +
+        '<button class="row-dl" data-act="download" title="' + tr("Download all") + '" aria-label="' + escapeHTML(tr("Download all") + " – " + tr(p.name)) + '">' + icon("download") + "</button>" +
       "</article>"
     );
   }
@@ -1437,7 +1509,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var tiles = previewMats.map(function (x) {
       var lbl = instoreLabel(x), cap = (lbl && lbl.name) || fileLabel(x);
       var media = x.thumb ? '<img src="' + x.thumb + '" alt="' + cap.replace(/"/g, "") + '" loading="lazy"/>' : window.__icon("photo");
-      return '<a class="logo-tile" href="#materials" title="Order marketing materials">' + media + "</a>";
+      return '<a class="logo-tile" href="#materials" title="' + tr("Order marketing materials") + '">' + media + "</a>";
     }).join("");
 
     box.innerHTML =
@@ -1512,8 +1584,12 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       return f;
     });
   }
+  // The region a visitor picked on each catalog card survives the re-render
+  // that opening the viewer triggers (it used to snap back to US).
+  var _catPick = {}, _catOpened = null, _catRefocus = null;
   function catalogCard(f) {
-    var c = f.primary, alt = escapeHTML(f.title);
+    var picked = f.variants.filter(function (v) { return v.slug === _catPick[f.title]; })[0];
+    var c = picked || f.primary, alt = escapeHTML(f.title);
     var cover = c.thumb
       ? '<img class="cat-img" src="' + c.thumb + '" alt="' + alt + ' cover" loading="lazy" decoding="async"/>'
       : window.__icon("file");
@@ -1546,19 +1622,30 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     if (!list.length) { sec.style.display = "none"; box.innerHTML = ""; return; }
     sec.style.display = "";
     var cnt = $("#catalog-count");
-    if (cnt) cnt.textContent = plural(list.length, "{n} document", "{n} documents");
-    box.innerHTML = '<div class="cat-grid">' + catalogFamilies().map(catalogCard).join("") + "</div>";
+    var fams = catalogFamilies();
+    // Count what's on screen — one card per catalog, its regional editions are
+    // a switch on the card (the badge said "4 documents" over a single card).
+    if (cnt) cnt.textContent = plural(fams.length, "{n} document", "{n} documents");
+    box.innerHTML = '<div class="cat-grid">' + fams.map(catalogCard).join("") + "</div>";
 
     $$(".cat-card", box).forEach(function (card) {
       var cover = $(".cat-cover", card), img = $(".cat-img", card);
       function cur() { return catalogBySlug(card.getAttribute("data-cur")); }
       // Route through the hash so the URL is the source of truth (survives a
       // language switch / refresh / share).
-      clickKey(cover, function () { navCatalog(card.getAttribute("data-cur")); });
+      clickKey(cover, function () { _catOpened = card.getAttribute("data-cur"); navCatalog(_catOpened); });
+      // Closing the viewer steps back in history, which re-renders this list —
+      // put focus back on the card that opened it.
+      if (_catRefocus && card.getAttribute("data-cur") === _catRefocus) {
+        _catRefocus = null;
+        setTimeout(function () { cover.focus({ preventScroll: true }); }, 0);
+      }
       $$(".cat-pill", card).forEach(function (p) {
         p.addEventListener("click", function (e) {
           e.stopPropagation();
           card.setAttribute("data-cur", p.getAttribute("data-slug"));
+          var fam = catalogFamilies().filter(function (x) { return x.variants.some(function (v) { return v.slug === p.getAttribute("data-slug"); }); })[0];
+          if (fam) _catPick[fam.title] = p.getAttribute("data-slug");
           $$(".cat-pill", card).forEach(function (q) {
             var on = q === p;
             q.classList.toggle("on", on);
@@ -1598,14 +1685,20 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     teardownCatalog();
     // Keep location.search — dropping it wiped the user's ?q=/?t= filters (and
     // ?lang=) just because they closed a catalog.
-    if (/^#catalog\//.test(location.hash)) history.replaceState(null, "", location.pathname + location.search);
+    if (!/^#catalog\//.test(location.hash)) return;
+    // Opened from a card in-page: step back over the #catalog entry it pushed,
+    // so the next Back isn't a dead press. Arrived on a shared link: just drop
+    // the route from the address bar.
+    if (_catPushed) { _catPushed = false; _catRefocus = _catOpened; history.back(); }
+    else history.replaceState(null, "", location.pathname + location.search);
   }
   // Open a catalog by routing through the hash, so the URL is the source of truth.
   // Without this the viewer is pure DOM state: any re-render (e.g. switching
   // language) leaves a stale viewer in the old language over a re-rendered page.
+  var _catPushed = false;   // the open viewer's #catalog entry was pushed by us
   function navCatalog(slug) {
     var h = "#catalog/" + slug;
-    if (location.hash !== h) location.hash = h;   // hashchange -> route() -> openCatalog
+    if (location.hash !== h) { location.hash = h; _catPushed = true; }   // hashchange -> route() -> openCatalog
     else openCatalog(slug);
   }
   function openCatalog(slug) {
@@ -1690,6 +1783,11 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         stage.classList.toggle("zoomed", zoomed);
         stage.scrollTop = 0; stage.scrollLeft = 0;
         var dpr = Math.min(window.devicePixelRatio || 1, zoomed ? 3 : 2);
+        // iOS Safari refuses canvases over 16,777,216 px (a zoomed spread on a
+        // 13" iPad landscape hit 18.6M and drew blank) — trade pixel density for
+        // area, keeping the same on-screen size.
+        var area = base.width * scale * dpr * base.height * scale * dpr;
+        if (area > 16e6) dpr = dpr * Math.sqrt(16e6 / area);
         var vp = pg.getViewport({ scale: scale * dpr });
         canvas.width = vp.width; canvas.height = vp.height;
         canvas.style.width = Math.round(vp.width / dpr) + "px";
@@ -1869,7 +1967,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           (m.dim ? '<div class="mat-dim">' + escapeHTML(m.dim) + "</div>" : "") +
           (m.sku ? '<div class="mat-sku">' + tr("SKU") + " " + escapeHTML(m.sku) + "</div>" : "") + "</div>" +
         '<div class="mat-qty"><button class="mat-step" data-step="-1" aria-label="' + tr("Decrease") + '">–</button>' +
-          '<input type="number" min="0" value="0" data-mat="' + i + '" aria-label="' + tr("Quantity for {name}").replace("{name}", m.name.replace(/"/g, "")) + '"/>' +
+          '<input type="number" min="0" max="' + MAT_MAX + '" step="1" inputmode="numeric" value="0" data-mat="' + i + '" aria-label="' + tr("Quantity for {name}").replace("{name}", m.name.replace(/"/g, "")) + '"/>' +
           '<button class="mat-step" data-step="1" aria-label="' + tr("Increase") + '">+</button></div>' +
       "</div>";
     }).join("");
@@ -1882,12 +1980,12 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         '<aside class="mat-side">' +
           '<div class="mat-side-h">' + tr("Your details") + '</div>' +
           '<div class="mat-fields">' +
-            '<label class="mat-field"><span>' + tr("Store Name") + '</span><input type="text" id="mat-store-name" placeholder="' + tr("Store name") + '"/></label>' +
-            '<label class="mat-field"><span>' + tr("Mailing Address") + '</span><input type="text" id="mat-store-address" placeholder="' + tr("Street, City, State, ZIP") + '"/></label>' +
-            '<label class="mat-field"><span>' + tr("Email Address") + '</span><input type="email" id="mat-store-email" placeholder="you@store.com"/></label>' +
+            '<label class="mat-field"><span>' + tr("Store Name") + '</span><input type="text" id="mat-store-name" autocomplete="organization" required placeholder="' + tr("Store name") + '"/></label>' +
+            '<label class="mat-field"><span>' + tr("Mailing Address") + '</span><input type="text" id="mat-store-address" autocomplete="street-address" required placeholder="' + tr("Street, City, State, ZIP") + '"/></label>' +
+            '<label class="mat-field"><span>' + tr("Email Address") + '</span><input type="email" id="mat-store-email" autocomplete="email" placeholder="you@store.com"/></label>' +
           "</div>" +
           '<button class="btn lg mat-order-btn" id="mat-order">' + icon("mail") + " " + tr("Order Materials") + '<span id="mat-count"></span></button>' +
-          '<p class="mat-side-note">' + tr("You’ll confirm and send from your email app.") + "</p>" +
+          '<p class="mat-side-note">' + tr("You’ll confirm and send from your email app.") + '<br>' + escapeHTML(tr("Goes to {email}")).replace("{email}", "<strong>" + escapeHTML(CFG.orderEmail) + "</strong>") + "</p>" +
         "</aside>" +
       "</div>";
 
@@ -1904,16 +2002,40 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         updateMatCount();
       });
     });
-    $$("[data-mat]", pg).forEach(function (inp) { inp.addEventListener("input", updateMatCount); });
+    // The field always shows what will be ordered: whole numbers 0–MAT_MAX
+    // ("1e3" ordered 1, "2.5" ordered 2, "-4" stayed on screen but was ignored).
+    $$("[data-mat]", pg).forEach(function (inp) {
+      inp.addEventListener("input", updateMatCount);
+      inp.addEventListener("change", function () { inp.value = matQty(inp); updateMatCount(); });
+    });
     $$("[data-lbi]", pg).forEach(function (t) {
       t.addEventListener("click", function () { openLightbox(lbItems, +t.getAttribute("data-lbi")); });
     });
     $("#mat-order").addEventListener("click", function () { submitMaterialOrder(mats); });
   }
+  var MAT_MAX = 999;
+  function matQty(inp) { var n = Math.floor(Number(inp.value)); return isFinite(n) ? Math.max(0, Math.min(MAT_MAX, n)) : 0; }
+  // Point at the first field that needs attention.
+  function flagField(el, msg) {
+    if (el) { el.setAttribute("aria-invalid", "true"); el.focus(); el.addEventListener("input", function () { el.removeAttribute("aria-invalid"); }, { once: true }); }
+    toast(msg);
+  }
+  function emailOk(el) { return !el || !el.value.trim() || el.checkValidity(); }
+  // Hand the request to the mail app — and, since nothing visible happens when
+  // there isn't one (webmail users), offer the address and a copy of the text.
+  function sendRequest(to, subject, body, anchor) {
+    window.location.href = "mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    if (!anchor) return;
+    var box = anchor.parentNode.querySelector(".mail-fallback");
+    if (!box) { box = document.createElement("p"); box.className = "mail-fallback"; box.setAttribute("role", "status"); anchor.parentNode.insertBefore(box, anchor.nextSibling); }
+    box.innerHTML = escapeHTML(tr("If your email app didn’t open, send this to {email}.")).replace("{email}", '<a href="mailto:' + escapeHTML(to) + '">' + escapeHTML(to) + "</a>") +
+      ' <button type="button" class="btn ghost sm">' + icon("link") + " " + tr("Copy request") + "</button>";
+    $("button", box).addEventListener("click", function () { copyText(subject + "\n\n" + body, tr("Request copied")); });
+  }
   function submitMaterialOrder(mats) {
     var lines = [];
     $$("[data-mat]", $("#materials-page")).forEach(function (inp) {
-      var q = parseInt(inp.value, 10) || 0;
+      var q = matQty(inp);
       if (q > 0) {
         var m = mats[+inp.getAttribute("data-mat")];
         lines.push(m.name + (m.sku ? " (" + m.sku + ")" : "") + " — Qty: " + q);
@@ -1921,12 +2043,15 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     });
     if (!lines.length) { toast(tr("Set a quantity for at least one item first")); return; }
     var v = function (id) { var el = $(id); return el ? el.value.trim() : ""; };
+    // An order needs somewhere to ship to.
+    if (!v("#mat-store-name")) return flagField($("#mat-store-name"), tr("Add your store name and mailing address"));
+    if (!v("#mat-store-address")) return flagField($("#mat-store-address"), tr("Add your store name and mailing address"));
+    if (!emailOk($("#mat-store-email"))) return flagField($("#mat-store-email"), tr("Enter a valid email address"));
     var body = "Store Name: " + v("#mat-store-name") +
       "\nAddress: " + v("#mat-store-address") +
       "\nE-Mail Address: " + v("#mat-store-email") +
       "\n\nRequested Marketing Materials:\n" + lines.join("\n");
-    window.location.href = "mailto:" + CFG.orderEmail + "?subject=" +
-      encodeURIComponent("Marketing Material Request") + "&body=" + encodeURIComponent(body);
+    sendRequest(CFG.orderEmail, "Marketing Material Request", body, $("#mat-order"));
   }
 
   // ---- product training / certification ------------------------------------
@@ -2234,7 +2359,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           '<button class="loc-remove" data-remove title="' + tr("Remove this store") + '">' + icon("trash") + " " + tr("Remove") + "</button>" +
         "</div>" +
         '<div class="loc-fields">' +
-          '<label class="mat-field loc-wide"><span>' + tr("Store Name") + '</span><input type="text" data-f="name" placeholder="' + tr("Store name") + '"/></label>' +
+          '<label class="mat-field loc-wide"><span>' + tr("Store Name") + '</span><input type="text" data-f="name" autocomplete="off" placeholder="' + tr("Store name") + '"/></label>' +
           '<label class="mat-field loc-wide"><span>' + tr("Address") + '</span><input type="text" data-f="address" placeholder="' + tr("123 Main St, City, State ZIP") + '"/></label>' +
           '<div class="loc-row">' +
             '<label class="mat-field"><span>' + tr("Phone") + '</span><input type="tel" data-f="phone" placeholder="(555) 555-5555"/></label>' +
@@ -2270,12 +2395,12 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         '<aside class="mat-side">' +
           '<div class="mat-side-h">' + tr("Your contact info") + "</div>" +
           '<div class="mat-fields">' +
-            '<label class="mat-field"><span>' + tr("Your Name") + '</span><input type="text" id="loc-contact-name" placeholder="' + tr("Full name") + '"/></label>' +
-            '<label class="mat-field"><span>' + tr("Email Address") + '</span><input type="email" id="loc-contact-email" placeholder="you@company.com"/></label>' +
-            '<label class="mat-field"><span>' + tr("Phone") + ' <em>' + tr("(optional)") + '</em></span><input type="tel" id="loc-contact-phone" placeholder="(555) 555-5555"/></label>' +
+            '<label class="mat-field"><span>' + tr("Your Name") + '</span><input type="text" id="loc-contact-name" autocomplete="name" required placeholder="' + tr("Full name") + '"/></label>' +
+            '<label class="mat-field"><span>' + tr("Email Address") + '</span><input type="email" id="loc-contact-email" autocomplete="email" required placeholder="you@company.com"/></label>' +
+            '<label class="mat-field"><span>' + tr("Phone") + ' <em>' + tr("(optional)") + '</em></span><input type="tel" id="loc-contact-phone" autocomplete="tel" placeholder="(555) 555-5555"/></label>' +
           "</div>" +
           '<button class="btn lg mat-order-btn" id="loc-submit">' + icon("mail") + " " + tr("Submit Request") + '<span id="loc-count"></span></button>' +
-          '<p class="mat-side-note">' + tr("You’ll confirm and send from your email app.") + "</p>" +
+          '<p class="mat-side-note">' + tr("You’ll confirm and send from your email app.") + '<br>' + escapeHTML(tr("Goes to {email}")).replace("{email}", "<strong>" + escapeHTML(CFG.locatorEmail) + "</strong>") + "</p>" +
         "</aside>" +
       "</div>";
 
@@ -2318,13 +2443,18 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   }
   function submitLocatorRequest() {
     var stores = $$("#loc-stores .loc-store");
-    var blocks = [], valid = 0;
-    stores.forEach(function (s, i) {
-      var g = function (f) { var el = s.querySelector('[data-f="' + f + '"]'); return el ? el.value.trim() : ""; };
+    var blocks = [], valid = 0, bad = null;
+    stores.forEach(function (s) {
+      var field = function (f) { return s.querySelector('[data-f="' + f + '"]'); };
+      var g = function (f) { var el = field(f); return el ? el.value.trim() : ""; };
       var name = g("name"), address = g("address"), phone = g("phone"), website = g("website");
-      if (name || address || phone || website) valid++;
+      if (!(name || address || phone || website)) return;   // a blank card isn't a store
+      // A listing needs at least a name and an address.
+      if (!bad && !name) bad = field("name");
+      if (!bad && !address) bad = field("address");
+      valid++;
       blocks.push(
-        "Store " + (i + 1) + ":" +
+        "Store " + valid + ":" +
         "\n  Store Name: " + name +
         "\n  Address: " + address +
         "\n  Phone: " + phone +
@@ -2332,14 +2462,17 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       );
     });
     if (!valid) { toast(tr("Add at least one store's details first")); return; }
+    if (bad) return flagField(bad, tr("Add each store’s name and address"));
     var v = function (id) { var el = $(id); return el ? el.value.trim() : ""; };
-    var body = tr("Store Locator Request") +
+    if (!v("#loc-contact-name")) return flagField($("#loc-contact-name"), tr("Add your name and email so we can reply"));
+    if (!v("#loc-contact-email") || !emailOk($("#loc-contact-email"))) return flagField($("#loc-contact-email"), tr("Enter a valid email address"));
+    // Internal email: English throughout (the heading was being translated).
+    var body = "Store Locator Request" +
       "\n\nSubmitted by: " + v("#loc-contact-name") +
       "\nContact Email: " + v("#loc-contact-email") +
       "\nContact Phone: " + v("#loc-contact-phone") +
       "\n\n" + blocks.join("\n\n");
-    window.location.href = "mailto:" + CFG.locatorEmail + "?subject=" +
-      encodeURIComponent("Add to Store Locator") + "&body=" + encodeURIComponent(body);
+    sendRequest(CFG.locatorEmail, "Add to Store Locator", body, $("#loc-submit"));
   }
   function emptyState() {
     return '<p class="grid-empty">' + tr("No assets match your filters.") +
@@ -2357,13 +2490,10 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           downloadAll(p);
           return;
         }
+        // Cmd/Ctrl/Shift-click opens the product in a new tab like any link.
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        e.preventDefault();   // the .card-open link — route in-page, no hash double-render
         navTo(p);
-      });
-      card.addEventListener("keydown", function (e) {
-        // Only the card itself — Enter on its inner "Download all" button must
-        // reach that button's click handler, not open the product.
-        if (e.target !== card) return;
-        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); navTo(p); }
       });
     });
   }
@@ -2374,6 +2504,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   // normal page load.
   var _openMemo = null, _langSwitch = false;
   function openDetail(p, initialFolder) {
+    // The open-folder memo only bridges a language switch's re-render; a normal
+    // visit always starts collapsed.
+    if (!_langSwitch) _openMemo = null;
     $("#home").style.display = "none";
     $("#styleguide").style.display = "none";
     var dBrowse = $("#browse"); if (dBrowse) dBrowse.style.display = "none";
@@ -2391,7 +2524,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       p.folders[INSTORE_FOLDER] = dedupInstore(p.folders[INSTORE_FOLDER]);
       // The dedup shrinks the in-store folder — recompute the hero "N assets"
       // total from the current folder lengths so it never overstates.
-      p.total = Object.keys(p.folders).reduce(function (s, f) { return s + p.folders[f].length; }, 0);
+      p.total = visibleCount(p);
     }
     var folderNames = Object.keys(p.folders).filter(function (f) { return (p.folders[f] || []).length; });
     var SEP = " / ";
@@ -2402,13 +2535,21 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var docNames = folderNames.filter(isDoc).sort(function (a, b) {
       return (a.split(SEP).length - b.split(SEP).length) || a.localeCompare(b);
     });
-    // One sales sheet covers every colorway: when the product has its own
-    // top-level Documents folder, Sales Assets shows only that — no Black /
-    // Desert Rose / … breakout (those folders repeat the same manual and sheet).
-    // Products without one (Accessories' lines) still list each folder.
-    if (docNames.some(function (f) { return f.split(SEP)[0] === "Documents"; })) {
-      docNames = docNames.filter(function (f) { return f.split(SEP)[0] === "Documents"; });
-    }
+    // Sales Assets is ONE list, not a per-colorway breakout: every Documents
+    // folder's files merged, the product's own folder first, and a file that
+    // appears in several colorways (the same manual, the same accessories sheet)
+    // listed once. Dropping the colorway folders outright hid files that exist
+    // only there — Gravity's V3 manual, Kompact's Pink one-sheet.
+    var docFiles = [], docSeen = {}, docFrom = {};
+    docNames.forEach(function (f) {
+      (p.folders[f] || []).forEach(function (x) {
+        var k = (x.name + "." + (x.format || "")).toLowerCase();
+        if (docSeen[k]) return;
+        docSeen[k] = 1; docFiles.push(x); docFrom[f] = 1;
+      });
+    });
+    // The Dropbox folder behind the list, when it all comes from one.
+    var docFolder = Object.keys(docFrom).length === 1 ? Object.keys(docFrom)[0] : null;
 
     // ---- N-level folder browser over `tree`. Keys are full "/"-joined paths
     // ("Black / Product Photos"). The top level shows as square folder cards;
@@ -2440,10 +2581,15 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       return n;
     }
     // Sort a path's child segments: canonical categories first, then by files, A–Z.
+    // Colorways in the product's official lineup order (PORTAL_COLORWAYS — the
+    // same order as Collection Colorways, Black first) rather than by file count,
+    // which reshuffled whenever a folder grew.
+    var LINEUP = ((window.PORTAL_COLORWAYS || {})[p.name] || []).map(function (w) { return String(w.color).toLowerCase(); });
+    function lineupRank(seg) { var i = LINEUP.indexOf(String(seg).toLowerCase()); return i < 0 ? 99 : i; }
     function sortSegs(path, segs) {
       return segs.slice().sort(function (a, b) {
         if (a === INSTORE_FOLDER) return 1; if (b === INSTORE_FOLDER) return -1;
-        return (folderRank(a) - folderRank(b)) || (filesUnder(joinPath(path, b)) - filesUnder(joinPath(path, a))) || a.localeCompare(b);
+        return (folderRank(a) - folderRank(b)) || (lineupRank(a) - lineupRank(b)) || (filesUnder(joinPath(path, b)) - filesUnder(joinPath(path, a))) || a.localeCompare(b);
       });
     }
     // All folders start collapsed. A deep link (shared "?f=" URL or a file-search
@@ -2460,10 +2606,21 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       if (openPath) openGroup = _openMemo.group || null;
     }
     if (initialFolder && own(p.folders, initialFolder) && isDoc(initialFolder)) { docTarget = initialFolder; arrivedViaLink = true; }
+    else if (initialFolder && colorMode && own(p.folders, initialFolder) && isColorway(initialFolder.split(SEP)[0]) && initialFolder.indexOf(SEP) !== -1 && sliceOf(initialFolder) === "other") {
+      // A colorway's own logos / in-store files aren't on the product page (by
+      // spec, Other holds only the product's own) — say so instead of landing
+      // on an unexplained grid.
+      setTimeout(function () { toast(tr("That file isn’t shown on this page — download it from the search results.")); }, 300);
+    }
     else if (initialFolder && ((own(p.folders, initialFolder) && p.folders[initialFolder].length) || isFolderBranch(initialFolder))) {
       openPath = initialFolder; arrivedViaLink = true;
       // A link into a colorway opens the slice that folder belongs to.
-      if (isColorway(openPath.split(SEP)[0])) openGroup = openPath.indexOf(SEP) === -1 ? "photos" : sliceOf(openPath);
+      if (isColorway(openPath.split(SEP)[0])) {
+        // The colorway root itself: its loose files decide (Classic › Cookies
+        // keeps two videos there); a root with none opens on Photos.
+        var rootSlice = sliceOf(openPath);
+        openGroup = openPath.indexOf(SEP) === -1 ? ((p.folders[openPath] || []).length && rootSlice !== "other" ? rootSlice : "photos") : rootSlice;
+      }
     }
     var selected = {};   // fileKey -> file object; persists while opening/closing folders
 
@@ -2531,6 +2688,16 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       // Never front a video folder with a how-to/cleaning/tutorial clip (the TV
       // Screen Videos card was showing "How To Use") when anything else is there.
       var HOWTO = /how ?to|tutorial|clean|getting started|unboxing|error screen|tech specs/i;
+      // Nor with a shot every sibling folder shares: Modül's eight color folders
+      // all start with the same silver "Concentratetank_01", so seven color
+      // cards looked identical. Prefer the first file unique to this folder.
+      var sib = {}, par = parentPath(path);
+      if (par || path.indexOf(SEP) !== -1) childSegs(par).forEach(function (seg) {
+        var f = joinPath(par, seg); if (f === path) return;
+        (p.folders[f] || []).forEach(function (x) { if (x.thumb) sib[x.thumb] = 1; });
+      });
+      var own = files.filter(function (x) { return !sib[x.thumb]; });
+      if (own.length) files = own;
       var showy = files.filter(function (x) { return !(x.type === "video" && HOWTO.test(x.name)); });
       var direct = showy[0] || files[0];
       if (direct && !isFolderBranch(path)) return (_coverCache[path] = direct.thumb);
@@ -2582,7 +2749,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     ];
     function groupLabel(G) { return tr(GROUPS.filter(function (g) { return g.key === G; })[0].label); }
     function catGroup(seg) {
-      if (/video|reel|tv screen|\bugc\b/i.test(seg)) return "videos";
+      if (/video|reel|tv screen|\bugc\b|user.?generated/i.test(seg)) return "videos";
       if (/logo|in.?store|marketing|point of sale|\bpos\b/i.test(seg)) return "other";
       if (/photo|lifestyle|packag|render|banner|e-?comm/i.test(seg)) return "photos";
       return null;
@@ -2615,13 +2782,12 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     // The open chain: `openPath` (a real folder) plus, inside a colorway, which
     // slice of it is open.
     function sliceOpen(cw, G) { return openGroup === G && isOpen(cw); }
-    function panelKey(fp, G) { return G && fp.indexOf(SEP) === -1 && isColorway(fp) ? fp + "|" + G : fp; }
     function cardMedia(cover, ic) {
       // If the image 404s (pruned thumbnail), swap back to the icon rather than
       // leaving a broken-image box on the card.
       return cover
         ? '<img src="' + escapeHTML(cover) + '" alt="" loading="lazy" decoding="async"' +
-            " onerror=\"this.parentNode.classList.add('no-img');this.parentNode.innerHTML=window.__icon('" + ic + "')\"/>"
+            " onerror=\"var c=this.closest('.fcard');if(c)c.classList.add('no-img');this.parentNode.innerHTML=window.__icon('" + ic + "')\"/>"
         : window.__icon(ic);
     }
     function cardShell(attrs, cls, cover, ic, label, count, open, key, panel) {
@@ -2646,7 +2812,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     function sliceCardHTML(cw, G) {
       var kids = kidsOf(cw, G), open = sliceOpen(cw, G);
       var count = (kids.length ? plural(kids.length, "{n} folder", "{n} folders") + " · " : "") + fcount(filesIn(cw, G));
-      return cardShell(' data-path="' + escapeHTML(cw) + '" data-g="' + G + '"', " is-branch", folderCover(cw), "stack",
+      return cardShell(' data-path="' + escapeHTML(cw) + '" data-g="' + G + '"', " is-branch" + (G === "videos" ? " is-video" : ""), folderCover(cw), "stack",
         trSeg(cw), count, open, cw + "|" + G, function () { return slicePanelHTML(cw, G); });
     }
     function slicePanelHTML(cw, G) {
@@ -2689,9 +2855,19 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
           return groupBlock(groupLabel(g), list.map(function (e) { return e.html; }).join(""), depth);
         }).join("");
       }
-      var byGroup = {};
-      segs.forEach(function (seg) { var fp = joinPath(parent, seg); (byGroup[groupOf(fp)] = byGroup[groupOf(fp)] || []).push(fp); });
-      return GROUPS.filter(function (g) { return byGroup[g.key]; }).map(function (g) {
+      var byGroup = {}, inherited = null;
+      if (parent) parent.split(SEP).forEach(function (sg) { inherited = catGroup(sg) || inherited; });
+      segs.forEach(function (seg) {
+        var fp = joinPath(parent, seg), g = catGroup(seg) || inherited || groupOf(fp);
+        (byGroup[g] = byGroup[g] || []).push(fp);
+      });
+      var present = GROUPS.filter(function (g) { return byGroup[g.key]; });
+      // One kind of folder only (a color lineup, an accessory's sub-lines): a
+      // plain grid — a lone "Other" / "Photos" heading over it said nothing.
+      if (parent && present.length === 1) {
+        return '<div class="fgrid fgrid-sub">' + byGroup[present[0].key].map(function (fp) { return folderCardHTML(fp, depth); }).join("") + "</div>";
+      }
+      return present.map(function (g) {
         return groupBlock(tr(g.label), byGroup[g.key].map(function (fp) { return folderCardHTML(fp, depth); }).join(""), depth);
       }).join("");
     }
@@ -2741,8 +2917,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       });
       return { sets: sets, rest: rest };
     }
-    var _docSplit = {};   // doc folder path → regionSplit result (computed once)
-    function docSplit(f) { return _docSplit[f] || (_docSplit[f] = regionSplit(p.folders[f] || [])); }
+    var docAll = regionSplit(docFiles);   // regional sheet cards + everything else
     function oneSheetHTML(set, key) {
       var v = set.variants[0], f = v.file;
       return '<div class="osheet" data-osheet="' + key + '">' +
@@ -2766,7 +2941,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     }
     function bindOneSheets(ctx) {
       $$(".osheet", ctx).forEach(function (card) {
-        var parts = card.getAttribute("data-osheet").split(":"), set = docSplit(docNames[+parts[0]]).sets[+parts[1]];
+        var set = docAll.sets[+card.getAttribute("data-osheet")];
         var cur = 0;
         function file() { return set.variants[cur].file; }
         function show(i) {
@@ -2797,24 +2972,18 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       });
     }
     function salesHTML() {
-      if (!docNames.length) return "";
+      if (!docFiles.length) return "";
+      // A section that is nothing but one regional sheet is just its card.
+      var bare = !docAll.rest.length && docAll.sets.length === 1;
       return '<div class="section-head" id="sales-head"><h2>' + tr("Sales Assets") + "</h2></div>" +
-        '<div class="sales-groups">' + docNames.map(function (f, i) {
-          var where = parentPath(f);
-          var label = where ? where.split(SEP).map(trSeg).join(" · ") : trSeg("Documents");
-          // A section that is nothing but one regional sheet is just its card.
-          var bare = docNames.length === 1 && !docSplit(f).rest.length && docSplit(f).sets.length === 1;
-          return '<div class="sales-group" data-docpath="' + escapeHTML(f) + '">' +
-              (bare ? "" : '<div class="folder-toolbar">' +
-                '<h3 class="folder-title">' + escapeHTML(label) + '<span class="ft-count">' + fcount(p.folders[f].length) + "</span></h3>" +
-                folderActions(f, p.folders[f].length > 1) +
-              "</div>") +
-              (docSplit(f).sets.length
-                ? '<div class="osheets">' + docSplit(f).sets.map(function (set, j) { return oneSheetHTML(set, i + ":" + j); }).join("") + "</div>"
-                : "") +
-              (docSplit(f).rest.length ? '<div class="gallery" data-docgal="' + i + '"></div>' : "") +
-            "</div>";
-        }).join("") + "</div>";
+        '<div class="sales-groups"><div class="sales-group">' +
+          (bare ? "" : '<div class="folder-toolbar">' +
+            '<h3 class="folder-title">' + escapeHTML(trSeg("Documents")) + '<span class="ft-count">' + fcount(docFiles.length) + "</span></h3>" +
+            (docFolder ? folderActions(docFolder, docFiles.length > 1) : "") +
+          "</div>") +
+          (docAll.sets.length ? '<div class="osheets">' + docAll.sets.map(function (set, j) { return oneSheetHTML(set, String(j)); }).join("") + "</div>" : "") +
+          (docAll.rest.length ? '<div class="gallery" data-docgal="0"></div>' : "") +
+        "</div></div>";
     }
 
     function render() {
@@ -2828,15 +2997,21 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
 
       // Videos = every video file in the folders plus the hand-listed how-tos
       // (counting only the how-tos read "2 videos" on a product with 25).
-      var nVid = (p.videos || []).length;
-      Object.keys(p.folders).forEach(function (f) { (p.folders[f] || []).forEach(function (x) { if (x.type === "video") nVid++; }); });
+      // Count what the page actually offers: the folders it renders (a
+      // colorway's own in-store / logo copies aren't shown) plus Sales Assets
+      // de-duplicated — "179 assets" on a page showing 156 read as missing files.
+      var nVid = (p.videos || []).length, nShown = docFiles.length;
+      tree.forEach(function (f) {
+        if (colorMode && isColorway(f.split(SEP)[0]) && sliceOf(f) === "other") return;
+        (p.folders[f] || []).forEach(function (x) { nShown++; if (x.type === "video") nVid++; });
+      });
       var stat = plural(p.total, "{n} asset", "{n} assets") +
         (nVid ? " · " + plural(nVid, "{n} video", "{n} videos") : "") +
         " · " + tr("updated {date}").replace("{date}", fmtDate(p.updated || p.added));
       d.innerHTML =
         '<button class="back" id="back-btn">' + icon("arrowLeft") + " " + tr("Back to library") + "</button>" +
         '<div class="detail-hero">' +
-          '<div class="detail-cover-lg' + (p.cover ? " clickable" : "") + '"' + (p.cover ? ' id="hero-cover"' : "") + ">" + coverHTML(p) + "</div>" +
+          '<div class="detail-cover-lg' + (p.cover ? " clickable" : "") + '"' + (p.cover ? ' id="hero-cover" role="button" tabindex="0" aria-label="' + escapeHTML(tr("Enlarge {name}").replace("{name}", fullName)) + '"' : "") + ">" + coverHTML(p) + "</div>" +
           '<div class="detail-info">' +
             '<div class="detail-eyebrow">' + typeLine + "</div>" +
             "<h2>" + fullName + "</h2>" +
@@ -2907,7 +3082,12 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       $("#back-btn").addEventListener("click", navHome);
       var trainEntry = $("#train-entry"); if (trainEntry) trainEntry.addEventListener("click", function () { navTraining(p); });
       var heroCover = $("#hero-cover");
-      if (heroCover) heroCover.addEventListener("click", function () { openLightbox([{ src: p.cover, name: fullName, url: p.cover }], 0); });
+      // Shown as WebP, but Download hands over the PNG master (same name), and
+      // as a same-origin file so it saves instead of opening a tab.
+      if (heroCover) clickKey(heroCover, function () {
+        var png = String(p.cover).replace(/\.webp$/i, ".png");
+        openLightbox([{ src: p.cover, name: fullName, url: png, file: png, dlName: safeFileName(fullName) + ".png" }], 0);
+      });
       $("#dl-all").addEventListener("click", function () { downloadAll(p); });
       $("#copy-link").addEventListener("click", function () {
         var url = location.origin + location.pathname + langQuery() + productHash(p);
@@ -2920,10 +3100,8 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         copyText((infoOf(p).fullDescription || []).join("\n\n"), tr("Description copied"));
       });
       // Document galleries render once — they don't change when folders open.
-      docNames.forEach(function (f, i) {
-        var box = $('[data-docgal="' + i + '"]', d);
-        if (box) renderGallery(p, f, selected, toggleIn(f), syncSelection, box, docSplit(f).rest);
-      });
+      var docBox = $('[data-docgal="0"]', d), docKey = docFolder || "Sales Assets";
+      if (docBox) renderGallery(p, docKey, selected, toggleIn(docKey), syncSelection, docBox, docAll.rest);
       bindOneSheets(d);
       bindFolderActions($("#sales-head") ? $(".sales-groups", d) : null);
       var selClearBtn = $("#sel-clear");
@@ -2965,12 +3143,36 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       });
     }
 
+    // An open panel spans the row UNDER its card. It is emitted right after the
+    // card, and `dense` flow draws the rest of that row above it — so visually
+    // fine, but Tab / screen-reader order ran card → panel → the cards drawn
+    // above the panel. Move each panel after the last card of its row so the
+    // DOM order matches what's on screen. Re-done on resize (rows change).
+    function placePanels(root) {
+      $$(".fpanel", root).forEach(function (panel) {
+        var card = $('[aria-controls="' + panel.id + '"]', root);
+        if (!card || card.parentNode !== panel.parentNode) return;
+        card.parentNode.insertBefore(panel, card.nextSibling);
+        var row = card.offsetTop, last = card, n = panel.nextElementSibling;
+        while (n && n.classList.contains("fcard") && n.offsetTop === row) { last = n; n = n.nextElementSibling; }
+        if (last !== card) last.parentNode.insertBefore(panel, last.nextSibling);
+      });
+    }
+    if (!window.__placePanelsBound) {
+      window.__placePanelsBound = true;
+      var _ppT = null;
+      window.addEventListener("resize", function () {
+        clearTimeout(_ppT);
+        _ppT = setTimeout(function () { var b = document.getElementById("pv-assets"); if (b) placePanels(b); }, 150);
+      });
+    }
     // (Re)draw just the PHOTO / VIDEO ASSETS cards — opening or closing a folder
     // never rebuilds the rest of the page, so nothing above it moves.
     function renderAssets() {
       var box = $("#pv-assets", d);
       if (!box) { syncSelection(); return; }
       box.innerHTML = folderGridHTML("", 0);
+      placePanels(box);
       if ((p.folders[openPath] || []).length && $("#gallery", box)) {
         renderGallery(p, openPath, selected, toggleIn(openPath), syncSelection, $("#gallery", box));
       }
@@ -2984,6 +3186,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       $$(".fcard", box).forEach(function (c) {
         c.addEventListener("click", function () {
           var fp = c.getAttribute("data-path"), G = c.getAttribute("data-g");
+          var before = c.getBoundingClientRect().top;
           if (G) {   // a colorway's Photos / Videos / Other card
             if (sliceOpen(fp, G)) { openPath = ""; openGroup = null; } else { openPath = fp; openGroup = G; }
           } else {
@@ -2995,9 +3198,16 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
             try { history.replaceState(null, "", location.pathname + location.search + productHash(p)); } catch (e) {}
           }
           renderAssets();
-          // The cards were redrawn; keep keyboard focus on the one just used.
+          // The cards were redrawn; keep keyboard focus on the one just used —
+          // and keep it where it was on screen. Closing a tall panel ABOVE the
+          // tapped card used to leave the page thousands of px further down
+          // (on a phone, at the footer).
           var same = $$(".fcard", box).filter(function (x) { return x.getAttribute("data-path") === fp && x.getAttribute("data-g") === G; })[0];
-          if (same) same.focus({ preventScroll: true });
+          if (same) {
+            var shift = same.getBoundingClientRect().top - before;
+            if (Math.abs(shift) > 1) window.scrollBy({ top: shift, behavior: "instant" });
+            same.focus({ preventScroll: true });
+          }
         });
       });
       syncSelection();
@@ -3011,7 +3221,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     // and "auto" defers to that — a shared link should just *be* at the folder.
     if (arrivedViaLink) {
       var target = docTarget
-        ? $$(".sales-group", d).filter(function (g) { return g.getAttribute("data-docpath") === docTarget; })[0]
+        ? $("#sales-head", d)
         : $("#" + panelId(openGroup && openPath.indexOf(SEP) === -1 ? openPath + "|" + openGroup : openPath), d);
       if (target) {
         setTimeout(function () {
@@ -3053,7 +3263,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       var cap = lbl ? '<span class="instore-tile-cap"><span class="instore-tile-nm">' + escapeHTML(lbl.name) +
         "</span><span class=\"instore-tile-dim\">" + escapeHTML(lbl.dim) + "</span>" +
         (lbl.sku ? '<span class="instore-tile-sku">' + tr("SKU") + " " + escapeHTML(lbl.sku) + "</span>" : "") + "</span>" : "";
-      return '<a class="instore-tile' + (lbl ? " has-cap" : "") + '" href="#materials" title="Order ' + fileLabel(x).replace(/"/g, "") + '">' +
+      return '<a class="instore-tile' + (lbl ? " has-cap" : "") + '" href="#materials" title="' + escapeHTML(tr("Order {name}").replace("{name}", fileLabel(x))) + '">' +
         '<span class="instore-tile-media">' + media + '<span class="instore-tile-order">' + icon("mail") + " " + tr("Order") + "</span></span>" +
         cap + "</a>";
     }).join("");
@@ -3320,7 +3530,10 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
   // Dropbox link (dl=0) so a viewer can copy a shareable URL without leaving the
   // player; `dlUrl` is the dl=1 form that forces an actual download.
   function openVideoModal(src, title, dlUrl, dlName, shareUrl) {
+    // Swapping one video for another keeps the same history entry.
+    var keep = _ovPushed; _ovPushed = false;
     closeVideoModal();
+    _ovPushed = keep;
     var ov = document.createElement("div");
     ov.className = "vlb"; ov.id = "vlb";
     // Vimeo/YouTube embeds play in an iframe; real MP4s use a <video> element.
@@ -3349,10 +3562,12 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       toast(tr("Couldn’t play that video — try downloading it"));
     });
     modalOpen(ov, title || tr("Video"), $(".vlb-close", ov));
+    overlayPush();
   }
   function closeVideoModal() {
     var ov = $("#vlb");
     if (!ov) return;
+    overlaySpend();
     var v = $("video", ov); if (v) v.pause();
     ov.remove();
     modalClose();
@@ -3612,8 +3827,10 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     // The opener may have been re-rendered away while the overlay was up (a deep
     // link re-renders the page, THEN opens the viewer), so focusing a detached
     // node would silently drop focus to <body>. Fall back to something real.
-    if (back && back.focus && document.contains(back)) { back.focus(); return; }
-    var fallback = $(".cat-cover[data-catopen]") || $("#search") || $("#home-link");
+    // <body> is "focusable" and always in the document — treat it as missing.
+    if (back && back !== document.body && back.focus && document.contains(back)) { back.focus(); return; }
+    var opened = _catOpened && $('.cat-card[data-cur="' + _catOpened + '"] .cat-cover');
+    var fallback = opened || $(".cat-cover[data-catopen]") || $("#search") || $("#home-link");
     if (fallback && fallback.focus) fallback.focus();
   }
   // The overlay currently on top, if any.
@@ -3640,15 +3857,17 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     lbIdx = idx || 0;
     showLb();
     var ov = $("#lightbox");
+    var was = lbOpen();
     ov.classList.add("open");
     modalOpen(ov, tr("Asset preview"), $("#lb-close"));
+    if (!was) overlayPush();
   }
   function lbCurrent() { return lbItems[lbIdx] || {}; }
   function showLb() {
     var it = lbCurrent();
     var lbImg = $("#lightbox img");
     lbImg.src = it.src || "";
-    lbImg.alt = it.name || "Asset preview";   // announce the actual asset, not a static label
+    lbImg.alt = it.name || tr("Asset preview");   // announce the actual asset, not a static label
     $("#lb-name").textContent = it.name || "";
     $("#lb-count").textContent = lbItems.length > 1 ? (lbIdx + 1) + " / " + lbItems.length : "";
     var multi = lbItems.length > 1 ? "flex" : "none";
@@ -3660,7 +3879,24 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     lbIdx = (lbIdx + d + lbItems.length) % lbItems.length;
     showLb();
   }
+  // Phone Back closes an open image / video instead of leaving the page: each
+  // opens with a same-URL history entry (no hashchange); Back pops it, and a
+  // close by X / Escape / backdrop spends that entry itself. Route changes
+  // forget it (the stale same-URL entry is harmless).
+  var _ovPushed = false;
+  function overlayPush() {
+    if (_ovPushed) return;
+    try { history.pushState({ sgOverlay: 1 }, "", location.href); _ovPushed = true; } catch (e) {}
+  }
+  function overlaySpend() { if (_ovPushed) { _ovPushed = false; try { history.back(); } catch (e) {} } }
+  window.addEventListener("popstate", function () {
+    if (!_ovPushed) return;
+    _ovPushed = false;
+    if (document.getElementById("vlb")) closeVideoModal();
+    else if (lbOpen()) closeLightbox();
+  });
   function closeLightbox() {
+    overlaySpend();
     $("#lightbox").classList.remove("open");
     $("#lightbox img").src = "";
     lbItems = [];
@@ -3869,8 +4105,11 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       // Not while a dialog is open — it would re-render home behind the viewer
       // and pull focus out of the modal.
       if ($("#vlb") || $("#catlb") || lbOpen()) return;
+      // Only where the search box is on screen (the library home) — a stray "/"
+      // on a product page used to throw the page away (WCAG 2.1.4).
+      var home = $("#home");
+      if (!home || home.style.display === "none") return;
       e.preventDefault();
-      navHome();
       searchEl.focus();
       searchEl.select();
     });
@@ -3905,7 +4144,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       try { u = /dropbox\.com/.test(u) ? viewLink(u) : new URL(u, location.href).href; } catch (e) {}
       copyText(u, tr("Link copied"));
     });
-    $("#lb-dl").addEventListener("click", function () { var it = lbCurrent(); if (it.file) directDownload(it.file, it.name); else downloadOne(it.url); });
+    $("#lb-dl").addEventListener("click", function () { var it = lbCurrent(); if (it.file) directDownload(it.file, it.dlName || it.name); else downloadOne(it.url); });
     $("#lightbox").addEventListener("click", function (e) {
       if (e.target.id === "lightbox" || e.target.classList.contains("lb-stage")) closeLightbox();
     });
@@ -3969,6 +4208,8 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       bindLangBar();
       maybeOfferLang();
       route();
+      // First real render is on screen — lift the boot guard (see index.html).
+      document.documentElement.classList.remove("booting", "deeplink", "i18n-boot");
     });
   }
 

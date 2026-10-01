@@ -31,7 +31,11 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; scroll-padding-top: 140px; scroll-padding-bottom: 24px; }
+/* Keyboard focus scrolled into view must clear the sticky nav (+ browse bar)
+   and, with files selected, the fixed selection bar. */
+html:has(body.has-selection) { scroll-padding-bottom: 96px; }
+@media (max-width: 720px) { html { scroll-padding-top: 76px; } }
 body {
   font-family: var(--sans);
   color: var(--ink);
@@ -57,7 +61,7 @@ a { color: inherit; text-decoration: none; }
 .brandmark .sq { width: 28px; height: 28px; background: var(--ink); border-radius: 7px; display: flex; align-items: center; justify-content: center; }
 .brandmark .sq svg { width: 16px; height: 16px; stroke: #fff; }
 .brandmark .sq img { width: 17px; height: 17px; display: block; filter: brightness(0) invert(1); }
-.brandmark .lib { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--stone); font-weight: 700; transition: color 0.14s; }
+.brandmark .lib { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--stone); font-weight: 700; transition: color 0.14s; white-space: nowrap; }
 .brandmark:hover .lib { color: var(--ink); }
 .nav-actions { display: flex; align-items: center; gap: 18px; }
 /* nowrap at every width: German "Logos & Assets" wrapped to two lines between
@@ -66,7 +70,10 @@ a { color: inherit; text-decoration: none; }
 .nav-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.18s; }
 .nav-link:hover { color: var(--ink); }
 .nav-link:hover::after { transform: scaleX(1); }
-.req-link { font-size: 13px; color: var(--stone); display: inline-flex; align-items: center; gap: 6px; }
+.req-link { font-size: 13px; color: var(--stone); display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+/* Small tablets / landscape phones: the long labels wrapped onto 2–3 lines
+   between 601 and ~860px. Drop them here too (the ≤600 rule already does). */
+@media (max-width: 860px) { .brandmark .lib, .req-link span { display: none; } }
 .req-link:hover { color: var(--ink); }
 
 /* ---------------------------------- HERO ---------------------------------- */
@@ -276,15 +283,22 @@ button.mat-thumb { padding: 0; }
   #hero-intro { margin-top: 10px; font-size: 13px; line-height: 1.5; }
 }
 
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 18px; margin-bottom: 38px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 18px; margin-bottom: 38px; }
 /* No-results message inside the product grid — spans every column. */
 .grid-empty { grid-column: 1 / -1; color: var(--stone); font-size: 14px; padding: 30px 0; }
 .grid-empty a { text-decoration: underline; }
 
 /* product card */
-.card { cursor: pointer; }
+.card { cursor: pointer; position: relative; }
+/* The card's link covers the whole card; the download buttons sit above it. */
+.card-open { color: inherit; text-decoration: none; }
+.card-open::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: var(--radius); }
+.card-open:focus-visible { outline: none; }
+.card-open:focus-visible::after { outline: 2px solid var(--ink); outline-offset: 3px; }
+.card .quick, .card .row-dl { z-index: 2; }
+.row-dl { position: relative; }
 .card-frame { position: relative; aspect-ratio: 1/1; background: var(--mist); border: 1px solid var(--hair); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; padding: 26px; overflow: hidden; transition: border-color 0.16s, box-shadow 0.16s, transform 0.16s; }
-.card:hover .card-frame { border-color: var(--ink); box-shadow: var(--shadow); transform: translateY(-3px); }
+.card:hover .card-frame, .card:focus-within .card-frame { border-color: var(--ink); box-shadow: var(--shadow); transform: translateY(-3px); }
 .card-frame img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .fallback { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center; padding: 10px; }
 .fallback svg { width: 30px; height: 30px; stroke: #BFBFBA; }
@@ -312,11 +326,11 @@ button.mat-thumb { padding: 0; }
 .row-thumb .fallback span { display: none; }
 .row-thumb .fallback svg { width: 20px; height: 20px; }
 .row-main { flex: 1; min-width: 0; }
-.row-name { font-family: var(--serif); font-size: 15px; display: flex; align-items: center; gap: 8px; }
+.row-name { font-family: var(--serif); font-size: 15px; display: flex; align-items: center; gap: 4px 8px; flex-wrap: wrap; }
 .row-new { font-family: var(--sans); font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 800; color: var(--ink); background: var(--gold); padding: 2px 7px; border-radius: var(--radius-pill); }
 .tag-new-purple, .row-new-purple { background: #7C3AED; color: #fff; }
 .row-sub { font-size: 12px; color: var(--stone); margin-top: 2px; }
-.row-label { font-size: 9px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--stone); background: var(--mist); border: 1px solid var(--hair); padding: 2px 8px; border-radius: var(--radius-pill); }
+.row-label { font-size: 9px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--stone); background: var(--mist); border: 1px solid var(--hair); padding: 2px 8px; border-radius: var(--radius-pill);  white-space: nowrap;}
 .row-dl { width: 34px; height: 34px; flex: 0 0 auto; border-radius: 8px; background: var(--ink); color: #fff; display: flex; align-items: center; justify-content: center; border: none; }
 .row-dl svg { width: 16px; height: 16px; stroke: #fff; }
 .row-dl:hover { background: var(--ink-2); }
@@ -406,7 +420,8 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 .cway-dot { width: 13px; height: 13px; border-radius: 50%; background: var(--c); flex: 0 0 auto;
   box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 22%, transparent); }
 .cway-color { font-weight: 800; font-size: 15px; text-transform: uppercase; letter-spacing: 0.02em;
-  color: color-mix(in srgb, var(--c) 80%, #171713);
+  /* Darker mix so light colorways ("Clear Glass" was ~2.1:1) stay readable. */
+  color: color-mix(in srgb, var(--c) 45%, #171713);
   /* Translated colour names run much longer than the English ("Velvet Burgundy" ->
      "SAMTBORDEAUX"); wrap rather than be clipped by the card's overflow:hidden. */
   min-width: 0; overflow-wrap: anywhere; }
@@ -498,11 +513,17 @@ h1, h2, h3, .logo-card-name, .section-head h2, .fgroup-h, .folder-title, .locato
 /* The preview always fills the square — any orientation is scaled to cover and
    center-cropped, never letterboxed. */
 .fcard-media { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
+/* A colorway's Videos card shares its Photos cover — a play cue tells them apart. */
+.fcard.is-video .fcard-media::after { content: ""; position: absolute; left: 50%; top: 42%; width: 38px; height: 38px; margin: -19px 0 0 -19px;
+  border-radius: 50%; background: rgba(23, 23, 19, 0.72) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M8 5.5v13l11-6.5z' fill='%23fff'/%3E%3C/svg%3E") 55% 50% / 18px no-repeat;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); pointer-events: none; }
 .fcard-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
 .fcard.no-img .fcard-media svg { width: 28px; height: 28px; margin-bottom: 34px; color: var(--stone); }
 /* Name + count over a soft dark fade at the bottom, so they read on any photo. */
 .fcard-tx { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; gap: 4px;
-  padding: 28px 10px 9px; background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.42) 55%, rgba(0, 0, 0, 0)); line-height: 1.15; gap: 2px; }
+  padding: 30px 10px 9px; line-height: 1.15; gap: 2px;
+  /* Dense enough that white text holds 4.5:1 even over a white product shot. */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.7) 45%, rgba(0, 0, 0, 0.32) 78%, rgba(0, 0, 0, 0)); }
 .fcard-name { font-family: var(--serif); font-size: 14.5px; font-weight: 800; letter-spacing: -0.01em; line-height: 1.15;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); overflow-wrap: anywhere; hyphens: auto; -webkit-hyphens: auto;
   /* Two lines at most — long translations ("Contenu généré par les
@@ -626,6 +647,9 @@ body.has-selection .to-top { bottom: 88px; }
 a.logo-tile { cursor: pointer; }
 .logo-preview { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .logo-preview.single { grid-template-columns: 1fr; }   /* one featured "main" image */
+/* Stacked (tablet/phone), a lone featured image would span the whole card —
+   cap it so it reads as a preview, not a poster. */
+@media (max-width: 960px) { .logo-preview.single { max-width: 360px; } }
 .logo-tile { position: relative; aspect-ratio: 1 / 1; border: 1px solid var(--hair); border-radius: 14px; background: var(--mist); display: flex; align-items: center; justify-content: center; padding: 26px; cursor: pointer; transition: border-color 0.14s, box-shadow 0.14s, transform 0.14s; }
 .logo-tile.dark { background: var(--ink); border-color: var(--ink); }
 .logo-tile:hover { border-color: var(--ink); box-shadow: var(--shadow); transform: translateY(-2px); }
@@ -637,10 +661,12 @@ a.logo-tile { cursor: pointer; }
 .logo-browse-link { font-size: 13px; font-weight: 700; color: var(--ink); background: none; border: none; padding: 0; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
 .logo-browse-link svg { width: 15px; height: 15px; stroke: currentColor; }
 .logo-browse-link:hover { color: var(--gold-ink); }
-@media (max-width: 720px) { .logo-card { grid-template-columns: 1fr; gap: 24px; padding: 24px; } }
+/* Stack until both columns fit: between 721 and ~960px the text column was
+   squeezed to 107–286px ("Stündenglas / s Logos", two-line buttons). */
+@media (max-width: 960px) { .logo-card { grid-template-columns: 1fr; gap: 24px; padding: 24px; } }
 
 /* ----------------------------- SOCIAL HUB --------------------------------- */
-#social-hub { margin-top: 14px; }
+#social-hub { margin-top: 40px; }
 .hub-wrap { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
 .hub-brand { border: 1px solid var(--hair); border-radius: var(--radius); padding: 20px; background: var(--paper); }
 .socials { display: flex; flex-direction: column; gap: 8px; }
@@ -715,8 +741,8 @@ a.logo-tile { cursor: pointer; }
 .lb-bar .btn.ghost:hover { background: rgba(255, 255, 255, 0.12); }
 .lightbox .lb-close { position: absolute; top: 22px; right: 22px; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.12); border: none; display: flex; align-items: center; justify-content: center; }
 .lightbox .lb-close svg { width: 20px; height: 20px; stroke: #fff; }
-.lightbox .lb-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; background: rgba(255,255,255,0.12); border: none; display: none; align-items: center; justify-content: center; }
-.lightbox .lb-nav:hover { background: rgba(255,255,255,0.22); }
+.lightbox .lb-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 46px; height: 46px; border-radius: 50%; background: rgba(23, 23, 19, 0.72); border: 1px solid rgba(255, 255, 255, 0.28); display: none; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35); z-index: 2; }
+.lightbox .lb-nav:hover { background: rgba(23, 23, 19, 0.9); }
 .lightbox .lb-nav svg { width: 22px; height: 22px; stroke: #fff; }
 .lightbox .lb-prev { left: 22px; }
 .lightbox .lb-next { right: 22px; }
@@ -1181,3 +1207,30 @@ a.logo-tile { cursor: pointer; }
   .langsel-btn { min-height: 40px; }
   .langmenu-item { min-height: 44px; padding: 8px 10px; }
 }
+
+/* Boot guard (index.html sets these until app.js has rendered): no skeleton
+   flash, no home flash on a product link, no English flash before a language
+   pack. Space is reserved so nothing below jumps when the content arrives. */
+html.booting #home, html.booting .foot { visibility: hidden; }
+html.booting main { min-height: 100vh; }
+html.deeplink.booting #hero, html.deeplink.booting #browse { display: none; }
+html.i18n-boot.booting .hero-eyebrow, html.i18n-boot.booting #hero-tagline, html.i18n-boot.booting #hero-intro { visibility: hidden; }
+
+/* Touch: header links, the home mark and the sort toggle were 16–28px tall. */
+@media (hover: none) {
+  .req-link { min-width: 40px; min-height: 40px; justify-content: center; }
+  .nav-link, .brandmark, .sort button { min-height: 40px; display: inline-flex; align-items: center; }
+  .loc-remove { min-height: 40px; padding-left: 12px; padding-right: 12px; }
+}
+
+/* Request forms: the "didn't open?" fallback and fields that need attention. */
+.mail-fallback { margin: 12px 0 0; font-size: 13px; line-height: 1.5; color: var(--stone-on-mist, var(--stone)); display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.mail-fallback a { color: var(--ink); font-weight: 700; text-decoration: underline; }
+.mat-field input[aria-invalid="true"] { border-color: #b3261e; box-shadow: 0 0 0 3px rgba(179, 38, 30, 0.15); }
+
+/* Small grey text on light-grey surfaces: use the darker stone that holds
+   4.5:1 (these sat at 3.5–4.1:1). */
+.sort button, .selectall, .folder-title .ft-count, .row-label, .instore-empty p { color: var(--stone-on-mist); }
+.sort button.on { color: #fff; }
+.sf-sub mark { color: var(--ink); }
+

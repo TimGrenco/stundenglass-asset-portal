@@ -112,35 +112,35 @@ window.PORTAL_PRODUCTS = [
      scripts/dropbox-sync.mjs. `folders: {}` is filled by the Dropbox sync. */
   {
     name: "Gravity Infusers", brand: "stundenglass", category: "Gravity", type: "Gravity Infuser",
-    cover: "assets/img/covers/gravity-infusers.png",
+    cover: "assets/img/covers/gravity-infusers.webp",
     added: "2026-07-09",
     oneSheet: "",
     folders: {},   // real folders + thumbnails come from synced.js (Dropbox sync)
   },
   {
     name: "Kompact Gravity Infusers", brand: "stundenglass", category: "Gravity", type: "Gravity Infuser",
-    cover: "assets/img/covers/kompact-gravity-infusers.png",
+    cover: "assets/img/covers/kompact-gravity-infusers.webp",
     added: "2026-07-09",
     oneSheet: "",
     folders: {},
   },
   {
     name: "Classic Gravity Infusers", brand: "stundenglass", category: "Gravity", type: "Gravity Infuser",
-    cover: "assets/img/covers/classic-gravity-infusers.png",
+    cover: "assets/img/covers/classic-gravity-infusers.webp",
     added: "2026-07-09",
     oneSheet: "",
     folders: {},
   },
   {
     name: "Modül", brand: "stundenglass", category: "Modular", type: "Modular System",
-    cover: "assets/img/covers/modul.png",
+    cover: "assets/img/covers/modul.webp",
     added: "2026-07-09",
     oneSheet: "",
     folders: {},
   },
   {
     name: "Accessories", brand: "stundenglass", category: "Accessories", type: "Accessories",
-    cover: "assets/img/covers/accessories.png",
+    cover: "assets/img/covers/accessories.webp",
     added: "2026-07-10",
     oneSheet: "",
     /* A CATEGORY, not a single SKU'd product — it holds 13 distinct accessories

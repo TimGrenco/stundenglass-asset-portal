@@ -44,6 +44,24 @@
        can start these downloads immediately; defer keeps synced → assets → app
        order and still runs before DOMContentLoaded. -->
   <link rel="stylesheet" href="assets/css/styles.css?v=dev" />
+  <!-- Until app.js has rendered the real view, keep the static home skeleton
+       ("Current products 0", empty sections, the footer near the top) from
+       painting and then jumping — and keep a shared product link from flashing
+       the home page first. app.js removes these classes after its first render;
+       the timeout is a safety net so a script failure can never leave the page
+       hidden. -->
+  <script>
+    (function (d) {
+      var c = d.documentElement.classList;
+      c.add("booting");
+      if (location.hash.length > 1) c.add("deeplink");
+      try {
+        var q = /[?&]lang=([a-z]{2})/.exec(location.search), l = q ? q[1] : localStorage.getItem("portal_lang");
+        if (l && l !== "en") c.add("i18n-boot");
+      } catch (e) {}
+      setTimeout(function () { c.remove("booting", "deeplink", "i18n-boot"); }, 6000);
+    })(document);
+  </script>
 </head>
 <body>
   <h1 class="sr-only">Stündenglass Brand Assets Portal</h1>
@@ -52,7 +70,7 @@
   <header class="nav">
     <div class="wrap nav-inner">
       <div class="brandmark" id="home-link" role="button" tabindex="0" aria-label="Back to home" data-i18n-aria>
-        <span class="sq"><img src="assets/img/stundenglass-icon-black.png" alt="" /></span>
+        <span class="sq"><img src="assets/img/stundenglass-icon-black-64.png" alt="" width="17" height="17" /></span>
         <span class="lib">Stündenglass Brand Assets Portal</span>
       </div>
       <div class="nav-actions">
@@ -104,7 +122,7 @@
       <h1 id="hero-tagline">Everything you need, in one place.</h1>
       <!-- Filled from PORTAL_CONFIG.intro by applyJsChrome(), translated like the
            tagline above it. Tells a first-time retail visitor what this portal is. -->
-      <p id="hero-intro"></p>
+      <p id="hero-intro">The official asset portal for Stündenglass. Product photography, lifestyle imagery, logos, video and spec sheets — organized by product, ready to download.</p>
     </div>
   </section>
 
@@ -200,7 +218,7 @@
     <button class="lb-close" id="lb-close" aria-label="Close" data-i18n-aria><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
     <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous" data-i18n-aria><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
     <button class="lb-nav lb-next" id="lb-next" aria-label="Next" data-i18n-aria><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg></button>
-    <div class="lb-stage"><img src="" alt="Asset preview" /></div>
+    <div class="lb-stage"><img src="" alt="" /></div>
     <div class="lb-bar">
       <div class="lb-meta"><span class="lb-name" id="lb-name"></span><span class="lb-count" id="lb-count"></span></div>
       <div class="lb-acts">

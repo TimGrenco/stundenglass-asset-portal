@@ -312,7 +312,9 @@ function pdfFirstPage(src, outBase) {
 // White/light logos are invisible on the default white thumbnail — composite
 // the (usually transparent) art onto a dark neutral gray so it shows. ImageMagick
 // reads PNG/SVG/AI/PDF; `[0]` takes the first page/layer.
-const LIGHT = /white/i;
+// "white" marks a light-on-dark logo that needs a gray backdrop — but NOT a
+// "…-whiteBG" product shot, which is the white-background version.
+const LIGHT = /white(?![\s_-]*(bg|background))/i;
 function grayThumb(src, out, e) {
   try {
     if (e === "ai" || e === "pdf" || e === "eps") {
