@@ -25,9 +25,9 @@
        products  description / highlights / warranty / fullDescription.
      Product names, brand names, filenames, SKUs, units and prices are never
      translated. To revise a language, edit only its pack — no code change. */
-  var LANGS = { en: "English", es: "Español", de: "Deutsch", it: "Italiano", fr: "Français", pt: "Português" };
+  var LANGS = { en: "English", es: "Español", de: "Deutsch", it: "Italiano", fr: "Français", pt: "Português", sv: "Svenska", pl: "Polski", da: "Dansk" };
   function isLang(l) { return Object.prototype.hasOwnProperty.call(LANGS, l); }
-  var LANG_VER = "20261001";   // bump with the other asset tokens
+  var LANG_VER = "20261001b";   // bump with the other asset tokens
   // Load a language pack once. English is a no-op (it IS the source).
   var _langLoading = {};
   function loadLangPack(l, cb) {
@@ -74,7 +74,7 @@
     for (var i = 0; i < list.length; i++) {
       var l = String(list[i] || "").toLowerCase().slice(0, 2);
       if (l === "en") return "";              // an English preference ranked higher wins
-      if (l !== "en" && isLang(l)) return l;  // es / de / it / fr / pt
+      if (l !== "en" && isLang(l)) return l;  // es / de / it / fr / pt / sv / pl / da
     }
     return "";
   }
@@ -101,6 +101,9 @@
     it: { q: "Preferisce visualizzare questo portale in italiano?", yes: "Visualizza in italiano", no: "No, grazie" },
     fr: { q: "Préférez-vous consulter ce portail en français ?", yes: "Voir en français", no: "Non, merci" },
     pt: { q: "Prefere ver este portal em português?", yes: "Ver em português", no: "Não, obrigado" },
+    sv: { q: "Vill du se portalen på svenska?", yes: "Visa på svenska", no: "Nej tack" },
+    pl: { q: "Czy wolisz przeglądać ten portal po polsku?", yes: "Pokaż po polsku", no: "Nie, dziękuję" },
+    da: { q: "Vil du hellere se portalen på dansk?", yes: "Vis på dansk", no: "Nej tak" },
   };
   function maybeOfferLang() {
     var bar = $("#lang-bar"); if (!bar) return;
@@ -129,9 +132,25 @@
   // Count strings. English inflects on n !== 1, but French takes the SINGULAR for
   // 0 as well ("0 résultat", not "0 résultats"), so a bare n === 1 ternary is wrong
   // there. One helper keeps every counter in the app consistent.
+  // Which plural form a count takes in the active language. French uses the
+  // singular for 0; Polish has a third form for 2–4 (22–24, 32–34…, not 12–14):
+  // "1 plik", "2 pliki", "5 plików". Packs carry that one as "<many key>|few".
+  function pluralForm(n) {
+    if (n === 1 || (n === 0 && state.lang === "fr")) return "one";
+    if (state.lang === "pl") {
+      var m10 = n % 10, m100 = n % 100;
+      if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return "few";
+    }
+    return "many";
+  }
+  function pluralKey(n, one, many) {
+    var f = pluralForm(n);
+    if (f === "one") return tr(one);
+    if (f === "few") { var k = many + "|few", t = tr(k); if (t !== k) return t; }
+    return tr(many);
+  }
   function plural(n, one, many) {
-    var useOne = n === 1 || (n === 0 && state.lang === "fr");
-    return tr(useOne ? one : many).replace("{n}", n);
+    return pluralKey(n, one, many).replace("{n}", n);
   }
   // Localized training course for a product (falls back to English).
   function trainingOf(p) {
@@ -258,7 +277,7 @@
   // ---- language selector (globe + current language + menu) -------------------
   // Languages are listed by their own endonym (Deutsch, not German) — that's what
   // a speaker scans for. English stays first as the default.
-  var LANG_ORDER = ["en", "es", "de", "it", "fr", "pt"];
+  var LANG_ORDER = ["en", "es", "de", "it", "fr", "pt", "sv", "pl", "da"];
   function renderLangMenu() {
     var menu = $("#lang-menu"); if (!menu) return;
     menu.innerHTML = LANG_ORDER.map(function (l) {
@@ -2436,10 +2455,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     // Rebuilt on every change so the noun agrees with the count — English "selected"
     // is invariant, but Portuguese/Spanish/Italian/French/German all inflect.
     function selCountHTML(n) {
-      // Same 0-is-singular rule as plural(); the {n} slot takes markup here, so it
-      // can't use that helper directly.
-      var one = n === 1 || (n === 0 && state.lang === "fr");
-      return tr(one ? "{n} item selected" : "{n} items selected")
+      // Same plural rules as plural() (French 0, Polish 2–4); the {n} slot takes
+      // markup here, so only the key choice is shared.
+      return pluralKey(n, "{n} item selected", "{n} items selected")
         .replace("{n}", '<strong id="sel-n">' + n + "</strong>");
     }
     function syncSelection() {

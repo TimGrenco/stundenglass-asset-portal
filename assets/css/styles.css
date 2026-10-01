@@ -473,6 +473,12 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 .vlb-close { position: absolute; top: 22px; right: 22px; width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.12); border: none; display: flex; align-items: center; justify-content: center; }
 .vlb-close svg { width: 20px; height: 20px; stroke: #fff; }
 
+/* Swedish, Danish, German and Polish build long compound words
+   ("Markedsføringsmaterialer"); let titles hyphenate (html[lang] picks the
+   dictionary) and, failing that, break rather than push the page sideways. */
+body { overflow-wrap: break-word; }
+h1, h2, h3, .logo-card-name, .section-head h2, .fgroup-h, .folder-title, .locator-copy h2, .instore-count {
+  hyphens: auto; -webkit-hyphens: auto; overflow-wrap: anywhere; }
 /* Photo / Video Assets — large square folder cards that open inline, in labeled
    groups (Photos / Videos / Other / Colorways). An open card's panel spans the
    full row right under it; `dense` lets the cards that follow it in the markup
