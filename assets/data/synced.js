@@ -11893,43 +11893,11 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "milehighshuffler SG unboxing_short",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/m61cr2tfvnrpic191lq1m/milehighshuffler-SG-unboxing_short.mp4?rlkey=17aesoet5ekptcqf6weuj47hv&dl=0",
-          "thumb": "assets/synced/accessories/56f49534fe4574a3e94e3420de5e944a4cd4ffd0ef2a8c7b861bc80de9e2194c.jpg",
-          "file": null
-        },
-        {
-          "name": "ShaineDe1 Chestmount Oct",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/8n6h4fch6nheyxqbl4m2v/ShaineDe1-Chestmount-Oct.mp4?rlkey=acucgh7krokncprr42tb4gdnf&dl=0",
-          "thumb": "assets/synced/accessories/dfcb74fe7c380fe71010ad596fb09ac87a77ba0a1c8731ecb6405a4a404bb6a1.jpg",
-          "file": null
-        },
-        {
           "name": "Slow Mo Suit Promo Chestmount",
           "type": "video",
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/oh9phqiskvdm0dicwszef/Slow-Mo-Suit-Promo-Chestmount.mp4?rlkey=sax5cgexb5afxaaqpa8s1rdkh&dl=0",
           "thumb": "assets/synced/accessories/ea626d87ed929fcd3eceb89e2a65d1808f0b782021dea96b20759605e92418f2.jpg",
-          "file": null
-        },
-        {
-          "name": "Snappernickel Chestmount SG winter stairs",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/35ff8zffg7gdowskhps01/Snappernickel-Chestmount-SG-winter-stairs.mp4?rlkey=zabrl1p4jqbi059ewy9xmkkqy&dl=0",
-          "thumb": "assets/synced/accessories/196544dac8e7a7524f6622406103c20c1ae42870c23c6047d53bd33cd81ddd1a.jpg",
-          "file": null
-        },
-        {
-          "name": "Snappernickel Snow Chestmount SG",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/cvahahc5obhcwxc8t6bdz/Snappernickel-Snow-Chestmount-SG.mp4?rlkey=mr0b48blwf6eso22mm3qxzsb5&dl=0",
-          "thumb": "assets/synced/accessories/66c07d5946cf07bfd6956910aadc8c2aa080054a37fd41865841f8c8871a2649.jpg",
           "file": null
         }
       ],
@@ -11948,6 +11916,40 @@ window.PORTAL_SYNCED = {
           "format": "MP4",
           "url": "https://www.dropbox.com/scl/fi/699xdgzept3xn3ov4et41/St-ndenglass-Chestmount-Infomercial-Extended.mp4?rlkey=90ee8hphv9l99j9lcf95blpgx&dl=0",
           "thumb": "assets/synced/accessories/c00c39e7a1bd979eb13d5de52ce1bddae039b2c350cf2ebd9fb224341e2e4a04.jpg",
+          "file": null
+        }
+      ],
+      "Chest Mount / UGC Videos": [
+        {
+          "name": "milehighshuffler SG unboxing_short",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/m61cr2tfvnrpic191lq1m/milehighshuffler-SG-unboxing_short.mp4?rlkey=17aesoet5ekptcqf6weuj47hv&dl=0",
+          "thumb": "assets/synced/accessories/56f49534fe4574a3e94e3420de5e944a4cd4ffd0ef2a8c7b861bc80de9e2194c.jpg",
+          "file": null
+        },
+        {
+          "name": "ShaineDe1 Chestmount Oct",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/8n6h4fch6nheyxqbl4m2v/ShaineDe1-Chestmount-Oct.mp4?rlkey=acucgh7krokncprr42tb4gdnf&dl=0",
+          "thumb": "assets/synced/accessories/dfcb74fe7c380fe71010ad596fb09ac87a77ba0a1c8731ecb6405a4a404bb6a1.jpg",
+          "file": null
+        },
+        {
+          "name": "Snappernickel Chestmount SG winter stairs",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/35ff8zffg7gdowskhps01/Snappernickel-Chestmount-SG-winter-stairs.mp4?rlkey=zabrl1p4jqbi059ewy9xmkkqy&dl=0",
+          "thumb": "assets/synced/accessories/196544dac8e7a7524f6622406103c20c1ae42870c23c6047d53bd33cd81ddd1a.jpg",
+          "file": null
+        },
+        {
+          "name": "Snappernickel Snow Chestmount SG",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/cvahahc5obhcwxc8t6bdz/Snappernickel-Snow-Chestmount-SG.mp4?rlkey=mr0b48blwf6eso22mm3qxzsb5&dl=0",
+          "thumb": "assets/synced/accessories/66c07d5946cf07bfd6956910aadc8c2aa080054a37fd41865841f8c8871a2649.jpg",
           "file": null
         }
       ],
@@ -16895,6 +16897,56 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "Modül Accessories / Recycler / UGC Videos": [
+        {
+          "name": "glassman 710 recycler trim",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/s3rjslsbima04pkzc6tsv/glassman-710-recycler-trim.mp4?rlkey=4nz9ai68cuha4b3lbu5b47za8&dl=0",
+          "thumb": "assets/synced/accessories/2f15c45a4a8247e1333df191efdf4e4dac7fa3ec4eaf42ed7325656eace6918f.jpg",
+          "file": null
+        },
+        {
+          "name": "Glassman710 Dry Herb Tanktrim",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/iuzb72mi8t1jldcp8gl04/Glassman710-Dry-Herb-Tanktrim.mp4?rlkey=zqeulp7m6be9n84yp5bpg23jq&dl=0",
+          "thumb": "assets/synced/accessories/2476bf189bc2273b6a26e6359901a057c27cb776b605f126cbc298304420da69.jpg",
+          "file": null
+        },
+        {
+          "name": "Recycler Larry UGC March",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/p2t3bjyaa5frl5pu004l8/Recycler-Larry-UGC-March.mp4?rlkey=r3lon82hulq2m1f9jjtn6t4dh&dl=0",
+          "thumb": "assets/synced/accessories/3a518628e4522cb91e60b609f6316ba053ec2178731fe79817f7f4f88bdd218c.jpg",
+          "file": null
+        },
+        {
+          "name": "Recycler Snappernickel Aug",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/bwrfduo4yc1u8wtrap9su/Recycler-Snappernickel-Aug.mp4?rlkey=mjbysit367smfw1sblg0uux1k&dl=0",
+          "thumb": "assets/synced/accessories/911fac036ebf156d6e3b7a1e7ece5fbff46892ce4d1e68962ff0d83359e56e9f.jpg",
+          "file": null
+        },
+        {
+          "name": "Stoned diariessss recylcer beach",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/wd4kzbbvevlxml9alvrr4/Stoned-diariessss-recylcer-beach.mp4?rlkey=dfua3w87h49jbgb3l67htnzbr&dl=0",
+          "thumb": "assets/synced/accessories/251d9f0625d0f4c9d440128ae4398be37b7c2f0637627968a4fc59b5fd6f41d3.jpg",
+          "file": null
+        },
+        {
+          "name": "stoned.diariesss Recycler June trim",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/wb91my3mr0y59ucrnybwm/stoned.diariesss-Recycler-June-trim.mp4?rlkey=hzqmqkv4eskbegjk7yfa0ayug&dl=0",
+          "thumb": "assets/synced/accessories/caa8813ec66eb72e2a6d45416ab1cf493ea08f983ab1621f21355f1e623b80d9.jpg",
+          "file": null
+        }
+      ],
       "Modül Accessories / Recycler 2 / Product Photos": [
         {
           "name": "Recycler2_thumb_01",
@@ -18285,14 +18337,6 @@ window.PORTAL_SYNCED = {
       ],
       "Stündenglass Travel Case / Social Videos": [
         {
-          "name": "Ms Krystale Travel Case",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/qr989qctfakp7jek7kteg/Ms-Krystale-Travel-Case.mp4?rlkey=xta818tgyocxnx4k34ld80872&dl=0",
-          "thumb": "assets/synced/accessories/6b18ba590aec0f32266905848164b24d7ebe74cfd0b7482b16d8294697e1bb4d.jpg",
-          "file": null
-        },
-        {
           "name": "SG Travel Case Buckle Reels",
           "type": "video",
           "format": "MP4",
@@ -18316,6 +18360,16 @@ window.PORTAL_SYNCED = {
           "format": "PDF",
           "url": "https://www.dropbox.com/scl/fi/nltiyupjoggkcpfkhl0vx/Stundenglass_Travel-Case_One-Sheet.pdf?rlkey=jxaozav90ln8iw63kx66kpu0n&dl=0",
           "thumb": "assets/synced/accessories/0c816e8f2a187a64d8ca3aa6687bec54def59b30b5891c7dbd81a635509382f3.jpg",
+          "file": null
+        }
+      ],
+      "Stündenglass Travel Case / UGC Videos": [
+        {
+          "name": "Ms Krystale Travel Case",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/qr989qctfakp7jek7kteg/Ms-Krystale-Travel-Case.mp4?rlkey=xta818tgyocxnx4k34ld80872&dl=0",
+          "thumb": "assets/synced/accessories/6b18ba590aec0f32266905848164b24d7ebe74cfd0b7482b16d8294697e1bb4d.jpg",
           "file": null
         }
       ],
@@ -18581,14 +18635,6 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
-          "name": "EllaBooTooks Black SG UPlight ASMR",
-          "type": "video",
-          "format": "MP4",
-          "url": "https://www.dropbox.com/scl/fi/ni1e2vqd9ftfofmacj9vb/EllaBooTooks-Black-SG-UPlight-ASMR.mp4?rlkey=wtjorbq9aw72c7sq2vbcmw1c7&dl=0",
-          "thumb": "assets/synced/accessories/85c2fb2ea5da0ac7add1749c03352510f6bf71b2b475c5c8c721caba46f968c3.jpg",
-          "file": null
-        },
-        {
           "name": "Larry Cafe Uplight GIF A",
           "type": "video",
           "format": "MP4",
@@ -18678,6 +18724,16 @@ window.PORTAL_SYNCED = {
           "format": "PDF",
           "url": "https://www.dropbox.com/scl/fi/wob53ybf0x4qu64hi0oy0/stundenglass_uplight_one-sheet.pdf?rlkey=30e8hdobb1pzpm82e7qqnlgl6&dl=0",
           "thumb": "assets/synced/accessories/e972abef17b7d84a79ec7a4cc2966edab297164e8720cffa3dddada68b214896.jpg",
+          "file": null
+        }
+      ],
+      "Uplight / UGC Videos": [
+        {
+          "name": "EllaBooTooks Black SG UPlight ASMR",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/ni1e2vqd9ftfofmacj9vb/EllaBooTooks-Black-SG-UPlight-ASMR.mp4?rlkey=wtjorbq9aw72c7sq2vbcmw1c7&dl=0",
+          "thumb": "assets/synced/accessories/85c2fb2ea5da0ac7add1749c03352510f6bf71b2b475c5c8c721caba46f968c3.jpg",
           "file": null
         }
       ],
@@ -18894,6 +18950,7 @@ window.PORTAL_SYNCED = {
       "Chest Mount / Lifestyle Photos": "https://www.dropbox.com/scl/fo/i77y4puu779l7i0h5fqxi/AH9lvrdEF3JKJ-l62TR7YhM?rlkey=v8rzu2snkki5an7vzg5mr3kfd&dl=1",
       "Chest Mount / Social Videos": "https://www.dropbox.com/scl/fo/eo95p351d99z5472v8m7k/ACzXLV1BEO9Gj-do-yRLmD4?rlkey=7jv5ysu1wqee31r71udlbrbhh&dl=1",
       "Chest Mount / TV Screen Videos": "https://www.dropbox.com/scl/fo/fglv1505o0q17ioprxzcf/APkCYg-GNNQI1e03WQFyGos?rlkey=p26mv4bp3eantk2bindq20qvl&dl=1",
+      "Chest Mount / UGC Videos": "https://www.dropbox.com/scl/fo/2k4h163z55oe862gwgtpp/ACkSijORh_RMFwRl3CyX3NU?rlkey=cd42nsc6ypxf3ch8w8d0idh7u&dl=1",
       "Colored Glass Liners": "https://www.dropbox.com/scl/fo/hvlm3yq4gwufj23f827dd/ACZZDDGZDrZ8jXiF-lvf8Y0?rlkey=yzvksn7bpyup2r8b72xabl81o&dl=1",
       "Colored Glass Liners / Black": "https://www.dropbox.com/scl/fo/1ie3eq7s3ciob7o7dukgj/AGTE-6TWQQVD9eBImQAiPo4?rlkey=5gzvlvaa97cl0pa8bpfwgx5vg&dl=1",
       "Colored Glass Liners / Blue": "https://www.dropbox.com/scl/fo/h7hteqlaiy3zhl0mtrbdi/AJj2he9jwYs7ys1pdefq5WY?rlkey=kmyx0vxtljo3th761msv9obju&dl=1",
@@ -19023,6 +19080,7 @@ window.PORTAL_SYNCED = {
       "Modül Accessories / Recycler / Social Videos": "https://www.dropbox.com/scl/fo/9tzu4jahvv2nxgkjg1bov/AJUNA4sWSWHi1OrIpEeqM9Y?rlkey=1wqc8e3hs6s5qo2vdczhfd7h1&dl=1",
       "Modül Accessories / Recycler / TV Screen Videos": "https://www.dropbox.com/scl/fo/b42ced1hl2d8z0h8dqs8k/APzGl_6ZgtLvjVzmV1DuNwM?rlkey=2lmn8e1iwyzzh30h74919uf1n&dl=1",
       "Modül Accessories / Recycler / Documents": "https://www.dropbox.com/scl/fo/821w2ylphnmk258r6t5mw/AAIs9zOe0uIVbvdvREtuNY0?rlkey=0njdcy1ikwg0dld3myye9uqrd&dl=1",
+      "Modül Accessories / Recycler / UGC Videos": "https://www.dropbox.com/scl/fo/u2hivua30xwp31yn5qthx/ABHvtfaBgnG9fJvzppgPsvs?rlkey=rbxjh3fsmubs5jb71dnqwysoa&dl=1",
       "Modül Accessories / Recycler 2": "https://www.dropbox.com/scl/fo/11tmmpz5mmue71gvekmxa/AHc74q5SInzg59_JD3ZYYVM?rlkey=52vr3kq01bb87yc243ddkwx4c&dl=1",
       "Modül Accessories / Recycler 2 / Product Photos": "https://www.dropbox.com/scl/fo/1yksmsbtpolmeuv2emvzl/ALz8fPbkZBP0mbHHmXRlzQ4?rlkey=1t26w8i1ok3bsn8zv9171ikjx&dl=1",
       "Modül Accessories / Recycler 2 / Lifestyle Photos": "https://www.dropbox.com/scl/fo/qedrsjdupak69cft5sh6n/ACNWcHO9veg5fTc60dgZGSg?rlkey=b4v0uzgok3cvstp4cotpq06kg&dl=1",
@@ -19047,12 +19105,14 @@ window.PORTAL_SYNCED = {
       "Stündenglass Travel Case / Lifestyle Photos": "https://www.dropbox.com/scl/fo/tmf4yaaxxfm6544lj5i2i/ABx2D3z19j-4iWpY1mwpDhY?rlkey=mor6jg232ugykd2rvpem47bs6&dl=1",
       "Stündenglass Travel Case / Social Videos": "https://www.dropbox.com/scl/fo/0eb7suny4f84dz7zp8fo4/AKgKuypgW3HW_fNMBsaUpaw?rlkey=mxp20a7rgur4pajm971g42z9m&dl=1",
       "Stündenglass Travel Case / Documents": "https://www.dropbox.com/scl/fo/t7mfk9f1nlpiromo0x3ba/AHOaNl1wAmP3HqO-mG5E34s?rlkey=yxjoogilcjzqovdxjbcvtzcyo&dl=1",
+      "Stündenglass Travel Case / UGC Videos": "https://www.dropbox.com/scl/fo/fopacb2d13c1rcnb6ec2e/AI8JCEaIFqmL-ZHvcO_mf-c?rlkey=jhups1xk96b61c8fhiygy6mua&dl=1",
       "Uplight": "https://www.dropbox.com/scl/fo/6i510q3gfyla8xfgiymkd/AGbdpL7Z8LSNqmhPgAEN59U?rlkey=w5s2yxtdh7fgen6hblgotuex5&dl=1",
       "Uplight / Product Photos": "https://www.dropbox.com/scl/fo/yahkhxdxdhdw4c5236a2h/ABOJDNE-oLxIBA0XtxGzzSQ?rlkey=wsdiizqg27s4ok0zmrbbwmu66&dl=1",
       "Uplight / Lifestyle Photos": "https://www.dropbox.com/scl/fo/59fomk9934d9y5p5zynto/AGp-FGjp5pkfMUCZM61oQfk?rlkey=u6tos3uoxeoscd54ytf3c489x&dl=1",
       "Uplight / Social Videos": "https://www.dropbox.com/scl/fo/r2imh02w3o8sxchkp8578/AEFW-MF2klSW9RDzELE30ck?rlkey=1dgualprreuy7i53i7bx8dtsz&dl=1",
       "Uplight / TV Screen Videos": "https://www.dropbox.com/scl/fo/i0nheevobsakyig8f0icp/AKcznwqSmzKaOzwRGMRaWcA?rlkey=bnyuf89zucng4b7srq45pxzzf&dl=1",
       "Uplight / Documents": "https://www.dropbox.com/scl/fo/7b0b2cbmk5knxy9q5dtbq/AIJphdT7n6XPOxGF3nyKAl4?rlkey=pu8c8tb1w0aoglt13403gvip1&dl=1",
+      "Uplight / UGC Videos": "https://www.dropbox.com/scl/fo/75xvb2zr03mqqknobbj6a/AK1I48arUE-RpZ2sjxRx48c?rlkey=ho01jijmob6z194ni9wkhggcm&dl=1",
       "Wall Mount": "https://www.dropbox.com/scl/fo/50jb9zae0uk620tkqz7to/ANJsnrfvj9bpH5BhoQJAbDo?rlkey=zf7kv47y2mra4fq4ighsd5so2&dl=1",
       "Wall Mount / Lifestyle Photos": "https://www.dropbox.com/scl/fo/o6srvti48bgf352ftd85u/AJrRp_r7uAU9k0q2Gdppyx4?rlkey=jajgmmajjdizuus0tb6ivh4mf&dl=1",
       "Wall Mount / TV Screen Videos": "https://www.dropbox.com/scl/fo/j27i231jyq508j66y5tr9/APmfrrOFpuotASDsu-Aj7sU?rlkey=qdrivtdbtvlal7r1zs2yqrj8m&dl=1",
@@ -19066,7 +19126,7 @@ window.PORTAL_SYNCED = {
       "Wall Mount / Grateful Dead Wall Mount / Lifestyle Photos": "https://www.dropbox.com/scl/fo/4vt60op7utnjsjzquygyp/AHU9r1IXFYzMYMDEr-qZQXY?rlkey=mm2wk0bvcop2qh1pxixqditu3&dl=1",
       "Wall Mount / Grateful Dead Wall Mount / Social Videos": "https://www.dropbox.com/scl/fo/34dlyrvzlsosk89c9jko6/AEWi0e-q6vkdXB7bV7BFIrc?rlkey=wh7oxmtws8v8u6oag2ycptnum&dl=1"
     },
-    "updated": "2026-09-05"
+    "updated": "2026-10-01"
   },
   "Stündenglass Logos": {
     "folders": {
