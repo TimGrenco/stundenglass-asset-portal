@@ -523,11 +523,25 @@ window.PORTAL_PRODUCTS.forEach(function (p) {
    listed uses the folder's first photo/video (skipping how-to clips). If a
    listed file is renamed or removed, the card quietly falls back. */
 window.PORTAL_FOLDER_COVERS = {
+  // Kompact & Classic colorway cards use a LIFESTYLE frame — the colorway reads
+  // far better in context than in the straight product shot.
   "Kompact Gravity Infusers": {
+    "Grateful Dead": "_GSH7305",
+    "Pink": "_ALF1330",
     "UGC Videos": "Omg_Becky",
     "Pink / UGC Videos": "Silenced Hippie",
   },
   "Classic Gravity Infusers": {
+    "Cookies": "_GSH2379",
+    "Dr Greenthumbs": "_ALF7152",
+    "Grateful Dead": "_GSH7352",
+    "Grateful Dead / Legacy Patchwork": "_GSH7285",
+    "Grateful Dead / Stealy Lock Up": "_GSH7352",
+    "Khalifa": "_GSH8086",
+    "Pink": "_ALF4703",
+    "Silver": "_ALF2683",
+    "Taylor Gang": "_ALF3430",
+    "Tyson 2.0": "_GSH8260",
     "UGC Videos": "PotheadPrincess",
     "Pink / UGC Videos": "UGC Pink SG Aug 24",
     "Khalifa / UGC Videos": "taestayshigh",

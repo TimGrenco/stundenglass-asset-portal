@@ -2519,7 +2519,13 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       // sorts first. Falls through if that file has since left the folder.
       var pick = ((window.PORTAL_FOLDER_COVERS || {})[p.name] || {})[path];
       if (pick) {
-        var hit = files.filter(function (x) { return x.name.toLowerCase().indexOf(String(pick).toLowerCase()) !== -1; })[0];
+        // Look in the folder AND below it — a colorway's pick sits in its
+        // Lifestyle Photos.
+        var hit = null, needle = String(pick).toLowerCase();
+        tree.forEach(function (f) {
+          if (hit || (f !== path && f.indexOf(path + SEP) !== 0)) return;
+          hit = (p.folders[f] || []).filter(function (x) { return x.thumb && x.name.toLowerCase().indexOf(needle) !== -1; })[0] || null;
+        });
         if (hit) return (_coverCache[path] = hit.thumb);
       }
       // Never front a video folder with a how-to/cleaning/tutorial clip (the TV
@@ -2670,7 +2676,9 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         var ent = { photos: [], videos: [], other: [] };
         segs.forEach(function (seg) {
           if (isColorway(seg)) {
-            ["photos", "videos", "other"].forEach(function (g) { if (inSlice(seg, g)) ent[g].push({ html: sliceCardHTML(seg, g), rank: 1 }); });
+            // Colorways appear in Photos and Videos only — Other is just the
+            // product's Logos and In-Store Marketing.
+            ["photos", "videos"].forEach(function (g) { if (inSlice(seg, g)) ent[g].push({ html: sliceCardHTML(seg, g), rank: 1 }); });
           } else {
             var g = groupOf(seg); if (g === "sets") g = "other";
             ent[g].push({ html: folderCardHTML(seg, depth), rank: TAIL.test(seg) ? 2 : 0 });
