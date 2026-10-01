@@ -460,6 +460,8 @@ window.PORTAL_I18N.it = {
   "Silver": "Argento",
   "Iridescent": "Iridescente",
   "Zoom in": "Ingrandisci",
-  "Fit to screen": "Adatta allo schermo"
+  "Fit to screen": "Adatta allo schermo",
+  "PHOTO / VIDEO ASSETS": "RISORSE FOTO E VIDEO",
+  "SALES ASSETS": "MATERIALI DI VENDITA"
  }
 };

@@ -115,7 +115,6 @@ window.PORTAL_PRODUCTS = [
     cover: "assets/img/covers/gravity-infusers.png",
     added: "2026-07-09",
     oneSheet: "",
-    defaultFolder: "Black / Product Photos",   // see the note on Classic below
     folders: {},   // real folders + thumbnails come from synced.js (Dropbox sync)
   },
   {
@@ -130,10 +129,6 @@ window.PORTAL_PRODUCTS = [
     cover: "assets/img/covers/classic-gravity-infusers.png",
     added: "2026-07-09",
     oneSheet: "",
-    /* No defaultFolder needed: Classic now has a top-level "Product Photos" folder
-       in Dropbox, which the fallback rule opens automatically. (It used to open
-       "Black / Product Photos"; that path was reorganised away in Dropbox, and the
-       guard degraded to this same result rather than an empty gallery.) */
     folders: {},
   },
   {

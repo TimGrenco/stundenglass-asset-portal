@@ -460,6 +460,8 @@ window.PORTAL_I18N.es = {
   "Silver": "Plata",
   "Iridescent": "Iridiscente",
   "Zoom in": "Ampliar",
-  "Fit to screen": "Ajustar a la pantalla"
+  "Fit to screen": "Ajustar a la pantalla",
+  "PHOTO / VIDEO ASSETS": "RECURSOS DE FOTO Y VIDEO",
+  "SALES ASSETS": "RECURSOS DE VENTAS"
  }
 };
