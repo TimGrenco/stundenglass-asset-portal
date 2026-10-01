@@ -2402,6 +2402,13 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var docNames = folderNames.filter(isDoc).sort(function (a, b) {
       return (a.split(SEP).length - b.split(SEP).length) || a.localeCompare(b);
     });
+    // One sales sheet covers every colorway: when the product has its own
+    // top-level Documents folder, Sales Assets shows only that — no Black /
+    // Desert Rose / … breakout (those folders repeat the same manual and sheet).
+    // Products without one (Accessories' lines) still list each folder.
+    if (docNames.some(function (f) { return f.split(SEP)[0] === "Documents"; })) {
+      docNames = docNames.filter(function (f) { return f.split(SEP)[0] === "Documents"; });
+    }
 
     // ---- N-level folder browser over `tree`. Keys are full "/"-joined paths
     // ("Black / Product Photos"). The top level shows as square folder cards;
@@ -2446,12 +2453,17 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     var docTarget = null;
     var arrivedViaLink = false;
     // Re-rendering for a language switch: reopen what was open, without scrolling.
+    var colorMode = !p.isCategory;   // colorways split across Photos / Videos / Other
+    var openGroup = null;             // which slice of an open colorway is open
     if (!initialFolder && _langSwitch && _openMemo && _openMemo.product === p.name && _openMemo.path) {
       openPath = isFolderBranch(_openMemo.path) || (p.folders[_openMemo.path] || []).length ? _openMemo.path : "";
+      if (openPath) openGroup = _openMemo.group || null;
     }
     if (initialFolder && own(p.folders, initialFolder) && isDoc(initialFolder)) { docTarget = initialFolder; arrivedViaLink = true; }
     else if (initialFolder && ((own(p.folders, initialFolder) && p.folders[initialFolder].length) || isFolderBranch(initialFolder))) {
       openPath = initialFolder; arrivedViaLink = true;
+      // A link into a colorway opens the slice that folder belongs to.
+      if (isColorway(openPath.split(SEP)[0])) openGroup = openPath.indexOf(SEP) === -1 ? "photos" : sliceOf(openPath);
     }
     var selected = {};   // fileKey -> file object; persists while opening/closing folders
 
@@ -2549,67 +2561,142 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         '<button class="btn ghost sm" data-fdl="' + escapeHTML(fp) + '">' + icon("download") + " " + tr("Download folder") + "</button>" +
       "</div>";
     }
-    function folderCardHTML(fp, depth) {
-      var seg = lastSeg(fp), branch = isFolderBranch(fp), open = isOpen(fp), sub = branch ? childSegs(fp).length : 0;
-      var count = branch ? plural(sub, "{n} folder", "{n} folders") + " · " + fcount(filesUnder(fp)) : fcount((p.folders[fp] || []).length);
-      var cover = folderCover(fp), ic = branch ? "stack" : folderIcon(seg);
-      // If the image 404s (pruned thumbnail), swap back to the icon rather than
-      // leaving a broken-image box on the card.
-      var media = cover
-        ? '<img src="' + escapeHTML(cover) + '" alt="" loading="lazy" decoding="async"' +
-            " onerror=\"this.parentNode.classList.add('no-img');this.parentNode.innerHTML=window.__icon('" + ic + "')\"/>"
-        : window.__icon(ic);
-      return '<button type="button" class="fcard' + (open ? " open" : "") + (branch ? " is-branch" : "") + (cover ? "" : " no-img") + '"' +
-          ' data-path="' + escapeHTML(fp) + '" aria-expanded="' + open + '" aria-controls="' + panelId(fp) + '">' +
-          '<span class="fcard-media">' + media + "</span>" +
-          '<span class="fcard-chev" aria-hidden="true">' + icon("chevronDown") + "</span>" +
-          '<span class="fcard-tx"><span class="fcard-name">' + escapeHTML(trSeg(seg)) + "</span>" +
-          '<span class="fcard-c">' + count + "</span></span>" +
-        "</button>" +
-        (open ? folderPanelHTML(fp, depth) : "");
-    }
-    // Cards are grouped Photos / Videos / Other by what the folder holds; a
-    // folder of folders that isn't itself a category (a colorway, a collab, an
-    // accessory line) goes in a fourth group. Same grouping at every level, so an
-    // opened colorway splits its own folders the same way.
+    // ---- Photos / Videos / Other ------------------------------------------
+    // A category folder belongs to the group its name says. A colorway or collab
+    // (a top-level folder of folders that isn't a category — Black, Velvet
+    // Burgundy, Khalifa…) is SPLIT: one card in Photos (its photo folders), one
+    // in Videos (its video folders) and, if it has any, one in Other (its own
+    // logos / in-store pieces). Each opens to just that slice, so every group
+    // reads as a color lineup. Accessories keeps its product lines whole.
     var GROUPS = [
       { key: "photos", label: "Photos" },
       { key: "videos", label: "Videos" },
       { key: "other", label: "Other" },
       { key: "sets", label: p.isCategory ? "Products" : "Colorways & Collaborations" },
     ];
-    function groupOf(fp) {
-      var seg = lastSeg(fp);
-      if (/video|reel|tv screen/i.test(seg)) return "videos";
+    function groupLabel(G) { return tr(GROUPS.filter(function (g) { return g.key === G; })[0].label); }
+    function catGroup(seg) {
+      if (/video|reel|tv screen|\bugc\b/i.test(seg)) return "videos";
       if (/logo|in.?store|marketing|point of sale|\bpos\b/i.test(seg)) return "other";
       if (/photo|lifestyle|packag|render|banner|e-?comm/i.test(seg)) return "photos";
-      return isFolderBranch(fp) ? "sets" : "other";
+      return null;
     }
-    function folderGridHTML(parent, depth) {
+    function groupOf(fp) { return catGroup(lastSeg(fp)) || (isFolderBranch(fp) ? "sets" : "other"); }
+    function isColorway(fp) { return colorMode && fp.indexOf(SEP) === -1 && groupOf(fp) === "sets"; }
+    // The slice a folder below a colorway falls in: the first category name on
+    // its path ("Black / Social Videos / Pasadena" → videos).
+    function sliceOf(path) {
+      var segs = path.split(SEP);
+      for (var i = 1; i < segs.length; i++) { var g = catGroup(segs[i]); if (g) return g; }
+      // Files loose in a colorway's own root (Cookies has two videos there)
+      // go by what they are, not into Other.
+      var files = p.folders[path] || [];
+      if (files.length && files.every(function (x) { return x.type === "video"; })) return "videos";
+      if (files.length && files.every(function (x) { return x.type === "image"; })) return "photos";
+      return "other";
+    }
+    function inSlice(fp, G) {
+      return tree.some(function (f) { return (f === fp || f.indexOf(fp + SEP) === 0) && (p.folders[f] || []).length && sliceOf(f) === G; });
+    }
+    function filesIn(fp, G) {
+      var n = 0;
+      tree.forEach(function (f) { if ((f === fp || f.indexOf(fp + SEP) === 0) && (!G || sliceOf(f) === G)) n += (p.folders[f] || []).length; });
+      return n;
+    }
+    function kidsOf(fp, G) {
+      return sortSegs(fp, childSegs(fp)).filter(function (seg) { return !G || inSlice(joinPath(fp, seg), G); });
+    }
+    // The open chain: `openPath` (a real folder) plus, inside a colorway, which
+    // slice of it is open.
+    function sliceOpen(cw, G) { return openGroup === G && isOpen(cw); }
+    function panelKey(fp, G) { return G && fp.indexOf(SEP) === -1 && isColorway(fp) ? fp + "|" + G : fp; }
+    function cardMedia(cover, ic) {
+      // If the image 404s (pruned thumbnail), swap back to the icon rather than
+      // leaving a broken-image box on the card.
+      return cover
+        ? '<img src="' + escapeHTML(cover) + '" alt="" loading="lazy" decoding="async"' +
+            " onerror=\"this.parentNode.classList.add('no-img');this.parentNode.innerHTML=window.__icon('" + ic + "')\"/>"
+        : window.__icon(ic);
+    }
+    function cardShell(attrs, cls, cover, ic, label, count, open, key, panel) {
+      return '<button type="button" class="fcard' + (open ? " open" : "") + cls + (cover ? "" : " no-img") + '"' + attrs +
+          ' aria-expanded="' + open + '" aria-controls="' + panelId(key) + '">' +
+          '<span class="fcard-media">' + cardMedia(cover, ic) + "</span>" +
+          '<span class="fcard-chev" aria-hidden="true">' + icon("chevronDown") + "</span>" +
+          '<span class="fcard-tx"><span class="fcard-name">' + escapeHTML(label) + "</span>" +
+          '<span class="fcard-c">' + count + "</span></span>" +
+        "</button>" + (open ? panel() : "");
+    }
+    // A real folder's card. Inside a colorway slice (G), counts and sub-folders
+    // only cover that slice.
+    function folderCardHTML(fp, depth, G) {
+      var seg = lastSeg(fp), kids = kidsOf(fp, G), branch = kids.length > 0, open = isOpen(fp);
+      var count = branch ? plural(kids.length, "{n} folder", "{n} folders") + " · " + fcount(filesIn(fp, G)) : fcount((p.folders[fp] || []).length);
+      return cardShell(' data-path="' + escapeHTML(fp) + '"', branch ? " is-branch" : "", folderCover(fp), branch ? "stack" : folderIcon(seg),
+        trSeg(seg), count, open, fp, function () { return folderPanelHTML(fp, depth, G); });
+    }
+    // A colorway's card in one group — its featured image is that colorway's
+    // own product shot, whichever group it sits in.
+    function sliceCardHTML(cw, G) {
+      var kids = kidsOf(cw, G), open = sliceOpen(cw, G);
+      var count = (kids.length ? plural(kids.length, "{n} folder", "{n} folders") + " · " : "") + fcount(filesIn(cw, G));
+      return cardShell(' data-path="' + escapeHTML(cw) + '" data-g="' + G + '"', " is-branch", folderCover(cw), "stack",
+        trSeg(cw), count, open, cw + "|" + G, function () { return slicePanelHTML(cw, G); });
+    }
+    function slicePanelHTML(cw, G) {
+      var label = trSeg(cw) + " · " + groupLabel(G);
+      return '<div class="fpanel" id="' + panelId(cw + "|" + G) + '" role="region" aria-label="' + escapeHTML(label) + '">' +
+          '<div class="folder-toolbar"><h3 class="folder-title">' + escapeHTML(label) + '<span class="ft-count">' + fcount(filesIn(cw, G)) + "</span></h3></div>" +
+          (kidsOf(cw, G).length ? '<div class="fgrid fgrid-sub">' + kidsOf(cw, G).map(function (seg) { return folderCardHTML(joinPath(cw, seg), 1, G); }).join("") + "</div>" : "") +
+          // The colorway's own loose files of this kind, when it's the open folder.
+          (openPath === cw && (p.folders[cw] || []).length && sliceOf(cw) === G ? '<div class="gallery" id="gallery"></div>' : "") +
+        "</div>";
+    }
+    function groupBlock(label, cardsHTML, depth) {
+      return '<div class="fgroup">' +
+          '<h3 class="fgroup-h">' + label + "</h3>" +
+          '<div class="fgrid' + (depth ? " fgrid-sub" : "") + '">' + cardsHTML + "</div>" +
+        "</div>";
+    }
+    function folderGridHTML(parent, depth, G) {
+      // Inside a colorway slice: one plain grid of that slice's folders.
+      if (G) return '<div class="fgrid fgrid-sub">' + kidsOf(parent, G).map(function (seg) { return folderCardHTML(joinPath(parent, seg), depth, G); }).join("") + "</div>";
+      var segs = sortSegs(parent, childSegs(parent));
+      if (!parent && colorMode) {
+        // Top level: colorways split across Photos / Videos / Other. Within a
+        // group, base category folders lead, then the colorway lineup, then the
+        // collection-wide folders (Group Photos, TV Screen Videos, UGC).
+        var TAIL = /^(group photos|tv screen videos?|ugc videos?|ugc)$/i;
+        var ent = { photos: [], videos: [], other: [] };
+        segs.forEach(function (seg) {
+          if (isColorway(seg)) {
+            ["photos", "videos", "other"].forEach(function (g) { if (inSlice(seg, g)) ent[g].push({ html: sliceCardHTML(seg, g), rank: 1 }); });
+          } else {
+            var g = groupOf(seg); if (g === "sets") g = "other";
+            ent[g].push({ html: folderCardHTML(seg, depth), rank: TAIL.test(seg) ? 2 : 0 });
+          }
+        });
+        return ["photos", "videos", "other"].filter(function (g) { return ent[g].length; }).map(function (g) {
+          var list = ent[g].map(function (e, i) { e.i = i; return e; }).sort(function (a, b) { return (a.rank - b.rank) || (a.i - b.i); });
+          return groupBlock(groupLabel(g), list.map(function (e) { return e.html; }).join(""), depth);
+        }).join("");
+      }
       var byGroup = {};
-      sortSegs(parent, childSegs(parent)).forEach(function (seg) {
-        var fp = joinPath(parent, seg), g = groupOf(fp);
-        (byGroup[g] = byGroup[g] || []).push(fp);
-      });
+      segs.forEach(function (seg) { var fp = joinPath(parent, seg); (byGroup[groupOf(fp)] = byGroup[groupOf(fp)] || []).push(fp); });
       return GROUPS.filter(function (g) { return byGroup[g.key]; }).map(function (g) {
-        return '<div class="fgroup">' +
-            '<h3 class="fgroup-h">' + tr(g.label) + "</h3>" +
-            '<div class="fgrid' + (depth ? " fgrid-sub" : "") + '">' +
-              byGroup[g.key].map(function (fp) { return folderCardHTML(fp, depth); }).join("") +
-            "</div>" +
-          "</div>";
+        return groupBlock(tr(g.label), byGroup[g.key].map(function (fp) { return folderCardHTML(fp, depth); }).join(""), depth);
       }).join("");
     }
     // The inline panel under an open card: its actions, its sub-folders (if it
     // holds folders) and — when it's the folder being looked at — its files.
-    function folderPanelHTML(fp, depth) {
-      var direct = (p.folders[fp] || []).length, branch = isFolderBranch(fp), here = fp === openPath;
+    function folderPanelHTML(fp, depth, G) {
+      var direct = (p.folders[fp] || []).length, branch = kidsOf(fp, G).length > 0, here = fp === openPath;
       return '<div class="fpanel" id="' + panelId(fp) + '" role="region" aria-label="' + escapeHTML(trSeg(lastSeg(fp))) + '">' +
           '<div class="folder-toolbar">' +
-            '<h3 class="folder-title">' + escapeHTML(trSeg(lastSeg(fp))) + '<span class="ft-count">' + fcount(filesUnder(fp)) + "</span></h3>" +
+            '<h3 class="folder-title">' + escapeHTML(trSeg(lastSeg(fp))) + '<span class="ft-count">' + fcount(filesIn(fp, G)) + "</span></h3>" +
             folderActions(fp, here && direct > 0) +
           "</div>" +
-          (branch ? folderGridHTML(fp, depth + 1) : "") +
+          (branch ? folderGridHTML(fp, depth + 1, G) : "") +
           (here && direct ? '<div class="gallery" id="gallery"></div>' : "") +
         "</div>";
     }
@@ -2707,11 +2794,13 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         '<div class="sales-groups">' + docNames.map(function (f, i) {
           var where = parentPath(f);
           var label = where ? where.split(SEP).map(trSeg).join(" · ") : trSeg("Documents");
+          // A section that is nothing but one regional sheet is just its card.
+          var bare = docNames.length === 1 && !docSplit(f).rest.length && docSplit(f).sets.length === 1;
           return '<div class="sales-group" data-docpath="' + escapeHTML(f) + '">' +
-              '<div class="folder-toolbar">' +
+              (bare ? "" : '<div class="folder-toolbar">' +
                 '<h3 class="folder-title">' + escapeHTML(label) + '<span class="ft-count">' + fcount(p.folders[f].length) + "</span></h3>" +
                 folderActions(f, p.folders[f].length > 1) +
-              "</div>" +
+              "</div>") +
               (docSplit(f).sets.length
                 ? '<div class="osheets">' + docSplit(f).sets.map(function (set, j) { return oneSheetHTML(set, i + ":" + j); }).join("") + "</div>"
                 : "") +
@@ -2886,15 +2975,20 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
       // A language switch keeps the folder open via _openMemo.
       $$(".fcard", box).forEach(function (c) {
         c.addEventListener("click", function () {
-          var fp = c.getAttribute("data-path");
-          openPath = isOpen(fp) ? parentPath(fp) : fp;
-          _openMemo = { product: p.name, path: openPath };
+          var fp = c.getAttribute("data-path"), G = c.getAttribute("data-g");
+          if (G) {   // a colorway's Photos / Videos / Other card
+            if (sliceOpen(fp, G)) { openPath = ""; openGroup = null; } else { openPath = fp; openGroup = G; }
+          } else {
+            openPath = isOpen(fp) ? parentPath(fp) : fp;
+            if (fp.indexOf(SEP) === -1) openGroup = null;   // a top-level category card
+          }
+          _openMemo = { product: p.name, path: openPath, group: openGroup };
           if (/\?f=/.test(location.hash)) {
             try { history.replaceState(null, "", location.pathname + location.search + productHash(p)); } catch (e) {}
           }
           renderAssets();
           // The cards were redrawn; keep keyboard focus on the one just used.
-          var same = $$(".fcard", box).filter(function (x) { return x.getAttribute("data-path") === fp; })[0];
+          var same = $$(".fcard", box).filter(function (x) { return x.getAttribute("data-path") === fp && x.getAttribute("data-g") === G; })[0];
           if (same) same.focus({ preventScroll: true });
         });
       });
@@ -2910,7 +3004,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     if (arrivedViaLink) {
       var target = docTarget
         ? $$(".sales-group", d).filter(function (g) { return g.getAttribute("data-docpath") === docTarget; })[0]
-        : $("#" + panelId(openPath), d);
+        : $("#" + panelId(openGroup && openPath.indexOf(SEP) === -1 ? openPath + "|" + openGroup : openPath), d);
       if (target) {
         setTimeout(function () {
           var top = target.getBoundingClientRect().top + window.pageYOffset - 96;
