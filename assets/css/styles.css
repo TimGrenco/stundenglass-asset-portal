@@ -473,33 +473,50 @@ button.pkg-media { width: 100%; border: 0; padding: 0; font: inherit; }
 .vlb-close { position: absolute; top: 22px; right: 22px; width: 40px; height: 40px; border-radius: 50%; background: rgba(255, 255, 255, 0.12); border: none; display: flex; align-items: center; justify-content: center; }
 .vlb-close svg { width: 20px; height: 20px; stroke: #fff; }
 
-/* PHOTO / VIDEO ASSETS — square folder cards that open inline. An open card's
-   panel spans the full row right under it; `dense` lets the cards that follow
-   it in the markup back-fill the rest of its row. */
-.fgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; grid-auto-flow: row dense; margin: 0 0 18px; }
-.fgrid-sub { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin: 4px 0 6px; }
-.fcard { position: relative; display: block; aspect-ratio: 1 / 1; padding: 0; border-radius: 14px; overflow: hidden;
-  border: 1px solid var(--hair); background: var(--paper); color: var(--ink); text-align: left; cursor: pointer;
+/* Photo / Video Assets — large square folder cards that open inline, in labeled
+   groups (Photos / Videos / Other / Colorways). An open card's panel spans the
+   full row right under it; `dense` lets the cards that follow it in the markup
+   back-fill the rest of its row. 3 per row on desktop, 2 on tablet, 1 on phones. */
+.fgroup { margin: 0 0 26px; }
+.fgroup-h { font-family: var(--serif); font-size: 17px; font-weight: 700; letter-spacing: -0.01em; color: var(--ink); margin: 0 0 12px; }
+.fpanel .fgroup { margin-bottom: 18px; }
+.fpanel .fgroup:last-child { margin-bottom: 4px; }
+.fpanel .fgroup-h { font-size: 15px; margin-bottom: 10px; }
+.fgrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; grid-auto-flow: row dense; }
+.fgrid-sub { gap: 12px; }
+.fcard { position: relative; display: block; aspect-ratio: 1 / 1; padding: 0; border-radius: 16px; overflow: hidden;
+  border: 1px solid var(--hair); background: var(--mist); color: #fff; text-align: left; cursor: pointer;
   transition: border-color 0.14s, box-shadow 0.14s; }
 .fcard:hover { border-color: var(--ink); box-shadow: var(--shadow); }
-.fcard.open { border-color: var(--ink); box-shadow: 0 0 0 2px var(--ink); }
+.fcard.open { border-color: var(--ink); box-shadow: 0 0 0 3px var(--ink); }
+/* The preview always fills the square — any orientation is scaled to cover and
+   center-cropped, never letterboxed. */
 .fcard-media { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
-.fcard-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-/* Colorway covers are tall product shots — show the whole product, don't crop it. */
-.fcard.is-branch .fcard-media img { object-fit: contain; padding: 6px 6px 54px; }
-.fcard.no-img { background: var(--mist); }
-.fcard.no-img .fcard-media svg { width: 34px; height: 34px; margin-bottom: 40px; color: var(--stone); }
-.fcard-tx { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; gap: 2px;
-  padding: 9px 12px 10px; background: rgba(255, 255, 255, 0.95); border-top: 1px solid var(--hair); line-height: 1.2; }
-.fcard-name { font-size: 13.5px; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.fcard-c { font-size: 9.5px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--stone); }
-.fcard-chev { position: absolute; top: 8px; right: 8px; width: 28px; height: 28px; border-radius: 50%;
-  display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.92); color: var(--ink);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); transition: transform 0.16s; }
-.fcard-chev svg { width: 16px; height: 16px; }
+.fcard-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+.fcard.no-img .fcard-media svg { width: 44px; height: 44px; margin-bottom: 56px; color: var(--stone); }
+/* Name + count over a soft dark fade at the bottom, so they read on any photo. */
+.fcard-tx { position: absolute; left: 0; right: 0; bottom: 0; display: flex; flex-direction: column; gap: 4px;
+  padding: 44px 18px 16px; background: linear-gradient(to top, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.42) 55%, rgba(0, 0, 0, 0)); line-height: 1.15; }
+.fcard-name { font-family: var(--serif); font-size: 20px; font-weight: 800; letter-spacing: -0.01em; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.fcard-c { font-size: 12.5px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(255, 255, 255, 0.88); }
+.fcard.no-img { color: var(--ink); }
+.fcard.no-img .fcard-tx { background: none; }
+.fcard.no-img .fcard-name { text-shadow: none; }
+.fcard.no-img .fcard-c { color: var(--stone); }
+.fpanel .fcard-name { font-size: 18px; }
+.fcard-chev { position: absolute; top: 12px; right: 12px; width: 34px; height: 34px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center; background: rgba(255, 255, 255, 0.94); color: var(--ink);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18); transition: transform 0.16s; }
+.fcard-chev svg { width: 18px; height: 18px; }
 .fcard.open .fcard-chev { transform: rotate(180deg); background: var(--ink); color: #fff; }
-.fcard.is-branch .fcard-chev { color: var(--gold-ink); }
-.fcard.is-branch.open .fcard-chev { color: #fff; }
+@media (max-width: 900px) {
+  .fgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+}
+@media (max-width: 560px) {
+  .fgrid { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .fcard-name { font-size: 20px; }
+}
 .fpanel { grid-column: 1 / -1; padding: 16px; border: 1px solid var(--hair); border-radius: 14px; background: var(--paper); }
 .fpanel .fpanel { background: var(--mist); }
 .fpanel .gallery-toolbar { margin-bottom: 0; }
@@ -701,8 +718,6 @@ a.logo-tile { cursor: pointer; }
   .hero-brands { gap: 18px; }
   .hero-logo.sg-word { height: 38px; }
   .grid { grid-template-columns: repeat(2, 1fr); gap: 13px; }
-  .fgrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
-  .fgrid-sub { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   .fpanel { padding: 10px; }
   .fpanel .fpanel { padding: 8px; margin: 0 -2px; }
   /* Nested panels leave ~300px; keep the file grid at two columns there. */

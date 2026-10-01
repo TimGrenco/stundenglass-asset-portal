@@ -461,7 +461,10 @@ window.PORTAL_I18N.it = {
   "Iridescent": "Iridescente",
   "Zoom in": "Ingrandisci",
   "Fit to screen": "Adatta allo schermo",
-  "PHOTO / VIDEO ASSETS": "RISORSE FOTO E VIDEO",
-  "SALES ASSETS": "MATERIALI DI VENDITA"
+  "Photo / Video Assets": "Risorse foto e video",
+  "Sales Assets": "Materiali di vendita",
+  "Other": "Altro",
+  "Colorways & Collaborations": "Colorazioni e collaborazioni",
+  "Products": "Prodotti"
  }
 };

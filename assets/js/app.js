@@ -2526,10 +2526,37 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         "</button>" +
         (open ? folderPanelHTML(fp, depth) : "");
     }
+    // Cards are grouped Photos / Videos / Other by what the folder holds; a
+    // folder of folders that isn't itself a category (a colorway, a collab, an
+    // accessory line) goes in a fourth group. Same grouping at every level, so an
+    // opened colorway splits its own folders the same way.
+    var GROUPS = [
+      { key: "photos", label: "Photos" },
+      { key: "videos", label: "Videos" },
+      { key: "other", label: "Other" },
+      { key: "sets", label: p.isCategory ? "Products" : "Colorways & Collaborations" },
+    ];
+    function groupOf(fp) {
+      var seg = lastSeg(fp);
+      if (/video|reel|tv screen/i.test(seg)) return "videos";
+      if (/logo|in.?store|marketing|point of sale|\bpos\b/i.test(seg)) return "other";
+      if (/photo|lifestyle|packag|render|banner|e-?comm/i.test(seg)) return "photos";
+      return isFolderBranch(fp) ? "sets" : "other";
+    }
     function folderGridHTML(parent, depth) {
-      return '<div class="fgrid' + (depth ? " fgrid-sub" : "") + '">' +
-        sortSegs(parent, childSegs(parent)).map(function (seg) { return folderCardHTML(joinPath(parent, seg), depth); }).join("") +
-      "</div>";
+      var byGroup = {};
+      sortSegs(parent, childSegs(parent)).forEach(function (seg) {
+        var fp = joinPath(parent, seg), g = groupOf(fp);
+        (byGroup[g] = byGroup[g] || []).push(fp);
+      });
+      return GROUPS.filter(function (g) { return byGroup[g.key]; }).map(function (g) {
+        return '<div class="fgroup">' +
+            '<h3 class="fgroup-h">' + tr(g.label) + "</h3>" +
+            '<div class="fgrid' + (depth ? " fgrid-sub" : "") + '">' +
+              byGroup[g.key].map(function (fp) { return folderCardHTML(fp, depth); }).join("") +
+            "</div>" +
+          "</div>";
+      }).join("");
     }
     // The inline panel under an open card: its actions, its sub-folders (if it
     // holds folders) and — when it's the folder being looked at — its files.
@@ -2548,8 +2575,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
     // "Documents", then one per colorway/collab that has its own).
     function salesHTML() {
       if (!docNames.length) return "";
-      var total = docNames.reduce(function (n, f) { return n + p.folders[f].length; }, 0);
-      return '<div class="section-head" id="sales-head"><h2>' + tr("SALES ASSETS") + '</h2><span class="badge">' + fcount(total) + "</span></div>" +
+      return '<div class="section-head" id="sales-head"><h2>' + tr("Sales Assets") + "</h2></div>" +
         '<div class="sales-groups">' + docNames.map(function (f, i) {
           var where = parentPath(f);
           var label = where ? where.split(SEP).map(trSeg).join(" · ") : trSeg("Documents");
@@ -2601,8 +2627,7 @@ var FACET_ORDER = ["Photos", "Lifestyle", "Logos", "Packaging", "Videos", "Catal
         whatsInBoxHTML(p) +
         // ---- PHOTO / VIDEO ASSETS: square folder cards that open inline ----
         // Empty products (no synced files yet) show a friendly note instead.
-        '<div class="section-head" id="docs-head"><h2>' + tr("PHOTO / VIDEO ASSETS") + "</h2>" +
-          (catTotal > 0 ? '<span class="badge">' + fcount(catTotal) + "</span>" : "") + "</div>" +
+        '<div class="section-head" id="docs-head"><h2>' + tr("Photo / Video Assets") + "</h2></div>" +
         (catTotal > 0
           ? '<div id="pv-assets"></div>'
           : '<div class="usage"><span>' + tr("Assets for this product are being added — check back soon, or use “Request an asset” for something specific.") + "</span></div>") +

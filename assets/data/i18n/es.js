@@ -461,7 +461,10 @@ window.PORTAL_I18N.es = {
   "Iridescent": "Iridiscente",
   "Zoom in": "Ampliar",
   "Fit to screen": "Ajustar a la pantalla",
-  "PHOTO / VIDEO ASSETS": "RECURSOS DE FOTO Y VIDEO",
-  "SALES ASSETS": "RECURSOS DE VENTAS"
+  "Photo / Video Assets": "Recursos de foto y video",
+  "Sales Assets": "Recursos de ventas",
+  "Other": "Otros",
+  "Colorways & Collaborations": "Colores y colaboraciones",
+  "Products": "Productos"
  }
 };

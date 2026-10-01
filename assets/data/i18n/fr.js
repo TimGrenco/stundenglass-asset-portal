@@ -461,7 +461,10 @@ window.PORTAL_I18N.fr = {
   "Iridescent": "Irisé",
   "Zoom in": "Zoomer",
   "Fit to screen": "Ajuster à l’écran",
-  "PHOTO / VIDEO ASSETS": "RESSOURCES PHOTO ET VIDÉO",
-  "SALES ASSETS": "RESSOURCES COMMERCIALES"
+  "Photo / Video Assets": "Ressources photo et vidéo",
+  "Sales Assets": "Ressources commerciales",
+  "Other": "Autres",
+  "Colorways & Collaborations": "Coloris et collaborations",
+  "Products": "Produits"
  }
 };

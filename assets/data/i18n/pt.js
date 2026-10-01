@@ -461,7 +461,10 @@ window.PORTAL_I18N.pt = {
   "Iridescent": "Iridescente",
   "Zoom in": "Ampliar",
   "Fit to screen": "Ajustar à tela",
-  "PHOTO / VIDEO ASSETS": "MATERIAIS DE FOTO E VÍDEO",
-  "SALES ASSETS": "MATERIAIS DE VENDAS"
+  "Photo / Video Assets": "Materiais de foto e vídeo",
+  "Sales Assets": "Materiais de vendas",
+  "Other": "Outros",
+  "Colorways & Collaborations": "Cores e colaborações",
+  "Products": "Produtos"
  }
 };
