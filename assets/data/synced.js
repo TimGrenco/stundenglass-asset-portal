@@ -575,6 +575,46 @@ window.PORTAL_SYNCED = {
       ],
       "Group Photos": [
         {
+          "name": "_ALF1125",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/nonzvrss4kaq358c1yfok/_ALF1125.jpg?rlkey=jmuxv1p8wbjyaxlkztvkl0050&dl=0",
+          "thumb": "assets/synced/gravity-infusers/03bbd3df200b03460f086fb16f0aa0f784a6cc20c0b972b3885ad294f21b8304.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF1160",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/u9orw45vfxqn19tietr1z/_ALF1160.jpg?rlkey=2czp0skaj9ev3zy56itpl9u8f&dl=0",
+          "thumb": "assets/synced/gravity-infusers/dc9ee7f1c4fb3e273a64956f32abf46c1fd2daebdef7b0fe7304e669be92f6ea.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF1165",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/tu9auduroyqhfj37j7psu/_ALF1165.jpg?rlkey=1db0uvwqqdgpt2k5vpn35glo2&dl=0",
+          "thumb": "assets/synced/gravity-infusers/98828ed78cb884994fc717753abb11133e866ffcb0d7e76faa0fca84a4637fb9.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF1169",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/rr1pfttsu6usa77jc6rwp/_ALF1169.jpg?rlkey=yqem6xor5ysvchdx6uygq1fe8&dl=0",
+          "thumb": "assets/synced/gravity-infusers/c0db83ea72a0dc1e716e44259cc19b33b4a477a87d18c0246d0a4a75c8801a2d.jpg",
+          "file": null
+        },
+        {
+          "name": "_ALF1184",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/da7voz1ngf445gyvk0hb0/_ALF1184.jpg?rlkey=u8kfux85qh424kev3jt5aoo3a&dl=0",
+          "thumb": "assets/synced/gravity-infusers/339ea610db5fa96eaa21dd2263728d1fe80f5fc1dedae322a46d025dd9163a67.jpg",
+          "file": null
+        },
+        {
           "name": "_ALF5778",
           "type": "image",
           "format": "JPG",
@@ -588,6 +628,14 @@ window.PORTAL_SYNCED = {
           "format": "JPG",
           "url": "https://www.dropbox.com/scl/fi/baldnnlhao7qry0ilnkk5/_ALF5792.jpg?rlkey=3l21b21yf9ffb84n9w4hu5nj9&dl=0",
           "thumb": "assets/synced/gravity-infusers/7f98a8467ee17b0ead76ab753465213bb62f36d799f0897d406eb96413cc6e9b.jpg",
+          "file": null
+        },
+        {
+          "name": "_GSH7615",
+          "type": "image",
+          "format": "JPG",
+          "url": "https://www.dropbox.com/scl/fi/b08q3cvwupzq1x9lbg2kh/_GSH7615.jpg?rlkey=katakema4ftgfcnfxyuiscspy&dl=0",
+          "thumb": "assets/synced/gravity-infusers/96292d5f631e926206ce3007e34bf5155960c8a9a8aae39bf84cd3aaa3ae5d42.jpg",
           "file": null
         },
         {
@@ -966,6 +1014,62 @@ window.PORTAL_SYNCED = {
         }
       ],
       "Velvet Burgundy / Lifestyle Photos": [
+        {
+          "name": "Burgundy image (7)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/nzdzh7a6ibg9vbwqf1mhb/Burgundy-image-7.png?rlkey=w5ipniwwllmvgh6ywe2z6i74c&dl=0",
+          "thumb": "assets/synced/gravity-infusers/22bd03d091f4675575f853b951bb1eb3a1be7cf8449e919bc0bf07349aef90c6.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (16)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/x4z0y4gn2rw6g7ubmnfhe/Burgundy-image-16.png?rlkey=w3y4jy49uipm42gftap1vtrky&dl=0",
+          "thumb": "assets/synced/gravity-infusers/3890532336f27c1fdd26b8a23323754641cabb02ca25e7d214251e3955603733.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (17)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/7qxp5et4zr330yinvhxom/Burgundy-image-17.png?rlkey=ws5e3dpuxzi80v1ge140dm40p&dl=0",
+          "thumb": "assets/synced/gravity-infusers/0ab94ed5b2a6313d02aeda7d0d359a9aa1762b847d1070e01fb194a389ab9d3d.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy Stundenglass - Device",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/sbsouaccq4luxwd0z0a3g/Burgundy-Stundenglass-Device.png?rlkey=vwc3pyiior51iffsf4j0lhktp&dl=0",
+          "thumb": "assets/synced/gravity-infusers/a7ffb66b4c72bdeb7239cff3f1e9934d4053e4dfdadea238746ee185c8a341c3.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy Stundenglass - Device_flip",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/vae2i7tl0v7czucnyrfk5/Burgundy-Stundenglass-Device_flip.png?rlkey=e3urueqe04svvvizt2j3dwxdq&dl=0",
+          "thumb": "assets/synced/gravity-infusers/f92b71cd162b459a88064d172a7f983bbce3f31475394385bda16a7781cac8d0.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy Stundenglass - Device_Girl",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/0ei9y1h8q04h9oi9n5izq/Burgundy-Stundenglass-Device_Girl.png?rlkey=lw2tzzvtfm463irmdxrerx534&dl=0",
+          "thumb": "assets/synced/gravity-infusers/a7f537a2e56f4f3654fddbb5eeada23d7be0e6651d6ac7ec9cca5040e841ff7a.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy Stundenglass - Girl Exhale",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/6nwtmp1lo2mjx2v2vu1l3/Burgundy-Stundenglass-Girl-Exhale.png?rlkey=scpv90b9kuveymlkofymdf9nl&dl=0",
+          "thumb": "assets/synced/gravity-infusers/4d66484be871dd9c13c9c69caf7b4e1acfda0b0dc1d1b6d07a7d5323bb17e4c6.jpg",
+          "file": null
+        },
         {
           "name": "Gemini_Generated_Image_l489u1l489u1l489",
           "type": "image",
@@ -1442,7 +1546,7 @@ window.PORTAL_SYNCED = {
       "Violet Purple / In-Store Marketing": "https://www.dropbox.com/scl/fo/xxoxrw9cfturi9igz8srw/AG9qbPcbU9TCYAr1HOHu6eg?rlkey=8pjpw3xhqc7yyb7o9yijtdxmw&dl=1",
       "Violet Purple / Documents": "https://www.dropbox.com/scl/fo/ae8fj5g9sjn0qizvlatqm/AEOxtEc0hql0oHOSyuuYq_Q?rlkey=4xm183gtwqdmb8evkpg3dm60j&dl=1"
     },
-    "updated": "2026-09-15"
+    "updated": "2026-10-01"
   },
   "Kompact Gravity Infusers": {
     "folders": {
