@@ -1039,6 +1039,14 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "Burgundy on bar",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/kjd96xt5qwzmp95a1b3xd/Burgundy-on-bar.png?rlkey=ekc91tiloh75mm6t00zwhtmqa&dl=0",
+          "thumb": "assets/synced/gravity-infusers/4e2e771aadbf64c9e4cf0d283f087f373a053c6d4924588e1bd8fc870c4f37d5.jpg",
+          "file": null
+        },
+        {
           "name": "Burgundy Stundenglass - Device",
           "type": "image",
           "format": "PNG",
@@ -1068,14 +1076,6 @@ window.PORTAL_SYNCED = {
           "format": "PNG",
           "url": "https://www.dropbox.com/scl/fi/6nwtmp1lo2mjx2v2vu1l3/Burgundy-Stundenglass-Girl-Exhale.png?rlkey=scpv90b9kuveymlkofymdf9nl&dl=0",
           "thumb": "assets/synced/gravity-infusers/4d66484be871dd9c13c9c69caf7b4e1acfda0b0dc1d1b6d07a7d5323bb17e4c6.jpg",
-          "file": null
-        },
-        {
-          "name": "Gemini_Generated_Image_l489u1l489u1l489",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/lkklr19on4c4drys8bqd3/Gemini_Generated_Image_l489u1l489u1l489.png?rlkey=ml4eyduzs2829vip5ytcpqb9n&dl=0",
-          "thumb": "assets/synced/gravity-infusers/13d7583fcab4a7301a3eaf963ec3f76feeec3edd9305837bb673f1b42e21ac64.jpg",
           "file": null
         },
         {
@@ -1546,7 +1546,7 @@ window.PORTAL_SYNCED = {
       "Violet Purple / In-Store Marketing": "https://www.dropbox.com/scl/fo/xxoxrw9cfturi9igz8srw/AG9qbPcbU9TCYAr1HOHu6eg?rlkey=8pjpw3xhqc7yyb7o9yijtdxmw&dl=1",
       "Violet Purple / Documents": "https://www.dropbox.com/scl/fo/ae8fj5g9sjn0qizvlatqm/AEOxtEc0hql0oHOSyuuYq_Q?rlkey=4xm183gtwqdmb8evkpg3dm60j&dl=1"
     },
-    "updated": "2026-10-01"
+    "updated": "2026-10-02"
   },
   "Kompact Gravity Infusers": {
     "folders": {
