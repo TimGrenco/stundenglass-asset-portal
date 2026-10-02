@@ -669,6 +669,22 @@ window.PORTAL_SYNCED = {
           "url": "https://www.dropbox.com/scl/fi/z2rxb37ilbqc1vky2vvpc/_STZ2612.jpg?rlkey=gr8aqa4qzhvsgm5amuih0rie9&dl=0",
           "thumb": "assets/synced/gravity-infusers/828350aa169d458818697b6e6d9ce5b605654965f300d6bd7c9ac08655c42449.jpg",
           "file": null
+        },
+        {
+          "name": "Burgundy Stundenglass - Group",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/r0bfzqzmkmtrglk2blzn1/Burgundy-Stundenglass-Group.png?rlkey=vicz4aluxb6g214mrq6ish7te&dl=0",
+          "thumb": "assets/synced/gravity-infusers/22e3ea039acc561af4de07f274cd22463c8f7054a8d0685ee67bf21eb8c3e58f.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy Stundenglass - Group2",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/cw99u9dk7gks0ejh2lnkv/Burgundy-Stundenglass-Group2.png?rlkey=flmnbmxp0f74qleahc6o1cqfg&dl=0",
+          "thumb": "assets/synced/gravity-infusers/9946f4a207a3d43d90ce04e31d9e60dabd98dc63588249576c08d9f8382b68af.jpg",
+          "file": null
         }
       ],
       "Olive Green / Product Photos": [
@@ -1023,10 +1039,74 @@ window.PORTAL_SYNCED = {
           "file": null
         },
         {
+          "name": "Burgundy image (8)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/bbhraxas2reeblbgexnvm/Burgundy-image-8.png?rlkey=097tl7h1a8qp0qxse1p9ivj7d&dl=0",
+          "thumb": "assets/synced/gravity-infusers/292447b8f91a48064aacfb7ca7b838b675c42a27ece6229718258c524bcce5d4.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (9)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/xuyabgtn0dyhucpkaxu0n/Burgundy-image-9.png?rlkey=v16kfkrnwfiqr60xa74t2gec1&dl=0",
+          "thumb": "assets/synced/gravity-infusers/436b9bf7e25a8d9fa0c77d82b111f1d08a973cd5e5d5722b02e57b26ec9fee82.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (010)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/ediutnw151g3k4pk1n7qc/Burgundy-image-010.png?rlkey=35vd0xhq140jgk1pp7hjkt8v1&dl=0",
+          "thumb": "assets/synced/gravity-infusers/1294df37979b0c8dcd17416f9a00a5dce971fd8a7e24cd198f5b36b4cdc100ab.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (011)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/d9bf7alm2hvqvkqf0tfwx/Burgundy-image-011.png?rlkey=l7k9t06sy4r035nfkegoa76ja&dl=0",
+          "thumb": "assets/synced/gravity-infusers/0e34f6656698b17104c82f56e4fa31796dd4c44f9fcb722151c9771369bf8927.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (012)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/7olf6iznree3eiiiohr67/Burgundy-image-012.png?rlkey=jifg91ar4jjq6tca9wq3q7o7g&dl=0",
+          "thumb": "assets/synced/gravity-infusers/8fc3523a989c7637d4bb99fafd27d96bdcecb77aeb95b2f0269d351ff446c0b9.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (013)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/zycyqs57xe9tmbf0sno60/Burgundy-image-013.png?rlkey=lpfh40tbcdhwoc4xyw54m24os&dl=0",
+          "thumb": "assets/synced/gravity-infusers/1fbaeae3af0ec70d29519342cd68258a0803a82c1b9a0cbc322d27873b1c14a2.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (014)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/6a8gmga9sy5f9z0f13lbl/Burgundy-image-014.png?rlkey=i07nh8zgdhwao2qlt1n4nu4hf&dl=0",
+          "thumb": "assets/synced/gravity-infusers/e7c647ae2d52eceeb6ad2d5c3c87eb1b86942ec40f641411cbd0937a820ee307.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (015)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/g8a6yquz4sv8xav7j0o4o/Burgundy-image-015.png?rlkey=e11jfy0ln9ftsz3uc9tyr4evz&dl=0",
+          "thumb": "assets/synced/gravity-infusers/82664ae2a1125632885d59899dd50560350647dd90e4f292588cdb597490fef7.jpg",
+          "file": null
+        },
+        {
           "name": "Burgundy image (16)",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/x4z0y4gn2rw6g7ubmnfhe/Burgundy-image-16.png?rlkey=w3y4jy49uipm42gftap1vtrky&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/o5pj51ocki5gg6udqr91y/Burgundy-image-16.png?rlkey=ccxo33cb91z3v6gnf46s5003m&dl=0",
           "thumb": "assets/synced/gravity-infusers/3890532336f27c1fdd26b8a23323754641cabb02ca25e7d214251e3955603733.jpg",
           "file": null
         },
@@ -1034,15 +1114,71 @@ window.PORTAL_SYNCED = {
           "name": "Burgundy image (17)",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/7qxp5et4zr330yinvhxom/Burgundy-image-17.png?rlkey=ws5e3dpuxzi80v1ge140dm40p&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/523axixg5ggeq0brnvza9/Burgundy-image-17.png?rlkey=xkuq23ozvd1i5qsv1nn0pt8a1&dl=0",
           "thumb": "assets/synced/gravity-infusers/0ab94ed5b2a6313d02aeda7d0d359a9aa1762b847d1070e01fb194a389ab9d3d.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (018)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/ox7itc8jyivuzok4zza4c/Burgundy-image-018.png?rlkey=o49nnvck7swetzle5gepj8m3c&dl=0",
+          "thumb": "assets/synced/gravity-infusers/eaa3cfff25c813a30c8b046a4aef2a22d360401c2776ec605849e9983db190cb.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (019)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/z4qf5jk6l2fl7hsw2ick5/Burgundy-image-019.png?rlkey=fbjgxc3it61vy6yoi5j39h90g&dl=0",
+          "thumb": "assets/synced/gravity-infusers/ba57de65cd690523107cb1716ef48dfae5a1d243c386e52eda67d1632425117d.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (20)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/lefgp8vutthrpjks6gcil/Burgundy-image-20.png?rlkey=t986pnbb1h3bqskpborkapu00&dl=0",
+          "thumb": "assets/synced/gravity-infusers/5936feb23cd4e7f795957f554e82b592b56812439c490d09a355e72be19bdcf9.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (21)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/2h4jqhn7vii02xl9m5ehw/Burgundy-image-21.png?rlkey=xb04zvn87gcrv8lp2zt4yw2sq&dl=0",
+          "thumb": "assets/synced/gravity-infusers/751d11efcf60e82146b85892c3406c4558b890dbc0afde2d8bfcb31234474cbd.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (22)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/bdz0rk2gi5p0nkcrv96ph/Burgundy-image-22.png?rlkey=i4b2u3engzbg6irottfbgjbr2&dl=0",
+          "thumb": "assets/synced/gravity-infusers/6db905b9a33eedc159fc4e1e942ddf203c88841ce1ff4b76fd39b6fd5375c445.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (23)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/wvozsg4n6u6ji4o1ncslr/Burgundy-image-23.png?rlkey=wajwe4bxw6ohzk4hjfnn76y9l&dl=0",
+          "thumb": "assets/synced/gravity-infusers/acebeeb4a75211cd38a6503857e3b7a7e4588cb3d2a0b1e7955a8849fa0ef0f2.jpg",
+          "file": null
+        },
+        {
+          "name": "Burgundy image (24)",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/nag9nc93e3ss9s34iq2fv/Burgundy-image-24.png?rlkey=es3bim7r9066oan1iifkauz0p&dl=0",
+          "thumb": "assets/synced/gravity-infusers/9a32a8df34665a7cd56f09531c02c29a2f8857bd1bb86a72b19d5dc2fee0d8fd.jpg",
           "file": null
         },
         {
           "name": "Burgundy on bar",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/kjd96xt5qwzmp95a1b3xd/Burgundy-on-bar.png?rlkey=ekc91tiloh75mm6t00zwhtmqa&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/0cs3ccmfbyjdnwtn820zu/Burgundy-on-bar.png?rlkey=m97q8eiorosz6ve8bnxb6xc6j&dl=0",
           "thumb": "assets/synced/gravity-infusers/4e2e771aadbf64c9e4cf0d283f087f373a053c6d4924588e1bd8fc870c4f37d5.jpg",
           "file": null
         },
@@ -1050,7 +1186,7 @@ window.PORTAL_SYNCED = {
           "name": "Burgundy Stundenglass - Device",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/sbsouaccq4luxwd0z0a3g/Burgundy-Stundenglass-Device.png?rlkey=vwc3pyiior51iffsf4j0lhktp&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/gh1d9xc2u3i3d1he5msjm/Burgundy-Stundenglass-Device.png?rlkey=zmkmqehp8a0b5kf5ydtw90noy&dl=0",
           "thumb": "assets/synced/gravity-infusers/a7ffb66b4c72bdeb7239cff3f1e9934d4053e4dfdadea238746ee185c8a341c3.jpg",
           "file": null
         },
@@ -1058,7 +1194,7 @@ window.PORTAL_SYNCED = {
           "name": "Burgundy Stundenglass - Device_flip",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/vae2i7tl0v7czucnyrfk5/Burgundy-Stundenglass-Device_flip.png?rlkey=e3urueqe04svvvizt2j3dwxdq&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/4w4ag50i2samlj6bygqq4/Burgundy-Stundenglass-Device_flip.png?rlkey=qi309adefv2gt9kxp3zhcafat&dl=0",
           "thumb": "assets/synced/gravity-infusers/f92b71cd162b459a88064d172a7f983bbce3f31475394385bda16a7781cac8d0.jpg",
           "file": null
         },
@@ -1066,7 +1202,7 @@ window.PORTAL_SYNCED = {
           "name": "Burgundy Stundenglass - Device_Girl",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/0ei9y1h8q04h9oi9n5izq/Burgundy-Stundenglass-Device_Girl.png?rlkey=lw2tzzvtfm463irmdxrerx534&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/nu1nwg5901quxfqrlu6hr/Burgundy-Stundenglass-Device_Girl.png?rlkey=dfiye9tp4shtqh4xkavirzaj6&dl=0",
           "thumb": "assets/synced/gravity-infusers/a7f537a2e56f4f3654fddbb5eeada23d7be0e6651d6ac7ec9cca5040e841ff7a.jpg",
           "file": null
         },
@@ -1074,120 +1210,24 @@ window.PORTAL_SYNCED = {
           "name": "Burgundy Stundenglass - Girl Exhale",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/6nwtmp1lo2mjx2v2vu1l3/Burgundy-Stundenglass-Girl-Exhale.png?rlkey=scpv90b9kuveymlkofymdf9nl&dl=0",
+          "url": "https://www.dropbox.com/scl/fi/qwmlm8so3j4t02qito9ri/Burgundy-Stundenglass-Girl-Exhale.png?rlkey=4e1iu9ymu79mkquzhuxr1i9vi&dl=0",
           "thumb": "assets/synced/gravity-infusers/4d66484be871dd9c13c9c69caf7b4e1acfda0b0dc1d1b6d07a7d5323bb17e4c6.jpg",
           "file": null
         },
         {
-          "name": "hf_20260728_160238_362776fe-57d2-4636-aeff-aa5f03222f91",
+          "name": "Burgundy Stundenglass - Group",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/dqe011zegokm3jiz2pyqg/hf_20260728_160238_362776fe-57d2-4636-aeff-aa5f03222f91.png?rlkey=7e8154ds4tgn3ywfkxa0kozbl&dl=0",
-          "thumb": "assets/synced/gravity-infusers/292447b8f91a48064aacfb7ca7b838b675c42a27ece6229718258c524bcce5d4.jpg",
+          "url": "https://www.dropbox.com/scl/fi/g9fxoqtnnw816luvhsyoz/Burgundy-Stundenglass-Group.png?rlkey=2ttej5wlvykbhod9v7k7855i4&dl=0",
+          "thumb": "assets/synced/gravity-infusers/22e3ea039acc561af4de07f274cd22463c8f7054a8d0685ee67bf21eb8c3e58f.jpg",
           "file": null
         },
         {
-          "name": "hf_20260728_160336_4ddcb12b-f7b6-4e87-b38d-40e1a37522b2",
+          "name": "Burgundy Stundenglass - Group2",
           "type": "image",
           "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/2zsghc5uiuo8fxt59jesc/hf_20260728_160336_4ddcb12b-f7b6-4e87-b38d-40e1a37522b2.png?rlkey=6w1bf6zzsj24iqvejclh9kr58&dl=0",
-          "thumb": "assets/synced/gravity-infusers/436b9bf7e25a8d9fa0c77d82b111f1d08a973cd5e5d5722b02e57b26ec9fee82.jpg",
-          "file": null
-        },
-        {
-          "name": "hf_20260728_160426_9e0ceabe-44cf-4c11-aeda-54d34d2263ab",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/zw0fn1soywoi8968hg82t/hf_20260728_160426_9e0ceabe-44cf-4c11-aeda-54d34d2263ab.png?rlkey=9b2tolsvw3u3inn8gd1mjb0r4&dl=0",
-          "thumb": "assets/synced/gravity-infusers/82664ae2a1125632885d59899dd50560350647dd90e4f292588cdb597490fef7.jpg",
-          "file": null
-        },
-        {
-          "name": "hf_20260728_160918_9d1144c4-b8bc-4303-aa44-68208a789032",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/h5oob3uoj1k3w637hfj70/hf_20260728_160918_9d1144c4-b8bc-4303-aa44-68208a789032.png?rlkey=1zbg8yd74084p5bhczqh7weiy&dl=0",
-          "thumb": "assets/synced/gravity-infusers/eaa3cfff25c813a30c8b046a4aef2a22d360401c2776ec605849e9983db190cb.jpg",
-          "file": null
-        },
-        {
-          "name": "hf_20260728_161201_45229f33-9b61-4ff4-b276-00e7907cc49e",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/x3dq3yxojdpuvv63sf6no/hf_20260728_161201_45229f33-9b61-4ff4-b276-00e7907cc49e.png?rlkey=5ujoh889u97quv70scnxsw2z4&dl=0",
-          "thumb": "assets/synced/gravity-infusers/5936feb23cd4e7f795957f554e82b592b56812439c490d09a355e72be19bdcf9.jpg",
-          "file": null
-        },
-        {
-          "name": "hf_20260728_161415_c8953b9b-c6b6-4e92-bb88-181dc1931613",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/70r4cz6g8v6c6whaelqkd/hf_20260728_161415_c8953b9b-c6b6-4e92-bb88-181dc1931613.png?rlkey=c9hvrvh1u30bk8x9axai28omm&dl=0",
-          "thumb": "assets/synced/gravity-infusers/751d11efcf60e82146b85892c3406c4558b890dbc0afde2d8bfcb31234474cbd.jpg",
-          "file": null
-        },
-        {
-          "name": "hf_20260728_162922_a8d98de7-d026-4fa2-83b3-0597ccc9e3da",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/4hryic91im7h4qucv0zv2/hf_20260728_162922_a8d98de7-d026-4fa2-83b3-0597ccc9e3da.png?rlkey=mixwn9p27mo270eqc4j13rnwh&dl=0",
-          "thumb": "assets/synced/gravity-infusers/6db905b9a33eedc159fc4e1e942ddf203c88841ce1ff4b76fd39b6fd5375c445.jpg",
-          "file": null
-        },
-        {
-          "name": "hf_20260728_163345_4de07072-3bde-47e9-8cb0-cbb4d74dc63a",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/zba8ofbc7wg10jvhhh0wa/hf_20260728_163345_4de07072-3bde-47e9-8cb0-cbb4d74dc63a.png?rlkey=es7qcagw1d3oe96kpi27cftpt&dl=0",
-          "thumb": "assets/synced/gravity-infusers/acebeeb4a75211cd38a6503857e3b7a7e4588cb3d2a0b1e7955a8849fa0ef0f2.jpg",
-          "file": null
-        },
-        {
-          "name": "hf_20260728_163852_6c60cf25-71d5-43bb-a26b-89fd4c7cac36",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/aqe72zisu6nts5x2rjiz0/hf_20260728_163852_6c60cf25-71d5-43bb-a26b-89fd4c7cac36.png?rlkey=owmo5063t7vtdjegxpruydm8b&dl=0",
-          "thumb": "assets/synced/gravity-infusers/9a32a8df34665a7cd56f09531c02c29a2f8857bd1bb86a72b19d5dc2fee0d8fd.jpg",
-          "file": null
-        },
-        {
-          "name": "hf_20260728_163922_305bd399-9d42-4900-8e9a-18489e284a84",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/e0wg2vwt1ymk65u178mp5/hf_20260728_163922_305bd399-9d42-4900-8e9a-18489e284a84.png?rlkey=93qrq3oyc8pqic778wm9woymx&dl=0",
-          "thumb": "assets/synced/gravity-infusers/e7c647ae2d52eceeb6ad2d5c3c87eb1b86942ec40f641411cbd0937a820ee307.jpg",
-          "file": null
-        },
-        {
-          "name": "hf_20260728_164226_32dc868d-636c-4fab-97ca-c435311d2581",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/w17dw97dgxc96g0k15k0y/hf_20260728_164226_32dc868d-636c-4fab-97ca-c435311d2581.png?rlkey=it16gcvi06a70zjb06u4usoob&dl=0",
-          "thumb": "assets/synced/gravity-infusers/1fbaeae3af0ec70d29519342cd68258a0803a82c1b9a0cbc322d27873b1c14a2.jpg",
-          "file": null
-        },
-        {
-          "name": "hf_20260728_164334_32fe7840-13ed-4239-88cb-2f39771e4475",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/f86xorptit8b88l8vob06/hf_20260728_164334_32fe7840-13ed-4239-88cb-2f39771e4475.png?rlkey=okaivinr0pmqq2z778dluldts&dl=0",
-          "thumb": "assets/synced/gravity-infusers/8fc3523a989c7637d4bb99fafd27d96bdcecb77aeb95b2f0269d351ff446c0b9.jpg",
-          "file": null
-        },
-        {
-          "name": "hf_20260728_165222_411031d7-6e0b-4fe2-9fe8-2a70ed22fbb8",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/4d0dv412cs85i5znx7p6j/hf_20260728_165222_411031d7-6e0b-4fe2-9fe8-2a70ed22fbb8.png?rlkey=rvpugvu3jicq8usw3jv9p77h3&dl=0",
-          "thumb": "assets/synced/gravity-infusers/0e34f6656698b17104c82f56e4fa31796dd4c44f9fcb722151c9771369bf8927.jpg",
-          "file": null
-        },
-        {
-          "name": "hf_20260728_165346_3b393fb5-2183-43f6-8d43-0c1d7a10afe3",
-          "type": "image",
-          "format": "PNG",
-          "url": "https://www.dropbox.com/scl/fi/9d1l51j2iqooekxcajm4j/hf_20260728_165346_3b393fb5-2183-43f6-8d43-0c1d7a10afe3.png?rlkey=t4nl791bdrsy9vxa1gcoae0g5&dl=0",
-          "thumb": "assets/synced/gravity-infusers/1294df37979b0c8dcd17416f9a00a5dce971fd8a7e24cd198f5b36b4cdc100ab.jpg",
+          "url": "https://www.dropbox.com/scl/fi/a10xby2g1cgjpu0ixz6p1/Burgundy-Stundenglass-Group2.png?rlkey=gvgik29yvl5gn0j1scq2kqb1y&dl=0",
+          "thumb": "assets/synced/gravity-infusers/9946f4a207a3d43d90ce04e31d9e60dabd98dc63588249576c08d9f8382b68af.jpg",
           "file": null
         }
       ],
