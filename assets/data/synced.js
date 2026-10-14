@@ -4776,6 +4776,132 @@ window.PORTAL_SYNCED = {
           "file": null
         }
       ],
+      "Dr Greenthumbs / Documents": [
+        {
+          "name": "2023-04-17_SG_Manual--OUTLINED",
+          "type": "pdf",
+          "format": "PDF",
+          "url": "https://www.dropbox.com/scl/fi/ugylt2h82apuj93o7m5y7/2023-04-17_SG_Manual-OUTLINED.pdf?rlkey=4o16v6v0t8p0s9simbh058idb&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7ec897d06a50bb96580294e994266aaf1d874cdc2720a1f630c3352a7c42f42e.jpg",
+          "file": null
+        }
+      ],
+      "Dr Greenthumbs / UGC Videos": [
+        {
+          "name": "Halloween DGT Pineapple Oct_Edit",
+          "type": "video",
+          "format": "MP4",
+          "url": "https://www.dropbox.com/scl/fi/7ffn8dtl1f9wai9fowsc2/Halloween-DGT-Pineapple-Oct_Edit.mp4?rlkey=2s87j26rd92doi5c30fanlcz2&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/ea186ea4033c73bed4fcbda9b365cc4d98a2580de1a8e38fcd389cb8c87879b4.jpg",
+          "file": null
+        }
+      ],
+      "Grateful Dead / Legacy Patchwork / Product Photos": [
+        {
+          "name": "GD_LP_web_StickerSheet_a",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/5uvhxa6kfbeb04eh33415/GD_LP_web_StickerSheet_a.png?rlkey=ite28qxz0vqb0i3xvafera35g&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/8d4172ca80fbd9bc679dcd2fc2fb85a025913fb020e102be5928010d70933831.jpg",
+          "file": null
+        },
+        {
+          "name": "GD_LP_web_StickerSheet_b",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/8uwbxx8jakxe0blk9yhty/GD_LP_web_StickerSheet_b.png?rlkey=5xamzzxpjjx532kb8h07afj2e&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/dcb3b3e7aba32effa90e88be1c5b35c618f57f09b8dc262fa0b8f62c9f03bc5b.jpg",
+          "file": null
+        },
+        {
+          "name": "web_GD_LP_All_Contents",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/vtks9q3ukbg9jqvf8spzc/web_GD_LP_All_Contents.png?rlkey=lwy44cv855li8dkoprv7szwv0&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/ef95b24e1956a1b90a048852a19b26b3e6c51ab15ba36fcb41eebc4bb4eb992b.jpg",
+          "file": null
+        },
+        {
+          "name": "web_GD_LP_Base_CU",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/hfza3646k8sqvx4zg1fvq/web_GD_LP_Base_CU.png?rlkey=fw0p2vaorl0hb6st9vvrz92kg&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/19ee8b9d61be0e07ec6d87412cfcfd5b700e61f0d62b1016a8f780a902f3b2a6.jpg",
+          "file": null
+        },
+        {
+          "name": "web_GD_LP_Bowl_Assembly_WithLiner",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/yyrxy2tvdzpuw6gi3xyul/web_GD_LP_Bowl_Assembly_WithLiner.png?rlkey=x7f4gjz8kf6hvey30pfsgjnmu&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/150e3956898125f72419e3613d972e798fc0fbb4f2a3b9b990852f29570b14b8.jpg",
+          "file": null
+        },
+        {
+          "name": "web_GD_LP_ElbowCU",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/zv1c0x5ux4i9aojq1xicq/web_GD_LP_ElbowCU.png?rlkey=aqjk541kps4g5zp372r5z4nnj&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/a9e82058f9e3c53e59b964a58fdab70be197ef382f90df4b69043c4e973f8d3c.jpg",
+          "file": null
+        },
+        {
+          "name": "web_GD_LP_Front_Unit",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/kmiimkj2bxcv8bajywv4i/web_GD_LP_Front_Unit.png?rlkey=f0sel0i2ta1yhflzsu06g3qoc&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/7e0ba846705d5049cbff1a39eb650ebaee308f8299a9a23fd15472dbacf546d3.jpg",
+          "file": null
+        },
+        {
+          "name": "web_GD_LP_Hookah_Gear",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/x95n1rxv0wi3kydneacy0/web_GD_LP_Hookah_Gear.png?rlkey=ahyyxiz7n3ahzxjgew967xwf7&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/630f3f934b90bebde69fc8ad29bf6dc948b604316b59e8495d1b6a0c5d0470e3.jpg",
+          "file": null
+        },
+        {
+          "name": "web_GD_LP_HoseAccessories",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/qcnl3qirtwadhzh9v8tin/web_GD_LP_HoseAccessories.png?rlkey=2m405fdkz6ie2v5drjf32mt73&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/14f1527ce2b8a0c098f21e2560574564c4e7b647ca1a9cef936904a7f49b8aac.jpg",
+          "file": null
+        },
+        {
+          "name": "web_GD_LP_Left_Unit",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/g5xe8bqvrzi4znigmsiyr/web_GD_LP_Left_Unit.png?rlkey=mest7lkgs872po784t072nuel&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/500db0036a9d94139f577df2951be5b75c733818943695b1be787f3194eb9d64.jpg",
+          "file": null
+        },
+        {
+          "name": "web_GD_LP_Mouthpiece_Stem",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/asnrodr2uqoa50cmomcw2/web_GD_LP_Mouthpiece_Stem.png?rlkey=7uavk2l1nhtmhx7u862vn73nz&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/11f8472826d164d5040a33b2d3d799efaf36a843fb32bdc2ce8ddd61ee91b6d3.jpg",
+          "file": null
+        },
+        {
+          "name": "web_GD_LP_Right_Unit",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/3dck004btj78b3gz4wvfb/web_GD_LP_Right_Unit.png?rlkey=b2lbltyvhc3fhjexmj9fr06f2&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/836fec7de9c8031e5446f7256e6bfc9db674081369b4f1627d7903a7ca303cf3.jpg",
+          "file": null
+        },
+        {
+          "name": "web_GD_LP_Upstems_Large",
+          "type": "image",
+          "format": "PNG",
+          "url": "https://www.dropbox.com/scl/fi/zqab9ovkvdowuede4qxnc/web_GD_LP_Upstems_Large.png?rlkey=nt4ynmf6ondqtqwuox1o41luo&dl=0",
+          "thumb": "assets/synced/classic-gravity-infusers/88e6ccf868391fa7212013185c0ac53fea167f74930897b94584e7ce3210a428.jpg",
+          "file": null
+        }
+      ],
       "Grateful Dead / Legacy Patchwork / Lifestyle Photos": [
         {
           "name": "_GSH7280b",
